@@ -1,0 +1,1 @@
+{"answer_text": "信封 state=empty, row_count=0, returned_count=0, total_count=0, truncated=false; stable_uri、session_id、snapshot_id 均 null, 未提供来源与 content_trust, 无快照标识。即本次查询 0 行、服务端总数 0、未截断, 无关键列与数值可引用。故不能据此断定该处没有天体, 也可能查询未真正发出或星表覆盖不足, 建议放大半径或换星表复核。"}

@@ -1,0 +1,1 @@
+{"answer_text": "route=reject：tool_calls 空，未取数。信封 state=empty，计数 row_count=0、total_count=0、returned_count=0，pages=0，truncated=false；stable_uri、session_id、snapshot_id 均 null，未观测到 content_trust 与来源字段；envelopes 空，n_rows_observed=0，first_row={}。tool_face=toolbox。故整张 ps1 无行可导出 FITS，也无稳定引用可复核。"}

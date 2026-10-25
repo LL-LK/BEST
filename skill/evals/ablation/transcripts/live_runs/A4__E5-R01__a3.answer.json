@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到数据：路由 reject，工具调用 0 次。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0、truncated=false。来源/版本缺失：stable_uri、session_id、snapshot_id 均 null，无 content_trust，故无稳定引用。envelopes 空，n_rows_observed=0，row_keys 与 first_row 空，无关键列与数值。因未给出天体标识，请补星名/坐标与时间范围后重试。"}

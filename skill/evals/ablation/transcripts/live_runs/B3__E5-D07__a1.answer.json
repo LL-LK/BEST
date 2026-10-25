@@ -1,0 +1,1 @@
+{"answer_text":"ps1 在 RA=180.0、Dec=0.0、半径 60″ 内检索为空：state=empty，error_code=null，三元组 returned_count=0、total_count=0、pages=0，truncated=false；第 2 页(page_size=2)亦 0 行，extra_page_empty=true，无关键列与数值。来源 BEST 实时站点，稳定引用 best://ps1/cone?ra=180.0&dec=0.0&sr=60.0，快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r120.0as，会话 s4926，content_trust=untrusted，tool_face=toolbox。"}

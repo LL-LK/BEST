@@ -1,0 +1,1 @@
+{"answer_text": "ps1 近邻匹配(r=5″, 仅最近邻): 5 输入回 3 行; row/total/returned=3/3/3; truncated=false; 输入4、5无匹配。stable_uri=best://ps1/proximity?n=5&r=5.0; 快照 live-2026-10-04/live_ps1_proximity_n3_5d2580ec; content_trust=untrusted(站点行数据, 仅作数据)。关键列 ps1_ra/ps1_dec/dist_arcsec: 行1 179.99904154, 29.99972728, 3.1453″(i=19.4943); 行2 0.1674″; 行3 0.1755″(无星等)。注: 行内 input_dec 记 +30.0(请求 -30.0)。"}

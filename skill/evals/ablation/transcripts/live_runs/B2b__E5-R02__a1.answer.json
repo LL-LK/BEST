@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据，无法导出 ps1 全表 FITS。仅一次 cone_search(catalog=ps1)，state=error、error_code=E_BACKEND，返回 \"offline: 无数据锚点, 未发请求\"，http_requests=0。row_count=returned_count=total_count=0，pages=0，truncated=false；行数 0，无关键列。stable_uri=session_id=snapshot_id=null，provenance 空，tool_face=toolbox，信封无 content_trust。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本装配工具面为 none，信封 tool_face=scripted，无数据通路，RA=180.0、Dec=30.0、半径 1800″ 的 ps1 查询未取到数据。观测信封：state=empty，error_code=null，total_count=0，returned_count=0，row_count=0，pages=0，truncated=false，stable_uri=null，session_id=null，snapshot_id=null；envelopes=[]，n_rows_observed=0，row_keys=[]，first_row={}。信封无来源、稳定引用与 content_trust，故服务端总数与截断判定不可得。"}

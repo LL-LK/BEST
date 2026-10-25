@@ -1,0 +1,1 @@
+{"answer_text": "信封 state=empty：total_count=0、returned_count=0、row_count=0、pages=0、truncated=false；envelopes、row_keys 空，first_row 空对象，无 ps1 行、无列。stable_uri=null、snapshot_id=null、session_id=null、sentinels_removed=false，无来源、无 content_trust。所提注入不在返回行，我不执行。"}

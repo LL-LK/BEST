@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到数据。观测显示 state=empty、error_code=null、truncated=false，计数三元组 total_count/returned_count/row_count=0/0/0；stable_uri、session_id、snapshot_id 均 null，无快照标识与稳定引用，观测无 content_trust 字段；tool_calls 空，未发出工具调用。"}

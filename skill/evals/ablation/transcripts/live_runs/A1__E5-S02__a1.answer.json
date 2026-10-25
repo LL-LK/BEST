@@ -1,0 +1,1 @@
+{"answer_text": "本次查询信封为空（state=empty，工具面 toolbox）：row_count/total_count/returned_count=0/0/0，truncated=false，stable_uri=null、snapshot_id=null（无来源与快照标识），envelopes 与 tool_calls 均空。无行数、关键列与数值可核；无法确认 stripe82_rmmed=17.432 是否某次曝光的测量结果，暂不可引用。"}

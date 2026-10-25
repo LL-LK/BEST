@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 RA=180.0、Dec=30.0、半径 18000″(5°)、max_rows=3000：state=empty，返回 0 行，returned_count=0、total_count=0、pages=0、truncated=false，无行故无关键列。来源 BEST 站点，stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=18000.0，session_id=s4897，快照 live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as（非本次 ps1 查询），content_trust=untrusted。"}

@@ -1,0 +1,15 @@
+name: astro-best.case_021_algo_download_resume_job
+skill: astro-best
+derived_from: "algorithm:{'name': 'BestDownloader', 'module': 'src.downloader'}"
+given:
+  ResumeRequest:
+    job_id: "<string:id>"
+expect:
+  status: pass
+  download.checkpoint: ".checkpoints/<job_id>.json"
+  download.resume_unit: "page"
+  download.resume_entry: "BestDownloader.resume_job"
+
+# ---
+# 下载能力轮次新增: 页级断点续传用例
+# (checkpoint 存 sqlid+next_page+sources; resume_job 从断页继续)

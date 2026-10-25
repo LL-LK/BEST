@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形(180,30,60″)实测 5 行: total/returned=5、pages=1、truncated=false。来源 stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0, snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as_fps1_gpsfbetween-ps1_gpsf_errless, content_trust=untrusted。5 行 ps1_class_star 全空, 0.98–0.99 不可判; rpsf 仅 2 行有值 18.2370、18.6893, 仅前者在 18.20–18.40。无一行同时满足。"}

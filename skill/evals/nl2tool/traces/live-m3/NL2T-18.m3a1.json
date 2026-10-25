@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-18",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "「那个源」我定位不到 —— 当前对话里没有任何可指代的对象，我不会靠猜选一个坐标去查。\n\n给我下面任意一种就能立刻开查：\n1. 天体名：M31、NGC 532、Betelgeuse 这类。我用名称解算换成 ICRS 十进制度坐标（解不出来会明确报失败，不会拿站点返回的 -1000 哨兵当坐标）。\n2. RA / Dec（度，ICRS）。\n3. 一批坐标：如果有多个源，直接给我 (ra, dec) 列表，我用批量交叉匹配一次提交（半径角秒，服务端算角距，默认只回最近邻），比一个个查快很多。\n\n还差两个小参数：\n- 半径：单位角秒，上限 18000 角秒 = 5 度（超了要么缩小，要么拆成多个锥分块）。\n- 查哪张表：12 张可查询表（ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr）。\n\n另外一句：星表名我一律不猜。写 gaia_dr3 查不到（正确 id 是 gaia_dr3_18），写 std 也查不到（std 是导航分组，成员是 scr_galah / scr_lamost / xpsp）—— 这两类都会以软 404 的形式失败，很容易被误读成「天区里没源」。",
+  "notes": "「那个源」无任何可指代标识，缺坐标/名称/表/半径，0 请求反问，不猜检索目标。"
+}

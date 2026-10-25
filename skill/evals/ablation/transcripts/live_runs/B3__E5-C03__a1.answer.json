@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：route=clarify、tool_calls 空，未发起查询而转入澄清。信封来源仅报工具面 tool_face=toolbox，state=empty；计数三元组 total_count=0、returned_count=0、row_count=0，truncated=false；stable_uri=null、snapshot_id=null（无稳定引用与快照标识）；信封未含 content_trust 字段。故 r 波段误差<0.01 mag 命中 0 条，无行数、总数与数值可报，须补星表/天区条件重试。"}

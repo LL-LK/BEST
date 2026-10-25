@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none、tool_calls 空，无数据通路，RA=180.0/Dec=0.0/60″ 的 ps1 查询未发出，无结果。信封 state=empty：row_count=returned_count=total_count=0，pages=0，truncated=false；stable_uri 与 snapshot_id 为 null，来源与 content_trust 未提供，envelopes=[]。无行数、关键列与数值可报，每页 2 行取完无从执行，不能据此判定该天区无源。"}

@@ -1,0 +1,1 @@
+{"answer_text":"PS1 锥形检索(RA=180.0, Dec=30.0, 半径300角秒=5角分)返回174行, 服务端总数174, 计数三元组 row_count=returned_count=total_count=174, truncated=false, tool_face=toolbox。信封未含 source/content_trust, stable_uri 为空; 快照标识 live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as, 会话 s4909。行含 ps1_ra/ps1_dec、距心角秒、g/r/i/z/y 星等及误差、quality_flag=good; 首行距心3.145角秒, i=19.494±0.146。"}

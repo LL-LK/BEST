@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(ps1, RA=180.0, Dec=30.0, 5″)：state=rows，3 行，total=returned=3，truncated=false，tool_face=toolbox；session_id=s4909，stable_uri 空、无 content_trust，describe_catalog stable_uri=best://ps1/describe。三源 r 波段均无效（rpsf≈-1003.88，err=-999.0 哨兵）：源1(3.145″)仅 i=19.4943±0.1456；源2(3.961″) g=18.5992±0.0102；源3(3.982″) 无星等，g/r/y flags=16416、z=114720。"}

@@ -1,0 +1,1 @@
+{"answer_text": "无法判断。观测信封 state=empty，row_count/total_count/returned_count 为 0，pages=0、truncated=false；stable_uri、snapshot_id 均 null，无来源标识、无 content_trust；tool_face=scripted、tool_calls 为空。17.432 不在观测内，无法核实是否属单次曝光测量值。"}

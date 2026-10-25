@@ -1,0 +1,1 @@
+{"answer_text": "工具面 raw_protocol；观测中 tool_calls 为空，未发出查询，故无法取到 BEST 数据，不能给出 r 波段误差<0.01 mag 的对象。信封：state=empty,error_code=null,row_count=0,pages=0,extra_page_empty=false；三元组 total_count=0,returned_count=0,truncated=false；envelopes=[],n_rows_observed=0,row_keys=[],first_row={}；stable_uri=null,session_id=null,snapshot_id=null,sentinels_removed=false。此 0 行源于无数据通路，不等于服务端确无满足条件的对象。"}

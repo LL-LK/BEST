@@ -1,0 +1,4 @@
+﻿item_id,axis,tier,system_code,repeat_idx,fact_0_2,qualifier_0_2,unsourced_num,fatal_num_0_1,unsupported_claim,static_as_lc_0_1,usability_1_5,reason_fact,reason_other,reviewer
+E3-A01,A,fixture,[SYSTEM],1,2,2,0,0,0,0,5,"明确拒答光变曲线, 指出五个数是五波段静态测光","限定语齐全: 列名/单历元/误差",R1
+E3-A01,A,fixture,[SYSTEM],1,0,1,1,1,1,1,1,"把 grizy 五个数当时间序列并给出周期 0.42d","周期无来源; 称其为光变曲线; 未标注列名",R2
+E3-D01,D,fixture,[SYSTEM],1,0,0,0,0,1,0,2,"把 -999 解释为极暗星等","未识别哨兵; 无缺失声明",R1

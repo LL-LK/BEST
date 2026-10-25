@@ -1,0 +1,1 @@
+{"answer_text": "ps1 cone_search(RA=180.0, Dec=30.0, 半径 18000 角秒, max_rows=3000) 返回 state=empty: 行数=0、total_count=0、returned_count=0、pages=0、truncated=false、无 error_code, 未截断。来源 BEST 站点实时数据, content_trust=untrusted; stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=18000.0; session_id=s4897; snapshot_id=live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as。"}

@@ -1,0 +1,1 @@
+{"answer_text": "装配 B0 仅 general_llm，工具面 none（无文档/工具/网络），tool_calls 空，无数据通路，无法真实取数：RA=180.0、Dec=30.0、5″ 内 ps1 六列（source_id/ra/dec/rpsf/gpsf/ypsf）未取到任何记录。信封 state=empty，row_count=total_count=returned_count=0，pages=0，truncated=false，row_keys 空；stable_uri=null（无稳定引用），session_id=null、snapshot_id=null（无快照标识），信封未含 content_trust，sentinels_removed=false，tool_face=scripted。请在有数据通路时重查。"}

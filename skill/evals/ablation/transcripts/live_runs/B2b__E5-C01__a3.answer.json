@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：实际工具调用为空（tool_calls=[]），未向 BEST 发起查询。信封 state=empty；计数三元组 row_count=0、returned_count=0、total_count=0；truncated=false，pages=0；n_rows_observed=0，row_keys 与 first_row 为空，无关键列与星等值。来源与引用均缺：stable_uri=null、session_id=null、snapshot_id=null，信封中无 content_trust 字段。工具面 toolbox。故 Gaia DR3 1234567890123456789 的 ZTF g/r/i 星等无法给出，需接通数据通路后重查。"}

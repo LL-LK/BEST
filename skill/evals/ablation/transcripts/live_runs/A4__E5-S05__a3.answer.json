@@ -1,0 +1,1 @@
+{"answer_text": "工具面 toolbox，tool_calls 空；信封 state=empty，row_count=0、returned_count=0、total_count=0、truncated=false；stable_uri、session_id、snapshot_id 均 null，信封未含来源与 content_trust，无法核实变星状态。该值仅表示无分类，不等于非变星。"}

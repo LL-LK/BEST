@@ -1,0 +1,1 @@
+{"answer_text": "不能断定无天体。信封 state=empty：row_count、returned_count、total_count 均为 0，truncated=false，error_code=null；envelopes、row_keys、first_row 皆空，无列名与数值可陈述。来源、stable_uri、content_trust、snapshot_id 均未给出（null）。"}

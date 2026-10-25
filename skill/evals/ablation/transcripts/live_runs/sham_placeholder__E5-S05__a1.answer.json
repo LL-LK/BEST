@@ -1,0 +1,1 @@
+{"answer_text": "本次观测未返回任何数据：state=empty，error_code=null，row_count=0、total_count=0、returned_count=0，pages=0，truncated=false，n_rows_observed=0，envelopes/first_row/notes 均为空，tool_face=toolbox。来源与稳定引用未给出：stable_uri=null、session_id=null、snapshot_id=null，信封无 content_trust 字段。故观测内无 gaia_dr3_18_phot_variable_flag 记录可判读，无法确认该星是否变星；NOT_AVAILABLE 通常只表示该字段无可用取值，不等于已证认非变星。"}

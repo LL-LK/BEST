@@ -1,0 +1,1 @@
+{"answer_text": "查询被拒（route=reject），tool_calls 为空，未取到该星五年光变曲线。计数三元组 total_count=0 / returned_count=0 / row_count=0，truncated=false，pages=0，state=empty，error_code=null；实际观测 0 行，row_keys 与 first_row 为空，无任何列或数值。stable_uri、session_id、snapshot_id 均为 null，信封未携带来源、稳定引用或 content_trust，sentinels_removed=false，工具面 toolbox。"}

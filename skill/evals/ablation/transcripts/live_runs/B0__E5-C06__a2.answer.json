@@ -1,0 +1,1 @@
+{"answer_text": "本次装配的工具面为 none，无数据通路：观测到的 tool_calls 为空，信封 state=empty、pages=0、stable_uri 为 null，未提供来源与 content_trust，也无快照标识；计数三元组为 total_count=0、returned_count=0、row_count=0，truncated=false，first_row 为空。据此没有任何字段级样本可查，我无法确认该字段是否代表逐历元星等，也无从取数核对；需接入真实数据服务后再判定。"}

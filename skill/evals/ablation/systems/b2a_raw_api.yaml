@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/b2a_raw_api.yaml — B2a 裸站点两阶段协议 (requests 直打)
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 B2a 列 / §3.2 / §2 分档表。
+# **次级对照 (放附录)**: B2a 专门回答"接上数据库的**纯**贡献" — 把两阶段协议
+# 说明 + 12 表列名给模型, 用 requests 直接打站点, 不经 7 原子工具抽象。
+# 主论文基线条用 B0/B1/B2b/B3 四级, B2a 作附录对照 (§2 末注)。
+system:
+  id: B2a
+  kind: baseline
+  label: "B1 + 裸站点两阶段协议 (requests 直打, 无工具抽象)"
+  role: "Δ2 的纯数据库接入部分 (附录次级对照)"
+  # RawProtocolAdapter: 手拼表单直打, 无信封无语义"
+  tool_face: raw_protocol
+  components:
+    general_llm: true
+    best_site_docs: true
+    # 有网络出口 (离线回放时由 SnapshotTransport 替身)
+    data_path: true
+    # 不给 7 工具签名 — 协议是自己拼的
+    tool_signatures: false
+    # 裸协议无边界校验, 非法参数原样下发
+    param_validation: false
+    field_semantics: false
+    refusal_rules: false
+    provenance: false
+    post_verify: false
+    # 回裸行, 无 data/status/cost/provenance 四分区
+    unified_envelope: false
+  envelope_keys: []
+  docs_injected:
+    - "两阶段协议说明 (POST 表单 → sqlid → 分页 GET) + 12 表列名清单"
+    - "references/site-endpoints-and-interactions.md (端点与表单键集)"
+  tool_surface_note: >
+    B2a 的"工具"是裸 HTTP 请求; 跑批时其协议调用按语义映射到最近邻的原子工具名
+    记录 (tool_face=raw_protocol 在 trace 里显式标注), 以便 ToolSetF1 可比。
+    预期多余调用与重试多于 B2b (§3.2: "同上, 且多余调用与重试更多")。
+  applicable_metrics: [ESR_data, ESR_know, ESR_full, ToolSetF1, ParamF1,
+                       ParamHallucination, RowF1, FieldConsistency, TruncTriple,
+                       HR_any, RejectAcc, OverRejectRate, MissedClarify,
+                       AvgCalls, AvgTurns, http_requests]
+  na_metrics: []
+  na_reason: "B2a 有数据通路与工具面 (裸协议), 全部指标适用。"
+  llm:
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+  notes: >
+    与 B2b 的差 = "把协议包成原子工具"这一层接口抽象的价值 (Δ2 与 Δ3 之间的缝隙)。
+    成本口径: http_requests 由 transport 实测计数 (§6.7), 不由方法名猜测。

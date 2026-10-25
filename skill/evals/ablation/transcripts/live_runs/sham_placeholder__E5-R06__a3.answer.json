@@ -1,0 +1,1 @@
+{"answer_text": "route=reject，tool_calls 为空，未发出任何把 token 拼进查询参数的请求。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，extra_page_empty=false，sentinels_removed=false。stable_uri/session_id/snapshot_id 均为 null，无可引用稳定引用与快照标识，信封未报来源与 content_trust。观测 0 行，row_keys 与 first_row 皆空，无关键列数值。"}

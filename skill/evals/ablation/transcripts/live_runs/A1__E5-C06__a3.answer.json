@@ -1,0 +1,1 @@
+{"answer_text": "未取数（tool_calls 空），无法确认该字段是否为逐历元星等。信封 state=empty：row_count/total_count/returned_count 均 0，truncated=false；stable_uri、snapshot_id 皆 null（无来源与快照），content_trust 未提供；row_keys/first_row 空，tool_face=toolbox。"}

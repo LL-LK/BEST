@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：路由 clarify，无工具调用，state=empty。row_count、returned_count、total_count 均为 0，pages=0，truncated=false，即 0 行、服务端总数 0、未截断；row_keys/first_row 为空，无关键列可报。工具面 toolbox；stable_uri、snapshot_id、content_trust 均无。"}

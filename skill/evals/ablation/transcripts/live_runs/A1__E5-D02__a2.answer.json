@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(RA=180.0,Dec=30.0,r=60″,ps1) 实查: 174 行, row_count=total_count=returned_count=174, pages=1, truncated=false, session_id=s4909, snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as, tool_face=toolbox; stable_uri 空, 无 content_trust。仅 39 行有 r 星等(18.20–22.68), 135 行 ps1_rpsf=-1003.88 哨兵值, 故无法按 r 全表排序。"}

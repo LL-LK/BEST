@@ -1,0 +1,16 @@
+name: astro-best.case_024_algo_tap_adql
+skill: astro-best
+derived_from: "algorithm:{'name': 'parse_adql', 'module': 'src.tap.adql'}"
+given:
+  AdqlQuery:
+    query: "SELECT ra, ps1_rpsf FROM best.ps1 WHERE CONTAINS(POINT('ICRS', ps1_ra, ps1_dec), CIRCLE('ICRS', 180.0, 30.0, 0.1)) = 1"
+expect:
+  status: pass
+  plan.catalog: "ps1"
+  plan.columns: [ps1_ra, ps1_rpsf]
+  plan.cone: {ra: 180.0, dec: 30.0, radius_deg: 0.1}
+  rejected: [JOIN, GROUP BY, subquery, aggregate, unknown column, "more than 16 OR branches"]
+
+# ---
+# TAP 适配层用例: ADQL 有界子集 -> 安全查询计划。
+# BEST 上游不执行 SQL; 计划再经 src/tap/executor.py 翻译为两阶段表单协议。

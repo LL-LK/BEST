@@ -1,0 +1,1 @@
+{"answer_text": "装配声明工具面 none（信封 tool_face=scripted、tool_calls 空），无数据通路，无法真正取数：Gaia DR3 1234567890123456789 在 BEST 的 ZTF g/r/i 星等给不出数值。信封实测 state=empty、error_code=null；计数三元组 total_count=returned_count=row_count=0，pages=0，truncated=false；stable_uri=null、session_id=null、snapshot_id=null，即无来源标识、无快照标识、无稳定引用。零行返回，须接入真实数据服务后重试。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本次装配工具面为 none，无数据通路。实测 tool_calls 为空，信封 state=empty：row_count、returned_count、total_count 均为 0，pages=0、truncated=false，envelopes 与 notes 皆空，无关键列与数值。stable_uri、session_id、snapshot_id 均为 null，信封未给出 content_trust，故无来源与稳定引用可核。据此本次未取到任何数据，我无法绘制光变曲线或估算周期；所列 ps1_gpsf 等五个测光值仅属单历元多点，本身不构成光变曲线。需接入 BEST 查询工具面后再试。"}

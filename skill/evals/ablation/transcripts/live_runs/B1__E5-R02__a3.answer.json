@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none（tool_face=scripted，tool_calls 空），无数据通路，取不到数。信封 state=empty：row_count=0、total_count=0、returned_count=0、truncated=false；stable_uri、snapshot_id 均为 null。无关键列与行值，整张 PS1 未取到任何行，无法导出 FITS。"}

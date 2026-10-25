@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据，无法导出 FITS。唯一查询 cone_search(ps1,180.0,30.0,60″) 返回 state=error、error_code=E_BACKEND、http_requests=0，即「offline: cone_search 无数据锚点, 未发请求」。计数 row_count=0、returned_count=0、total_count=0，truncated=false；stable_uri/session_id/snapshot_id 均 null，provenance 空、信封无 content_trust，故无来源引用与快照标识；row_keys/first_row 空，无关键列与数值。工具面 raw_protocol。"}

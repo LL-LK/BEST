@@ -1,0 +1,1 @@
+{"answer_text": "route=reject：未发出任何工具调用，未取回数据，ps1 未能导出为 FITS。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false；n_rows_observed=0，row_keys 与 first_row 均空，无关键列与数值。stable_uri=null、session_id=null、snapshot_id=null，信封未报告 content_trust，故无稳定引用、快照标识与来源可信度可陈述。工具面 toolbox。"}

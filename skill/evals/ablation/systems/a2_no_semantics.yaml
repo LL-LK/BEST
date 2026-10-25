@@ -1,0 +1,49 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/a2_no_semantics.yaml — A2 消融: 拆掉字段语义说明
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 A2 列 (字段语义 ✗, 其余同 B3)
+# 与 §4 A2 行。**sham 安慰剂对照就做在这一项** (效应量最大且最易被"prompt 变短"质疑)。
+system:
+  id: A2
+  kind: ablation
+  label: "B3 − 字段语义说明"
+  role: "消融: 量字段语义 (波段→列映射) 的贡献; sham 对照的宿主项"
+  base: B3
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    param_validation: true
+    # ← 唯一被拆掉的零件
+    field_semantics: false
+    refusal_rules: true
+    provenance: true
+    post_verify: true
+    unified_envelope: true
+  envelope_keys: [data, status, cost, provenance]
+  ablation_detail:
+    removed_component: >
+      字段语义说明 (CATALOG_MAG_COLUMNS 波段→列映射 / describe_catalog 语义段 /
+      references/photometric-systems.md 的 BEST 专属段)
+    mechanism: "不再注入波段→列映射与列语义; 只留裸列名清单 — 波段只能猜。"
+    code_seam: "adapter 层的文档注入清单 + 答案渲染的语义段开关 (生产码零改动)。"
+    probe_items: [E5-D02, E5-D11, E5-S01, E5-S02]
+  expected_effect:
+    field_consistency: down (投影错列 / 取到别的波段 / 裸列名)
+    hr_claim: up (把 xpsp 的 ZTF 合成测光说成实测; 把 Gaia 参数说成 BEST 独立测量)
+    tool_set_f1: flat (工具选择不依赖字段语义)
+    avg_calls: flat
+  # ablations/A2
+  linked_hypothesis: hypotheses.yaml
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型; 11 装配同一 model_id/解码参数)
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+
+  notes: >
+    消融后仍要知道"有哪些列" (B2b 起就给了裸列名), 否则这一档会塌缩成 B2b,
+    Δ3 的归因就不干净了 — 这是 A2 与 B2b 的装配差别, 跑批前须核对。

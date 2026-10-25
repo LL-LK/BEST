@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：tool_calls 为空，toolbox 工具面未实际取数。信封 empty，row_count=0、pages=0、total_count=0、returned_count=0、truncated=false；stable_uri/snapshot_id/session_id 皆 null，无来源与 content_trust 字段。故 Gaia DR3 1234567890123456789 在 BEST 的 ZTF g/r/i 星等无观测值，不能给数值。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本次未发起任何查询：路由=clarify，tool_calls 为空，「那个源」未指明具体目标，因此没有可执行的取数动作。观测信封 state=empty，计数三元组为 row_count=0、returned_count=0、total_count=0，pages=0，truncated=false；stable_uri、session_id、snapshot_id 均为 null，信封中不含 content_trust 字段与来源信息；tool_face=toolbox（工具面可用，但本次未调用）。n_rows_observed=0，row_keys 与 first_row 为空，故无任何行、列或数值可报告。请补充源的名称、编号或坐标，我再实际取数。"}

@@ -1,0 +1,1 @@
+{"answer_text": "BEST ps1: total=returned=row_count=174, pages=1, truncated=false; stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0; snap=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as; content_trust=untrusted; 关键列 ps1_rpsf 仅39行有效(18.20-22.68), 其余135行为哨兵-1003.88(err=-999, 28行无星等/107行仅g,i,z,y)升序排在最前, 故174行整体并非r波段由亮到暗。"}

@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/a1_no_validation.yaml — A1 消融: 拆掉参数校验
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 A1 列 (参数校验 ✗, 其余同 B3)
+# 与 §4 A1 行。one-at-a-time: 其余九项组件与 B3 完全一致。
+system:
+  id: A1
+  kind: ablation
+  label: "B3 − 参数校验"
+  role: "消融: 量参数校验层的贡献"
+  base: B3
+  # 仍是 7 工具面, 但入口校验被旁路
+  # 但入口校验被旁路
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    # ← 唯一被拆掉的零件
+    param_validation: false
+    field_semantics: true
+    refusal_rules: true
+    provenance: true
+    post_verify: true
+    unified_envelope: true
+  envelope_keys: [data, status, cost, provenance]
+  ablation_detail:
+    removed_component: "参数校验 (schema 约束段 + guards.py 边界校验 + 边界常量)"
+    mechanism: >
+      references/tools.schema.json 的约束段 (minimum/maximum/enum) 不再注入;
+      cone_search/fetch_page 的边界校验 (validate_coordinate / validate_search_radius /
+      MAX_FETCH_PAGE_SIZE) 旁路, 非法参数原样下发。
+    code_seam: >
+      adapter 层旁路 (SkillToolBoxAdapter 在 param_validation=false 时改走
+      BestClient.submit_query 的手拼表单缝, 不经 guards); **生产码零改动**。
+    # radius=0 非法半径 → 必须显式 E_INVALID_INPUT
+    probe_items: [E5-D08]
+  expected_effect:
+    param_hallucination: "up (红线: B3 必须为 0)"
+    param_f1: down
+    row_f1: down (越界/零半径取回错行集; EMPTY 冒充合法结果)
+    http_requests: up (无效请求与重试)
+    reject_acc: flat (与参数格式无关)
+    missed_clarify: flat
+  # ablations/A1
+  linked_hypothesis: hypotheses.yaml
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型; 11 装配同一 model_id/解码参数)
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+
+  notes: >
+    scripted 离线模式下效应集中在边界题 E5-D08; 真模型跑批可能扩散到其它题 —
+    报告须如实披露这一覆盖边界, 不冒充"已测出全部效应"。

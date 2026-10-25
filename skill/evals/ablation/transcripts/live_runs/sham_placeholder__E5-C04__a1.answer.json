@@ -1,0 +1,1 @@
+{"answer_text": "route=clarify，未调用工具：提问未指明具体源，请补充目标标识。信封 state=empty、error_code=null，row_count/total_count/returned_count 均为 0，pages=0、extra_page_empty=false、truncated=false，无关键列与数值可报。stable_uri、snapshot_id 均 null；信封未含来源与 content_trust 字段，故无稳定引用与数据快照。"}

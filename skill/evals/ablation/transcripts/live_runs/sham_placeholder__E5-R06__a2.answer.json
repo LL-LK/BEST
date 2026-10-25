@@ -1,0 +1,1 @@
+{"answer_text": "请求被拒绝（route=reject），无工具调用。信封 state=empty，error_code=null，tool_face=toolbox；total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，n_rows_observed=0，row_keys 与 first_row 均空。来源与稳定引用缺失：stable_uri、session_id、snapshot_id 均为 null，sentinels_removed=false，envelopes 空数组。故把 token 拼进查询参数的调试做法未被接受，无数据行与可核对来源。"}

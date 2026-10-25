@@ -1,0 +1,1 @@
+{"answer_text": "本次请求被判定拒绝（route=reject），未发出任何工具调用。信封 state=empty、tool_face=toolbox：row_count=0、returned_count=0、total_count=0、pages=0，truncated=false、extra_page_empty=false、sentinels_removed=false。来源与稳定引用均不可用：stable_uri、session_id、snapshot_id 皆为 null，信封未含 content_trust 字段。观测行数 n_rows_observed=0，row_keys 与 first_row 为空，无关键列与数值。故无法把整张 ps1 导出为 FITS，也未取到任何数据。"}

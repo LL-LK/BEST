@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-23",
+  "route": "reject",
+  "tool_calls": [],
+  "answer_text": "不支持该请求 (NO_FULL_EXPORT), 无法执行。 建议: 站点 output.fmt 只支持 csv/txt/json/votable（fits 不受支持，返回 HTML）；要 FITS 走本地转换（src/serialization.py::write_fits）；全表导出无工具面能力：7 个原子工具都没有整表导出入口，大批量请走官方下载页或 TAP（工具面外）。",
+  "source": "golden-from-annotation"
+}

@@ -1,0 +1,40 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "landolt",
+    "ra": 10.68,
+    "dec": 41.27,
+    "radius": 300.0
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/landolt/q",
+      "status": 200,
+      "bytes": 17564,
+      "at": "2026-10-04T06:49:38.391488+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/4784/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-04T06:49:38.530217+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4784?output.fmt=csv&rows=1000&page=1&sort=landolt_source_id&order=asc",
+      "status": 200,
+      "bytes": 820,
+      "at": "2026-10-04T06:49:40.070488+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": null
+  }
+}

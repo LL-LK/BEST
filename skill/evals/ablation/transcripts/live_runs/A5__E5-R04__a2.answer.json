@@ -1,0 +1,1 @@
+{"answer_text": "未取到测光数据：路由 reject，无 tool_calls。信封 state=empty，error_code=null，total_count=0/returned_count=0/truncated=false，row_count=0、pages=0；n_rows_observed=0，row_keys 与 first_row 皆空。stable_uri、session_id、snapshot_id 均为 null，未给 content_trust。tool_face=toolbox 但未调用。"}

@@ -1,0 +1,1 @@
+{"answer_text": "不能这样推断，本次也未取到该星数据。信封 state=empty：row_count=0、returned_count=0、total_count=0、pages=0、truncated=false，stable_uri/session_id/snapshot_id 均 null（无来源与快照标识），tool_face=toolbox、tool_calls=[]、row_keys=[]。无行与数值可核，无法判断其是否变星；NOT_AVAILABLE 仅指该标志位未提供，不等于非变星，须另取记录再判。"}

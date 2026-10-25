@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索（RA=180.0, Dec=0.0, 60″）经 toolbox 工具面：cone_search 与第2页 fetch_page(page_size=2) 均返回空，计数三元组 total/returned/row_count=0/0/0，truncated=false，state=empty，故无行、无关键列数值。stable_uri=best://ps1/cone?ra=180.0&dec=0.0&sr=60.0；会话 s4926；快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r120.0as；content_trust=untrusted。"}

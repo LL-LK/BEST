@@ -1,0 +1,1 @@
+{"answer_text": "无法确认。信封 state=empty、error_code=null，row_count=0、pages=0、total_count=0、returned_count=0、truncated=false；stable_uri/session_id/snapshot_id 均为 null，无来源与快照标识，无 content_trust；tool_face=scripted，tool_calls=[]。未取回任何行或字段，无法判断该字段是否逐历元星等。"}

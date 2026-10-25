@@ -1,0 +1,1 @@
+{"answer_text": "无法判断该字段是否代表逐历元星等：本次未取到任何数据。route=answer，tool_calls、envelopes 为空，n_rows_observed=0，row_keys、first_row 为空，无字段名或数值可核对。信封 empty，error_code=null；计数 total_count=0、returned_count=0、row_count=0、pages=0，truncated=false。来源缺失：stable_uri、session_id、snapshot_id 均为 null，无 content_trust。tool_face=toolbox。"}

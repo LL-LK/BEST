@@ -1,0 +1,1 @@
+{"answer_text": "路由判定为 reject，未发起任何工具调用（tool_calls 为空）。信封状态 empty：row_count=0、total_count=0、returned_count=0，truncated=false，extra_page_empty=false。stable_uri、session_id、snapshot_id 均为 null，即无稳定引用、无数据快照标识，也未返回来源/信任字段。工具面为 toolbox，工具本身可用，但本次未执行查询，故无行数据与列名，无法完成交叉匹配。"}

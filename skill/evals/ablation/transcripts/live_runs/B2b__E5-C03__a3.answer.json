@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据，无法筛选 r 波段误差 <0.01 mag 的对象。观测：路由 answer、工具面 toolbox，tool_calls 空（未发起查询）；信封 state=empty、error_code=null，row_count=0、total_count=0、returned_count=0，pages=0、truncated=false、sentinels_removed=false；观测 0 行，无关键列与数值。stable_uri、session_id、snapshot_id 均 null，未报 content_trust，无计数非零值。请补数据通路。"}

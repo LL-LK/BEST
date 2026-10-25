@@ -1,0 +1,1 @@
+{"answer_text":"ps1 锥搜索 total_count=4000、returned_count=4000、truncated=false；snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r300.0as_max4000；session_id=s4921；stable_uri=best://sqlid/s4921/count；顶层 stable_uri 空、无 content_trust；列 ps1_ra/ps1_dec、magnitudes、quality_flag=good，行距≤260.537″；快照 r300.0as/max4000 与请求 1800″/5000 不符，且 4000 恰为上限。"}

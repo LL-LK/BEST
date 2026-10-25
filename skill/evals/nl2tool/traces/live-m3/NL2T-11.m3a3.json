@@ -1,0 +1,32 @@
+{
+  "task_id": "NL2T-11",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "xpsp"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 120.3,
+        "dec": -20.4,
+        "radius_arcsec": 5,
+        "catalog": "xpsp",
+        "columns": [
+          "gaiaxp_photinfo_replenish_ra",
+          "gaiaxp_photinfo_replenish_dec",
+          "gaiaxp_photinfo_replenish_g_mag"
+        ]
+      }
+    }
+  ],
+  "answer_text": "已查：**RA = 120.3°、Dec = −20.4°、半径 5 角秒**，标准星表取 `xpsp`。\n\n关于\"标准星\"这个口径，我做了一个**明确假设**：你说的是标准星整体，而 `std` 是导航分组不能当表名查，\n所以我取覆盖面最广的成员 `xpsp`（Gaia DR3 XP&SP 标准星）。它对\"这个位置有没有标准星\"最通用；\n如果你要的是带光谱交叉的 `scr_galah`（×GALAH）或 `scr_lamost`（×LAMOST），说一声我换表重查——\n这两张表只覆盖有对应光谱的源，同样的锥可能命中更少。\n\n两处容易踩的坑，都已经处理了：\n\n1. **负赤纬没问题**，参数就是带符号的度：`-20.4` 合法（合法范围 Dec ∈ [−90, 90]、RA ∈ [0, 360)）。\n2. **xpsp 的响应列名带的是\"表单表名\"而不是星表名**。它的位置与 Gaia 测光列其实落在共享位置表\n   `gaiaxp_photinfo_replenish` 里，所以正确的列名是 `gaiaxp_photinfo_replenish_ra` /\n   `_dec` / `_g_mag`（另还有 `_bp_mag`、`_rp_mag`、`_ruwe`、`_source_id`），\n   **不是** `xpsp_ra`——写错前缀会整列静默丢失、查询\"成功\"但返回空壳。\n   我先 `describe_catalog(\"xpsp\")` 核了列（零请求），再按正确前缀做了列投影，省带宽。\n\n5 角秒是很小的锥，通常对应 0 个或 1 个源；如果你是想找\"最近的这一颗\"，加 `nearest_only=true` 更直接。",
+  "notes": "先零请求 describe_catalog 核列，再 cone_search；点明 xpsp 响应列前缀是共享表名而非星表名。"
+}

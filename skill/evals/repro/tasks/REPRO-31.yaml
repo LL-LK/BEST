@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-31
+utterance: 用半径 20000 角秒查 RA=180.0、Dec=30.0 的 ps1 源。
+category: reject
+expect_first_tool: none
+reruns: 5
+stability_class: reject_over_limit
+conclusion_card_spec:
+  kind: refusal
+  key_entities:
+  - E_INVALID_INPUT
+relative_time_expression: false
+notes: E6 新增 (文档 §3.1); 判稳维度 reject_over_limit; 禁相对时间表述 (硬约束)

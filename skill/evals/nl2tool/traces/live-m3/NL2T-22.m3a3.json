@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-22",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "reject",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这个我明确做不了：**BEST 没有时序数据面，拿不到光变曲线**。\n\n- 12 张可查询星表全是**单历元定标测光**，星等列是 mean mag 这类单值，没有按时间展开的观测序列；\n- 7 个原子工具里也没有任何时间维度参数：`cone_search` / `crossmatch_batch` 只有位置 + 半径\n  （外加列投影、排序、行数上限），没有时间窗、没有采样、没有采样率。\n\n**替代路径**（按你要的采样精度和年份挑）：\n\n- **ZTF** —— 公有域时序，分钟级采样，两夜；去 NASA/IPAC IRSA 或 Caltech ZTF 服务按坐标取 light curve。\n  （顺带说清：BEST 里 ZTF 只以交叉匹配列 `ztf_g_g_xpsp` / `ztf_r_r_xpsp` / `ztf_i_i_xpsp`\n  等**单值**出现，不含时间维度，所以\"在 BEST 里找 ZTF 光变曲线\"这条路是断的。）\n- **ASAS-SN Sky Patrol** —— 全天、变星/爆发星覆盖好，秒到天级。\n- **TESS / Kepler** —— 2 分钟 / 30 秒级长基线光变，去 MAST。\n- **Gaia DR3 自带的 epoch photometry** —— 注意这是**逐历元测光**而非严格意义的\"光变曲线\"，\n  而且 BEST 不提供它，得去 Gaia Archive 取。\n\n要变源判定（幅度、周期、EWMA）我可以在本地用你导出的时序数据做。\n\n请给我：**目标源（名字我走 `resolve_name`，或直接给 RA/Dec）+ 想要的采样间隔与时间跨度**，\n我把上面哪个源最合适、以及具体取数入口讲清楚。",
+  "notes": "能力硬边界：BEST 无时序/光变数据面，工具层也无时间参数 → 拒绝并给 ZTF/ASAS-SN/TESS/Gaia 替代源。"
+}

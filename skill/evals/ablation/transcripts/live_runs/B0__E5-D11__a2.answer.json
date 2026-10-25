@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none，tool_calls 为空，未取到数据。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0；pages=0，truncated=false；stable_uri、session_id、snapshot_id 均为 null，信封未含 content_trust 字段；envelopes=[]、row_keys=[]、first_row={}、notes=[]。信封自报 tool_face=scripted，与装配声明的 none 不一致。故 RA=180.0、Dec=30.0、半径 5″ 内 ps1 三个源的 r、g 星等及误差无观测行可报，无法给出。"}

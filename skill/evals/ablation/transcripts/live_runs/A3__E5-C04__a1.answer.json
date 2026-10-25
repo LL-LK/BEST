@@ -1,0 +1,1 @@
+{"answer_text": "未执行查询（tool_calls 空）：提问只写「那个源」，无源名/坐标/星表标识，没有可查对象。信封 state=empty；计数三元组 row_count=0、returned_count=0、total_count=0，pages=0，truncated=false：服务端总数 0、无返回行、未截断，行集为空，无关键列与数值可报。来源与稳定引用缺失：stable_uri=null、snapshot_id=null、session_id=null，信封未含 content_trust，无可核对来源与快照。请补充源标识后再查。"}

@@ -1,0 +1,1 @@
+{"answer_text": "未执行查询（tool_calls 空），raw_protocol 无通路：state=empty，total/returned/row=0/0/0，pages=0，truncated=false；stable_uri、snapshot_id 均 null，信封未含来源与 content_trust 字段。取数为空，不能断定该星非变星；NOT_AVAILABLE 仅指标志位不可用，不等于非变星。"}

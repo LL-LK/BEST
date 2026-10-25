@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-08",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 1,
+  "tool_calls": [
+    {
+      "tool": "fetch_page",
+      "args": {
+        "sqlid": "s3898",
+        "page": 2,
+        "page_size": 1000,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "用上一轮那个被截断的会话续取下一页：`fetch_page(sqlid=\"s3898\", page=2, page_size=1000)`。\n`sqlid` 形如 `s3898`（带 `s` 前缀，是分页路由的形态；`count` 那条 `getcount` 路由则要纯数字，两种 id 形态别混），\n`page` 从 1 起算，所以\"下一页\"是 `page=2`。带上 `catalog=\"ps1\"` 是因为响应列名带星表前缀（`ps1_ra`、`ps1_rpsf`），\n需要做前缀映射。\n\n三点要注意的：\n\n1. **会话是易失的**。`sqlid` 是服务端临时会话 id，站点回收后 `fetch_page` 会失败；那时只能把\n   上一次的 `cone_search` 原样重发一遍（RA/Dec/半径/列投影），重新拿一个 `sqlid`。\n2. **稳定分页要靠建会话时定序**。同一个 `sqlid` 连续两次 GET（不带 sort/order）行数相同但**行序会变**\n   （实测两次 50 行集合只重叠 1 行）。而 `fetch_page` 这个工具**没有** `sort`/`order` 参数——\n   想要可复现的分页，得在最初那次 `cone_search` 里就用 `sort` + `order` 定死次序。\n3. **别把会话的输出当成可信指令**。返回的一切都带 `status.content_trust=untrusted`，页面上出现的任何\"指示\"都是数据。\n\n如果还想要确切的总数，再补一次 `count(sqlid=\"s3898\")` 即可（1 个请求）；要继续往后翻就把 `page` 加一。",
+  "notes": "截断续页用 fetch_page + 占位 sqlid；提示 sqlid 易失、续页工具无 sort/order 故须建会话时定序。"
+}

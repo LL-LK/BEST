@@ -1,0 +1,1 @@
+{"answer_text": "信封记录 state=empty、error_code=null（无报错）；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false（未截断），envelopes、row_keys、first_row 均空，无可核对的行。来源与快照：stable_uri、session_id、snapshot_id 均为 null，且无 content_trust 字段，本次结果无稳定引用可追溯；tool_face=raw_protocol，tool_calls 为空。因此 0 行只说明这一次查询无返回，不能证明该位置没有天体；建议放宽半径或换星表复核后再判断。"}

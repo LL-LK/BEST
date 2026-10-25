@@ -1,0 +1,19 @@
+{
+  "task_id": "NL2T-04",
+  "route": "answer",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60.0,
+        "catalog": "ps1",
+        "max_rows": 1000,
+        "nearest_only": false
+      }
+    }
+  ],
+  "answer_text": "已按工具面完成查询并汇报结果 (含 total/returned/truncated 三元组)。",
+  "source": "golden-from-annotation"
+}

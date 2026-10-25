@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-07",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这个请求我差一个关键输入：坐标。\n（1）BEST 的工具面没有“按 Gaia DR3 source_id 检索”的入口。cone_search 只接受 RA/Dec + 半径角秒，crossmatch_batch 只接受坐标列表，source_id 不是可用的查询键（它是 ps1/gaia_dr3_18 等表里的一个返回列，ps1_source_id 线上还常为空）。所以请给我这个源的 RA/Dec（度），我再按你说的波段取列。\n（2）ZTF 的 g/r/i 在 BEST 里的位置我也先讲清楚，免得你查错表：\n- xpsp（标准星 × Gaia DR3 XP&SP）有 ztf_g_g_xpsp、ztf_r_r_xpsp、ztf_i_i_xpsp 三个 ZTF 波段测光列，各带一个 *_err 误差列；\n- scr_galah / scr_lamost 有交叉匹配列 scr_galah_gztf / rztf / iztf（同样结构），但这类多调查交叉列只进 raw_data、不并入规范 magnitudes（否则同波段多调查会撞键），波段归属以 SCR 原生列为准；\n- gaia_dr3_18 这张表本身没有 ZTF，它只有 Gaia 自己的 G / BP / RP（gaia_dr3_18_phot_g_mean_mag、phot_bp_mean_mag、phot_rp_mean_mag）和 G_RVS 分光星等（grvs_mag）。\n给我坐标后，我用 cone_search(ra, dec, radius_arcsec, catalog=\"xpsp\") 投影 ztf_g_g_xpsp / ztf_r_r_xpsp / ztf_i_i_xpsp 及其 err 列；半径给个角秒值（或说 1 角秒这种极近邻匹配，我就用 nearest_only）。",
+  "notes": "工具面没有 source_id 查询键，属必问缺口；先零请求说清 ZTF 列只在 xpsp/scr_*、gaia_dr3_18 无 ZTF，避免用户查错表。"
+}

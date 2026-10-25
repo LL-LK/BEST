@@ -1,0 +1,1 @@
+{"answer_text": "不能断定该处没有天体，只能说本次查询未命中。观测信封：state=empty，error_code=null，计数三元组 row_count=0、total_count=0、returned_count=0，pages=0，truncated=false，sentinels_removed=false，tool_face=toolbox；行集为空（envelopes/row_keys/first_row 皆空）。stable_uri=null，无 content_trust，snapshot_id 与 session_id 为 null，来源不明。0 行也可能因坐标或半径、星表覆盖不匹配，建议放宽半径或换星表复核。"}

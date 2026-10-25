@@ -1,0 +1,1 @@
+{"answer_text": "未取数：路由 clarify，无工具调用。信封 state=empty；计数 total_count/returned_count/row_count 均 0，pages=0、truncated=false；stable_uri、session_id、snapshot_id 均 null；tool_face=toolbox；无来源与 content_trust 字段。观测行数 0，row_keys 空。故无法给出 r 波段误差<0.01 mag 的对象，请澄清星表与误差列名。"}

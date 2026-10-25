@@ -1,0 +1,27 @@
+# E2 场景 4/8: 空结果 (S 类) — docs/eval-E2-groundtruth.md §5 #4
+case_id: empty_field
+category: empty_result
+snapshot_id: live-2026-10-04/live_ps1_ra10.0_dec-45.0_r60.0as
+main_metrics: [M5, M4]
+query:
+  catalog: ps1
+  ra: 10.0
+  dec: -45.0
+  radius_arcsec: 60.0
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf]
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: empty
+  row_count_hint: 0
+  truncated_hint: false
+  success: true                   # 空结果是合法成功, 不是失败
+  error_empty: true               # error 必须为空
+  total_count: 0
+notes: >
+  金标准: success=true ∧ rows=0 ∧ total=0 ∧ truncated=false ∧ error 为空
+  (E2 §5 #4)。M5 四态判据: EMPTY 不得被冒充成 ERROR, 也不得把"服务端
+  会话死了"报成"天上没源" (反向混淆同样阻断)。A 的 syn_empty 快照
+  rows_full.csv 为空文件 (snapshot.yaml row_count=0) — GT 读空行集得
+  空结果; 若快照缺失, GT fail-closed (FileNotFoundError, 不发明数据)。
+gold_focus: 空结果四态 (EMPTY vs ERROR) + total/truncated 三元组

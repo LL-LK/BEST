@@ -1,0 +1,63 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "ps1",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 300.0,
+    "max_records": 4000,
+    "page_size": 1000
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "bytes": 15457,
+      "at": "2026-10-04T08:02:52.811557+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/4921/getcount",
+      "status": 200,
+      "bytes": 15,
+      "at": "2026-10-04T08:02:53.907725+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4921?output.fmt=csv&rows=1000&page=1&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 245746,
+      "at": "2026-10-04T08:02:55.556422+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4921?output.fmt=csv&rows=1000&page=2&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 244508,
+      "at": "2026-10-04T08:02:56.967576+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4921?output.fmt=csv&rows=1000&page=3&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 243874,
+      "at": "2026-10-04T08:02:58.441038+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4921?output.fmt=csv&rows=1000&page=4&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 245242,
+      "at": "2026-10-04T08:02:59.965205+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 4000,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 5109,
+    "truncated": true,
+    "error_code": null
+  }
+}

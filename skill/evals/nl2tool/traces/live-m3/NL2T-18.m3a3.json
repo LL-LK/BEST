@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-18",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "\"那个源\"我定位不到，所以先不动数据。BEST 的查询键只有三种形态，模糊描述进不来：\n\n1. **天体名** → `resolve_name(name=\"M31\")`（后端代理 CDS Sesame）。给我名字就行。\n2. **ICRS 坐标 + 半径** → `cone_search(ra=…, dec=…, radius_arcsec=…)`。\n   **单位别搞混：坐标是度，半径是角秒**（上限 18000 角秒 = 5 度）。\n3. **一批坐标** → `crossmatch_batch`（最近邻匹配，默认半径 3 角秒）。\n\n还有一个负面信息值得先说清：**没有\"按 Gaia source_id 查\"的入口**。即使你手里只有 source_id，\n也要先在 Gaia Archive 或 SIMBAD 换成 RA/Dec 再给我。\n\n另外请顺手告诉我**查哪张表**（12 张可查询表里挑，默认 ps1）——同一个坐标在 ps1 和 gaia_dr3_18 上能拿到的列完全不同\n（比如 G 星等只在 gaia_dr3_18、griz 星等在 ps1）。\n\n本轮零请求：没有查询键就不该发请求，我不猜也不随手挑一个\"大概是它\"的天区去查。",
+  "notes": "无任何可指认的查询键（名字/坐标/坐标列表）→ 澄清；并说明无 source_id 入口。"
+}

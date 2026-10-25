@@ -1,0 +1,1 @@
+{"answer_text": "本次装配的工具面为 none（tool_face=scripted），无任何数据通路，tool_calls 为空，未对 RA=180.0、Dec=30.0、半径 5″ 执行过 BEST/PS1 查询，故无法给出三个源的 r、g 星等及误差。观测信封状态 state=empty，计数三元组为 row_count=0、total_count=0、returned_count=0，pages=0、truncated=false、n_rows_observed=0，row_keys 与 envelopes 均为空；stable_uri 为 null，没有稳定引用、内容信任标记或数据快照标识可写。需要说明的是：该空信封只反映「没有取到数据」，不能据此断言目标天区真的不存在源。请启用具备查询能力的组件后重试。"}

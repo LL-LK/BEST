@@ -1,0 +1,1 @@
+{"answer_text": "未取到该源测光：route=reject，tool_calls 为空。信封 state=empty、error_code=null、row_count=0、pages=0，计数三元组 total_count/returned_count/truncated=0/0/false，envelopes 与 row_keys 为空；stable_uri=null、snapshot_id=null，未含 content_trust，tool_face=toolbox。"}

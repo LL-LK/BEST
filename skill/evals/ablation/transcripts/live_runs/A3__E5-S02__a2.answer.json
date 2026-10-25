@@ -1,0 +1,1 @@
+{"answer_text": "零行：state=empty，row_count/total_count/returned_count 均为 0，truncated=false，n_rows_observed=0；row_keys 与 first_row 为空，tool_calls 为空，无关键列与数值。stable_uri=null、snapshot_id=null，信封无来源与 content_trust 字段。观测中无 stripe82_rmmed=17.432，无行可核对，无法判定它是否为单次曝光的测量结果。"}

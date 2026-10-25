@@ -1,0 +1,1 @@
+{"answer_text": "装配 B1 工具面为 none，无数据通路，无法上传星表做交叉匹配：tool_calls 为空，未发出查询。信封 state=empty，row_count=0、total_count=0、returned_count=0、truncated=false，envelopes 为空，无关键列（row_keys 空）。stable_uri 与 snapshot_id 均为 null，信封也不含 content_trust 字段，故无稳定引用来源。请改用带 BEST 查询接口的装配重试。"}

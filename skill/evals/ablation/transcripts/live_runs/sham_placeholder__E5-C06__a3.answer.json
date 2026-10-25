@@ -1,0 +1,1 @@
+{"answer_text": "路由 clarify、无工具调用; 信封 state=empty、error_code=null; 计数三元组 total/returned/row_count=0/0/0, truncated=false; 观测 0 行、row_keys 空(无列)。stable_uri、snapshot_id 均 null, 信封未含 content_trust 与来源字段, 无稳定引用与可核验来源, 不能判定该字段是否代表逐历元星等。"}

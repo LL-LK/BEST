@@ -1,0 +1,1 @@
+{"answer_text": "请求被拒（route=reject），无工具调用、无数据，无法把整张 ps1 导出为 FITS。信封 state=empty：row_count=returned_count=total_count=0、truncated=false；stable_uri=null、snapshot_id=null，未报 content_trust 与来源，无快照可引用。工具面 toolbox，0 行、row_keys 为空，无关键列与数值。"}

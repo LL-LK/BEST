@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(ra=180.0,dec=30.0,r=5″,ps1) 返回3行。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as；content_trust=untrusted。计数 total_count=returned_count=row_count=3，pages=1，truncated=false。①179.99904154,29.99972728,i=19.4943；②180.00110257,29.99945356,g=18.5992；③180.00040814,29.99895175,无星等。"}

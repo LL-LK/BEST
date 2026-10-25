@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到数据，该值无法确认。信封 state=empty、error_code 为空、tool_face=toolbox，tool_calls 空；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0、truncated=false、n_rows_observed=0，row_keys/first_row/envelopes/notes 均空。stable_uri、session_id、snapshot_id 均为 null，sentinels_removed=false，故无稳定引用与快照标识，亦无 content_trust 可报。stripe82_rmmed=17.432 未经检索证实，也无法判定是否来自单次曝光，不能作论文证据。"}

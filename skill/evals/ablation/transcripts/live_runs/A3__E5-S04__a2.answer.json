@@ -1,0 +1,1 @@
+{"answer_text": "不能据此断定该位置没有天体。观测到的信封 state=empty，error_code=null，row_count=0、pages=0、extra_page_empty=false，计数三元组 total_count=0 / returned_count=0 / n_rows_observed=0，truncated=false，即服务端返回 0 行且未截断；envelopes=[]、row_keys=[]、first_row={}，无任何关键列或数值可引用。stable_uri、session_id、snapshot_id 均为 null，本次观测未提供来源、稳定引用、content_trust 或数据快照标识。空结果只说明该 3 角秒半径查询未返回记录，不等于天体不存在。"}

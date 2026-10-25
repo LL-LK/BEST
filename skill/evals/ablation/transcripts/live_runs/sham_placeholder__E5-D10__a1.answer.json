@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索(RA=180.0, Dec=30.0, 半径5″)返回 3 行: row_count=3, total_count=3, returned_count=3, pages=1, extra_page_empty=false, truncated=false。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0, 来源 BEST ps1, content_trust=untrusted, snapshot_id=syn_missing。rpsf/gpsf: 0001=18.2/-1004.091, 0002=空/-999.0, 0003=17.9/18.05; ra、dec 均 180.0001–3 / 30.0001–3。无 ypsf 值。"}

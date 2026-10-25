@@ -1,0 +1,1 @@
+{"answer_text": "请求判为 reject（工具面 toolbox），tool_calls 为空。信封 state=empty：row_count/pages/total_count/returned_count 全 0，truncated=false；stable_uri、session_id、snapshot_id 均 null，无稳定引用与快照标识，无 content_trust；n_rows_observed=0，无行数、总数、关键列可报。请补星表文件与坐标列、半径。"}

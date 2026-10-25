@@ -1,0 +1,34 @@
+# E2 场景 8/8: 超大查询 — 总数超 max_rows 截断 (S 类) — docs/eval-E2-groundtruth.md §5 #8
+case_id: huge_over_cap
+category: huge
+snapshot_id: live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as
+main_metrics: [M4, M1, M7]
+query:
+  catalog: gaia_dr3_18           # uss_dr1 无规范化坐标列 (分波段), 锥筛恒 0 行; gaia 有 gaia_dr3_18_ra/dec
+  ra: 286.1
+  dec: 15.7
+  radius_arcsec: 300.0            # 真实抓取: 服务端 total=7193, 单页只落 1000 行
+  columns: [gaia_dr3_18_source_id, gaia_dr3_18_ra, gaia_dr3_18_dec,   # 换表即换列名: ps1_* 在 gaia 里不存在
+            gaia_dr3_18_ra_error, gaia_dr3_18_dec_error, gaia_dr3_18_ruwe,
+            gaia_dr3_18_phot_g_mean_mag, gaia_dr3_18_phot_bp_mean_mag]
+  sort: gaia_dr3_18_source_id   # 换表即换排序列: ps1_source_id 在本表不存在
+  order: asc
+  max_rows: 500                    # 快照 1000 行 > 500 → 截断; 回放按 rows_full 重算 total=1000
+  page_size: 1000                 # 1 页 (截断后 500 行不满页)
+expect:
+  result_state: rows
+  # 截断三元组**不在此声明**: gen_gold 只读 result_state 与 error_code, 这里写下的
+  # 数字无人断言 —— 换素材后不会变红, 只会静静变旧 (A7-02: 换素材前声明的截断
+  # 三元组与行数提示, 在换成 gaia 快照后全部对不上金标准的现算值, 而复核要点
+  # 还在让签字人核对一个早已不存在的上限)。权威值见 gold/huge_over_cap.json 的
+  # truncation 段与汇总表 focus/must_confirm 列 (数字由金标准渲染)。
+notes: >
+  E2 §5 #8 的语义核心: truncated 与 total_count 取**未截断的完整行集大小**, 而
+  returned == max_rows。"截断当全部" (M5 包装形态 #5) 与 returned 当 total 报
+  (形态 #6) 都会被 M4 三元组对账抓住。回放口径说明: 快照
+  live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as 的 count.json 记服务端
+  total=7193, 但快照只落了 1000 行, 而 E2 一律回放 rows_full.csv, 故金标准现算的
+  total 是**快照落盘行数**而非服务端计数 —— 签字面与判定都按这个口径。
+  row_keys 为截断后应返回的那批行 (gaia_dr3_18_source_id 升序), field_values 抽样
+  (field_values_sampled=true)。
+gold_focus: truncated 三元组 + 服务端 total_count + 满页分页并集

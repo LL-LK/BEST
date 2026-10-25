@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none（无数据通路）：RA=180.0、Dec=30.0、半径5″ 的 ps1 六列查询取不到数。信封 state=empty，row_count、pages、total_count、returned_count 全为 0，truncated=false，envelopes 与 row_keys 均空。来源、stable_uri、content_trust、快照标识均未给出（null）。"}

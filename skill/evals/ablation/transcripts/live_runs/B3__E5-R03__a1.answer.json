@@ -1,0 +1,1 @@
+{"answer_text": "本次「上传星表做交叉匹配」未取到数据：route=reject，tool_calls 空；信封 state=empty，row_count=0、total_count=0、returned_count=0、truncated=false；stable_uri/session_id/snapshot_id 均 null，无稳定引用与快照，无行列数值可陈述。工具面 toolbox，本轮无调用。"}

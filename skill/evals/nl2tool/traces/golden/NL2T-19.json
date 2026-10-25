@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-19",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 region、catalog_choice、export_scope。 可选: 缺天区：BEST 只能按天区检索，请给 RA/Dec/半径；标准星两个口径：std 组三张交叉表（scr_galah/scr_lamost/xpsp）vs landolt（UBVRI，量级与覆盖完全不同）；全库导出不支持：7 个工具没有全表导出能力，大批量请走官方下载或 TAP（工具面外）。",
+  "source": "golden-from-annotation"
+}

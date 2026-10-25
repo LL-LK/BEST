@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：ps1 半径 0 被拒，E_INVALID_INPUT「Search radius must be positive, got 0.0」。计数三元组 total_count=0 / returned_count=0 / row_count=0，pages=0，truncated=false，无行、无关键列可报。来源：工具面 toolbox，快照 live-2026-10-04/live_raw_ps1_r0.0as；stable_uri 空（无稳定引用），content_trust=untrusted，sentinels_removed=false。请改用正半径重查。"}

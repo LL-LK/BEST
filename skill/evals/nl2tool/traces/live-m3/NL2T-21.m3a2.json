@@ -1,0 +1,30 @@
+{
+  "task_id": "NL2T-21",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_rpsf",
+          "ps1_rpsf_err"
+        ],
+        "sort": "ps1.rpsf",
+        "order": "asc",
+        "max_rows": 200
+      }
+    }
+  ],
+  "answer_text": "按 r 波段升序取，天区 RA=180.0°、Dec=30.0°、半径 60 角秒（坐标是度、半径是角秒，原样传），服务端排序列 ps1.rpsf、order=asc，所以 r 数值最小的排最前。\n两个必须提醒的坑：\n（1）哨兵值。ps1 某波段没有测光时该列回 ≈-1000 的哨兵（实测出现过 gpsf=-1004.07、gpsf_err=-999.0，同帧 ipsf=19.49 才是真值）。升序排 r 会把这些哨兵顶到最前面，直接取第一行就等于报了个假“最亮”。所以我把 max_rows 放到 200 而不是只要 1 行——拿到后我按 ≈-1000 哨兵剔除，再把真正 r 最小的那颗连 ps1_ra/ps1_dec/ps1_rpsf/ps1_rpsf_err 一起报给你。\n（2）60 角秒内可能一颗 ps1 源都没有。真到 0 行我会直接说这片天区是空的，不拿别的表的源凑数。\n“r 波段”还有歧义要提醒：ps1 的 rpsf、splus_dr4 的 r_pstotal、stripe82 的 r_h22、smss_dr4 的 rpsf 是四套不同定标系统的 r。这次按 ps1 排；换成 splus_dr4 我就把 sort 改成 splus_dr4.r_pstotal 重跑（order 同样 asc）。",
+  "notes": "排序需求用 cone_search 的 sort/order 表达（ps1.rpsf asc）；关键是识别 -1000 哨兵会污染“r 最小=最亮”的判断，故扩大 max_rows 并在回答中声明剔除逻辑。"
+}

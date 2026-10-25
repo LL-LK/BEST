@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：route=clarify、tool_calls 为空，未执行查询。信封（tool_face=toolbox）state=empty，total/returned/row_count=0/0/0，pages=0、truncated=false，观测 0 行。stable_uri=null，session_id、snapshot_id 均为 null，无 content_trust。"}

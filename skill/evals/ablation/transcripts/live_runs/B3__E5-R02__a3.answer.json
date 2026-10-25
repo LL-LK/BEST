@@ -1,0 +1,1 @@
+{"answer_text": "路由 reject，tool_calls 空，ps1 全表无法导出 FITS。state=empty、error_code=null；row_count=total_count=returned_count=0，truncated=false；stable_uri/snapshot_id=null，tool_face=toolbox；信封未给 source/content_trust；未产出文件。"}

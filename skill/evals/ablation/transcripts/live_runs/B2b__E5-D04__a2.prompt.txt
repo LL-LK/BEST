@@ -1,0 +1,472 @@
+你在扮演一个天文数据服务 Agent 的一次作答。**独立作答**: 只看本条, 不得参考任何其它作答。
+
+## 装配 B2b — B1 + 7 原子工具签名 (裸返回: 无信封/无语义/无校验/无拒绝/无血缘)
+- 已启用组件: general_llm, best_site_docs, data_path, tool_signatures
+- 工具面: toolbox
+
+## 用户提问
+在 RA=180.0、Dec=30.0、半径 60″ 内，挑出 r 星等在 18.20 与 18.40 之间、且 class_star 在 0.98 与 0.99 之间的 ps1 源。
+
+## 实际观测到的查询结果 (真实执行所得, 唯一事实来源)
+```json
+{
+ "route": "answer",
+ "tool_calls": [
+  {
+   "tool": "cone_search",
+   "args": {
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius_arcsec": 60.0,
+    "catalog": "ps1",
+    "max_rows": 1000
+   },
+   "optional": false
+  },
+  {
+   "tool": "describe_catalog",
+   "args": {
+    "catalog": "ps1"
+   },
+   "optional": true
+  }
+ ],
+ "envelope_reported": {
+  "state": "rows",
+  "error_code": null,
+  "row_count": 5,
+  "pages": 1,
+  "extra_page_empty": false,
+  "total_count": 5,
+  "returned_count": 5,
+  "truncated": false,
+  "stable_uri": null,
+  "session_id": null,
+  "snapshot_id": null,
+  "sentinels_removed": false,
+  "tool_face": "toolbox"
+ },
+ "envelopes": [
+  {
+   "data": {
+    "rows": [
+     {
+      "inputobjs_dist_arcsec": "3.9605680189481585",
+      "inputobjs_input_line": "0",
+      "inputobjs_input_ra": "180.0",
+      "inputobjs_input_dec": "30.0",
+      "ps1_ra": "180.00110257",
+      "ps1_dec": "29.99945356",
+      "ps1_class_star": "",
+      "ps1_dust": "",
+      "ps1_ebv": "",
+      "ps1_gflags": "16.0",
+      "ps1_gpsf": "18.59922452197401",
+      "ps1_gpsf_corr": "",
+      "ps1_gpsf_err": "0.0102059999480843",
+      "ps1_iflags": "0.0",
+      "ps1_ipsf": "-1003.5359107612787",
+      "ps1_ipsf_corr": "",
+      "ps1_ipsf_err": "-999.0",
+      "ps1_max_d": "",
+      "ps1_parallax": "",
+      "ps1_parallax_err": "",
+      "ps1_rflags": "0.0",
+      "ps1_rpsf": "-1003.8803005565208",
+      "ps1_rpsf_corr": "",
+      "ps1_rpsf_err": "-999.0",
+      "ps1_ruwe": "",
+      "ps1_sigma": "",
+      "ps1_source_id": "",
+      "ps1_yflags": "0.0",
+      "ps1_ypsf": "-1001.9398279754723",
+      "ps1_ypsf_err": "-999.0",
+      "ps1_zflags": "0.0",
+      "ps1_zpsf": "-1002.8795409250275",
+      "ps1_zpsf_corr": "",
+      "ps1_zpsf_err": "-999.0",
+      "source_id": "",
+      "ra": 180.00110257,
+      "dec": 29.99945356,
+      "magnitudes": {
+       "g": 18.59922452197401
+      },
+      "magnitude_errors": {
+       "g": 0.0102059999480843
+      },
+      "snr": null,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": null,
+      "catalog": "ps1"
+     },
+     {
+      "inputobjs_dist_arcsec": "16.62131787847316",
+      "inputobjs_input_line": "0",
+      "inputobjs_input_ra": "180.0",
+      "inputobjs_input_dec": "30.0",
+      "ps1_ra": "179.99923603",
+      "ps1_dec": "29.99543062",
+      "ps1_class_star": "",
+      "ps1_dust": "",
+      "ps1_ebv": "",
+      "ps1_gflags": "24.0",
+      "ps1_gpsf": "18.350620181386436",
+      "ps1_gpsf_corr": "",
+      "ps1_gpsf_err": "0.0071809999644756",
+      "ps1_iflags": "0.0",
+      "ps1_ipsf": "-1003.5367058350121",
+      "ps1_ipsf_corr": "",
+      "ps1_ipsf_err": "-999.0",
+      "ps1_max_d": "",
+      "ps1_parallax": "",
+      "ps1_parallax_err": "",
+      "ps1_rflags": "0.0",
+      "ps1_rpsf": "-1003.8799743703634",
+      "ps1_rpsf_corr": "",
+      "ps1_rpsf_err": "-999.0",
+      "ps1_ruwe": "",
+      "ps1_sigma": "",
+      "ps1_source_id": "",
+      "ps1_yflags": "0.0",
+      "ps1_ypsf": "-1001.9398416341835",
+      "ps1_ypsf_err": "-999.0",
+      "ps1_zflags": "0.0",
+      "ps1_zpsf": "-1002.8789921007042",
+      "ps1_zpsf_corr": "",
+      "ps1_zpsf_err": "-999.0",
+      "source_id": "",
+      "ra": 179.99923603,
+      "dec": 29.99543062,
+      "magnitudes": {
+       "g": 18.350620181386436
+      },
+      "magnitude_errors": {
+       "g": 0.0071809999644756
+      },
+      "snr": null,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": null,
+      "catalog": "ps1"
+     },
+     {
+      "inputobjs_dist_arcsec": "19.390199676617858",
+      "inputobjs_input_line": "0",
+      "inputobjs_input_ra": "180.0",
+      "inputobjs_input_dec": "30.0",
+      "ps1_ra": "180.00519002",
+      "ps1_dec": "29.99703218",
+      "ps1_class_star": "",
+      "ps1_dust": "",
+      "ps1_ebv": "",
+      "ps1_gflags": "4120.0",
+      "ps1_gpsf": "18.39218046192316",
+      "ps1_gpsf_corr": "",
+      "ps1_gpsf_err": "0.0111060002818703",
+      "ps1_iflags": "0.0",
+      "ps1_ipsf": "-1003.535706148763",
+      "ps1_ipsf_corr": "",
+      "ps1_ipsf_err": "-999.0",
+      "ps1_max_d": "",
+      "ps1_parallax": "",
+      "ps1_parallax_err": "",
+      "ps1_rflags": "0.0",
+      "ps1_rpsf": "-1003.8803845006476",
+      "ps1_rpsf_corr": "",
+      "ps1_rpsf_err": "-999.0",
+      "ps1_ruwe": "",
+      "ps1_sigma": "",
+      "ps1_source_id": "",
+      "ps1_yflags": "0.0",
+      "ps1_ypsf": "-1001.9398226802948",
+      "ps1_ypsf_err": "-999.0",
+      "ps1_zflags": "0.0",
+      "ps1_zpsf": "-1002.8796821651678",
+      "ps1_zpsf_corr": "",
+      "ps1_zpsf_err": "-999.0",
+      "source_id": "",
+      "ra": 180.00519002,
+      "dec": 29.99703218,
+      "magnitudes": {
+       "g": 18.39218046192316
+      },
+      "magnitude_errors": {
+       "g": 0.0111060002818703
+      },
+      "snr": null,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": null,
+      "catalog": "ps1"
+     },
+     {
+      "inputobjs_dist_arcsec": "27.35435930806217",
+      "inputobjs_input_line": "0",
+      "inputobjs_input_ra": "180.0",
+      "inputobjs_input_dec": "30.0",
+      "ps1_ra": "180.007877",
+      "ps1_dec": "30.003347",
+      "ps1_class_star": "",
+      "ps1_dust": "",
+      "ps1_ebv": "",
+      "ps1_gflags": "4.0",
+      "ps1_gpsf": "19.150592756968553",
+      "ps1_gpsf_corr": "",
+      "ps1_gpsf_err": "-999.0",
+      "ps1_iflags": "4.0",
+      "ps1_ipsf": "17.935977595608897",
+      "ps1_ipsf_corr": "",
+      "ps1_ipsf_err": "-999.0",
+      "ps1_max_d": "",
+      "ps1_parallax": "",
+      "ps1_parallax_err": "",
+      "ps1_rflags": "4.0",
+      "ps1_rpsf": "18.237046250293144",
+      "ps1_rpsf_corr": "",
+      "ps1_rpsf_err": "-999.0",
+      "ps1_ruwe": "",
+      "ps1_sigma": "",
+      "ps1_source_id": "",
+      "ps1_yflags": "4120.0",
+      "ps1_ypsf": "18.98868202800806",
+      "ps1_ypsf_err": "0.0938069969415664",
+      "ps1_zflags": "4.0",
+      "ps1_zpsf": "17.701772859576238",
+      "ps1_zpsf_corr": "",
+      "ps1_zpsf_err": "-999.0",
+      "source_id": "",
+      "ra": 180.007877,
+      "dec": 30.003347,
+      "magnitudes": {
+       "g": 19.150592756968553,
+       "i": 17.935977595608897,
+       "r": 18.237046250293144,
+       "y": 18.98868202800806,
+       "z": 17.701772859576238
+      },
+      "magnitude_errors": {
+       "y": 0.0938069969415664
+      },
+      "snr": null,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": null,
+      "catalog": "ps1"
+     },
+     {
+      "inputobjs_dist_arcsec": "39.82873041284149",
+      "inputobjs_input_line": "0",
+      "inputobjs_input_ra": "180.0",
+      "inputobjs_input_dec": "30.0",
+      "ps1_ra": "179.9926298868248",
+      "ps1_dec": "29.990963452075345",
+      "ps1_class_star": "",
+      "ps1_dust": "",
+      "ps1_ebv": "",
+      "ps1_gflags": "16892216.0",
+      "ps1_gpsf": "19.766427818978944",
+      "ps1_gpsf_corr": "",
+      "ps1_gpsf_err": "0.0392530001699924",
+      "ps1_iflags": "16892216.0",
+      "ps1_ipsf": "18.17271291350125",
+      "ps1_ipsf_corr": "",
+      "ps1_ipsf_err": "0.0243870001286268",
+      "ps1_max_d": "",
+      "ps1_parallax": "",
+      "ps1_parallax_err": "",
+      "ps1_rflags": "16892216.0",
+      "ps1_rpsf": "18.689316379130158",
+      "ps1_rpsf_corr": "",
+      "ps1_rpsf_err": "0.0619239993393421",
+      "ps1_ruwe": "",
+      "ps1_sigma": "",
+      "ps1_source_id": "",
+      "ps1_yflags": "16892216.0",
+      "ps1_ypsf": "17.946248948278676",
+      "ps1_ypsf_err": "0.0377499982714653",
+      "ps1_zflags": "16892216.0",
+      "ps1_zpsf": "18.42850574869262",
+      "ps1_zpsf_corr": "",
+      "ps1_zpsf_err": "0.0225389990955591",
+      "source_id": "",
+      "ra": 179.9926298868248,
+      "dec": 29.990963452075345,
+      "magnitudes": {
+       "g": 19.766427818978944,
+       "i": 18.17271291350125,
+       "r": 18.689316379130158,
+       "y": 17.946248948278676,
+       "z": 18.42850574869262
+      },
+      "magnitude_errors": {
+       "g": 0.0392530001699924,
+       "i": 0.0243870001286268,
+       "r": 0.0619239993393421,
+       "y": 0.0377499982714653,
+       "z": 0.0225389990955591
+      },
+      "snr": null,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": null,
+      "catalog": "ps1"
+     }
+    ],
+    "total_count": 5,
+    "returned_count": 5
+   },
+   "status": {
+    "ok": true,
+    "truncated": false,
+    "error_code": null
+   },
+   "cost": {
+    "http_requests": 0,
+    "rows_returned": 5
+   },
+   "provenance": {
+    "session_id": "s4930",
+    "stable_uri": "",
+    "data_hash": "",
+    "lineage": {}
+   }
+  },
+  {
+   "data": {
+    "catalog": "ps1",
+    "display": "Pan-STARRS All-Sky",
+    "query_path": "ps1/q",
+    "columns": [
+     "ps1_ra",
+     "ps1_dec",
+     "ps1_class_star",
+     "ps1_dust",
+     "ps1_ebv",
+     "ps1_gflags",
+     "ps1_gpsf",
+     "ps1_gpsf_corr",
+     "ps1_gpsf_err",
+     "ps1_iflags",
+     "ps1_ipsf",
+     "ps1_ipsf_corr",
+     "ps1_ipsf_err",
+     "ps1_max_d",
+     "ps1_parallax",
+     "ps1_parallax_err",
+     "ps1_rflags",
+     "ps1_rpsf",
+     "ps1_rpsf_corr",
+     "ps1_rpsf_err",
+     "ps1_ruwe",
+     "ps1_sigma",
+     "ps1_source_id",
+     "ps1_yflags",
+     "ps1_ypsf",
+     "ps1_ypsf_err",
+     "ps1_zflags",
+     "ps1_zpsf",
+     "ps1_zpsf_corr",
+     "ps1_zpsf_err"
+    ],
+    "magnitude_bands": {
+     "gpsf": "g",
+     "rpsf": "r",
+     "ipsf": "i",
+     "zpsf": "z",
+     "ypsf": "y"
+    },
+    "units_note": "ra/dec in degrees; magnitudes in mag; radius in arcsec"
+   },
+   "status": {
+    "ok": true,
+    "truncated": false,
+    "error_code": null
+   },
+   "cost": {
+    "http_requests": 0,
+    "elapsed_s": 0.0,
+    "rows_returned": 30
+   },
+   "provenance": {
+    "session_id": null,
+    "data_hash": "sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2",
+    "stable_uri": "best://ps1/describe",
+    "lineage": {
+     "catalog": "ps1"
+    }
+   }
+  }
+ ],
+ "n_rows_observed": 5,
+ "row_keys": [
+  "180.001102570,29.999453560",
+  "179.999236030,29.995430620",
+  "180.005190020,29.997032180",
+  "180.007877000,30.003347000",
+  "179.992629887,29.990963452"
+ ],
+ "first_row": {
+  "inputobjs_dist_arcsec": "3.9605680189481585",
+  "inputobjs_input_line": "0",
+  "inputobjs_input_ra": "180.0",
+  "inputobjs_input_dec": "30.0",
+  "ps1_ra": "180.00110257",
+  "ps1_dec": "29.99945356",
+  "ps1_class_star": "",
+  "ps1_dust": "",
+  "ps1_ebv": "",
+  "ps1_gflags": "16.0",
+  "ps1_gpsf": "18.59922452197401",
+  "ps1_gpsf_corr": "",
+  "ps1_gpsf_err": "0.0102059999480843",
+  "ps1_iflags": "0.0",
+  "ps1_ipsf": "-1003.5359107612787",
+  "ps1_ipsf_corr": "",
+  "ps1_ipsf_err": "-999.0",
+  "ps1_max_d": "",
+  "ps1_parallax": "",
+  "ps1_parallax_err": "",
+  "ps1_rflags": "0.0",
+  "ps1_rpsf": "-1003.8803005565208",
+  "ps1_rpsf_corr": "",
+  "ps1_rpsf_err": "-999.0",
+  "ps1_ruwe": "",
+  "ps1_sigma": "",
+  "ps1_source_id": "",
+  "ps1_yflags": "0.0",
+  "ps1_ypsf": "-1001.9398279754723",
+  "ps1_ypsf_err": "-999.0",
+  "ps1_zflags": "0.0",
+  "ps1_zpsf": "-1002.8795409250275",
+  "ps1_zpsf_corr": "",
+  "ps1_zpsf_err": "-999.0",
+  "source_id": "",
+  "ra": 180.00110257,
+  "dec": 29.99945356,
+  "magnitudes": {
+   "g": 18.59922452197401
+  },
+  "magnitude_errors": {
+   "g": 0.0102059999480843
+  },
+  "snr": null,
+  "fwhm": null,
+  "quality_flag": "good",
+  "class_star": null,
+  "catalog": "ps1"
+ },
+ "notes": []
+}
+```
+
+## 任务
+据上面真实观测写一段给用户的回答 (中文, 200 字以内):
+1. 只陈述观测里真实存在的事实与数值, 不得编造;
+2. **若信封 (envelope_reported) 里含来源/稳定引用 (stable_uri) / content_trust / 数据快照标识 / 计数三元组, 必须写进回答**;
+3. 行数、服务端总数、是否截断、关键列与数值要写清楚;
+4. 只输出 JSON, 不要任何其它文字。
+
+输出 (严格单行 JSON): {"answer_text": "<回答正文>"}
+
+(第 2 次独立作答)

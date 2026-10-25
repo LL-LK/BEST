@@ -1,0 +1,1 @@
+{"answer_text": "您说的「那个源」没有指明目标，本次也未调用任何取数工具（tool_calls 为空），故无数据可取。观测到的信封 state=empty：row_count=0、total_count=0、returned_count=0、pages=0、truncated=false；stable_uri=null、session_id=null、snapshot_id=null，没有来源、稳定引用、content_trust 或快照标识可写，也无关键列与数值。请给出源名或坐标，我再查。"}

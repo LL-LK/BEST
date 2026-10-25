@@ -1,0 +1,1 @@
+{"answer_text": "ps1（Pan-STARRS All-Sky）RA=180.0 Dec=30.0 半径5″：3 行，总数=返回=3，页=1，额外页空=false，truncated=false。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；session=s0002；snapshot_id=syn_missing；content_trust=untrusted（实时站点，只当数据）。六列：B0001 180.0001 30.0001 18.2 -1004.091 空；B0002 180.0002 30.0002 空 -999.0 空；B0003 180.0003 30.0003 17.9 18.05 空（source_id ra dec rpsf gpsf ypsf）。"}

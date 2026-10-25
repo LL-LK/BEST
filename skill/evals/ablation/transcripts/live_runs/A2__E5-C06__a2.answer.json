@@ -1,0 +1,1 @@
+{"answer_text": "本次查询未返回数据：路由 clarify，工具调用 0 次；信封 state=empty、error_code=null，计数为 total_count=0、returned_count=0、row_count=0（pages=0，truncated=false），envelopes、row_keys 均空。stable_uri、session_id、snapshot_id 均为 null，信封无 content_trust，故无稳定引用、快照或来源可信度信息可核。据此无法判断该字段是否代表逐历元星等——观测中没有任何列名或数值。请补充字段名与数据出处，我再据实核查。"}

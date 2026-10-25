@@ -1,0 +1,31 @@
+# E2 场景 7/8: 缺失字段 — 哨兵值 (L 类) — docs/eval-E2-groundtruth.md §5 #7
+case_id: sentinel_value
+category: missing_field
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as
+main_metrics: [M2, M5]
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf, ps1_gpsf, ps1_class_star]
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+  # 行数/截断标志/哨兵格清单**不在此声明**: gen_gold 只读 result_state 与
+  # error_code, 这里写下的数字与 BEST_SYN_* 行键无人断言 —— 换素材后不会变红,
+  # 只会静静变旧 (A7-02: 换素材前按 syn 合成快照登记的行数与哨兵行键, 换成 live
+  # 快照后既对不上行数, 那些行键也不存在了)。权威值见 gold/sentinel_value.json 的
+  # null_semantics / field_values 段与签字单联 items 里的 sentinel_cells。
+  zero_note: "现用 live 快照暂无真实 0.0 格; 零值语义 (NULL vs ZERO 双向不冒充) 的样例待快照增补 — 已登记"
+notes: >
+  金标准: 哨兵判定读 evals/_data/null_sentinel.yaml (threshold=-999.0,
+  判定 value <= threshold, 不依赖具体形态; pmra/pmdec/radial_velocity 豁免)。
+  低于阈值的哨兵一律 null (E2 §5 #7: 哨兵不得当数值参与比较或输出成 0);
+  GT 的 field_values.raw 保留哨兵原值证据。M2 把哨兵当真值的实现必被抓
+  (反证夹具同款: 哨兵 → 0 的突变)。**哨兵格清单不写在本文件**: 具体格随素材变,
+  权威位置是 gold/sentinel_value.json 的 null_semantics / field_values, 抽样清单
+  在 gold/sentinel_value.review.yaml 的 items 段 (逐格给 sentinel_cells)。
+  零值样例缺失已登记, 待后续快照增补真零格。
+gold_focus: 哨兵=null (不得当数值/不得输出成 0) + 字典单点判定 + 豁免列

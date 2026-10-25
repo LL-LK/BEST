@@ -1,0 +1,1 @@
+{"answer_text": "未执行工具调用，路由 clarify：未指明具体源，无法取数。信封 state=empty，row_count=total_count=returned_count=0，truncated=false，row_keys/first_row 空。stable_uri、snapshot_id、session_id 均 null，无 content_trust 字段，来源与信任度无可报。请补源名。"}

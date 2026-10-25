@@ -1,0 +1,1 @@
+{"answer_text": "观测信封 state=empty：row_count、total_count、returned_count 均为 0，pages=0，truncated=false；stable_uri 为 null，snapshot_id 为 null，无来源标识、无 content_trust、无快照，envelopes 为空，tool_face=toolbox。即本次 3 角秒查询返回 0 行、服务端总数 0、未截断，且没有稳定引用可循。但 0 行只说明本次未命中，不等于该位置没有天体：可能星表未收录、半径过小、坐标系或历元不符。建议放大半径、核对坐标系与历元后重查。"}

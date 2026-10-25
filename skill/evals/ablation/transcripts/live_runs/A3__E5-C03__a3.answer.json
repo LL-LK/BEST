@@ -1,0 +1,1 @@
+{"answer_text": "本次无工具调用（tool_calls 为空）。信封 state=empty、error_code=null，返回 0 行：row_count=0、pages=0、extra_page_empty=false，计数三元组 total_count=0、returned_count=0、truncated=false，故 r 波段误差<0.01 mag 无可用行，无关键列与数值可报。stable_uri=null（无稳定引用）、session_id=null、snapshot_id=null（无快照标识）、sentinels_removed=false、tool_face=toolbox。观测中未出现来源与 content_trust，故不报来源与信任等级；空结果不等于确证无此对象。"}

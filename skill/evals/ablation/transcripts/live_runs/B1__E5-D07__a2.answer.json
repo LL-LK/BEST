@@ -1,0 +1,1 @@
+{"answer_text": "装配工具面为 none，无数据通路，未发出任何查询调用（tool_calls 为空），无法对 RA=180.0、Dec=0.0、半径 60″ 的 ps1 分页取数。信封 state=empty：行数 0、页数 0、服务端总数 0、返回计数 0、truncated=false。stable_uri、session_id、snapshot_id 均为 null，即无稳定引用、无会话与快照标识；信封不含 content_trust 字段，来源可信度无从陈述。0 行源于通路缺失，非真实空结果。"}

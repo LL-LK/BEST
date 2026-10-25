@@ -1,0 +1,1 @@
+{"answer_text": "路由判定 reject，未发起工具调用，故未取得该星五年光变曲线。信封 state=empty、error_code=null；计数三元组：行数 row_count=0、服务端总数 total_count=0、返回数 returned_count=0，pages=0、extra_page_empty=false、truncated=false。stable_uri、session_id、snapshot_id 均 null，无稳定引用与数据快照标识；sentinels_removed=false。n_rows_observed=0，row_keys、first_row、notes 皆空，无关键列与数值。信封未上报来源与 content_trust。"}

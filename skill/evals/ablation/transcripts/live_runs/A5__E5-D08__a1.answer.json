@@ -1,0 +1,1 @@
+{"answer_text": "查询未成功：cone_search(ps1, ra=180.0, dec=0.0, radius_arcsec=0.0) 返回 E_INVALID_INPUT：搜索半径须为正，收到 0.0，故未发出请求。信封 state=error，row_count/total_count/returned_count=0/0/0，pages=0，truncated=false，无行数据与关键列。来源：BEST 站点实时快照 snapshot_id=live-2026-10-04/live_raw_ps1_r0.0as；stable_uri 为空，session_id=null，content_trust=untrusted，sentinels_removed=false。请用正半径重试。"}

@@ -1,0 +1,1 @@
+{"answer_text": "route=clarify，无工具调用；信封 state=empty、error_code=null，row_count=0、total_count=0、returned_count=0，truncated=false；stable_uri、session_id、snapshot_id 均为 null，无来源与 content_trust 字段。观测无行列，无法判定其是否逐历元星等，请补字段名与星表。"}

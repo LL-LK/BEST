@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：route=reject，tool_calls 空，故无 r 波段误差<0.01 mag 的源。信封 state=empty、row_count=0、returned_count=0、total_count=0、truncated=false；stable_uri、content_trust、snapshot_id 均 null，无出处可标。envelopes 空，无关键列可列。"}

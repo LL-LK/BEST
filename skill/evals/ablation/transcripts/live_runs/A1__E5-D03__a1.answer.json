@@ -1,0 +1,1 @@
+{"answer_text":"cone_search 检索 PS1 星表，中心 RA=180.0、Dec=30.0，半径 300 角秒。信封 state=rows，error_code=null，truncated=false；total_count=returned_count=row_count=174，pages=1。来源 session_id=s4909，快照 snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as；stable_uri 为空串；信封未含 content_trust 字段。174 行距中心 3.15–59.94 角秒，quality_flag 全 good，多为单波段。"}

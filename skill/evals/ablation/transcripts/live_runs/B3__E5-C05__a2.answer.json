@@ -1,0 +1,1 @@
+{"answer_text": "route=clarify：零工具调用（提问未指明星表）。信封 state=empty，tool_face=toolbox。row_count=0、returned_count=0、total_count=0；pages=0，truncated=false。stable_uri、snapshot_id 均 null；无来源/content_trust 字段。请指明星表后重跑。"}

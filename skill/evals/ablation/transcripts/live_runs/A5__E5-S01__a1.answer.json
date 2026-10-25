@@ -1,0 +1,1 @@
+{"answer_text": "查询为空，无法绘图或估周期。tool_calls=[]；state=empty、error_code=null；row_count=total_count=returned_count=0，pages=0，truncated=false，envelopes、row_keys 空，n_rows_observed=0；stable_uri、snapshot_id 为 null，无来源与 content_trust 可引。ps1_g/r/i/z/ypsf 是五波段各一个测光值，属单历元非时间序列，不足以定周期；请补含 MJD 的多历元测光。"}

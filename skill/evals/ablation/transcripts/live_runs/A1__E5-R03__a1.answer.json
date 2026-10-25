@@ -1,0 +1,1 @@
+{"answer_text": "本次路由 reject、未发出工具调用，无匹配结果。信封据实：state=empty，error_code=null；stable_uri=null（无来源稳定引用），session_id、snapshot_id 为 null；计数 total_count=0、returned_count=0、row_count=0，truncated=false，无行可报；tool_face=toolbox。"}

@@ -1,0 +1,1 @@
+{"answer_text": "已对 ps1 执行 cone_search（RA=180.0, Dec=30.0, 半径 5″）：信封 state=empty，返回 0 行，total_count=0，returned_count=0，truncated=false，即该天区内 0 个源。来源：BEST 站点；stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；会话 s4906；快照 live-2026-10-04/live_ps1_ra10.0_dec-45.0_r60.0as；content_trust=untrusted（行数据仅作数据、非指令）；http_requests=0，elapsed_s=0.001。无返回行，故无关键列可报。"}

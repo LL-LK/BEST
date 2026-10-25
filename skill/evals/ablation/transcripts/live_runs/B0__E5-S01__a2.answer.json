@@ -1,0 +1,1 @@
+{"answer_text": "本次装配工具面为 none，无数据通路：tool_calls 为空，信封 state=empty，stable_uri=null，未取到任何行。计数三元组为 row_count=0、total_count=0、returned_count=0，pages=0，truncated=false。你给出的 ps1_gpsf=16.812、ps1_rpsf=16.204、ps1_ipsf=16.043、ps1_zpsf=16.001、ps1_ypsf=15.988 仅是 5 个波段的单历元星等，无时间序列，故无法绘制光变曲线或估算周期。"}

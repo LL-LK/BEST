@@ -1,0 +1,1 @@
+{"answer_text": "ps1 星表 RA=180.0、Dec=30.0、半径5″ 锥形检索得3源：①179.99904154,29.99972728 i=19.494；②180.00110257,29.99945356 g=18.599；③180.00040814,29.99895175 无星等。信封 row_count=total_count=returned_count=3，pages=1，truncated=false，error_code=null；stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as；content_trust=untrusted。"}

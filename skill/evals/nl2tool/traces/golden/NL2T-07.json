@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-07",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 ztf_semantics、catalog_choice。 可选: BEST 没有 ZTF 星表（12 张可查表中无 ZTF），ZTF 只作为测光系统出现在两张标准星交叉表里： scr_galah/scr_lamost 的实测交叉列 gztf/rztf/iztf，或 xpsp 的 ztf_g_g_xpsp/ztf_r_r_xpsp/ztf_i_i_xpsp ——后者是 Gaia XP 光谱拟合出的合成测光，不是 ZTF 实测星等。要哪一种？；给定的是 Gaia DR3 source_id，工具面没有按 id 直接取源的能力， 需先经 CDS Sesame 解算成坐标（resolve_name），再按坐标检索，是否接受？。",
+  "source": "golden-from-annotation"
+}

@@ -1,0 +1,1 @@
+{"answer_text": "装配工具面 none，无工具调用，无法自行取数，只据随附观测陈述。信封：state=empty、error_code=null，row_count=0、total_count=0、returned_count=0、pages=0、truncated=false，envelopes 与 row_keys 均空，服务端总数亦为 0。stable_uri、session_id、snapshot_id 全为 null，无来源与稳定引用，无法核实查询落在哪个星表与快照。故只能确认该次查询返回 0 行，不能断定该位置没有天体，也可能是覆盖缺失、星表选错或坐标单位不匹配。"}

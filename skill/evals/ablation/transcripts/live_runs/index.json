@@ -1,0 +1,4952 @@
+[
+ {
+  "cell": "B0__E5-D01__a1",
+  "prompt_path": "temp/indep3/B0__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D01__a2",
+  "prompt_path": "temp/indep3/B0__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D01__a3",
+  "prompt_path": "temp/indep3/B0__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D02__a1",
+  "prompt_path": "temp/indep3/B0__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D02__a2",
+  "prompt_path": "temp/indep3/B0__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D02__a3",
+  "prompt_path": "temp/indep3/B0__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D03__a1",
+  "prompt_path": "temp/indep3/B0__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D03__a2",
+  "prompt_path": "temp/indep3/B0__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D03__a3",
+  "prompt_path": "temp/indep3/B0__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D04__a1",
+  "prompt_path": "temp/indep3/B0__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D04__a2",
+  "prompt_path": "temp/indep3/B0__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D04__a3",
+  "prompt_path": "temp/indep3/B0__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D05__a1",
+  "prompt_path": "temp/indep3/B0__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D05__a2",
+  "prompt_path": "temp/indep3/B0__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D05__a3",
+  "prompt_path": "temp/indep3/B0__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D06__a1",
+  "prompt_path": "temp/indep3/B0__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D06__a2",
+  "prompt_path": "temp/indep3/B0__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D06__a3",
+  "prompt_path": "temp/indep3/B0__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D07__a1",
+  "prompt_path": "temp/indep3/B0__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D07__a2",
+  "prompt_path": "temp/indep3/B0__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D07__a3",
+  "prompt_path": "temp/indep3/B0__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D08__a1",
+  "prompt_path": "temp/indep3/B0__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D08__a2",
+  "prompt_path": "temp/indep3/B0__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D08__a3",
+  "prompt_path": "temp/indep3/B0__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D09__a1",
+  "prompt_path": "temp/indep3/B0__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D09__a2",
+  "prompt_path": "temp/indep3/B0__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D09__a3",
+  "prompt_path": "temp/indep3/B0__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D10__a1",
+  "prompt_path": "temp/indep3/B0__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D10__a2",
+  "prompt_path": "temp/indep3/B0__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D10__a3",
+  "prompt_path": "temp/indep3/B0__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D11__a1",
+  "prompt_path": "temp/indep3/B0__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D11__a2",
+  "prompt_path": "temp/indep3/B0__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D11__a3",
+  "prompt_path": "temp/indep3/B0__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-D12__a1",
+  "prompt_path": "temp/indep3/B0__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-D12__a2",
+  "prompt_path": "temp/indep3/B0__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-D12__a3",
+  "prompt_path": "temp/indep3/B0__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-C01__a1",
+  "prompt_path": "temp/indep3/B0__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-C01__a2",
+  "prompt_path": "temp/indep3/B0__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-C01__a3",
+  "prompt_path": "temp/indep3/B0__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-C02__a1",
+  "prompt_path": "temp/indep3/B0__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-C02__a2",
+  "prompt_path": "temp/indep3/B0__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-C02__a3",
+  "prompt_path": "temp/indep3/B0__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-C03__a1",
+  "prompt_path": "temp/indep3/B0__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-C03__a2",
+  "prompt_path": "temp/indep3/B0__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-C03__a3",
+  "prompt_path": "temp/indep3/B0__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-C04__a1",
+  "prompt_path": "temp/indep3/B0__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-C04__a2",
+  "prompt_path": "temp/indep3/B0__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-C04__a3",
+  "prompt_path": "temp/indep3/B0__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-C05__a1",
+  "prompt_path": "temp/indep3/B0__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-C05__a2",
+  "prompt_path": "temp/indep3/B0__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-C05__a3",
+  "prompt_path": "temp/indep3/B0__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-C06__a1",
+  "prompt_path": "temp/indep3/B0__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-C06__a2",
+  "prompt_path": "temp/indep3/B0__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-C06__a3",
+  "prompt_path": "temp/indep3/B0__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-R01__a1",
+  "prompt_path": "temp/indep3/B0__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-R01__a2",
+  "prompt_path": "temp/indep3/B0__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-R01__a3",
+  "prompt_path": "temp/indep3/B0__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-R02__a1",
+  "prompt_path": "temp/indep3/B0__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-R02__a2",
+  "prompt_path": "temp/indep3/B0__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-R02__a3",
+  "prompt_path": "temp/indep3/B0__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-R03__a1",
+  "prompt_path": "temp/indep3/B0__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-R03__a2",
+  "prompt_path": "temp/indep3/B0__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-R03__a3",
+  "prompt_path": "temp/indep3/B0__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-R04__a1",
+  "prompt_path": "temp/indep3/B0__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-R04__a2",
+  "prompt_path": "temp/indep3/B0__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-R04__a3",
+  "prompt_path": "temp/indep3/B0__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-R05__a1",
+  "prompt_path": "temp/indep3/B0__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-R05__a2",
+  "prompt_path": "temp/indep3/B0__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-R05__a3",
+  "prompt_path": "temp/indep3/B0__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-R06__a1",
+  "prompt_path": "temp/indep3/B0__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-R06__a2",
+  "prompt_path": "temp/indep3/B0__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-R06__a3",
+  "prompt_path": "temp/indep3/B0__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-S01__a1",
+  "prompt_path": "temp/indep3/B0__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-S01__a2",
+  "prompt_path": "temp/indep3/B0__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-S01__a3",
+  "prompt_path": "temp/indep3/B0__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-S02__a1",
+  "prompt_path": "temp/indep3/B0__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-S02__a2",
+  "prompt_path": "temp/indep3/B0__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-S02__a3",
+  "prompt_path": "temp/indep3/B0__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-S03__a1",
+  "prompt_path": "temp/indep3/B0__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-S03__a2",
+  "prompt_path": "temp/indep3/B0__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-S03__a3",
+  "prompt_path": "temp/indep3/B0__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-S04__a1",
+  "prompt_path": "temp/indep3/B0__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-S04__a2",
+  "prompt_path": "temp/indep3/B0__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-S04__a3",
+  "prompt_path": "temp/indep3/B0__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-S05__a1",
+  "prompt_path": "temp/indep3/B0__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-S05__a2",
+  "prompt_path": "temp/indep3/B0__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-S05__a3",
+  "prompt_path": "temp/indep3/B0__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "B0__E5-S06__a1",
+  "prompt_path": "temp/indep3/B0__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "B0__E5-S06__a2",
+  "prompt_path": "temp/indep3/B0__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "B0__E5-S06__a3",
+  "prompt_path": "temp/indep3/B0__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B0__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D01__a1",
+  "prompt_path": "temp/indep3/B1__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D01__a2",
+  "prompt_path": "temp/indep3/B1__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D01__a3",
+  "prompt_path": "temp/indep3/B1__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D02__a1",
+  "prompt_path": "temp/indep3/B1__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D02__a2",
+  "prompt_path": "temp/indep3/B1__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D02__a3",
+  "prompt_path": "temp/indep3/B1__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D03__a1",
+  "prompt_path": "temp/indep3/B1__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D03__a2",
+  "prompt_path": "temp/indep3/B1__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D03__a3",
+  "prompt_path": "temp/indep3/B1__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D04__a1",
+  "prompt_path": "temp/indep3/B1__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D04__a2",
+  "prompt_path": "temp/indep3/B1__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D04__a3",
+  "prompt_path": "temp/indep3/B1__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D05__a1",
+  "prompt_path": "temp/indep3/B1__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D05__a2",
+  "prompt_path": "temp/indep3/B1__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D05__a3",
+  "prompt_path": "temp/indep3/B1__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D06__a1",
+  "prompt_path": "temp/indep3/B1__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D06__a2",
+  "prompt_path": "temp/indep3/B1__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D06__a3",
+  "prompt_path": "temp/indep3/B1__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D07__a1",
+  "prompt_path": "temp/indep3/B1__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D07__a2",
+  "prompt_path": "temp/indep3/B1__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D07__a3",
+  "prompt_path": "temp/indep3/B1__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D08__a1",
+  "prompt_path": "temp/indep3/B1__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D08__a2",
+  "prompt_path": "temp/indep3/B1__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D08__a3",
+  "prompt_path": "temp/indep3/B1__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D09__a1",
+  "prompt_path": "temp/indep3/B1__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D09__a2",
+  "prompt_path": "temp/indep3/B1__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D09__a3",
+  "prompt_path": "temp/indep3/B1__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D10__a1",
+  "prompt_path": "temp/indep3/B1__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D10__a2",
+  "prompt_path": "temp/indep3/B1__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D10__a3",
+  "prompt_path": "temp/indep3/B1__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D11__a1",
+  "prompt_path": "temp/indep3/B1__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D11__a2",
+  "prompt_path": "temp/indep3/B1__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D11__a3",
+  "prompt_path": "temp/indep3/B1__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-D12__a1",
+  "prompt_path": "temp/indep3/B1__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-D12__a2",
+  "prompt_path": "temp/indep3/B1__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-D12__a3",
+  "prompt_path": "temp/indep3/B1__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-C01__a1",
+  "prompt_path": "temp/indep3/B1__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-C01__a2",
+  "prompt_path": "temp/indep3/B1__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-C01__a3",
+  "prompt_path": "temp/indep3/B1__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-C02__a1",
+  "prompt_path": "temp/indep3/B1__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-C02__a2",
+  "prompt_path": "temp/indep3/B1__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-C02__a3",
+  "prompt_path": "temp/indep3/B1__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-C03__a1",
+  "prompt_path": "temp/indep3/B1__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-C03__a2",
+  "prompt_path": "temp/indep3/B1__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-C03__a3",
+  "prompt_path": "temp/indep3/B1__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-C04__a1",
+  "prompt_path": "temp/indep3/B1__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-C04__a2",
+  "prompt_path": "temp/indep3/B1__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-C04__a3",
+  "prompt_path": "temp/indep3/B1__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-C05__a1",
+  "prompt_path": "temp/indep3/B1__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-C05__a2",
+  "prompt_path": "temp/indep3/B1__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-C05__a3",
+  "prompt_path": "temp/indep3/B1__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-C06__a1",
+  "prompt_path": "temp/indep3/B1__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-C06__a2",
+  "prompt_path": "temp/indep3/B1__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-C06__a3",
+  "prompt_path": "temp/indep3/B1__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-R01__a1",
+  "prompt_path": "temp/indep3/B1__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-R01__a2",
+  "prompt_path": "temp/indep3/B1__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-R01__a3",
+  "prompt_path": "temp/indep3/B1__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-R02__a1",
+  "prompt_path": "temp/indep3/B1__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-R02__a2",
+  "prompt_path": "temp/indep3/B1__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-R02__a3",
+  "prompt_path": "temp/indep3/B1__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-R03__a1",
+  "prompt_path": "temp/indep3/B1__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-R03__a2",
+  "prompt_path": "temp/indep3/B1__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-R03__a3",
+  "prompt_path": "temp/indep3/B1__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-R04__a1",
+  "prompt_path": "temp/indep3/B1__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-R04__a2",
+  "prompt_path": "temp/indep3/B1__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-R04__a3",
+  "prompt_path": "temp/indep3/B1__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-R05__a1",
+  "prompt_path": "temp/indep3/B1__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-R05__a2",
+  "prompt_path": "temp/indep3/B1__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-R05__a3",
+  "prompt_path": "temp/indep3/B1__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-R06__a1",
+  "prompt_path": "temp/indep3/B1__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-R06__a2",
+  "prompt_path": "temp/indep3/B1__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-R06__a3",
+  "prompt_path": "temp/indep3/B1__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-S01__a1",
+  "prompt_path": "temp/indep3/B1__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-S01__a2",
+  "prompt_path": "temp/indep3/B1__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-S01__a3",
+  "prompt_path": "temp/indep3/B1__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-S02__a1",
+  "prompt_path": "temp/indep3/B1__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-S02__a2",
+  "prompt_path": "temp/indep3/B1__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-S02__a3",
+  "prompt_path": "temp/indep3/B1__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-S03__a1",
+  "prompt_path": "temp/indep3/B1__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-S03__a2",
+  "prompt_path": "temp/indep3/B1__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-S03__a3",
+  "prompt_path": "temp/indep3/B1__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-S04__a1",
+  "prompt_path": "temp/indep3/B1__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-S04__a2",
+  "prompt_path": "temp/indep3/B1__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-S04__a3",
+  "prompt_path": "temp/indep3/B1__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-S05__a1",
+  "prompt_path": "temp/indep3/B1__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-S05__a2",
+  "prompt_path": "temp/indep3/B1__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-S05__a3",
+  "prompt_path": "temp/indep3/B1__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "B1__E5-S06__a1",
+  "prompt_path": "temp/indep3/B1__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "B1__E5-S06__a2",
+  "prompt_path": "temp/indep3/B1__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "B1__E5-S06__a3",
+  "prompt_path": "temp/indep3/B1__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B1__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D01__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D01__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D01__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D02__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D02__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D02__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D03__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D03__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D03__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D04__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D04__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D04__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D05__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D05__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D05__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D06__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D06__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D06__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D07__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D07__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D07__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D08__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D08__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D08__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D09__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D09__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D09__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D10__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D10__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D10__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D11__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D11__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D11__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D12__a1",
+  "prompt_path": "temp/indep3/B2a__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D12__a2",
+  "prompt_path": "temp/indep3/B2a__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-D12__a3",
+  "prompt_path": "temp/indep3/B2a__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C01__a1",
+  "prompt_path": "temp/indep3/B2a__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C01__a2",
+  "prompt_path": "temp/indep3/B2a__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C01__a3",
+  "prompt_path": "temp/indep3/B2a__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C02__a1",
+  "prompt_path": "temp/indep3/B2a__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C02__a2",
+  "prompt_path": "temp/indep3/B2a__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C02__a3",
+  "prompt_path": "temp/indep3/B2a__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C03__a1",
+  "prompt_path": "temp/indep3/B2a__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C03__a2",
+  "prompt_path": "temp/indep3/B2a__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C03__a3",
+  "prompt_path": "temp/indep3/B2a__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C04__a1",
+  "prompt_path": "temp/indep3/B2a__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C04__a2",
+  "prompt_path": "temp/indep3/B2a__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C04__a3",
+  "prompt_path": "temp/indep3/B2a__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C05__a1",
+  "prompt_path": "temp/indep3/B2a__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C05__a2",
+  "prompt_path": "temp/indep3/B2a__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C05__a3",
+  "prompt_path": "temp/indep3/B2a__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C06__a1",
+  "prompt_path": "temp/indep3/B2a__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C06__a2",
+  "prompt_path": "temp/indep3/B2a__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-C06__a3",
+  "prompt_path": "temp/indep3/B2a__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R01__a1",
+  "prompt_path": "temp/indep3/B2a__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R01__a2",
+  "prompt_path": "temp/indep3/B2a__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R01__a3",
+  "prompt_path": "temp/indep3/B2a__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R02__a1",
+  "prompt_path": "temp/indep3/B2a__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R02__a2",
+  "prompt_path": "temp/indep3/B2a__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R02__a3",
+  "prompt_path": "temp/indep3/B2a__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R03__a1",
+  "prompt_path": "temp/indep3/B2a__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R03__a2",
+  "prompt_path": "temp/indep3/B2a__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R03__a3",
+  "prompt_path": "temp/indep3/B2a__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R04__a1",
+  "prompt_path": "temp/indep3/B2a__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R04__a2",
+  "prompt_path": "temp/indep3/B2a__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R04__a3",
+  "prompt_path": "temp/indep3/B2a__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R05__a1",
+  "prompt_path": "temp/indep3/B2a__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R05__a2",
+  "prompt_path": "temp/indep3/B2a__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R05__a3",
+  "prompt_path": "temp/indep3/B2a__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R06__a1",
+  "prompt_path": "temp/indep3/B2a__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R06__a2",
+  "prompt_path": "temp/indep3/B2a__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-R06__a3",
+  "prompt_path": "temp/indep3/B2a__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S01__a1",
+  "prompt_path": "temp/indep3/B2a__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S01__a2",
+  "prompt_path": "temp/indep3/B2a__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S01__a3",
+  "prompt_path": "temp/indep3/B2a__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S02__a1",
+  "prompt_path": "temp/indep3/B2a__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S02__a2",
+  "prompt_path": "temp/indep3/B2a__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S02__a3",
+  "prompt_path": "temp/indep3/B2a__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S03__a1",
+  "prompt_path": "temp/indep3/B2a__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S03__a2",
+  "prompt_path": "temp/indep3/B2a__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S03__a3",
+  "prompt_path": "temp/indep3/B2a__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S04__a1",
+  "prompt_path": "temp/indep3/B2a__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S04__a2",
+  "prompt_path": "temp/indep3/B2a__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S04__a3",
+  "prompt_path": "temp/indep3/B2a__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S05__a1",
+  "prompt_path": "temp/indep3/B2a__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S05__a2",
+  "prompt_path": "temp/indep3/B2a__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S05__a3",
+  "prompt_path": "temp/indep3/B2a__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S06__a1",
+  "prompt_path": "temp/indep3/B2a__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S06__a2",
+  "prompt_path": "temp/indep3/B2a__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "B2a__E5-S06__a3",
+  "prompt_path": "temp/indep3/B2a__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2a__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D01__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D01__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D01__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D02__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D02__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D02__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D03__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D03__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D03__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D04__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D04__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D04__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D05__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D05__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D05__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D06__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D06__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D06__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D07__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D07__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D07__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D08__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D08__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D08__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D09__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D09__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D09__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D10__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D10__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D10__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D11__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D11__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D11__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D12__a1",
+  "prompt_path": "temp/indep3/B2b__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D12__a2",
+  "prompt_path": "temp/indep3/B2b__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-D12__a3",
+  "prompt_path": "temp/indep3/B2b__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C01__a1",
+  "prompt_path": "temp/indep3/B2b__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C01__a2",
+  "prompt_path": "temp/indep3/B2b__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C01__a3",
+  "prompt_path": "temp/indep3/B2b__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C02__a1",
+  "prompt_path": "temp/indep3/B2b__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C02__a2",
+  "prompt_path": "temp/indep3/B2b__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C02__a3",
+  "prompt_path": "temp/indep3/B2b__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C03__a1",
+  "prompt_path": "temp/indep3/B2b__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C03__a2",
+  "prompt_path": "temp/indep3/B2b__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C03__a3",
+  "prompt_path": "temp/indep3/B2b__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C04__a1",
+  "prompt_path": "temp/indep3/B2b__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C04__a2",
+  "prompt_path": "temp/indep3/B2b__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C04__a3",
+  "prompt_path": "temp/indep3/B2b__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C05__a1",
+  "prompt_path": "temp/indep3/B2b__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C05__a2",
+  "prompt_path": "temp/indep3/B2b__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C05__a3",
+  "prompt_path": "temp/indep3/B2b__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C06__a1",
+  "prompt_path": "temp/indep3/B2b__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C06__a2",
+  "prompt_path": "temp/indep3/B2b__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-C06__a3",
+  "prompt_path": "temp/indep3/B2b__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R01__a1",
+  "prompt_path": "temp/indep3/B2b__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R01__a2",
+  "prompt_path": "temp/indep3/B2b__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R01__a3",
+  "prompt_path": "temp/indep3/B2b__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R02__a1",
+  "prompt_path": "temp/indep3/B2b__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R02__a2",
+  "prompt_path": "temp/indep3/B2b__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R02__a3",
+  "prompt_path": "temp/indep3/B2b__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R03__a1",
+  "prompt_path": "temp/indep3/B2b__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R03__a2",
+  "prompt_path": "temp/indep3/B2b__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R03__a3",
+  "prompt_path": "temp/indep3/B2b__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R04__a1",
+  "prompt_path": "temp/indep3/B2b__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R04__a2",
+  "prompt_path": "temp/indep3/B2b__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R04__a3",
+  "prompt_path": "temp/indep3/B2b__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R05__a1",
+  "prompt_path": "temp/indep3/B2b__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R05__a2",
+  "prompt_path": "temp/indep3/B2b__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R05__a3",
+  "prompt_path": "temp/indep3/B2b__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R06__a1",
+  "prompt_path": "temp/indep3/B2b__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R06__a2",
+  "prompt_path": "temp/indep3/B2b__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-R06__a3",
+  "prompt_path": "temp/indep3/B2b__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S01__a1",
+  "prompt_path": "temp/indep3/B2b__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S01__a2",
+  "prompt_path": "temp/indep3/B2b__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S01__a3",
+  "prompt_path": "temp/indep3/B2b__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S02__a1",
+  "prompt_path": "temp/indep3/B2b__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S02__a2",
+  "prompt_path": "temp/indep3/B2b__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S02__a3",
+  "prompt_path": "temp/indep3/B2b__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S03__a1",
+  "prompt_path": "temp/indep3/B2b__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S03__a2",
+  "prompt_path": "temp/indep3/B2b__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S03__a3",
+  "prompt_path": "temp/indep3/B2b__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S04__a1",
+  "prompt_path": "temp/indep3/B2b__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S04__a2",
+  "prompt_path": "temp/indep3/B2b__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S04__a3",
+  "prompt_path": "temp/indep3/B2b__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S05__a1",
+  "prompt_path": "temp/indep3/B2b__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S05__a2",
+  "prompt_path": "temp/indep3/B2b__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S05__a3",
+  "prompt_path": "temp/indep3/B2b__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S06__a1",
+  "prompt_path": "temp/indep3/B2b__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S06__a2",
+  "prompt_path": "temp/indep3/B2b__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "B2b__E5-S06__a3",
+  "prompt_path": "temp/indep3/B2b__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B2b__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D01__a1",
+  "prompt_path": "temp/indep3/B3__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D01__a2",
+  "prompt_path": "temp/indep3/B3__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D01__a3",
+  "prompt_path": "temp/indep3/B3__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D02__a1",
+  "prompt_path": "temp/indep3/B3__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D02__a2",
+  "prompt_path": "temp/indep3/B3__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D02__a3",
+  "prompt_path": "temp/indep3/B3__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D03__a1",
+  "prompt_path": "temp/indep3/B3__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D03__a2",
+  "prompt_path": "temp/indep3/B3__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D03__a3",
+  "prompt_path": "temp/indep3/B3__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D04__a1",
+  "prompt_path": "temp/indep3/B3__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D04__a2",
+  "prompt_path": "temp/indep3/B3__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D04__a3",
+  "prompt_path": "temp/indep3/B3__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D05__a1",
+  "prompt_path": "temp/indep3/B3__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D05__a2",
+  "prompt_path": "temp/indep3/B3__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D05__a3",
+  "prompt_path": "temp/indep3/B3__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D06__a1",
+  "prompt_path": "temp/indep3/B3__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D06__a2",
+  "prompt_path": "temp/indep3/B3__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D06__a3",
+  "prompt_path": "temp/indep3/B3__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D07__a1",
+  "prompt_path": "temp/indep3/B3__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D07__a2",
+  "prompt_path": "temp/indep3/B3__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D07__a3",
+  "prompt_path": "temp/indep3/B3__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D08__a1",
+  "prompt_path": "temp/indep3/B3__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D08__a2",
+  "prompt_path": "temp/indep3/B3__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D08__a3",
+  "prompt_path": "temp/indep3/B3__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D09__a1",
+  "prompt_path": "temp/indep3/B3__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D09__a2",
+  "prompt_path": "temp/indep3/B3__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D09__a3",
+  "prompt_path": "temp/indep3/B3__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D10__a1",
+  "prompt_path": "temp/indep3/B3__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D10__a2",
+  "prompt_path": "temp/indep3/B3__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D10__a3",
+  "prompt_path": "temp/indep3/B3__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D11__a1",
+  "prompt_path": "temp/indep3/B3__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D11__a2",
+  "prompt_path": "temp/indep3/B3__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D11__a3",
+  "prompt_path": "temp/indep3/B3__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-D12__a1",
+  "prompt_path": "temp/indep3/B3__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-D12__a2",
+  "prompt_path": "temp/indep3/B3__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-D12__a3",
+  "prompt_path": "temp/indep3/B3__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-C01__a1",
+  "prompt_path": "temp/indep3/B3__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-C01__a2",
+  "prompt_path": "temp/indep3/B3__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-C01__a3",
+  "prompt_path": "temp/indep3/B3__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-C02__a1",
+  "prompt_path": "temp/indep3/B3__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-C02__a2",
+  "prompt_path": "temp/indep3/B3__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-C02__a3",
+  "prompt_path": "temp/indep3/B3__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-C03__a1",
+  "prompt_path": "temp/indep3/B3__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-C03__a2",
+  "prompt_path": "temp/indep3/B3__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-C03__a3",
+  "prompt_path": "temp/indep3/B3__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-C04__a1",
+  "prompt_path": "temp/indep3/B3__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-C04__a2",
+  "prompt_path": "temp/indep3/B3__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-C04__a3",
+  "prompt_path": "temp/indep3/B3__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-C05__a1",
+  "prompt_path": "temp/indep3/B3__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-C05__a2",
+  "prompt_path": "temp/indep3/B3__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-C05__a3",
+  "prompt_path": "temp/indep3/B3__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-C06__a1",
+  "prompt_path": "temp/indep3/B3__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-C06__a2",
+  "prompt_path": "temp/indep3/B3__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-C06__a3",
+  "prompt_path": "temp/indep3/B3__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-R01__a1",
+  "prompt_path": "temp/indep3/B3__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-R01__a2",
+  "prompt_path": "temp/indep3/B3__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-R01__a3",
+  "prompt_path": "temp/indep3/B3__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-R02__a1",
+  "prompt_path": "temp/indep3/B3__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-R02__a2",
+  "prompt_path": "temp/indep3/B3__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-R02__a3",
+  "prompt_path": "temp/indep3/B3__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-R03__a1",
+  "prompt_path": "temp/indep3/B3__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-R03__a2",
+  "prompt_path": "temp/indep3/B3__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-R03__a3",
+  "prompt_path": "temp/indep3/B3__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-R04__a1",
+  "prompt_path": "temp/indep3/B3__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-R04__a2",
+  "prompt_path": "temp/indep3/B3__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-R04__a3",
+  "prompt_path": "temp/indep3/B3__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-R05__a1",
+  "prompt_path": "temp/indep3/B3__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-R05__a2",
+  "prompt_path": "temp/indep3/B3__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-R05__a3",
+  "prompt_path": "temp/indep3/B3__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-R06__a1",
+  "prompt_path": "temp/indep3/B3__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-R06__a2",
+  "prompt_path": "temp/indep3/B3__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-R06__a3",
+  "prompt_path": "temp/indep3/B3__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-S01__a1",
+  "prompt_path": "temp/indep3/B3__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-S01__a2",
+  "prompt_path": "temp/indep3/B3__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-S01__a3",
+  "prompt_path": "temp/indep3/B3__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-S02__a1",
+  "prompt_path": "temp/indep3/B3__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-S02__a2",
+  "prompt_path": "temp/indep3/B3__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-S02__a3",
+  "prompt_path": "temp/indep3/B3__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-S03__a1",
+  "prompt_path": "temp/indep3/B3__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-S03__a2",
+  "prompt_path": "temp/indep3/B3__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-S03__a3",
+  "prompt_path": "temp/indep3/B3__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-S04__a1",
+  "prompt_path": "temp/indep3/B3__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-S04__a2",
+  "prompt_path": "temp/indep3/B3__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-S04__a3",
+  "prompt_path": "temp/indep3/B3__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-S05__a1",
+  "prompt_path": "temp/indep3/B3__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-S05__a2",
+  "prompt_path": "temp/indep3/B3__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-S05__a3",
+  "prompt_path": "temp/indep3/B3__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "B3__E5-S06__a1",
+  "prompt_path": "temp/indep3/B3__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "B3__E5-S06__a2",
+  "prompt_path": "temp/indep3/B3__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "B3__E5-S06__a3",
+  "prompt_path": "temp/indep3/B3__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/B3__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D01__a1",
+  "prompt_path": "temp/indep3/A1__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D01__a2",
+  "prompt_path": "temp/indep3/A1__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D01__a3",
+  "prompt_path": "temp/indep3/A1__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D02__a1",
+  "prompt_path": "temp/indep3/A1__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D02__a2",
+  "prompt_path": "temp/indep3/A1__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D02__a3",
+  "prompt_path": "temp/indep3/A1__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D03__a1",
+  "prompt_path": "temp/indep3/A1__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D03__a2",
+  "prompt_path": "temp/indep3/A1__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D03__a3",
+  "prompt_path": "temp/indep3/A1__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D04__a1",
+  "prompt_path": "temp/indep3/A1__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D04__a2",
+  "prompt_path": "temp/indep3/A1__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D04__a3",
+  "prompt_path": "temp/indep3/A1__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D05__a1",
+  "prompt_path": "temp/indep3/A1__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D05__a2",
+  "prompt_path": "temp/indep3/A1__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D05__a3",
+  "prompt_path": "temp/indep3/A1__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D06__a1",
+  "prompt_path": "temp/indep3/A1__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D06__a2",
+  "prompt_path": "temp/indep3/A1__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D06__a3",
+  "prompt_path": "temp/indep3/A1__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D07__a1",
+  "prompt_path": "temp/indep3/A1__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D07__a2",
+  "prompt_path": "temp/indep3/A1__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D07__a3",
+  "prompt_path": "temp/indep3/A1__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D08__a1",
+  "prompt_path": "temp/indep3/A1__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D08__a2",
+  "prompt_path": "temp/indep3/A1__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D08__a3",
+  "prompt_path": "temp/indep3/A1__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D09__a1",
+  "prompt_path": "temp/indep3/A1__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D09__a2",
+  "prompt_path": "temp/indep3/A1__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D09__a3",
+  "prompt_path": "temp/indep3/A1__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D10__a1",
+  "prompt_path": "temp/indep3/A1__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D10__a2",
+  "prompt_path": "temp/indep3/A1__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D10__a3",
+  "prompt_path": "temp/indep3/A1__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D11__a1",
+  "prompt_path": "temp/indep3/A1__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D11__a2",
+  "prompt_path": "temp/indep3/A1__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D11__a3",
+  "prompt_path": "temp/indep3/A1__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-D12__a1",
+  "prompt_path": "temp/indep3/A1__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-D12__a2",
+  "prompt_path": "temp/indep3/A1__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-D12__a3",
+  "prompt_path": "temp/indep3/A1__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-C01__a1",
+  "prompt_path": "temp/indep3/A1__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-C01__a2",
+  "prompt_path": "temp/indep3/A1__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-C01__a3",
+  "prompt_path": "temp/indep3/A1__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-C02__a1",
+  "prompt_path": "temp/indep3/A1__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-C02__a2",
+  "prompt_path": "temp/indep3/A1__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-C02__a3",
+  "prompt_path": "temp/indep3/A1__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-C03__a1",
+  "prompt_path": "temp/indep3/A1__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-C03__a2",
+  "prompt_path": "temp/indep3/A1__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-C03__a3",
+  "prompt_path": "temp/indep3/A1__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-C04__a1",
+  "prompt_path": "temp/indep3/A1__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-C04__a2",
+  "prompt_path": "temp/indep3/A1__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-C04__a3",
+  "prompt_path": "temp/indep3/A1__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-C05__a1",
+  "prompt_path": "temp/indep3/A1__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-C05__a2",
+  "prompt_path": "temp/indep3/A1__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-C05__a3",
+  "prompt_path": "temp/indep3/A1__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-C06__a1",
+  "prompt_path": "temp/indep3/A1__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-C06__a2",
+  "prompt_path": "temp/indep3/A1__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-C06__a3",
+  "prompt_path": "temp/indep3/A1__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-R01__a1",
+  "prompt_path": "temp/indep3/A1__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-R01__a2",
+  "prompt_path": "temp/indep3/A1__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-R01__a3",
+  "prompt_path": "temp/indep3/A1__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-R02__a1",
+  "prompt_path": "temp/indep3/A1__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-R02__a2",
+  "prompt_path": "temp/indep3/A1__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-R02__a3",
+  "prompt_path": "temp/indep3/A1__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-R03__a1",
+  "prompt_path": "temp/indep3/A1__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-R03__a2",
+  "prompt_path": "temp/indep3/A1__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-R03__a3",
+  "prompt_path": "temp/indep3/A1__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-R04__a1",
+  "prompt_path": "temp/indep3/A1__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-R04__a2",
+  "prompt_path": "temp/indep3/A1__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-R04__a3",
+  "prompt_path": "temp/indep3/A1__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-R05__a1",
+  "prompt_path": "temp/indep3/A1__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-R05__a2",
+  "prompt_path": "temp/indep3/A1__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-R05__a3",
+  "prompt_path": "temp/indep3/A1__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-R06__a1",
+  "prompt_path": "temp/indep3/A1__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-R06__a2",
+  "prompt_path": "temp/indep3/A1__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-R06__a3",
+  "prompt_path": "temp/indep3/A1__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-S01__a1",
+  "prompt_path": "temp/indep3/A1__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-S01__a2",
+  "prompt_path": "temp/indep3/A1__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-S01__a3",
+  "prompt_path": "temp/indep3/A1__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-S02__a1",
+  "prompt_path": "temp/indep3/A1__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-S02__a2",
+  "prompt_path": "temp/indep3/A1__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-S02__a3",
+  "prompt_path": "temp/indep3/A1__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-S03__a1",
+  "prompt_path": "temp/indep3/A1__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-S03__a2",
+  "prompt_path": "temp/indep3/A1__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-S03__a3",
+  "prompt_path": "temp/indep3/A1__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-S04__a1",
+  "prompt_path": "temp/indep3/A1__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-S04__a2",
+  "prompt_path": "temp/indep3/A1__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-S04__a3",
+  "prompt_path": "temp/indep3/A1__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-S05__a1",
+  "prompt_path": "temp/indep3/A1__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-S05__a2",
+  "prompt_path": "temp/indep3/A1__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-S05__a3",
+  "prompt_path": "temp/indep3/A1__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "A1__E5-S06__a1",
+  "prompt_path": "temp/indep3/A1__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "A1__E5-S06__a2",
+  "prompt_path": "temp/indep3/A1__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "A1__E5-S06__a3",
+  "prompt_path": "temp/indep3/A1__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A1__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D01__a1",
+  "prompt_path": "temp/indep3/A2__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D01__a2",
+  "prompt_path": "temp/indep3/A2__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D01__a3",
+  "prompt_path": "temp/indep3/A2__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D02__a1",
+  "prompt_path": "temp/indep3/A2__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D02__a2",
+  "prompt_path": "temp/indep3/A2__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D02__a3",
+  "prompt_path": "temp/indep3/A2__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D03__a1",
+  "prompt_path": "temp/indep3/A2__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D03__a2",
+  "prompt_path": "temp/indep3/A2__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D03__a3",
+  "prompt_path": "temp/indep3/A2__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D04__a1",
+  "prompt_path": "temp/indep3/A2__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D04__a2",
+  "prompt_path": "temp/indep3/A2__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D04__a3",
+  "prompt_path": "temp/indep3/A2__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D05__a1",
+  "prompt_path": "temp/indep3/A2__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D05__a2",
+  "prompt_path": "temp/indep3/A2__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D05__a3",
+  "prompt_path": "temp/indep3/A2__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D06__a1",
+  "prompt_path": "temp/indep3/A2__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D06__a2",
+  "prompt_path": "temp/indep3/A2__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D06__a3",
+  "prompt_path": "temp/indep3/A2__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D07__a1",
+  "prompt_path": "temp/indep3/A2__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D07__a2",
+  "prompt_path": "temp/indep3/A2__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D07__a3",
+  "prompt_path": "temp/indep3/A2__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D08__a1",
+  "prompt_path": "temp/indep3/A2__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D08__a2",
+  "prompt_path": "temp/indep3/A2__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D08__a3",
+  "prompt_path": "temp/indep3/A2__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D09__a1",
+  "prompt_path": "temp/indep3/A2__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D09__a2",
+  "prompt_path": "temp/indep3/A2__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D09__a3",
+  "prompt_path": "temp/indep3/A2__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D10__a1",
+  "prompt_path": "temp/indep3/A2__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D10__a2",
+  "prompt_path": "temp/indep3/A2__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D10__a3",
+  "prompt_path": "temp/indep3/A2__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D11__a1",
+  "prompt_path": "temp/indep3/A2__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D11__a2",
+  "prompt_path": "temp/indep3/A2__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D11__a3",
+  "prompt_path": "temp/indep3/A2__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-D12__a1",
+  "prompt_path": "temp/indep3/A2__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-D12__a2",
+  "prompt_path": "temp/indep3/A2__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-D12__a3",
+  "prompt_path": "temp/indep3/A2__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-C01__a1",
+  "prompt_path": "temp/indep3/A2__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-C01__a2",
+  "prompt_path": "temp/indep3/A2__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-C01__a3",
+  "prompt_path": "temp/indep3/A2__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-C02__a1",
+  "prompt_path": "temp/indep3/A2__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-C02__a2",
+  "prompt_path": "temp/indep3/A2__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-C02__a3",
+  "prompt_path": "temp/indep3/A2__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-C03__a1",
+  "prompt_path": "temp/indep3/A2__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-C03__a2",
+  "prompt_path": "temp/indep3/A2__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-C03__a3",
+  "prompt_path": "temp/indep3/A2__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-C04__a1",
+  "prompt_path": "temp/indep3/A2__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-C04__a2",
+  "prompt_path": "temp/indep3/A2__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-C04__a3",
+  "prompt_path": "temp/indep3/A2__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-C05__a1",
+  "prompt_path": "temp/indep3/A2__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-C05__a2",
+  "prompt_path": "temp/indep3/A2__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-C05__a3",
+  "prompt_path": "temp/indep3/A2__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-C06__a1",
+  "prompt_path": "temp/indep3/A2__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-C06__a2",
+  "prompt_path": "temp/indep3/A2__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-C06__a3",
+  "prompt_path": "temp/indep3/A2__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-R01__a1",
+  "prompt_path": "temp/indep3/A2__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-R01__a2",
+  "prompt_path": "temp/indep3/A2__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-R01__a3",
+  "prompt_path": "temp/indep3/A2__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-R02__a1",
+  "prompt_path": "temp/indep3/A2__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-R02__a2",
+  "prompt_path": "temp/indep3/A2__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-R02__a3",
+  "prompt_path": "temp/indep3/A2__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-R03__a1",
+  "prompt_path": "temp/indep3/A2__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-R03__a2",
+  "prompt_path": "temp/indep3/A2__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-R03__a3",
+  "prompt_path": "temp/indep3/A2__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-R04__a1",
+  "prompt_path": "temp/indep3/A2__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-R04__a2",
+  "prompt_path": "temp/indep3/A2__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-R04__a3",
+  "prompt_path": "temp/indep3/A2__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-R05__a1",
+  "prompt_path": "temp/indep3/A2__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-R05__a2",
+  "prompt_path": "temp/indep3/A2__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-R05__a3",
+  "prompt_path": "temp/indep3/A2__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-R06__a1",
+  "prompt_path": "temp/indep3/A2__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-R06__a2",
+  "prompt_path": "temp/indep3/A2__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-R06__a3",
+  "prompt_path": "temp/indep3/A2__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-S01__a1",
+  "prompt_path": "temp/indep3/A2__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-S01__a2",
+  "prompt_path": "temp/indep3/A2__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-S01__a3",
+  "prompt_path": "temp/indep3/A2__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-S02__a1",
+  "prompt_path": "temp/indep3/A2__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-S02__a2",
+  "prompt_path": "temp/indep3/A2__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-S02__a3",
+  "prompt_path": "temp/indep3/A2__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-S03__a1",
+  "prompt_path": "temp/indep3/A2__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-S03__a2",
+  "prompt_path": "temp/indep3/A2__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-S03__a3",
+  "prompt_path": "temp/indep3/A2__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-S04__a1",
+  "prompt_path": "temp/indep3/A2__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-S04__a2",
+  "prompt_path": "temp/indep3/A2__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-S04__a3",
+  "prompt_path": "temp/indep3/A2__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-S05__a1",
+  "prompt_path": "temp/indep3/A2__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-S05__a2",
+  "prompt_path": "temp/indep3/A2__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-S05__a3",
+  "prompt_path": "temp/indep3/A2__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "A2__E5-S06__a1",
+  "prompt_path": "temp/indep3/A2__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "A2__E5-S06__a2",
+  "prompt_path": "temp/indep3/A2__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "A2__E5-S06__a3",
+  "prompt_path": "temp/indep3/A2__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A2__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D01__a1",
+  "prompt_path": "temp/indep3/A3__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D01__a2",
+  "prompt_path": "temp/indep3/A3__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D01__a3",
+  "prompt_path": "temp/indep3/A3__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D02__a1",
+  "prompt_path": "temp/indep3/A3__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D02__a2",
+  "prompt_path": "temp/indep3/A3__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D02__a3",
+  "prompt_path": "temp/indep3/A3__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D03__a1",
+  "prompt_path": "temp/indep3/A3__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D03__a2",
+  "prompt_path": "temp/indep3/A3__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D03__a3",
+  "prompt_path": "temp/indep3/A3__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D04__a1",
+  "prompt_path": "temp/indep3/A3__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D04__a2",
+  "prompt_path": "temp/indep3/A3__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D04__a3",
+  "prompt_path": "temp/indep3/A3__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D05__a1",
+  "prompt_path": "temp/indep3/A3__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D05__a2",
+  "prompt_path": "temp/indep3/A3__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D05__a3",
+  "prompt_path": "temp/indep3/A3__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D06__a1",
+  "prompt_path": "temp/indep3/A3__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D06__a2",
+  "prompt_path": "temp/indep3/A3__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D06__a3",
+  "prompt_path": "temp/indep3/A3__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D07__a1",
+  "prompt_path": "temp/indep3/A3__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D07__a2",
+  "prompt_path": "temp/indep3/A3__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D07__a3",
+  "prompt_path": "temp/indep3/A3__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D08__a1",
+  "prompt_path": "temp/indep3/A3__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D08__a2",
+  "prompt_path": "temp/indep3/A3__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D08__a3",
+  "prompt_path": "temp/indep3/A3__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D09__a1",
+  "prompt_path": "temp/indep3/A3__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D09__a2",
+  "prompt_path": "temp/indep3/A3__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D09__a3",
+  "prompt_path": "temp/indep3/A3__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D10__a1",
+  "prompt_path": "temp/indep3/A3__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D10__a2",
+  "prompt_path": "temp/indep3/A3__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D10__a3",
+  "prompt_path": "temp/indep3/A3__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D11__a1",
+  "prompt_path": "temp/indep3/A3__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D11__a2",
+  "prompt_path": "temp/indep3/A3__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D11__a3",
+  "prompt_path": "temp/indep3/A3__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-D12__a1",
+  "prompt_path": "temp/indep3/A3__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-D12__a2",
+  "prompt_path": "temp/indep3/A3__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-D12__a3",
+  "prompt_path": "temp/indep3/A3__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-C01__a1",
+  "prompt_path": "temp/indep3/A3__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-C01__a2",
+  "prompt_path": "temp/indep3/A3__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-C01__a3",
+  "prompt_path": "temp/indep3/A3__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-C02__a1",
+  "prompt_path": "temp/indep3/A3__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-C02__a2",
+  "prompt_path": "temp/indep3/A3__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-C02__a3",
+  "prompt_path": "temp/indep3/A3__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-C03__a1",
+  "prompt_path": "temp/indep3/A3__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-C03__a2",
+  "prompt_path": "temp/indep3/A3__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-C03__a3",
+  "prompt_path": "temp/indep3/A3__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-C04__a1",
+  "prompt_path": "temp/indep3/A3__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-C04__a2",
+  "prompt_path": "temp/indep3/A3__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-C04__a3",
+  "prompt_path": "temp/indep3/A3__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-C05__a1",
+  "prompt_path": "temp/indep3/A3__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-C05__a2",
+  "prompt_path": "temp/indep3/A3__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-C05__a3",
+  "prompt_path": "temp/indep3/A3__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-C06__a1",
+  "prompt_path": "temp/indep3/A3__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-C06__a2",
+  "prompt_path": "temp/indep3/A3__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-C06__a3",
+  "prompt_path": "temp/indep3/A3__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-R01__a1",
+  "prompt_path": "temp/indep3/A3__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-R01__a2",
+  "prompt_path": "temp/indep3/A3__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-R01__a3",
+  "prompt_path": "temp/indep3/A3__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-R02__a1",
+  "prompt_path": "temp/indep3/A3__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-R02__a2",
+  "prompt_path": "temp/indep3/A3__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-R02__a3",
+  "prompt_path": "temp/indep3/A3__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-R03__a1",
+  "prompt_path": "temp/indep3/A3__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-R03__a2",
+  "prompt_path": "temp/indep3/A3__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-R03__a3",
+  "prompt_path": "temp/indep3/A3__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-R04__a1",
+  "prompt_path": "temp/indep3/A3__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-R04__a2",
+  "prompt_path": "temp/indep3/A3__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-R04__a3",
+  "prompt_path": "temp/indep3/A3__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-R05__a1",
+  "prompt_path": "temp/indep3/A3__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-R05__a2",
+  "prompt_path": "temp/indep3/A3__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-R05__a3",
+  "prompt_path": "temp/indep3/A3__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-R06__a1",
+  "prompt_path": "temp/indep3/A3__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-R06__a2",
+  "prompt_path": "temp/indep3/A3__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-R06__a3",
+  "prompt_path": "temp/indep3/A3__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-S01__a1",
+  "prompt_path": "temp/indep3/A3__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-S01__a2",
+  "prompt_path": "temp/indep3/A3__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-S01__a3",
+  "prompt_path": "temp/indep3/A3__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-S02__a1",
+  "prompt_path": "temp/indep3/A3__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-S02__a2",
+  "prompt_path": "temp/indep3/A3__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-S02__a3",
+  "prompt_path": "temp/indep3/A3__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-S03__a1",
+  "prompt_path": "temp/indep3/A3__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-S03__a2",
+  "prompt_path": "temp/indep3/A3__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-S03__a3",
+  "prompt_path": "temp/indep3/A3__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-S04__a1",
+  "prompt_path": "temp/indep3/A3__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-S04__a2",
+  "prompt_path": "temp/indep3/A3__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-S04__a3",
+  "prompt_path": "temp/indep3/A3__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-S05__a1",
+  "prompt_path": "temp/indep3/A3__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-S05__a2",
+  "prompt_path": "temp/indep3/A3__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-S05__a3",
+  "prompt_path": "temp/indep3/A3__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "A3__E5-S06__a1",
+  "prompt_path": "temp/indep3/A3__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "A3__E5-S06__a2",
+  "prompt_path": "temp/indep3/A3__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "A3__E5-S06__a3",
+  "prompt_path": "temp/indep3/A3__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A3__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D01__a1",
+  "prompt_path": "temp/indep3/A4__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D01__a2",
+  "prompt_path": "temp/indep3/A4__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D01__a3",
+  "prompt_path": "temp/indep3/A4__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D02__a1",
+  "prompt_path": "temp/indep3/A4__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D02__a2",
+  "prompt_path": "temp/indep3/A4__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D02__a3",
+  "prompt_path": "temp/indep3/A4__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D03__a1",
+  "prompt_path": "temp/indep3/A4__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D03__a2",
+  "prompt_path": "temp/indep3/A4__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D03__a3",
+  "prompt_path": "temp/indep3/A4__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D04__a1",
+  "prompt_path": "temp/indep3/A4__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D04__a2",
+  "prompt_path": "temp/indep3/A4__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D04__a3",
+  "prompt_path": "temp/indep3/A4__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D05__a1",
+  "prompt_path": "temp/indep3/A4__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D05__a2",
+  "prompt_path": "temp/indep3/A4__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D05__a3",
+  "prompt_path": "temp/indep3/A4__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D06__a1",
+  "prompt_path": "temp/indep3/A4__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D06__a2",
+  "prompt_path": "temp/indep3/A4__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D06__a3",
+  "prompt_path": "temp/indep3/A4__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D07__a1",
+  "prompt_path": "temp/indep3/A4__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D07__a2",
+  "prompt_path": "temp/indep3/A4__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D07__a3",
+  "prompt_path": "temp/indep3/A4__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D08__a1",
+  "prompt_path": "temp/indep3/A4__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D08__a2",
+  "prompt_path": "temp/indep3/A4__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D08__a3",
+  "prompt_path": "temp/indep3/A4__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D09__a1",
+  "prompt_path": "temp/indep3/A4__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D09__a2",
+  "prompt_path": "temp/indep3/A4__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D09__a3",
+  "prompt_path": "temp/indep3/A4__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D10__a1",
+  "prompt_path": "temp/indep3/A4__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D10__a2",
+  "prompt_path": "temp/indep3/A4__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D10__a3",
+  "prompt_path": "temp/indep3/A4__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D11__a1",
+  "prompt_path": "temp/indep3/A4__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D11__a2",
+  "prompt_path": "temp/indep3/A4__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D11__a3",
+  "prompt_path": "temp/indep3/A4__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-D12__a1",
+  "prompt_path": "temp/indep3/A4__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-D12__a2",
+  "prompt_path": "temp/indep3/A4__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-D12__a3",
+  "prompt_path": "temp/indep3/A4__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-C01__a1",
+  "prompt_path": "temp/indep3/A4__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-C01__a2",
+  "prompt_path": "temp/indep3/A4__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-C01__a3",
+  "prompt_path": "temp/indep3/A4__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-C02__a1",
+  "prompt_path": "temp/indep3/A4__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-C02__a2",
+  "prompt_path": "temp/indep3/A4__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-C02__a3",
+  "prompt_path": "temp/indep3/A4__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-C03__a1",
+  "prompt_path": "temp/indep3/A4__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-C03__a2",
+  "prompt_path": "temp/indep3/A4__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-C03__a3",
+  "prompt_path": "temp/indep3/A4__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-C04__a1",
+  "prompt_path": "temp/indep3/A4__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-C04__a2",
+  "prompt_path": "temp/indep3/A4__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-C04__a3",
+  "prompt_path": "temp/indep3/A4__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-C05__a1",
+  "prompt_path": "temp/indep3/A4__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-C05__a2",
+  "prompt_path": "temp/indep3/A4__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-C05__a3",
+  "prompt_path": "temp/indep3/A4__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-C06__a1",
+  "prompt_path": "temp/indep3/A4__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-C06__a2",
+  "prompt_path": "temp/indep3/A4__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-C06__a3",
+  "prompt_path": "temp/indep3/A4__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-R01__a1",
+  "prompt_path": "temp/indep3/A4__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-R01__a2",
+  "prompt_path": "temp/indep3/A4__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-R01__a3",
+  "prompt_path": "temp/indep3/A4__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-R02__a1",
+  "prompt_path": "temp/indep3/A4__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-R02__a2",
+  "prompt_path": "temp/indep3/A4__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-R02__a3",
+  "prompt_path": "temp/indep3/A4__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-R03__a1",
+  "prompt_path": "temp/indep3/A4__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-R03__a2",
+  "prompt_path": "temp/indep3/A4__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-R03__a3",
+  "prompt_path": "temp/indep3/A4__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-R04__a1",
+  "prompt_path": "temp/indep3/A4__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-R04__a2",
+  "prompt_path": "temp/indep3/A4__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-R04__a3",
+  "prompt_path": "temp/indep3/A4__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-R05__a1",
+  "prompt_path": "temp/indep3/A4__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-R05__a2",
+  "prompt_path": "temp/indep3/A4__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-R05__a3",
+  "prompt_path": "temp/indep3/A4__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-R06__a1",
+  "prompt_path": "temp/indep3/A4__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-R06__a2",
+  "prompt_path": "temp/indep3/A4__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-R06__a3",
+  "prompt_path": "temp/indep3/A4__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-S01__a1",
+  "prompt_path": "temp/indep3/A4__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-S01__a2",
+  "prompt_path": "temp/indep3/A4__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-S01__a3",
+  "prompt_path": "temp/indep3/A4__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-S02__a1",
+  "prompt_path": "temp/indep3/A4__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-S02__a2",
+  "prompt_path": "temp/indep3/A4__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-S02__a3",
+  "prompt_path": "temp/indep3/A4__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-S03__a1",
+  "prompt_path": "temp/indep3/A4__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-S03__a2",
+  "prompt_path": "temp/indep3/A4__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-S03__a3",
+  "prompt_path": "temp/indep3/A4__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-S04__a1",
+  "prompt_path": "temp/indep3/A4__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-S04__a2",
+  "prompt_path": "temp/indep3/A4__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-S04__a3",
+  "prompt_path": "temp/indep3/A4__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-S05__a1",
+  "prompt_path": "temp/indep3/A4__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-S05__a2",
+  "prompt_path": "temp/indep3/A4__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-S05__a3",
+  "prompt_path": "temp/indep3/A4__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "A4__E5-S06__a1",
+  "prompt_path": "temp/indep3/A4__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "A4__E5-S06__a2",
+  "prompt_path": "temp/indep3/A4__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "A4__E5-S06__a3",
+  "prompt_path": "temp/indep3/A4__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A4__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D01__a1",
+  "prompt_path": "temp/indep3/A5__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D01__a2",
+  "prompt_path": "temp/indep3/A5__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D01__a3",
+  "prompt_path": "temp/indep3/A5__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D02__a1",
+  "prompt_path": "temp/indep3/A5__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D02__a2",
+  "prompt_path": "temp/indep3/A5__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D02__a3",
+  "prompt_path": "temp/indep3/A5__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D03__a1",
+  "prompt_path": "temp/indep3/A5__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D03__a2",
+  "prompt_path": "temp/indep3/A5__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D03__a3",
+  "prompt_path": "temp/indep3/A5__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D04__a1",
+  "prompt_path": "temp/indep3/A5__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D04__a2",
+  "prompt_path": "temp/indep3/A5__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D04__a3",
+  "prompt_path": "temp/indep3/A5__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D05__a1",
+  "prompt_path": "temp/indep3/A5__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D05__a2",
+  "prompt_path": "temp/indep3/A5__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D05__a3",
+  "prompt_path": "temp/indep3/A5__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D06__a1",
+  "prompt_path": "temp/indep3/A5__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D06__a2",
+  "prompt_path": "temp/indep3/A5__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D06__a3",
+  "prompt_path": "temp/indep3/A5__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D07__a1",
+  "prompt_path": "temp/indep3/A5__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D07__a2",
+  "prompt_path": "temp/indep3/A5__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D07__a3",
+  "prompt_path": "temp/indep3/A5__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D08__a1",
+  "prompt_path": "temp/indep3/A5__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D08__a2",
+  "prompt_path": "temp/indep3/A5__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D08__a3",
+  "prompt_path": "temp/indep3/A5__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D09__a1",
+  "prompt_path": "temp/indep3/A5__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D09__a2",
+  "prompt_path": "temp/indep3/A5__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D09__a3",
+  "prompt_path": "temp/indep3/A5__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D10__a1",
+  "prompt_path": "temp/indep3/A5__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D10__a2",
+  "prompt_path": "temp/indep3/A5__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D10__a3",
+  "prompt_path": "temp/indep3/A5__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D11__a1",
+  "prompt_path": "temp/indep3/A5__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D11__a2",
+  "prompt_path": "temp/indep3/A5__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D11__a3",
+  "prompt_path": "temp/indep3/A5__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-D12__a1",
+  "prompt_path": "temp/indep3/A5__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-D12__a2",
+  "prompt_path": "temp/indep3/A5__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-D12__a3",
+  "prompt_path": "temp/indep3/A5__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-C01__a1",
+  "prompt_path": "temp/indep3/A5__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-C01__a2",
+  "prompt_path": "temp/indep3/A5__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-C01__a3",
+  "prompt_path": "temp/indep3/A5__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-C02__a1",
+  "prompt_path": "temp/indep3/A5__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-C02__a2",
+  "prompt_path": "temp/indep3/A5__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-C02__a3",
+  "prompt_path": "temp/indep3/A5__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-C03__a1",
+  "prompt_path": "temp/indep3/A5__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-C03__a2",
+  "prompt_path": "temp/indep3/A5__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-C03__a3",
+  "prompt_path": "temp/indep3/A5__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-C04__a1",
+  "prompt_path": "temp/indep3/A5__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-C04__a2",
+  "prompt_path": "temp/indep3/A5__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-C04__a3",
+  "prompt_path": "temp/indep3/A5__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-C05__a1",
+  "prompt_path": "temp/indep3/A5__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-C05__a2",
+  "prompt_path": "temp/indep3/A5__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-C05__a3",
+  "prompt_path": "temp/indep3/A5__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-C06__a1",
+  "prompt_path": "temp/indep3/A5__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-C06__a2",
+  "prompt_path": "temp/indep3/A5__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-C06__a3",
+  "prompt_path": "temp/indep3/A5__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-R01__a1",
+  "prompt_path": "temp/indep3/A5__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-R01__a2",
+  "prompt_path": "temp/indep3/A5__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-R01__a3",
+  "prompt_path": "temp/indep3/A5__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-R02__a1",
+  "prompt_path": "temp/indep3/A5__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-R02__a2",
+  "prompt_path": "temp/indep3/A5__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-R02__a3",
+  "prompt_path": "temp/indep3/A5__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-R03__a1",
+  "prompt_path": "temp/indep3/A5__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-R03__a2",
+  "prompt_path": "temp/indep3/A5__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-R03__a3",
+  "prompt_path": "temp/indep3/A5__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-R04__a1",
+  "prompt_path": "temp/indep3/A5__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-R04__a2",
+  "prompt_path": "temp/indep3/A5__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-R04__a3",
+  "prompt_path": "temp/indep3/A5__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-R05__a1",
+  "prompt_path": "temp/indep3/A5__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-R05__a2",
+  "prompt_path": "temp/indep3/A5__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-R05__a3",
+  "prompt_path": "temp/indep3/A5__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-R06__a1",
+  "prompt_path": "temp/indep3/A5__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-R06__a2",
+  "prompt_path": "temp/indep3/A5__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-R06__a3",
+  "prompt_path": "temp/indep3/A5__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-S01__a1",
+  "prompt_path": "temp/indep3/A5__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-S01__a2",
+  "prompt_path": "temp/indep3/A5__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-S01__a3",
+  "prompt_path": "temp/indep3/A5__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-S02__a1",
+  "prompt_path": "temp/indep3/A5__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-S02__a2",
+  "prompt_path": "temp/indep3/A5__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-S02__a3",
+  "prompt_path": "temp/indep3/A5__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-S03__a1",
+  "prompt_path": "temp/indep3/A5__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-S03__a2",
+  "prompt_path": "temp/indep3/A5__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-S03__a3",
+  "prompt_path": "temp/indep3/A5__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-S04__a1",
+  "prompt_path": "temp/indep3/A5__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-S04__a2",
+  "prompt_path": "temp/indep3/A5__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-S04__a3",
+  "prompt_path": "temp/indep3/A5__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-S05__a1",
+  "prompt_path": "temp/indep3/A5__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-S05__a2",
+  "prompt_path": "temp/indep3/A5__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-S05__a3",
+  "prompt_path": "temp/indep3/A5__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "A5__E5-S06__a1",
+  "prompt_path": "temp/indep3/A5__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "A5__E5-S06__a2",
+  "prompt_path": "temp/indep3/A5__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "A5__E5-S06__a3",
+  "prompt_path": "temp/indep3/A5__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/A5__E5-S06__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D01__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D01__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D01__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D01__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D01__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D01__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D01__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D01__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D01__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D02__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D02__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D02__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D02__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D02__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D02__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D02__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D02__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D02__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D03__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D03__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D03__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D03__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D03__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D03__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D03__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D03__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D03__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D04__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D04__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D04__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D04__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D04__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D04__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D04__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D04__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D04__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D05__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D05__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D05__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D05__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D05__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D05__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D05__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D05__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D05__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D06__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D06__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D06__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D06__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D06__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D06__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D06__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D06__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D06__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D07__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D07__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D07__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D07__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D07__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D07__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D07__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D07__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D07__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D08__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D08__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D08__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D08__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D08__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D08__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D08__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D08__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D08__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D09__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D09__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D09__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D09__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D09__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D09__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D09__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D09__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D09__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D10__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D10__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D10__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D10__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D10__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D10__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D10__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D10__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D10__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D11__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D11__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D11__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D11__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D11__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D11__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D11__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D11__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D11__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D12__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D12__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D12__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D12__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D12__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D12__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-D12__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-D12__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-D12__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C01__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C01__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C01__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C01__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C01__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C01__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C01__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C01__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C01__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C02__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C02__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C02__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C02__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C02__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C02__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C02__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C02__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C02__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C03__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C03__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C03__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C03__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C03__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C03__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C03__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C03__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C03__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C04__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C04__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C04__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C04__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C04__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C04__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C04__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C04__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C04__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C05__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C05__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C05__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C05__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C05__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C05__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C05__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C05__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C05__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C06__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C06__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C06__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C06__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C06__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C06__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-C06__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-C06__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-C06__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R01__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R01__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R01__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R01__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R01__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R01__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R01__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R01__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R01__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R02__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R02__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R02__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R02__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R02__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R02__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R02__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R02__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R02__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R03__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R03__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R03__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R03__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R03__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R03__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R03__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R03__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R03__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R04__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R04__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R04__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R04__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R04__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R04__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R04__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R04__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R04__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R05__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R05__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R05__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R05__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R05__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R05__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R05__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R05__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R05__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R06__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R06__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R06__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R06__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R06__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R06__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-R06__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-R06__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-R06__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S01__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S01__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S01__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S01__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S01__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S01__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S01__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S01__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S01__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S02__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S02__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S02__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S02__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S02__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S02__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S02__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S02__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S02__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S03__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S03__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S03__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S03__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S03__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S03__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S03__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S03__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S03__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S04__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S04__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S04__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S04__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S04__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S04__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S04__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S04__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S04__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S05__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S05__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S05__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S05__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S05__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S05__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S05__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S05__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S05__a3.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S06__a1",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S06__a1.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S06__a1.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S06__a2",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S06__a2.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S06__a2.answer.json"
+ },
+ {
+  "cell": "sham_placeholder__E5-S06__a3",
+  "prompt_path": "temp/indep3/sham_placeholder__E5-S06__a3.prompt.txt",
+  "answer_path": "temp/indep3/sham_placeholder__E5-S06__a3.answer.json"
+ }
+]

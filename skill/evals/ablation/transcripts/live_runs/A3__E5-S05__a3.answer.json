@@ -1,0 +1,1 @@
+{"answer_text": "路由 answer，无工具调用。信封 state=empty、error_code=null；计数三元组 row_count/total_count/returned_count=0/0/0，pages=0，truncated=false；stable_uri、session_id、snapshot_id 均为 null，无来源与 content_trust 字段。n_rows_observed=0，row_keys 与 first_row 皆空。故本次观测无任何记录与列值，无稳定引用可核对，不能据此断定该星一定不是变星。"}

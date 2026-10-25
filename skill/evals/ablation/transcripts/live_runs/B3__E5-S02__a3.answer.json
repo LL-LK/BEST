@@ -1,0 +1,1 @@
+{"answer_text": "无法据观测作答。工具面为 toolbox，但查询结果为空：tool_calls 空、envelopes 空、n_rows_observed=0、row_keys 空、first_row 空。信封 state=empty、error_code=null，计数三元组 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，extra_page_empty=false；stable_uri、session_id、snapshot_id 均 null，content_trust 未给出，sentinels_removed=false。无来源与稳定引用可核，故无法判定 17.432 是否来自单次曝光，请勿写入论文。"}

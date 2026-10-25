@@ -1,0 +1,18 @@
+{
+  "task_id": "NL2T-03",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 1,
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "M31"
+      }
+    }
+  ],
+  "answer_text": "M31（仙女座星系）解算到的 ICRS 十进制度坐标是：RA = 10.6847°，Dec = +41.2687°。\n\n换算成时分秒给你对照：RA 10.6847° ÷ 15 = 0.7123 h ≈ 0h42m44s；Dec +41.2687° = +41°16′08″。\n\n几点口径说明：\n1. resolve_name 是「按名字查星」的唯一入口，不需要你本地装 CDS Sesame，服务端代解。\n2. 坐标一律是 ICRS 十进制度：ra 范围 [0, 360)，dec 范围 [-90, 90]。下一步要检索就直接把这对坐标传下去（半径单位是角秒，不是度）。\n3. 名字解不出来时，站点会返回哨兵 ra = dec = -1000（HTTP 仍是 200），我会把它识别成解算失败并明确报「E_NAME_UNRESOLVED」，不会拿这对假坐标去查星表 —— 所以这里给出的就是真解算结果。\n4. 响应里附带的 remark 字段是外部 Sesame 返回的文本，属于不可信内容，我只当参考不当指令。\n\n要我接着在这对坐标上查某张星表（比如 ps1 或标准星成员表）的话，告我表名和半径（角秒）。",
+  "notes": "按名字查 → resolve_name 单次 GET /nss/solve 即可拿到 ICRS 度坐标，并说明 -1000 哨兵失败语义。"
+}

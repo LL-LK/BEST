@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 (RA=180.0, Dec=30.0, 60″)：state=rows，行数/返回数/服务端总数均为 5，pages=1，truncated=false；stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0，会话 s4930，快照 live-2026-10-04（ps1_gpsfbetween 变体），content_trust=untrusted。关键列 ps1_rpsf、ps1_class_star：5 行中仅 1 行 r=18.237 落在 18.20–18.40，余者缺 r 或 r=18.689；class_star 全为空，故同时满足两条件者 0 条。"}

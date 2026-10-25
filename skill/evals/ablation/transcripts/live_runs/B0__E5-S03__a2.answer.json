@@ -1,0 +1,1 @@
+{"answer_text": "本装配无数据通路（tool_face=none/scripted），未取到数据：state=empty，row_count/pages/total_count/returned_count 全为 0，truncated=false，stable_uri、session_id、snapshot_id 均为 null。故 -999/-1004 不在观测内，无法核实，不能据此判断可否用于测光。"}

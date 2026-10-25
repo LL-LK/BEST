@@ -1,0 +1,20 @@
+name: astro-best.case_020_algo_download_file_resume
+skill: astro-best
+derived_from: "algorithm:{'name': 'download_file', 'module': 'src.best_export'}"
+given:
+  FileDownload:
+    url: "<string:url>"
+    savedir: "<string:path>"
+expect:
+  status: pass
+  download.byte_resume: "range_header"
+  download.partial_suffix: ".part"
+  download.range_fallback: "full_restart_on_200"
+  download.entry: "best_export.download_file"
+
+# ---
+# 下载能力轮次新增: 字节级断点续传用例
+# (Range 206 续传 / 200 忽略则整重 / 失败保留 .part; 抽查走 best_export.download_file)
+# P1 合并: 原 derived_from 指向 pybest 单类门面 (Best/src.pybest), 双副本删除后
+# 指向权威实现 src.best_export.download_file (请求经 request= 注入, 生产注入方
+# 是 BestClient.download_file → BestClient._request)

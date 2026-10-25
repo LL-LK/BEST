@@ -1,0 +1,1 @@
+{"answer_text": "装配 B0 工具面为 none，tool_calls 空，无数据通路，未取到数据。信封 state=empty、error_code=null；计数三元组 row_count=returned_count=total_count=0，pages=0，truncated=false。envelopes 空、n_rows_observed=0、row_keys 与 first_row 均空：RA=180.0、Dec=0.0、60″ 内 ps1 每页 2 行无行可返、无关键列数值。stable_uri/session_id/snapshot_id 皆 null，无稳定引用与快照标识，信封未含 content_trust；自报 tool_face=scripted。"}

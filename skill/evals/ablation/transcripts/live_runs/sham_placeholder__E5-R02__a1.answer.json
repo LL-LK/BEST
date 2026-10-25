@@ -1,0 +1,1 @@
+{"answer_text":"请求被路由判为 reject，工具调用 0 次，无法整表导出 ps1 为 FITS。信封 empty，total_count=0、returned_count=0、row_count=0、pages=0，truncated=false：服务端总数 0、返回 0 行。stable_uri、session_id、snapshot_id 均为 null，envelopes 空。工具面 toolbox。"}

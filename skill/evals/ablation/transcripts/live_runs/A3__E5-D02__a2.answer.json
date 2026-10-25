@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 RA=180.0 Dec=30.0 r=60″：174行(行数=总数=返回数)，pages=1，truncated=false。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0；session_id=s4909；snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as；content_trust=untrusted。按 ps1_rpsf 升序：前135行 r 缺失(哨兵≈-1003.88)，后39行 r=18.2007–22.6834，按 r 仅39源。"}

@@ -1,0 +1,36 @@
+{
+  "task_id": "NL2T-21",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_rpsf",
+          "ps1_rpsf_err"
+        ],
+        "sort": "ps1.rpsf",
+        "order": "asc",
+        "max_rows": 50
+      }
+    }
+  ],
+  "answer_text": "已按 r 波段排好序：RA=180.0°、Dec=+30.0°、半径 **60 角秒（1 角分）**，ps1，\n`sort=ps1.rpsf` + `order=asc`（服务端定序），列投影 `ps1_ra` / `ps1_dec` / `ps1_rpsf` / `ps1_rpsf_err`。\n\n**方向别搞反**：星等是反向标尺，**数值越小越亮**。所以\"最亮的源\"是按 r 波段**升序**（asc）\n排在**第一行**的那个，不是降序第一名——降序排出来的是最暗的。这条如果搞错，答案会差出十几个 mag。\n\n读结果时有两个必须做的清洗：\n\n1. **先剔掉 ≈−1000 哨兵行**。ps1 某波段没有测光时回 ≈−1000（例如 `gpsf=-1004.07`、\n   `gpsf_err=-999.0`，同帧 `ipsf=19.49` 才是真值），判阈值取 −999。\n   这些行在升序里会**霸占最前面**，不剔掉就会把\"最亮\"选成一个哨兵值。\n2. **饱和星**（`ps1_gflags`/`rflags` 等 flag 位）星等不可靠，最亮的那个候选有可能是饱和星，\n   建议连 flag 一起看。\n\n关于 `max_rows=50`：我把它压到 50 只为省带宽——服务端已定序，最亮的那颗就在**首行**，\n要更多候选我再放宽（默认 1000，`truncated=true` 时可以用 `fetch_page` 续页）。\n\n最后提醒：`ps1_source_id` 线上这一列是空的，想按主键回连得靠自己留 `(ra, dec)` 或另走\n`crossmatch_batch`（服务端会回 `inputobjs_dist_arcsec`）。",
+  "notes": "最亮 = 星等最小，故 order=asc；显式点出 ≈−1000 哨兵行会占据升序首位需先剔除。"
+}

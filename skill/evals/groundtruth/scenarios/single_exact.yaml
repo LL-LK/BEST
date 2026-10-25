@@ -1,0 +1,28 @@
+# E2 场景 1/8: 单对象精确查询 (L 类) — docs/eval-E2-groundtruth.md §5 #1
+case_id: single_exact
+category: single_object
+snapshot_id: live-2026-10-04/live_dr3xpcorr_ra180.0_dec30.0_r300.0as
+main_metrics: [M1, M2, M5]
+query:
+  catalog: dr3xpcorr
+  source_id: '4014208277453959552'   # 快照里唯一那行的真 source_id (dr3xpcorr 走共享位置表前缀)
+  source_id_column: gaiaxp_photinfo_replenish_source_id   # 显式声明: 默认按 f"{catalog}_source_id" 拼, 在本表不存在
+  columns: [gaiaxp_photinfo_replenish_source_id, gaiaxp_photinfo_replenish_ra,
+            gaiaxp_photinfo_replenish_dec, gaiaxp_photinfo_replenish_bp_mag,
+            gaiaxp_photinfo_replenish_ruwe, correctedxpspecv1_c2]
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+  # 期望行数/截断标志**不在此声明**: gen_gold 只读 result_state 与 error_code,
+  # 写在这里的数字无人断言 —— 换素材后它不会变红, 只会静静变旧 (A7-02: 换素材
+  # 换掉了快照, 而本文件的说明还留着旧素材的快照名与行数, 读的人照着核的是一份
+  # 不存在的答案)。权威值只在 gold/single_exact.json 的 row_count 与 truncation 段。
+notes: >
+  L 类真实抓取快照 (live-2026-10-04/live_dr3xpcorr_ra180.0_dec30.0_r300.0as;
+  换素材前那份仓内 best_data 反推的旧快照已退役, 此处不复述其名与行数)。
+  金标准: 单行精确命中 (行数与截断三元组以 gold/single_exact.json 为准); 字段全等
+  (含类型/单位/精度); source_id 精确匹配 (equal 谓词, 字符串 strip 后比较)。
+  id 不存在时必须 success=true + rows=0, 不得报错、不得降级 — 由 M5 的 result_state
+  判定。合成 id 形态 (POS_<ra>_<dec>) 不在本场景范围 (那是 E1 NL2T-14 的澄清题)。
+gold_focus: 恰好一行 + 字段全等 + 空结果与报错四态区分

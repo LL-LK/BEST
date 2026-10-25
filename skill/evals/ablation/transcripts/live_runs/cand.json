@@ -1,0 +1,22 @@
+[
+ {
+  "i": 0,
+  "len": 201,
+  "text": "cone_search RA=180.0 Dec=30.0 r=5\" ps1: total=3, returned=3, truncated=false, stable_uri 空, snapshot_id=null, 无 content_trust。3 源 179.999,29.9997 i=19.494; 180.001,29.9995 g=18.599; 180.000,29.9990 无测光"
+ },
+ {
+  "i": 1,
+  "len": 200,
+  "text": "cone_search RA=180.0 Dec=30.0 r=5\" ps1: total=3, returned=3, truncated=false, stable_uri 空, snapshot_id=null, 无 content_trust。3 源 179.999,29.9997 i=19.494; 180.001,29.9995 g=18.599; 180.000,29.999 无测光"
+ },
+ {
+  "i": 2,
+  "len": 201,
+  "text": "cone_search RA=180.0 Dec=30.0 r=5\" ps1: total=3, returned=3, truncated=false, stable_uri 空, snapshot_id=null, 无 content_trust。3 源: 179.999,29.9997 i=19.494; 180.001,29.9995 g=18.599; 180.000,29.999 无测光"
+ },
+ {
+  "i": 3,
+  "len": 210,
+  "text": "cone_search RA=180.0 Dec=30.0 r=5\" ps1: total=3, returned=3, truncated=false, stable_uri 空, snapshot_id=null, 无 content_trust。3 源 179.99904,29.99973 i=19.494; 180.00110,29.99945 g=18.599; 180.00041,29.99895 无测光"
+ }
+]

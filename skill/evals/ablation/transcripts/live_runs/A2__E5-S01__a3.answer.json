@@ -1,0 +1,1 @@
+{"answer_text": "实测未调用工具，state=empty：total_count=0、returned_count=0、row_count=0、truncated=false；stable_uri=null、snapshot_id=null，无来源与 content_trust。零行数据，无法绘制光变曲线或估算周期；所列 ps1_* 为单历元测光，非时序。"}

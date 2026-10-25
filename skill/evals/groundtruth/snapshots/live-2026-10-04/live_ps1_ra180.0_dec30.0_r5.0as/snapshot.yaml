@@ -1,0 +1,15 @@
+snapshot_id: live_ps1_ra180.0_dec30.0_r5.0as
+kind: LIVE
+material_class: live-pure
+catalog: ps1
+row_count: 3
+data_version: ps1@2026-10-04-live
+page_size: 1000
+fetched_at: 2026-10-04
+endpoint:
+  submit: https://nadc.china-vo.org/data/best/ps1/q
+  count: https://nadc.china-vo.org/data/best/sqlid/{count}/getcount
+note: |
+  **真实抓取** (ops/live_fetch.py --execute, 铁律 7 有条件豁免)。回包逐字节来自站点,
+  未做任何改写或补行; request_log 见 capture_log.json, 文件哈希见 manifest.json。
+  抓到数据不等于金标准通过人工复核 —— E2 的签字门禁是独立环节。

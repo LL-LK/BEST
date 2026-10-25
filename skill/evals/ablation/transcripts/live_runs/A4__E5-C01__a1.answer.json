@@ -1,0 +1,1 @@
+{"answer_text": "本轮未取到数据：路由=clarify，工具面=toolbox，tool_calls 为空，未发起任何查询。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false。stable_uri/session_id/snapshot_id 均为 null，故无稳定引用与快照标识，信封亦无来源与 content_trust 字段。envelopes=[]，n_rows_observed=0，row_keys=[]，first_row={}。即该 Gaia DR3 源在 BEST 的 ZTF g/r/i 星等返回 0 行，关键列与数值均无，无法给出任何星等值。"}

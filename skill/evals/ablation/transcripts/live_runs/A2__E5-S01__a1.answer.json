@@ -1,0 +1,1 @@
+{"answer_text": "实测返回空信封：state=empty、error_code=null，计数 row_count=0、returned_count=0、total_count=0，truncated=false，tool_face=toolbox，envelopes=[]，n_rows_observed=0，row_keys 与 first_row 均空。信封未含来源与 content_trust，stable_uri/session_id/snapshot_id 皆为 null。故无任何时序测光数据，画不出光变曲线，也算不出周期；您给的 ps1_gpsf=16.812 等五个 ps1_* 值只是五个波段的单次测光，不是时间序列。"}

@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_xpsp_ra10.68_dec41.27_r300.0as",
+  "files": {
+    "count.json": "sha256:00a56889a94a8d245e8ab22caeed8f052b37bd5f7709fa935cc4f71cdeffe261",
+    "pages/page_0001.csv": "sha256:72c40ebc8e829a76c0346395a82c0ae96e77fa1dc5609d4c27fc9df2edebe2d4",
+    "phase1.html": "sha256:3a1d2dc5babaf8ffc9db1a24efb3ab18e485eb6cf2caad9366880e81f6d58d5a",
+    "rows_full.csv": "sha256:72c40ebc8e829a76c0346395a82c0ae96e77fa1dc5609d4c27fc9df2edebe2d4"
+  }
+}

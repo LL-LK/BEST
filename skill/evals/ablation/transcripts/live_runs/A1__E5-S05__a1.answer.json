@@ -1,0 +1,1 @@
+{"answer_text": "信封 state=empty：row_count=total_count=returned_count=0，truncated=false；无行键与首行，tool_calls 空；stable_uri 为 null，无 content_trust/来源。故不能断定“一定不是变星”：NOT_AVAILABLE 仅指该标志缺失/不可用，非“非变星”。0 行非反证。"}

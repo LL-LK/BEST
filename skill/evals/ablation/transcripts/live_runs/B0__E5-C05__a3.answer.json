@@ -1,0 +1,1 @@
+{"answer_text": "装配 B0 未启用数据工具（工具面 none），无取数通路，无法提供标准星清单。观测信封 state=empty、error_code 为空；计数 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，extra_page_empty=false，envelopes 与 row_keys 均空，first_row 为空对象；stable_uri、session_id、snapshot_id 全为 null，sentinels_removed=false。信封内未含 content_trust 字段，故无可引用的来源与内容信任标识。结论：本次观测 0 行、无快照，非截断所致，清单为空。"}

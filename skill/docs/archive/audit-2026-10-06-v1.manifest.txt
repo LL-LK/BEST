@@ -1,0 +1,49 @@
+audit-2026-10-06-v1 —— astro-best 审计文档归档清单
+
+来源: temp/vfy/ 顶层的 *.md (问题文档本体)
+刻意排除: temp/vfy/*_clone/ mutcopy/ baseline-wt/ probe/ 等实验副本与探针
+         (其中 12 份仓库副本各含一份 277 KB 的本仓 CHANGELOG, 收进来
+          体积从 0.6 MB 涨到 11.9 MB, 且不增加任何证据)
+
+文件数: 36
+解压后: 616 KB
+压缩后: 309 KB
+
+字节数  文件名
+------------------------------------------------------------
+    14032  A1-early-and-d.md
+    16924  A2-q-w.md
+    17255  A3-x-y.md
+    21769  A4-z-al-an.md
+    19722  A5-aa-ab.md
+    16493  A6-ac-ad-ae.md
+    14246  A7-af-ai.md
+    30917  A8-aj-ap.md
+    17106  ACTION-BACKLOG.md
+     8103  CONSTRUCTION-TRAPS.md
+    14388  FIX-1-fetch-artifacts.md
+    14820  FIX-2-sentinel-export.md
+    61658  FIX-STATUS-AUDIT.md
+    25960  G1-early-gaps.md
+    22052  G2-q-block.md
+    26281  G3-w-block.md
+    16001  G4-xy-p2.md
+    15622  G5-x8-z4.md
+    11852  G6-aa-mutation.md
+    21329  G7-e4-repro.md
+    22449  G8-ah-ag2.md
+    10763  H1-ac4-ac1.md
+    11411  H2-ad4-gates.md
+    16984  H3-aj-ak-full.md
+    10471  H4-unverifiable.md
+    14714  J1-ad4-rest.md
+    12949  J2-ad4-s7-ac4.md
+     9453  J3-mutation-cover.md
+    10770  J4-h3-upgrade.md
+    20065  K1-aa1-mutants-a.md
+    14174  K2-aa1-mutants-b.md
+    18917  K3-af5-widenet.md
+    11169  K4-e4-pass-score.md
+     8235  K5-combined-mutants.md
+    10180  K6-end-to-end.md
+    21446  ROOT-INDEPENDENT-VERIFICATION.md

@@ -1,0 +1,1 @@
+{"answer_text": "不能据此判定该处无天体。观测信封记为 state=empty，row_count=0、returned_count=0、total_count=0、truncated=false、pages=0；stable_uri、session_id、snapshot_id 全为 null，信封未含来源与 content_trust 字段，故本次无稳定引用、无快照标识、无出处可引。关键点是 tool_calls=[]，即并未真实向 PS1 发起该锥形检索，且 extra_page_empty=false 表示翻页复核未发生。因此这条记录只说明本轮未取到数据、计数三元组全为 0，不构成 (180.0, 30.0) 半径 3 角秒为空场的证据。建议实跑该查询后再判断。"}

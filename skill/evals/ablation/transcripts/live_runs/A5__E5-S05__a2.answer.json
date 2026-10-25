@@ -1,0 +1,1 @@
+{"answer_text": "观测：state=empty，row_count=returned_count=total_count=0，pages=0，truncated=false；stable_uri、快照标识均 null，无来源与 content_trust，tool_calls 空，n_rows_observed=0。无行可陈述，不能判定该星是否变星；NOT_AVAILABLE 只指字段不可用，不等于非变星。"}

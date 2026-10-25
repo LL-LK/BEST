@@ -1,0 +1,1 @@
+{"answer_text": "本次装配工具面为 none，无数据通路，无法按 Gaia DR3 source_id 1234567890123456789 取测光。观测结果：路由 reject，tool_calls 为空；信封 state=empty，error_code=null，stable_uri=null，无 session/snapshot 标识，content_trust 未提供，tool_face=scripted；计数三元组 returned_count=0、total_count=0、row_count=0，pages=0，truncated=false；n_rows_observed=0，envelopes 空，row_keys 与 first_row 为空，无关键列与数值。"}

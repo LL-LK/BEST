@@ -1,0 +1,1 @@
+{"answer_text": "本次查询返回空信封：state=empty，row_count=0、pages=0，服务端 total_count=0、returned_count=0、truncated=false；stable_uri、snapshot_id 均为 null，未提供来源与 content_trust；row_keys 与 envelopes 为空，n_rows_observed=0。观测中无 S-03 的任何行或波段数值，无法确认 ps1 五波段是否为 -999/-1004，也不能判断该源可否用于测光分析，需重查后评估。"}

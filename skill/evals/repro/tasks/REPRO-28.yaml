@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-28
+utterance: 查 RA=180.0、Dec=30.0、半径 5″ 内的 ps1 源有多少个，再拉第一页看看。
+category: multi
+expect_first_tool: cone_search
+reruns: 5
+stability_class: count_then_fetch
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - row_count
+relative_time_expression: false
+notes: E6 新增 (文档 §3.1); 判稳维度 count_then_fetch; 禁相对时间表述 (硬约束)

@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 (RA=180.0, Dec=30.0, 5″): total_count=3, returned_count=3, pages=1, truncated=false, 未截断; 数据来自 BEST 实时站点, content_trust=untrusted; stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0, session_id=s4909。三行均无 r 波段星等: 第1行(3.145″)仅 i=19.494±0.146; 第2行(3.961″)仅 g=18.599±0.010; 第3行(3.982″)星等与误差全空。故无法给出 r 与 g 两波段, 仅 g 有一行。"}

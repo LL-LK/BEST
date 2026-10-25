@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-07",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这条有两个前提要先掰正，不然我只能瞎猜：\n\n**一、Gaia DR3 的 source_id 不能当查询键。** 这 7 个原子工具里，`cone_search` 只吃 `ra`/`dec`（度，ICRS），\n`crossmatch_batch` 只吃坐标列表，`resolve_name` 只吃天体名——**没有任何\"按 source_id 取源\"的入口**。\n所以请给我该源的 ICRS 坐标（Gaia Archive、SIMBAD、Gaia DR3 的主表都能查），外加一个匹配半径（**角秒**，\n上限 18000 角秒 = 5 度）。\n\n**二、BEST 没有 `ztf` 这张可查询星表。** ZTF 只是官方文档里 19 个测光系统之一（可查询表是另一个维度），\n所以不存在 `catalog=\"ztf\"` 这种查法——那会是软 404。ZTF 的 g/r/i 在 BEST 里只以**交叉匹配列**的形式出现：\n\n- `scr_galah` / `scr_lamost`：`scr_galah_gztf`、`scr_galah_iztf`、`scr_galah_rztf`（LAMOST 版同理，前缀换掉）\n- `xpsp`：`ztf_g_g_xpsp`、`ztf_r_r_xpsp`、`ztf_i_i_xpsp`（以及各自的 `*_err` 误差列）\n\n一个口径细节：交叉匹配列只进 `raw_data`，不并入统一星等字典（同一波段多个调查会撞键），\n所以别指望拿到一个叫 `mags[\"z\"]` 的字段，得按列名自己取。\n\n你给我：**坐标 + 半径（角秒）+ 要查哪张表**（`xpsp` 覆盖 ZTF 三色最全，`scr_galah`/`scr_lamost` 只对有对应光谱的源有值），\n我立刻发锥检索并把 g/r/i 三列连误差一起返回。",
+  "notes": "无 source_id 查询入口（工具只吃坐标/名字）且不存在 ztf 星表 → 先澄清；同时给出 ZTF 三色实际所在的交叉匹配列。"
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "NL2T-01",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "BEST 共有 12 张可查询星表（catalog id 才是查询用的名字）：\n\n- calib 定标组：ps1（Pan-STARRS 全天，30 列）、stripe82（42 列）、gaia_dr3_18（Gaia DR3 定标，155 列）、jplus_dr3（8 列，单孔径星等）、smss_dr4（6 波段 PSF 星等）、landolt（49 列）、uss_dr1（12 波段 pstotal）、splus_dr4（12 波段 pstotal + 误差 + s2n）\n- std 标准星组：scr_galah（标准星×GALAH，137 列）、scr_lamost（标准星×LAMOST，137 列）、xpsp（标准星 × Gaia DR3 XP&SP，287 列，跨 139 张表单表）\n- other 组：dr3xpcorr（改正后的 Gaia DR3 XP 光谱，17 列）\n\n几个容易踩的点：\n1. std / calib / other 只是导航分组，不是表。把 std 当 catalog 查会拿到软错误（分组名自身返回 Internal Server Error，带 calib/ 前缀的路径返回 Not Found），要查必须点名成员表。\n2. 没有 gaia_dr3 这张表，线上 id 是 gaia_dr3_18，列前缀也是 gaia_dr3_18_。\n3. 官方文档里列了 SkyMapper DR4，但线上不可查询（表单路由是软 404），所以「文档出现 ≠ 可查询」，以可查询清单为准。\n4. 支持的输出格式是 csv / txt / json / votable（html 只用于拿会话 id），不支持 FITS。\n5. 数据面匿名可用，不需要登录。\n\n想看某张表有哪些列、对应什么波段，告我表名，我用零请求的列元数据工具给你列清单和量纲。",
+  "notes": "纯元数据问询，list_catalogs 是零请求工具，直接答 12 张表并点明 std/calib/other 是导航组、无 gaia_dr3、SkyMapper 不可查。"
+}

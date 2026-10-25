@@ -1,0 +1,1 @@
+{"answer_text": "路由=clarify，未调用工具。信封 state=empty：row_count=0、total_count=0、returned_count=0、truncated=false。stable_uri 与 snapshot_id 均为 null，无稳定引用与快照标识；信封无 source、content_trust 字段。tool_face=toolbox。请指明所需标准星表与筛选条件。"}

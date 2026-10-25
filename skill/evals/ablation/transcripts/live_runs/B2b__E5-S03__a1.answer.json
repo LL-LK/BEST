@@ -1,0 +1,1 @@
+{"answer_text": "本次取数无结果：tool_calls 为空，state=empty，row_count=0，total_count=0、returned_count=0、truncated=false；stable_uri 与 snapshot_id 均为 null，无 content_trust 字段。观测中无 S-03 的 ps1 波段测光数值，故无法判断该源可用性；-999/-1004 须重新取数确认。"}

@@ -1,0 +1,1 @@
+{"answer_text":"本次未发起任何工具调用；信封 state=empty，计数三元组 row_count=total_count=returned_count=0，pages=0，truncated=false，sentinels_removed=false；stable_uri=null、session_id/snapshot_id=null，信封未含 content_trust 字段，来源不可追溯；n_rows_observed=0，row_keys/first_row/notes 全空。故本次未取回 S-03 在 ps1 的任一波段数值，无法核实 -999/-1004，无测光数据可判，不能据此断定该源能否用于测光分析。"}

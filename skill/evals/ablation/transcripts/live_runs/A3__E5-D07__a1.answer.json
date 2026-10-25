@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形查询 RA=180.0、Dec=0.0、半径 60″：首查与第 2 页（page_size=2）均 0 行，state=empty，无错误码。计数 total/returned/pages=0/0/0，truncated=false。来源 stable_uri=best://ps1/cone?ra=180.0&dec=0.0&sr=60.0，快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r120.0as；content_trust=untrusted。无返回行。"}

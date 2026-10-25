@@ -1,0 +1,1 @@
+{"answer_text": "本次检索未返回标准星：state=empty，row_count=0、total_count=0、returned_count=0，truncated=false，无行与关键列。stable_uri、session_id、snapshot_id 皆 null，无 content_trust 字段，结果不可追溯；tool_face=toolbox。零行仅指本次未取到数据，不代表该天区确无标准星。"}

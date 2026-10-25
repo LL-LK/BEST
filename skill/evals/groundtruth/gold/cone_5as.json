@@ -1,0 +1,240 @@
+{
+  "gold_id": "gold_cone_5as",
+  "case_id": "cone_5as",
+  "snapshot_id": "sha256:df86697436b9822640f881be672bcc7d4dc3d864ad21b7e84b752a9741477c7f",
+  "data_version": "ps1@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:691458a7a103c9cc31049152171a0af38296e9ceb7cc8b348cb55fec455827c0"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as/rows_full.csv",
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [
+    "179.999041540,29.999727280",
+    "180.000408140,29.998951750",
+    "180.001102570,29.999453560"
+  ],
+  "row_count": 3,
+  "field_values": {
+    "179.999041540,29.999727280": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99904154,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99972728,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8802043547206"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.072785155375"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.000408140,29.998951750": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00040814,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99895175,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8802348337593"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727896856502"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.001102570,29.999453560": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00110257,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99945356,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8803005565208"
+      },
+      "ps1_gpsf": {
+        "v": 18.59922452197401,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    }
+  },
+  "field_values_sampled": false,
+  "field_values_sampling_rule": "all(<=50)",
+  "null_semantics": {
+    "179.999041540,29.999727280": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.000408140,29.998951750": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.001102570,29.999453560": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    }
+  },
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "ps1_ra": "deg",
+    "ps1_dec": "deg",
+    "ps1_rpsf": "mag",
+    "ps1_gpsf": "mag"
+  },
+  "precision_map": {
+    "ps1_ra": 3,
+    "ps1_dec": 3,
+    "ps1_rpsf": 3,
+    "ps1_gpsf": 3
+  },
+  "ordering": {
+    "key": null,
+    "order": "asc",
+    "declared": false,
+    "sequence": [
+      "179.999041540,29.999727280",
+      "180.000408140,29.998951750",
+      "180.001102570,29.999453560"
+    ],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 1,
+    "page_hashes": [
+      "87497155ad1aeb329dee060e0f1d9af411f01a5401ca8cf2edc38c1ed654a8e0"
+    ],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "last_page_full": false,
+    "extra_page_expected_empty": false
+  },
+  "truncation": {
+    "expected_total": 3,
+    "expected_truncated": false,
+    "expected_returned": 3
+  },
+  "result_state": "rows",
+  "missing_columns": [],
+  "notes": "L 类真实抓取快照 (裸列名 + 真实哨兵 -999/-1004.09 形态; live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as, data_version 字段现为 ps1@2026-10-04-live; 换素材前记的行数与旧 data_version 标识已退役, 不再复述)。 金标准: GT 用独立 haversine 算角距, d <= radius 含等号; 单位 arcsec→deg 换算由 GT 与被测各自执行 (M3 量纲探针)。行数与角距分布以 gold/cone_5as.json 为准 (复核要点 里的行数由金标准渲染, 不在本文件复述)。查询中心锚定首行坐标而非快照名义中心 (名义中心与全部实际行相距 ~100\", 若按名义中心查 GT 判空 — degenerate, 由 run_e2 汇总时按快照 snapshot.yaml 的冻结 query 校准)。本快照 rows_full 的 source_id 整列为空 → 主键走 (ra,dec) 量化键 (E2 §2 兜底)。\n"
+}

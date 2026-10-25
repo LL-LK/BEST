@@ -1,0 +1,1 @@
+{"answer_text": "装配 B0 工具面为 none，无数据通路，未发出工具调用。信封 state=empty：row_count=0、total_count=0、returned_count=0，pages=0，truncated=false，extra_page_empty=false，无任何行（row_keys、first_row 为空）。stable_uri、session_id、snapshot_id 皆为 null；信封无 source、content_trust 字段，无来源与快照可引。故 RA=180.0、Dec=30.0、半径 5″ 内 ps1 的 source_id、ra、dec、rpsf、gpsf、ypsf 六列无数据可取，不报数值（信封 tool_face=scripted 与 none 不符）。"}

@@ -1,0 +1,1 @@
+{"answer_text": "B0 工具面 none，tool_calls 空，无法取数：RA=180.0、Dec=30.0、60″ 内 ps1 按 r 波段排序的源给不出。信封 state=empty，计数三元组 0/0/0（row/total/returned），truncated=false，无行无列；stable_uri/session_id/snapshot_id 均 null。空态≠天区无源。"}

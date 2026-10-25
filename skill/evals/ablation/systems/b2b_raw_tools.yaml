@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/b2b_raw_tools.yaml — B2b 7 原子工具裸面 (与 B3 同一套签名, 无 Skill 约束)
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 B2b 列 / §3.2 / §2 分档表。
+# **主表的"原始工具"基线**: 与 B3 **同一套** 7 工具签名, 但返回裸行、无信封、
+# 无语义、无校验、无拒绝、无血缘。Δ3 = B3 − B2b 才是"Skill 设计"的净贡献。
+system:
+  id: B2b
+  kind: baseline
+  label: "B1 + 7 原子工具签名 (裸返回: 无信封/无语义/无校验/无拒绝/无血缘)"
+  role: "主表第二级基线 — 量『能真的查到数 + 接口抽象』值多少"
+  # SkillToolBoxAdapter, 但 param_validation=false
+  # 但 param_validation=false
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    # 与 B3 同一套 references/tools.schema.json
+    tool_signatures: true
+    # 裸工具面: 边界校验旁路, 非法参数原样下发
+    param_validation: false
+    # 只给裸列名清单, 不给波段→列语义
+    field_semantics: false
+    # 应拒绝任务大概率硬查
+    refusal_rules: false
+    # 无 stable_uri / data_hash / content_trust
+    provenance: false
+    # 无哨兵剔除 / 无截断三元组对账
+    post_verify: false
+    # 回裸行, 无四分区信封
+    unified_envelope: false
+  envelope_keys: []
+  docs_injected:
+    - "references/tools.schema.json (7 工具参数面 — 与 B3 同一份)"
+    - "12 张表列名清单 (裸名, 无波段映射语义)"
+  docs_withheld:
+    - "SKILL.md 的约束与领域知识"
+    - "CATALOG_MAG_COLUMNS 波段→列映射 / describe_catalog 语义段"
+    - "拒绝理由码表 / out_scope 段 / 结果后验证清单 / provenance 约定"
+  expected_failures: >
+    §3.2 明列: 应拒绝任务大概率硬查; 波段/单位错; 幻觉下降但不会消失。
+    这些**不是 bug**, 是这一档的定义性表现。
+  applicable_metrics: [ESR_data, ESR_know, ESR_full, ToolSetF1, ParamF1,
+                       ParamHallucination, RowF1, FieldConsistency, TruncTriple,
+                       HR_any, RejectAcc, OverRejectRate, MissedClarify,
+                       AvgCalls, AvgTurns, http_requests]
+  na_metrics: []
+  na_reason: "B2b 有数据通路与工具面, 全部指标适用。"
+  llm:
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+  notes: >
+    B2b 与 B3 的唯一差别是 Skill 的约束与领域知识 — 这把"接口抽象"与"领域知识"
+    两件事拆开了 (§2 设计陷阱: 只跑一个 B2 会把两者混成一个数)。

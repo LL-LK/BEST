@@ -1,0 +1,1 @@
+{"answer_text": "按 reject 路由处理，未发起工具调用，未取到该源测光。信封：state=empty，row_count=0，pages=0，total_count=0，returned_count=0，truncated=false；stable_uri/session_id/snapshot_id 均 null，tool_face=toolbox。观测行数 0，无测光列或数值可报，本次无数据可取。"}

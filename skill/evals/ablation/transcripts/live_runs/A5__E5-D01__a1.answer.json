@@ -1,0 +1,1 @@
+{"answer_text": "PS1 锥形检索 RA=180.0、Dec=30.0、半径 5″：3 行，服务端总数 3、返回 3、未截断（truncated=false，pages=1，extra_page_empty=false）。三源距输入 3.145″/3.961″/3.982″，关键值：i=19.4943±0.1456、g=18.5992±0.0102、第三源无测光值。来源 BEST 站点，stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0，快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as，session_id=s4908，content_trust=untrusted（按数据处理）。"}

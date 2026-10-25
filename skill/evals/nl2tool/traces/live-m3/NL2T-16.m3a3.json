@@ -1,0 +1,33 @@
+{
+  "task_id": "NL2T-16",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "splus_dr4"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "splus_dr4",
+        "columns": [
+          "splus_dr4_ra",
+          "splus_dr4_dec",
+          "splus_dr4_r_pstotal",
+          "splus_dr4_e_r_pstotal"
+        ]
+      }
+    }
+  ],
+  "answer_text": "已查：RA=180.0°、Dec=+30.0°、半径 **60 角秒（1 角分）**，星表 `splus_dr4`（S-PLUS DR4 精测定标）。\n\nr 波段的取列（先 `describe_catalog` 核过，零请求）：\n\n- **星等：`splus_dr4_r_pstotal`**\n- **误差：`splus_dr4_e_r_pstotal`** —— 一并取回来了，你后面要卡精度可以直接用\n\n同表一共 12 个波段的 `pstotal` + 同名 `e_*` 误差 + 5 个质量/改正列。**注意别混同名的 `r_corr`**：\n`splus_dr4_r_corr` 是改正列，不是 r 波段星等。另外这表还有一批窄带（`j0378`/`j0395`/`j0410`/`j0430`/\n`j0515`/`j0660`/`j0861`），标签原样保留、不做归一。\n\n两点补充：\n\n1. `splus_dr4` 的位置列是 `splus_dr4_ra` / `splus_dr4_dec`（正常带星表前缀）。\n   对比提醒：**`uss_dr1` 是例外**——它的 CSV 响应列名恒为裸名（`ra_u`、`u_pstotal`），\n   所以那 12 波段各自的位置星等取的是 `u_pstotal` 这种裸名形态，别拿星表前缀去拼。\n2. S-PLUS 的 r 与 ps1 的 r 属不同测光系统/定标链，**不要直接跨表相减**；\n   要跨表对齐请走公共滤波系统（APASS 之流）或标准星（如 `landolt`、`scr_*`）。\n\n如果这个位置只是想找\"最近的那一颗\"，加 `nearest_only=true` 更省。",
+  "notes": "splus_dr4 的 r 波段星等列是 splus_dr4_r_pstotal，误差列 splus_dr4_e_r_pstotal，并区分同名 r_corr 改正列。"
+}

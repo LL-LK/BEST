@@ -1,0 +1,1 @@
+{"answer_text": "ps1 的 cone_search（RA=180.0、Dec=0.0、r=0）报 E_INVALID_INPUT：半径须为正，未取到数据。计数三元组 total=returned=row_count=0，pages=0，truncated=false，无行无列无数值。来源 BEST 实时站点；stable_uri 空、快照 id 均 null；content_trust=untrusted。"}

@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索(RA=180.0,Dec=30.0,r=5″):row_count=total_count=returned_count=3,pages=1,truncated=false。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0;session_id=s0002;snapshot_id=syn_missing;content_trust=untrusted(行文本仅作数据)。source_id=BEST_SYN_0001/0002/0003;rpsf=18.2/空/17.9;gpsf=哨兵/哨兵/18.05(前两行 -1004.09…、-999.0 已置 null);ypsf 三行均未返回。"}

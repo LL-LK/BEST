@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 best://ps1/cone?ra=180.0&dec=30.0&sr=60.0（s4930，快照 live-2026-10-04，untrusted）返回 5 行，total=returned=5，未截断。class_star 全空，无法判 0.98–0.99；r 仅 2 行实测 18.2370、18.6893，另 3 行 rpsf_err=-999.0 为哨兵，均不在 18.20–18.40。故 0 源满足。"}

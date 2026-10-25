@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none，无数据通路，未取到 PS1 数据。信封 state=empty：行 0、服务端总数 0、返回 0、truncated=false；stable_uri、snapshot_id、session_id 均 null，无来源与 content_trust；row_keys、first_row 空。故 RA=180.0、Dec=30.0、5″ 内 ps1 源无结果，不能视为零匹配。"}

@@ -1,0 +1,1 @@
+{"answer_text": "信封 state=empty、error_code=null；计数 total_count=0、returned_count=0、row_count=0，truncated=false，row_keys 空。stable_uri=null、snapshot_id=null，无 content_trust 字段。本次 tool_calls 为空，无记录可判定该星是否变星，故不支持'一定不是变星'。"}

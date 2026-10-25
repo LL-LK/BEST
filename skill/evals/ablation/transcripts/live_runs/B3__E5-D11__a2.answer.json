@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥搜(RA=180.0,Dec=30.0,5″): 3 行; row/total/returned=3/3/3, pages=1, truncated=false。来源 BEST ps1; stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0; 快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as; content_trust=untrusted。三源均无 r(rpsf_err=-999.0 哨兵): ①3.145″ 仅 i=19.4943±0.1456; ②3.961″ 仅 g=18.5992±0.0102(gflags=16); ③3.982″ 无星等(flags=16416)。"}

@@ -1,0 +1,38 @@
+{
+  "gold_id": "gold_soft404_page",
+  "case_id": "soft404_page",
+  "snapshot_id": "sha256:4b47a7fe052ece1261ceaae113c8208d5ee0683e8d634cc9a2687b59a159fda1",
+  "data_version": "no_such_catalog@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:691458a7a103c9cc31049152171a0af38296e9ceb7cc8b348cb55fec455827c0"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_raw_no_such_catalog_r60.0as (error-state, 无行集)",
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [],
+  "row_count": 0,
+  "field_values": {},
+  "null_semantics": {},
+  "unit_map": {},
+  "precision_map": {},
+  "ordering": {
+    "key": null,
+    "order": null,
+    "sequence": [],
+    "declared": false
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))"
+  },
+  "truncation": {
+    "expected_total": 0,
+    "expected_truncated": false,
+    "expected_returned": 0
+  },
+  "result_state": "error",
+  "expected_error_code": "E_SOFT_404",
+  "notes": "A 的 syn_soft404 快照: phase1.html 为软 404 原文 (HTTP 200 + {\"error\":\"Not Found\"}), 无 rows_full.csv (错误态无行集 — GT 容差分支)。 金标准: result_state=error, error_code=E_SOFT_404。E2 §10 阻断项 1: ERROR 被报成 EMPTY_RESULT 整体 E2 FAIL (把服务故障读成科学结论)。被测必须 ok=false + E_SOFT_404; 判成功或降级空结果都会被 M5 抓住。本用例与 E4 M5 包装形态 #3 共用同一判据 (程序读错 vs agent 说错)。\n"
+}

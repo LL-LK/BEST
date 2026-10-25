@@ -1,0 +1,1 @@
+{"answer_text": "未实际查询（工具面 none、tool_calls 空，无数据通路），无法取数，不能声称查到该处 PS1 记录。信封 state=empty：returned_count=0、total_count=0、truncated=false、row_count=0；stable_uri、session_id、snapshot_id 均 null，即无来源、无稳定引用、无数据快照，亦无 content_trust 字段；row_keys、first_row 为空，无列名与数值。"}

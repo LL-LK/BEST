@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：cone_search 因无数据锚点被离线纪律拦截（未发请求，error_code=E_BACKEND）。计数三元组 returned_count=0、total_count=0、row_count=0，truncated=false，n_rows_observed=0，row_keys/first_row 为空。信封未给出来源与 content_trust；stable_uri、snapshot_id 均为 null。r 波段误差<0.01 mag 的源无法给出。"}

@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-05",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "能做，但你这条消息里没有坐标，所以我先不动数据、不发任何请求。\n请把坐标贴给我：每行一个 ra,dec（ICRS，度），可带第三列你自己的 id 用于回连结果（crossmatch_batch 的 coords 里 id 是可选字段）。\n拿到之后我会一次 crossmatch_batch 提交给服务端做 proximity 匹配，而不是 1000 次独立锥搜——实测 1000 个坐标可用，约 3 s，1 次 POST 加分页取回，响应自带 inputobjs_input_line / inputobjs_input_ra / inputobjs_input_dec / inputobjs_dist_arcsec（服务端算好的角距），所以 N=1000 从约 2000 次 HTTP 降到个位数。\n默认口径先说明：nearest_only=true（每个输入只回最近邻）、radius_arcsec=3（匹配半径是角秒）。这两个要改就在贴坐标时一起说。源更多（比如几万）也可以分批提交，只是那时我会先跟你确认规模。",
+  "notes": "coords 是 crossmatch_batch 的必填参数，用户没贴坐标就不能构造调用；缺关键输入时反问优于乱查，澄清阶段零请求。"
+}

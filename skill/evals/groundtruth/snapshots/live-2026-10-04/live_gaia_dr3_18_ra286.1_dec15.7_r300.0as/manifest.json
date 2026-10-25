@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_gaia_dr3_18_ra286.1_dec15.7_r300.0as",
+  "files": {
+    "count.json": "sha256:dd62723976f593b41003d3ab7124dbd1e24ba5d0fd740df9fa53de63c6414376",
+    "pages/page_0001.csv": "sha256:0c0fa02c4b2b78c1f66637e35e14c4398a42ce70e0790742537c448a7a6b0a16",
+    "phase1.html": "sha256:ad174358b6bcccd05a1417c3bd53e73a4ac61de85f79a1a3330b856fee98f204",
+    "rows_full.csv": "sha256:0c0fa02c4b2b78c1f66637e35e14c4398a42ce70e0790742537c448a7a6b0a16"
+  }
+}

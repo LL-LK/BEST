@@ -1,0 +1,1 @@
+{"answer_text":"RA=180.0、Dec=30.0、5″ 内 ps1 六列（source_id/ra/dec/rpsf/gpsf/ypsf）实跑返回空：state=empty，error_code=null，row_count=0，total_count=0，returned_count=0，pages=0，truncated=false，extra_page_empty=false，即空结果非截断。stable_uri=null（无稳定引用），session_id、snapshot_id 均 null（无快照标识）；未观测到来源与 content_trust 字段，故不陈述。row_keys 空、first_row 空，六列无取值。工具面 scripted（非 none），通路在但为空集。"}

@@ -1,0 +1,1 @@
+{"answer_text": "筛选未执行：cone_search 无数据锚点被离线拦截，未发请求(http_requests=0)，故无 r 波段误差<0.01 mag 的源可给。信封错误态 E_BACKEND：行数 row_count=0、服务端总数 total_count=0、returned_count=0，pages=0，truncated=false，无关键列；stable_uri=null、snapshot_id=null；provenance 空，无来源与 content_trust 字段，出处无从声称。请在有数据锚点环境重试。"}

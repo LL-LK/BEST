@@ -1,0 +1,1 @@
+{"answer_text": "无法确认该字段是否为逐历元星等：观测为空返回，无字段名或数值可判。信封状态 empty，row_count 0、total_count 0、returned_count 0、truncated false，row_keys 与 first_row 均空。stable_uri、session_id、snapshot_id 全为 null，无来源标识与数据快照；error_code 为 null。"}

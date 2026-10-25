@@ -1,0 +1,1 @@
+{"answer_text": "本次 tool_calls 为空，即并未真正发出查询。信封 state=empty，计数三元组 row_count/returned_count/total_count 均为 0，pages=0，truncated=false，error_code=null；stable_uri 与 snapshot_id 均为 null，信封也未含 content_trust，故没有可引用的来源、稳定引用或数据快照。tool_face=toolbox。既无实际查询记录，这 0 行不足以证明 (180.0, 30.0) 半径 3″ 内没有天体，需真跑一次 PS1 检索后再判断。"}

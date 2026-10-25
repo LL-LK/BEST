@@ -1,0 +1,74 @@
+# evals/_data/null_sentinel.yaml — 哨兵值数据字典 (E2/E3/E4/E5 共用的唯一共享件)
+#
+# 定位: 纯数据字典 (不是判定逻辑) — 各星表用哪些值表示"这一格没测到"。
+# E2/E3/E4/E5 的实验代码读取同一份本文件, 单点维护; 除本文件外, GT 生成器
+# 与被测实现之间零共享代码 (E2 §4.4 铁律)。
+#
+# 权威来源 (仓内一手证据, 改值必须同步这些出处):
+#   - src/models/__init__.py: NULL_MAGNITUDE_SENTINEL = -999.0 (模型层判定阈值)
+#   - src/models/__init__.py: _SENTINEL_EXEMPT_COLUMNS = {pmra, pmdec, radial_velocity}
+#   - rag/knowledge/known_issues.yaml: ps1 空测光列实证 -1004.07 / -999.0
+#   - references/site-endpoints-and-interactions.md: 哨兵值形态说明
+#
+# 用法约定: 判定"是否缺失"的规则是 value <= threshold (不是 == 某一具体值) —
+# 具体形态 (-999 / -999.0 / -1004.09...) 只是已知实例, 新形态只要低于阈值
+# 就应按缺失处理; exempt_columns 里的列是带符号真实物理量 (高自行星 pmra
+# 可达极大负值), 不参与哨兵判定。
+#
+# 读取方式 (2026-10-05 R3 收敛后): 评测侧一律经 evals._data.load_null_sentinel()
+# 取值 (带三键校验与 lru_cache), **不得**在实验里自己锚本文件路径或重写读法;
+# 这两条由 evals/equivalence/sentinel.py 的 scan_local_sentinel_readers 与
+# scan_hardcoded_exempt_columns 静态守护。src/models 那份字面量按上面的权威
+# 方向保留 (生产不反向依赖评测层), 两侧相等由 evals/equivalence 的
+# test_production_exempt_columns_match_dictionary 钉住 — 改任一侧必须同步另一侧。
+
+# 全局判定阈值: 小于等于该值的测光列按"缺失"处理 (mag 量纲下不可能出现)
+threshold: -999.0
+
+# 名称解析失败哨兵: HTTP 200 + ra=dec=-1000 (不是报错; src/protocol.py)
+name_resolve_fail_sentinel: -1000
+
+# 豁免列: 合法大负值的非测光列, 不参与哨兵判定 (src/models 权威表)
+exempt_columns:
+  - pmra
+  - pmdec
+  - radial_velocity
+
+# 逐星表已知哨兵形态 (实证记录, 判定不依赖具体值 — 见上方用法约定)
+per_catalog:
+  ps1:
+    photometry_sentinels: [-999, -999.0, -1004.0910078678945, -1004.07]
+    note: >
+      ps1 无测光列回 ≈-1000 哨兵 (live 实证: ps1_gpsf=-1004.07 且
+      ps1_gpsf_err=-999.0, 而 ps1_ipsf 是真实的 19.49 — 没有任何天文
+      星等到 -999, 因此 <= 阈值按缺失处理, 不算测光。
+      2026-10-05 全表实跑复核: 该族是**带**不是点 — 1000 行里 8 列带哨兵,
+      -999.0 精确值 3067 次, 另有 3062 个互不相同的浮点落在 -1004.0727… 一带,
+      浮点精确相等一个都命中不了。
+  uss_dr1:
+    photometry_sentinels: [-32768]
+    note: >
+      uss_dr1 的 12 个 *_flag 列 (u_flag/j0378_flag/…/z_flag) 用 **-32768** 作
+      "未测"填充值 (2026-10-05 全表实跑: sqlid=s5051 @120.3,-20.4 300″ 首页
+      1000 行, 9046 个单元格, **值域是"点"不是"带"** — 每列去重后只有这一个取值,
+      int16 下界, 疑似 flag 列的未测填充)。低于 threshold, 因此**现有 <= 阈值
+      判定已覆盖它**, 登记此项只为"哪些星表有哪些形态"有据可查, 不改判定逻辑。
+      同表另注: 96,000 个单元格里 37,077 个是字面 nan (38.6%) — nan 是字符串不是
+      浮点 NaN, float() 转成功, 后续 == / < 恒假, 必须显式单列判。
+  xpsp:
+    photometry_sentinels: [-999.0]
+    note: >
+      xpsp 实测 -999.0 共 216 次, 值域是点 (2026-10-05 全表实跑, 首页 1000 行);
+      同表另有 8,162 个字面 nan (2.8% 单元格)。
+  dr3xpcorr:
+    photometry_sentinels: [-999.0]
+    note: >
+      dr3xpcorr 实测 -999.0 共 4 次, 值域是点 (2026-10-05 全表实跑, 1800″ 锥
+      120 行); 同表零 nan, 空单元格亦为 0。
+  default:
+    photometry_sentinels: [-999, -999.0]
+    note: >
+      其余星表沿用 -999 阈值口径; 新星表接入时在此登记实证形态。
+      注意"无值"编码逐表不同 (空串 / 字面 nan / 数值哨兵), 且并非每表都发哨兵:
+      2026-10-05 实测 smss_dr4 / scr_lamost / splus_dr4 / stripe82 无任何数值哨兵,
+      gaia_dr3_18 的 49,420 个空单元格全是空串且零 nan — 判空必须逐表核对。

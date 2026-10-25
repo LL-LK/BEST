@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-06
+utterance: 先看看这个天区有多少源，再决定拉不拉。
+category: multi
+expect_first_tool: cone_search
+reruns: 5
+stability_class: count_then_fetch
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - row_count
+relative_time_expression: false
+notes: 映射 E1 NL2T-06; 判稳维度 count_then_fetch; 禁相对时间表述 (硬约束)

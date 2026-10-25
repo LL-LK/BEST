@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-08
+utterance: 结果被截断了，继续取下一页。
+category: multi
+expect_first_tool: fetch_page
+reruns: 5
+stability_class: past_last_page_boundary
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - row_count
+relative_time_expression: false
+notes: 映射 E1 NL2T-08; 判稳维度 past_last_page_boundary (末页边界); 禁相对时间表述 (硬约束)

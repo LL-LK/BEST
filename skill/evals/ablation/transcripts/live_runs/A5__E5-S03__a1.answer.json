@@ -1,0 +1,1 @@
+{"answer_text": "查询为空：state=empty，row_count/returned_count/total_count=0/0/0，pages=0，truncated=false，tool_calls 为空，tool_face=toolbox；stable_uri、session_id、snapshot_id 均为 null（无稳定引用与快照），sentinels_removed=false，无行、无关键列。故 S-03 五波段 -999/-1004 是否属缺测哨兵无从核实，无任何测光数值，不能判定可用于测光分析。"}

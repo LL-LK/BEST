@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索（RA=180.0, Dec=30.0, 60″）：5 行，total=returned=5，pages=1，truncated=false，state=rows，error_code=null。信封 stable_uri/snapshot_id/session_id 均 null，无 content_trust；行级 provenance 为 s4930。tool_face=raw_protocol，describe_catalog 报 E_INVALID_INPUT。5 行 r 星等：空、空、空、18.237046、18.689316，class_star 全空，符合条件者 0 个。"}

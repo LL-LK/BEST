@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：cone_search(ps1, ra=180.0, dec=30.0, 60″) 无数据锚点被离线纪律拦截，未发请求，http_requests=0。信封 state=error、error_code=E_BACKEND、tool_face=raw_protocol、provenance 为空；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false；stable_uri/session_id/snapshot_id 均 null，无 content_trust；row_keys 为空。故无法导出 ps1 全表 FITS，亦无行数与关键列可报。"}

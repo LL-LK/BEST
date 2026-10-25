@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_jplus_dr3_ra120.3_dec-20.4_r300.0as",
+  "files": {
+    "count.json": "sha256:2af3e2cbc7a782037439ecebbe422a8fa52fb3adede1b26146310d83878ee82d",
+    "pages/page_0001.csv": "sha256:0cf2396c799afb5f9a093b6200f6f082221deb8003895ea333f9b91dbf326973",
+    "phase1.html": "sha256:6614cb8de183c724dbd5fd1d5ca26bd1bbd73da2059a13eb8f0dd7e21126acf0",
+    "rows_full.csv": "sha256:0cf2396c799afb5f9a093b6200f6f082221deb8003895ea333f9b91dbf326973"
+  }
+}

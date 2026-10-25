@@ -1,0 +1,1 @@
+{"answer_text": "工具面 toolbox，实查 state=empty、error_code=null；计数 row_count=0、returned_count=0、total_count=0、pages=0、truncated=false；envelopes=[]，stable_uri、session_id、snapshot_id 均为 null（无 content_trust 字段），sentinels_removed=false，n_rows_observed=0，row_keys 与 first_row 为空。本次未取到任何行，无法核验该星是否为变星；NOT_AVAILABLE 只是该标志缺失，不能据此断言“一定不是变星”。"}

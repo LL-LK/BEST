@@ -1,0 +1,1 @@
+{"answer_text": "route=reject，tool_calls 空，未取数，匹配未执行。信封 state=empty、error_code 空；计数 total_count=0、returned_count=0、row_count=0，truncated=false；stable_uri、snapshot_id 均空（无快照），无来源/content_trust；row_keys 空；工具面 toolbox。"}

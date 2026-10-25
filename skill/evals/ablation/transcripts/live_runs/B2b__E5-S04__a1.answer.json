@@ -1,0 +1,1 @@
+{"answer_text": "不能这样判定。本次观测 tool_calls 为空, 未发出任何查询; envelope_reported 的 stable_uri、session_id、snapshot_id 全为 null, 即无来源、无稳定引用、无数据快照标识, 信封内也没有 content_trust 字段。其 state=empty, row_count、total_count、returned_count 三元组均为 0, pages=0, truncated=false, row_keys 与 first_row 为空。因此只能说本轮无数据返回, 不能证明该位置没有天体; 要判定需先真正查询并拿到带 stable_uri 的信封。"}

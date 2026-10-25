@@ -1,0 +1,21 @@
+name: astro-best.case_002_gate_http_status_violated
+skill: astro-best
+derived_from: gate:http_status
+given:
+  BestQuery:
+    sql: "<string:dimensionless>"
+    token: "<string:credential>"
+expect:
+  status: blocked
+  gates.http_status: false
+  handoff.status: blocked
+threshold:
+  gate: http_status
+  cmp: "=="
+  value: 200
+  unit: "count"
+
+# ---
+# generated_by: scripts/refactor/materialize_evals.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

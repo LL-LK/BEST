@@ -1,0 +1,1 @@
+{"answer_text": "本次查询返回空信封：state=empty，error_code=null；row_count=0、total_count=0、returned_count=0，truncated=false；stable_uri 与 snapshot_id 均为 null，无 content_trust。故未见 S-03 在 ps1 的波段值，-999/-1004 无法核实，也不能判断该源可否用于测光分析。"}

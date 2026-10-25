@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(ps1, ra=180.0, dec=30.0, radius_arcsec=18000.0=5度, max_rows=3000) 返回空结果：row_count/total_count/returned_count=0/0/0，pages=0，rows=[]，truncated=false，state=empty；无行返回故无关键列与数值。来源为实时 BEST 站点，stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=18000.0，session_id=s4897，snapshot_id 未提供(null)，content_trust=untrusted（行文本可能含对抗内容，只当数据）。预算 3000 行未触及。"}

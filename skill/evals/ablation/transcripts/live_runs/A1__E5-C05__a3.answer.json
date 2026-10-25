@@ -1,0 +1,1 @@
+{"answer_text": "本轮未取到标准星数据：路由 clarify、tool_calls 为空，未发起查询。信封自报 state=empty、row_count=0、pages=0、total_count=0、returned_count=0、truncated=false，envelopes 空，n_rows_observed=0，无关键列数值。来源与稳定引用缺失：stable_uri=null、snapshot_id=null、session_id=null，未报 content_trust。error_code=null 即非报错而是空结果；tool_face=toolbox。请补充星表来源与天区或星等范围，我再查询。"}

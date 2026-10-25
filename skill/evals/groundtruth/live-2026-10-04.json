@@ -1,0 +1,2570 @@
+{
+  "cases": [
+    {
+      "case_id": "batch_proximity",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 16,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7777777777777778,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.3333333333333333,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_dec",
+              "value": -30.000228,
+              "digits": 8,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.1,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_dec",
+              "value": -30.500153,
+              "digits": 8,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 17.9,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_dec",
+              "value": -31.000889,
+              "digits": 8,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 19.1,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_dec",
+              "value": -32.000486,
+              "digits": 8,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.7,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "input_index",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 0,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              4,
+              false,
+              4
+            ],
+            "actual": [
+              4,
+              false,
+              4
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ZERO",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9777777777777777,
+      "pass": true
+    },
+    {
+      "case_id": "boundary_maxrows",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 10,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.8333333333333334,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.5,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_rpsf",
+              "value": 17.55,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 0.0001,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 19.9,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 0.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 40.0,
+              "digits": 0,
+              "min": 4
+            },
+            {
+              "column": "ps1_snr",
+              "value": 8.0,
+              "digits": 0,
+              "min": 4
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "ps1_source_id",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 2,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              2,
+              false,
+              2
+            ],
+            "actual": [
+              2,
+              false,
+              2
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ZERO",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9833333333333334,
+      "pass": true
+    },
+    {
+      "case_id": "boundary_page_exact",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 10,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.8333333333333334,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.5,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_rpsf",
+              "value": 17.55,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 0.0001,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 19.9,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 0.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 40.0,
+              "digits": 0,
+              "min": 4
+            },
+            {
+              "column": "ps1_snr",
+              "value": 8.0,
+              "digits": 0,
+              "min": 4
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "ps1_source_id",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              2,
+              false,
+              2
+            ],
+            "actual": [
+              2,
+              false,
+              2
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ZERO",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9833333333333334,
+      "pass": true
+    },
+    {
+      "case_id": "boundary_pole_dec",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 4,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7777777777777778,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.3333333333333333,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_dec",
+              "value": 89.999999,
+              "digits": 8,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.1,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              1,
+              false,
+              1
+            ],
+            "actual": [
+              1,
+              false,
+              1
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ROWS",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9777777777777777,
+      "pass": true
+    },
+    {
+      "case_id": "boundary_radius0",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": true,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": null,
+          "pass": true,
+          "compared_fields": 0,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": [],
+          "note": "gold 期望 0 行 — M2 不适用 (M5 接管)"
+        },
+        "m3_units": {
+          "score": 1.0,
+          "pass": true,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 1.0,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 0,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              0,
+              false,
+              0
+            ],
+            "actual": [
+              null,
+              null,
+              null
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "error",
+          "actual_state": "ERROR",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 0,
+          "observed_http_requests": 0,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 1.0,
+      "pass": true
+    },
+    {
+      "case_id": "boundary_wrap_ra",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 4,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7777777777777778,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.3333333333333333,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 0.01,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": -89.999999,
+              "digits": 8,
+              "min": 9
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_rpsf",
+              "value": "-999.0",
+              "digits": 2,
+              "min": 6
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              1,
+              false,
+              1
+            ],
+            "actual": [
+              1,
+              false,
+              1
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9777777777777777,
+      "pass": true
+    },
+    {
+      "case_id": "cone_5as",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 27,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 1.0,
+          "pass": true,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 1.0,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              3,
+              false,
+              3
+            ],
+            "actual": [
+              3,
+              false,
+              3
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 1.0,
+      "pass": true
+    },
+    {
+      "case_id": "cone_60as",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 12,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.75,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.25,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0001,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.2,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0002,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.4,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_snr",
+              "value": 30.0,
+              "digits": 0,
+              "min": 4
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "ps1_rpsf",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              2,
+              false,
+              2
+            ],
+            "actual": [
+              2,
+              false,
+              2
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ROWS",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.975,
+      "pass": true
+    },
+    {
+      "case_id": "empty_field",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": true,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": null,
+          "pass": true,
+          "compared_fields": 0,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": [],
+          "note": "gold 期望 0 行 — M2 不适用 (M5 接管)"
+        },
+        "m3_units": {
+          "score": 1.0,
+          "pass": true,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 1.0,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 0,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              0,
+              false,
+              0
+            ],
+            "actual": [
+              0,
+              false,
+              0
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "empty",
+          "actual_state": "EMPTY",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 1.0,
+      "pass": true
+    },
+    {
+      "case_id": "huge_3700rows",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3700,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 410,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7791291291291292,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.3373873873873874,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.01,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.02,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0003,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.03,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0004,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.04,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0005,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.05,
+              "digits": 4,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.0,
+              "digits": 1,
+              "min": 6
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            }
+          ],
+          "blockers": [],
+          "precision_warnings_total": 3745,
+          "precision_warnings_truncated": true,
+          "precision_warnings_kept": 20,
+          "precision_warnings_note": "逐值精度告警清单按上限截断入库; 完整清单可由 `python evals/groundtruth/run_e2.py` 现场重算 (M3 为确定性纯计算, 无随机源)"
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "ps1_source_id",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 4,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              3700,
+              false,
+              3700
+            ],
+            "actual": [
+              3700,
+              false,
+              3700
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 6,
+          "observed_http_requests": 6,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9779129129129129,
+      "pass": true
+    },
+    {
+      "case_id": "huge_over_cap",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3000,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 335,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.8343611111111112,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.5030833333333333,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.01,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.02,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0003,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.03,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0004,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.04,
+              "digits": 4,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0005,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.05,
+              "digits": 4,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0,
+              "digits": 1,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.0,
+              "digits": 1,
+              "min": 6
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0,
+              "digits": 0,
+              "min": 9
+            },
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            }
+          ],
+          "blockers": [],
+          "precision_warnings_total": 6037,
+          "precision_warnings_truncated": true,
+          "precision_warnings_kept": 20,
+          "precision_warnings_note": "逐值精度告警清单按上限截断入库; 完整清单可由 `python evals/groundtruth/run_e2.py` 现场重算 (M3 为确定性纯计算, 无随机源)"
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "ps1_source_id",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 3,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              3700,
+              true,
+              3000
+            ],
+            "actual": [
+              3700,
+              true,
+              3000
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 5,
+          "observed_http_requests": 5,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9834361111111112,
+      "pass": true
+    },
+    {
+      "case_id": "missing_cell",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 18,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7272727272727272,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.18181818181818182,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0001,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.2,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0002,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0003,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0003,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 17.9,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_gpsf",
+              "value": 18.05,
+              "digits": 4,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_gpsf",
+              "value": "-999.0",
+              "digits": 2,
+              "min": 6
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              3,
+              false,
+              3
+            ],
+            "actual": [
+              3,
+              false,
+              3
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9727272727272727,
+      "pass": true
+    },
+    {
+      "case_id": "missing_column",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 18,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7272727272727272,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.18181818181818182,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0001,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.2,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0002,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0003,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0003,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 17.9,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_gpsf",
+              "value": 18.05,
+              "digits": 4,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_gpsf",
+              "value": "-999.0",
+              "digits": 2,
+              "min": 6
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              3,
+              false,
+              3
+            ],
+            "actual": [
+              3,
+              false,
+              3
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9727272727272727,
+      "pass": true
+    },
+    {
+      "case_id": "multi_filter_mag_snr",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 10,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.6666666666666666,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.0,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0001,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.2,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0002,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.4,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true,
+            "key": "ps1_rpsf",
+            "order": "asc",
+            "monotonic": true,
+            "sequence_match": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              2,
+              false,
+              2
+            ],
+            "actual": [
+              2,
+              false,
+              2
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ROWS",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9666666666666667,
+      "pass": true
+    },
+    {
+      "case_id": "sentinel_value",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 18,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.7272727272727272,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.18181818181818182,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0001,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.2,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0002,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0002,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_ra",
+              "value": 180.0003,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0003,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 17.9,
+              "digits": 3,
+              "min": 6
+            },
+            {
+              "column": "ps1_gpsf",
+              "value": 18.05,
+              "digits": 4,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_gpsf",
+              "value": "-999.0",
+              "digits": 2,
+              "min": 6
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              3,
+              false,
+              3
+            ],
+            "actual": [
+              3,
+              false,
+              3
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "NULL",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.9727272727272727,
+      "pass": true
+    },
+    {
+      "case_id": "single_exact",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": false,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": 1.0,
+          "pass": true,
+          "compared_fields": 6,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": []
+        },
+        "m3_units": {
+          "score": 0.75,
+          "pass": false,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 0.25,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [
+            {
+              "column": "ps1_ra",
+              "value": 180.0001,
+              "digits": 7,
+              "min": 9
+            },
+            {
+              "column": "ps1_dec",
+              "value": 30.0001,
+              "digits": 6,
+              "min": 9
+            },
+            {
+              "column": "ps1_rpsf",
+              "value": 18.2,
+              "digits": 3,
+              "min": 6
+            }
+          ],
+          "precision_warnings": [
+            {
+              "column": "ps1_snr",
+              "value": 25.0,
+              "digits": 1,
+              "min": 4
+            }
+          ],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 1,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              1,
+              false,
+              1
+            ],
+            "actual": [
+              1,
+              false,
+              1
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "rows",
+          "actual_state": "ROWS",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 3,
+          "observed_http_requests": 3,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 0.975,
+      "pass": true
+    },
+    {
+      "case_id": "soft404_page",
+      "metrics": {
+        "m1_rows": {
+          "score": 1.0,
+          "pass": true,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "degenerate": true,
+          "missing_keys": [],
+          "extra_keys": [],
+          "blockers": []
+        },
+        "m2_fields": {
+          "score": null,
+          "pass": true,
+          "compared_fields": 0,
+          "mismatched_fields": 0,
+          "per_field_errors": {},
+          "blockers": [],
+          "note": "gold 期望 0 行 — M2 不适用 (M5 接管)"
+        },
+        "m3_units": {
+          "score": 1.0,
+          "pass": true,
+          "unit_rate": 1.0,
+          "probe_rate": 1.0,
+          "precision_rate": 1.0,
+          "unit_errors": [],
+          "probe_errors": [],
+          "precision_errors": [],
+          "precision_warnings": [],
+          "blockers": []
+        },
+        "m4_structure": {
+          "score": 1.0,
+          "pass": true,
+          "ordering": {
+            "pass": true
+          },
+          "pagination": {
+            "pass": true,
+            "expected_pages": 0,
+            "actual_pages": 0
+          },
+          "truncation": {
+            "pass": true,
+            "gold": [
+              0,
+              false,
+              0
+            ],
+            "actual": [
+              null,
+              null,
+              null
+            ]
+          },
+          "blockers": []
+        },
+        "m5_states": {
+          "score": 1.0,
+          "pass": true,
+          "gold_state": "error",
+          "actual_state": "ERROR",
+          "state_match": true,
+          "error_to_empty": false,
+          "sentinel_as_value": false,
+          "null_shown_as_zero": false,
+          "blockers": []
+        },
+        "m6_version": {
+          "score": 1.0,
+          "pass": true,
+          "matched": 1,
+          "declared": 1,
+          "mismatches": [],
+          "cross_version_pollution": false,
+          "blockers": []
+        },
+        "m7_determinism": {
+          "score": 1.0,
+          "pass": true,
+          "deterministic": true,
+          "http_requests_honest": true,
+          "declared_http_requests": 5,
+          "observed_http_requests": 5,
+          "blockers": []
+        }
+      },
+      "blockers": [],
+      "weighted": 1.0,
+      "pass": true
+    }
+  ],
+  "n_cases": 17,
+  "n_pass": 17,
+  "missing_gold": [],
+  "missing_snapshot": [],
+  "metascore": 1.0,
+  "review_provenance": {
+    "human": 0,
+    "self_signed": 17,
+    "unsigned": 0
+  },
+  "sidecar_signed": 0,
+  "provenance_drift": [
+    "generator_drift:batch_proximity",
+    "generator_drift:boundary_maxrows",
+    "generator_drift:boundary_page_exact",
+    "generator_drift:boundary_pole_dec",
+    "generator_drift:boundary_radius0",
+    "generator_drift:boundary_wrap_ra",
+    "generator_drift:cone_5as",
+    "generator_drift:cone_60as",
+    "generator_drift:empty_field",
+    "generator_drift:huge_3700rows",
+    "generator_drift:huge_over_cap",
+    "generator_drift:missing_cell",
+    "generator_drift:missing_column",
+    "generator_drift:multi_filter_mag_snr",
+    "generator_drift:sentinel_value",
+    "generator_drift:single_exact",
+    "generator_drift:soft404_page"
+  ],
+  "human_review_complete": false,
+  "human_review_required": false,
+  "pass": true
+}

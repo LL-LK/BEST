@@ -1,0 +1,1 @@
+{"answer_text": "B0 装配仅 general_llm、工具面 none，无数据通路，取不到标准星清单。信封：state=empty、error_code=null、total_count=0、returned_count=0、row_count=0、pages=0、truncated=false、tool_face=scripted；stable_uri/session_id/snapshot_id 皆 null。观测 0 行，envelopes、row_keys、first_row 均空。即服务端总数 0、返回 0 行、未截断，无稳定引用与快照标识，未观测到任何星表列值。"}

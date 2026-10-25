@@ -1,0 +1,31 @@
+# E2 场景 6/8: 边界值 — 行数恰为 page_size 整数倍 (L 类) — docs/eval-E2-groundtruth.md §5 #6
+case_id: boundary_page_exact
+category: boundary
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r120.0as
+main_metrics: [M4, M1]
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0                      # 快照真实中心 (原 0.0 是合成素材的坐标)
+  radius_arcsec: 120.0            # 真实抓取: total=770 行, 全部落盘
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf, ps1_class_star]
+  sort: ps1_ra                     # 位置列: ps1_source_id 在本快照 770 行里整列为空, 按它排等于没排
+  order: asc
+  max_rows: 770
+  page_size: 385                 # 770 / 385 = 2 个**满页** → 第 3 页必须翻出空页
+expect:
+  result_state: rows
+  # 行数/页数**不在此声明**: gen_gold 只读 result_state 与 error_code, 这里写下的
+  # 数字无人断言 —— 换素材后不会变红, 只会静静变旧 (A7-02: 换素材前写的「2 行 /
+  # 1 页」对应的是 syn_boundary 合成快照, 换成 live 快照后对不上金标准现算值)。
+  # 权威值见 gold/boundary_page_exact.json 的 row_count / pagination 段与汇总表
+  # focus/must_confirm 列 (数字由金标准渲染)。
+notes: >
+  快照自身即分页夹具: 行数恰为 page_size 的整数倍, 故每一页都是满页, 末页也满 ——
+  被测若把满页当终止信号提前停、或把续翻出来的空页当错误, M4 分页项即 FAIL。
+  gold 的 pagination.last_page_full / extra_page_expected_empty 供 M4 判读;
+  page_hashes 是 GT 侧每页规范化 JSON 的 sha256 (算法声明在
+  pagination.page_hash_algo)。行数与页数以 gold/boundary_page_exact.json 为准,
+  本文件不复述 (换素材前的 syn 分页夹具数字已退役)。回放对齐: 场景 query 与快照
+  冻结 query 的一致性由 run_e2/transport 侧保证。
+gold_focus: 末页满续翻空页 + 分页无损无重 + page_hashes 对账

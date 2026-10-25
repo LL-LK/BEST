@@ -1,0 +1,1 @@
+{"answer_text": "本装配工具面为 none，无数据通路，无法真查 PS1，不能据此判断该处有无天体。观测信封：state=empty、error_code=null、row_count=0、returned_count=0、total_count=0、pages=0、truncated=false；envelopes、row_keys、first_row 均空，n_rows_observed=0。来源与引用缺失：stable_uri、session_id、snapshot_id 皆 null，无 content_trust，tool_face 为 scripted。故 0 行只表示未观测到数据，不等于该天区无天体。"}

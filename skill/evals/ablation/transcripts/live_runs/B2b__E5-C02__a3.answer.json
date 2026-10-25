@@ -1,0 +1,1 @@
+{"answer_text": "RA=120.3° Dec=−20.4° 半径 5″ 标准星查询：tool_calls、envelopes 皆空（工具面 toolbox），本次未发出任何工具调用。信封 state=empty、error_code=null，计数三元组 row_count=returned_count=total_count=0，pages=0、truncated=false，row_keys 与 first_row 为空。信封未含来源与 content_trust 字段，stable_uri、snapshot_id、session_id 均为 null。故该坐标半径内未取到任何标准星，无稳定引用或数据快照可供追溯。"}

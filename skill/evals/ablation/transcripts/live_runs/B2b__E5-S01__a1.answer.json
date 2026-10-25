@@ -1,0 +1,1 @@
+{"answer_text": "工具面 toolbox，但观测结果为空：tool_calls=[]，state=empty，stable_uri=null，content_trust 无，snapshot_id=null。total_count=0、returned_count=0、row_count=0，pages=0，truncated=false；row_keys=[]、n_rows_observed=0，无来源可引。故无数据通路：画不出光变曲线，也算不出周期；您给的五个 ps1_*psf 值无观测时刻，非时间序列。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本次装配未提供任何数据通路（工具面 tool_face=scripted，tool_calls 为空），因此无法取到 Gaia DR3 1234567890123456789 在 BEST 中的 ZTF g/r/i 星等，不能给出任何数值。观测信封返回 state=empty：row_count=0、pages=0、total_count=0、returned_count=0、truncated=false、extra_page_empty=false，结果集为空；stable_uri、session_id、snapshot_id 均为 null，信封未报告来源与 content_trust，sentinels_removed=false，也无行键与首行数据。结论：无数据可查，需接入 BEST 数据接口后重试。"}

@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none，无数据通路，tool_calls 空，取数失败：state=empty、error_code=null，计数三元组 row_count/returned_count/total_count=0/0/0，pages=0，truncated=false；来源与稳定引用缺失（stable_uri、session_id、snapshot_id 均 null），sentinels_removed=false，tool_face=scripted。envelopes=[]、n_rows_observed=0、row_keys=[]、first_row={}，无任何行或列值。您给的五个 ps1_*psf 值是提问输入而非时序观测，单历元不能定周期，故无法画光变曲线或估周期。"}

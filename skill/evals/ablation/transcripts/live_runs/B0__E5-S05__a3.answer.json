@@ -1,0 +1,1 @@
+{"answer_text": "装配工具面 none、tool_calls 空，未取到数据。信封 state=empty、error_code=null，row_keys 空、n_rows_observed=0，计数三元组 row_count=total_count=returned_count=0，pages=0、truncated=false；stable_uri、session_id、snapshot_id 均 null，无 content_trust。故无法据数据判断该星。NOT_AVAILABLE 仅表示该标记缺失/未判定，属缺失而非否定，不能断言它一定不是变星。"}

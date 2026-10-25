@@ -1,0 +1,1 @@
+{"answer_text": "工具面 toolbox，但本轮 tool_calls 为空、信封 state=empty、error_code=null，即零取数：row_count=0、total_count=0、returned_count=0，pages=0，truncated=false；stable_uri=null、session_id=null、snapshot_id=null，信封未含 content_trust 字段；envelopes 为空，n_rows_observed=0，row_keys/first_row 均空。故 ps1 五波段 -999/-1004 及关键列值本轮均未取回，无法判断该源能否用于测光分析，请重跑取数后再评估。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本次查询未取到数据：tool_calls 为空，envelopes 为空。信封自报 state=empty、row_count=0、total_count=0、returned_count=0、truncated=false。来源与快照标识缺失：stable_uri=null、session_id=null、snapshot_id=null，无 content_trust，sentinels_removed=false。故该坐标 5″ 内标准星无法给出。注：tool_face=scripted 与装配声明的 none 不符，无数据通路。"}

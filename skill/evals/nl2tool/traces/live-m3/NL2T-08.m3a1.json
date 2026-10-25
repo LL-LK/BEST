@@ -1,0 +1,22 @@
+{
+  "task_id": "NL2T-08",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 1,
+  "tool_calls": [
+    {
+      "tool": "fetch_page",
+      "args": {
+        "sqlid": "s3898",
+        "page": 2,
+        "page_size": 1000,
+        "catalog": "ps1",
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "取第 2 页了：沿用上一次查询的会话 id，page=2、page_size=1000。\n\n续页规则（这几条决定你能不能稳定翻完）：\n1. 会话 id 来自上一次返回的 provenance.session_id，形如 s3898（只在结果分页路由上带 s 前缀；取总数那条路由要纯数字，那是工具内部处理的）。\n2. page 从 1 起算，所以被截断后的下一页是 2；page_size 上限 10000，越界会直接报输入非法，不会给你静默截断。\n3. 排序是在建会话那一刻就定死的 —— fetch_page 自己没有排序参数。如果上一次建会话时没给 sort + order，站点就没有 ORDER BY，行序不保证稳定（同一会话连续取两次，行数相同但行序可能变），翻页会出现重复或漏行。这种情况要修只能重跑一次带 sort + order 的锥检索，从第 1 页重新取。\n4. 会话 id 是易失的，只能当次使用；跨进程、隔天可能失效，这时重跑锥检索比硬续更稳。\n5. 我在调用里带了 catalog=ps1，因为分页响应的列名带星表前缀，需要它做列名前缀映射（ps1 的 CSV 响应多数是 ps1_ra 这种带前缀名，uss_dr1 则是裸名，属于已知例外）。\n\n要不要我把剩下的页一次取完？如果要，请告我总页数或「取到 N 行为止」，我按同一个会话顺序翻下去；页数很多的话建议先确认磁盘落盘方式（CSV 落盘带 UTF-8 BOM，按 utf-8-sig 读）。",
+  "notes": "截断续页用 fetch_page（sqlid + page=2），1 次请求；并说明排序在建会话时定死、page_size 上限 10000、会话易失。"
+}

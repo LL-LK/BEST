@@ -1,0 +1,16 @@
+name: astro-best.case_023_algo_task_log
+skill: astro-best
+derived_from: "algorithm:{'name': 'TaskLogger', 'module': 'src.task_log'}"
+given:
+  TaskLogQuery:
+    job_id: "<string:id>"
+expect:
+  status: pass
+  log.format: "jsonl"
+  log.path: ".logs/task_log.jsonl"
+  log.views: [tail, problems, tasks, summary]
+  log.events: [submit, start, page, done, blocked, failed, cancelled, hook, query]
+
+# ---
+# 任务日志管理器用例: JSONL 事件流 + 问题定位视图
+# (与 .progress 分工: 日志答"发生了什么", 进度答"到哪了")

@@ -1,0 +1,1 @@
+{"answer_text": "route=reject、tool_calls 为空：本次 r 波段误差 <0.01 mag 的筛选未发出查询，无数据。信封 state=empty、error_code=null，计数三元组 row_count=0、total_count=0、returned_count=0，truncated=false、pages=0、sentinels_removed=false；stable_uri、session_id、snapshot_id 均为 null（无来源、无稳定引用、无数据快照标识），亦无 content_trust。n_rows_observed=0，row_keys/first_row/notes 空，tool_face=toolbox，故无满足阈值的源。"}

@@ -1,0 +1,1 @@
+{"answer_text": "装配 B2a 工具面 raw_protocol，来源 catalog=ps1、session_id=s4926；信封无 stable_uri（null）、无快照标识、无 content_trust，无法给稳定引用。观测到 770 行，信封 row_count=770，第二信封 total=returned=770、truncated=false，但 envelope_reported 的 total=returned=0、pages=0，与之矛盾。请求 Dec=0.0，返回行 input_dec=30.0、ps1_dec≈29.99–30.00，坐标不符。首行 ra=179.99904154、dec=29.99972728、i=19.4943。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到数据，无法评估该源能否做测光分析。state=empty，tool_calls 空；returned_count=0、total_count=0、pages=0，truncated=false；stable_uri、session_id、snapshot_id 均 null，无来源与快照标识；sentinels_removed=false，tool_face=toolbox。未观测到行与波段值。"}

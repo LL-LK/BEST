@@ -1,0 +1,1 @@
+{"answer_text": "RA=180.0、Dec=30.0、半径 5″ 内查 ps1：0 行、服务端总数 0、未截断、0 页、state=empty、无错误码；计数三元组 total_count=returned_count=row_count=0。来源 BEST 站点 ps1 锥形检索，稳定引用 best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；content_trust=untrusted；快照 live-2026-10-04/live_ps1_ra10.0_dec-45.0_r60.0as；会话 s4906；哈希 sha256:acfacda2…。故该位置 5″ 内 ps1 源数为 0。注：HTTP 请求 0 次、耗时 0.001 s，快照标识坐标与本次查询坐标不同。"}

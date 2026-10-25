@@ -1,0 +1,1 @@
+{"answer_text": "查询走 clarify 分支，tool_calls 空，无来源可报：stable_uri/session_id/snapshot_id 均 null，未报 content_trust。信封 state=empty、error_code=null、tool_face=toolbox；计数 total_count=0、returned_count=0、row_count=0，pages=0、truncated=false。envelopes 空、row_keys 与 first_row 空，无关键列与数值。未指定源，无法取数。"}

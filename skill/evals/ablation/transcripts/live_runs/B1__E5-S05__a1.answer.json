@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none（无数据通路），工具调用为空，未取到数据：state=empty，row_count=0、total_count=0、returned_count=0，truncated=false，stable_uri=null、snapshot_id=null，无来源与快照标识，故无法核验该星。NOT_AVAILABLE 只表示该标志无可用取值，不等于非变星；需在可查询通道下重新取数。"}

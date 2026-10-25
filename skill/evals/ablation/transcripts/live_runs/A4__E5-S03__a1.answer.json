@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到任何数据，无法判断 ps1 能否用于测光分析。信封 state=empty、tool_face=toolbox，但 tool_calls 为空：row_count、returned_count、total_count、pages 均为 0，truncated=false，无行数据。来源与稳定引用均缺：stable_uri、session_id、snapshot_id 全为 null，故 -999/-1004 是否为空值哨兵无从核实。请确认参数后重查。"}

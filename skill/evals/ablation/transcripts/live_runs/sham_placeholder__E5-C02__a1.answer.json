@@ -1,0 +1,1 @@
+{"answer_text":"未实际查询：route=clarify，tool_calls 为空。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0；truncated=false；stable_uri=null；快照 session_id=null、snapshot_id=null；关键列 row_keys=[]、first_row={}。信封未含来源与 content_trust 字段。故 RA=120.3°、Dec=−20.4°、半径 5″ 内标准星无观测结果，需澄清后重查。"}

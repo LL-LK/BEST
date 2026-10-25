@@ -1,0 +1,249 @@
+你在扮演一个天文数据服务 Agent 的一次作答。**独立作答**: 只看本条, 不得参考任何其它作答。
+
+## 装配 B2b — B1 + 7 原子工具签名 (裸返回: 无信封/无语义/无校验/无拒绝/无血缘)
+- 已启用组件: general_llm, best_site_docs, data_path, tool_signatures
+- 工具面: toolbox
+
+## 用户提问
+在 RA=180.0、Dec=30.0、半径 5″ 内查 ps1 的 source_id、ra、dec、rpsf、gpsf、ypsf 六列。
+
+## 实际观测到的查询结果 (真实执行所得, 唯一事实来源)
+```json
+{
+ "route": "answer",
+ "tool_calls": [
+  {
+   "tool": "cone_search",
+   "args": {
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius_arcsec": 5.0,
+    "catalog": "ps1",
+    "columns": [
+     "source_id",
+     "ra",
+     "dec",
+     "rpsf",
+     "gpsf",
+     "ypsf"
+    ],
+    "max_rows": 1000
+   },
+   "optional": false
+  },
+  {
+   "tool": "describe_catalog",
+   "args": {
+    "catalog": "ps1"
+   },
+   "optional": true
+  }
+ ],
+ "envelope_reported": {
+  "state": "rows",
+  "error_code": null,
+  "row_count": 3,
+  "pages": 1,
+  "extra_page_empty": false,
+  "total_count": 3,
+  "returned_count": 3,
+  "truncated": false,
+  "stable_uri": null,
+  "session_id": null,
+  "snapshot_id": null,
+  "sentinels_removed": false,
+  "tool_face": "toolbox"
+ },
+ "envelopes": [
+  {
+   "data": {
+    "rows": [
+     {
+      "ps1_source_id": "BEST_SYN_0001",
+      "ps1_ra": "180.000100000",
+      "ps1_dec": "30.000100000",
+      "ps1_rpsf": "18.200000",
+      "ps1_gpsf": "-1004.0910078678945",
+      "ps1_class_star": "0.990",
+      "ps1_snr": "25.0",
+      "source_id": "BEST_SYN_0001",
+      "ra": 180.0001,
+      "dec": 30.0001,
+      "magnitudes": {
+       "r": 18.2
+      },
+      "magnitude_errors": {},
+      "snr": 25.0,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": 0.99,
+      "catalog": "ps1"
+     },
+     {
+      "ps1_source_id": "BEST_SYN_0002",
+      "ps1_ra": "180.000200000",
+      "ps1_dec": "30.000200000",
+      "ps1_rpsf": "",
+      "ps1_gpsf": "-999.0",
+      "ps1_class_star": "0.980",
+      "ps1_snr": "30.0",
+      "source_id": "BEST_SYN_0002",
+      "ra": 180.0002,
+      "dec": 30.0002,
+      "magnitudes": {},
+      "magnitude_errors": {},
+      "snr": 30.0,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": 0.98,
+      "catalog": "ps1"
+     },
+     {
+      "ps1_source_id": "BEST_SYN_0003",
+      "ps1_ra": "180.000300000",
+      "ps1_dec": "30.000300000",
+      "ps1_rpsf": "17.900000",
+      "ps1_gpsf": "18.050000",
+      "ps1_class_star": "0.500",
+      "ps1_snr": "8.0",
+      "source_id": "BEST_SYN_0003",
+      "ra": 180.0003,
+      "dec": 30.0003,
+      "magnitudes": {
+       "r": 17.9,
+       "g": 18.05
+      },
+      "magnitude_errors": {},
+      "snr": 8.0,
+      "fwhm": null,
+      "quality_flag": "good",
+      "class_star": 0.5,
+      "catalog": "ps1"
+     }
+    ],
+    "total_count": 3,
+    "returned_count": 3
+   },
+   "status": {
+    "ok": true,
+    "truncated": false,
+    "error_code": null
+   },
+   "cost": {
+    "http_requests": 0,
+    "rows_returned": 3
+   },
+   "provenance": {
+    "session_id": "s0002",
+    "stable_uri": "",
+    "data_hash": "",
+    "lineage": {}
+   }
+  },
+  {
+   "data": {
+    "catalog": "ps1",
+    "display": "Pan-STARRS All-Sky",
+    "query_path": "ps1/q",
+    "columns": [
+     "ps1_ra",
+     "ps1_dec",
+     "ps1_class_star",
+     "ps1_dust",
+     "ps1_ebv",
+     "ps1_gflags",
+     "ps1_gpsf",
+     "ps1_gpsf_corr",
+     "ps1_gpsf_err",
+     "ps1_iflags",
+     "ps1_ipsf",
+     "ps1_ipsf_corr",
+     "ps1_ipsf_err",
+     "ps1_max_d",
+     "ps1_parallax",
+     "ps1_parallax_err",
+     "ps1_rflags",
+     "ps1_rpsf",
+     "ps1_rpsf_corr",
+     "ps1_rpsf_err",
+     "ps1_ruwe",
+     "ps1_sigma",
+     "ps1_source_id",
+     "ps1_yflags",
+     "ps1_ypsf",
+     "ps1_ypsf_err",
+     "ps1_zflags",
+     "ps1_zpsf",
+     "ps1_zpsf_corr",
+     "ps1_zpsf_err"
+    ],
+    "magnitude_bands": {
+     "gpsf": "g",
+     "rpsf": "r",
+     "ipsf": "i",
+     "zpsf": "z",
+     "ypsf": "y"
+    },
+    "units_note": "ra/dec in degrees; magnitudes in mag; radius in arcsec"
+   },
+   "status": {
+    "ok": true,
+    "truncated": false,
+    "error_code": null
+   },
+   "cost": {
+    "http_requests": 0,
+    "elapsed_s": 0.0,
+    "rows_returned": 30
+   },
+   "provenance": {
+    "session_id": null,
+    "data_hash": "sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2",
+    "stable_uri": "best://ps1/describe",
+    "lineage": {
+     "catalog": "ps1"
+    }
+   }
+  }
+ ],
+ "n_rows_observed": 3,
+ "row_keys": [
+  "BEST_SYN_0001",
+  "BEST_SYN_0002",
+  "BEST_SYN_0003"
+ ],
+ "first_row": {
+  "ps1_source_id": "BEST_SYN_0001",
+  "ps1_ra": "180.000100000",
+  "ps1_dec": "30.000100000",
+  "ps1_rpsf": "18.200000",
+  "ps1_gpsf": "-1004.0910078678945",
+  "ps1_class_star": "0.990",
+  "ps1_snr": "25.0",
+  "source_id": "BEST_SYN_0001",
+  "ra": 180.0001,
+  "dec": 30.0001,
+  "magnitudes": {
+   "r": 18.2
+  },
+  "magnitude_errors": {},
+  "snr": 25.0,
+  "fwhm": null,
+  "quality_flag": "good",
+  "class_star": 0.99,
+  "catalog": "ps1"
+ },
+ "notes": []
+}
+```
+
+## 任务
+据上面真实观测写一段给用户的回答 (中文, 200 字以内):
+1. 只陈述观测里真实存在的事实与数值, 不得编造;
+2. **若信封 (envelope_reported) 里含来源/稳定引用 (stable_uri) / content_trust / 数据快照标识 / 计数三元组, 必须写进回答**;
+3. 行数、服务端总数、是否截断、关键列与数值要写清楚;
+4. 只输出 JSON, 不要任何其它文字。
+
+输出 (严格单行 JSON): {"answer_text": "<回答正文>"}
+
+(第 2 次独立作答)

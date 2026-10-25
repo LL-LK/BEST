@@ -1,0 +1,1 @@
+{"answer_text": "装配 B1 工具面为 none，取不到该星光变曲线。实测：route=reject，tool_calls 空；state=empty，error_code=null；计数三元组 total_count/returned_count/row_count 均为 0，pages=0，truncated=false；来源与 stable_uri 均 null，content_trust 缺失，无行可报。"}

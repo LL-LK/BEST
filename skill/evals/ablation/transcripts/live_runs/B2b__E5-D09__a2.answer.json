@@ -1,0 +1,1 @@
+{"answer_text": "crossmatch_batch 匹配 ps1（5 输入、5″、nearest_only）返回 3 行：total=3、returned=3、row_count=3，pages=1，truncated=false，仅输入 1–3 命中，4、5 无结果；最近邻距离 3.145″/0.167″/0.176″，仅第 1 行有 i=19.494，另两行星等为空。来源 live BEST 站点，content_trust=untrusted；stable_uri=best://ps1/proximity?n=5&r=5.0（信封 stable_uri=null）；session_id、snapshot_id 均 null；data_hash sha256:85c35b4ade2f…。"}

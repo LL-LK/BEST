@@ -1,0 +1,1 @@
+{"answer_text": "未取数：路由 clarify，无工具调用。state=empty，total_count=0、returned_count=0、row_count=0，truncated=false；row_keys/first_row 空，无关键列与数值。stable_uri、snapshot_id 均 null，无来源/content_trust。tool_face=toolbox 可用但未调用；请补充星表/天区/星等条件。"}

@@ -1,0 +1,1 @@
+{"answer_text":"工具面 none，tool_calls 为空，该 ps1 查询（RA180/Dec30/5°）未执行。信封 state=empty、error_code=null，计数三元组 returned/row/total=0/0/0，truncated=false；stable_uri/session_id/snapshot_id 均 null。观测 0 行、无关键列与数值。建议换带工具面装配重试。"}

@@ -1,0 +1,1 @@
+{"answer_text": "请求被拒（route=reject），未调用工具；工具面 toolbox，信封 state=empty。计数 total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，观测 0 行。信封无来源字段与 content_trust，stable_uri=null、snapshot_id=null，无稳定引用与快照。故无 r 波段误差 <0.01 mag 的源可取。"}

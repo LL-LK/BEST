@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：路由 clarify，未发起工具调用，故无该 Gaia DR3 源在 BEST 的 ZTF g/r/i 星等。信封 state=empty、error_code=null，计数 total_count=0、returned_count=0、row_count=0、pages=0、truncated=false；stable_uri=null、session_id=null、snapshot_id=null，无稳定引用与快照标识，信封未给 content_trust；tool_face=toolbox。观测行数 0，row_keys、first_row 为空，无列值可报。请确认 source_id 后重试。"}

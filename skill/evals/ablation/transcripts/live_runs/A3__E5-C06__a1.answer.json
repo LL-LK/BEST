@@ -1,0 +1,1 @@
+{"answer_text": "本次查询无结果：state=empty，row_count、pages、total_count、returned_count 全为 0，truncated=false，tool_calls 为空，未取回字段语义。来源：stable_uri、session_id、snapshot_id 均为 null，无稳定引用与快照标识，未观测到 content_trust。故无法判定该字段是否代表逐历元星等。"}

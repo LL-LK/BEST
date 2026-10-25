@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none，无数据通路，未能查询该坐标标准星。实测信封：state=empty、error_code=null，returned_count=0 / total_count=0 / truncated=false，row_count=0、pages=0、envelopes 空、n_rows_observed=0，无关键列数值；stable_uri、session_id、snapshot_id 均 null（无来源、稳定引用、快照标识），content_trust 未出现。"}

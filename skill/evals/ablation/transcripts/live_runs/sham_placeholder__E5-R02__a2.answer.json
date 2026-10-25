@@ -1,0 +1,1 @@
+{"answer_text": "本次为 reject 路由, 无工具调用。信封 state=empty, error_code=null; 计数三元组: row_count=0 / total_count=0 / returned_count=0, pages=0, truncated=false, extra_page_empty=false。观测 n_rows_observed=0, row_keys、first_row 均空。信封未给来源与 content_trust, stable_uri=null, session_id=null, snapshot_id=null, sentinels_removed=false; tool_face=toolbox。故无行、列、数值可陈述, 无法导出整张 ps1。"}

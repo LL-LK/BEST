@@ -1,0 +1,1 @@
+{"answer_text": "本次查询实际未取到任何数据：信封 state=empty，row_count=0、returned_count=0、total_count=0，truncated=false，stable_uri=null、session_id=null、snapshot_id=null，sentinels_removed=false，tool_calls 与 envelopes 皆为空，n_rows_observed=0，且信封内没有 content_trust 字段。工具面为 toolbox（有工具通路，非 none），但本次返回零行、无快照与稳定引用，故 ps1 五个波段的 -999/-1004 无从核实，我无法据此判断该源能否用于测光分析。"}

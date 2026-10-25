@@ -1,0 +1,117 @@
+{
+  "gold_id": "gold_single_exact",
+  "case_id": "single_exact",
+  "snapshot_id": "sha256:ef5799f1587d6554581708048c6a56b59b0df92bb89ec1b5d93778eb74d3d9f1",
+  "data_version": "dr3xpcorr@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:691458a7a103c9cc31049152171a0af38296e9ceb7cc8b348cb55fec455827c0"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_dr3xpcorr_ra180.0_dec30.0_r300.0as/rows_full.csv",
+  "key_field": "source_id",
+  "row_keys": [
+    "4014208277453959552"
+  ],
+  "row_count": 1,
+  "field_values": {
+    "4014208277453959552": {
+      "gaiaxp_photinfo_replenish_source_id": {
+        "v": "4014208277453959552",
+        "t": "string",
+        "unit": null,
+        "atol": null,
+        "rtol": null
+      },
+      "gaiaxp_photinfo_replenish_ra": {
+        "v": 180.07675,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "gaiaxp_photinfo_replenish_dec": {
+        "v": 30.001238,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "gaiaxp_photinfo_replenish_bp_mag": {
+        "v": 15.492219,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "gaiaxp_photinfo_replenish_ruwe": {
+        "v": 1.1094214,
+        "t": "float",
+        "unit": null,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "correctedxpspecv1_c2": {
+        "v": 0.28823552,
+        "t": "float",
+        "unit": null,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    }
+  },
+  "field_values_sampled": false,
+  "field_values_sampling_rule": "all(<=50)",
+  "null_semantics": {
+    "4014208277453959552": {
+      "gaiaxp_photinfo_replenish_source_id": "value",
+      "gaiaxp_photinfo_replenish_ra": "value",
+      "gaiaxp_photinfo_replenish_dec": "value",
+      "gaiaxp_photinfo_replenish_bp_mag": "value",
+      "gaiaxp_photinfo_replenish_ruwe": "value",
+      "correctedxpspecv1_c2": "value"
+    }
+  },
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "gaiaxp_photinfo_replenish_ra": "deg",
+    "gaiaxp_photinfo_replenish_dec": "deg",
+    "gaiaxp_photinfo_replenish_bp_mag": "mag"
+  },
+  "precision_map": {
+    "gaiaxp_photinfo_replenish_ra": 3,
+    "gaiaxp_photinfo_replenish_dec": 3,
+    "gaiaxp_photinfo_replenish_bp_mag": 3
+  },
+  "ordering": {
+    "key": null,
+    "order": "asc",
+    "declared": false,
+    "sequence": [
+      "4014208277453959552"
+    ],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 1,
+    "page_hashes": [
+      "c4832b45f547bd16cc7e82c56cb3df9110322ea088f89d00568158106ae7c70d"
+    ],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "last_page_full": false,
+    "extra_page_expected_empty": false
+  },
+  "truncation": {
+    "expected_total": 1,
+    "expected_truncated": false,
+    "expected_returned": 1
+  },
+  "result_state": "rows",
+  "missing_columns": [],
+  "notes": "L 类真实抓取快照 (live-2026-10-04/live_dr3xpcorr_ra180.0_dec30.0_r300.0as; 换素材前那份仓内 best_data 反推的旧快照已退役, 此处不复述其名与行数)。 金标准: 单行精确命中 (行数与截断三元组以 gold/single_exact.json 为准); 字段全等 (含类型/单位/精度); source_id 精确匹配 (equal 谓词, 字符串 strip 后比较)。 id 不存在时必须 success=true + rows=0, 不得报错、不得降级 — 由 M5 的 result_state 判定。合成 id 形态 (POS_<ra>_<dec>) 不在本场景范围 (那是 E1 NL2T-14 的澄清题)。\n"
+}

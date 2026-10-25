@@ -1,0 +1,148 @@
+{
+ "entries": {
+  "DELTA1": {
+   "verdict": "未命中",
+   "details": {
+    "ESR_know": {
+     "observed_delta": 0.0,
+     "predicted": "+0.20 ~ +0.45",
+     "verdict": "未命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "DELTA2": {
+   "verdict": "未命中",
+   "details": {
+    "ESR_data": {
+     "observed_delta": 0.0,
+     "predicted": "0 → +0.15 ~ +0.35",
+     "verdict": "未命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "DELTA2b": {
+   "verdict": "未命中",
+   "details": {
+    "AvgCalls": {
+     "observed_delta": 0.0,
+     "predicted": "下降 (原子工具一次调用替多次裸请求)",
+     "verdict": "未命中"
+    },
+    "ESR_data": {
+     "observed_delta": 0.0,
+     "predicted": "+0.05 ~ +0.15",
+     "verdict": "未命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "DELTA3": {
+   "verdict": "未命中",
+   "details": {
+    "ESR_full": {
+     "observed_delta": 0.0333,
+     "predicted": "+0.15 ~ +0.35",
+     "verdict": "未命中"
+    },
+    "HR_any": {
+     "observed_delta": -0.1667,
+     "predicted": "下降",
+     "verdict": "命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "A1": {
+   "verdict": "未命中",
+   "details": {
+    "ParamHallucination": {
+     "observed_delta": 3.0,
+     "predicted": "> 0 (红线: B3 必须为 0, A1 预期被 D-08 的 radius=0 抓住)",
+     "verdict": "命中"
+    },
+    "RowF1": {
+     "observed_delta": 0.0,
+     "predicted": "-0.05 ~ -0.20 (越界/零半径取回错行集, 且 EMPTY 冒充合法结果)",
+     "verdict": "未命中"
+    },
+    "http_requests": {
+     "observed_delta": 9.0,
+     "predicted": "上升 (无效请求与重试)",
+     "verdict": "命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "A2": {
+   "verdict": "未命中",
+   "details": {
+    "FieldConsistency": {
+     "observed_delta": 0.0,
+     "predicted": "-0.10 ~ -0.30 (投影错列 / 取到别的波段 / 裸列名)",
+     "verdict": "未命中"
+    },
+    "HR_claim": {
+     "observed_delta": 0.0222,
+     "predicted": "上升 (把 xpsp 的 ZTF 合成测光说成实测; 把 gaia 的参数说成 BEST 独立测量)",
+     "verdict": "命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "A3": {
+   "verdict": "未命中",
+   "details": {
+    "RejectAcc": {
+     "observed_delta": -0.25,
+     "predicted": "-0.30 ~ -0.60 (R 类 6 条大面积失守)",
+     "verdict": "未命中"
+    },
+    "MissedClarify": {
+     "observed_delta": 1.0,
+     "predicted": "+0.30 ~ +0.60 (C 类 6 条该问不问)",
+     "verdict": "未命中"
+    },
+    "AvgCalls": {
+     "observed_delta": 0.2,
+     "predicted": "上升 (明知不支持还去试)",
+     "verdict": "命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "A4": {
+   "verdict": "命中",
+   "details": {
+    "HR_claim": {
+     "observed_delta": 0.0111,
+     "predicted": "上升 (无来源支撑的科学主张)",
+     "verdict": "命中"
+    }
+   },
+   "unparsed": 0
+  },
+  "A5": {
+   "verdict": "反向",
+   "details": {
+    "TruncTriple": {
+     "observed_delta": 0.0,
+     "predicted": "-0.15 ~ -0.35 (truncated 误判成全量; returned 当 total 报告)",
+     "verdict": "未命中"
+    },
+    "HR_num": {
+     "observed_delta": -0.0111,
+     "predicted": "上升 (哨兵值进统计/进答案)",
+     "verdict": "反向"
+    }
+   },
+   "unparsed": 0
+  }
+ },
+ "summary": {
+  "未命中": 7,
+  "命中": 1,
+  "反向": 1
+ }
+}

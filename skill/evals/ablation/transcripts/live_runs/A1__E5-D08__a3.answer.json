@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(ps1, ra=180.0, dec=0.0, radius_arcsec=0.0)：state=empty，计数三元组 total_count=returned_count=row_count=0，truncated=false，无数据行；row_keys/first_row 空，无关键列与数值。来源 tool_face=toolbox，session_id=s4925，snapshot_id=live-2026-10-04/live_raw_ps1_r0.0as；stable_uri 为空(无稳定引用)，信封内无 content_trust 字段。"}

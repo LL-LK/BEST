@@ -1,0 +1,27 @@
+# E2 场景补充: 软 404 回包 (S 类) — E2 §10 阻断项 1 / M5 包装形态 #3
+case_id: soft404_page
+category: soft_error
+snapshot_id: live-2026-10-04/live_raw_no_such_catalog_r60.0as
+main_metrics: [M5, M4]
+query:
+  catalog: no_such_catalog       # 真实请求就是发往这个未知表名 —— 客户端会拦, 抓取走 raw 绕行通道
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns: [ps1_source_id, ps1_ra, ps1_dec]
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: error            # HTTP 200 + {"error":"Not Found"} = 软 404, 不是空结果
+  error_code: E_SOFT_404
+  row_count_hint: 0
+  truncated_hint: false
+  must_not: [empty_result, ok_true]   # 严禁判成功/严禁降级为空结果 (E2 §10 阻断项 1)
+notes: >
+  A 的 syn_soft404 快照: phase1.html 为软 404 原文 (HTTP 200 +
+  {"error":"Not Found"}), 无 rows_full.csv (错误态无行集 — GT 容差分支)。
+  金标准: result_state=error, error_code=E_SOFT_404。E2 §10 阻断项 1:
+  ERROR 被报成 EMPTY_RESULT 整体 E2 FAIL (把服务故障读成科学结论)。被测必须
+  ok=false + E_SOFT_404; 判成功或降级空结果都会被 M5 抓住。本用例与 E4 M5
+  包装形态 #3 共用同一判据 (程序读错 vs agent 说错)。
+gold_focus: 软 404 不当空结果 (ERROR vs EMPTY 阻断项)

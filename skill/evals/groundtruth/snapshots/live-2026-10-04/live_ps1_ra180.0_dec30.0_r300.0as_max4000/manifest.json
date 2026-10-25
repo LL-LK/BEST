@@ -1,0 +1,12 @@
+{
+  "snapshot_id": "live_ps1_ra180.0_dec30.0_r300.0as_max4000",
+  "files": {
+    "count.json": "sha256:c7db3650bdedf7ebd01f2ac1f8750d81c3d62301d42af2b03aa5a584c53d4241",
+    "pages/page_0001.csv": "sha256:39b9a7c0347380ef1025a23a6336cb7d2fc6d1865d1bd32d9d7bbb5ee59eba3f",
+    "pages/page_0002.csv": "sha256:437aa3a6070e02b4e82b8c346af4a79e4fa383cfb374e7e9cda3f1c0b5e658ad",
+    "pages/page_0003.csv": "sha256:3be467ef1249db8f3c131854c3246016066ef56277254db857296bc7b21bd0c3",
+    "pages/page_0004.csv": "sha256:f4aebaf90f78585874e07a3533a8b3192302e80cf5f205c494103fb8505698b7",
+    "phase1.html": "sha256:26d923d88bf11d15360625bfa206f1ef343566d3ae827ed84d23c0ae3fb7a5f4",
+    "rows_full.csv": "sha256:ac63c4f978e363a9b0950e0164aadf9f876fd81e062c82895175d41414456f0c"
+  }
+}

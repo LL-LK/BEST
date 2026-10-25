@@ -1,0 +1,1 @@
+{"answer_text": "route=reject，未调用任何工具，零数据。信封 state=empty、error_code=null；total_count=0、returned_count=0、row_count=0，pages=0，truncated=false；stable_uri=null、snapshot_id=null、session_id=null，未签发稳定引用与快照标识，无 content_trust 字段；sentinels_removed=false，tool_face=toolbox。n_rows_observed=0，row_keys 与 first_row 为空，无关键列与数值。「把整张 ps1 导出成 FITS」被拒零返回，无法交付 FITS。"}

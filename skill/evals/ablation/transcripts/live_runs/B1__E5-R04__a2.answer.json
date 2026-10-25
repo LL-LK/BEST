@@ -1,0 +1,1 @@
+{"answer_text":"无法取数：工具面 none，tool_face=scripted，路由 reject，tool_calls=[]，未发查询，故源 1234567890123456789 的测光取不回。信封 state=empty，error_code=null，returned_count=n_rows_observed=total_count=0，pages=0，extra_page_empty=false，truncated=false；row_keys/envelopes 空，first_row={}。stable_uri/session_id/snapshot_id=null，未报告 content_trust 与快照标识，sentinels_removed=false。行数、列名与光度值均不存在，属无数据通路。"}

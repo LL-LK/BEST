@@ -1,0 +1,44 @@
+snapshot_id: syn_huge
+kind: S
+catalog: ps1
+columns:
+- ps1_source_id
+- ps1_ra
+- ps1_dec
+- ps1_rpsf
+- ps1_snr
+row_count: 3700
+data_version: ps1@2026-09-28
+page_size: 1000
+sort_key: ps1_source_id
+fetched_at: '2026-09-28'
+query:
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 1800.0
+  catalog: ps1
+  max_rows: 50000
+  page_size: 1000
+generator:
+  script: gen_pages.py
+endpoint:
+  submit: /data/best/ps1/q
+  page: /data/best/sqlid/{sqlid}?output.fmt=csv&rows=1000&page=1
+  count: /data/best/sqlid/{count}/getcount
+note: 'S 类 (合成, 照抄真实形态: BOM + ps1_ 前缀表头 + LF 行尾)。
+
+  承载 E2 §5 场景 8 超大查询: 3700 行 (>3 页), page_size=1000 →
+
+  page_0001..page_0003 各 1000 行, page_0004 700 行 (末页不满, 取到即止)。
+
+  行数据由同目录 gen_pages.py 确定性生成 (可重跑, 幂等, 无随机无时钟):
+
+  ps1_source_id=BEST_SYN_%04d, ra=180.0+i*1e-4, rpsf=18.0+(i%100)/100.0,
+
+  每 500 行插 1 个 -999.0 哨兵 (共 7 个哨兵行, 验证哨兵不当极暗星等)。
+
+  判定要点 (E2 §6 M4): 分页并集 == GT 行集 (无重无漏), 末页行数 700 不得提前停;
+
+  truncated 三元组以服务端计数为准 (total_count=3700 来自 count.json)。
+
+  sqlid 为占位 (s0006); 回放不依赖真实会话。'

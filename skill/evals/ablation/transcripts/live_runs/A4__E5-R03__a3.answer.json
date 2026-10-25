@@ -1,0 +1,1 @@
+{"answer_text": "本次请求路由为 reject，未发起任何工具调用（tool_calls 为空），信封 state 为 empty。计数三元组：total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，n_rows_observed=0，无返回行。stable_uri 为 null，session_id 与 snapshot_id 均为 null，故无稳定引用与快照标识可引用；error_code 为 null。工具面为 toolbox。据观测无法取到任何交叉匹配结果。"}

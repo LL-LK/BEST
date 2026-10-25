@@ -1,0 +1,1 @@
+{"answer_text": "查询未返回数据行：state=empty、error_code=null，total_count=0、returned_count=0、row_count=0，truncated=false，无关键列与数值。stable_uri、session_id、snapshot_id 均 null（无稳定引用与快照标识）；信封内无来源与 content_trust 字段。故无法绘制光变曲线或估算周期。"}

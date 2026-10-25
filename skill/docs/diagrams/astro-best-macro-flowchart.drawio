@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile>
+  <diagram id="best_macro_flowchart" name="astro-best 宏观全景架构流程图">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4400" pageHeight="3200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s1_access" value="1. 多端接入与交互层 (Multi-Modal Access &amp; Client Interfaces)" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=36;fontSize=14;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="160" width="4000" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="s2_state" value="2. 调度编排与五状态机治理层 (Orchestration, 5-State Machine &amp; 12 Governance Facets)" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=36;fontSize=14;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="650" width="4000" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="s3_protocol" value="3. 两阶段异步 REST 通信引擎 (Two-Phase Asynchronous REST Protocol &amp; Transport Robustness)" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=36;fontSize=14;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1270" width="4000" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="s4_catalogs" value="4. 12 张可查定标星表全景体系与外部数据源 (12 Queryable Calibration Catalogs &amp; External Services)" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=36;fontSize=14;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1830" width="4000" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="s5_security" value="5. 安全防御、产物交付、委派路由与闭环回退 (Security Defenses, Sinks, Delegation Routing &amp; Closed-Loop Feedback)" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=36;fontSize=14;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="2470" width="4000" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_corridor" value="闭环反馈走廊 (Closed-Loop Corridor · 横切五大泳道的重观测回退通道; 外环紫色虚线即返回走线)" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=36;fontSize=14;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="3036" width="4000" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="top_banner" value="&lt;b&gt;astro-best: BAO 反馈系外行星与恒星瞬变源 (BEST) 数据库基准星表接入中枢 · 全景架构图&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:12.5px;color:#94A3B8;'&gt;定位: BEST 数据源主理 &amp;nbsp;|&amp;nbsp; 核心通信: NADC 两阶段异步 REST 协议 (Phase 1 POST /q + Phase 2 GET /sqlid) &amp;nbsp;|&amp;nbsp; 治理范式: 五状态机流转 (INTAKE-VALIDATE-EXECUTE-GATE-EMIT) &amp;nbsp;|&amp;nbsp; 覆盖基准: 12 大定标星表全景 &amp;nbsp;|&amp;nbsp; 闭环中枢: 11-closed-loop 科学重观测反馈回路&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#0F172A;fontColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=2;fontSize=15.5;fontStyle=1;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=6;spacingBottom=6;" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="4000" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="units_strip" value="&lt;b&gt;【数据口径表 · 全链路唯一】&lt;/b&gt;坐标 deg (ICRS, J2000) &amp;nbsp;|&amp;nbsp; 角距 arcsec (上限 18000) &amp;nbsp;|&amp;nbsp; 测光 mag &amp;nbsp;|&amp;nbsp; 时间 UTC ISO8601 &amp;nbsp;|&amp;nbsp; 请求速率 req/s (礼貌限流 3.0s) &amp;nbsp;|&amp;nbsp; 分页 rows=1000 · max_rows=50000 &amp;nbsp;|&amp;nbsp; 完整性 SHA-256 &amp;nbsp;|&amp;nbsp; 质量门限 min_snr≥5.0 · fwhm≤5.0 · class_star≥0.8" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;fontSize=11.5;align=left;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="2962" width="4000" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="node_a1" value="&lt;b&gt;科研人员 / 智能体决策调度中心&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DECISION_CORE]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Human Astronomer &amp;amp; LLM Agent Orchestrator&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;任务意图识别&lt;/b&gt;: 天区锥搜、测光校准、多波段交叉匹配&lt;br/&gt;• &lt;b&gt;星表选择决策&lt;/b&gt;: std / ps1 / stripe82 / gaia_dr3 / jplus&lt;br/&gt;• &lt;b&gt;上下文与配额控制&lt;/b&gt;: 控制单次查询规模 (rows&amp;le;50000)&lt;br/&gt;• &lt;b&gt;科学目标&lt;/b&gt;: 超新星、变星、系外行星定标基准获取&lt;br/&gt;• &lt;b&gt;闭环交互中枢&lt;/b&gt;: 接收质量门禁反馈并驱动重新观测决策" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s1_access">
+          <mxGeometry x="55" y="55" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node_a2" value="&lt;b&gt;CLI 命令行工具链 (astro-best)&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;python -m src · ops/astro_best_cli.py&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;cone&lt;/b&gt;: 天区锥搜 (&lt;code&gt;--ra --dec --radius --catalog --band&lt;/code&gt;)&lt;br/&gt;• &lt;b&gt;download&lt;/b&gt;: 区域抓取 (&lt;code&gt;--bands --max 50000 --output&lt;/code&gt;)&lt;br/&gt;• &lt;b&gt;crossmatch&lt;/b&gt;: 坐标交叉比对 (&lt;code&gt;--input coords.csv --radius&lt;/code&gt;)&lt;br/&gt;• &lt;b&gt;catalogs&lt;/b&gt;: 打印 12 张可查星表枚举字典与端点映射&lt;br/&gt;• &lt;b&gt;info&lt;/b&gt;: 探测 NADC 服务连通性 (&lt;code&gt;check_connection&lt;/code&gt;)&lt;br/&gt;• &lt;b&gt;doctor&lt;/b&gt;: 全离线导入与契约自检 (执行耗时 &amp;lt;1.0s)&lt;br/&gt;• &lt;b&gt;config&lt;/b&gt;: 查看 REST/TAP 端点及 min_snr=5.0 门限制" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s1_access">
+          <mxGeometry x="719" y="55" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node_a3" value="&lt;b&gt;Agent 工具面 (ToolBox)&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;src/ai_tools.py · src/ai_tools_envelope.py&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;7 个原子工具&lt;/b&gt;: resolve_name/list_catalogs/describe_catalog/cone_search/crossmatch_batch/count/fetch_page&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 统一信封 (data/status/cost/provenance), 站点行数据一律 &lt;code&gt;untrusted&lt;/code&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;code&gt;cost.http_requests&lt;/code&gt; 在 &lt;code&gt;Session.request&lt;/code&gt; 唯一出口实测计数&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;code&gt;best://&lt;/code&gt; 稳定句柄替代易失 sqlid 作引用键&lt;br/&gt;• &lt;b&gt;无独立传输层&lt;/b&gt;: 直接以 Python 调用或经 function-calling 消费&lt;br/&gt;&amp;nbsp;&amp;nbsp;- (MCP 通道已于 2026-10-06 整体移除)&lt;br/&gt;• &lt;b&gt;错误码契约&lt;/b&gt;: E_INVALID_INPUT/E_SOFT_404/E_NAME_UNRESOLVED/E_NO_SQLID/E_BACKEND&lt;br/&gt;• &lt;b&gt;P1 合并&lt;/b&gt;: pybest 单类门面已删除, 工具面客户端唯一化为 BestClient" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s1_access">
+          <mxGeometry x="1383" y="55" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node_a4" value="&lt;b&gt;经典面向对象组件库 (OOP Client Suite)&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;BestClient / BestAuth / BestQuery / BestDownloader&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;BestClient&lt;/b&gt;: 两阶段查询调度引擎，维持 CSRF 会话状态&lt;br/&gt;• &lt;b&gt;BestAuth&lt;/b&gt;: NADC 登录管理器，提取 &lt;code&gt;X-CSRFToken&lt;/code&gt; 安全凭据&lt;br/&gt;• &lt;b&gt;BestQuery&lt;/b&gt;: Fluent 链式构造器:&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;.catalog().cone().mag_range().min_snr().where().build()&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;BestCrossMatch&lt;/b&gt;: Haversine 大圆角距高精度空间邻近匹配&lt;br/&gt;• &lt;b&gt;BestMultiBandPhotometry&lt;/b&gt;: 多波段静态测光导出容器（BEST 无时序，非光变曲线）&lt;br/&gt;• &lt;b&gt;BestDownloader&lt;/b&gt;: 支持断点续传与 SHA-256 完整性核验" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s1_access">
+          <mxGeometry x="2047" y="55" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node_a5" value="&lt;b&gt;零依赖轻量独立脚本集&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Pure Python stdlib / PowerShell / Bash&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;适用场景&lt;/b&gt;: 离线服务器、受限容器、运维终端快速诊断&lt;br/&gt;• &lt;b&gt;best_standalone.py&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 仅依赖 Python 标准库 + 基础 requests&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 内联两阶段 POST+GET，免安装完整 skill 包即可执行&lt;br/&gt;• &lt;b&gt;best_query.ps1&lt;/b&gt;: Windows PowerShell 运维原生脚本&lt;br/&gt;• &lt;b&gt;best_query.sh&lt;/b&gt;: Linux/macOS Shell 自动化流水线调用&lt;br/&gt;• &lt;b&gt;输出落盘&lt;/b&gt;: 自动写入 &lt;code&gt;best_data/&lt;/code&gt; 规范目录" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s1_access">
+          <mxGeometry x="2711" y="55" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node_a6" value="&lt;b&gt;本地领域 RAG 检索 (无云端分发)&lt;/b&gt; &amp;nbsp;&lt;span style='color:#4F46E5;'&gt;[HYBRID]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;rag/astro_rag.py&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;本地领域 RAG 检索器 (astro_rag.py)&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 纯离线 BM25 (k1=1.5, b=0.75) ⊕ CJK 字符词桶通道&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 领域术语提权字典 (DOMAIN_BOOST) ⊕ RRF 融合排序&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 检索 4 大规则库: domain_rules, known_issues, lessons&lt;br/&gt;• &lt;b&gt;算力边界 (G8)&lt;/b&gt;: 本地 &amp;lt;100 样本点、&amp;lt;1s 单测&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 重负载由调用方在仓外自行调度&lt;br/&gt;&amp;nbsp;&amp;nbsp;- (ModelScope 云端分发组件已于 2026-10-06 移除)" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s1_access">
+          <mxGeometry x="3375" y="55" width="570" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b1" value="&lt;b&gt;① INTAKE 接收态&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Entry: 上游信封到达 | Exit: 凭据与Hash齐备&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;输入契约验证&lt;/b&gt;: 校验 &lt;code&gt;astro-envelope-v1&lt;/code&gt; 结构&lt;br/&gt;• &lt;b&gt;溯源凭证提取&lt;/b&gt;: 提取 &lt;code&gt;session_id&lt;/code&gt; 与 &lt;code&gt;data_hash&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;鉴权状态探测&lt;/b&gt;: 核验 &lt;code&gt;BEST_API_TOKEN&lt;/code&gt; (env) 或 BestAuth 显式登录&lt;br/&gt;• &lt;b&gt;Fail-Closed 拒收&lt;/b&gt;: 信封为空直接抛 &lt;code&gt;E_INTAKE_EMPTY&lt;/code&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="55" y="55" width="570" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b2" value="&lt;b&gt;② VALIDATE 校验态&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Schema: input.contract.yaml | Fail: E101&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;空间坐标范围检验&lt;/b&gt;: 0.0 &amp;le; ra &amp;lt; 360.0, -90.0 &amp;le; dec &amp;le; 90.0&lt;br/&gt;• &lt;b&gt;搜索半径物理约束&lt;/b&gt;: 0.0 &amp;lt; radius_arcsec &amp;le; 18000.0 (5度上限)&lt;br/&gt;• &lt;b&gt;星表标识符白名单&lt;/b&gt;: 严格属于 12 张可查星表代码&lt;br/&gt;• &lt;b&gt;错误拦截&lt;/b&gt;: 违规输出 &lt;code&gt;needs_review&lt;/code&gt; 决策信封" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="719" y="55" width="570" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b3" value="&lt;b&gt;③ EXECUTE 执行态&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Engine: 场景路由分发与单点隔离执行&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;Mode A (两阶段查询)&lt;/b&gt;: POST 表单提交 &amp;rarr; GET 分页流式抓取&lt;br/&gt;• &lt;b&gt;Mode B (约束下载)&lt;/b&gt;: BestDownloader 断点续传切片下载&lt;br/&gt;• &lt;b&gt;Mode C (批量比对)&lt;/b&gt;: 逐点 try/except 隔离，单点失败置 failed&lt;br/&gt;• &lt;b&gt;委派路由&lt;/b&gt;: 越界匹配/清洗委派 canonical 主理 skill" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="1383" y="55" width="570" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b4" value="&lt;b&gt;④ GATE 门禁判定态&lt;/b&gt; &amp;nbsp;&lt;span style='color:#EA580C;'&gt;[GATE_CHECK]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;阻断门禁: http_status==200 &amp;amp;&amp;amp; checksum==true&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;传输状态门限&lt;/b&gt;: 网络 HTTP 状态码强制核查，非 200 硬阻断&lt;br/&gt;• &lt;b&gt;文件指纹校验&lt;/b&gt;: SHA-256 哈希比对，不符立即销毁临时文件&lt;br/&gt;• &lt;b&gt;天体测光质量检验&lt;/b&gt;: min_snr &amp;ge; 5.0, max_fwhm &amp;le; 5.0&lt;br/&gt;• &lt;b&gt;恒星形态判据&lt;/b&gt;: ps1_class_star &amp;ge; 0.8 (严格滤除伪点源)" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="2047" y="55" width="570" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b5" value="&lt;b&gt;⑤ EMIT 交付发布态&lt;/b&gt; &amp;nbsp;&lt;span style='color:#9333EA;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Sinks: 原子写落盘与不可变数据信封组装&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;原子落盘保障&lt;/b&gt;: &lt;code&gt;write_text + os.replace&lt;/code&gt; 杜绝半写残卷&lt;br/&gt;• &lt;b&gt;双态信封封包&lt;/b&gt;: 交付 &lt;code&gt;data_envelope&lt;/code&gt; (结构化结果集)&lt;br/&gt;• &lt;b&gt;多格式物理产物&lt;/b&gt;: 规范 CSV / TSV / VOTable / JSON / ECSV&lt;br/&gt;• &lt;b&gt;审计元数据注记&lt;/b&gt;: 附带执行时间戳、耗时、总记录数与血缘" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="2711" y="55" width="570" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b6" value="&lt;b&gt;阻断分流与审查决策态 (needs_review)&lt;/b&gt; &amp;nbsp;&lt;span style='color:#DC2626;'&gt;[FALLBACK]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;contracts/error-codes.contract.yaml | E101 / E102&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;E101_INVALID_INPUT (BEST_1001)&lt;/b&gt;: 坐标超限或星表不存在拦截&lt;br/&gt;• &lt;b&gt;E102_GATE_FAILED (BEST_1002)&lt;/b&gt;: HTTP 失败或 SHA-256 校验和失配&lt;br/&gt;• &lt;b&gt;E103_DELEGATE_STREAM (BEST_1003)&lt;/b&gt;: 委派链路异常或远端超时&lt;br/&gt;• &lt;b&gt;决策信封封装&lt;/b&gt;: 产出 &lt;code&gt;decision_envelope&lt;/code&gt; (handoff.status=blocked)&lt;br/&gt;• &lt;b&gt;下游保护&lt;/b&gt;: 严密阻断脏数据注入下游超新星与变星探测管线" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="3375" y="55" width="570" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="node_b_gov" value="&lt;b&gt;【12 大横切治理面全生命周期锚定矩阵 (12 Cross-Cutting Governance Facets Architecture)】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#3730A3;'&gt;① &lt;b&gt;Provenance 溯源&lt;/b&gt;: 强制绑定 session_id 与 data_hash &amp;nbsp;|&amp;nbsp; ② &lt;b&gt;Units 量纲&lt;/b&gt;: 坐标 deg、角距 arcsec、测光 mag、流速 req/s &amp;nbsp;|&amp;nbsp; ③ &lt;b&gt;Determinism 确定论&lt;/b&gt;: 固定 seed=42 杜绝非受控时钟 &amp;nbsp;|&amp;nbsp; ④ &lt;b&gt;Logging 日志&lt;/b&gt;: 降级统一输出 WARN 级审计标记&lt;br/&gt;⑤ &lt;b&gt;Error Codes 错误码&lt;/b&gt;: 严格规范 BEST_1001~1099 &amp;nbsp;|&amp;nbsp; ⑥ &lt;b&gt;Contracts 双态信封&lt;/b&gt;: 区分 data 数据信封与 decision 决策信封 &amp;nbsp;|&amp;nbsp; ⑦ &lt;b&gt;Quality Gates 门禁&lt;/b&gt;: 双阻断条件前置硬拦截 &amp;nbsp;|&amp;nbsp; ⑧ &lt;b&gt;Delegation 委派&lt;/b&gt;: 坚守主理边界，越界能力主动委派&lt;br/&gt;⑨ &lt;b&gt;Security 安全&lt;/b&gt;: 凭据隔离只读、CSV 公式清洗、路径锚定 &amp;nbsp;|&amp;nbsp; ⑩ &lt;b&gt;Reproducibility 可复现&lt;/b&gt;: 算法 100% 白盒有据 &amp;nbsp;|&amp;nbsp; ⑪ &lt;b&gt;Compute Budget 预算&lt;/b&gt;: 本地单测 &amp;lt;1.0s，重算上云 &amp;nbsp;|&amp;nbsp; ⑫ &lt;b&gt;Observability 遥测&lt;/b&gt;: 全链路结构化事件可回放&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s2_state">
+          <mxGeometry x="55" y="340" width="3890" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="node_c1" value="&lt;b&gt;Phase 1: POST 表单构造器&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;protocol.build_query_form (protocol.py:250)&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;天区锥搜参数映射&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;pos.racenter = ra, pos.deccenter = dec&lt;/code&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;pos.radius = radius_arcsec, pos.type = 'cone'&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;列约束名称白名单&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;qualify_column&lt;/code&gt; 校验正则: &lt;code&gt;^[A-Za-z_][A-Za-z0-9_]*$&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;操作符纠错与范围映射&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;将 &lt;code&gt;greater&lt;/code&gt; 自动修正为服务端历史拼写 &lt;code&gt;grater&lt;/code&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;between&lt;/code&gt; 自动拆解为 &lt;code&gt;{col}.min&lt;/code&gt; 与 &lt;code&gt;{col}.max&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;列投影与格式&lt;/b&gt;: 注入 &lt;code&gt;showcol&lt;/code&gt; 与 &lt;code&gt;output.fmt&lt;/code&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s3_protocol">
+          <mxGeometry x="55" y="55" width="570" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node_c2" value="&lt;b&gt;Phase 1: 异步查询提交端点&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[EXTERNAL_DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;POST https://nadc.china-vo.org/data/best/{cat}/q&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;请求类型&lt;/b&gt;: &lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;Session 凭据挂载&lt;/b&gt;: 携带会话 Cookie 与 &lt;code&gt;X-CSRFToken&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;服务端行为&lt;/b&gt;: Django 后端启动异步工作流，生成临时查询 Session&lt;br/&gt;• &lt;b&gt;响应内容&lt;/b&gt;: HTTP 200 HTML 页面，内嵌带唯一查询标记的链接&lt;br/&gt;• &lt;b&gt;网络防护&lt;/b&gt;: 遭遇 HTTP 429 / 5xx 触发指数退避重试&lt;br/&gt;• &lt;b&gt;耗时预算&lt;/b&gt;: 典型响应时间 0.8s ~ 2.5s" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s3_protocol">
+          <mxGeometry x="719" y="55" width="570" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node_c3" value="&lt;b&gt;SQLID 正则提取与安全清洗&lt;/b&gt; &amp;nbsp;&lt;span style='color:#EA580C;'&gt;[SECURITY_GATE]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;protocol.normalize_sqlid&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;正则捕获模式&lt;/b&gt;: &lt;code&gt;re.compile(r'sqlid/(s?\d+)')&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;白名单正则强校验&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;_SAFE_SQLID_RE = re.compile(r's?\d+\Z')&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;防穿透字符清洗&lt;/b&gt;: &lt;code&gt;re.sub(r'[^a-zA-Z0-9_-]', '', sqlid)&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;拦截恶意输入&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;拒收 &lt;code&gt;../../etc/passwd&lt;/code&gt; (路径穿越)&lt;br/&gt;&amp;nbsp;&amp;nbsp;拒收 &lt;code&gt;1; DROP TABLE best&lt;/code&gt; (SQL/日志注入)&lt;br/&gt;• &lt;b&gt;校验失败出口&lt;/b&gt;: 抛出 &lt;code&gt;ValueError('Invalid BEST sqlid')&lt;/code&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s3_protocol">
+          <mxGeometry x="1383" y="55" width="570" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node_c4" value="&lt;b&gt;Phase 2: 数据分块获取与分页引擎&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;GET https://nadc.china-vo.org/data/best/sqlid/{sqlid}&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;分页参数&lt;/b&gt;: &lt;code&gt;page=P, rows=1000, output.fmt=csv/tsv/json&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;最大记录控制&lt;/b&gt;: 单次任务上限 &lt;code&gt;max_rows=50000&lt;/code&gt; 行&lt;br/&gt;• &lt;b&gt;数据流汇聚&lt;/b&gt;: 递增页码迭代拉取，直至返回行数 &amp;lt; 1000&lt;br/&gt;• &lt;b&gt;容错 CSV 解析引擎&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 智能检测并剥除 &lt;code&gt;UTF-8-SIG (BOM)&lt;/code&gt; 前缀&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 针对历史无表头 CSV，自动对齐首两列为 &lt;code&gt;(ra, dec)&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;数据结构转换&lt;/b&gt;: 组装为 &lt;code&gt;BestQueryResult / BestSource&lt;/code&gt; 实体" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s3_protocol">
+          <mxGeometry x="2047" y="55" width="570" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node_c5" value="&lt;b&gt;Phase 2: 总条数查询与计数器&lt;/b&gt; &amp;nbsp;&lt;span style='color:#059669;'&gt;[VERIFIED_ALGO]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;GET /data/best/sqlid/{sqlid}/getcount&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;SQLID 前缀剥离&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;调用 &lt;code&gt;protocol.count_sqlid&lt;/code&gt; 执行 &lt;code&gt;removeprefix('s')&lt;/code&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;将 &lt;code&gt;s2623&lt;/code&gt; 精确转换为后端纯数字 &lt;code&gt;2623&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;响应格式解析&lt;/b&gt;: 支持 &lt;code&gt;{'total': 4820}&lt;/code&gt; JSON 与纯文本整数&lt;br/&gt;• &lt;b&gt;调度用途&lt;/b&gt;: 精确预估分页拉取轮数与流式下载进度条&lt;br/&gt;• &lt;b&gt;平滑降级&lt;/b&gt;: 接口偶发异常时返回 None，不阻断主分页拉取" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s3_protocol">
+          <mxGeometry x="2711" y="55" width="570" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node_c6" value="&lt;b&gt;传输安全与鲁棒性控制中枢&lt;/b&gt; &amp;nbsp;&lt;span style='color:#4F46E5;'&gt;[NET_ROBUST]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;Session Pool / Retry / Throttle Engine&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;连接池维持&lt;/b&gt;: &lt;code&gt;requests.Session&lt;/code&gt; 复用 TCP 连接与 SSL 握手&lt;br/&gt;• &lt;b&gt;指数退避重试&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;&lt;code&gt;HTTPAdapter(max_retries=Retry(3, backoff_factor=2.0))&lt;/code&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;拦截状态码: 429 (限流), 500, 502, 503, 504&lt;br/&gt;• &lt;b&gt;OpenAlex 范式动态退避&lt;/b&gt;: 智能解析响应头 &lt;code&gt;Retry-After&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;礼貌请求限速&lt;/b&gt;: &lt;code&gt;rate_limit=3.0s&lt;/code&gt; (符合 arXiv 抓取规范)&lt;br/&gt;• &lt;b&gt;连续失败熔断&lt;/b&gt;: 超过 3 次触发降级协议 (FB-1 网络降级)" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s3_protocol">
+          <mxGeometry x="3375" y="55" width="570" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d1" value="&lt;b&gt;① std: Standard Stars 标准星&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;std/q | UBVRI 测光标准基准&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;主键与坐标&lt;/b&gt;: &lt;code&gt;std_id, std_name, std_ra, std_dec&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;关键测光列&lt;/b&gt;: &lt;code&gt;std_mag, std_mag_err&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 绝对流量与仪器零点标定参考标准星" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="55" y="55" width="710" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d2" value="&lt;b&gt;② ps1: Pan-STARRS All-Sky 全天星表&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;ps1/q | 20 亿+ 天体光学全天基准&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;5 波段 PSF 星等&lt;/b&gt;: &lt;code&gt;gpsf, rpsf, ipsf, zpsf, ypsf&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;星点与天体测量&lt;/b&gt;: &lt;code&gt;ps1_class_star, ps1_ruwe&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 超新星、光学瞬变源巡天高精度参考基准" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="850" y="55" width="710" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d3" value="&lt;b&gt;③ stripe82: Well-Calibrated Stripe82&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;stripe82/q | SDSS 赤道深场精测天区&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;5 波段多次测量&lt;/b&gt;: &lt;code&gt;u_h22, g_h22, r_h22, i_h22, z_h22&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;精测离散度指标&lt;/b&gt;: &lt;code&gt;rms, chi2, n_epochs&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 80+ 次重复曝光，极微弱光变与零点标定验证" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="1645" y="55" width="710" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d4" value="&lt;b&gt;④ gaia_dr3: Gaia DR3 精测定标星表体系&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;gaia_dr3/q | 空间天体测量绝对基准 (含 4 张子表体系)&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;绝对测光三带&lt;/b&gt;: &lt;code&gt;phot_g/bp/rp_mean_mag, bp_rp, pmra, pmdec&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;4 张可查定标星表&lt;/b&gt;: &lt;code&gt;gaia_dr3&lt;/code&gt;, &lt;code&gt;gaia_dr3_18&lt;/code&gt;, &lt;code&gt;xpsp&lt;/code&gt;, &lt;code&gt;dr3xpcorr&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 微角秒级空间坐标、XP 连续谱与全天绝对星等统一定标" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="2440" y="55" width="710" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d5" value="&lt;b&gt;⑤ jplus_dr3: J-PLUS DR3 中窄带星表&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;jplus_dr3/q | 12 色中窄带测光系统&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;孔径校正测光&lt;/b&gt;: &lt;code&gt;jplus_dr3_mag_aper_6_0_final&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;仪器定标零点&lt;/b&gt;: &lt;code&gt;aper_corr, zp1, zp2&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 北天 12 色测光，用于恒星物理参数精确反演" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="3235" y="55" width="710" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d6" value="&lt;b&gt;⑥ smss_dr4: SMSS DR4 定标星表&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;smss_dr4/q | SkyMapper 南天巡天基准&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;核心测光&lt;/b&gt;: &lt;code&gt;smss_dr4_psf_mag, source_id&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 覆盖南半球天区的主力光学测光定标星表" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="55" y="295" width="570" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d7" value="&lt;b&gt;⑦ landolt: Landolt 经典标准星场&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;landolt/q | 约翰逊-考辛斯系统基准&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;标准星等&lt;/b&gt;: &lt;code&gt;umag, bmag, vmag, rmag, imag&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 全球地基大型望远镜标准星定标金标准" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="719" y="295" width="570" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d8" value="&lt;b&gt;⑧ uss_dr1: USS DR1 超深精测星表&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;uss_dr1/q | 超深巡天系统精测基准&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;微弱源测光&lt;/b&gt;: &lt;code&gt;uss_dr1_psf_mag, source_id&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 针对暗弱深场天体的高精度测光交叉检验" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="1383" y="295" width="570" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d9" value="&lt;b&gt;⑨ splus_dr4 &amp; 光谱星表体系&lt;/b&gt; &amp;nbsp;&lt;span style='color:#2563EB;'&gt;[DRIVER]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;splus_dr4/q | 南天 12 色 + SCR 交叉精测表&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;splus_dr4&lt;/b&gt;: &lt;code&gt;j0378, j0395, j0410, j0515, j0660, j0861&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;附加光谱精测表&lt;/b&gt;: 包含 &lt;code&gt;scr_galah&lt;/code&gt; (137列), &lt;code&gt;scr_lamost&lt;/code&gt; (62列)&lt;br/&gt;• &lt;b&gt;科学定位&lt;/b&gt;: 12 张可查定标星表全景完整闭环" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="2047" y="295" width="570" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d10" value="&lt;b&gt;NADC 中国虚拟天文台官方台站服务&lt;/b&gt; &amp;nbsp;&lt;span style='color:#0F172A;'&gt;[REMOTE]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;https://nadc.china-vo.org/data/best/&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;服务架构&lt;/b&gt;: 国家天文科学数据中心托管，Django 后端&lt;br/&gt;• &lt;b&gt;数据库规模&lt;/b&gt;: 汇聚全天 20 亿+ 精测星表底层数据&lt;br/&gt;• &lt;b&gt;核心能力&lt;/b&gt;: 承载两阶段 Form 提交、Session 建立与异步分发" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#64748B;strokeWidth=1.5;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="2711" y="295" width="570" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="node_d11" value="&lt;b&gt;清华大学学术 TAP 门面兼容器件&lt;/b&gt; &amp;nbsp;&lt;span style='color:#0F172A;'&gt;[REMOTE]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;https://best.astro.tsinghua.edu.cn/tap&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;历史兼容&lt;/b&gt;: 支持 TAP/IVOA 协议门面接口标准调用&lt;br/&gt;• &lt;b&gt;兼容入口&lt;/b&gt;: &lt;code&gt;DEFAULT_TAP_URL&lt;/code&gt; 维持存量学术系统调用协议&lt;br/&gt;• &lt;b&gt;降级协议&lt;/b&gt;: TAP 异常时平滑重定向至 NADC REST 主通道" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#64748B;strokeWidth=1.5;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s4_catalogs">
+          <mxGeometry x="3375" y="295" width="570" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="node_e1" value="&lt;b&gt;CSV 公式注入与路径穿越防御&lt;/b&gt; &amp;nbsp;&lt;span style='color:#DC2626;'&gt;[SECURITY_GATE]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;csv_safety.sanitize_cell &amp;amp; is_relative_to&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;CSV 注入清洗 (CWE-1236)&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 单元格以 &lt;code&gt;=, +, @&lt;/code&gt; 开头强制前缀单引号 &lt;code&gt;'&lt;/code&gt; 转义&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;b&gt;天文学负数放行&lt;/b&gt;: &lt;code&gt;_looks_numeric&lt;/code&gt; 智能识别 &lt;code&gt;-5.0&lt;/code&gt; (南半球 Dec) 与 &lt;code&gt;-1.5e-3&lt;/code&gt;，严防破坏科学数据&lt;br/&gt;• &lt;b&gt;路径穿越防御&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;code&gt;_resolve_output_path&lt;/code&gt; 强制校验 &lt;code&gt;is_relative_to(output_dir)&lt;/code&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 拦截一切 &lt;code&gt;../&lt;/code&gt; 上溯逃逸至系统目录的攻击尝试" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s5_security">
+          <mxGeometry x="55" y="55" width="570" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="node_e2" value="&lt;b&gt;批处理逐条失败隔离引擎&lt;/b&gt; &amp;nbsp;&lt;span style='color:#EA580C;'&gt;[RESILIENCE]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;batch_crossmatch &amp;amp; crossmatch.py:334&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;多点批处理机制&lt;/b&gt;: 循环处理成百上千组用户目标坐标&lt;br/&gt;• &lt;b&gt;单点局部隔离&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 逐坐标点位调用独立 &lt;code&gt;try/except&lt;/code&gt; 保护&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 单点发生格式越界、网络超时或星表无源时，记录 &lt;code&gt;status='failed'&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;批次不中断&lt;/b&gt;: 绝不抛出顶层未捕获异常中断整体批次&lt;br/&gt;• &lt;b&gt;汇总记录&lt;/b&gt;: 成功写入 &lt;code&gt;matches&lt;/code&gt;，失败归档至 &lt;code&gt;misses/errors&lt;/code&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s5_security">
+          <mxGeometry x="719" y="55" width="570" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="node_e3" value="&lt;b&gt;不可变产物与科学存证交付&lt;/b&gt; &amp;nbsp;&lt;span style='color:#9333EA;'&gt;[IMMUTABLE_SINKS]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;BestResultSet &amp;amp; ECSV / CSV / JSON Sinks&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;结构化数据集&lt;/b&gt;: &lt;code&gt;BestResultSet&lt;/code&gt; (astro-envelope-v1 JSON)&lt;br/&gt;• &lt;b&gt;测光星表&lt;/b&gt;: &lt;code&gt;best_sources.csv&lt;/code&gt; (清洗防注入标准表格)&lt;br/&gt;• &lt;b&gt;多波段测光档案&lt;/b&gt;: &lt;code&gt;BestMultiBandPhotometry&lt;/code&gt; (静态测光容器导出，非时序)&lt;br/&gt;• &lt;b&gt;不可变证据存证&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 绑定 &lt;code&gt;session_id&lt;/code&gt;, &lt;code&gt;data_hash&lt;/code&gt;, &lt;code&gt;SHA-256&lt;/code&gt; 签名&lt;br/&gt;&amp;nbsp;&amp;nbsp;- 完整记录查询参数、执行耗时与数据血缘头&lt;br/&gt;• &lt;b&gt;原子落盘&lt;/b&gt;: 临时文件写入完毕执行 &lt;code&gt;os.replace&lt;/code&gt;，零半写残卷" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s5_security">
+          <mxGeometry x="1383" y="55" width="570" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="node_e4" value="&lt;b&gt;BEST 数据源主理 · 委派路由&lt;/b&gt; &amp;nbsp;&lt;span style='color:#4F46E5;'&gt;[DELEGATION]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;SKILL.md 委派表 &amp;amp; Master Plan §4&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;主理立场&lt;/b&gt;: 严守 In-Scope 边界，杜绝越权旁路重造轮子&lt;br/&gt;• &lt;b&gt;委派策略&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;1. &lt;b&gt;通用星表检索与全天锥搜&lt;/b&gt; &amp;rarr; 委派至 &lt;b&gt;astro-catalog&lt;/b&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;2. &lt;b&gt;原始图像与测光数据清洗&lt;/b&gt; &amp;rarr; 委派至 &lt;b&gt;astro-clean&lt;/b&gt;&lt;br/&gt;&amp;nbsp;&amp;nbsp;3. &lt;b&gt;NADC BEST REST 底层通信驱动&lt;/b&gt; &amp;rarr; 核心保留在 &lt;b&gt;astro-best&lt;/b&gt;（唯一能访问 BEST 端点，绝不外派）&lt;br/&gt;• &lt;b&gt;错误路由标引&lt;/b&gt;: 携带 &lt;code&gt;E103_DELEGATE_STREAM&lt;/code&gt; 追踪标记" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s5_security">
+          <mxGeometry x="2047" y="55" width="570" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="node_e5" value="&lt;b&gt;科学质检决策与人机协同审核&lt;/b&gt; &amp;nbsp;&lt;span style='color:#EA580C;'&gt;[HUMAN_IN_THE_LOOP]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;contracts/envelope.contract.yaml (decision_envelope)&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;决策状态三态&lt;/b&gt;:&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;code&gt;ACCEPTED&lt;/code&gt;: 门禁完全通过，放行至科学管线&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;code&gt;PASSED_PENDING_HUMAN&lt;/code&gt;: 临界数据需专家人工复核&lt;br/&gt;&amp;nbsp;&amp;nbsp;- &lt;code&gt;REJECTED&lt;/code&gt;: 质检严重不符，阻断数据分发&lt;br/&gt;• &lt;b&gt;现场证据保全&lt;/b&gt;: 冻结当前全部输入参数、报文头与错误调用栈&lt;br/&gt;• &lt;b&gt;人机协同接口&lt;/b&gt;: 导出可视化审查信封，供天文学家或审核智能体研判" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s5_security">
+          <mxGeometry x="2711" y="55" width="570" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="node_e6" value="&lt;b&gt;全局科学闭环与重观测反馈回路&lt;/b&gt; &amp;nbsp;&lt;span style='color:#DC2626;'&gt;[CLOSED_LOOP_BUS]&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#64748B;'&gt;11-closed-loop (World Model WM19 架构总线)&lt;/span&gt;&lt;br/&gt;&lt;hr style='border:0.5px solid #CBD5E1;'/&gt;• &lt;b&gt;反馈闭环联动&lt;/b&gt;: 与全局反馈学习与重观测调度系统实时互通&lt;br/&gt;• &lt;b&gt;异常触发机制&lt;/b&gt;: 门禁持续失败、数据质量不足或网络熔断&lt;br/&gt;• &lt;b&gt;望远镜重观测决策&lt;/b&gt;: 反向驱动望远镜调度器调整曝光、切换滤光片或重新指向&lt;br/&gt;• &lt;b&gt;知识飞轮沉淀&lt;/b&gt;: 经验与故障自动写入 &lt;code&gt;known_issues.yaml&lt;/code&gt;&lt;br/&gt;• &lt;b&gt;决策闭环收敛&lt;/b&gt;: 反馈信标直达顶部决策调度层，完成人机系统闭环" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="s5_security">
+          <mxGeometry x="3375" y="55" width="570" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_c1" value="&lt;b&gt;① 异常触发&lt;/b&gt; &amp;nbsp;&lt;span style='color:#DC2626;'&gt;[TRIGGER]&lt;/span&gt;&lt;br/&gt;• 门禁持续失败 · 数据质量不足 · 网络熔断&lt;br/&gt;• GATE 态 blocked 即进入本走廊" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="loop_corridor">
+          <mxGeometry x="55" y="48" width="940" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_c2" value="&lt;b&gt;② 决策信封&lt;/b&gt; &amp;nbsp;&lt;span style='color:#EA580C;'&gt;[DECISION]&lt;/span&gt;&lt;br/&gt;• needs_review + ask 载荷，转人工复核&lt;br/&gt;• 复核结论: 放行 / 驳回 / 调整参数" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="loop_corridor">
+          <mxGeometry x="1048" y="48" width="940" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_c3" value="&lt;b&gt;③ 重观测请求&lt;/b&gt; &amp;nbsp;&lt;span style='color:#9333EA;'&gt;[RE-OBSERVE]&lt;/span&gt;&lt;br/&gt;• 11-closed-loop 驱动望远镜调度器&lt;br/&gt;• 调整曝光 · 切换滤光片 · 重新指向" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="loop_corridor">
+          <mxGeometry x="2041" y="48" width="940" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="loop_c4" value="&lt;b&gt;④ 知识飞轮&lt;/b&gt; &amp;nbsp;&lt;span style='color:#4F46E5;'&gt;[KNOWLEDGE]&lt;/span&gt;&lt;br/&gt;• 经验与故障沉淀 &lt;code&gt;known_issues.yaml&lt;/code&gt;&lt;br/&gt;• 反哺领域 RAG 检索与下一轮判定" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11.5;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=10;spacingBottom=10;" vertex="1" parent="loop_corridor">
+          <mxGeometry x="3034" y="48" width="940" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a1_a2" value="CLI 任务派发" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="node_a1" target="node_a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a1_a3" value="SDK 代码调用" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.3;entryY=1;" edge="1" parent="1" source="node_a1" target="node_a3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540.0" y="560.0" />
+              <mxPoint x="1550.0" y="560.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a1_a4" value="OOP 复杂查询" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.6;exitY=1;entryX=0.3;entryY=1;" edge="1" parent="1" source="node_a1" target="node_a4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600.0" y="580.0" />
+              <mxPoint x="2210.0" y="580.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a1_a5" value="轻量脚本运维" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.7;exitY=1;entryX=0.3;entryY=1;" edge="1" parent="1" source="node_a1" target="node_a5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660.0" y="600.0" />
+              <mxPoint x="2880.0" y="600.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a1_a6" value="云端规格/RAG" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.8;exitY=1;entryX=0.3;entryY=1;" edge="1" parent="1" source="node_a1" target="node_a6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720.0" y="620.0" />
+              <mxPoint x="3540.0" y="620.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a2_b1" value="组装输入信封" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.7;entryY=0;" edge="1" parent="1" source="node_a2" target="node_b1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1204.0" y="560.0" />
+              <mxPoint x="650.0" y="560.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a3_b1" value="凭据与任务入队" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_a3" target="node_b1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1868.0" y="580.0" />
+              <mxPoint x="540.0" y="580.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_a4_b1" value="BestQuery 序列化" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" edge="1" parent="1" source="node_a4" target="node_b1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2532.0" y="600.0" />
+              <mxPoint x="430.0" y="600.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b1_b2" value="信封非空/Hash齐备" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="node_b1" target="node_b2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b2_b3" value="Schema 验证通过" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="node_b2" target="node_b3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b2_b6" value="Schema 失败 (E101)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#DC2626;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.3;entryY=1;" edge="1" parent="1" source="node_b2" target="node_b6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1204.0" y="950.0" />
+              <mxPoint x="3740.0" y="950.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b3_b4" value="执行完毕提交门禁" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="node_b3" target="node_b4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b4_b5" value="双门禁通过 (HTTP 200 + SHA-256)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="node_b4" target="node_b5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b4_b6" value="门禁未过 (E102)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#DC2626;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.6;entryY=1;" edge="1" parent="1" source="node_b4" target="node_b6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2532.0" y="970.0" />
+              <mxPoint x="3910.0" y="970.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b3_c1" value="路由分发 Phase 1 POST" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_b3" target="node_c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1868.0" y="1210.0" />
+              <mxPoint x="540.0" y="1210.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c1_c2" value="表单载荷提交" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.4;entryX=0;entryY=0.4;" edge="1" parent="1" source="node_c1" target="node_c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c2_c3" value="HTML 正则抽取 sqlid" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#EA580C;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.4;entryX=0;entryY=0.4;" edge="1" parent="1" source="node_c2" target="node_c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c3_c4" value="安全 sqlid 分页拉取" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.4;entryX=0;entryY=0.4;" edge="1" parent="1" source="node_c3" target="node_c4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c3_c5" value="纯数字 sqlid 查总数" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_c3" target="node_c5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1868.0" y="1680.0" />
+              <mxPoint x="3196.0" y="1680.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c6_c2" value="连接池/1req/3s 限速" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.3;exitY=1;entryX=0.3;entryY=1;" edge="1" parent="1" source="node_c6" target="node_c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3740.0" y="1660.0" />
+              <mxPoint x="1080.0" y="1660.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c6_c4" value="指数退避重试 (backoff=2.0)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_c6" target="node_c4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3860.0" y="1690.0" />
+              <mxPoint x="2532.0" y="1690.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c2_d10" value="POST 创建查询 Session" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" edge="1" parent="1" source="node_c2" target="node_d10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1204.0" y="1750.0" />
+              <mxPoint x="3080.0" y="1750.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c4_d10" value="GET 分页拉取星表流" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.6;entryY=0;" edge="1" parent="1" source="node_c4" target="node_d10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2532.0" y="1780.0" />
+              <mxPoint x="3250.0" y="1780.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_c4_d11" value="TAP 历史兼容通道" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#64748B;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.7;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_c4" target="node_d11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2650.0" y="1800.0" />
+              <mxPoint x="3860.0" y="1800.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d1" value="std 标准星" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.2;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_d10" target="node_d1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3020.0" y="2100.0" />
+              <mxPoint x="610.0" y="2100.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d2" value="ps1 全天" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.3;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_d10" target="node_d2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3080.0" y="2115.0" />
+              <mxPoint x="1405.0" y="2115.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d3" value="stripe82 深场" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.4;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_d10" target="node_d3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3140.0" y="2130.0" />
+              <mxPoint x="2200.0" y="2130.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d4" value="gaia_dr3 基准" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_d10" target="node_d4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3200.0" y="2145.0" />
+              <mxPoint x="2995.0" y="2145.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d5" value="jplus 12色" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.7;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="1" source="node_d10" target="node_d5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3320.0" y="2130.0" />
+              <mxPoint x="3790.0" y="2130.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d6" value="smss 南天" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="node_d10" target="node_d6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2911.0" y="2215.0" />
+              <mxPoint x="825.0" y="2215.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_d10_d7" value="landolt 标准" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0;exitY=0.4;entryX=1;entryY=0.4;" edge="1" parent="1" source="node_d10" target="node_d7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d10_d8" value="uss 超深" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0;exitY=0.6;entryX=1;entryY=0.6;" edge="1" parent="1" source="node_d10" target="node_d8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d10_d9" value="splus 12色" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0;exitY=0.8;entryX=1;entryY=0.8;" edge="1" parent="1" source="node_d10" target="node_d9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c4_e1" value="数据流清洗注入 (保留负数Dec)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_c4" target="node_e1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2360.0" y="2400.0" />
+              <mxPoint x="540.0" y="2400.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b3_e2" value="多坐标批处理逐点隔离" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#EA580C;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.2;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_b3" target="node_e2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1698.0" y="2420.0" />
+              <mxPoint x="1204.0" y="2420.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_e1_e3" value="清洗后数据原子落盘 (os.replace)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9333EA;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.4;entryX=0;entryY=0.4;" edge="1" parent="1" source="node_e1" target="node_e3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_e2_e3" value="汇聚匹配结果与不可变证据" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9333EA;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.6;entryX=0;entryY=0.6;" edge="1" parent="1" source="node_e2" target="node_e3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_b3_e4" value="超出 In-Scope 主动委派" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.8;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_b3" target="node_e4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2038.0" y="2440.0" />
+              <mxPoint x="2532.0" y="2440.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_b6_e5" value="异常现场存证打包 (decision_envelope)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#EA580C;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="node_b6" target="node_e5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3860.0" y="2430.0" />
+              <mxPoint x="3196.0" y="2430.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_e5_e6" value="质检阻断触发闭环反馈" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#DC2626;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="node_e5" target="node_e6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_e6_a1" value="【闭环反馈回路】重观测决策与策略参数动态调整回写 (11-closed-loop)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#9333EA;strokeWidth=2.4;fontSize=10.5;fontColor=#581C87;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.3;" edge="1" parent="1" source="node_e6" target="node_a1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4145.0" y="2710.0" />
+              <mxPoint x="4300.0" y="2710.0" />
+              <mxPoint x="4300.0" y="105.0" />
+              <mxPoint x="100.0" y="105.0" />
+              <mxPoint x="100.0" y="300.0" />
+              <mxPoint x="255.0" y="300.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_loop_1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#DC2626;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="loop_c1" target="loop_c2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_loop_2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#EA580C;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="loop_c2" target="loop_c3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_loop_3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#9333EA;strokeWidth=1.8;fontSize=10.5;fontColor=#1E3A8A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="loop_c3" target="loop_c4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

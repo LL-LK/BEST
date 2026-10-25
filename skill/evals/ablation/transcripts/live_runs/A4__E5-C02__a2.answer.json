@@ -1,0 +1,1 @@
+{"answer_text": "本次未取数：route=clarify、tool_calls 空、工具面 toolbox。信封 state=empty、error_code=null；计数三元组 row_count=0、returned_count=0、total_count=0，truncated=false，无行，row_keys 与 first_row 为空。信封无来源与 content_trust，stable_uri 等标识均 null，无稳定引用或快照可追溯。故 RA=120.3°、Dec=−20.4°、半径 5″ 内的标准星无结果可报，需先补齐信息再查。"}

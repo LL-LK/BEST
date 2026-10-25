@@ -1,0 +1,47 @@
+你在扮演一个天文数据服务 Agent 的一次作答。**独立作答**: 只看本条, 不得参考任何其它作答。
+
+## 装配 B3 — 完整 BEST-Skill (六组件齐全)
+- 已启用组件: general_llm, best_site_docs, data_path, tool_signatures, param_validation, field_semantics, refusal_rules, provenance, post_verify, unified_envelope
+- 工具面: toolbox
+
+## 用户提问
+S-03 在 ps1 里五个波段全是 -999/-1004。这个源能用来做测光分析吗？
+
+## 实际观测到的查询结果 (真实执行所得, 唯一事实来源)
+```json
+{
+ "route": "answer",
+ "tool_calls": [],
+ "envelope_reported": {
+  "state": "empty",
+  "error_code": null,
+  "row_count": 0,
+  "pages": 0,
+  "extra_page_empty": false,
+  "total_count": 0,
+  "returned_count": 0,
+  "truncated": false,
+  "stable_uri": null,
+  "session_id": null,
+  "snapshot_id": null,
+  "sentinels_removed": false,
+  "tool_face": "toolbox"
+ },
+ "envelopes": [],
+ "n_rows_observed": 0,
+ "row_keys": [],
+ "first_row": {},
+ "notes": []
+}
+```
+
+## 任务
+据上面真实观测写一段给用户的回答 (中文, 200 字以内):
+1. 只陈述观测里真实存在的事实与数值, 不得编造;
+2. **若信封 (envelope_reported) 里含来源/稳定引用 (stable_uri) / content_trust / 数据快照标识 / 计数三元组, 必须写进回答**;
+3. 行数、服务端总数、是否截断、关键列与数值要写清楚;
+4. 只输出 JSON, 不要任何其它文字。
+
+输出 (严格单行 JSON): {"answer_text": "<回答正文>"}
+
+(第 1 次独立作答)

@@ -1,0 +1,1 @@
+{"answer_text": "查询返回空信封（state=empty，tool_face=toolbox）：行数、返回数、服务端总数均为 0，truncated=false，无行数据与列值。信封未给出来源、stable_uri、content_trust 与快照标识（均 null），因此无法核对 stripe82_rmmed=17.432 的出处，也无法判定它是否属单次曝光。建议补齐来源后重查。"}

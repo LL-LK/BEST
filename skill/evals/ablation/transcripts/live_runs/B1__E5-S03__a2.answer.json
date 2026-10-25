@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none（tool_face=scripted），无数据通路，未取到 S-03 在 ps1 的波段值，不能判定其可否用于测光。信封实测 state=empty、error_code=null、row_count=0、pages=0、total_count=0、returned_count=0、truncated=false；stable_uri=null、session_id=null、snapshot_id=null、envelopes=[]、n_rows_observed=0、first_row={}。计数三元组 0/0/未截断，即无任何行，-999/-1004 不在观测内。"}

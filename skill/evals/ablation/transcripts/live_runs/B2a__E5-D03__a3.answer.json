@@ -1,0 +1,1 @@
+{"answer_text": "PS1锥形检索 RA=180.0 Dec=30.0 半径5角分：返回174行，total=returned=174、pages=1、truncated=false，即174源未截断。含ra/dec与各band psf星等（180.007877,30.003347：i=17.936 r=18.237 z=17.702），quality_flag均good。信封stable_uri、session_id、snapshot_id均null且无content_trust，故无稳定引用与快照标识可报。"}

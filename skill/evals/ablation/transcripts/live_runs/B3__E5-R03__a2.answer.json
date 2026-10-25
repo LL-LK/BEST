@@ -1,0 +1,1 @@
+{"answer_text": "本次装配未取到数据：路由为 reject，工具调用列表为空，观测到的行数为 0。信封（envelope_reported）状态 state=empty，row_count=0、pages=0、total_count=0、returned_count=0、truncated=false，extra_page_empty=false，sentinels_removed=false；stable_uri、session_id、snapshot_id 均为 null，无来源与稳定引用可报。装配的工具面（tool_face）为 toolbox，但本轮无实际执行的工具调用，故无法给出交叉匹配结果或任何服务端数值。请补充星表文件或明确的匹配参数后重试。"}

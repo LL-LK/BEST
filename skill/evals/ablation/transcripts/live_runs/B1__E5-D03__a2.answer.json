@@ -1,0 +1,1 @@
+{"answer_text": "无法取数：工具面 none（tool_face=\"scripted\"、tool_calls=[]），本装配无查询通路，该天区内天体一个也没查到。信封 state=\"empty\"、error_code=null、row_count=0、pages=0、extra_page_empty=false、total_count=0、returned_count=0、truncated=false；envelopes=[]、n_rows_observed=0、row_keys=[]、first_row={}。stable_uri、session_id、snapshot_id 均 null，无来源与 content_trust，无可信引用。以上即全部观测事实。"}

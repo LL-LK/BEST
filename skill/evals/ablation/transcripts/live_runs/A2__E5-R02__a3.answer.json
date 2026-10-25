@@ -1,0 +1,1 @@
+{"answer_text": "请求被拒（route=reject），无工具调用。state=empty：row_count=0、total_count=0、returned_count=0，truncated=false；stable_uri/session_id/snapshot_id 均 null，无来源/content_trust 字段。工具面 toolbox。ps1 导出 FITS 未执行，无行数与关键列观测值。"}

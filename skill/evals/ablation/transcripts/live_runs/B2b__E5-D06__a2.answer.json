@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(catalog=ps1, RA=180.0, Dec=30.0, 半径 18000″=5°, max_rows=3000)：row_count=0、total_count=0、returned_count=0，truncated=false，state=empty，error_code 空。信封未给来源、stable_uri、content_trust、snapshot_id；provenance 仅 session_id=s4897、lineage={}，故无稳定引用可核。本次未取到任何 ps1 源。"}

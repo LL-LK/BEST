@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：唯一调用 cone_search 被离线纪律拦截，未发请求（http_requests=0）。信封 state=error、error_code=E_BACKEND、tool_face=toolbox；row_count、pages、total_count、returned_count 均 0，truncated=false；stable_uri、session_id、snapshot_id 均 null，provenance 空，无 content_trust。n_rows_observed=0，row_keys 空，无关键列与数值。交叉匹配无法完成。"}

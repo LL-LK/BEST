@@ -1,0 +1,1 @@
+{"answer_text": "ps1 星表 cone_search(RA=180.0, Dec=30.0, 半径 5″)：命中源数 0。计数三元组全零（row_count=returned_count=total_count=0），state=empty，truncated=false，pages=0，error_code=null，查询成功、非截断、非报错致空；0 行故无行键与数值。来源/血缘：stable_uri=null，session_id=s4906，snapshot_id=null，tool_face=toolbox；观测无 content_trust 字段。http_requests=0。"}

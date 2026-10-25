@@ -1,0 +1,1 @@
+{"answer_text": "tool_calls 为空，state=empty，无数据行：row_count=0、total_count=0、returned_count=0、pages=0、truncated=false。stable_uri、session_id、snapshot_id 均 null，无来源与快照，信封无 content_trust。row_keys、first_row 空，无关键列。请补源名或坐标。"}

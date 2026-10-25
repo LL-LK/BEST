@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-09
+utterance: 按名字查这颗星在 BEST 的标准星记录。
+category: multi
+expect_first_tool: resolve_name
+reruns: 5
+stability_class: name_then_cone
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - row_count
+relative_time_expression: false
+notes: 映射 E1 NL2T-09; 判稳维度 name_then_cone; 禁相对时间表述 (硬约束)

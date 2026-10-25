@@ -1,0 +1,362 @@
+# E3 fixture 块 —— 全部取自真实抓取 (2026-10-04, ops/live_fetch.py)
+# 本文件由 temp/_e3_build_fixtures.py 生成; items.yaml 尚未切换到它 (换题需另一道审批)。
+# 每块的 note 写明来源快照与 0-based 行号, 复核人可直接翻到那一行。
+fx_ps1_pair:
+  note: ps1 两行 (真实抓取); row_1 五波段星等**与误差都是真值**, row_2 部分波段为哨兵。来源 live_ps1_ra180.0_dec30.0_r60.0as 第 31 与第 0 行 (0-based)
+  columns:
+  - ps1_ra
+  - ps1_dec
+  - ps1_source_id
+  - ps1_gpsf
+  - ps1_gpsf_corr
+  - ps1_gpsf_err
+  - ps1_rpsf
+  - ps1_rpsf_corr
+  - ps1_rpsf_err
+  - ps1_ipsf
+  - ps1_ipsf_corr
+  - ps1_ipsf_err
+  - ps1_zpsf
+  - ps1_zpsf_corr
+  - ps1_zpsf_err
+  - ps1_ypsf
+  - ps1_ypsf_err
+  - ps1_gflags
+  - ps1_rflags
+  - ps1_iflags
+  - ps1_zflags
+  - ps1_yflags
+  row_1:
+    ps1_ra: 180.00785335980058
+    ps1_dec: 30.003521413309038
+    ps1_source_id: null
+    ps1_gpsf: 20.09479680350874
+    ps1_gpsf_corr: null
+    ps1_gpsf_err: 0.0548209995031356
+    ps1_rpsf: 19.090110214761232
+    ps1_rpsf_corr: null
+    ps1_rpsf_err: 0.0292409993708133
+    ps1_ipsf: 18.49712516007897
+    ps1_ipsf_corr: null
+    ps1_ipsf_err: 0.0211660005152225
+    ps1_zpsf: 18.51583316608017
+    ps1_zpsf_corr: null
+    ps1_zpsf_err: 0.0186459999531507
+    ps1_ypsf: 18.199303821759656
+    ps1_ypsf_err: 0.0170809999108314
+    ps1_gflags: 16892216.0
+    ps1_rflags: 16892216.0
+    ps1_iflags: 16892216.0
+    ps1_zflags: 16892216.0
+    ps1_yflags: 16892216.0
+  row_2:
+    ps1_ra: 179.99904154
+    ps1_dec: 29.99972728
+    ps1_source_id: null
+    ps1_gpsf: -1004.072785155375
+    ps1_gpsf_corr: null
+    ps1_gpsf_err: -999.0
+    ps1_rpsf: -1003.8802043547206
+    ps1_rpsf_corr: null
+    ps1_rpsf_err: -999.0
+    ps1_ipsf: 19.49426718384701
+    ps1_ipsf_corr: null
+    ps1_ipsf_err: 0.1456020027399063
+    ps1_zpsf: -1002.8793790607464
+    ps1_zpsf_corr: null
+    ps1_zpsf_err: -999.0
+    ps1_ypsf: -1001.9398327638605
+    ps1_ypsf_err: -999.0
+    ps1_gflags: 0.0
+    ps1_rflags: 0.0
+    ps1_iflags: 4112.0
+    ps1_zflags: 0.0
+    ps1_yflags: 0.0
+fx_sentinel_only:
+  note: 'ps1 一行: 五波段全为哨兵, 只有位置列有效 (真实抓取)。来源 live_ps1_ra180.0_dec30.0_r60.0as 第 2 行 (0-based)'
+  columns:
+  - ps1_ra
+  - ps1_dec
+  - ps1_gpsf
+  - ps1_rpsf
+  - ps1_ipsf
+  - ps1_zpsf
+  - ps1_ypsf
+  - ps1_gpsf_err
+  - ps1_rpsf_err
+  - ps1_ipsf_err
+  - ps1_zpsf_err
+  - ps1_ypsf_err
+  row_1:
+    ps1_ra: 180.00040814
+    ps1_dec: 29.99895175
+    ps1_gpsf: -1004.0727896856502
+    ps1_rpsf: -1003.8802348337593
+    ps1_ipsf: -1003.536070959497
+    ps1_zpsf: -1002.879430343235
+    ps1_ypsf: -1001.9398308856275
+    ps1_gpsf_err: -999.0
+    ps1_rpsf_err: -999.0
+    ps1_ipsf_err: -999.0
+    ps1_zpsf_err: -999.0
+    ps1_ypsf_err: -999.0
+fx_stripe82_syn:
+  note: 'stripe82 一行: rmmed/rmmu/rmrms/rmsig 是多次观测的中值与离散度合成量, *_h22 是 H22 视宁度改正星等 (与合成量**数值极接近但不同产物** —— 本行 r_h22=16.611 vs rmmed=16.614), u 波段另有自己的 nobs/rms/chi2。来源 live_stripe82_ra30.0_dec0.0_r300.0as
+    第 0 行 (0-based)'
+  columns:
+  - stripe82_ra
+  - stripe82_dec
+  - stripe82_calibstars_id
+  - stripe82_nb
+  - stripe82_ar
+  - stripe82_rarms
+  - stripe82_decrms
+  - stripe82_rmchi2
+  - stripe82_rmmed
+  - stripe82_rmmu
+  - stripe82_rmrms
+  - stripe82_rmsig
+  - stripe82_rnobs
+  - stripe82_gmchi2
+  - stripe82_gmmed
+  - stripe82_unobs
+  - stripe82_ummed
+  - stripe82_umrms
+  - stripe82_umchi2
+  - stripe82_umsig
+  - stripe82_u_h22
+  - stripe82_r_h22
+  - stripe82_g_h22
+  - stripe82_i_h22
+  - stripe82_z_h22
+  row_1:
+    stripe82_ra: 29.967632
+    stripe82_dec: 0.024272
+    stripe82_calibstars_id: CALIBSTARS_0813769
+    stripe82_nb: 22
+    stripe82_ar: 0.084
+    stripe82_rarms: 0.0467
+    stripe82_decrms: 0.0467
+    stripe82_rmchi2: 0.422
+    stripe82_rmmed: 16.614
+    stripe82_rmmu: 16.611
+    stripe82_rmrms: 0.008
+    stripe82_rmsig: 0.004
+    stripe82_rnobs: 20
+    stripe82_gmchi2: 1.13
+    stripe82_gmmed: 18.009
+    stripe82_unobs: 21
+    stripe82_ummed: 20.59
+    stripe82_umrms: 0.096
+    stripe82_umchi2: 1.474
+    stripe82_umsig: 0.013
+    stripe82_u_h22: 20.564
+    stripe82_r_h22: 16.611
+    stripe82_g_h22: 18.009
+    stripe82_i_h22: 15.759
+    stripe82_z_h22: 15.29
+fx_gaia_mixed:
+  note: 'gaia_dr3_18 一行: 含视差及其误差、ipd_frac_multi_peak、ruwe、Teff(GSP-Phot)、phot_variable_flag、has_epoch_photometry、duplicated_source, 以及两个仓内references/photometric-systems.md 无释义的 *_y21 列 (未知列检测题)。来源 live_gaia_dr3_18_ra286.1_dec15.7_r300.0as
+    第 0 行 (0-based)'
+  columns:
+  - gaia_dr3_18_source_id
+  - gaia_dr3_18_ra
+  - gaia_dr3_18_dec
+  - gaia_dr3_18_parallax
+  - gaia_dr3_18_parallax_error
+  - gaia_dr3_18_phot_g_mean_flux
+  - gaia_dr3_18_phot_g_mean_flux_error
+  - gaia_dr3_18_phot_g_mean_flux_over_error
+  - gaia_dr3_18_phot_g_mean_mag
+  - gaia_dr3_18_phot_bp_mean_mag
+  - gaia_dr3_18_phot_g_mean_mag_y21
+  - gaia_dr3_18_phot_bp_mean_mag_y21
+  - gaia_dr3_18_teff_gspphot
+  - gaia_dr3_18_phot_variable_flag
+  - gaia_dr3_18_has_epoch_photometry
+  - gaia_dr3_18_duplicated_source
+  - gaia_dr3_18_ipd_frac_multi_peak
+  - gaia_dr3_18_ruwe
+  - gaia_dr3_18_astrometric_chi2_al
+  row_1:
+    gaia_dr3_18_source_id: 4512921183874236032
+    gaia_dr3_18_ra: 286.1016964504027
+    gaia_dr3_18_dec: 15.6194192817014
+    gaia_dr3_18_parallax: 0.3596573444396886
+    gaia_dr3_18_parallax_error: 0.09508359
+    gaia_dr3_18_phot_g_mean_flux: 1952.3129692322348
+    gaia_dr3_18_phot_g_mean_flux_error: 1.4546459
+    gaia_dr3_18_phot_g_mean_flux_over_error: 1342.1226
+    gaia_dr3_18_phot_g_mean_mag: 17.460993
+    gaia_dr3_18_phot_bp_mean_mag: 18.20427
+    gaia_dr3_18_phot_g_mean_mag_y21: 17.45913697260331
+    gaia_dr3_18_phot_bp_mean_mag_y21: 18.188026027637473
+    gaia_dr3_18_teff_gspphot: 5124.75
+    gaia_dr3_18_phot_variable_flag: NOT_AVAILABLE
+    gaia_dr3_18_has_epoch_photometry: 'False'
+    gaia_dr3_18_duplicated_source: 'False'
+    gaia_dr3_18_ipd_frac_multi_peak: 0
+    gaia_dr3_18_ruwe: 1.0152063
+    gaia_dr3_18_astrometric_chi2_al: 502.05948
+fx_xpsp_flux:
+  note: 'xpsp 一行: 只有分波段 flux 形态列 (j0430/j0440), **无对应 mag 列** —— 星表确实这么发布, 不是投影漏了 (真实抓取)。来源 live_xpsp_ra10.68_dec41.27_r300.0as 第 0 行'
+  columns:
+  - gaiaxp_photinfo_replenish_ra
+  - gaiaxp_photinfo_replenish_dec
+  - jpas_j0430_j0430_xpsp
+  - jpas_j0430_j0430_err
+  - jpas_j0440_j0440_xpsp
+  row_1:
+    gaiaxp_photinfo_replenish_ra: 10.71087
+    gaiaxp_photinfo_replenish_dec: 41.195442
+    jpas_j0430_j0430_xpsp: 18.09553414254956
+    jpas_j0430_j0430_err: 0.40810437123573445
+    jpas_j0440_j0440_xpsp: 18.017632668316914
+fx_zero_rows:
+  note: '工具返回: total=0, rows=[], ok=true, error_code=null。**真实抓取** ps1@(10.0,-45.0) r=60" —— getcount 回 {"total":0}, 分页回 200 + 12 列表头 CSV + 0 数据行 (来源 live_ps1_ra10.0_dec-45.0_r60.0as)'
+  tool_return:
+    total: 0
+    ok: true
+    truncated: false
+    catalog: ps1
+    cone_radius_arcsec: 60.0
+    rows: []
+fx_crossmatch_hit:
+  note: 'proximity 匹配结果一行: inputobjs_* 是**查询输入与角距的回连列**, 不是源的位置 (input_line 是 1-based, 三个输入点回显 1/2/3)。来源 live_ps1_proximity_n3_5d2580ec 第 0 行'
+  columns:
+  - inputobjs_input_line
+  - inputobjs_input_ra
+  - inputobjs_input_dec
+  - inputobjs_dist_arcsec
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_gpsf
+  row_1:
+    inputobjs_input_line: 1
+    inputobjs_input_ra: 180.0
+    inputobjs_input_dec: 30.0
+    inputobjs_dist_arcsec: 3.145341797840495
+    ps1_ra: 179.99904154
+    ps1_dec: 29.99972728
+    ps1_rpsf: -1003.8802043547206
+fx_xcatalog_ps1:
+  note: 'ps1 一行, **与 fx_stripe82_syn 是同一颗星**: stripe82 那行在 (29.967632, 0.024272) rmmed=16.614, 本行在 (29.967678, 0.024254) rpsf=16.6079 —— 位置差约 0.5", 两表星等**吻合到 0.006 mag**。来源 live_ps1_ra29.967632_dec0.024272_r5.0as
+    第 0 行 (0-based)'
+  columns:
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_rpsf_err
+  - ps1_gpsf
+  - ps1_ipsf
+  row_1:
+    ps1_ra: 29.967678109946213
+    ps1_dec: 0.024253774066412
+    ps1_rpsf: 16.607850894793785
+    ps1_rpsf_err: 0.0033420000690966
+    ps1_gpsf: 17.811385445332267
+    ps1_ipsf: 15.761736154033809
+fx_ps1_flags:
+  note: 'ps1 一行: **y 波段 flags 与其余波段不一致** (yflags=114720.0 vs gflags=16416.0, rflags=16892208.0, iflags=115000.0, zflags=115000.0)。flags 是位掩码, 各位含义须查列元数据页, 不得臆断。来源 live_ps1_ra180.0_dec30.0_r60.0as 第 11 行
+    (0-based)'
+  columns:
+  - ps1_ra
+  - ps1_dec
+  - ps1_gflags
+  - ps1_rflags
+  - ps1_iflags
+  - ps1_zflags
+  - ps1_yflags
+  row_1:
+    ps1_ra: 179.9962750785706
+    ps1_dec: 30.001553494617557
+    ps1_gflags: 16416.0
+    ps1_rflags: 16892208.0
+    ps1_iflags: 115000.0
+    ps1_zflags: 115000.0
+    ps1_yflags: 114720.0
+fx_uss_classstar_low:
+  note: 'uss_dr1 一行: u_class_star=0.07643004 (接近 0 → 形态偏扩展源), 同一行 j0378 波段另有自己的 class_star —— **按波段各自测量**, 不能拿一个波段的形态分类套到另一波段。来源 live_uss_dr1_ra120.3_dec-20.4_r300.0as 第 333 行'
+  columns:
+  - ra_u
+  - dec_u
+  - u_class_star
+  - u_pstotal
+  - j0378_class_star
+  - j0378_pstotal
+  row_1:
+    ra_u: 1.1896018
+    dec_u: 1.0214283
+    u_class_star: 0.07643004
+    u_pstotal: 15.187884
+    j0378_class_star: 0.6653897
+    j0378_pstotal: 14.710689
+fx_two_zero_catalogs:
+  note: '两张恒 0 的表各一次真实锥搜的回包 (2026-10-04 抓取, 逐字段取自 capture_log.json
+    / snapshot.yaml): **两者的回包形态完全一致** —— getcount 回 {"total":0} + 分页 HTTP 200
+    + 带 BOM 的表头 CSV + 0 数据行 + success=true/error_code=null。形态一致正是"必须分开
+    报告"的前提: 光看回包分不出"统计正常"与"疑似站点侧异常"。**jplus_dr3 这次刻意探在它
+    自己的公认天区内 (10.0, -60.0 落在 Dec -79..-45)**: 区外探到的 0 恰恰是"该表没覆盖这里"
+    能解释的结果, 那样一道题就会惩罚"指出这点"这个更正确的回答。区内仍 0 才让"疑似站点侧
+    异常"与回包自洽。覆盖统计 (探测处数/全表行数/期望命中) 取自 ops/live_fetch.py::COVERAGE_NOTES
+    记的同批 live 实跑 (temp/LIVE-COVERAGE-*.json),
+    站方真值与逐条形态见 docs/EVAL-LIVE-FETCH-WAIVER.md §5.3/§5.4 与 references/site-endpoints-and-interactions.md
+    §10.3。**注意**: temp/LIVE-COVERAGE-results.json 里那批旧探测的 page1_head 是 {"error":"Not Found"},
+    该说法已在 CHANGELOG 撤回 (与入库快照矛盾), 本 fixture 只采信入库快照的自洽形态。'
+  tool_returns:
+  - catalog: landolt
+    cone_ra: 10.68
+    cone_dec: 41.27
+    cone_radius_arcsec: 300.0
+    getcount_status: 200
+    getcount_bytes: 12
+    getcount_body: '{"total":0}'
+    page_status: 200
+    page_bytes: 820
+    page_header_columns: 53
+    page_data_rows: 0
+    form_page_status: 200
+    form_page_bytes: 17564
+    sqlid: 4784
+    success: true
+    total: 0
+    truncated: false
+    error_code: null
+  - catalog: jplus_dr3
+    cone_ra: 10.0
+    cone_dec: -60.0
+    cone_radius_arcsec: 300.0
+    getcount_status: 200
+    getcount_bytes: 12
+    getcount_body: '{"total":0}'
+    page_status: 200
+    page_bytes: 229
+    page_header_columns: 12
+    page_data_rows: 0
+    form_page_status: 200
+    form_page_bytes: 13307
+    sqlid: 5080
+    success: true
+    total: 0
+    truncated: false
+    error_code: null
+  coverage_probe:  # 同批 live 覆盖探测的登记值 (ops/live_fetch.py::COVERAGE_NOTES); 非新抓, 逐条可对 CHANGELOG
+    landolt_probes: 45
+    landolt_total_rows: 45712
+    landolt_rows_per_deg2: 1
+    landolt_density_quotient_deg2: 3.7
+    landolt_probe_cone_radius_deg: 0.5
+    landolt_expected_hits_in_cone: 0.018
+    jplus_dr3_probes: 24
+    jplus_dr3_probe_dec_range: Dec -79..-45
+    jplus_dr3_probe_max_radius_deg: 5
+    jplus_dr3_probe_max_area_deg2: 385
+  archived_form:  # jplus_dr3 入库快照的留档形态: 自洽、无软 404、分页请求确实发出
+    jplus_getcount_body: '{"total":0}'
+    jplus_page_status: 200
+    jplus_page_header_columns: 12
+    jplus_page_data_rows: 0
+    soft_404_present_in_snapshot: false
+    paged_request_sent: true
+    capture_log_request_count: 3

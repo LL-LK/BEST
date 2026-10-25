@@ -1,0 +1,1 @@
+{"answer_text": "未执行工具调用，路由 reject。state=empty；total_count、returned_count、row_count 均 0，truncated=false，0 行。stable_uri、session_id、snapshot_id 均 null，tool_face=toolbox。信封无来源与 content_trust 字段。故零行、无稳定引用与快照，上传交叉匹配未执行。"}

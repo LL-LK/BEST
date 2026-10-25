@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 RA=180.0、Dec=0.0、半径 60″ 为空：total_count=0、returned_count=0、pages=0，两跳各 0 行，truncated=false，第 2 页仍空（extra_page_empty=true）。来源与引用：session_id=s4926，stable_uri=best://ps1/cone?ra=180.0&dec=0.0&sr=60.0 与 best://sqlid/s4926?page=2&rows=2；snapshot_id=null；content_trust=untrusted；tool_face=toolbox。无行可报。"}

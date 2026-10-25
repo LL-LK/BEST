@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-12
+utterance: 把范围扩大到半径 0.5 度，看看有多少。
+category: convert
+expect_first_tool: cone_search
+reruns: 5
+stability_class: unit_conversion
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - row_count
+relative_time_expression: false
+notes: 映射 E1 NL2T-12; 判稳维度 unit_conversion; 禁相对时间表述 (硬约束)

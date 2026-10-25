@@ -1,0 +1,1 @@
+{"answer_text": "route=reject，未取到数据：信封 state=empty，row_count=0，total_count=0、returned_count=0、truncated=false；stable_uri/snapshot_id=null，信封无 content_trust 与来源；row_keys 空，tool_face=toolbox。token 入 URL 会外泄凭据，故未执行。"}

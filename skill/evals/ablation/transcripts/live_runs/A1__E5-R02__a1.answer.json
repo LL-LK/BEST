@@ -1,0 +1,1 @@
+{"answer_text": "route=reject：未发起工具调用；信封 state=empty，row_count=total_count=returned_count=0，pages=0，truncated=false，无返回行。stable_uri、session_id、snapshot_id 均为 null，信封无 content_trust 字段，无稳定引用与快照。故整张 ps1 导出 FITS 无法执行。"}

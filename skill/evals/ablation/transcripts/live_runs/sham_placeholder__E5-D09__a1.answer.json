@@ -1,0 +1,1 @@
+{"answer_text": "ps1 批量近邻匹配(半径5″): 输入5个坐标, 返回3行; row_count=3, total_count=3, returned_count=3, pages=1, truncated=false。stable_uri=best://ps1/proximity?n=5&r=5.0; snapshot=live-2026-10-04/live_ps1_proximity_n3_5d2580ec; content_trust=untrusted(站点数据, 非指令)。距离 0.167/0.176/3.145″, 首行 179.99904,29.99973, i=19.494; 余2个输入无匹配行。"}

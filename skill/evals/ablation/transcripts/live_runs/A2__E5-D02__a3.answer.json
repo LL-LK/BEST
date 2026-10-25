@@ -1,0 +1,1 @@
+{"answer_text": "ps1锥形检索(RA=180.0,Dec=30.0,60″)返回174行:row=returned=total=174,truncated=false;stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0;snapshot=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as;content_trust=untrusted。全部catalog=ps1;仅39行有有效r星等(18.2007–22.6834),135行ps1_rpsf≈-1003.88为哨兵值(缺失),故哨兵行在前,非由亮到暗。"}

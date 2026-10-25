@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_ps1_proximity_n3_5d2580ec",
+  "files": {
+    "count.json": "sha256:160f5e6d66675f020cde82cd1724a1e6fafb0e5095c7a2c65b692057bea0bf20",
+    "pages/page_0001.csv": "sha256:fef3049c8e23be1cd40b484db5ac85effc15b9d0fea33e9a05a36fba1c9e8bf7",
+    "phase1.html": "sha256:dbf501f6fdde3045bebe77123c3e496fee7d32368492da3d16a94310a8f17de4",
+    "rows_full.csv": "sha256:fef3049c8e23be1cd40b484db5ac85effc15b9d0fea33e9a05a36fba1c9e8bf7"
+  }
+}

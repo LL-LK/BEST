@@ -1,0 +1,1 @@
+{"answer_text": "观测为空：tool_calls 空，state=empty，row_count=0/total_count=0/returned_count=0，truncated=false；stable_uri=null，session_id、snapshot_id 均无，tool_face=toolbox。行数 0、列名空，未取到该星任何测光记录，故无法绘制光变曲线，也无法估算周期。所给 ps1_*psf 星等为单历元静态值，不含时间序列，不足以做周期分析；请补充含 mjd 的多历元数据后重试。"}

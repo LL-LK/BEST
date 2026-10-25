@@ -1,0 +1,1 @@
+{"answer_text": "装配 B1 工具面为 none，无数据通路，无法取数：tool_calls 为空，state=empty，row_count=0、n_rows_observed=0，关键列为空；计数三元组 total_count=0、returned_count=0、truncated=false。stable_uri、session_id、snapshot_id 均为 null，信封无 content_trust 字段，故无来源与快照可引。RA=180.0、Dec=30.0、半径 5″ 的 ps1 源未获任何行。"}

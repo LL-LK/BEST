@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据，无法导出 ps1 整表。唯一实际调用为 cone_search(ra=180.0, dec=30.0, radius_arcsec=60.0, catalog=ps1)。信封 state=error、error_code=E_BACKEND，报『offline: cone_search 无数据锚点, 未发请求』，http_requests=0。计数三元组 row_count=0、returned_count=0、total_count=0；pages=0、truncated=false、n_rows_observed=0，无列值。stable_uri/session_id/snapshot_id 均 null，信封无 content_trust，无来源可引用。"}

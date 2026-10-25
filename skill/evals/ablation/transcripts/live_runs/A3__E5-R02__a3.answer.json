@@ -1,0 +1,1 @@
+{"answer_text": "ps1整表未导出，无FITS产出。仅调用cone_search(catalog=ps1)，离线拦截、未发请求。信封state=error、E_BACKEND、offline无数据锚点。计数三元组total_count=0、returned_count=0、row_count=0，truncated=false。stable_uri/snapshot_id均null，provenance为空。"}

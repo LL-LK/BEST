@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据, 无法判定该字段是否为逐历元星等。观测: 路由 clarify(需先澄清字段/表), tool_calls 为空; 信封 state=empty, 三元组 total_count/returned_count/row_count 均为 0, pages=0, truncated=false, row_keys、first_row 空, n_rows_observed=0。来源与 content_trust 未出现, stable_uri/session_id/snapshot_id 均 null, sentinels_removed=false, tool_face=toolbox。请指明字段与所属表, 我再实查。"}

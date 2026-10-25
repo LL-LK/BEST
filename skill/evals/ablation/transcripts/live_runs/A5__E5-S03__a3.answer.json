@@ -1,0 +1,1 @@
+{"answer_text": "实测未取数：tool_calls 为空，state=empty，row_count/total_count/returned_count=0/0/0，truncated=false；stable_uri、session_id、snapshot_id 均 null，sentinels_removed=false。观测中无 -999/-1004 记录，无法判定该源能否用于测光分析。"}

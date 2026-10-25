@@ -1,0 +1,1 @@
+{"answer_text": "本次装配工具面为 none，无网络与数据通路，未执行任何查询（tool_calls 为空），故无法取数，不能确认该处有几颗源。信封状态为 empty，未报错（error_code 为 null）；返回行数、服务端总数与页数均为 0，截断为 false。来源、stable_uri、快照标识、session_id 均为 null，无 content_trust 字段，即无数据出处可引。行键列表为空。"}

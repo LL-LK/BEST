@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：路线 clarify、tool_calls 为空，未发起取数。信封 state=empty，计数三元组 row_count=0、total_count=0、returned_count=0，truncated=false；stable_uri、session_id、snapshot_id 均为 null，无来源与 content_trust。工具面 toolbox 有通路但未调用，无法确认 RA=120.3°、Dec=−20.4°、5″ 内标准星，请补充参数后重试。"}

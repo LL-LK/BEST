@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到数据：工具调用 0 次，state=empty、error_code=null、row_count=0、pages=0、total_count=0、returned_count=0、truncated=false、extra_page_empty=false；stable_uri/session_id/snapshot_id 均为 null，sentinels_removed=false，tool_face=toolbox；envelopes、row_keys、first_row 皆空，无来源与快照可报，故无法据数判定该星是否变星。就口径而言，NOT_AVAILABLE 是字段缺失，不等于「非变星」；缺失值推不出否定结论。"}

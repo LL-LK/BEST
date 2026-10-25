@@ -1,0 +1,1 @@
+{"answer_text": "对 RA=180.0、Dec=0.0、半径 0 角秒的 ps1 圆锥检索已执行（工具 cone_search，catalog=ps1，radius_arcsec=0.0，max_rows=1000）。观测结果：state=empty，返回 0 行，服务端 total_count=0，returned_count=0，truncated=false，error_code 为 null，仅发出 1 次 HTTP 请求。stable_uri 为空字符串，provenance 只给出 session_id=s4925（snapshot_id 为 null）。计数三元组 (0, 0, false) 与空行集一致，无任何行列值可报，故该位置未取得可用记录。"}

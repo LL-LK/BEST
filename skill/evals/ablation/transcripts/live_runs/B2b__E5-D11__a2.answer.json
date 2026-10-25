@@ -1,0 +1,1 @@
+{"answer_text":"ps1 锥形检索(RA=180.0,Dec=30.0,5″)：state=rows，3 行，total_count=3、returned_count=3、pages=1、truncated=false，即全量。源1(179.99904154,29.99972728)仅 i=19.4943±0.1456；源2(180.00110257,29.99945356)仅 g=18.5992±0.0102；源3(180.00040814,29.99895175)无星等。r、g 双波段星等及误差不存在：rpsf/rpsf_err 全为哨兵 -1003.88/-999.0，g 仅源2有。stable_uri 空、session_id/snapshot_id 为 null、无 content_trust。"}

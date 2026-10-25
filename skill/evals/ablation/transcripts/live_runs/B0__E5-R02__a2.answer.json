@@ -1,0 +1,1 @@
+{"answer_text": "ps1 全表 FITS 导出未执行: cone_search(catalog=ps1) 被离线拦截(未发请求); 信封 state=error、error_code=E_BACKEND。计数 row_count=returned_count=total_count=0, 未截断; stable_uri、session_id、snapshot_id 均 null, 无 content_trust。"}

@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none，无数据通路，未取数。信封 state=empty；三元组 returned_count=0、total_count=0、truncated=false，row_count=0、pages=0；stable_uri、snapshot_id 为 null，无来源与 content_trust，故无行列数值。token 拼进查询参数判 reject：URL 会进日志缓存，应走请求头。"}

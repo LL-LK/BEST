@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none，无数据通路，未能取数：tool_calls 空。信封 state=empty(无错)，计数三元组 total_count=0、returned_count=0、row_count=0，truncated=false；stable_uri=null，无 content_trust 与来源标识。故该 ps1 查询未取到任何行，服务端总数不可知，无稳定引用可复现。"}

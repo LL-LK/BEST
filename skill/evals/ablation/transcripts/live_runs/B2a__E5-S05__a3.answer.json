@@ -1,0 +1,1 @@
+{"answer_text": "信封 state=empty、tool_face=raw_protocol，row_keys 与 first_row 为空；计数三元组 row_count=0、total_count=0、returned_count=0，pages=0，truncated=false，extra_page_empty=false；stable_uri、session_id、snapshot_id 均为 null，无来源与 content_trust 字段。即本次未取到任何行，也无稳定引用与快照标识，无法据此判断该星是否变星。phot_variable_flag=NOT_AVAILABLE 只表示该标志未提供/未计算，不等于“已判定非变星”；须先取到该标志的实际取值再下结论。"}

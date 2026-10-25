@@ -1,0 +1,1 @@
+{"answer_text": "不能。本次查询结果为空：state=empty、row_count=0、returned_count=0、total_count=0，truncated=false、tool_calls=0；信封无来源、stable_uri、content_trust、快照标识（均 null），tool_face=toolbox。即一行未取到，phot_variable_flag 无从核验，不能判断是否变星；NOT_AVAILABLE 仅指该字段标注状态。"}

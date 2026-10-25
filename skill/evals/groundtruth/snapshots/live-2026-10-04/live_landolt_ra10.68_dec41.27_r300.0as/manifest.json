@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_landolt_ra10.68_dec41.27_r300.0as",
+  "files": {
+    "count.json": "sha256:2af3e2cbc7a782037439ecebbe422a8fa52fb3adede1b26146310d83878ee82d",
+    "pages/page_0001.csv": "sha256:8502216a5ae27b80f717ea65f35acbe96892af1c3f8b344d28eb3f49c5a95aee",
+    "phase1.html": "sha256:57a8a3d44e276535f02f47977fa71ca0dfa7f7e23d5a008e69533666b05e957e",
+    "rows_full.csv": "sha256:8502216a5ae27b80f717ea65f35acbe96892af1c3f8b344d28eb3f49c5a95aee"
+  }
+}

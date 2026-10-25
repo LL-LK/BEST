@@ -1,0 +1,1 @@
+{"answer_text": "查询走 clarify 路径，无工具调用，工具面 toolbox。信封 state=empty、error_code=null：RA=120.3°、Dec=−20.4°、5″ 内无记录。计数三元组 total_count=0、returned_count=0、row_count=0；pages=0，truncated=false，extra_page_empty=false，sentinels_removed=false；n_rows_observed=0，row_keys、first_row、notes 均空。来源 stable_uri、session_id、snapshot_id 全为 null，envelopes 为空，无稳定引用与快照标识可报。"}

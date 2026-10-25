@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-22",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "reject",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "光变曲线我给不了：BEST 站内没有时序数据。它是均一定标数据库，存的是单次定标后的平均星等（ps1_rpsf、splus_dr4_r_pstotal、gaia_dr3_18_phot_g_mean_mag 这类），既没有多历元差分星等序列，也没有按时间索引的采样点。“过去五年”这种时间窗口在站内的端点里没有对应入口——我只有锥形检索（位置）、批量坐标匹配、计数、分页、列元数据、天体名解算这七件事。\n也别被列名误导：gaia_dr3_18 里的 gaia_dr3_18_has_epoch_photometry / has_epoch_rv 只是“Gaia 那边有没有逐历元测光/多历元 RV”的布尔标记，量本身不在 BEST 站内。\n替代来源（按你的需求挑）：\n（1）ZTF DR：g/r/i 三波段日尺度光变，正是 xpsp 里 ztf_g_g_xpsp / ztf_r_r_xpsp / ztf_i_i_xpsp 那些交叉测光列的上游；\n（2）TESS / Kepler：两分钟星表，适合找周期；\n（3）ASAS-SN、ATLAS 等地面巡天。\n我能帮的衔接：给我天体名（走 resolve_name）或 RA/Dec + 半径（角秒），我先查它有没有进 BEST 的某张定标表、均一定标星等是多少，并把它在 BEST 里的位置（以及视差距离，如有）给你，你拿去时序源按坐标定位就能取到这五年的曲线。",
+  "notes": "时序/光变是明确的能力边界（站点无时序数据、工具面无对应入口）→ reject，并给 ZTF/TESS/ASAS-SN 替代与坐标衔接方案。"
+}

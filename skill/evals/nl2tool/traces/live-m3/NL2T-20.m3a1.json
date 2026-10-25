@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-20",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "不是。BEST 存的是**单历元的定标星等** —— 每个波段一个值配一个误差，不是逐历元时间序列。\n\n具体到各表：\n- ps1：g/r/i/z/y 各一个 PSF 星等（ps1_gpsf … ps1_ypsf），配对应误差（ps1_gpsf_err …）。是一个数，不是一串。\n- gaia_dr3_18：列名里的 mean 就是多次观测的平均值 —— gaia_dr3_18_phot_g_mean_mag 是跨 transit 的平均 G 星等（另有 phot_g_n_obs 告诉你参与平均的次数）。表里确实有 phot_variable_flag 这个列，但它只是「是不是变源」的标记（是/否），不是序列。\n- xpsp / dr3xpcorr：更要注意，*_xpsp 这类列是 XP 光谱拟合的 flux / 系数列（按波长拟合出来的），连时间维度都没有，更不是星等；要 mag 得本地换算。\n\n所以「这个字段」是不是逐历元星等，取决于它在哪张表，但结论一致：BEST 数据面里没有时间序列这个维度，7 个工具里也没有任何时间轴入口。想筛变源可以用 phot_variable_flag 做候选筛选，但要曲线本身得去时序数据源。\n\n你把具体列名（或表名）告我，我用零请求的列元数据工具给你这列的单位、波段归属和同名族列，一眼能确认它是单历元均值、误差、还是 flux。要的话我也可以顺手确认某张表里到底有没有跟它成对的逐历元列（据我所知没有）。",
+  "notes": "概念性问询，零请求直接答：BEST 只有单历元定标星等，mean 类列是跨次平均，phot_variable_flag 只是标记，无时间序列端点。"
+}

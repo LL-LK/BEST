@@ -1,0 +1,1 @@
+{"answer_text": "ps1 近邻匹配（5″，5 输入）仅第1/2/3行命中，返回 3 行，total_count=3，returned_count=3，truncated=false。距离 3.145″/0.167″/0.176″，仅首行有 i=19.4943，余者星等为空、rpsf=-1003.88（哨兵值）。注意返回行赤纬均为正（30.0/29.9995/29.999），与提问负赤纬相反，请核对符号；第4/5行无近邻。来源 BEST ps1，stable_uri=best://ps1/proximity?n=5&r=5.0，snapshot=live-2026-10-04/live_ps1_proximity_n3_5d2580ec，content_trust=untrusted。"}

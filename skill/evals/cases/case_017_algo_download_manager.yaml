@@ -1,0 +1,17 @@
+name: astro-best.case_017_algo_download_manager
+skill: astro-best
+derived_from: "algorithm:{'name': 'DownloadManager', 'module': 'src.download_manager'}"
+given:
+  DownloadRequest:
+    ra: "<float:deg>"
+    dec: "<float:deg>"
+    radius_arcsec: "<float:arcsec>"
+expect:
+  status: pass
+  handoff.status: ready
+  download.background: true
+  download.progress_file: ".progress/<job_id>.json"
+
+# ---
+# 下载能力轮次新增: 后台下载管理器真实行为用例
+# (submit 即返回 / 进度文件 / result 取路径; eval_runner 有真实行为抽查)

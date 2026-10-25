@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到光变曲线：路由为 reject，工具调用为空（tool_calls=[]，tool_face=toolbox），信封 state=empty、error_code=null。计数三元组 row_count=0、returned_count=0、total_count=0，pages=0，extra_page_empty=false，truncated=false；故观测行数 0，无关键列与数值可报。stable_uri 与 session_id、snapshot_id 均为 null，信封未含来源与 content_trust，无法给出出处。请先确认目标天体标识后重试。"}

@@ -1,0 +1,1 @@
+{"answer_text": "查询返回空信封：state=empty，row_count=0、total_count=0、returned_count=0，truncated=false，row_keys 与 first_row 均为空，tool_calls=0。信封未提供来源，stable_uri=null、session_id=null、snapshot_id=null，content_trust 缺失。观测中无 stripe82_rmmed=17.432，不能判定为单次曝光，勿据此写论文。"}

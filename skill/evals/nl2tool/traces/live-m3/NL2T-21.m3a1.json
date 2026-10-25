@@ -1,0 +1,32 @@
+{
+  "task_id": "NL2T-21",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_rpsf",
+          "ps1_rpsf_err",
+          "ps1_class_star",
+          "ps1_gpsf"
+        ],
+        "sort": "ps1.rpsf",
+        "order": "desc",
+        "max_rows": 5
+      }
+    }
+  ],
+  "answer_text": "按 r 波段排了：RA = 180.0°、Dec = +30.0°、半径 60 角秒、ps1，sort = ps1.rpsf、order = desc（星等是数值，desc 就是数值大 = 最亮排在最前），取前 5 行，第一行就是最亮的那个源。\n\n三个坑我先说在前面，免得你看到数字困惑：\n1. -1000 哨兵：ps1 缺某波段测光时会回 ≈-1000 的值（例如 gpsf = -1004.07、误差 = -999.0），这不是「一颗 -1000 等的星」。desc 排序会把这些哨兵甩到最后（因为 -1000 是最小的数），所以正常情况下首行是真值；如果首行落在 -1000 量级，说明这片天区根本没有 r 波段测光，我会直接这么告诉你，而不是报一个假的「最亮源」。\n2. ps1_source_id 线上是空的（列在、值空），所以不能拿它当排序键或主键回连；要确认是不是同一颗源，用坐标加 inputobjs_dist_arcsec（每行到锥心的角距）来对。\n3. 排序只在建会话那一刻定死，之后翻页不会重排。所以「第 1 行最亮」这个结论对当前这一页有效；要拿更靠后的名次，得用同一个会话 id 继续 fetch_page。\n\n返回口径：data 是命中的前 5 行（带 ps1_ 前缀列名 + inputobjs_dist_arcsec），status.truncated 告诉你这一页是不是被截断的，cost 里是真实请求数（建会话 + 取总数 + 取首页 = 3 次），provenance.stable_uri 可复现这次查询。\n\n要不要我改口径：换成「r 星等有值且 class_star 判为恒星」的样本再看最亮（注意恒星形态筛选目前在工具契约里没有列值参数，得取回后本地筛）？或者换表（gaia_dr3_18 的 G、或 splus_dr4 的 r）？",
+  "notes": "最亮源用服务端排序 sort=ps1.rpsf + order=desc 表达，取前 5 行，并预先声明 -1000 哨兵与 ps1_source_id 为空的坑。"
+}

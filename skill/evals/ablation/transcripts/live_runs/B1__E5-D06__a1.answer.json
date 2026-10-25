@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none，无数据通路，取不到数。信封 state=empty：row_count、returned_count、total_count 全 0，pages=0，truncated=false，无列名与行；stable_uri、snapshot_id 均 null，无来源与快照可引用。故 RA=180.0、Dec=30.0、半径 5 度、预算 3000 行的 ps1 查询无返回。"}

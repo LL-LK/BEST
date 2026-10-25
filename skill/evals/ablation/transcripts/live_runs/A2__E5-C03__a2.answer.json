@@ -1,0 +1,1 @@
+{"answer_text": "未调用工具：route=clarify，tool_face=toolbox。信封 state=empty；计数三元组 row_count/returned_count/total_count=0/0/0，pages=0、truncated=false，无行数据与关键列值。stable_uri、session_id、snapshot_id 均为 null（无稳定引用、无快照标识），信封未含 content_trust 与来源字段。故 r 波段误差<0.01 mag 的对象无法筛出，需先澄清星表与范围。"}

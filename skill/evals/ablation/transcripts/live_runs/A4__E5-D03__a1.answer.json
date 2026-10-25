@@ -1,0 +1,1 @@
+{"answer_text": "PS1 锥形检索(RA=180.0,Dec=30.0,r=300″)返回174行, 服务端总数=返回数=174, truncated=false; 行距3.145″–59.935″均在半径内, quality_flag全good, 28行星等为空。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=300.0, session_id=s4909, content_trust=untrusted(按数据处理), snapshot_id=null; 首行i=19.4943±0.1456, RA=179.99904154, Dec=29.99972728。"}

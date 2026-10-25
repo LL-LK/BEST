@@ -1,0 +1,1 @@
+{"answer_text": "装配 B2a，工具面 raw_protocol。信封：session_id=s4926，stable_uri 为空串，无 content_trust、snapshot_id；计数 row_count=770、total_count=770、returned_count=770、pages=0、truncated=false。首行 ra=179.99904154、dec=29.99972728、i=19.494267。但 rows 输入坐标是 RA=180.0、Dec=30.0，非提问的 Dec=0.0，结果未覆盖所请求位置；信封无 sqlid，page=2、page_size=2 无法执行，不能确认按每页 2 行取完。"}

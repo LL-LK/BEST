@@ -1,0 +1,1 @@
+{"answer_text": "不能这样推断。本次查询实际观测到的信封为：state=empty，error_code=null，row_count=0，pages=0，extra_page_empty=false，total_count=0，returned_count=0，truncated=false，tool_face=toolbox；stable_uri、session_id、snapshot_id 均为 null，未给出内容来源与数据快照标识，envelopes 为空数组。即：本次未取得任何行，也没有可用来源可引用，观测中不存在任何支持或否定该星为变星的记录。另，NOT_AVAILABLE 只表示该标志位未提供取值，与「非变星」不同，不能当作否定结论。"}

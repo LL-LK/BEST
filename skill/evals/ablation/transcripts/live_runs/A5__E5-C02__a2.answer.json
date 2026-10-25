@@ -1,0 +1,1 @@
+{"answer_text": "路由为 clarify，未执行任何工具调用，故未取数。信封 state=empty：行数 0、返回 0、服务端总数 0、页数 0，truncated=false，即零结果无截断；row_keys 为空，无关键列。stable_uri、session_id、snapshot_id 均为 null；信封未给出来源与 content_trust。工具面 toolbox；请补充目标星表后重查。"}

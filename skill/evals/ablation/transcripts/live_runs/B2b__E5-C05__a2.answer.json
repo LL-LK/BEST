@@ -1,0 +1,1 @@
+{"answer_text": "未发起工具调用，故未取到标准星清单。信封 state=empty、error_code=null；计数三元组 row_count=0、total_count=0、returned_count=0，truncated=false；来源/快照标识缺失：stable_uri=null、snapshot_id=null，tool_face=toolbox；envelopes 与行集为空，无星名/坐标可报。"}

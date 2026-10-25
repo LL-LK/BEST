@@ -1,0 +1,1 @@
+{"answer_text": "判为 reject，无工具调用，未取数。state=empty、error_code=null；total_count/returned_count/row_count=0，truncated=false。stable_uri/snapshot_id 均 null，无 content_trust。观测行数 0，row_keys 空。r 波段误差<0.01 mag 结果为空。工具面 toolbox。"}

@@ -1,0 +1,16 @@
+{
+  "task_id": "NL2T-01",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "BEST 有 **12 张可查询星表**，按站点的导航分组是这样：\n\n- **calib（定标星表组，7 张）**：`stripe82`（Stripe82 精测）、`gaia_dr3_18`（Gaia DR3 精测定标，155 列）、\n  `jplus_dr3`、`smss_dr4`、`landolt`（Landolt 标准星）、`uss_dr1`、`splus_dr4`（S-PLUS DR4）。\n- **顶层**：`ps1`（Pan-STARRS 全天，30 列；站点也以 `calib/ps1` 发布，同一张表）。\n- **std（标准星组，3 张）**：`scr_galah`（标准星 × GALAH，137 列）、`scr_lamost`（标准星 × LAMOST，137 列）、\n  `xpsp`（Gaia DR3 XP&SP 光谱-测光，287 个可选列、横跨 139 张表单表）。\n- **other（1 张）**：`dr3xpcorr`（修正后的 Gaia DR3 XP 光谱，17 列）。\n\n三个容易踩的点，先说在前面：\n\n1. **`std` / `calib` / `other` 是导航分组，不是表**。拿 `std` 当表名去查不会给你\"表不存在\"，\n   而是内部错误（`/std/f`、`/std/q` 返回 `Internal Server Error`）；`std` 要展开成上面那 3 张成员表。\n2. **没有 `gaia_dr3` 这张表**。线上 id 带 `_18` 后缀，`gaia_dr3` 是软 404；列前缀也是 `gaia_dr3_18.`。\n3. **文档页 ≠ 可查询**。官方 catalog 文档里出现的 SkyMapper DR4（34G）线上不可查（软 404），\n   以可查询路由为准。\n\n这份清单是静态登记的，所以本次零请求。",
+  "notes": "元数据问询走零请求工具 list_catalogs；同时点明 std/calib/other 是导航分组、gaia_dr3 不存在、skymapper 不可查。"
+}

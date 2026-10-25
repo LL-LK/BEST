@@ -1,0 +1,1 @@
+{"answer_text": "未取到光变曲线。唯一调用 cone_search(catalog=ps1, ra=180.0, dec=30.0, radius_arcsec=60.0) 失败：state=error、error_code=E_BACKEND、http_requests=0，未发请求。计数三元组 row_count=0、returned_count=0、total_count=0；pages=0、truncated=false；row_keys 空、first_row 空，无关键列与数值。stable_uri=null、session_id=null、snapshot_id=null，信封无 content_trust 字段。"}

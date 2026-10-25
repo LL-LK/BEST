@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥检索(RA=180.0, Dec=30.0, 半径5.0″)：state=empty，total_count=0，returned_count=0，truncated=false，行键与首行为空。来源：live BEST 站点；stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；快照 live-2026-10-04/live_ps1_ra10.0_dec-45.0_r60.0as；content_trust=untrusted。结论：该 5″ 内 ps1 有 0 个源。"}

@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/a5_no_postcheck.yaml — A5 消融: 拆掉结果后验证
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 A5 列 (结果后验证 ✗, 其余同 B3)
+# 与 §4 A5 行。**哨兵字典本身仍与 E2 共用 (evals/_data/null_sentinel.yaml)** —
+# A5 删的是"剔除规则"不是字典 (§13 已知坑位), 否则 A5 会连判定器一起拆坏。
+system:
+  id: A5
+  kind: ablation
+  label: "B3 − 结果后验证"
+  role: "消融: 量完成自检 / QualityGate / 哨兵剔除 / 截断对账的贡献"
+  base: B3
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    param_validation: true
+    field_semantics: true
+    refusal_rules: true
+    provenance: true
+    # ← 唯一被拆掉的零件
+    post_verify: false
+    unified_envelope: true
+  envelope_keys: [data, status, cost, provenance]
+  ablation_detail:
+    removed_component: >
+      结果后验证 (SKILL.md 完成自检清单 + src/core.QualityGate 过滤 + 哨兵剔除规则
+      + truncated/total_count/returned 三元组对账)
+    mechanism: >
+      取完即交付: -999/-1004 哨兵进答案与统计、截断被当成全量、
+      returned 被当成 total 报告。
+    code_seam: "adapter 层的答案渲染后验证分支开关 (生产码零改动)。"
+    probe_items: [E5-D06, E5-D11, E5-D05]
+  expected_effect:
+    trunc_triple: down (truncated 误判成全量; returned 当 total 报告)
+    field_consistency: down (哨兵当真实值 / 空单元格填 0)
+    hr_num: up (哨兵进统计)
+    sentinel_item: "E5-D11 必须被判错 (V-4 同源)"
+    tool_set_f1: flat (选工具/传参不受影响 — 这是 A5 的鉴别性预期)
+    param_f1: flat
+    reject_acc: flat
+  # ablations/A5
+  linked_hypothesis: hypotheses.yaml
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型; 11 装配同一 model_id/解码参数)
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+
+  notes: >
+    _SENTINEL_EXEMPT_COLUMNS 豁免表继续生效 (§13: 高自行/视差列可合法低于 -999,
+    一刀切误杀会虚增 A5 的掉分) — 拆的是剔除**规则**, 不是判定**字典**。

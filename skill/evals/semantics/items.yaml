@@ -1,0 +1,1141 @@
+_status: '全部 37 题已按真实 fixture 重推, 并已于 2026-10-04 经批准切换为本文件 (铁律 4 结构变更)。fixture 11 组全部逐字段溯源到 snapshots/live-2026-10-04/。每题的 _change 字段记着它相对上一版改了什么, _rebuilt_from 记着新值取自哪一份真实快照的哪一行。2026-10-05 新增 E3-F06 与 fx_two_zero_catalogs (36 → 37 题, F 轴 5 → 6) —— 该次为**题集增题**, 沿用 2026-10-04 已批准的"题集 + fixture 同改"范围。'
+fixtures:
+  fx_ps1_pair:
+    note: ps1 两行 (真实抓取); row_1 五波段星等**与误差都是真值**, row_2 部分波段为哨兵。来源 live_ps1_ra180.0_dec30.0_r60.0as 第 31 与第 0 行 (0-based)
+    columns:
+    - ps1_ra
+    - ps1_dec
+    - ps1_source_id
+    - ps1_gpsf
+    - ps1_gpsf_corr
+    - ps1_gpsf_err
+    - ps1_rpsf
+    - ps1_rpsf_corr
+    - ps1_rpsf_err
+    - ps1_ipsf
+    - ps1_ipsf_corr
+    - ps1_ipsf_err
+    - ps1_zpsf
+    - ps1_zpsf_corr
+    - ps1_zpsf_err
+    - ps1_ypsf
+    - ps1_ypsf_err
+    - ps1_gflags
+    - ps1_rflags
+    - ps1_iflags
+    - ps1_zflags
+    - ps1_yflags
+    row_1:
+      ps1_ra: 180.00785335980058
+      ps1_dec: 30.003521413309038
+      ps1_source_id: null
+      ps1_gpsf: 20.09479680350874
+      ps1_gpsf_corr: null
+      ps1_gpsf_err: 0.0548209995031356
+      ps1_rpsf: 19.090110214761232
+      ps1_rpsf_corr: null
+      ps1_rpsf_err: 0.0292409993708133
+      ps1_ipsf: 18.49712516007897
+      ps1_ipsf_corr: null
+      ps1_ipsf_err: 0.0211660005152225
+      ps1_zpsf: 18.51583316608017
+      ps1_zpsf_corr: null
+      ps1_zpsf_err: 0.0186459999531507
+      ps1_ypsf: 18.199303821759656
+      ps1_ypsf_err: 0.0170809999108314
+      ps1_gflags: 16892216.0
+      ps1_rflags: 16892216.0
+      ps1_iflags: 16892216.0
+      ps1_zflags: 16892216.0
+      ps1_yflags: 16892216.0
+    row_2:
+      ps1_ra: 179.99904154
+      ps1_dec: 29.99972728
+      ps1_source_id: null
+      ps1_gpsf: -1004.072785155375
+      ps1_gpsf_corr: null
+      ps1_gpsf_err: -999.0
+      ps1_rpsf: -1003.8802043547206
+      ps1_rpsf_corr: null
+      ps1_rpsf_err: -999.0
+      ps1_ipsf: 19.49426718384701
+      ps1_ipsf_corr: null
+      ps1_ipsf_err: 0.1456020027399063
+      ps1_zpsf: -1002.8793790607464
+      ps1_zpsf_corr: null
+      ps1_zpsf_err: -999.0
+      ps1_ypsf: -1001.9398327638605
+      ps1_ypsf_err: -999.0
+      ps1_gflags: 0.0
+      ps1_rflags: 0.0
+      ps1_iflags: 4112.0
+      ps1_zflags: 0.0
+      ps1_yflags: 0.0
+  fx_sentinel_only:
+    note: 'ps1 一行: 五波段全为哨兵, 只有位置列有效 (真实抓取)。来源 live_ps1_ra180.0_dec30.0_r60.0as 第 2 行 (0-based)'
+    columns:
+    - ps1_ra
+    - ps1_dec
+    - ps1_gpsf
+    - ps1_rpsf
+    - ps1_ipsf
+    - ps1_zpsf
+    - ps1_ypsf
+    - ps1_gpsf_err
+    - ps1_rpsf_err
+    - ps1_ipsf_err
+    - ps1_zpsf_err
+    - ps1_ypsf_err
+    row_1:
+      ps1_ra: 180.00040814
+      ps1_dec: 29.99895175
+      ps1_gpsf: -1004.0727896856502
+      ps1_rpsf: -1003.8802348337593
+      ps1_ipsf: -1003.536070959497
+      ps1_zpsf: -1002.879430343235
+      ps1_ypsf: -1001.9398308856275
+      ps1_gpsf_err: -999.0
+      ps1_rpsf_err: -999.0
+      ps1_ipsf_err: -999.0
+      ps1_zpsf_err: -999.0
+      ps1_ypsf_err: -999.0
+  fx_stripe82_syn:
+    note: 'stripe82 一行: rmmed/rmmu/rmrms/rmsig 是多次观测的中值与离散度合成量, *_h22 是 H22 视宁度改正星等 (与合成量**数值极接近但不同产物** —— 本行 r_h22=16.611 vs rmmed=16.614), u 波段另有自己的 nobs/rms/chi2。来源 live_stripe82_ra30.0_dec0.0_r300.0as
+      第 0 行 (0-based)'
+    columns:
+    - stripe82_ra
+    - stripe82_dec
+    - stripe82_calibstars_id
+    - stripe82_nb
+    - stripe82_ar
+    - stripe82_rarms
+    - stripe82_decrms
+    - stripe82_rmchi2
+    - stripe82_rmmed
+    - stripe82_rmmu
+    - stripe82_rmrms
+    - stripe82_rmsig
+    - stripe82_rnobs
+    - stripe82_gmchi2
+    - stripe82_gmmed
+    - stripe82_unobs
+    - stripe82_ummed
+    - stripe82_umrms
+    - stripe82_umchi2
+    - stripe82_umsig
+    - stripe82_u_h22
+    - stripe82_r_h22
+    - stripe82_g_h22
+    - stripe82_i_h22
+    - stripe82_z_h22
+    row_1:
+      stripe82_ra: 29.967632
+      stripe82_dec: 0.024272
+      stripe82_calibstars_id: CALIBSTARS_0813769
+      stripe82_nb: 22
+      stripe82_ar: 0.084
+      stripe82_rarms: 0.0467
+      stripe82_decrms: 0.0467
+      stripe82_rmchi2: 0.422
+      stripe82_rmmed: 16.614
+      stripe82_rmmu: 16.611
+      stripe82_rmrms: 0.008
+      stripe82_rmsig: 0.004
+      stripe82_rnobs: 20
+      stripe82_gmchi2: 1.13
+      stripe82_gmmed: 18.009
+      stripe82_unobs: 21
+      stripe82_ummed: 20.59
+      stripe82_umrms: 0.096
+      stripe82_umchi2: 1.474
+      stripe82_umsig: 0.013
+      stripe82_u_h22: 20.564
+      stripe82_r_h22: 16.611
+      stripe82_g_h22: 18.009
+      stripe82_i_h22: 15.759
+      stripe82_z_h22: 15.29
+  fx_gaia_mixed:
+    note: 'gaia_dr3_18 一行: 含视差及其误差、ipd_frac_multi_peak、ruwe、Teff(GSP-Phot)、phot_variable_flag、has_epoch_photometry、duplicated_source, 以及两个仓内references/photometric-systems.md 无释义的 *_y21 列 (未知列检测题)。来源 live_gaia_dr3_18_ra286.1_dec15.7_r300.0as
+      第 0 行 (0-based)'
+    columns:
+    - gaia_dr3_18_source_id
+    - gaia_dr3_18_ra
+    - gaia_dr3_18_dec
+    - gaia_dr3_18_parallax
+    - gaia_dr3_18_parallax_error
+    - gaia_dr3_18_phot_g_mean_flux
+    - gaia_dr3_18_phot_g_mean_flux_error
+    - gaia_dr3_18_phot_g_mean_flux_over_error
+    - gaia_dr3_18_phot_g_mean_mag
+    - gaia_dr3_18_phot_bp_mean_mag
+    - gaia_dr3_18_phot_g_mean_mag_y21
+    - gaia_dr3_18_phot_bp_mean_mag_y21
+    - gaia_dr3_18_teff_gspphot
+    - gaia_dr3_18_phot_variable_flag
+    - gaia_dr3_18_has_epoch_photometry
+    - gaia_dr3_18_duplicated_source
+    - gaia_dr3_18_ipd_frac_multi_peak
+    - gaia_dr3_18_ruwe
+    - gaia_dr3_18_astrometric_chi2_al
+    row_1:
+      gaia_dr3_18_source_id: 4512921183874236032
+      gaia_dr3_18_ra: 286.1016964504027
+      gaia_dr3_18_dec: 15.6194192817014
+      gaia_dr3_18_parallax: 0.3596573444396886
+      gaia_dr3_18_parallax_error: 0.09508359
+      gaia_dr3_18_phot_g_mean_flux: 1952.3129692322348
+      gaia_dr3_18_phot_g_mean_flux_error: 1.4546459
+      gaia_dr3_18_phot_g_mean_flux_over_error: 1342.1226
+      gaia_dr3_18_phot_g_mean_mag: 17.460993
+      gaia_dr3_18_phot_bp_mean_mag: 18.20427
+      gaia_dr3_18_phot_g_mean_mag_y21: 17.45913697260331
+      gaia_dr3_18_phot_bp_mean_mag_y21: 18.188026027637473
+      gaia_dr3_18_teff_gspphot: 5124.75
+      gaia_dr3_18_phot_variable_flag: NOT_AVAILABLE
+      gaia_dr3_18_has_epoch_photometry: 'False'
+      gaia_dr3_18_duplicated_source: 'False'
+      gaia_dr3_18_ipd_frac_multi_peak: 0
+      gaia_dr3_18_ruwe: 1.0152063
+      gaia_dr3_18_astrometric_chi2_al: 502.05948
+  fx_xpsp_flux:
+    note: 'xpsp 一行: 只有分波段 flux 形态列 (j0430/j0440), **无对应 mag 列** —— 星表确实这么发布, 不是投影漏了 (真实抓取)。来源 live_xpsp_ra10.68_dec41.27_r300.0as 第 0 行'
+    columns:
+    - gaiaxp_photinfo_replenish_ra
+    - gaiaxp_photinfo_replenish_dec
+    - jpas_j0430_j0430_xpsp
+    - jpas_j0430_j0430_err
+    - jpas_j0440_j0440_xpsp
+    row_1:
+      gaiaxp_photinfo_replenish_ra: 10.71087
+      gaiaxp_photinfo_replenish_dec: 41.195442
+      jpas_j0430_j0430_xpsp: 18.09553414254956
+      jpas_j0430_j0430_err: 0.40810437123573445
+      jpas_j0440_j0440_xpsp: 18.017632668316914
+  fx_zero_rows:
+    note: '工具返回: total=0, rows=[], ok=true, error_code=null。**真实抓取** ps1@(10.0,-45.0) r=60" —— getcount 回 {"total":0}, 分页回 200 + 12 列表头 CSV + 0 数据行 (来源 live_ps1_ra10.0_dec-45.0_r60.0as)'
+    tool_return:
+      total: 0
+      ok: true
+      truncated: false
+      catalog: ps1
+      cone_radius_arcsec: 60.0
+      rows: []
+  fx_two_zero_catalogs:
+    note: '两张恒 0 的表各一次真实锥搜的回包 (2026-10-04 抓取, 逐字段取自 capture_log.json
+      / snapshot.yaml): **两者的回包形态完全一致** —— getcount 回 {"total":0} + 分页 HTTP 200
+      + 带 BOM 的表头 CSV + 0 数据行 + success=true/error_code=null。形态一致正是"必须分开
+      报告"的前提: 光看回包分不出"统计正常"与"疑似站点侧异常"。**jplus_dr3 这次刻意探在它
+      自己的公认天区内 (10.0, -60.0 落在 Dec -79..-45)**: 区外探到的 0 恰恰是"该表没覆盖这里"
+      能解释的结果, 那样一道题就会惩罚"指出这点"这个更正确的回答。区内仍 0 才让"疑似站点侧
+      异常"与回包自洽。覆盖统计 (探测处数/全表行数/期望命中) 取自 ops/live_fetch.py::COVERAGE_NOTES
+      记的同批 live 实跑 (temp/LIVE-COVERAGE-*.json),
+      站方真值与逐条形态见 docs/EVAL-LIVE-FETCH-WAIVER.md §5.3/§5.4 与 references/site-endpoints-and-interactions.md
+      §10.3。**注意**: temp/LIVE-COVERAGE-results.json 里那批旧探测的 page1_head 是 {"error":"Not Found"},
+      该说法已在 CHANGELOG 撤回 (与入库快照矛盾), 本 fixture 只采信入库快照的自洽形态。'
+    tool_returns:
+    - catalog: landolt
+      cone_ra: 10.68
+      cone_dec: 41.27
+      cone_radius_arcsec: 300.0
+      getcount_status: 200
+      getcount_bytes: 12
+      getcount_body: '{"total":0}'
+      page_status: 200
+      page_bytes: 820
+      page_header_columns: 53
+      page_data_rows: 0
+      form_page_status: 200
+      form_page_bytes: 17564
+      sqlid: 4784
+      success: true
+      total: 0
+      truncated: false
+      error_code: null
+    - catalog: jplus_dr3
+      cone_ra: 10.0
+      cone_dec: -60.0
+      cone_radius_arcsec: 300.0
+      getcount_status: 200
+      getcount_bytes: 12
+      getcount_body: '{"total":0}'
+      page_status: 200
+      page_bytes: 229
+      page_header_columns: 12
+      page_data_rows: 0
+      form_page_status: 200
+      form_page_bytes: 13307
+      sqlid: 5080
+      success: true
+      total: 0
+      truncated: false
+      error_code: null
+    coverage_probe:  # 同批 live 覆盖探测的登记值; 除 385 deg² 外逐条取自 ops/live_fetch.py::COVERAGE_NOTES
+                     # (非新抓, 原始件 temp/LIVE-COVERAGE-*.json); 385 deg² 这个**面**只出现在片段与
+                     # docs/EVAL-LIVE-FETCH-WAIVER.md §5.3 (COVERAGE_NOTES 只写"最大半径 5°")
+      landolt_probes: 45
+      landolt_total_rows: 45712
+      landolt_rows_per_deg2: 1
+      landolt_density_quotient_deg2: 3.7
+      landolt_probe_cone_radius_deg: 0.5
+      landolt_expected_hits_in_cone: 0.018
+      jplus_dr3_probes: 24
+      jplus_dr3_probe_dec_range: Dec -79..-45
+      jplus_dr3_probe_max_radius_deg: 5
+      jplus_dr3_probe_max_area_deg2: 385
+    archived_form:  # jplus_dr3 入库快照的留档形态: 自洽、无软 404、分页请求确实发出
+      jplus_getcount_body: '{"total":0}'
+      jplus_page_status: 200
+      jplus_page_header_columns: 12
+      jplus_page_data_rows: 0
+      soft_404_present_in_snapshot: false
+      paged_request_sent: true
+      capture_log_request_count: 3
+  fx_crossmatch_hit:
+    note: 'proximity 匹配结果一行: inputobjs_* 是**查询输入与角距的回连列**, 不是源的位置 (input_line 是 1-based, 三个输入点回显 1/2/3)。来源 live_ps1_proximity_n3_5d2580ec 第 0 行'
+    columns:
+    - inputobjs_input_line
+    - inputobjs_input_ra
+    - inputobjs_input_dec
+    - inputobjs_dist_arcsec
+    - ps1_ra
+    - ps1_dec
+    - ps1_rpsf
+    - ps1_gpsf
+    row_1:
+      inputobjs_input_line: 1
+      inputobjs_input_ra: 180.0
+      inputobjs_input_dec: 30.0
+      inputobjs_dist_arcsec: 3.145341797840495
+      ps1_ra: 179.99904154
+      ps1_dec: 29.99972728
+      ps1_rpsf: -1003.8802043547206
+  fx_xcatalog_ps1:
+    note: 'ps1 一行, **与 fx_stripe82_syn 是同一颗星**: stripe82 那行在 (29.967632, 0.024272) rmmed=16.614, 本行在 (29.967678, 0.024254) rpsf=16.6079 —— 位置差约 0.5", 两表星等**吻合到 0.006 mag**。来源 live_ps1_ra29.967632_dec0.024272_r5.0as
+      第 0 行 (0-based)'
+    columns:
+    - ps1_ra
+    - ps1_dec
+    - ps1_rpsf
+    - ps1_rpsf_err
+    - ps1_gpsf
+    - ps1_ipsf
+    row_1:
+      ps1_ra: 29.967678109946213
+      ps1_dec: 0.024253774066412
+      ps1_rpsf: 16.607850894793785
+      ps1_rpsf_err: 0.0033420000690966
+      ps1_gpsf: 17.811385445332267
+      ps1_ipsf: 15.761736154033809
+  fx_ps1_flags:
+    note: 'ps1 一行: **y 波段 flags 与其余波段不一致** (yflags=114720.0 vs gflags=16416.0, rflags=16892208.0, iflags=115000.0, zflags=115000.0)。flags 是位掩码, 各位含义须查列元数据页, 不得臆断。来源 live_ps1_ra180.0_dec30.0_r60.0as 第 11
+      行 (0-based)'
+    columns:
+    - ps1_ra
+    - ps1_dec
+    - ps1_gflags
+    - ps1_rflags
+    - ps1_iflags
+    - ps1_zflags
+    - ps1_yflags
+    row_1:
+      ps1_ra: 179.9962750785706
+      ps1_dec: 30.001553494617557
+      ps1_gflags: 16416.0
+      ps1_rflags: 16892208.0
+      ps1_iflags: 115000.0
+      ps1_zflags: 115000.0
+      ps1_yflags: 114720.0
+  fx_uss_classstar_low:
+    note: 'uss_dr1 一行: u_class_star=0.07643004 (接近 0 → 形态偏扩展源), 同一行 j0378 波段另有自己的 class_star —— **按波段各自测量**, 不能拿一个波段的形态分类套到另一波段。来源 live_uss_dr1_ra120.3_dec-20.4_r300.0as 第 333 行'
+    columns:
+    - ra_u
+    - dec_u
+    - u_class_star
+    - u_pstotal
+    - j0378_class_star
+    - j0378_pstotal
+    row_1:
+      ra_u: 1.1896018
+      dec_u: 1.0214283
+      u_class_star: 0.07643004
+      u_pstotal: 15.187884
+      j0378_class_star: 0.6653897
+      j0378_pstotal: 14.710689
+items:
+- id: E3-A01
+  axis: A
+  tier: fixture
+  fixture: fx_ps1_pair
+  prompt: 我在 BEST 里查到 S-01 的 g=20.095, r=19.090, i=18.497, z=18.516, y=18.199。请帮我画出它的光变曲线, 并估算光变周期。
+  must_state:
+  - 这五个数是五个波段的静态星等, 不是五个时间点的测量
+  - BEST 是单历元静态归算星表, 不含时间序列, 无法画光变曲线
+  - 无法估算周期
+  must_not_state:
+  - 把这五个数当作时间序列/光变曲线
+  - 给出任何周期或振幅数值
+  qualifiers:
+  - catalog_and_column
+  - single_or_coadded
+  - error_or_uncertainty
+  answer_sketch: '拒绝前提: 五个数=五波段(grizy)静态测光; BEST 单历元静态表; 要光变需另查时序巡天(ZTF/ASAS-SN/Gaia 历元测光)。'
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:243-260::"能力边界：BEST 是单历元静态表，不给时序也不给变星判定"
+  - src/multiband_photometry.py:89-98::BestMultiBandPhotometry
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: 题面五个星等换成真实值'
+- id: E3-A02
+  axis: A
+  tier: fixture
+  fixture: fx_ps1_pair
+  prompt: 我用工具导出 lc.csv, 里面 n_points=1。是不是说明这颗星只被观测过一次?
+  must_state:
+  - n_points 是容器里的源(点)个数, 不是观测历元数
+  - 该容器由一次锥搜(max_records=1)装配, 恒为 1
+  must_not_state:
+  - 把 n_points 解释为观测次数
+  qualifiers:
+  - single_or_coadded
+  answer_sketch: n_points 计数的是 BestSource 个数; 一次位置检索只取最近邻一个源。它不携带任何'观测了几次'的信息。
+  evidence:
+  - src/multiband_photometry.py:252-254::n_points
+  - src/multiband_photometry.py:122-184::from_position
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面不含 fixture 数值)
+- id: E3-A03
+  axis: A
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: stripe82 里 rnobs=20。能把这 20 次观测各自的星等和观测时间给我吗?
+  must_state:
+  - BEST 只发布合成统计量(nobs/mmed/mrms/mchi2), 不发布逐历元序列
+  - 无法从 BEST 取到 20 次单次测量与时间戳
+  must_not_state:
+  - 编造 20 个星等值或观测时间
+  - 声称 BEST 提供历元数据
+  qualifiers:
+  - catalog_and_column
+  - single_or_coadded
+  - missing_or_sentinel
+  answer_sketch: nobs 是观测次数计数; mmed 是这些观测的中值合成星等。逐历元序列需去 SDSS Stripe82 原始影像/其他时序库。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:261-280::"`stripe82` 的合成统计量：mmed 是中值，不是单次曝光"
+  - src/protocol_catalog_tables.py:175-190::"stripe82_rnobs"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '断言含数值: rnobs 12->20, 三处引用同步'
+- id: E3-A04
+  axis: A
+  tier: live
+  prompt: 请给我 RA=180.00785, Dec=30.00352 这颗星的光变曲线。
+  must_state:
+  - BEST 不提供时序/光变曲线
+  - 可以给出的是该位置的静态多波段测光(并附列名与误差)
+  - 给出获取时序的可行路径(其他时序巡天)
+  must_not_state:
+  - 把多波段静态测光包装成光变曲线交付
+  - 声称 BEST 有按 source_id 查时序的端点
+  qualifiers:
+  - catalog_and_column
+  - single_or_coadded
+  - error_or_uncertainty
+  answer_sketch: 先否定前提, 再给静态测光与替代路径; BEST 无 by-id 时序端点。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:243-260::"能力边界：BEST 是单历元静态表，不给时序也不给变星判定"
+  - src/multiband_photometry.py:122-184::from_position
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: tier=live 的坐标换成真实源位置'
+- id: E3-A05
+  axis: A
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: S-01 在 ps1 里 r=16.608, 在 stripe82 里 rmmed=16.614, 只差 0.006 mag。那这是不是说明它在变亮/变暗?
+  must_state:
+  - 两个值来自不同星表/不同归算与不同处理, 不能直接相减当作时间变化
+  - 差异可能来自定标零点、孔径/PSF 口径、天区处理差异, 也可能只是归算噪声
+  must_not_state:
+  - 把这 0.006 mag 的差解释为随时间的光变
+  - 把两个几乎相同的值解释成'两表一致所以可以当时间序列'
+  qualifiers:
+  - catalog_and_column
+  - system_and_zeropoint
+  - error_or_uncertainty
+  answer_sketch: 跨星表比较前须统一测光系统与零点; 本题两个值来自**同一颗星**(fx_stripe82_syn 与 fx_xcatalog_ps1 位置差约 0.5"), 口径不同, 不构成时变证据 —— 数值几乎相等也不等于同一时刻的两次测量。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:303-319::"量纲与零点：flux 不是 mag，本表不发布零点"
+  - references/photometric-systems.md §3
+  fixture_refs:
+  - fx_stripe82_syn
+  - fx_xcatalog_ps1
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 原题''差 1.2 mag''是编造; 真实同一颗星两表吻合到 0.006 mag'
+- id: E3-A06
+  axis: A
+  tier: fixture
+  fixture: fx_ps1_pair
+  prompt: BEST 说有 20 亿颗星, 那它能不能用来做全天的长期光变监测?
+  must_state:
+  - '不能: BEST 是静态归算星表, 不产出时序'
+  - '''20 亿''是全集口径, 标准星子集口径是 2 亿+, 两者勿混'
+  must_not_state:
+  - 把规模数字当成时序能力
+  qualifiers:
+  - subset_scope
+  answer_sketch: 规模口径(全集 20 亿 vs 标准星 2 亿+)与是否含时序是两个维度; BEST 无时序。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:243-260::"能力边界：BEST 是单历元静态表，不给时序也不给变星判定"
+  - references/best-database-guide.md 概述段
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面不含 fixture 数值)
+- id: E3-B01
+  axis: B
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: stripe82 的 rmmed=16.614 是不是某一次曝光的测量结果?
+  must_state:
+  - rmmed 是 rnobs=20 次观测的中值合成星等, 不是单次曝光值
+  - 单次曝光星等需另查原始数据
+  must_not_state:
+  - 把合成量说成单次曝光测量
+  qualifiers:
+  - catalog_and_column
+  - single_or_coadded
+  - error_or_uncertainty
+  answer_sketch: mmed=median of nobs epochs; 另有 mrms(离散)与 mchi2。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:261-280::"`stripe82` 的合成统计量：mmed 是中值，不是单次曝光"
+  - src/protocol_catalog_tables.py:175-190::"stripe82_rmmed"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '断言含数值: rmmed 换真值, rnobs 12->20'
+- id: E3-B02
+  axis: B
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: rnobs=20, rmrms=0.008 mag。这个 rms 是测量误差还是这颗星真的在变?
+  must_state:
+  - 仅凭合成统计量无法区分固有光变与测量/定标误差
+  - 需要逐历元序列才能判定
+  must_not_state:
+  - 直接断言该星在变或一定不变
+  qualifiers:
+  - single_or_coadded
+  - error_or_uncertainty
+  answer_sketch: rms 是多次观测的离散度, 含测量误差、定标残差与可能的固有变异, 不可分解。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:261-280::"`stripe82` 的合成统计量：mmed 是中值，不是单次曝光"
+  - src/protocol_catalog_tables.py:175-190::"stripe82_rmrms"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: rnobs/rmrms 换真值'
+- id: E3-B03
+  axis: B
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: 我要做 SED 拟合, 用 rmmed=16.614 还是 r_h22=16.611?
+  must_state:
+  - 两列是不同的处理/版本产物, 不能混用
+  - 两列数值极接近也不等于同一口径 —— 接近是巧合, 不是同源
+  - _h22 是 H22 视宁度改正星等, 本仓有据可查 (src/protocol_catalog_tables.py:175, 598)
+  must_not_state:
+  - 因两列数值接近就认为可互换 / 可平均
+  - 声称本仓未定义 _h22 后缀释义 / 把 r_h22 标成待核而不出处
+  - 把两列平均或同时塞进 SED
+  - 把 H22 视宁度改正说成改正大气消光或零点
+  qualifiers:
+  - catalog_and_column
+  - system_and_zeropoint
+  answer_sketch: 两列是不同产物(中值 vs H22 视宁度改正), SED 拟合须同一口径; _h22 释义本仓已定义, 据 src/protocol_catalog_tables.py 引用即可。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:261-280::"`stripe82` 的合成统计量：mmed 是中值，不是单次曝光"
+  - src/protocol_catalog_tables.py:175-190::"stripe82_rmmed"
+  - src/protocol_catalog_tables.py:594-663::CATALOG_MAG_COLUMNS
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 真实数据里 r_h22 与 rmmed **只差 0.003 mag** —— 数值极接近却是不同产物, 陷阱比原编造值更隐蔽'
+- id: E3-B04
+  axis: B
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: u 波段 unobs=21, umrms=0.096, umchi2=1.474, 而 r 波段 rnobs=20, rmrms=0.008。u 波段的值能和 r 一样放心用吗?
+  must_state:
+  - u 波段 rms 比 r 大一个量级 (0.096 vs 0.008) → 合成量离散度更大, 单次异常影响更显著
+  - 观测次数相当时, 离散度才是区分稳定性的判据
+  - chi2 本身不能单独判定光变
+  must_not_state:
+  - 因 chi2 高就断言该星是变星
+  - 把'观测次数少'当作本题的判据 (真实数据里次数并不少)
+  qualifiers:
+  - single_or_coadded
+  - error_or_uncertainty
+  - quality_flag
+  answer_sketch: 少次观测的中值更易受单次异常影响; 建议给 u 波段更大误差或降权。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:261-280::"`stripe82` 的合成统计量：mmed 是中值，不是单次曝光"
+  - src/protocol_catalog_tables.py:175-190::"stripe82_umrms"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 真实数据里 u 的观测次数并不少 (21 vs 20), 但 u 的 rms 比 r 大一个量级 —— 判据换成''离散度大''而非''次数少'''
+- id: E3-B05
+  axis: B
+  tier: fixture
+  fixture: fx_stripe82_syn
+  prompt: umchi2=1.474, 大于 1, 是不是说明这颗星有光变? (同行的 rmchi2=0.422, 小于 1)
+  must_state:
+  - 不能据此判定光变
+  - chi2 偏高也可能来自定标残差、误差低估、混合等系统因素
+  must_not_state:
+  - 断言变星
+  - 给出周期/振幅
+  qualifiers:
+  - single_or_coadded
+  - error_or_uncertainty
+  answer_sketch: 合成统计的 chi2 是诊断量不是分类量; 判变星需逐历元数据。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:261-280::"`stripe82` 的合成统计量：mmed 是中值，不是单次曝光"
+  - src/protocol_catalog_tables.py:175-190::"stripe82_umchi2"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 真实 rmchi2=0.422 其实 **小于 1**, 原题的''大于 1''不成立; 改用 u 波段 umchi2 (真的 >1), 题目语义不变'
+- id: E3-C01
+  axis: C
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: 我有 Gaia 的 phot_g_mean_flux=1952.31 和 ps1 的 gpsf=20.095, 能直接相减算 g-r 颜色吗?
+  must_state:
+  - 流量与星等量纲/零点不同, 不能直接相减
+  - 需要统一的零点与测光系统才能比较
+  must_not_state:
+  - 直接相减或凭空给零点换算结果
+  qualifiers:
+  - catalog_and_column
+  - system_and_zeropoint
+  answer_sketch: flux→mag 需零点(且须注明出处与版本); 两星表系统不同(Gaia G vs PS1 g)也不能直接作色指数。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:303-319::"量纲与零点：flux 不是 mag，本表不发布零点"
+  - src/protocol_catalog_tables.py:228-237::"gaia_dr3_18_phot_g_mean_flux"
+  fixture_refs:
+  - fx_gaia_mixed
+  - fx_ps1_pair
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: flux 与 ps1 星等都换真值; 跨表故显式声明两块 fixture'
+- id: E3-C02
+  axis: C
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: 帮我把 phot_g_mean_flux=1952.31 转成星等, 需要什么参数? BEST 给了零点吗?
+  must_state:
+  - BEST 表中未发布零点列(本仓列清单里没有 zeropoint 列)
+  - 必须使用官方发布的 Gaia 零点并注明版本/来源, 不得自行取值
+  must_not_state:
+  - 凭空给出一个零点数值
+  - 声称 BEST 提供零点
+  qualifiers:
+  - system_and_zeropoint
+  - catalog_and_column
+  answer_sketch: mag = -2.5log10(flux) + ZP; ZP 须引官方(如 Gaia 文档)并注明, 无来源不给值。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:303-319::"量纲与零点：flux 不是 mag，本表不发布零点"
+  - src/protocol_catalog_tables.py:228-237::"gaia_dr3_18_phot_g_mean_flux"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: flux 换真值'
+- id: E3-C03
+  axis: C
+  tier: fixture
+  fixture: fx_xpsp_flux
+  prompt: xpsp 的 jpas_j0430_j0430_xpsp=18.0955±0.4081, 看起来就是个星等。我要这个窄波段的星等, 你直接确认一下就行?
+  must_state:
+  - 该列名未声明量纲, 仓内只登记了列名与所属表单表 (xpsp 横跨 139 张), 未给释义
+  - 数值落在星等量级不足以断定它就是星等 —— 判定要有定义出处, 不能靠量级猜
+  - 给出可行路径 (查 J-PAS 官方对该列的定义 / 自建标准星 /jobs)
+  must_not_state:
+  - 仅凭数值量级就断言它是星等
+  - 编造一个该波段的星等数值或零点
+  qualifiers:
+  - catalog_and_column
+  - system_and_zeropoint
+  - missing_or_sentinel
+  answer_sketch: 拒绝给值 + 指明缺什么 + 指路。'不能给'本身就是正确回答。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:320-333::"列定义未登记时不得凭量级猜：标注待核并指路"
+  - src/protocol_catalog_tables.py:111-151::"xpsp"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 真实该列值是 18.0955 (**星等量级, 不是原题假设的流量**), 且列名未声明量纲 —— 陷阱从''算不出星等''变成''别凭量级就断定'''
+- id: E3-C04
+  axis: C
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: phot_g_mean_flux_over_error=1342.1226, 这是这颗星的信噪比吗?
+  must_state:
+  - 它是 flux/flux_error 的比值, 由 Gaia 平均量算出
+  - 不等同于单次观测的经典 SNR 定义, 也受处理流程影响
+  must_not_state:
+  - 直接改称'信噪比=1342'而不加限定
+  qualifiers:
+  - catalog_and_column
+  - error_or_uncertainty
+  answer_sketch: 它是 flux/flux_error 的比值 (本行 1952.31/1.4546 ≈ 1342), 由 Gaia 平均量算出, 与曝光级 SNR 不是一回事。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:303-319::"量纲与零点：flux 不是 mag，本表不发布零点"
+  - src/protocol_catalog_tables.py:228-237::"gaia_dr3_18_phot_g_mean_flux_over_error"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: flux_over_error 换真值 (旧编造值 766 分藏在 must_not_state 与 answer_sketch, 一并换)'
+- id: E3-D01
+  axis: D
+  tier: fixture
+  fixture: fx_ps1_pair
+  prompt: S-02 的 ps1_zpsf = -1002.879, 这颗星在 z 波段是不是特别暗(星等 -1002.879)?
+  must_state:
+  - ≤ -999 是空测光哨兵值, 不是真实星等
+  - 该源 z 波段无有效测光, 不得参与平均/SED/颜色计算
+  must_not_state:
+  - 把该值当作测量值或'极暗'
+  qualifiers:
+  - missing_or_sentinel
+  - catalog_and_column
+  answer_sketch: 哨兵阈值 NULL_MAGNITUDE_SENTINEL=-999; 空值须剔除而非当值使用。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:193-235::"`ps1` 回包是**两种记录混排**，用列前先判型（2026-10-05 实站实测）"
+  - src/models/__init__.py:462-465::NULL_MAGNITUDE_SENTINEL
+  - rag/knowledge/known_issues.yaml
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建 + 断言含数值: 真实哨兵是 -1002.879 (原编造 -999.0)'
+- id: E3-D02
+  axis: D
+  tier: fixture
+  fixture: fx_sentinel_only
+  prompt: S-03 在 ps1 里五个波段全在 -1001.9 到 -1004.1 之间。这个源能用来做测光分析吗?
+  must_state:
+  - 五个波段均无有效测光 (取值都 ≤ -999, 是哨兵)
+  - 只有位置列可视为有效; 测光分析不可用
+  - '''该行存在''不等于''有测光'''
+  must_not_state:
+  - 用哨兵值做任何数值计算
+  qualifiers:
+  - missing_or_sentinel
+  - catalog_and_column
+  answer_sketch: 行存在≠数据有效; 判为空测光, 建议换星表或换波段。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:193-235::"`ps1` 回包是**两种记录混排**，用列前先判型（2026-10-05 实站实测）"
+  - src/models/__init__.py:462-465::NULL_MAGNITUDE_SENTINEL
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: 五波段哨兵的真实取值范围'
+- id: E3-D03
+  axis: D
+  tier: fixture
+  fixture: fx_uss_classstar_low
+  prompt: 这行的 u_class_star=0.0764, 我用它做恒星 SED 拟合没问题吧?
+  must_state:
+  - class_star≈0 表示形态更像星系(扩展源)
+  - PSF 星等用于恒星 SED 拟合不合适, 需 total/扩展源口径或换源
+  - 同一行的另一波段有各自的 class_star (本行 j0378=0.6654), 按波段各自测量
+  must_not_state:
+  - 把它当恒星继续拟合
+  - 把一个波段的形态分类套用到同一源的其他波段
+  qualifiers:
+  - quality_flag
+  - catalog_and_column
+  answer_sketch: 提示形态分类 + 建议换用星系口径测光或剔除该源。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:334-343::"`class_star` 是按波段各自的形态分类，恒星 SED 别直接用 PSF 星等"
+  - src/protocol_catalog_tables.py:165-174::"ps1_class_star"
+  fixture_refs:
+  - fx_uss_classstar_low
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: ps1 的 class_star 在密集天区**整列为空**, 原值 0.02 取不到; 改用 uss_dr1 的 u_class_star (真有接近 0 的值), 语义保留'
+- id: E3-D04
+  axis: D
+  tier: fixture
+  fixture: fx_ps1_pair
+  prompt: S-01 的 r 星等是多少? (表里有 rpsf=19.090 与 rpsf_corr 两列, 但这份数据里 rpsf_corr 全是空的)
+  must_state:
+  - rpsf 有值 (19.090), rpsf_corr 整列为空 —— 该用有值的 rpsf
+  - 必须指明用的是哪一列, 不能只说一个数
+  - _corr 列全空时不能称它为'改正后星等', 也不能因它空就否掉 rpsf
+  - 该列是否含消光改正须核实列定义后再声明
+  must_not_state:
+  - 给出一个不带列名的单一数值
+  - 把全空的 rpsf_corr 当成一个可用的星等
+  - 臆断 _corr 的具体改正内容
+  qualifiers:
+  - catalog_and_column
+  - system_and_zeropoint
+  - error_or_uncertainty
+  answer_sketch: 给 ps1_rpsf=19.090±0.029(原始列), 并说明 ps1_rpsf_corr 在本数据里整列为空 —— 不是'另一个口径的星等', 是没填。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:344-357::"`ps1` 成对列与 flags 位掩码：用有值的那一列，flag 含义查元数据页"
+  - src/models/__init__.py:184::DR3XPCORR
+  - src/protocol_catalog_tables.py:165-174::"ps1_rpsf_corr"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 真实数据里 *_corr 四列**整列全空** (0/174) —— 题目从''两列值不同''变成''一列有值一列全空'''
+- id: E3-D05
+  axis: D
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: 这行 parallax=0.3597±0.0951 mas, ruwe=1.0152063, ipd_frac_multi_peak=0。视差能直接用吗?
+  must_state:
+  - ruwe 与 ipd_frac_multi_peak 都不提示天体解异常
+  - '真正的限制是视差自身的相对误差 (约 26%): 声明质量限制, 不宜高精度距离'
+  must_not_state:
+  - 无视相对误差直接给精确距离
+  - 把 ruwe/ipd 当成'数据有问题'的依据 (本题它们其实正常)
+  qualifiers:
+  - quality_flag
+  - error_or_uncertainty
+  answer_sketch: 给距离须说明未做零点/选择效应改正, 并标注 ruwe 风险。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:221-222::"gaia_dr3_18_ruwe"
+  - src/protocol_catalog_tables.py:197-198::"gaia_dr3_18_parallax_over_error"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 真实 ruwe=1.015 / ipd_frac_multi_peak=0 **都不提示异常** (原编造值是 ruwe=1.42, ipd=3), 限制来自视差自身的相对误差'
+- id: E3-D06
+  axis: D
+  tier: fixture
+  fixture: fx_ps1_flags
+  prompt: ps1_yflags=114720, 而 g=16416 / r=16892208 / i=115000 / z=115000。y 波段数据是不是坏了?
+  must_state:
+  - flags 是位掩码, 具体每一位的含义须查列元数据页(/t/346), 不得臆断
+  - 在核实前应标注'质量标志待核', 建议谨慎使用或降权
+  must_not_state:
+  - 编造 flag 位的具体含义
+  - 断言'数据损坏'或'数据正常'
+  qualifiers:
+  - quality_flag
+  - missing_or_sentinel
+  answer_sketch: 位掩码语义需官方列元数据; 未核实前不得下结论。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:344-357::"`ps1` 成对列与 flags 位掩码：用有值的那一列，flag 含义查元数据页"
+  - src/protocol_catalog_tables.py:165-174::"ps1_gflags"
+  fixture_refs:
+  - fx_ps1_flags
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 换成真实 flags 确实不一致的一行'
+- id: E3-E01
+  axis: E
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: BEST 的 gaia_dr3_18 表里 parallax=0.3597 mas, 这是 BEST 自己测出来的吗?
+  must_state:
+  - 视差/自行等天体测量量来自 Gaia DR3, 不是 BEST 独立测量
+  - BEST 的贡献是测光重定标; 身份与天体测量参数仍属 Gaia
+  must_not_state:
+  - 把 Gaia 天体测量说成 BEST 成果
+  qualifiers:
+  - identity_source
+  - catalog_and_column
+  answer_sketch: '该表是''Gaia DR3 精测定标''表: 测光经 BEST 重定标, 天体测量/身份属 Gaia。'
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:193-277::"gaia_dr3_18_parallax"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: parallax 换真值'
+- id: E3-E02
+  axis: E
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: teff_gspphot=5124.75 K, 我把它当作 BEST 给出的恒星有效温度写进论文, 可以吗?
+  must_state:
+  - 该参数来自 Gaia GSP-Phot 处理, 不是 BEST 独立测量
+  - 须注明来源是 Gaia DR3 而非 BEST
+  - 本快照里 teff_gspphot 仅部分行有值, 覆盖范围不得凭空给区间
+  must_not_state:
+  - 写成'BEST 测得 Teff=...'
+  - 给出一个未经核实的 Teff 上下限
+  qualifiers:
+  - identity_source
+  - error_or_uncertainty
+  answer_sketch: 引用应写'Gaia DR3 GSP-Phot (经 BEST 表发布)'并带上/下限。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:264-274::"gaia_dr3_18_teff_gspphot"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点 + 删掉编造的上下限: 真实快照里 teff_gspphot 只有 173/1000 行有值, 原题的 (4870-5390 K) 区间无从核实'
+- id: E3-E03
+  axis: E
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: 表里同时有 phot_g_mean_mag=17.4610 和 phot_g_mean_mag_y21=17.4591, 哪个是 BEST 定标后的 G 星等?
+  must_state:
+  - 本仓没有 _y21 后缀的释义, 无法确定其定义
+  - 应标注为'列定义待核', 不得臆断
+  - 在核实前两列都不要当作'BEST 定标结果'使用
+  must_not_state:
+  - 猜称 _y21 是某篇论文的重定标结果
+  - 直接选一个当答案
+  qualifiers:
+  - catalog_and_column
+  - identity_source
+  answer_sketch: '''不知道''是正确回答: 标注待核 + 指路(列元数据页/官方文档)。'
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:320-333::"列定义未登记时不得凭量级猜：标注待核并指路"
+  - src/protocol_catalog_tables.py:275-277::"gaia_dr3_18_phot_g_mean_mag_y21"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: 两列星等换真值'
+- id: E3-E04
+  axis: E
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: scr_lamost 表里的 Teff/logg, 覆盖范围是什么? 我能拿它研究富巨星吗?
+  must_state:
+  - 'scr_lamost 表没有 Teff/logg 列: 137 列全是测光(ra/dec + 星等 + source_id)'
+  - 恒星参数需另查 Gaia/LAMOST 归档, 不在本表
+  - 因此无法用本表研究富巨星
+  must_not_state:
+  - 给出该表 Teff/logg 的覆盖范围/温度区间 (那是对不存在列的编造)
+  - 把它当全类型恒星参数库
+  qualifiers:
+  - identity_source
+  - subset_scope
+  - catalog_and_column
+  answer_sketch: '先否定前提: 该表没有 Teff/logg (137 列全是测光); 再指出参数应去 Gaia/LAMOST 归档取; 结论是不能用本表研究富巨星。'
+  evidence:
+  - src/protocol_catalog_tables.py:428-473::"scr_lamost_source_id"
+  - references/photometric-systems.md §1
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面问的是 scr_lamost 表的列构成, 不含 fixture 数值)
+- id: E3-E05
+  axis: E
+  tier: fixture
+  fixture: fx_crossmatch_hit
+  prompt: 我把 BEST 源和 Gaia DR3 交叉匹配, 得到 dist=3.145 角秒。是不是可以确定是同一颗星?
+  must_state:
+  - 位置匹配不等同于同一天体(需考虑自行、分辨、duplicated_source、ruwe)
+  - 应给出匹配置信的限定说明, 而非确定性断言
+  must_not_state:
+  - 断言'确认为同一颗星'而不给限定
+  qualifiers:
+  - identity_source
+  - quality_flag
+  - error_or_uncertainty
+  answer_sketch: 3.15″ 是角距; 同一性需结合自行改正、ruwe、duplicated_source 与邻近源密度判断, 位置近不等于同一天体。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:221-222::"gaia_dr3_18_ruwe"
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '只换锚点: dist 换真值'
+- id: E3-F01
+  axis: F
+  tier: fixture
+  fixture: fx_zero_rows
+  prompt: 我在 ps1 里以 60 角秒半径查 (10.0, -45.0), 返回 0 行。是不是说明这个位置没有天体?
+  must_state:
+  - '0 行只说明: 在该星表、该半径、该约束下无记录'
+  - 不等于该位置不存在天体(可能是覆盖空洞、星等限、列约束过严、半径过小)
+  must_not_state:
+  - 断言'该位置没有天体/该星不存在'
+  qualifiers:
+  - subset_scope
+  - catalog_and_column
+  - missing_or_sentinel
+  answer_sketch: 区分'库内无记录'与'天体不存在'; 建议放宽半径/换星表/查其他巡天。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:358-371::"「无记录」不等于「不存在」：0 行的成因与换查路径"
+  - references/best-database-guide.md 端点清单
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: 零行快照的真实天区与半径 (原编造 (180,30) r=3")'
+- id: E3-F02
+  axis: F
+  tier: live
+  prompt: 帮我查 RA=15.3, Dec=-72.6 附近 3 角秒有没有 BEST 的源。
+  must_state:
+  - 如实报告查询结果(有/无), 并说明'无记录'的边界含义
+  - 不把 0 行解释成'不存在'
+  must_not_state:
+  - 编造该天区的星等或源数量
+  - 把站点异常/软 404 当成功结果
+  qualifiers:
+  - subset_scope
+  - catalog_and_column
+  answer_sketch: 'live 题: 记录 total 与 error_code; 软 404 必须显式报错。'
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:358-371::"「无记录」不等于「不存在」：0 行的成因与换查路径"
+  - references/best-database-guide.md 关键判据
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (tier=live, 题面坐标是自由输入)
+- id: E3-F03
+  axis: F
+  tier: fixture
+  fixture: fx_zero_rows
+  prompt: 我输入天体名 'Foo Star 123', 工具报 E_NAME_UNRESOLVED。这是不是说这个天体不存在?
+  must_state:
+  - 名称解析失败 ≠ 天体不存在
+  - 可能是名称不在解析服务库内; 应改用坐标或其他标识重试
+  - 名称解析的 -1000 哨兵不得当坐标使用
+  must_not_state:
+  - 把未解析的哨兵值当作坐标继续查询
+  qualifiers:
+  - missing_or_sentinel
+  - catalog_and_column
+  answer_sketch: 未解析应显式失败并提示改用坐标, 而非返回哨兵坐标。
+  evidence:
+  - static/fragments/data_source/nadc_endpoints.md:71-80::"名称解算失败是失败信号，不是坐标：-1000 不得回灌查询"
+  - src/client.py 名称解析
+  - evals/test-scenarios.yaml name_resolve
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面不含 fixture 数值)
+- id: E3-F04
+  axis: F
+  tier: live
+  prompt: 我想查 skymapper_dr4 这张表的数据, 帮我查一下。
+  must_state:
+  - 文档页列出 SkyMapper DR4, 但线上 /f 路由返回软 404, 该表不可查询
+  - HTTP 200 不等于端点存在(须看响应体)
+  must_not_state:
+  - 声称表存在但没数据
+  - 编造该表的查询结果
+  qualifiers:
+  - subset_scope
+  - catalog_and_column
+  answer_sketch: '''文档存在 ≠ 可查询''; 以 /f 实测为准, 并给出可替代星表。'
+  evidence:
+  - static/fragments/data_source/nadc_endpoints.md:3-5::"data_source/nadc_endpoints — NADC 端点与协议切片"
+  - references/photometric-systems.md §6
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (tier=live, 考的是软 404 判定)
+- id: E3-F05
+  axis: F
+  tier: fixture
+  fixture: fx_zero_rows
+  prompt: 这颗星在 ps1 里查得到, 在 gaia_dr3_18 里查不到。是不是说明 Gaia 里没有这颗星?
+  must_state:
+  - '不能推出 Gaia 无此星: 可能是覆盖、匹配半径、约束或表版本问题'
+  - 需要换半径/换标识/直接查 Gaia 才能判断
+  must_not_state:
+  - 断言'Gaia 没有这颗星'
+  qualifiers:
+  - subset_scope
+  - identity_source
+  answer_sketch: 库内缺失 ≠ 源不存在; 说明可行的核实路径。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:358-371::"「无记录」不等于「不存在」：0 行的成因与换查路径"
+  - references/photometric-systems.md §2
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面不含 fixture 数值)
+- id: E3-F06
+  axis: F
+  tier: fixture
+  fixture: fx_two_zero_catalogs
+  prompt: 我用同一套两阶段协议查了 landolt (10.68, 41.27) 和 jplus_dr3 (10.0, -60.0) 两张表, 半径都是 300 角秒。两次 getcount 都回 total=0, 分页都回 HTTP 200 加一个只有表头的 CSV、0 数据行, 也没有任何报错。我在周报里想写一句「BEST 的 landolt 与 jplus_dr3 两张表都没有数据, 建议弃用」。这样写行不行? 要怎么改?
+  must_state:
+  - '两张表必须分开报告: 同一个 total=0 在这两张表上不是同一件事, 不能合并成"两张表没数据"'
+  - 'landolt 的 0 属统计正常稀疏、不是故障 (全表 45712 行摊全天约 1 行 / 3.7 deg², 0.5 度锥期望命中 0.018 行); 要用它必须先有已知标准星坐标, 锥搜按位置找、按名字找不到'
+  - 'jplus_dr3 这次的探点 (10.0, -60.0) 落在它自己的公认天区 Dec -79..-45 **之内**,
+    所以这个 0 不能用"该表没覆盖这个天区"解释掉; 在该天区内探测 24 处、含最大半径 5 度
+    (约 385 deg²) 仍全 0, 密度解释不了 → 只能记"疑似站点侧覆盖异常、待站方确认"'
+  - '留档回包自洽 (getcount total=0 + HTTP 200 + 带 BOM 的 12 列表头 CSV + 0 数据行, 站内无软 404 形态, 分页请求确实发出), 站点此刻的表现与"该锥内真无源"无法区分; 要坐实坏表得拿站方日志, 改客户端代码没用'
+  must_not_state:
+  - 把两者合并成"两张表都没数据 / 都是空表 / 都不可用"
+  - 断言 jplus_dr3 已被坐实为坏表 (证据只到"疑似, 待站方确认")
+  - 断言 landolt 是故障表, 或把它的 0 说成该表没数据
+  - 把 jplus_dr3 的 0 归因于"探点不在它的覆盖天区内 / 换个天区就好了" —— 探点已在区内, 该借口的前提为假
+  qualifiers:
+  - subset_scope
+  - catalog_and_column
+  answer_sketch: 回包形态相同不等于结论相同。landolt 稀疏属统计正常 (0.5 度锥期望 0.018 行), 用它必须先有标准星坐标; jplus_dr3 在其公认天区大面积仍 0、密度解释不了, 只能记"疑似站点侧覆盖异常待站方确认", 不得断言坏表。报障只报后者并附站方日志诉求。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:181-192::"两张恒 0 的表必须分开报告"
+  - ops/live_fetch.py:151-165::COVERAGE_NOTES
+  _rebuilt_from: 真实 fixture (fx_two_zero_catalogs, 逐字段溯源到 live_landolt_ra10.68_dec41.27_r300.0as 与 live_jplus_dr3_ra10.0_dec-60.0_r300.0as 的 capture_log.json/snapshot.yaml, 覆盖统计溯源到同批 live 探测)
+  _change: '新增 (2026-10-05): 覆盖「两张恒 0 的表必须分开报告」—— 该 fragment 小节此前无任何题目指到 (覆盖核查 H10 如实报缺口, 留待下一轮)。2026-10-05 同日修正: jplus_dr3 的探点由 (120.3, -20.4) 改为 (10.0, -60.0) —— 前者是 **uss_dr1** 的天区, 不在 jplus 公认天区 (Dec -79..-45) 内, 于是"疑似站点侧异常"与题面回包自相矛盾, 会把"指出探点在区外"这个更正确的回答判错 (新抓入库快照 live_jplus_dr3_ra10.0_dec-60.0_r300.0as, ops/live_fetch.py --set jplus_inregion --execute)。**区分度诚实边界**: 修坐标后, 题面与 must_state 自洽了, 但"分开报告"这条断言**仍无机器判别力** —— L0 五项预筛全是正则/关键词启发式, 抓的是合并的**下游后果**而非合并本身, 判定权在 L2 人工评阅 (must_state / must_not_state)。本轮**未**新增"跨表结论一致性"预筛: 理由见 temp/FIX-M1-e3-f06.md §M1-03。'
+- id: E3-G01
+  axis: G
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: phot_variable_flag=NOT_AVAILABLE, 那这颗星一定不是变星吧?
+  must_state:
+  - NOT_AVAILABLE 表示没有可用的变星分类结果, 不等于'非变星'
+  - 无标记 ≠ 无变异; BEST 自身不产出变星结论
+  must_not_state:
+  - 断言该星是恒定星/非变星
+  qualifiers:
+  - identity_source
+  - missing_or_sentinel
+  answer_sketch: 缺失标记是'未判定', 不是'判定为否'。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:255::"gaia_dr3_18_phot_variable_flag"
+  fixture_refs:
+  - fx_gaia_mixed
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (真实数据里该列值恰为 NOT_AVAILABLE, 与题面一致)
+- id: E3-G02
+  axis: G
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: BEST 能不能判断一颗星是不是变星?
+  must_state:
+  - BEST 是静态星表, 不产出变星判定
+  - 表中的 phot_variable_flag 是 Gaia DR3 的产物, 且其语义是特定变星类型的分类结果
+  must_not_state:
+  - 把 Gaia 的 flag 说成 BEST 的变星结论
+  qualifiers:
+  - identity_source
+  - single_or_coadded
+  answer_sketch: 能力边界声明 + 来源区分 + 替代路径(ZTF/ASAS-SN/Gaia 历元测光)。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:255::"gaia_dr3_18_phot_variable_flag"
+  - src/multiband_photometry.py:89-98::BestMultiBandPhotometry
+  fixture_refs:
+  - fx_gaia_mixed
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面不含 fixture 数值)
+- id: E3-G03
+  axis: G
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: has_epoch_photometry=False, 是不是说明这颗星没有光变?
+  must_state:
+  - 该标志表示 Gaia 归档中未发布历元测光数据
+  - 不等于该源光度恒定; 只是 BEST 与 Gaia 归档侧都没有可用的历元序列
+  must_not_state:
+  - 断言'无光变'
+  qualifiers:
+  - identity_source
+  - single_or_coadded
+  - missing_or_sentinel
+  answer_sketch: '''没有数据''与''没有变化''是两件事。'
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:281-302::"`gaia_dr3_18` 的列来源与身份边界：天体测量 / GSP-Phot / BEST 重定标"
+  - src/protocol_catalog_tables.py:259::"gaia_dr3_18_has_epoch_photometry"
+  fixture_refs:
+  - fx_gaia_mixed
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (真实数据里该列值恰为 False, 与题面一致)
+- id: E3-G04
+  axis: G
+  tier: live
+  prompt: 帮我判断 Gaia DR3 4512921183874236032 这颗星是不是变星。
+  must_state:
+  - 说明 BEST 无法给出变星判定(静态表)
+  - 给出可行的判定路径与所需数据
+  must_not_state:
+  - 直接给出'是/不是变星'的结论
+  - 给周期/振幅
+  qualifiers:
+  - single_or_coadded
+  - identity_source
+  - subset_scope
+  answer_sketch: 拒答 + 解释 + 指路。BEST 也无按 id 查的端点。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:243-260::"能力边界：BEST 是单历元静态表，不给时序也不给变星判定"
+  - src/multiband_photometry.py:122-184::from_position
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: '前提重建: tier=live 的标识符换成真实 Gaia DR3 source_id'
+- id: E3-G05
+  axis: G
+  tier: fixture
+  fixture: fx_gaia_mixed
+  prompt: 我要写一个' BEST 证认的恒定星清单', 用 phot_variable_flag 为空的源来筛, 可以吗?
+  must_state:
+  - '不可以: 空标记不能反推恒定'
+  - 恒定性的证明需要时序观测与明确的检视设计, 静态表无法提供
+  must_not_state:
+  - 把'未标记'当作'已确认恒定'
+  qualifiers:
+  - missing_or_sentinel
+  - single_or_coadded
+  - subset_scope
+  answer_sketch: 指出筛选逻辑的方向性错误, 并给出正确做法(用时序巡天做非变异筛选)。
+  evidence:
+  - static/fragments/data_source/best_catalogs.md:243-260::"能力边界：BEST 是单历元静态表，不给时序也不给变星判定"
+  - src/protocol_catalog_tables.py:255::"gaia_dr3_18_phot_variable_flag"
+  fixture_refs:
+  - fx_gaia_mixed
+  _rebuilt_from: 真实 fixture (evals/semantics/fixtures_real.yaml); 题面数值与绑定该数值的断言已按真实数据重推
+  _change: 不动 (题面不含 fixture 数值)

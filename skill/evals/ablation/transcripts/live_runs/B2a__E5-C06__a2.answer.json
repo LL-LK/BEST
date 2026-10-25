@@ -1,0 +1,1 @@
+{"answer_text": "本次查询没有取到任何数据，无法判断该字段是否为逐历元星等。信封 state=empty，error_code=null，row_count=0、returned_count=0、total_count=0、pages=0、truncated=false；envelopes 为空，n_rows_observed=0，row_keys 与 first_row 均空，notes 为空。stable_uri、session_id、snapshot_id 均为 null，观测中未出现 content_trust 字段，工具面为 raw_protocol。故无任何字段级证据可依据，需重新取数后再答。"}

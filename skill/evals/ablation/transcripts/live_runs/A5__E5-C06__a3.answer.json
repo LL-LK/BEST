@@ -1,0 +1,1 @@
+{"answer_text":"本次未取到任何数据，无法判断该字段是否为逐历元星等。观测事实：路由=clarify，工具调用 0 次；信封 state=empty、error_code=null，计数三元组 row_count=0、returned_count=0、total_count=0，pages=0、truncated=false、extra_page_empty=false；来源类字段 stable_uri、session_id、snapshot_id 均为 null，信封未携带 content_trust，envelopes 与 row_keys 为空，无首行，故无任何列名与数值可供核对。请补充字段名与来源星表/接口，或先执行一次查询，我再据实测结果确认它是否为逐历元星等。"}

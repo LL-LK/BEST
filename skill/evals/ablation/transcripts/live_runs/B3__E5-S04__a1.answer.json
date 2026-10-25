@@ -1,0 +1,1 @@
+{"answer_text": "本次观测 tool_calls 为空，未发生实际取数。信封 state=empty：row_count、returned_count、total_count 均为 0，pages=0，truncated=false，extra_page_empty=false；stable_uri、session_id、snapshot_id 均为 null，无来源标识与 content_trust，故无可引用的稳定出处；工具面为 toolbox。据此仅能确认该次查询返回 0 行，不能断定 (180.0,30.0) 3 角秒内没有天体：零行也可能源于天区覆盖缺失或查询未真正执行，需带出处重查后再判定。"}

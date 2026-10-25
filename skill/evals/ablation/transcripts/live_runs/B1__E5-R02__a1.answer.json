@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none（tool_face=scripted，tool_calls=[]，route=reject），无任何数据通路，无法把整张 ps1 导出成 FITS。信封 state=empty：row_count=0、pages=0、total_count=0、returned_count=0、truncated=false、n_rows_observed=0、row_keys=[]、first_row={}；stable_uri/session_id/snapshot_id 均为 null，sentinels_removed=false，未给出来源或 content_trust 字段。故无行数、列名与数值可报，也未取得数据快照。"}

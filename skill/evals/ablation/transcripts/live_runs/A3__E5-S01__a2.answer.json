@@ -1,0 +1,1 @@
+{"answer_text": "本次查询 state=empty：row_count=0、pages=0、returned_count=0、total_count=0；stable_uri、session_id、snapshot_id 均 null，envelopes 为空，故无来源/快照/信任标识；计数三元组 0/0/0。你给的五个 ps1_* 值不在观测内，无行数据可用，无法绘制光变曲线或估算周期。"}

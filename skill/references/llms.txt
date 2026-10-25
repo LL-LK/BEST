@@ -1,0 +1,45 @@
+# astro-best — NADC BEST 星表数据能力（智能体索引）
+
+> 面向智能体的 BEST 数据库（中国虚拟天文台 NADC）查询能力索引：锥形检索、批量交叉匹配、标准星、多波段测光。
+> 站点**不提供 TAP/ADQL/REST-JSON 接口**；本 skill 以两阶段异步 HTTP 协议（POST 表单 → sqlid → 分页 GET）封装，
+> 并以 `src/tap/` 提供 IVOA TAP 1.1 适配面（让 pyvo/astroquery/TOPCAT 可直连）。
+
+BEST（国家天文科学数据中心）提供 12 张可查询星表，覆盖 PAN-STARRS、Gaia DR3、J-PLUS、SMSS、Landolt、USS、S-PLUS、SCR 标准星、Gaia XP 光谱等。公开数据面**无需登录**；只有 User-Defined Catalog（/jobs）需要登录——第一关是 BEST 站点账号（Django 会话），NADC 通行证 OAuth 是站点登录页内的第二跳（src/auth/，应用审批中；详见 auth-and-oauth.md）。
+
+## 工具（机器可调用）
+
+7 个原子工具，统一信封（data/status/cost/provenance），schema 见 [tools.schema.json](./tools.schema.json)；直接以 Python 调用 `src.ai_tools.ToolBox`（实现经 src.client 依赖 requests/urllib3）。本仓不提供 MCP 入口（2026-10-06 起已移除）。
+
+- [resolve_name](./tools.schema.json#resolve_name)：天体名 → 坐标（M31 / NGC 532 等），后端代理 CDS Sesame
+- [list_catalogs](./tools.schema.json#list_catalogs)：列出 12 张可查询星表及显示名
+- [describe_catalog](./tools.schema.json#describe_catalog)：某星表的列清单、单位、波段映射
+- [cone_search](./tools.schema.json#cone_search)：天区锥形检索（RA/Dec/半径**角秒**）
+- [crossmatch_batch](./tools.schema.json#crossmatch_batch)：批量坐标交叉匹配（服务端 proximity，一次请求）
+- [count](./tools.schema.json#count)：查询会话的真实命中总数
+- [fetch_page](./tools.schema.json#fetch_page)：按页继续取回结果
+
+## 协议要点（智能体最容易踩的五件事）
+
+- [两阶段协议](./ALGORITHM-SPEC.md)：`output.fmt=html` 才回 sqlid；csv/json/votable 直接内联数据、丢会话
+- [单位是角秒](./ALGORITHM-SPEC.md)：`pos.radius` 传角秒，传度会得到 0 行或 360 倍半径
+- [列名前缀分岔](./site-endpoints-and-interactions.md)：`/q` 内联给裸名（ra/gpsf），`/sqlid/` 分页多数给带前缀名（ps1_ra）；**例外**：uss_dr1 的 CSV 响应恒为裸名（ra_u/u_pstotal），xpsp/dr3xpcorr 的共享表列前缀是表单表名（gaiaxp_photinfo_replenish_ra）
+- [坐标列不能硬编码](./site-endpoints-and-interactions.md#101-坐标列形态12-张表实测-5-种不能硬编码)（§10.1，33 个快照目录 / 31 份 rows_full.csv 实测快照）：12 张表实测 5 种坐标列形态，只有 9 张符合"`_ra`/`_dec` 结尾"；`uss_dr1` **没有任何**规范化坐标列（分波段 `ra_u`/`ra_j0378`）。全部 12 张都带 `inputobjs_input_ra/dec`，那是查询输入坐标、不是源行位置。解析不出就记不可用，不许挑一列凑答案
+- [表单别手搓](./site-endpoints-and-interactions.md#102-表单权威-7-键手搓表单会静默退化成全表查询)（§10.2）：`build_query_form` 的 7 个生效键是 output.fmt / pos_group / pos.type / pos.racenter / pos.deccenter / pos.radius / showcol（**恰为 7 个只在锥搜且不带排序时成立**：带 sort/order 为 9 键、矩形 box= 为 8 键、proximity 为 7 键但半径键换名）。**少提交 `pos.*` 站点不报错**，而是按无约束全表查询执行（内联 CSV 可达数百 MB）——一次锥搜被悄悄变成一次拉表
+- [0 行不等于坏表](./site-endpoints-and-interactions.md#103-表覆盖实测异常与正常稀疏必须分开报告)（§10.3）：survey 天区外 0 行是正常的；`landolt` 任何 0.5° 锥都大概率 0 行（需先有已知标准星坐标）；`jplus_dr3` 探测 24 处全 0，**疑似站点侧覆盖异常待确认**（留档显示 getcount 与分页自洽、无软 404）。两者不可合并成"没数据"
+- [软 404](./site-endpoints-and-interactions.md)：未知路由返回 HTTP 200 + `{"error":"Not Found"}`，必须检查响应体而非状态码（注意：未知**表名**会被客户端在发包前拦下，观测不到这条形态）
+- [名称解算哨兵](./site-endpoints-and-interactions.md)：`/nss/solve` 失败返回 ra=dec=-1000（HTTP 200），必须校验数值
+
+## 下载与续传
+
+大结果集用后台下载栈（并行/断点续传/进度/hook），不要在主对话里同步拉全表：见 [download-playbook.md](./download-playbook.md)。
+
+## 参考
+
+- [算法白盒](./ALGORITHM-SPEC.md)：端点表、两阶段协议、真源码锚点、TAP 适配层
+- [站点端点全图](./site-endpoints-and-interactions.md)：实机浏览器深潜取证，路由全表与表单字段
+- [鉴权与上鉴权准备](./auth-and-oauth.md)：双轨制（Django 会话 / NADC OAuth）、/jobs 第一跳、上鉴权清单
+- [星表领域指南](./best-database-guide.md)：端点清单、表单字段、输出格式、约束
+- [测光系统](./photometric-systems.md)：19 个测光系统全表与精度口径
+- [降级协议](./fallback-protocols.md)：检索失败 / 端点不可用时的行为
+- [已知问题](../rag/knowledge/known_issues.yaml)：站点缺陷、已修回归与规避手法
+- [下载手册](./download-playbook.md)：后台下载栈的常见需求与排障表

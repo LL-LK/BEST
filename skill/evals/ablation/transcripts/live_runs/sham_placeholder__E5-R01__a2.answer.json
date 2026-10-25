@@ -1,0 +1,1 @@
+{"answer_text": "route=reject，tool_calls 为空。信封 state=empty；total_count=0、returned_count=0、row_count=0，truncated=false。stable_uri、snapshot_id 均为 null，无来源与 content_trust 字段。row_keys、first_row 空；故无光变曲线数据可返回。"}

@@ -1,0 +1,1 @@
+{"answer_text": "本次取不到数据：工具面 toolbox，tool_calls 空；信封 state=empty、error_code=null，计数三元组 total_count=0、returned_count=0、truncated=false，row_count=0、pages=0、n_rows_observed=0、envelopes=[]、row_keys/first_row/notes 空；stable_uri、session_id、snapshot_id 均 null，sentinels_removed=false，无来源与内容信任可引。故不能画光变曲线或估周期；5 个 psf 值仅单次测光。"}

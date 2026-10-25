@@ -1,0 +1,1 @@
+{"answer_text": "路由 reject，无工具调用，无数据可筛。state=empty；计数三元组 total_count=0、returned_count=0、row_count=0，truncated=false；stable_uri、snapshot_id 均 null，未含来源与 content_trust，row_keys/first_row 空，故无法给出 r 波段误差<0.01 mag 的源。"}

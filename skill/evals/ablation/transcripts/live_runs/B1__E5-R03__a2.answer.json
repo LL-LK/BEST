@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none、route=reject、tool_calls 为空：未发出任何查询，无数据通路，星表交叉匹配无法进行。信封 state=empty：row_count=0、total_count=0、returned_count=0、pages=0、truncated=false；stable_uri=null、snapshot_id=null，信封无 content_trust；无行。"}

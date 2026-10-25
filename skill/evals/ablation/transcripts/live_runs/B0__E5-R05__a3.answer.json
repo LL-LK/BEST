@@ -1,0 +1,1 @@
+{"answer_text": "取不到数据：工具面 none，无数据通路。唯一调用 cone_search(rpsf_err<0.01) 被离线拦截，http_requests=0。信封 state=error(E_BACKEND)，row_count/returned_count/total_count 均 0，truncated=false，stable_uri/session_id/snapshot_id 均 null。"}

@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：cone_search 被离线纪律拦截，未发请求，state=error，error_code=E_BACKEND，tool_face=raw_protocol。行数、服务端总数、返回数三元组均为 0，truncated=false；stable_uri 与 snapshot_id 均 null，无来源、无快照。观测 0 行、无关键列，无法给出 r 波段误差<0.01 mag 的源。"}

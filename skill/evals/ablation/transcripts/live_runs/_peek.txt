@@ -1,0 +1,2 @@
+﻿312
+RA=180.0��Dec=30.0���뾶 300 �����ڣ�ps1 �Ǳ� cone_search ���� 174 �У�total_count=174��returned_count=174��truncated=false��1 ҳ���޶����ҳ�������� 3.145�C59.935 ���룬�ǵȺ� g/i/r/y/z��quality_flag ȫΪ good��stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=300.0��snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as��content_trust=untrusted��

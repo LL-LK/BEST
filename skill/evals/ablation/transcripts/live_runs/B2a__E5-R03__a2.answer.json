@@ -1,0 +1,1 @@
+{"answer_text": "本轮未取到数据：工具面 raw_protocol，cone_search 被离线纪律拦截（无数据锚点，HTTP 请求 0 次），信封 state=error、error_code=E_BACKEND，报错 offline: cone_search 无数据锚点, 未发请求。计数 row_count=returned_count=total_count=0，truncated=false，pages=0；stable_uri/session_id/snapshot_id 均为 null，未含 content_trust 字段；row_keys 为空。故星表交叉匹配未执行。"}

@@ -1,0 +1,1 @@
+{"answer_text": "未能导出 ps1 全表。本次仅一次 cone_search(catalog=ps1,ra=180.0,dec=30.0,radius_arcsec=60.0)，被离线纪律拦截「无数据锚点,未发请求」，http_requests=0。信封 state=error、error_code=E_BACKEND、row_count=0、pages=0、total_count=0、returned_count=0、truncated=false；stable_uri/session_id/snapshot_id 均为 null，provenance 为空，信封无来源与 content_trust 字段，tool_face=toolbox。故无行数、列与数值可报。"}

@@ -1,0 +1,1 @@
+{"answer_text": "未取到标准星清单。state=empty；tool_face=toolbox，但 tool_calls 为空、envelopes 为空，本轮未发出查询。计数全 0：total_count、returned_count、row_count 均为 0；truncated=false，row_keys 与 first_row 空。stable_uri、session_id、snapshot_id 均 null，无 content_trust。"}

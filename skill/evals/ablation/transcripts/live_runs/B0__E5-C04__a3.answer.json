@@ -1,0 +1,1 @@
+{"answer_text": "无数据可取：提问未指明是哪个源，目标无法确定；B0 工具面为 none，无取数通路。实测吻合：tool_calls 空，state=empty，total_count=returned_count=row_count=pages=0，truncated=false，envelopes 空，stable_uri/session_id/snapshot_id 均 null。故无行数、关键列与数值可报。"}

@@ -1,0 +1,1 @@
+{"answer_text": "tool_calls 空；state=empty，row_count=returned_count=total_count=0，truncated=false；stable_uri/session_id/snapshot_id 均 null，无 content_trust；行/关键列空。工具面 none（tool_face=scripted）无数据通路，故仅知 0 行、总数 0，不能断定该处无天体。"}

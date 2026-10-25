@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile>
+  <diagram id="overview" name="① 架构总览 · 三域拓扑">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1340" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1_domA" value="① 主理能力域" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="680" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_domB" value="② 五状态机执行链" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="360" width="680" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_domC" value="③ 降级 · 错误码 · 证据" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="360" width="680" height="580" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_title" value="&lt;b&gt;【astro-best 架构总览】BEST 数据源主理 · NADC BEST 查询/下载/匹配&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:12px;color:#94A3B8;'&gt;架构编号: astro.best-collection &amp;nbsp;|&amp;nbsp; 管线阶段: collection &amp;nbsp;|&amp;nbsp; 定位: data-source 主理 &amp;nbsp;|&amp;nbsp; 强度等级见 skill registry &amp;nbsp;|&amp;nbsp; 变更史见 CHANGELOG&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;fillColor=#0F172A;fontColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=2;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=8;spacingBottom=8;" vertex="1" parent="1">
+          <mxGeometry x="300" y="30" width="1800" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_mission" value="&lt;b&gt;【核心使命】&lt;/b&gt; 作为 BEST 数据库的唯一数据源主理方（全 ecosystem 仅本 skill 能访问 nadc.china-vo.org/data/best），在 NADC BEST REST 端点上完成 &lt;b&gt;两阶段异步查询 → 流式下载 → 校验和门禁&lt;/b&gt;，交付可追溯的采集结果。&lt;br/&gt;&lt;b&gt;【委派边界】&lt;/b&gt; 通用星表检索/交叉匹配主理转 astro-catalog，数据清洗转 astro-clean；&lt;b&gt;BEST 自身数据的查询与批量匹配不委派&lt;/b&gt;（他 skill 无 BEST 端点）；公开函数行为变更必须连带回归测试，不允许行为漂移。" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="300" y="120" width="1800" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_in" value="&lt;b&gt;输入入口&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;'&gt;BestQuery 信封 (sql, token)&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.6;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="245" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_out" value="&lt;b&gt;交付产物&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;'&gt;结果集 + 查询审计 + 血缘头&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.6;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="990" width="400" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_A1" value="&lt;b&gt;【主理立场】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;HTTP 200 + 校验和一致才叫“下载完成”；凭据缺失即 not_configured；mock 与真网区别显式声明。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="412" width="630" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_A2" value="&lt;b&gt;【能力清单 · 5 项】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;1. 两阶段异步查询客户端（认证 + 建 SQL + 分页拉取）&lt;br/&gt;2. 查询构造与流式下载（校验和 + 断点续传）&lt;br/&gt;3. 匹配与光变（BEST 自身数据保留，通用源委派）&lt;br/&gt;4. 编排与质量门控 &amp;nbsp;·&amp;nbsp; 5. 采集脚本与 CSV 公式注入防御&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="522" width="630" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_A3" value="&lt;b&gt;【委派路由 · 3 条】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;交叉匹配 → 检索 / 交叉匹配主理 &amp;nbsp;·&amp;nbsp; 数据清洗 → 校准 / 剔除主理&lt;br/&gt;自身 REST 异步客户端 &lt;b&gt;不委派&lt;/b&gt;（外部数据源驱动，本 skill 是唯一主理）&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="687" width="630" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_A4" value="&lt;b&gt;【主理声明】&lt;/b&gt; &lt;span style='font-size:11.5px;'&gt;BEST 自身数据查询/匹配归本 skill；通用检索与清洗委派。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="817" width="630" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_B1" value="&lt;b&gt;【五状态机】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;INTAKE → VALIDATE → EXECUTE → GATE → EMIT&lt;br/&gt;每态含进入条件 / 离开条件 / 失败出口&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="885" y="412" width="630" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_B2" value="&lt;b&gt;【阶段数据流 · 4 段】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;① 查询信封 → 语法与速率校验&lt;br/&gt;② 两阶段异步（建 SQL → 取查询标识 → 分页拉取）&lt;br/&gt;③ 流式下载（校验和 + 断点续传）&lt;br/&gt;④ 原子落盘 + 查询审计&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="885" y="522" width="630" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_B3" value="&lt;b&gt;【阻断性门禁 · 双门槛】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;① http_status == 200 &amp;nbsp;·&amp;nbsp; ② checksum_match == True&lt;br/&gt;任一失败 → handoff.status = blocked；门禁不因降级放松&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="885" y="677" width="630" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_B4" value="&lt;b&gt;【双态信封】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;data 信封（产物 / 指标 / 数据指纹 / 血缘）&lt;br/&gt;decision 信封（科学评估 / 检查点 / 人工复核）&lt;br/&gt;L1 确定性数据流：0% LLM&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="885" y="802" width="630" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_C1" value="&lt;b&gt;【优雅降级 · 6 条协议】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;网络不可达 / 认证失败 / 限流与 5xx /&lt;br/&gt;内容漂移 / 完整性失败 / 下游委派回退&lt;br/&gt;降级必须留痕（WARN 注记 + status 字段）&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1645" y="412" width="630" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_C2" value="&lt;b&gt;【错误码 · Fail-Closed】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;输入非法 → 直接阻断，不进入执行&lt;br/&gt;门禁未达 → blocked &amp;nbsp;·&amp;nbsp; 委派失败 → 优雅降级并标注&lt;br/&gt;未分类异常 → 收敛并保留完整回溯&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1645" y="562" width="630" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_C3" value="&lt;b&gt;【不可变证据 · 4 项】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;结果集（data / status） &amp;nbsp;·&amp;nbsp; 查询审计&lt;br/&gt;血缘头（完整度门禁 = 1.0） &amp;nbsp;·&amp;nbsp; 光变产品&lt;br/&gt;量纲随字段走；时间一律 UTC ISO8601&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1645" y="692" width="630" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_C4" value="&lt;b&gt;【支撑面】&lt;/b&gt; &lt;span style='font-size:11.5px;'&gt;溯源 RAG + 算法白盒 + 质量门禁 + 治理强度元数据&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1645" y="837" width="630" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_legend" value="&lt;b&gt;【图例 · 语义色】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;蓝&lt;/b&gt; = 兼容能力 / 立场 &amp;nbsp;·&amp;nbsp; &lt;b&gt;靛&lt;/b&gt; = 委派路由 &amp;nbsp;·&amp;nbsp; &lt;b&gt;绿&lt;/b&gt; = 状态与执行 &amp;nbsp;·&amp;nbsp; &lt;b&gt;橙&lt;/b&gt; = 阻断门禁&lt;br/&gt;&lt;b&gt;红&lt;/b&gt; = 降级与错误码 &amp;nbsp;·&amp;nbsp; &lt;b&gt;紫&lt;/b&gt; = 证据产物 &amp;nbsp;·&amp;nbsp; &lt;b&gt;青&lt;/b&gt; = 信封与入口 &amp;nbsp;·&amp;nbsp; &lt;b&gt;灰&lt;/b&gt; = 中性说明&lt;br/&gt;连线: 实线 = 数据 / 能力流向 &amp;nbsp;·&amp;nbsp; 反向箭头 = 审计回写与降级恢复&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1110" width="1080" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_constraints" value="&lt;b&gt;【三条不可让步的约束】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;1. &lt;b&gt;双门槛不放水&lt;/b&gt; — http_status == 200 且 checksum_match == True，半成品绝不进入下游。&lt;br/&gt;2. &lt;b&gt;越权即拒&lt;/b&gt; — 执行态禁止旁路重实现 canonical 能力；越界能力的元决策与执行一律委派 canonical skill。&lt;br/&gt;3. &lt;b&gt;降级必留痕&lt;/b&gt; — 任何降级都要产生 WARN 注记与 status 字段，不静默吞异常、不伪造成功。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="1110" width="1080" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e_AB" value="存量能力被编排" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4F46E5;strokeWidth=1.8;fontSize=11;fontColor=#3730A3;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.28;entryX=0;entryY=0.28;" edge="1" parent="1" source="p1_domA" target="p1_domB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e_BA" value="审计 · 证据回写" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11;fontColor=#155E75;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0;exitY=0.62;entryX=1;entryY=0.62;" edge="1" parent="1" source="p1_domB" target="p1_domA">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e_BC" value="门禁 · 异常事件" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#EA580C;strokeWidth=1.8;fontSize=11;fontColor=#9A3412;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.28;entryX=0;entryY=0.28;" edge="1" parent="1" source="p1_domB" target="p1_domC">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e_CB" value="降级 · 恢复路径" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DC2626;strokeWidth=1.8;fontSize=11;fontColor=#991B1B;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0;exitY=0.62;entryX=1;entryY=0.62;" edge="1" parent="1" source="p1_domC" target="p1_domB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e_in" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11;fontColor=#155E75;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="p1_in" target="p1_domB">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e_out" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9333EA;strokeWidth=1.8;fontSize=11;fontColor=#581C87;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="p1_domB" target="p1_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="compat" name="② 域① 主理能力域">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2_box_l" value="【能力组件 · 职责与边界】" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="305" width="1080" height="915" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_box_r" value="【委派路由 · 主理定位声明】" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="305" width="1080" height="915" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_title" value="&lt;b&gt;【域 ①】主理能力域与委派路由&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:12px;color:#94A3B8;'&gt;astro-best 是 BEST 数据源主理 &amp;nbsp;|&amp;nbsp; 唯一能访问 BEST 端点 &amp;nbsp;|&amp;nbsp; 交付物 / 边界判定 / 委派路由&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;fillColor=#0F172A;fontColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=2;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=8;spacingBottom=8;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="1900" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_0" value="&lt;b&gt;▸ ① 主理能力域　（当前视图）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_1" value="&lt;b&gt;② 五状态机执行链&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F1F5F9;fontColor=#64748B;strokeColor=#CBD5E1;strokeWidth=1.2;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;" vertex="1" parent="1">
+          <mxGeometry x="840.3" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_2" value="&lt;b&gt;③ 降级 · 错误码 · 证据&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F1F5F9;fontColor=#64748B;strokeColor=#CBD5E1;strokeWidth=1.2;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;" vertex="1" parent="1">
+          <mxGeometry x="1580.7" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_stance" value="&lt;b&gt;【主理立场】&lt;/b&gt; 本域是 skill 的对外能力面：主理 BEST 自身数据的查询与批量匹配，把不该由本 skill 承担的职责显式委派出去。&lt;br/&gt;&lt;b&gt;信条:&lt;/b&gt; HTTP 200 + 校验和一致才叫“下载完成”；凭据没有就 not_configured。&amp;nbsp;&lt;b&gt;诚实:&lt;/b&gt; mock 夹具与真网区别显式声明，不伪造提交成功。&amp;nbsp;&lt;b&gt;门禁:&lt;/b&gt; 双门槛判定，降级不放松。" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="180" width="2200" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_lbl_c" value="&lt;b&gt;5 个能力组件（提供什么 / 边界在哪）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="357" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_c0" value="&lt;b&gt;◆ 两阶段异步查询客户端&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;提供:&lt;/b&gt; 认证（会话 + CSRF）与两阶段异步查询：POST 检索表单 → 服务端建 SQL → 返回查询标识 → 分页 GET。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;&lt;b&gt;边界:&lt;/b&gt; 凭据只读环境变量；代码零凭据字面量；不缓存用户凭据。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#1D4ED8;'&gt;&lt;b&gt;关键点:&lt;/b&gt; 两阶段设计避免长查询阻塞连接；分页拉取可中断续做。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="411" width="1030" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_c1" value="&lt;b&gt;◆ 查询构造与流式下载&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;提供:&lt;/b&gt; 查询信封（BestQuery / BestQueryResult）与流式下载：SHA-256 校验和 + 断点续传。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;&lt;b&gt;边界:&lt;/b&gt; 约束构造集中收敛；字段白名单统一维护，应对上游表单演进。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#1D4ED8;'&gt;&lt;b&gt;关键点:&lt;/b&gt; 校验和逐块比对；断点续传应对大区域下载与网络抖动。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="569" width="1030" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_c2" value="&lt;b&gt;◆ 匹配与光变（BEST 自身数据）&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;提供:&lt;/b&gt; 坐标匹配与光变提取，BEST 自身数据的批量匹配保留在本地。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;&lt;b&gt;边界:&lt;/b&gt; 通用源交叉匹配一律委派 astro-catalog，不在本地拼凑匹配结果。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#1D4ED8;'&gt;&lt;b&gt;关键点:&lt;/b&gt; 球面角距匹配；模糊命中必须标记为待判，而非强制合并。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="727" width="1030" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_c3" value="&lt;b&gt;◆ 编排与质量门控&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;提供:&lt;/b&gt; 工作流编排与质量门控（SNR / FWHM / class_star），并提供对外门面客户端。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;&lt;b&gt;边界:&lt;/b&gt; REST 默认端点与 TAP 门面显式区分，杜绝“同一客户端两个端点”的隐式漂移。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#1D4ED8;'&gt;&lt;b&gt;关键点:&lt;/b&gt; 门控默认阈值：信噪比 5.0、半高宽 5.0、分类星概率 0.8。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="885" width="1030" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_c4" value="&lt;b&gt;◆ 采集脚本与 CSV 安全&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;提供:&lt;/b&gt; 锥形检索、检索语句语法校验、批量交叉匹配（单点失败隔离，不中断批次）。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;&lt;b&gt;边界:&lt;/b&gt; CSV 公式注入防御：以 = + - @ 开头的单元格转义为文本。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#1D4ED8;'&gt;&lt;b&gt;关键点:&lt;/b&gt; 批量逐点隔离：单点异常只影响该点，不拖垮整批作业。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1043" width="1030" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_lbl_r" value="&lt;b&gt;委派路由表（越界能力 → 承接方 → 理由）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="357" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_r0" value="&lt;b&gt;◆ 越界能力: 通用星表检索与坐标交叉匹配&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;→ 承接方: &lt;code&gt;astro-catalog&lt;/code&gt;&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#4338CA;'&gt;&lt;b&gt;理由:&lt;/b&gt; 检索 / 交叉匹配主理（球面 KD-Tree 锥搜）&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#4338CA;'&gt;&lt;b&gt;说明:&lt;/b&gt; SIMBAD/VizieR/Gaia/TNS 等通用源转投；BEST 自身数据的批量匹配仍归本 skill。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="411" width="1030" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_r1" value="&lt;b&gt;◆ 越界能力: 原始数据清洗&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;→ 承接方: &lt;code&gt;astro-clean&lt;/code&gt;&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#4338CA;'&gt;&lt;b&gt;理由:&lt;/b&gt; 2D 校准 / 剔除主理&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#4338CA;'&gt;&lt;b&gt;说明:&lt;/b&gt; CCD/图像归约转投。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="575" width="1030" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_r2" value="&lt;b&gt;◆ 越界能力: NADC BEST 两阶段异步客户端&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;→ 承接方: &lt;code&gt;astro-best（不委派）&lt;/code&gt;&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#4338CA;'&gt;&lt;b&gt;理由:&lt;/b&gt; 外部数据源驱动，本 skill 是唯一主理&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#4338CA;'&gt;&lt;b&gt;说明:&lt;/b&gt; 声明行：全 ecosystem 仅本 skill 能访问 BEST 端点，绝不外派。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="739" width="1030" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_lbl_d" value="&lt;b&gt;主理定位声明（BEST 数据源）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="911" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_decl" value="&lt;b&gt;【主理定位声明】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;• 本域约束“BEST 自身数据能力保持可用 + 委派路由正确”。&lt;br/&gt;• BEST 数据查询与批量匹配是本 skill 的 PRIMARY 场景；通用检索与数据清洗委派 canonical skill。&lt;br/&gt;• 执行态禁止旁路重实现 canonical 能力。&lt;br/&gt;• 公开函数行为变更必须连带回归测试，不允许行为漂移。&lt;br/&gt;• 存量承诺：既有测试全绿，导入路径不增不减。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="965" width="1030" height="225" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_bound" value="&lt;b&gt;【边界约束 · 越权即拒】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;• 在执行态旁路重实现 canonical 能力 → 直接拒绝。&amp;nbsp;• 不在未声明情况下扩大搜索半径，不把兼容性猜测写成事实。&amp;nbsp;• 凭据只在环境变量，路径锚定校验，无上溯逃逸。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1250" width="2200" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="statemachine" name="③ 域② 五状态机执行链">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p3_title" value="&lt;b&gt;【域 ②】五状态机执行链 · 双态信封 · 阻断门禁&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:12px;color:#94A3B8;'&gt;astro-best 是 BEST 数据源主理 &amp;nbsp;|&amp;nbsp; INTAKE → VALIDATE → EXECUTE → GATE → EMIT &amp;nbsp;|&amp;nbsp; 状态迁移 / 数据流 / 门禁&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;fillColor=#0F172A;fontColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=2;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=8;spacingBottom=8;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="1900" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_0" value="&lt;b&gt;① 主理能力域&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F1F5F9;fontColor=#64748B;strokeColor=#CBD5E1;strokeWidth=1.2;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;" vertex="1" parent="1">
+          <mxGeometry x="100" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_1" value="&lt;b&gt;▸ ② 五状态机执行链　（当前视图）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840.3" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_2" value="&lt;b&gt;③ 降级 · 错误码 · 证据&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F1F5F9;fontColor=#64748B;strokeColor=#CBD5E1;strokeWidth=1.2;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;" vertex="1" parent="1">
+          <mxGeometry x="1580.7" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_lbl_sm" value="&lt;b&gt;运行态五状态机（每态含职责 / 进入 / 离开 / 失败出口）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="180" width="2200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_s0" value="&lt;b&gt;① INTAKE 接收&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#334155;'&gt;&lt;b&gt;职责:&lt;/b&gt; 接收输入契约信封&lt;br/&gt;&lt;b&gt;进入:&lt;/b&gt; 上游产物到达&lt;br/&gt;&lt;b&gt;离开:&lt;/b&gt; 数据指纹齐备&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#B91C1C;'&gt;&lt;b&gt;失败出口:&lt;/b&gt; 拒收（信封为空）&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="236" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_s1" value="&lt;b&gt;② VALIDATE 校验&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#334155;'&gt;&lt;b&gt;职责:&lt;/b&gt; 输入契约 Schema 校验&lt;br/&gt;&lt;b&gt;进入:&lt;/b&gt; INTAKE 通过&lt;br/&gt;&lt;b&gt;离开:&lt;/b&gt; Schema 零错误&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#B91C1C;'&gt;&lt;b&gt;失败出口:&lt;/b&gt; 转 needs_review + 错误码&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="550" y="236" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_s2" value="&lt;b&gt;③ EXECUTE 执行&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#334155;'&gt;&lt;b&gt;职责:&lt;/b&gt; 按场景路由执行（惰性加载）&lt;br/&gt;&lt;b&gt;进入:&lt;/b&gt; VALIDATE 通过&lt;br/&gt;&lt;b&gt;离开:&lt;/b&gt; 全部条目完成 / 隔离&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#B91C1C;'&gt;&lt;b&gt;失败出口:&lt;/b&gt; 逐条隔离，不中断批次&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="236" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_s3" value="&lt;b&gt;④ GATE 门禁&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#334155;'&gt;&lt;b&gt;职责:&lt;/b&gt; 阻断性质量门禁判定&lt;br/&gt;&lt;b&gt;进入:&lt;/b&gt; EXECUTE 完成&lt;br/&gt;&lt;b&gt;离开:&lt;/b&gt; accepted / rejected 落定&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#B91C1C;'&gt;&lt;b&gt;失败出口:&lt;/b&gt; 门禁不足 → needs_review&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="236" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_s4" value="&lt;b&gt;⑤ EMIT 落盘&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#334155;'&gt;&lt;b&gt;职责:&lt;/b&gt; 原子写输出契约产物&lt;br/&gt;&lt;b&gt;进入:&lt;/b&gt; GATE 完成&lt;br/&gt;&lt;b&gt;离开:&lt;/b&gt; 成功落盘&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:10.5px;color:#B91C1C;'&gt;&lt;b&gt;失败出口:&lt;/b&gt; 抛出，绝无半写&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="236" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_lbl_flow" value="&lt;b&gt;阶段数据流 · 交互负载与超参&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="404" width="2200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_f0" value="&lt;b&gt;【阶段数据流】&lt;/b&gt; ① 查询信封 → 语法与速率校验&lt;br/&gt;&lt;span style='font-size:11.5px;color:#2563EB;'&gt;&lt;b&gt;Payload:&lt;/b&gt; 载荷: 检索语句、坐标与范围、字段需求；速率窗口与限速约束。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;门禁: 语法零错误 + 速率窗口未超限。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="462" width="2200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_f1" value="&lt;b&gt;【阶段数据流】&lt;/b&gt; ② 两阶段异步（第一阶段：建 SQL）&lt;br/&gt;&lt;span style='font-size:11.5px;color:#2563EB;'&gt;&lt;b&gt;Payload:&lt;/b&gt; 载荷: POST 检索表单 → 服务端建立查询 → 返回含查询标识的响应。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;超参: 重试 3 次 / 请求超时 120s / 退避 2.0（429 与 5xx）。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="2200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_f2" value="&lt;b&gt;【阶段数据流】&lt;/b&gt; ③ 两阶段异步（第二阶段：分页拉取 + 流式下载）&lt;br/&gt;&lt;span style='font-size:11.5px;color:#2563EB;'&gt;&lt;b&gt;Payload:&lt;/b&gt; 载荷: 分页 JSON/CSV + SHA-256 校验和 + 断点续传。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;超参: 单页拉取上限 50000 行 / 校验和逐块比对。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="638" width="2200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_f3" value="&lt;b&gt;【阶段数据流】&lt;/b&gt; ④ 门禁判定 → 原子落盘&lt;br/&gt;&lt;span style='font-size:11.5px;color:#2563EB;'&gt;&lt;b&gt;Payload:&lt;/b&gt; 载荷: 结果集（data / status）+ 查询审计（HTTP 状态 / 校验和 / 查询标识）。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#64748B;'&gt;落盘: 原子写（临时文件 + 原子替换），绝无半写。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="726" width="2200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_lbl_gate" value="&lt;b&gt;阻断性质量门禁（双门槛 · 任一失败 → handoff.status = blocked）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="834" width="2200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_g0" value="&lt;b&gt;门禁 ①&lt;/b&gt;&lt;br/&gt;http_status == 200&lt;br/&gt;&lt;span style='font-size:10.5px;'&gt;量纲: count&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="340" y="890" width="600" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_g1" value="&lt;b&gt;门禁 ②&lt;/b&gt;&lt;br/&gt;checksum_match == True&lt;br/&gt;&lt;span style='font-size:10.5px;'&gt;量纲: bool&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="890" width="600" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_gate_note" value="&lt;b&gt;【门禁语义】&lt;/b&gt; 任一失败 → &lt;code&gt;handoff.status = blocked&lt;/code&gt;，记录失败门禁项；降级必须产生 WARN 级注记并落到经验教训锚点。&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;关键约束:&lt;/b&gt; 门禁不因降级放松；半成品绝不进入下游；门禁表与对外声明保持一致。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1110" width="2200" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_lbl_env" value="&lt;b&gt;跨节点双态信封（data / decision）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1223" width="2200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_env_data" value="&lt;b&gt;◆ data 信封&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;管线标识 / 阶段 = collection / UTC 时间戳 &amp;nbsp;·&amp;nbsp; 产物清单 + 指标（data, status）&lt;br/&gt;&lt;b&gt;数据指纹:&lt;/b&gt; 由管线标识 + 阶段 + 产物 + 指标计算，输入路径可复核&lt;br/&gt;&lt;b&gt;血缘:&lt;/b&gt; 会话标识 + 端点 + 查询标识&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1279" width="1080" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_env_dec" value="&lt;b&gt;◆ decision 信封&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;工作流标识 + 检查点门禁名 &amp;nbsp;·&amp;nbsp; &lt;b&gt;检查点状态:&lt;/b&gt; 待人工确认 / 失败 / 豁免&lt;br/&gt;&lt;b&gt;人工复核:&lt;/b&gt; 复核人 / 决定（批准 · 驳回 · 调整参数 · 待定）/ 备注 / UTC 时间戳&lt;br/&gt;&lt;span style='color:#0F766E;'&gt;&lt;b&gt;注:&lt;/b&gt; L1 确定性数据流 0% LLM → 不产出 decision 信封&lt;/span&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFEFF;fontColor=#155E75;strokeColor=#0891B2;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="1279" width="1080" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_lbl_tr" value="&lt;b&gt;失败隔离与降级留痕&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1427" width="2200" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_tr" value="&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;失败隔离:&lt;/b&gt; 对每条目（帧 / 条目 / 查询）独立捕获异常 — 单点异常进入该条目的错误列表并置为 failed，不中断整批；全批失败则整体转 needs_review 并携带错误清单。&lt;br/&gt;&lt;b&gt;降级留痕:&lt;/b&gt; 任何降级都必须产生 WARN 级注记并落到经验教训锚点，供后续复盘。&lt;br/&gt;&lt;b&gt;迁移一致性:&lt;/b&gt; 五状态迁移条件与架构规范逐条对应，状态迁移与门禁判定全程可回放。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1483" width="2200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_s0" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=11;fontColor=#047857;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="p3_s0" target="p3_s1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_s1" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=11;fontColor=#047857;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="p3_s1" target="p3_s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_s2" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=11;fontColor=#047857;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="p3_s2" target="p3_s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_s3" value="Pass" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#059669;strokeWidth=1.8;fontSize=11;fontColor=#047857;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="p3_s3" target="p3_s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_f0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=1.8;fontSize=11;fontColor=#0F172A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;" edge="1" parent="1" source="p3_f0" target="p3_f1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_f1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=1.8;fontSize=11;fontColor=#0F172A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;" edge="1" parent="1" source="p3_f1" target="p3_f2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_f2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=1.8;fontSize=11;fontColor=#0F172A;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;" edge="1" parent="1" source="p3_f2" target="p3_f3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_e_env" value="门控 / 审计" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0891B2;strokeWidth=1.8;fontSize=11;fontColor=#155E75;labelBackgroundColor=#FFFFFF;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="p3_env_data" target="p3_env_dec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="fallback" name="④ 域③ 降级·错误码·证据">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p4_box_l" value="【优雅降级协议与错误码】" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="180" width="1080" height="968" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_box_r" value="【证据存证 · 支撑面 · 完成自检】" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=4;fillColor=#F1F5F9;fontColor=#0F172A;strokeColor=#CBD5E1;strokeWidth=1.5;startSize=34;fontSize=13;fontStyle=1;collapsible=0;align=center;container=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="180" width="1080" height="968" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_title" value="&lt;b&gt;【域 ③】优雅降级 · 错误码 · 证据存证与自检&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:12px;color:#94A3B8;'&gt;astro-best 是 BEST 数据源主理 &amp;nbsp;|&amp;nbsp; 断点续传 / Fail-Closed / 门禁证据 / 血缘&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;fillColor=#0F172A;fontColor=#FFFFFF;strokeColor=#1E293B;strokeWidth=2;fontSize=15;fontStyle=1;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=8;spacingBottom=8;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="1900" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_0" value="&lt;b&gt;① 主理能力域&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F1F5F9;fontColor=#64748B;strokeColor=#CBD5E1;strokeWidth=1.2;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;" vertex="1" parent="1">
+          <mxGeometry x="100" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_1" value="&lt;b&gt;② 五状态机执行链&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F1F5F9;fontColor=#64748B;strokeColor=#CBD5E1;strokeWidth=1.2;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;" vertex="1" parent="1">
+          <mxGeometry x="840.3" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="nav_2" value="&lt;b&gt;▸ ③ 降级 · 错误码 · 证据　（当前视图）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#EEF2FF;fontColor=#3730A3;strokeColor=#4F46E5;strokeWidth=1.6;fontSize=12.5;align=center;verticalAlign=middle;spacingLeft=10;spacingRight=10;spacingTop=5;spacingBottom=5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1580.7" y="115" width="719.3" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_lbl_fb" value="&lt;b&gt;优雅降级协议（降级必须留痕）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="232" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_fb0" value="&lt;b&gt;网络不可达 &amp;nbsp;·&amp;nbsp; 认证失败&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#991B1B;'&gt;&lt;b&gt;触发:&lt;/b&gt; 连接失败 / DNS 失败；环境凭据缺失；登录被重定向回登录页。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#065F46;'&gt;&lt;b&gt;处置:&lt;/b&gt; 不伪造结果集，空数据与失败严格区分；重试 ≤1 次，再失败终止会话并提示人工核对凭据。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#7F1D1D;'&gt;&lt;b&gt;标记: not_configured / auth_failed&lt;/b&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="286" width="1030" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_fb1" value="&lt;b&gt;限流与 5xx &amp;nbsp;·&amp;nbsp; 内容漂移&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#991B1B;'&gt;&lt;b&gt;触发:&lt;/b&gt; 超出限流 → 标记为限流；响应类型与预期不符 → 解析失败。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#065F46;'&gt;&lt;b&gt;处置:&lt;/b&gt; 指数退避至多 3 次；保留原始文本进错误列表，不解析不产出；批量作业改约窗口。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#7F1D1D;'&gt;&lt;b&gt;标记: rate_limited / parse_failed&lt;/b&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="410" width="1030" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_fb2" value="&lt;b&gt;完整性失败 &amp;nbsp;·&amp;nbsp; 下游委派回退&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#991B1B;'&gt;&lt;b&gt;触发:&lt;/b&gt; 校验和重读不一致；上游返回缺失星表导致匹配无法完成。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#065F46;'&gt;&lt;b&gt;处置:&lt;/b&gt; 删除半成品并重试 1 次，再失败标记校验和不匹配；不在本地拼凑匹配，改为建议下游主理。&lt;/span&gt;&lt;br/&gt;&lt;span style='font-size:11px;color:#7F1D1D;'&gt;&lt;b&gt;标记: checksum_mismatch / delegate_fallback&lt;/b&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="534" width="1030" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_lbl_err" value="&lt;b&gt;错误码契约（Fail-Closed 原则）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="672" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_err" value="&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;输入非法&lt;/b&gt; — 输入未通过契约校验 → 直接阻断，不进入执行阶段&lt;br/&gt;&lt;b&gt;门禁失败&lt;/b&gt; — 阻断性门禁未达阈值 → 交接状态置为 blocked&lt;br/&gt;&lt;b&gt;委派流异常&lt;/b&gt; — 下游信封缺失或状态为 blocked → 抛出并上报闭环&lt;br/&gt;&lt;b&gt;交叉匹配委派失败&lt;/b&gt; — 下游主理失败 → 优雅降级并在信封标注&lt;br/&gt;&lt;b&gt;清洗委派失败&lt;/b&gt; — 下游主理失败 → 优雅降级并在信封标注&lt;br/&gt;&lt;b&gt;未分类内部异常&lt;/b&gt; — 收敛为统一内部错误码，保留完整回溯于血缘头&lt;br/&gt;&lt;span style='color:#7F1D1D;'&gt;&lt;b&gt;原则:&lt;/b&gt; 不静默吞异常；失败必留证据，成功不虚报。&lt;/span&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FEF2F2;fontColor=#991B1B;strokeColor=#DC2626;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="726" width="1030" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_lbl_pr" value="&lt;b&gt;降级与门禁的关系（不可让步）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="954" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_principle" value="&lt;b&gt;【不可让步】&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;'&gt;• 降级不等于放宽门禁：门禁判定始终是双门槛。&lt;br/&gt;• 降级不等于伪造结果：宁可交付 needs_review，也不交付假的成功。&lt;br/&gt;• 降级不等于静默：每一次降级都必须留下可复核的痕迹。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FFF7ED;fontColor=#9A3412;strokeColor=#EA580C;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1008" width="1030" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_lbl_evi" value="&lt;b&gt;不可变证据产物（可复核 / 可回放）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="232" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_e0" value="&lt;b&gt;证据产物: 结果集（data / status）&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;color:#581C87;'&gt;&lt;b&gt;证明效力:&lt;/b&gt; 采集结果与失败严格区分，不伪造空数据；状态字段显式可判。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="286" width="1030" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_e1" value="&lt;b&gt;证据产物: 查询审计&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;color:#581C87;'&gt;&lt;b&gt;证明效力:&lt;/b&gt; 每次请求可关联 HTTP 状态 / 校验和 / 查询标识，逐次可追溯。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="382" width="1030" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_e2" value="&lt;b&gt;证据产物: 血缘头&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;color:#581C87;'&gt;&lt;b&gt;证明效力:&lt;/b&gt; 记录 skill / 版本 / UTC 时间戳 / 会话标识 + 输入输出引用；完整度门禁 = 1.0。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="478" width="1030" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_e3" value="&lt;b&gt;证据产物: 光变产品&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:11.5px;color:#581C87;'&gt;&lt;b&gt;证明效力:&lt;/b&gt; 量纲随字段走（每个数值附单位）；时间一律 UTC ISO8601。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#FAF5FF;fontColor=#581C87;strokeColor=#9333EA;strokeWidth=1.6;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="574" width="1030" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_lbl_rag" value="&lt;b&gt;支撑面（RAG · 白盒 · 算力 · 治理面）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="688" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_rag" value="&lt;span style='font-size:11.5px;'&gt;&lt;b&gt;领域 RAG:&lt;/b&gt; 本地检索执行器（BM25 + 词桶 + 倒数排名融合）+ 领域知识四件套（领域规则 / 已知问题 / 经验教训 / 最佳实践）；检索失败不阻断主链。&lt;br/&gt;&lt;b&gt;算法白盒:&lt;/b&gt; 五要素白盒规范，DOI 逐条核验 — 本 skill 为外部服务型，无已验证 DOI，全部标注为未验证来源。&lt;br/&gt;&lt;b&gt;算力预算:&lt;/b&gt; 本地样本点 &amp;lt; 100、单测 &amp;lt; 1s；重负载改走云端规格（环境驱动 / 零凭据）。&lt;br/&gt;&lt;b&gt;12 横切治理面:&lt;/b&gt; 溯源 / 量纲 / 确定论 / 日志 / 错误码 / 契约 / 质量门禁 / 委派 / 安全 / 可复现 / 算力 / 遥测。&lt;br/&gt;&lt;b&gt;可复现:&lt;/b&gt; 白盒规范为唯一出处（五要素）。&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F8FAFC;fontColor=#1E293B;strokeColor=#94A3B8;strokeWidth=1.4;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="742" width="1030" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_lbl_chk" value="&lt;b&gt;完成自检（BEST 数据源主理）&lt;/b&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#F0F7FF;fontColor=#1E3A8A;strokeColor=#2563EB;strokeWidth=1.8;fontSize=12.0;align=center;verticalAlign=middle;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="935" width="1030" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_chk" value="&lt;span style='font-size:11.5px;'&gt;• BEST 自身数据查询/批量匹配列为本 skill PRIMARY 场景（委派表只承接越界能力）&lt;br/&gt;• 存量调用路径全部保留，回归测试全绿&lt;br/&gt;• 主文档精简（≤ 100 行），长知识下沉到参考与知识库&lt;br/&gt;• 凭据只在环境变量，路径锚定校验，无上溯逃逸&lt;br/&gt;• 架构规范的五状态机 + 12 治理面 + 主理定位声明齐备&lt;br/&gt;• 门禁表与对外声明一致（双门槛）&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontFamily=Segoe UI,Microsoft YaHei,PingFang SC,sans-serif;rounded=1;arcSize=6;fillColor=#ECFDF5;fontColor=#064E3B;strokeColor=#059669;strokeWidth=1.8;fontSize=12.0;align=left;verticalAlign=top;spacingLeft=16;spacingRight=16;spacingTop=9;spacingBottom=9;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="989" width="1030" height="129" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

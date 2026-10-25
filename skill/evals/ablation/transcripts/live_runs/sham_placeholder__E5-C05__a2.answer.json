@@ -1,0 +1,1 @@
+{"answer_text": "route=clarify，未发出工具调用。信封state=empty、error_code=null；row_count=returned_count=total_count=0，truncated=false。stable_uri、snapshot_id均为null，无来源与content_trust字段；row_keys/first_row均空，无记录列值。故无法给出清单，请补充星表条件。"}

@@ -1,0 +1,1 @@
+{"answer_text": "工具面 none，无数据通路，请求被拒（route=reject、tool_calls 空），未取数：returned_count=total_count=row_count=0、pages=0、truncated=false，first_row={}。信封无来源/content_trust/快照标识，stable_uri=null。token 勿拼入查询参数（会随 URL 泄露），请用请求头。"}

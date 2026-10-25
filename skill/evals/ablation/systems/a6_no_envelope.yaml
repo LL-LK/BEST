@@ -1,0 +1,61 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/a6_no_envelope.yaml — A6 消融: 拆掉统一信封
+#
+# 装配依据: docs/eval-E5-plan-revised-2026-10-10.md §11 缺陷 10
+# **为什么补这一条**: 组件覆盖矩阵算出 10 个组件里 9 个有单件对照, **只有
+# `unified_envelope` 没有** —— 它此前仅出现在 B2b→B3 的 6 组件打包台阶里,
+# 效应与同台阶另 5 个组件无法分离。补 A6 后该组件获得**单件可归因**的对照。
+#
+# 与 B2b→B3 的关系: 那条台阶同时打开 6 个组件, 其中 5 个各有 A1–A5 拆开,
+# A6 补上第 6 个 ⇒ 打包台阶的 6 个组件**全部**获得单件对照。
+system:
+  id: A6
+  kind: ablation
+  label: "B3 − 统一信封"
+  role: "消融: 量统一信封 (data/status/cost/provenance 四键归一) 的贡献"
+  base: B3
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    param_validation: true
+    field_semantics: true
+    refusal_rules: true
+    provenance: true
+    post_verify: true
+    # ↓ 唯一被拆掉的零件
+    unified_envelope: false
+  # 无信封 ⇒ 回包不再归一到四键; 只保留原始载荷
+  envelope_keys: [raw]
+  ablation_detail:
+    removed_component: >
+      统一信封 (src/protocol.py 的 envelope 归一: data / status / cost / provenance 四键,
+      含 status.content_trust 与 status.error_code 的稳定枚举)
+    mechanism: >
+      不再把站点回包归一到四键; 代理拿到的是**原始载荷** —— 字段位置随接口而变,
+      错误与可信度没有稳定位置, 成本也不在回包里。
+    code_seam: "adapter 层的信封归一开关 (生产码零改动)。"
+    probe_items: [E5-D02, E5-D05, E5-D11, E5-S06]
+  expected_effect:
+    esr_data: down (字段位置不稳 ⇒ 取值路径要逐接口试)
+    avg_turns: up (要额外一轮确认拿到了什么)
+    avg_calls: up (同上)
+    field_consistency: down (列名与错误位置不再有稳定承载)
+    parse_failure: up (裸载荷没有稳定错误位 ⇒ 失败更难识别)
+  # ablations/A6
+  linked_hypothesis: hypotheses.yaml
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型; 11 装配同一 model_id/解码参数)
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+
+  notes: >
+    A6 与 A4 (provenance) 的分工: A4 拆的是**来源与版本信息本身** (stable_uri /
+    snapshot_id / content_trust 的**内容**), A6 拆的是**承载它们的那个归一结构**。
+    两者预期效应不同 —— A4 掉的是来源可核性, A6 掉的是**取值路径的稳定性**
+    (故 ESR_data 与 AvgTurns 是 A6 的主指标, 而 HR_claim 是 A4 的主指标)。
+    报告须把这条分工写进消融表脚注, 否则两条会被误读成同一个零件。

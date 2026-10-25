@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：路由 clarify、tool_calls 为空，未执行查询。信封 state=empty，计数三元组 total_count=0、returned_count=0、row_count=0，truncated=false，envelopes/row_keys/first_row 均空，n_rows_observed=0。来源与版本缺失：stable_uri=null、session_id=null、snapshot_id=null，无 content_trust，故无可引用来源或快照。请给出字段名与所属表，再据实核实是否为逐历元星等。"}

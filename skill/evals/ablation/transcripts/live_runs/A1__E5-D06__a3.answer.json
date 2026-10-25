@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形搜索(RA=180.0, Dec=30.0, 半径18000″=5°, 预算3000行) 实测空: 0 行, 计数三元组 row_count/total_count/returned_count=0/0/0, truncated=false, error_code=null, pages=0, http_requests=0。来源: session_id=s4897, snapshot_id=live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as; stable_uri 与 data_hash 均为空串, 信封未提供 content_trust。row_keys 与 first_row 为空, 无关键列数值可报。"}

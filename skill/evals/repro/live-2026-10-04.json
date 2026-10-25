@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "n_tasks": 14,
+    "runs_per_task": 5,
+    "TSC": 1.0,
+    "TSC_ci95": [
+      0.7847,
+      1.0
+    ],
+    "PAC": 1.0,
+    "FCC": 1.0,
+    "FCC_ci95": [
+      0.7847,
+      1.0
+    ],
+    "first_tool_correct": 0.7857,
+    "RTE_violations": [
+      "REPRO-22"
+    ],
+    "RTE_note": "相对时间表述是 E6 硬约束; 任务 yaml 里 relative_time_expression=true 的任务出现即为违规",
+    "tsc_unstable": [],
+    "fcc_unstable": [],
+    "first_tool_mismatch": [
+      "REPRO-09",
+      "REPRO-19",
+      "REPRO-20"
+    ]
+  },
+  "rows": [
+    {
+      "id": "REPRO-03",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "resolve_name",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "resolve_name"
+      ],
+      "card_kinds_seen": [
+        "value"
+      ]
+    },
+    {
+      "id": "REPRO-07",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-09",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "resolve_name",
+      "first_tool_ok": 0.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-13",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-17",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-18",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-19",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 0.0,
+      "first_tools_seen": [
+        "list_catalogs"
+      ],
+      "card_kinds_seen": [
+        "rowset"
+      ]
+    },
+    {
+      "id": "REPRO-20",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "describe_catalog",
+      "first_tool_ok": 0.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-22",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": true,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "refusal"
+      ]
+    },
+    {
+      "id": "REPRO-23",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "refusal"
+      ]
+    },
+    {
+      "id": "REPRO-24",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "clarification"
+      ]
+    },
+    {
+      "id": "REPRO-25",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "cone_search",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "cone_search"
+      ],
+      "card_kinds_seen": [
+        "rowset"
+      ]
+    },
+    {
+      "id": "REPRO-26",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "none",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "none"
+      ],
+      "card_kinds_seen": [
+        "refusal"
+      ]
+    },
+    {
+      "id": "REPRO-29",
+      "n_runs": 5,
+      "tsc": 1.0,
+      "pac": 1.0,
+      "fcc": 1.0,
+      "rte_any": false,
+      "want_first_tool": "resolve_name",
+      "first_tool_ok": 1.0,
+      "first_tools_seen": [
+        "resolve_name"
+      ],
+      "card_kinds_seen": [
+        "value"
+      ]
+    }
+  ]
+}

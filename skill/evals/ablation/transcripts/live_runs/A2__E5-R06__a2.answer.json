@@ -1,0 +1,1 @@
+{"answer_text": "请求被拒（route=reject），无工具调用。信封 state=empty、error_code=null；row_count=0、pages=0、total_count=0、returned_count=0、truncated=false，无行数据与关键列。stable_uri、session_id、snapshot_id 均为 null，未报告 content_trust，sentinels_removed=false，tool_face=toolbox。故无来源与快照可引用，计数三元组全为 0；token 拼进查询参数未获放行，本次无结果可取。"}

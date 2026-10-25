@@ -1,0 +1,16 @@
+{
+  "task_id": "NL2T-01",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "BEST 线上可查询的星表共 12 张，分三个导航分组：\n- calib（定标组，7 张）：ps1（Pan-STARRS 全天，站点同时以顶层页发布）、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4；\n- std（标准星组，3 张）：scr_galah（标准星×GALAH）、scr_lamost（标准星×LAMOST）、xpsp（Gaia DR3 XP&SP）；\n- other（1 张）：dr3xpcorr（改正后的 Gaia DR3 XP 光谱）。\n三个易错点：std / calib / other 只是导航分组、不是可查询表，拿组名当表名查会拿到 {\"error\":\"Internal Server Error\"}；线上没有 gaia_dr3 这张表，正确 id 是 gaia_dr3_18（列前缀也是 gaia_dr3_18_）；官方文档里出现的 SkyMapper DR4 线上不可查询（/skymapper_dr4/f 是软 404），凡文档出现过的表都以实际 /f 路由为准。另外“19 个测光系统（含 200+ 波段）”是测光系统口径，和“12 张可查询表”是两个维度。",
+  "notes": "元数据问询走零请求的 list_catalogs（本地注册表），并把 std/calib/other 是组名、无 gaia_dr3、SkyMapper 不可查三个坑一并说明。"
+}

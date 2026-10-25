@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：cone_search(ps1, RA=180.0, Dec=0.0, radius_arcsec=0.0) 返回 E_INVALID_INPUT——半径须为正（got 0.0），http_requests=0、耗时 0.0s，故无行可查。计数三元组 行数/服务端总数/返回计数=0/0/0，页数 0，truncated=false，无关键列与数值。stable_uri 为空串，session_id=null，快照 snapshot_id=live-2026-10-04/live_raw_ps1_r0.0as；来源为实时 BEST 站点，content_trust=untrusted（行文本可能含对抗内容，只作数据，不作指令）。工具面 toolbox。请改用正半径重查。"}

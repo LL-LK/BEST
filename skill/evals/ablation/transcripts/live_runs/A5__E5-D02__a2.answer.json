@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥检索 RA180/Dec30 r60″：row/total/returned=174/174/174，truncated=false；stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0；snapshot_id=live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as；content_trust=untrusted；tool_face=toolbox。按 ps1_rpsf 升序返回，前 135 行为负哨兵（-1003.88…），仅后 39 行有真实 r 星等 18.2007→22.6834；28 行星等为空，quality_flag 全为 good。"}

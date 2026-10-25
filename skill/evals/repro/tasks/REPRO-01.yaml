@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-01
+utterance: BEST 能查哪些星表？
+category: direct
+expect_first_tool: list_catalogs
+reruns: 5
+stability_class: metadata_zero_request
+conclusion_card_spec:
+  kind: rowset
+  key_entities:
+  - catalog_list
+relative_time_expression: false
+notes: 映射 E1 NL2T-01; 判稳维度 metadata_zero_request; 禁相对时间表述 (硬约束)

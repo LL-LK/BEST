@@ -1,0 +1,1 @@
+{"answer_text": "查询为空结果集：row_count=0、total_count=0、returned_count=0，truncated=false，error_code=null，row_keys 与首行为空。stable_uri 为 null，信封未含来源与 content_trust，会话/快照标识亦 null。故无法列出 r 波段误差 <0.01 mag 的对象：未取到数据行，非筛选后无匹配。"}

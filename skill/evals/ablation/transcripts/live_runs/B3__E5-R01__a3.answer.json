@@ -1,0 +1,1 @@
+{"answer_text": "未取到任何数据：route=reject，tool_calls 为空，state=empty。计数三元组 row_count=0、total_count=0、returned_count=0，pages=0，truncated=false，n_rows_observed=0，row_keys 与 first_row 均空。stable_uri、session_id、snapshot_id 均为 null，无稳定引用与快照标识；信封无来源与 content_trust 字段，无法给出处与可信度。工具面为 toolbox，通路存在，但取数前被拒，未给原因；提问未指明是哪颗星。"}

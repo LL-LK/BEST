@@ -1,0 +1,1 @@
+{"answer_text": "本次未取到数据，无法判断该字段是否代表逐历元星等。观测：路由 clarify、tool_calls 空；state=empty、error_code=null；total_count=returned_count=row_count=0；stable_uri、session_id、snapshot_id 均 null；envelopes 空，无来源可写。请补充星表与字段名。"}

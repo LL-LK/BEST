@@ -1,0 +1,1 @@
+{"answer_text": "未发出查询(工具面none,tool_calls空),无法取得ps1在RA=180.0,Dec=0.0,r=0的数据。信封state=empty,计数三元组total=0/returned=0/row=0,truncated=false;stable_uri与snapshot_id均null(无稳定引用/快照标识),来源与content_trust未给出;row_keys为空,无关键列与数值。"}

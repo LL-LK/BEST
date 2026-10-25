@@ -1,0 +1,1 @@
+{"answer_text": "本次按 raw_protocol 直连站点执行，tool_calls 为空。信封状态为 empty：row_count=0、returned_count=0、total_count=0、pages=0、truncated=false，row_keys 与 first_row 均为空，即服务端实际返回 0 行，无法给出标准星清单。stable_uri、snapshot_id、session_id 均为 null，未提供稳定引用与快照标识；信封中不含 content_trust 字段。error_code=null，即未报错误码但结果为空；extra_page_empty=false，sentinels_removed=false。需重试或改用其它入口后再取标准星。"}

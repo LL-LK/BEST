@@ -1,0 +1,1 @@
+{"answer_text": "本次查询信封 state=empty、error_code=null,计数三元组 row_count=0、total_count=0、returned_count=0,truncated=false,pages=0;stable_uri=null,snapshot_id=null,sentinels_removed=false;信封未含 content_trust;tool_face=toolbox,tool_calls=[]。观测行数 0,row_keys 与 first_row 皆空。故无法核实 ps1 五波段是否全为 -999/-1004,也不能判定该源可否做测光分析:未取到数据不等于不可用。建议重跑查询确认哨兵值。"}

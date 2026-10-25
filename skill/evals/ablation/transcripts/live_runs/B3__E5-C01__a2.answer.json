@@ -1,0 +1,1 @@
+{"answer_text": "本次走 clarify 路径，无任何工具调用，故未取到数据。信封 state=empty：row_count=0、returned_count=0、total_count=0（计数三元组均为 0），pages=0，truncated=false；stable_uri、session_id、snapshot_id 均为 null，tool_face=toolbox。观测行数 0，row_keys、first_row 为空。因此无法给出 Gaia DR3 1234567890123456789 在 BEST 中的 ZTF g/r/i 星等，也无稳定引用或快照标识可引。"}

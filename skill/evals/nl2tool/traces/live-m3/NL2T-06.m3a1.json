@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-06",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "先只数个数不拉数据是对的做法，但这条消息里我没有可执行的查询条件，缺三样：\n\n1. 天区中心：RA / Dec（度，ICRS）。或者直接给天体名（M31、NGC 532 这种），我用名称解算换坐标。\n2. 半径：单位是角秒，上限 18000 角秒 = 5 度。超了就得拆块，我不会替你猜一个。\n3. 查哪张表：12 张可查询表（ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr）。\n\n只要 1、2、3 齐了，成本是这样的：cone_search 一次建会话（1 次 POST）就会带回 getcount 的真实命中总数和 truncated 标记，也就是「有多少」当场就有，不用取数据行。所以「先数再拉」其实不需要额外的工具 —— 你要的数字就在第一次查询的返回里。\n\n补一个点：如果你手上已经有会话 id（比如之前某次查询留了 provenance.session_id），那 count 可以直接补总数（它只对已有 sqlid 生效，不能凭空建会话）。\n\n条件给我，我就跑第一步，把总数和是否被截断报给你，再由你决定要不要 fetch_page 往下取。",
+  "notes": "「这个天区」无可指代对象且缺表口径，缺坐标/半径/表三项，0 请求先问清，不猜中心点乱查。"
+}

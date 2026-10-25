@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索(RA=180.0,Dec=30.0,60″):state=rows,total_count=5/returned_count=5/row_count=5,pages=1,truncated=false,服务端 5 行全返回。信封未报 stable_uri 与 content_trust,snapshot_id 为 null;provenance 仅 session_id=s4930。5 行中 4 行只有 g 波段(18.5992/18.3506/18.3922/19.7664),仅 RA=180.007877,Dec=30.003347 含 r=18.2370 及 g/i/y/z。class_star 全空,r 均不在 18.20–18.40,匹配为空集。"}

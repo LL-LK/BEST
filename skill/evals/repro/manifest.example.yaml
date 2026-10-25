@@ -1,0 +1,86 @@
+# E6 固定清单模板 (docs/eval-E6-reproducibility.md §3)
+#
+# 【迁移注记 2026-09-28】自 temp/E6-design/run_manifest.example.yaml 迁入
+# evals/repro/manifest.example.yaml (经父代理审查: 内容与 E6 文档 §3 八项
+# 一致, 原样保留); 程序化生成见 manifest.py (build_manifest/validate_manifest),
+# 本文件是人读模板与字段说明, 程序以代码为准。
+#
+# 八项, 一项都不能少。任一项缺失 -> 本 run 无效 (阻断项)。
+# 指纹一律 sha256, 前缀声明算法。禁止出现语义化版本号 (本仓禁版本号铁律)。
+schema: e6-run-manifest
+schema_version_field_note: "禁止使用 vX.Y.Z 形式的版本号; 用内容指纹代替"
+
+# ── 1. BEST 数据版本 (站点无显式版本号 -> canary 指纹) ──────────────────
+best_data:
+  method: canary_fingerprint
+  canary_queries: 5          # ps1 / gaia_dr3_18 / scr_galah / stripe82 / xpsp 各一条定参锥搜 + 一次 count
+  fingerprint_before: "bestfp:sha256:<64hex>"
+  fingerprint_after:  "bestfp:sha256:<64hex>"
+  drift_state: STABLE        # STABLE | DRIFTED (DRIFTED 必须声明并移交 E7, 不判 E6 失分)
+  canary_rerun_on_mismatch: true   # 前后不一致时先重跑一次再判 DRIFTED (防网络抖动误判)
+
+# ── 2. Skill 版本 (无 .git + 禁版本号 -> 内容指纹) ─────────────────────
+skill:
+  fingerprint: "sha256:<64hex>"
+  method: "sha256(排序后的 '相对路径|大小|内容sha256' 拼接)"
+  scan_roots: [src, ops, evals, contracts, references, static, agents,
+               SKILL.md, README.md, architecture.md, manifest.yaml]
+  exclude: [temp, __pycache__, "*.pyc", .workbuddy-ai]
+  exclude_policy_source: ops/verify_tree_integrity.py   # 复用既有排除口径, 不另立一套
+
+# ── 3. 模型版本 (external: 由外部 harness 代入, E6 记录而非控制) ────────
+model:
+  scope: external
+  model_id: "<provider>/<model>-<具体版本串>"   # 禁用 latest / -latest 别名 -> 命中即阻断
+  provider: "<name>"
+  endpoint: "<url>"
+  weights_snapshot_date: "<ISO date 或 opaque>"
+  reasoning_mode: false       # 开推理模式时输出不确定性显著上升, 报告需分列
+
+# ── 4. system prompt ────────────────────────────────────────────────────
+system_prompt:
+  fingerprint: "sha256:<64hex>"
+  bytes: 0
+  template_id: "<id>"
+  stored_at: "temp/repro/runs/<run_id>/system_prompt.txt"   # 全文落盘 (temp/ 铁律), 只存指纹无法事后复核
+
+# ── 5. 工具 schema (两个都要, 防代码侧与暴露面漂移) ─────────────────────
+tool_schema:
+  code_side:   "sha256:<64hex>"   # references/tools.schema.json
+  exposed_side: "sha256:<64hex>"  # 调用方按 references/llms.txt 声明的 7 工具清单规范化后 (键排序 + 去描述字段)
+
+# ── 6. 评测数据 ─────────────────────────────────────────────────────────
+eval_data:
+  task_set: "REPRO-01..32"
+  task_set_fp: "sha256:<64hex>"   # 复用 E1 的 NL2T-01..26 标注 + E6 新增 6 条
+  snapshot_id: "<snap_id>"        # R3 回放用; R1/R2 在线路为 null
+  snapshot_manifest_fp: "sha256:<64hex>"
+  relative_time_tasks: []         # 必须为[]; 混入相对时间表述的任务不可复现, 发现即剔除
+
+# ── 7. 温度与随机种子 ───────────────────────────────────────────────────
+sampling:
+  temperature: 0.0               # 建议 0.0; 注意 temperature=0 不保证逐位确定
+  top_p: 1.0
+  max_tokens: null
+  seed:
+    requested: 20260928
+    honored: false               # 多数厂商不保证 seed 可复现 -> 如实记 false 并在报告披露
+
+# ── 8. 执行日期 ─────────────────────────────────────────────────────────
+execution:
+  run_date: "2026-09-28"
+  run_started_utc: "2026-09-28T11:49:10Z"
+  timezone: "Asia/Shanghai"
+  crossed_utc_midnight: false    # 跨界 run 必须单独标注
+  lane: R1                       # R0 | R1 | R2 | R3 (四路对照, 见 §2.1)
+  repeat: 5
+
+# ── 运行环境变量 (不进八项, 但缺一即无法解释效率数字) ────────────────────
+environment:
+  rate_limit_seconds: 2.0        # 默认 2.0s/请求, 直接污染墙钟 -> 墙钟须分含/不含两种口径
+  http_cache_enabled: false      # 缓存会让第二次运行快很多且回包不同 -> 效率取首次冷跑
+  concurrency: 1
+  python_version: "3.13.12"
+  requests_version: "<x.y.z>"
+  proxy_enabled: false
+  best_api_token_present: true   # 只记是否配置, 值本身严禁落盘

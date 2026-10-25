@@ -1,0 +1,1 @@
+{"answer_text": "未发起任何工具调用 (tool_calls 为空), 路由为 clarify — “那个源”无法识别, 没有可查目标。信封: state=empty, error_code=null, tool_face=toolbox; 计数三元组 total_count=0、returned_count=0、row_count=0, truncated=false; stable_uri=null、snapshot_id=null; envelopes 为空、n_rows_observed=0、row_keys 与 first_row 均空。信封未含来源字段, 也未含 content_trust 字段, 故没有可引用的稳定来源, 也没有内容可信度标注。请补充源名、坐标或表名, 我再实查。"}

@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/b0_bare.yaml — B0 裸通用大模型 (无任何 BEST 材料)
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 B0 列 / §3.2 一句话定义。
+# B0 测的是**模型自身知识与幻觉天花板** — 它必然失败所有取数任务 (给不出真数),
+# 这正是要量的东西, 不要当成 bug。C/R/S 类 (不查库也能答对) 是 B0/B1 唯一可比的子集。
+system:
+  id: B0
+  kind: baseline
+  label: "裸通用大模型 (无 BEST 文档、无工具、无网络)"
+  role: "基线地板 — 量模型自身知识与幻觉天花板"
+  # 无工具面: 不装任何工具签名, 也不给数据通路"
+  tool_face: none
+  components:
+    # 九个系统共用同一个底层模型与解码参数 (E5 §3.1/§9)
+    general_llm: true
+    # 不给任何 BEST 材料
+    best_site_docs: false
+    # 无网络出口
+    data_path: false
+    # 不知道有 7 个原子工具
+    tool_signatures: false
+    param_validation: false
+    field_semantics: false
+    # 没有 BEST 的能力边界知识 → 只能凭通识猜
+    refusal_rules: false
+    provenance: false
+    post_verify: false
+    unified_envelope: false
+  # 无信封: 工具面不存在, 无所谓信封
+  envelope_keys: []
+  docs_injected: []
+  applicable_metrics: [ESR_know, ESR_full, HR_any, HR_param, HR_num, HR_claim,
+                       RejectAcc, OverRejectRate, MissedClarify, AvgTurns]
+  na_metrics: [ToolSetF1, ParamF1, ParamHallucination, RowF1, FieldConsistency,
+               TruncTriple, ESR_data, AvgCalls, http_requests]
+  na_reason: >
+    B0 无工具面 — 工具/参数/取数类指标对它**没有意义**, 一律标 N/A 且**不进分母**
+    (E5 §6.2/§6.3/§9; 误记为 0 是 E5 §11 阻断项 3)。ESR_data 结构性为 0 并注明原因。
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型)"
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+  notes: >
+    B0 的 D 类回答只含通识推测, 不含任何真实行/数值 — 它的"编造"有随机性,
+    真模型跑批须 3 次重复取中位数并报极差 (E5 §13 已知坑位)。

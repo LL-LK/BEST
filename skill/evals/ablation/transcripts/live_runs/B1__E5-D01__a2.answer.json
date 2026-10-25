@@ -1,0 +1,1 @@
+{"answer_text": "装配 B1 工具面 none（tool_calls 空），据实无法取数。观测：state=empty、error_code=null；row_count=pages=returned_count=total_count=n_rows_observed=0，truncated=false、extra_page_empty=false，envelopes/row_keys 空，无首行数值。信封未含来源与 content_trust，stable_uri/session_id/snapshot_id 均 null，无稳定引用与快照标识；sentinels_removed=false。结论：RA=180.0、Dec=30.0、5″ 内 ps1 查询命中 0 行，不能断言有源。"}

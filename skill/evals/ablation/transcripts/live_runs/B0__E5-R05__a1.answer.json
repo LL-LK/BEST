@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：cone_search(rpsf_err<0.01) 被离线纪律拦截（无数据锚点），http_requests=0。信封 state=error、error_code=E_BACKEND；row_count=returned_count=total_count=0，truncated=false；stable_uri/session_id/snapshot_id 均 null，provenance 空、无 content_trust 字段，故无来源与稳定引用；row_keys 与 first_row 空，未见 r 波段误差值，无法筛出 r<0.01 mag 的源。"}

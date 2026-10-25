@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-11",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "坐标和半径都齐了，只差一个表口径。\n\n已确认可直接下发的部分：RA = 120.3°、Dec = −20.4°（ICRS 十进制度）；半径 5 角秒 —— radius 参数的单位本来就是角秒，所以按 radius_arcsec = 5 原样传，不换算。\n\n要问的是「标准星」指哪一张。在 BEST 里 std 是导航分组、不是可查询表（拿 std 当 catalog 查会拿到软错误，所以不能直接这么发），真正的成员是三张，内容差别很大：\n- scr_galah：标准星 × GALAH 光谱交叉，137 列，成员波段里带 ZTF 的 g/r/i（rztf 等）\n- scr_lamost：标准星 × LAMOST 光谱交叉，137 列，与上面同构\n- xpsp：标准星 × Gaia DR3 XP&SP，287 列，跨 139 张表单表；位置和 Gaia G/BP/RP 星等在共享表，各调查的 XP 测光列（如 ztf_r_r_xpsp）在各波段子表\n\n你点一张（或说「三张都查」，那就是 3 次锥检索），我按 cone_search（ra=120.3、dec=-20.4、radius_arcsec=5、catalog=<你选的成员>）执行，并把命中数和是否截断报给你。\n\n另外提醒：5 角秒是很紧的半径，ps1 那类全天高密度表可能命中 0 源；标准星成员表密度低，也很可能落在空区。拿到 0 行我会明确说 0，而不是当成查询失败。",
+  "notes": "坐标/半径完备，但「标准星」是导航组需点成员表，故 0 请求反问而非猜表乱查。"
+}

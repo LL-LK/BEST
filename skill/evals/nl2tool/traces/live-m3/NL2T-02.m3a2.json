@@ -1,0 +1,18 @@
+{
+  "task_id": "NL2T-02",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "ps1（Pan-STARRS All-Sky）共 30 列，列名一律带 ps1_ 前缀（如 ps1_rpsf，提交时要写 {table}.{col} 形式）。\n波段与测光列：g / i / r / z / y 五个波段的 PSF 星等 ps1_gpsf、ps1_ipsf、ps1_rpsf、ps1_zpsf、ps1_ypsf；每个波段配 _corr（改正后星等，如 ps1_rpsf_corr）和 _err（误差，如 ps1_rpsf_err；注意 y 波段线上没有 ypsf_corr）。\n位置：ps1_ra、ps1_dec。质量与辅助列：ps1_gflags/iflags/rflags/yflags/zflags、ps1_class_star、ps1_dust、ps1_ebv、ps1_max_d、ps1_parallax(+_err)、ps1_ruwe、ps1_sigma、ps1_source_id。\n两个实测坑：ps1_source_id 在锥搜/批量匹配响应里线上常为空（要做确定性下载对 ps1 走坐标上传即 proximity/crossmatch_batch）；某波段没测光时该列回 ≈-1000 量级的哨兵值（实测见过 gpsf=-1004.07、gpsf_err=-999.0，同帧 ipsf=19.49 才是真值），所以不能把 ≤-999 当星等用。",
+  "notes": "纯列/波段元数据，用零请求的 describe_catalog；按“先调 describe_catalog、不要猜列名”的工具契约，不发任何 cone 查询。"
+}

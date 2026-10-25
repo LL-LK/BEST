@@ -1,0 +1,1 @@
+{"answer_text": "本次观测 state=empty；计数三元组 total_count=0、returned_count=0、row_count=0；truncated=false；row_keys 为空（无关键列与数值）。tool_calls 为空，本次并未真正发出工具调用，故不能据此判定 (180.0,30.0) 附近无天体。信封中 stable_uri、snapshot_id、session_id 均为 null，也无 content_trust，无来源与快照可引。"}

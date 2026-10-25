@@ -1,0 +1,1 @@
+{"answer_text": "本装配 B0（general_llm）工具面为 none，未发出任何工具调用，无数据通路，取不到 RA=180.0、Dec=30.0、半径 1800″ 内 ps1 源的任何记录，服务端总数无从给出。信封实测：state=empty，计数三元组 total_count=0、returned_count=0、truncated=false，row_count=0、pages=0，row_keys 为空故无关键列；stable_uri=null、snapshot_id=null、session_id=null；error_code=null、tool_face=scripted。0 行只表示本次未取到数，不代表该天区无源，建议换到有查询工具的环境重跑后再决定是否整段拉回。"}

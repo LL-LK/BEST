@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：工具面只有 cone_search，无 source_id 直查路径，该 Gaia DR3 id 未被查询，调用被离线拦截，state=error、error_code=E_BACKEND。total/returned/row_count=0，truncated=false，row_keys/first_row 空，stable_uri 等均为 null。"}

@@ -1,0 +1,1 @@
+{"answer_text": "路由 clarify、tool_calls=0、tool_face=toolbox，未对 RA=120.3°、Dec=−20.4°、半径 5″ 执行实际检索。信封 state=empty：row_count=0、total_count=0、returned_count=0、truncated=false；stable_uri、session_id、snapshot_id 皆 null，无 content_trust 与来源字段，故无数据与可引来源。结论：无法给出该位置 5″ 内的标准星，请澄清意图或改用明确工具重试。"}

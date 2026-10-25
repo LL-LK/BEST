@@ -1,0 +1,1 @@
+{"answer_text": "观测：state=empty，tool_face=toolbox；row_count=returned_count=total_count=0，truncated=false，无返回列。信封无来源/快照：stable_uri、session_id、snapshot_id 全为 null，无 content_trust。故本次 ps1 3″ 查询返回 0 行不能断定该处没有天体。"}

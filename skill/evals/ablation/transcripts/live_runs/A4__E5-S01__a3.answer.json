@@ -1,0 +1,1 @@
+{"answer_text": "本次观测未取到数据，无法画光变曲线或估算周期。信封计数三元组 total_count=0、returned_count=0、row_count=0；pages=0、truncated=false、n_rows_observed=0，row_keys 与 first_row 均空。来源与版本缺失：stable_uri=null、session_id=null、snapshot_id=null，envelopes 与 notes 空；state=empty、error_code=null，tool_face=toolbox。五个 ps1_* 值仅为单历元测光，不构成时序。"}

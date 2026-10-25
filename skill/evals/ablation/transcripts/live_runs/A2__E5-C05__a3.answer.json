@@ -1,0 +1,1 @@
+{"answer_text": "未取到标准星数据：路由 clarify，tool_calls 空，工具面 toolbox，未发查询。信封 state=empty、error_code=null；计数三元组 total_count=0、returned_count=0、row_count=0，pages=0、truncated=false，服务端总数为 0 且未截断。stable_uri/session_id/snapshot_id 均 null，sentinels_removed=false；观测无来源与 content_trust 字段，故无可陈述。envelopes 空，n_rows_observed=0，row_keys 空，first_row 空对象，notes 空，关键列与数值无从给出。请补充星表、天区、星等范围。"}

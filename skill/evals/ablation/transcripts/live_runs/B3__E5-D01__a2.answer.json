@@ -1,0 +1,1 @@
+{"answer_text": "cone_search(ps1, ra=180.0, dec=30.0, sr=5\"): 返回3行/服务端总数3/截断false/页数1(额外页空=false)。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=5.0；快照 live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as；会话 s4908；content_trust=untrusted。3源距 3.15/3.96/3.98″：i=19.494±0.146(iflags=4112)、g=18.599±0.010、第三源无星等(g/r/y/zflags=16416, zflags=114720)。class_star/snr/fwhm 均 null。"}

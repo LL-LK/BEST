@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none，无数据通路，未对 RA=180.0、Dec=30.0、半径 5 角分天区发起查询，tool_calls 为空。信封 state=empty、error_code=null、tool_face=scripted；total_count=0、returned_count=0、row_count=0，pages=0，truncated=false，n_rows_observed=0，row_keys 与 first_row 为空；stable_uri=null、snapshot_id=null，无来源与快照标识，信封未含 content_trust。故该天区未观测到记录，属通路缺失，不能断言那里真的没有天体。"}

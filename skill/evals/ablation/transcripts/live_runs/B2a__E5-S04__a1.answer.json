@@ -1,0 +1,1 @@
+{"answer_text": "信封 state=empty，row_count/total_count/returned_count 均 0，truncated=false；tool_calls、envelopes 空，stable_uri/session_id/snapshot_id 均 null，content_trust 缺，关键列 row_keys 与 first_row 为空——本轮未真正发出 raw_protocol 请求，0 行只说明观测为空，不能据此断定该处无天体。"}

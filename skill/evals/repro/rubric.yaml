@@ -1,0 +1,111 @@
+# 【迁移注记 2026-09-28】自 temp/E6-design/rubric.yaml 迁入 evals/repro/
+# (经父代理审查: 与 docs/eval-E6-reproducibility.md §8 权重/阈值/阻断项一致,
+# 原样保留); 权重与阻断项在 run_e6.py 与各指标件中以代码锁定 (和=1.00 启动
+# 即校验), 本文件是 L1 配置层的人读权威。
+# E6 评分 rubric (docs/eval-E6-reproducibility.md §8)
+# 独立于 evals/scoring-rubric.yaml (其五维权重和已被代码锁死 1.0), E6 单独出 REPORT.md。
+skill: astro-best
+experiment: E6
+experiment_note: "E6 = 可复现性/效率/用户可用性 (需求指定). 终版编号: E1 工具调用 / E2 金标准 / E3 语义 / E4 鲁棒性与安全失败 / E5 基线与消融 / E6 本实验 / E7 在线漂移 (待立) / E8 TAP 面 (待立). 漂移定量移交 E7, 本实验只做 DRIFTED 门禁"
+pass_score: 0.90
+warn_line: 0.85
+weight_note: "三面权重和 = 1.00; 加权分不得覆盖阻断项"
+
+faces:
+  reproducibility:
+    weight: 0.50
+    metrics:
+      TSC: {weight: 0.15, full: "工具选择一致率 (序列口径, 众数参照 + Krippendorff α)"}
+      PAC: {weight: 0.15, full: "参数一致率 (主口径 = 调用级全等 PAC_call; 另报字段级 PAC_field)"}
+      RDC: {weight: 0.10, full: "返回数据一致率 (在线主口径 L2 行集 Jaccard; 回放主口径 L1 data_hash)"}
+      FCC: {weight: 0.10, full: "最终结论一致率 (结论卡四子项全一致才记 1)"}
+  efficiency:
+    weight: 0.25
+    note: "指标编号一律 EF 前缀, 避免与实验编号 E1..E7 撞名"
+    metrics:
+      EF1_request_ratio: {weight: 0.10, full: "请求效率比 η = 理论最小请求数 / 实际请求数", threshold: ">= 0.70", calibrated: false}
+      EF3_EF4_waste:     {weight: 0.08, full: "冗余调用率 + 无效重试率", threshold: "冗余 <= 0.10; 无效重试 <= 0.05", calibrated: false}
+      EF5_EF6_paging:    {weight: 0.07, full: "分页过量翻页数 + 元数据类零请求完成率", threshold: "过量翻页 = 0; 零请求完成率 = 1.00", calibrated: false}
+  usability:
+    weight: 0.25
+    metrics:
+      U1_first_usable:   {weight: 0.07, full: "首次可用率 (无需追问/自行修正)", threshold: ">= 0.80", calibrated: false}
+      U2_U3_U4:          {weight: 0.10, full: "错误可操作性三要素 / 澄清质量 / 答案自解释性", threshold: "U2 = 1.00 (硬); U3 >= 0.90; U4 >= 0.90", calibrated: false}
+      U5_U6:             {weight: 0.08, full: "步数比 + 诚实降级率", threshold: "U5 <= 1.3; U6 = 1.00 (硬)", calibrated: false}
+    excluded:
+      U7_cognitive_load: "主观 5 分制, 评阅人不足时只作趋势参考, 不进分、不进门禁"
+
+# 报告制 (不定阈值, 但必须披露)
+reported_only:
+  - EF2_wall_clock_p50_p90     # 分含/不含 rate_limit 两种口径
+  - EF7_tokens                 # external, 由外部 harness 提供
+  - wilson_ci                  # N=5 下区间极宽, 必须给区间而非只给点估计
+  - krippendorff_alpha         # 多次运行一致性的稳健汇总
+  - mcnemar_power              # N=5 下效力约 0.6-0.7, 必须声明
+
+# 四路对照与归因 (§2.1 / §4.3)
+lanes:
+  R0: {name: "工具层固化回放", model: false, network: frozen, purpose: "地板线; 出现任何不一致即阻断"}
+  R1: {name: "同日在线重跑", model: true, network: live, purpose: "端到端日常可复现性 (主场景)"}
+  R2: {name: "跨日在线重跑 D+7", model: true, network: live, purpose: "R2-R1 = 漂移信号, 移交 E4"}
+  R3: {name: "快照回放重跑", model: true, network: frozen, purpose: "R1-R3 = 环境噪声; R3 = 纯模型侧稳定性"}
+attribution_order:
+  - ERR_ROUTE
+  - ERR_PARAM_SCHEMA
+  - ERR_PARAM_UNSTABLE
+  - ERR_BACKEND
+  - ERR_BACKEND_DRIFT
+  - ERR_RETRY_INEFFECTIVE
+  - ERR_CONCLUSION_UNSTABLE
+attribution_rule: "自上而下第一条命中即用, 顺序不可调整 (第 4/5 条必须以工具与参数均与众数一致为前提)"
+
+# 反证夹具 (§9): 检测器必须全部检出, 缺任一 -> E6 FAIL
+# 两组: BF = 一致率比对器扰动 (文档 §9); TI = trace 记录器完整性扰动
+# (§8.2 #6/#7 — 记录器把坏记录当完整, 四一致率就是无源之水)
+selftest_fixtures:
+  - {id: BF-1, perturbation: "半径 300 角秒 -> 600 角秒", expect_caught_by: PAC}
+  - {id: BF-2, perturbation: "表 scr_galah -> xpsp", expect_caught_by: "PAC + FCC(key_entities)"}
+  - {id: BF-3, perturbation: "单位错: 5 角分当 5 角秒 (300 -> 5)", expect_caught_by: PAC}
+  - {id: BF-4, perturbation: "结果删一行", expect_caught_by: "RDC(L2 行集 Jaccard)"}
+  - {id: BF-5, perturbation: "把 EMPTY 说成 ERROR / 把 ERROR 说成 EMPTY", expect_caught_by: "FCC(kind) + U2"}
+  - {id: BF-6, perturbation: "结论数值小数点改一位", expect_caught_by: "FCC(key_numbers)"}
+selftest_fixtures_trace_integrity:
+  - {id: TI-1, perturbation: "轨迹事件缺失 (删 final_answer)", expect_caught_by: "validate_trace(final_answer_missing)"}
+  - {id: TI-2, perturbation: "payload_fp 与实算不符 (内容篡改)", expect_caught_by: "validate_trace(payload_fp_mismatch)"}
+  - {id: TI-3, perturbation: "重跑轨迹不一致 (调用序列漂移)", expect_caught_by: "TSC < 1.0"}
+  - {id: TI-4, perturbation: "成本字段造假 (tool_call>0 却 http_requests=0)", expect_caught_by: "validate_trace(cost_inconsistent)"}
+  - {id: TI-5, perturbation: "seq 断号 (时间戳乱序的序列表征)", expect_caught_by: "validate_trace(seq_gap)"}
+  - {id: TI-6, perturbation: "脱敏遗漏 (payload 含凭据原文)", expect_caught_by: "redact 抛错"}
+selftest_required_metascore: 1.0
+
+# 阻断项 (§8.2): 任一命中即 E6 FAIL, 加权分不得覆盖
+blockers:
+  - "固定清单八项任一项缺失或未落盘"
+  - "模型用 latest 别名或未固定 temperature"
+  - "R0 出现任何不一致 (代码/环境层不确定)"
+  - "BEST 数据版本指纹 run 前后不一致却未标记 DRIFTED"
+  - "反证夹具未 100% 检出 (metascore < 1.0)"
+  - "trace 不完整: 缺 final_answer / seq 断号 / tool_call 与 tool_result 不配对"
+  - "trace 中出现凭据原文 (脱敏失败)"
+  - "任务集混入相对时间表述任务"
+  - "任务覆盖率 < 100%"
+  - "U2 或 U6 未达 100%"
+
+# 任务集骨架 (§3.1): 复用优先, 不重造标注
+tasks:
+  inherited_from_E1: "NL2T-01..26 (标注原样继承, 仅追加 repeat_count / stability_class / conclusion_card_spec)"
+  e6_new:
+    - {id: REPRO-27, scene: "跨页大结果 fetch_page 续取", why: "分页顺序与终止条件是历史不稳定高发区"}
+    - {id: REPRO-28, scene: "count 与实取行数一致 + truncated 语义", why: "防截断当全部 (P0-2 相关)"}
+    - {id: REPRO-29, scene: "名称解析失败恢复 (哨兵 -1000 -> E_NAME_UNRESOLVED)", why: "外部 CDS Sesame 依赖"}
+    - {id: REPRO-30, scene: "软 404 恢复 (HTTP 200 + error:Not Found)", why: "严禁 ERROR 报成 EMPTY"}
+    - {id: REPRO-31, scene: "越界请求拒答 (半径>18000 角秒 / 坐标越界)", why: "拒绝路径措辞稳定性"}
+    - {id: REPRO-32, scene: "元数据问询 (有哪些表/某表有哪些列)", why: "必须零请求完成, 是效率地板"}
+  hard_constraint: "禁止任何相对时间表述 (最近的/最新一版/这周) —— 当日再跑答案必变, 不可复现"
+  default_repeat: 5
+
+# 判定分层 (沿用 E2 §7 / E3 纪律)
+judgment_layers:
+  L0: {judges: "TSC/PAC/RDC/FCC 全部数值与结构指标 (纯 Python, 容差外置)", binding: true}
+  L1: {judges: "容差表 / 归一化表 / 哨兵字典 (YAML 外置, 改数值不改代码)", binding: true}
+  L2: {judges: "结论语义等价判定 + 可用性主观分", binding: false, max_weight: 0.10, note: "不得翻转任何 L0 结论"}

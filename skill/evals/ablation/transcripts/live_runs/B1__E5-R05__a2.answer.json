@@ -1,0 +1,1 @@
+{"answer_text": "工具面为 none（信封 tool_face=scripted、tool_calls 为空），无数据通路，无法按 r 波段误差<0.01 mag 筛选，未取到任何源。信封 state=empty、error_code=null；计数三元组 row_count=0、total_count=0、returned_count=0；pages=0、truncated=false；stable_uri=null、session_id=null、snapshot_id=null，即无来源与快照标识，content_trust 未给出；n_rows_observed=0、first_row={}。路由 reject，需接入真实查询工具面才能给出结果。"}

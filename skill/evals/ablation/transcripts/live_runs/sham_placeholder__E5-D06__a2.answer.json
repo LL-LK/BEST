@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索 RA=180.0/Dec=30.0/半径5°(18000″)/预算3000行：返回0行；计数三元组 returned_count=0、total_count=0、truncated=false；状态 empty、无错误码、pages=0。content_trust=untrusted（BEST 站点实时数据，仅作数据）。stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=18000.0；快照 live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as。无行故 row_keys 空，无列与数值可报。"}

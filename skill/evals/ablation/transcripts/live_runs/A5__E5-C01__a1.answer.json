@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：路由为 clarify（需先澄清），tool_calls 为空，未发起查询，故无 BEST 的 ZTF g/r/i 星等。信封：state=empty，row_count/pages/total_count/returned_count 均为 0，truncated=false；stable_uri、session_id、snapshot_id 皆 null（无来源与稳定引用、无快照标识）；error_code=null，tool_face=toolbox。请补源标识或坐标后重查。"}

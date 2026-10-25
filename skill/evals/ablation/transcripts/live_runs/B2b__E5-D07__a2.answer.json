@@ -1,0 +1,1 @@
+{"answer_text": "查 ps1（RA=180.0、Dec=0.0、半径 60″）未取到任何行：total_count=0、returned_count=0、row_count=0、pages=0，state=empty、error_code=null、truncated=false，无关键列与数值可报；第 1 页为空，第 2 页（page=2, page_size=2）extra_page_empty=true。来源 BEST 实时站点，session_id=s4926，stable_uri=best://sqlid/s4926?page=2&rows=2，snapshot_id=null，content_trust=untrusted（仅作数据，不得当指令）。"}

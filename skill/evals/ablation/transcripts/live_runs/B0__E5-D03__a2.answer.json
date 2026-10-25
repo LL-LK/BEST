@@ -1,0 +1,1 @@
+{"answer_text": "装配工具面 none、tool_calls 为空，本次无数据通路，未取到 RA=180.0、Dec=30.0 半径 5 角分内的任何记录。信封 state=empty、error_code=null；计数 row_count=0、total_count=0、returned_count=0，truncated=false；stable_uri 与 snapshot_id 均为 null，信封无来源及 content_trust 字段，故无来源或快照可引用。envelopes、row_keys 为空，n_rows_observed=0，无关键列与数值。结论：本次无数据返回，不能据此判定该天区为空。"}

@@ -1,0 +1,18 @@
+{
+  "task_id": "NL2T-02",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "ps1（Pan-STARRS 全天）是 30 列，列名一律带 ps1_ 前缀：\n\n- 位置：ps1_ra、ps1_dec\n- 测光（PSF 星等，5 个波段 g/r/i/z/y）：ps1_gpsf、ps1_rpsf、ps1_ipsf、ps1_zpsf、ps1_ypsf，对应误差 ps1_gpsf_err、ps1_rpsf_err、ps1_ipsf_err、ps1_zpsf_err、ps1_ypsf_err；另有 g/z 的改正值 ps1_gpsf_corr、ps1_zpsf_corr\n- 每波段检测标志：ps1_gflags、ps1_iflags、ps1_rflags、ps1_yflags、ps1_zflags\n- 质量/形态：ps1_class_star（恒星形态判据，ps1 唯一可用于服务端过滤的质量列）、ps1_ruwe、ps1_sigma、ps1_max_d\n- 消光与距离：ps1_dust、ps1_ebv、ps1_parallax、ps1_parallax_err\n- ps1_source_id：列在线上，但取值是空的，别拿它当主键排序或回连\n\n波段口径提醒：ps1 只有 g/r/i/z/y 五波段，没有 u 波段（u 类波段要看 stripe82 的 u_h22 或标准星成员表）；星等列刻意只认 PSF 星等（*psf），flag / RMS / 改正列不算星等，别拿它们当波段值排序或当星等读。\n\n一个数据坑：ps1 缺测光时会回 ≈-1000 的哨兵值（例如 gpsf=-1004.07、误差 -999.0），同一条记录其它波段可能是真值 —— 看到 -1000 量级要当缺测处理，不是「一颗 -1000 等的星」。另外 ps1 是单历元定标星等，不含逐历元序列。",
+  "notes": "列与波段问询属元数据，describe_catalog 零请求；回答按 ps1 的 30 列结构给出并标注 -1000 哨兵与空的 ps1_source_id。"
+}

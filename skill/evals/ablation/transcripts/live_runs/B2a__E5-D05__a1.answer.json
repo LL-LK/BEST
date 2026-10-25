@@ -1,0 +1,1 @@
+{"answer_text": "ps1 锥形检索(RA=180.0,Dec=30.0,r=1800″)：服务端总数 4000；三元组 total/returned/row=4000/4000/4000，truncated=false，无需再拉。来源=ps1/raw_protocol。信封：stable_uri=null、snapshot_id=null、无 content_trust。关键列 ps1_ra/ps1_dec/ps1_gpsf，首行 g=18.59922452197401。"}

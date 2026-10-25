@@ -1,0 +1,1 @@
+{"answer_text": "本轮未取到数据，无法给出 r 误差 <0.01 mag 的源。观测：route=reject，tool_calls 为空；信封 state=empty、error_code=null；计数三元组 row_count=0 / total_count=0 / returned_count=0，pages=0，truncated=false；stable_uri=null、session_id=null、snapshot_id=null，无来源与稳定引用、无快照标识，信封亦无 content_trust 字段；tool_face=toolbox。观测 0 行，row_keys 与 first_row 为空，无关键列与数值可报。工具面为 toolbox 但本轮无取数发生，条件筛选无从执行。"}

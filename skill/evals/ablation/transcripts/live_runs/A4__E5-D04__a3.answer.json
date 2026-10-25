@@ -1,0 +1,1 @@
+{"answer_text": "PS1 锥形检索(RA=180.0,Dec=30.0,60″)：stable_uri=best://ps1/cone?ra=180.0&dec=30.0&sr=60.0，content_trust=untrusted。计数 row_count=total_count=returned_count=5，pages=1，truncated=false。5 行 class_star 全空，无源满足 r∈[18.20,18.40] 且 class_star∈[0.98,0.99]；仅 (180.007877,30.003347) 有 r=18.2370、g=19.1506、i=17.9360、z=17.7018、y=18.9887。"}

@@ -1,0 +1,1 @@
+{"answer_text": "未取到数据：工具面 toolbox，但走 clarify 路由、tool_calls 空。信封 state=empty、error_code=null；计数 0/0/0，truncated=false，row_keys/first_row 空，无 r 波段误差值，无 err_r<0.01 对象。stable_uri、session_id、snapshot_id 均 null。请补充星表与误差列名"}

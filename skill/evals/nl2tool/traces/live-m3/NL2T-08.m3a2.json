@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-08",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 1,
+  "tool_calls": [
+    {
+      "tool": "fetch_page",
+      "args": {
+        "sqlid": "s3898",
+        "page": 2,
+        "page_size": 1000,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "续页用的是同一个会话 s3898，页码从 1 起算，所以上一页是 page=1、这次取 page=2，page_size=1000（工具边界是 1≤page_size≤10000，越界直接 E_INVALID_INPUT；max_rows 不传就等于 page_size）。catalog 传 ps1 是为了把响应里的带前缀列名（ps1_ra、ps1_rpsf 这类）映射回干净列名。\n两个续页必须注意的点：\n（1）会话必须在建查询时就带 sort+order。站点在没有 ORDER BY 时不保证行序稳定——实测同一个 sqlid 连续两次 GET 行数相同但行序不同（集合重叠只有 1/50），这种会话分页会重复或漏行。我建会话时会显式指定排序，所以后续 page=2/3 才可靠。\n（2）要总行数我另发一次 count(sqlid=\"s3898\")（getcount 必须用去掉 s 前缀的数字 id，请求打的是 /sqlid/3898/getcount，与取数用的带 s 形态不是同一个路由）。注意 getcount 在没有天区/星等约束的会话上会 >60 s 超时，所以先收敛天区再计数。\n这次取回后我按 ps1_ra/ps1_rpsf 继续给你；如果这是最后一页（或你想按某个星等范围筛），告我筛选条件我在返回后本地过滤。",
+  "notes": "截断续页是 fetch_page 的单请求场景（1 次 GET /sqlid/...），并把“分页必须建会话时带 sort+order”这条行序不稳定的实测坑写进回答。"
+}
