@@ -1,5 +1,4 @@
 ﻿分级,文件相对路径,行号,命中类别,原文片段,处理动作
-需人工确认,验收_stdout.txt,14,工作区绝对路径,F:\论文\11_投稿包\08_清单与SHA256\验收结果报告.md,需人工确认
 非识别性,main.tex,500,作者化名,LL-LK,非识别性·保留并说明
 非识别性,main.tex,85,站点域名,nadc.china-vo.org,非识别性·保留并说明
 非识别性,E1\eval-E1-nl2tool.md,85,站点域名,nadc.china-vo.org,非识别性·保留并说明
@@ -7484,12 +7483,6 @@
 非识别性,astro-best_skill源码仓\templates\best-config.yaml,31,站点域名,nadc.china-vo.org,非识别性·保留并说明
 非识别性,astro-best_skill源码仓\templates\best-config.yaml,48,站点域名,nadc.china-vo.org,非识别性·保留并说明
 非识别性,数字溯源台账_合并.csv,36,作者化名,LL-LK,非识别性·保留并说明
-非识别性,既有23条规则核对表.csv,16,RFC2606示例域名邮箱,user@example.com,非识别性·保留并说明
-非识别性,既有23条规则核对表.csv,17,RFC2606示例域名邮箱,student@example.edu,非识别性·保留并说明
-非识别性,既有23条规则核对表.csv,16,脱敏占位邮箱,user@example.com,非识别性·保留并说明
-非识别性,既有23条规则核对表.csv,17,脱敏占位邮箱,student@example.edu.cn,非识别性·保留并说明
-非识别性,既有23条规则核对表.csv,3,Windows内置SID,S-1-11-96,非识别性·保留并说明
-非识别性,既有23条规则核对表.csv,4,Windows内置SID,S-1-5-21-0000000000-000000000-0000000000,非识别性·保留并说明
 非识别性,README-脱敏总览.md,49,假密钥负例夹具,sk-123456789012345678901,非识别性·保留并说明
 非识别性,README-脱敏总览.md,48,Windows内置SID,S-1-5-32-544,非识别性·保留并说明
 非识别性,README-脱敏总览.md,50,作者化名,LL-LK,非识别性·保留并说明
@@ -7514,9 +7507,3 @@
 非识别性,REPLACEMENT-RULES.md,65,Windows内置SID,S-1-11-96,非识别性·保留并说明
 非识别性,REPLACEMENT-RULES.md,77,Windows内置SID,S-1-5-32-544,非识别性·保留并说明
 非识别性,REPLACEMENT-RULES.md,79,作者化名,LL-LK,非识别性·保留并说明
-非识别性,脱敏规则核对报告.md,32,RFC2606示例域名邮箱,user@example.com,非识别性·保留并说明
-非识别性,脱敏规则核对报告.md,33,RFC2606示例域名邮箱,student@example.edu,非识别性·保留并说明
-非识别性,脱敏规则核对报告.md,32,脱敏占位邮箱,user@example.com,非识别性·保留并说明
-非识别性,脱敏规则核对报告.md,33,脱敏占位邮箱,student@example.edu.cn,非识别性·保留并说明
-非识别性,脱敏规则核对报告.md,19,Windows内置SID,S-1-11-96,非识别性·保留并说明
-非识别性,脱敏规则核对报告.md,20,Windows内置SID,S-1-5-21-0000000000-000000000-0000000000,非识别性·保留并说明

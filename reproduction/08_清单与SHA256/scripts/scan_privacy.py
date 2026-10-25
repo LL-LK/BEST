@@ -52,9 +52,10 @@ NON_IDENTIFYING = [
 TEXT_EXT = {'.md', '.txt', '.csv', '.json', '.yaml', '.yml', '.py', '.tex', '.log', '.ini', '.cfg',
             '.toml', '.sh', '.bat', '.ps1', '.html', '.xml', '.rst', '.jsonl', '.tsv', '.drawio'}
 BIN_EXT = {'.xlsx', '.docx', '.pdf', '.zip', '.png', '.jpg', '.jpeg', '.svg', '.gz'}
-# 扫描器自身产物：按定义包含被检模式，不计入
+# 扫描器自身产物 + 同目录的验收运行日志：按定义包含被检模式或随运行变化，不计入
 SELF_FILES = {'scan_privacy.py', '隐私扫描报告.md', '隐私扫描明细.csv', '隐私扫描结果.json',
-              '隐私扫描_stdout.txt'}
+              '隐私扫描_stdout.txt', '验收_stdout.txt', '验收结果报告.md',
+              '既有23条规则核对表.csv', '脱敏规则核对报告.md'}
 
 
 def scan(roots):
