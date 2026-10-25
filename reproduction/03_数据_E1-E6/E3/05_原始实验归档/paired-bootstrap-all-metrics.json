@@ -1,0 +1,53 @@
+{
+  "resamples": 10000,
+  "seed": 20261006,
+  "unit": "paired_item_all_three_repeats",
+  "note": "负值在UNGR/UCR/SLR上有利于S-A；未作多重检验校正；专家未复核，区间只反映题目重抽而非评分偏差",
+  "metrics": {
+    "sfa": {
+      "point_A_minus_B": 0.23943661971830987,
+      "bootstrap_95": [
+        0.12676056338028163,
+        0.33333333333333326
+      ],
+      "valid_resamples": 10000,
+      "undefined_resamples": 0
+    },
+    "ungr": {
+      "point_A_minus_B": -0.08537616229923922,
+      "bootstrap_95": [
+        -0.1191858827407587,
+        -0.03352418358502578
+      ],
+      "valid_resamples": 10000,
+      "undefined_resamples": 0
+    },
+    "ucr": {
+      "point_A_minus_B": -0.12464114832535883,
+      "bootstrap_95": [
+        -0.1849321996966492,
+        -0.09205265009913931
+      ],
+      "valid_resamples": 10000,
+      "undefined_resamples": 0
+    },
+    "rqc": {
+      "point_A_minus_B": 0.0821917808219178,
+      "bootstrap_95": [
+        0.04054054054054057,
+        0.16216216216216217
+      ],
+      "valid_resamples": 10000,
+      "undefined_resamples": 0
+    },
+    "slr": {
+      "point_A_minus_B": -0.14285714285714285,
+      "bootstrap_95": [
+        -0.3076923076923077,
+        0.0
+      ],
+      "valid_resamples": 10000,
+      "undefined_resamples": 0
+    }
+  }
+}

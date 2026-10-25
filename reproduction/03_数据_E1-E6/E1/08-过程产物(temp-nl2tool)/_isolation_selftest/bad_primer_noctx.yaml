@@ -1,0 +1,7 @@
+primers:
+  NL2T-18:
+    intent: '手滑补的'
+    turns:
+      - {role: user, text: '那个源是 M31'}
+no_context:
+  - NL2T-18

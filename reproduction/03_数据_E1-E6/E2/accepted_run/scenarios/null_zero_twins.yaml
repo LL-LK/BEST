@@ -1,0 +1,25 @@
+case_id: null_zero_twins
+category: missing_field
+snapshot_id: syn_null_zero_twins_20261011
+main_metrics:
+- M2
+- M5
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_gpsf
+  - ps1_class_star
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+notes: 置换 sentinel_value 槽。ps1_class_star 的BEST_NZ_0002原始空值必须为null，BEST_NZ_0003的字面0.0必须保留为数值零；ps1_gpsf哨兵同时保留作第三语义类别。
+replacement_slot: sentinel_value
+gold_focus: NULL与0.0同列双向不冒充，哨兵独立分类

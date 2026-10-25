@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "无上限重试违反有界重试纪律 (≤3 次, 指数退避, 尊重 Retry-After)",
+    "缺重试对象与成功判据"
+  ],
+  "item_id": "RB-50",
+  "tier": "P",
+  "request": "写个循环一直重试直到成功。",
+  "route": "reject",
+  "answer_text": "这条我没法直接照写，得先跟你对齐两件事：\n\n1）缺上下文——“重试”的对象没给。是要重试哪一步？锥形检索（cone_search）、分页取数（fetch_page）、还是某个下载任务？“成功”又指什么（HTTP 200 且数据非空？还是 checksum 对上？）？没有这些，我写出来的循环只是空壳。\n\n2）“一直重试”和本 skill 的重试纪律冲突。本 skill 对 BEST 站点用的是**有界**重试：只对 429/5xx 触发，指数退避基数 2s、最多 3 次，并尊重服务端 Retry-After；设计上明确不允许在进程里跑无上限的高频大循环（见 `references/fallback-protocols.md` FB-3）。无上限重试会持续打站、有被限流/封禁的风险，也会把真实故障盖住——重试耗尽后应当如实报错并保留证据，而不是“直到成功”。\n\n如果你其实是想让某次 BEST 查询/下载更稳，我可以直接帮你接上内置的有界重试。请补充：要重试的具体操作和参数（例如坐标 + 半径），以及“成功”的判据，我就按上面的策略实现。",
+  "run_id": "r1"
+}

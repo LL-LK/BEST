@@ -1,0 +1,27 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "ps1",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 18000.0,
+    "max_records": 3000
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "bytes": 15457,
+      "at": "2026-10-12T08:58:04.701705+00:00"
+    }
+  ],
+  "observed": {
+    "page_size": 1000,
+    "returned_count": 0,
+    "success": false,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": "E_BACKEND"
+  }
+}

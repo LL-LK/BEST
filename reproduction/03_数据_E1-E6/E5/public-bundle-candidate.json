@@ -1,0 +1,34 @@
+{
+  "path": "<WORK_ROOT>\\public\\e5-candidate-02",
+  "manifest_sha256": "a4bf39bc4dcb327582ed18aa1960306e3be7637fbdd4af8f911790152e721782",
+  "zip_sha256": "27458283bdf207493e505e6936a1c6228f956260cd860b34fbe5ae69f64d0f72",
+  "query_count": 12,
+  "dependencies": [
+    {
+      "name": "requests",
+      "version": "2.33.1"
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0"
+    },
+    {
+      "name": "certifi",
+      "version": "2026.02.25"
+    },
+    {
+      "name": "charset_normalizer",
+      "version": "3.4.7"
+    },
+    {
+      "name": "idna",
+      "version": "3.18"
+    },
+    {
+      "name": "yaml",
+      "version": "6.0.3"
+    }
+  ],
+  "logical_e5_units": 0,
+  "frozen_for_confirmatory": false
+}

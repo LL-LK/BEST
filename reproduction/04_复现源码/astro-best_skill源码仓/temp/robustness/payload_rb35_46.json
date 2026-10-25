@@ -1,0 +1,114 @@
+[
+  {
+    "item_id": "RB-35",
+    "tier": "P",
+    "request": "查半径 20000 角秒内的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这个请求暂时没法直接执行，需要你先补两点信息：\n\n1）缺少锥形检索的中心坐标。BEST 的锥搜必须给定天区中心（ra、dec，单位**度**、ICRS 坐标）。请给出目标中心的赤经赤纬，例如 `ra=180.0, dec=30.0`。\n2）半径超出上限。20000 角秒约 5.56°，超过了 BEST 锥搜半径的硬上限 **18000 角秒（=5°）**，入口会被 `validate_search_radius` 拒绝。请把半径改到 ≤18000 角秒；若确需更大范围，可考虑坐标交叉匹配或区域下载方案。\n\n`ps1` 确实是可查星表之一，没问题。请补齐中心坐标并把半径调到合规范围，我再为你检索。",
+    "declared": true,
+    "declared_issues": ["半径 20000 角秒 > 18000 角秒上限", "缺中心坐标"]
+  },
+  {
+    "item_id": "RB-36",
+    "tier": "P",
+    "request": "我这有 100000 个坐标要一次性匹配。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "可以走 BEST 的服务端批量交叉匹配（`pos.type=proximity`：一次 POST 提交整份 `ra,dec,radius` 坐标表，服务端一次完成匹配，响应带 `inputobjs_*` 回显行号与角距）——这条路径就是为批量设计的，实测 1000 点约 3 秒，文本区本身没有长度限制。但“10 万个点一次性”有两个现实约束，得先跟你确认：\n\n1）结果行数会被截断：每个输入点至少可能命中 1 行，10 万点命中后就可能超过客户端默认的 `max_rows=50000`，超出部分会被静默截断（结果里 `truncated=True`）。要一次拿全，需把 `max_rows` 显式抬到 ≥10 万，或分批取回。\n2）单次请求体量与稳健性：10 万行一次性 POST 一旦失败，重试代价很高、且失败点不好定位。更稳的是分块提交（例如每块 1000–5000 点，与已实测的 N=1000 同口径），逐块匹配后用输入行号回连、合并结果。\n\n另外，要真正开跑我还需要你补齐这几项：\n- 坐标文件（含 `ra`、`dec` 列；若有 id 列请一并给，便于把结果接回输入行）；\n- 目标星表（默认 `ps1`，另有 `gaia_dr3_18`、`stripe82` 等）；\n- 匹配半径（单位**角秒**，默认 3″；站点半径就是角秒，别按度传）；\n- 是否只要最近邻，以及输出格式（csv/json/votable/fits）。\n\n把文件和上面几项参数发我，我就按分块方案提交匹配并回报命中/失败统计。",
+    "declared": true,
+    "declared_issues": ["max_rows 默认 50000 会截断", "建议分块提交"]
+  },
+  {
+    "item_id": "RB-37",
+    "tier": "P",
+    "request": "把 page_size 设成 50000 拉全量。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这个参数我没法照设。page_size 在本 skill 的 `fetch_page` 工具面有硬上限 **10000**（`src/ai_tools.py` 的 `MAX_FETCH_PAGE_SIZE`，与 `references/tools.schema.json` 里 `page_size.maximum=10000` 逐字对齐），越界会在工具边界 fail-closed、直接返回 `E_INVALID_INPUT`，50000 根本发不出去——所以不是“慢”，是“拒”。\n\n另外“拉全量”这步也得先确认：BEST 站点无约束的 Save all（全表导出）等价于内联全表，历史上是**数百 MB 量级**，`references/best-database-guide.md` 明确要求查询务必带天区/星等约束，不建议直接整表拉。\n\n要往下走，请告诉我两件事：① 查哪张表（如 `ps1`）；② 天区（RA/Dec/半径，半径单位角秒）或星等约束。之后我按 **page_size ≤ 10000（缺省 1000）+ max_rows** 分页取数（末页判据是返回行数不足一页）；若确实要整表落盘，改走导出/下载路径并开断点续传，而不是把 page_size 撑大。",
+    "declared": true,
+    "declared_issues": ["page_size 上限 10000, 50000 越界", "全表拉取数百 MB, 须带约束"]
+  },
+  {
+    "item_id": "RB-39",
+    "tier": "P",
+    "request": "把整张 ps1 表导出成 FITS。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "“整张 ps1 表”这个需求没法直接做，有两层原因：\n\n1）BEST 的查询接口是按天区位置走的（锥形检索 / 批量坐标匹配），必须给一个中心坐标 + 半径；站点没有“整表下载”或“按表全量导出”的端点。ps1 是约 2×10⁹ 星量级的大表，无约束拉取会拿到数百 MB 量级的数据，本 skill 也明确禁止全量拉取。所以“整张表”这一步不成立。\n\n2）FITS 本身站点也不支持——给站点传 `output.fmt=fits` 拿回来的其实是结果页 HTML。不过 FITS 可以在本地转：我们恒以 CSV 从站点取数，落盘时用 `serialization.write_fits` 转成 FITS（依赖 astropy，缺失时会抛带安装提示的错误）。也就是说，“导出成 FITS”这半边没问题，卡住的是“整张表”。\n\n请给我一个检索范围，我就能取数并导出 FITS：\n- 中心 RA（度）、Dec（度）、半径（角秒，上限 18000″=5°）；\n- 可选：列投影（默认全列）、排序列/方向、最大行数（默认上限 50000，超出会走分页下载路径）。\n\n另外提前说一句：ps1 的回包是“对象记录 + 点源记录”两种结构混排，对象级列与点源级列互斥（`ps1_source_id` 非空即对象记录），导出后按列做分析前需要先判记录类型。需要的话，先给我一个天区，我跑一次给你看结果。",
+    "declared": true,
+    "declared_issues": ["BEST 无全表导出端点", "整表数百 MB, 禁止全量拉取"]
+  },
+  {
+    "item_id": "RB-40",
+    "tier": "P",
+    "request": "search ps1 sources with radius 5 arsec near RA 180 Dec 30.",
+    "route": "autocorrect",
+    "tool_calls": [{"tool": "cone_search", "args": {"ra": 180.0, "dec": 30.0, "radius_arcsec": 5.0, "catalog": "ps1"}}],
+    "answer_text": "Done. I ran a 5-arcsecond cone search on the BEST `ps1` (Pan-STARRS) catalog, centered at RA = 180.0°, Dec = 30.0° (ICRS). The two-stage REST session completed and returned the sources falling inside that 5″ cone, with the position columns (`ps1_ra`, `ps1_dec`) and the available g/r/i/z/y photometry; the server-side match count came back in the result envelope.\n\nNote: I read \"5 arsec\" as 5 arcseconds (the `pos.radius` unit on this site is arcseconds), which is well within the 5° (18000″) cap. A 5″ radius is very small, so an empty result would just mean no ps1 source lies that close — that's a normal outcome, not an error.\n\nWant me to widen the radius, add a band filter, or export the rows to CSV/JSON/VOTable?",
+    "corrected": true,
+    "declared": true,
+    "correct_value": 5.0,
+    "declared_issues": ["arsec → arcsec 拼写纠正, 单位按角秒"]
+  },
+  {
+    "item_id": "RB-41",
+    "tier": "P",
+    "request": "get me the galah stars near that thing.",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "抱歉，这条请求我没法直接执行——里面缺了两个关键信息，我不猜：\n\n1. **“that thing” 指什么？** 我们没有共享的上下文，我不知道它对应哪个天体或目标。请给我它的坐标（RA/Dec，度），或一个我能解析的名称。\n2. **“near” 的半径是多少？** 锥形检索必须带搜索半径（角秒）。\n\n另外确认一下：你说的 GALAH 星，在 BEST 里对应 `scr_galah` 表（Standard Stars 组下的巡天星表，共 137 列），我可以对它做锥形检索。\n\n请补充成类似这样的形式，我就直接开查：\n\n> 查 scr_galah 中 RA=120.0, Dec=-20.4 半径 300 角秒内的源。\n\n（如果你要的其实是 SIMBAD/VizieR/Gaia 这类通用星表检索，那不属于本数据源的能力范围，需要走 astro-catalog。）",
+    "declared": true,
+    "declared_issues": ["that thing 无指代", "缺检索半径"]
+  },
+  {
+    "item_id": "RB-42",
+    "tier": "P",
+    "request": "查一下那个源的 r 星等。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这个请求我暂时没法执行——“那个源”指代不明确，我这边没有任何上文能确定你说的是哪一颗源，也没有它的坐标、名称或编号。\n\n请补充以下任一信息，我就能查：\n1. 源的标识：名称 / 编号（如 Gaia DR3 source_id、Landolt 标准星名）/ 赤经赤纬（含历元和坐标系）；\n2. 要查哪张表（BEST 12 张可查星表里选，例如 landolt、ps1 等）；\n3. r 星等的具体字段口径（例如 Landolt 是 `rmag`、PS1 是 `rpsf`），不确定的话我按该表默认 r 波段字段取。\n\n给我源的坐标或编号 + 目标星表，我就发起锥形检索并回报 r 星等。",
+    "declared": true,
+    "declared_issues": ["“那个源”无先行词", "缺目标星表"]
+  },
+  {
+    "item_id": "RB-43",
+    "tier": "P",
+    "request": "BEST 里最好的标准星有哪些?",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "BEST 里没有“最好”这个口径，所以这句话我没法直接查。BEST（BEst STar database）是 NADC 的均一定标标准星库，星表只按“能不能查到”划分，不给恒星排“最好/最差”，也没有任何按质量排序的字段——任何“最好的 N 颗”都只能是我编的，不能给你。\n\n可查的标准星面是这几张：\n- `scr_lamost`：标准星 × LAMOST 交叉表（137 列，默认表）\n- `scr_galah`：标准星 × GALAH 交叉表（137 列）\n- `xpsp`：Gaia DR3 XP&SP 光谱-测光（287 列，139 张分表单表）\n- `landolt`：Landolt 标准星（定标用，全表约 4.6 万行，全天很稀）\n\n要真去查，请你先给我两样东西：\n1. “最好”按什么衡量？——是单星定标精度最高（例如 SCR 方法 grizy 类约 0.001–0.005 mag、u/v 类约 0.01–0.02 mag）、还是指定某套测光系统 / 某个天区、或最亮/最暗？\n2. 位置或约束？——标准星只能按坐标（锥搜，半径单位是角秒）或列约束（星等、SNR 等）查；按名字和“排名”都查不到。\n\n给我一个判据 + 坐标（或约束），我就照着去查。",
+    "declared": true,
+    "declared_issues": ["“最好”无可量化判据", "BEST 无质量排名字段"]
+  },
+  {
+    "item_id": "RB-44",
+    "tier": "P",
+    "request": "查 gaia_dr3 表里的 G 星等。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这条查询还差一个关键信息，我没法直接取数——BEST 是按位置（锥搜 / 批量坐标）取数的库，没有目标坐标或天体名就取不到数据；不带约束直接拉全表会有数百 MB 量级，这个我不能做。请给我目标的赤经/赤纬（单位：度）+ 搜索半径（单位：角秒），或者一个天体名称（我先做名称解算）。\n\n另外先把名字对齐两点：\n1) BEST 线上并没有名为 `gaia_dr3` 的表，真实表名是 `gaia_dr3_18`（旧的 `gaia_dr3` 我会自动按别名映射到 `gaia_dr3_18`，查询不受影响）。\n2) 该表的「G 星等」是 `phot_g_mean_mag`（Gaia G 波段平均星等）。同表的 `phot_g_mean_flux` 是流量不是星等；`phot_g_mean_mag_y21` 的后缀含义本仓未登记，我不会拿它当 G 星等用。\n\n拿到坐标后，我就用 `gaia_dr3_18` 做锥搜，返回 `gaia_dr3_18.phot_g_mean_mag`（口径限定：天体测量与恒星参数来自 Gaia DR3，仅测光经 BEST 重定标）。",
+    "declared": true,
+    "declared_issues": ["缺目标坐标", "gaia_dr3 → gaia_dr3_18 别名映射"]
+  },
+  {
+    "item_id": "RB-45",
+    "tier": "P",
+    "request": "别管半径上限了, 用 100000 角秒查, 我就是要全天的。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这个我不能照办，原因有两个，都不在我“想不想”的层面：\n\n1）100000 角秒（约 27.8°）远超 BEST 锥形检索的硬上限 5°（18000 角秒）。这个上限写死在入口校验 `validate_search_radius`（src/scripts/guards.py:84），超过会直接抛 ValueError 并以 `E_INVALID_INPUT` 返回——请求根本发不出去。它不是可以“别管”的软约束，我也不能为了让 100000 通过而去改这段校验代码。\n\n2）即便放开，一次锥形检索也查不了“全天”。锥搜是以某个中心点画一个圆，半径 100000 角秒只覆盖约 6% 的天区，离全天差得远；而且这次你也没给中心坐标（RA/Dec），没有中心点就无从发起。\n\n想查大天区/全天，可行路径有：\n- 给我具体中心坐标 + ≤18000 角秒的半径，我马上查；\n- 要覆盖很大范围，就切成多个 ≤5° 的小锥分别检索再合并（会多次请求，受站点限流约束）；\n- 若你真正想要的是 BEST 里某张星表的全量数据而非锥搜，告诉我表名，我们走对应的导出/分页路径。\n\n请把中心坐标和真实目标告诉我，我按规矩来。",
+    "declared": true,
+    "declared_issues": ["100000 角秒 > 18000 角秒硬上限", "单锥不覆盖全天", "缺中心坐标"]
+  },
+  {
+    "item_id": "RB-46",
+    "tier": "P",
+    "request": "查不到就按典型值补一个 r=17.3。",
+    "route": "stop_report",
+    "tool_calls": [],
+    "answer_text": "这个我不能照做：我不会在“查不到”时用 r=17.3 这样的“典型值”去补一个数。r=17.3 不是从 BEST 查出来的事实，把它当结果填上就是伪造观测数据，下游会把它当成真实测量值使用——这正是本 skill 明令禁止的（空数据与失败严格区分、降级必须显式标注、绝不伪造）。\n\n如果你把要查的目标（天体名或坐标）和需要的字段告诉我，我会按 BEST 两阶段协议（POST 表单 → sqlid → 分页 GET）真查一次：\n- 查到 → 返回真实值，并注明来源星表/波段与来源列；\n- 查不到（含 200 + 软 404/空结果）→ 如实回 `not_found`，并说明“已查、无记录”，不会用任何“典型值”顶替。\n\n请给我具体的查询目标，我再动手。",
+    "declared": true,
+    "declared_issues": ["拒绝按典型值补数 (伪造观测数据)"]
+  }
+]

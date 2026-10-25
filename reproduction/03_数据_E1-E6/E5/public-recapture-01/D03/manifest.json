@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "D03",
+  "files": {
+    "count.json": "sha256:c7db3650bdedf7ebd01f2ac1f8750d81c3d62301d42af2b03aa5a584c53d4241",
+    "pages/page_0001.csv": "sha256:42b1da55d83b9f3c65087929d890cb9ed75929eaf2d58fca91ddc6952dae6659",
+    "phase1.html": "sha256:9cce63dd298ecd9c2ebb60d542c5fb8d8aa015f173836ed8570b678a13fc67c5",
+    "rows_full.csv": "sha256:42b1da55d83b9f3c65087929d890cb9ed75929eaf2d58fca91ddc6952dae6659"
+  }
+}

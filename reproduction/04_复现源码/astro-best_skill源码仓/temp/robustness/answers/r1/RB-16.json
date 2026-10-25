@@ -1,0 +1,14 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": false,
+  "correct_value": null,
+  "declared_issues": [],
+  "item_id": "RB-16",
+  "tier": "P",
+  "request": "查 source_id 为 gaia_xxx 的源。",
+  "route": "clarify",
+  "answer_text": "「gaia_xxx」是个占位符，不是有效的 source_id，我不能拿它去发查询——那样只会白跑一次、或编出一个并不存在的源。麻烦补两点信息：\n\n1. 真实的 ID 取值。BEST 的主键列是 `*_source_id`；若你指的是 Gaia DR3 精测定标表 `gaia_dr3_18`，它的 `gaia_dr3_18_source_id` 是 19 位整数（形如 1234567890123456789），不带「gaia_」前缀。\n2. 要查哪张星表（12 张可查表之一，如 ps1 / gaia_dr3_18 / stripe82 / jplus_dr3 …）。只给「source_id」而不给星表，目标列名无法确定。\n\n另外两点提醒：BEST 里没有叫「gaia」的表（线上 id 是 `gaia_dr3_18`）；如果你要的是通用 Gaia 星表检索（非 BEST 数据），那超出本数据源范围，需转 astro-catalog。把 ID 和星表补齐后，我按 `{catalog}_source_id` 的 `in` 约束做精准取行。",
+  "run_id": "r1"
+}

@@ -1,0 +1,39 @@
+{
+  "gold_id": "gold_missing_arg_catalog",
+  "case_id": "missing_arg_catalog",
+  "snapshot_id": "sha256:6ab219a534678e4f195655af86ceba5c0c4b485c357431709799da89b7678694",
+  "data_version": "synthetic@2026-10-11",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:c01c73ed9b463616bf6ae17f977a24266bbd63057df180307687c3a55a3d07a6"
+  },
+  "rows_source": "snapshot:syn_no_request (error-state, 无行集)",
+  "max_rows": 1000,
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [],
+  "row_count": 0,
+  "field_values": {},
+  "null_semantics": {},
+  "unit_map": {},
+  "precision_map": {},
+  "ordering": {
+    "key": null,
+    "order": null,
+    "sequence": [],
+    "declared": false
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))"
+  },
+  "truncation": {
+    "expected_total": 0,
+    "expected_truncated": false,
+    "expected_returned": 0
+  },
+  "result_state": "error",
+  "expected_error_code": "E_INVALID_INPUT",
+  "notes": "金标准: result_state=error, error_code=E_INVALID_INPUT。 判据 (E2 §5.1): 不得默认某张表就发请求, error_code 必为 E_INVALID_INPUT 或走澄清, **不得静默挑表**。 实测依据 (2026-10-08): src.protocol.resolve_catalog(None) 抛 ValueError(\"Unknown BEST catalog: None\") —— 在碰网络之前就早炸, run_e2._error_code 按 ValueError 归 E_INVALID_INPUT。 与 #7 (数据侧缺失字段) 是不同测试对象: #7 脏在数据里, 本用例脏在查询本身。\n"
+}

@@ -1,0 +1,403 @@
+<!DOCTYPE html><html>
+<head>
+<title>10.1.2 Data products in Gaia DR3‣ 10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3</title>
+<!--Generated on Sat Jul 15 11:29:14 2023 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 10 July 2023.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../gaia_index-8-2-2.css" type="text/css">
+<link rel="stylesheet" href="../../../esdc_a.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+<script src="../../../collapse.js" type="text/javascript"></script>
+<script src="../../../navigation.js" type="text/javascript"></script>
+<script src="../../../jquery.min.js" type="text/javascript"></script>
+<link rel="up" href="." title="10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="up up" href="../" title="Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="up up up" href="../../" title="Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="up up up up" href="../../../" title="Gaia Data Release 3 Documentation release 1.3">
+<link rel="start" href="../../../" title="Gaia Data Release 3 Documentation release 1.3">
+<link rel="prev" href="ssec_cu7var_overview.html" title="10.1.1 Overview ‣ 10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="next" href="../sec_cu7var_global/" title="10.2 Global processing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="subsection" href="ssec_cu7var_overview.html" title="10.1.1 Overview ‣ 10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="." title="10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_global/" title="10.2 Global processing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_cls/" title="10.3 General classification ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_agn/" title="10.4 Active galactic nuclei ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_cep/" title="10.5 Cepheids ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_cc/" title="10.6 Compact companions ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_eb/" title="10.7 Eclipsing binaries ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_lpv/" title="10.8 Long period variables ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_ml/" title="10.9 Microlensing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_pt/" title="10.10 Planetary transits ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_rrl/" title="10.11 RR Lyrae stars ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_sts/" title="10.12 Short-timescale variables ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_rotmod/" title="10.13 Solar-like rotational modulation ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="section" href="../sec_cu7var_mso/" title="10.14 Upper main-sequence oscillators ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="chapter" href="../../chap_cu4nss/" title="Chapter 7 Non-single stars ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="chapter" href="../../chap_cu4sso/" title="Chapter 8 Solar System Objects ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="chapter" href="../../chap_cu4eo/" title="Chapter 9 Surface brightness profiles of extragalactic sources ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="chapter" href="../" title="Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="chapter" href="../../chap_cu8par/" title="Chapter 11 Astrophysical parameters ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="chapter" href="../../chap_cu3qso/" title="Chapter 12 Integrated extragalactic tables ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="part" href="../../../Introduction/" title="Part I Introduction to Gaia Data Release 3 ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="part" href="../../../Data_processing/" title="Part II Gaia data processing ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="part" href="../../" title="Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="part" href="../../../Catalogue_consolidation/" title="Part IV Gaia catalogue ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="part" href="../../../Gaia_archive/" title="Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="appendix" href="../../../Miscellaneous/" title="Miscellaneous ‣ Gaia Data Release 3 Documentation release 1.3">
+<link rel="bibliography" href="../../../bib.html" title="Bibliography ‣ Gaia Data Release 3 Documentation release 1.3">
+<style>
+
+.toc {
+	overflow: hidden;
+    float:left;
+    width: 150px;
+    height: 100%;
+    width: 15%;
+    
+}
+
+
+nav.ltx_page_navbar {
+    display: none;
+    /*margin-bottom: 1em;
+    padding: .25em;
+    border: black thin solid;
+    background-color: #EEEEFF;
+    width: 40em;*/
+	
+}
+
+figure.ltx_table figcaption::after {content: ' [Note that wide tables may scroll horizontally using scroll bars found below tables.]';}
+.ltx_page_main .ltx_page_content figure.ltx_table {max-width:100vw;}
+</style>
+<!-- Matomo --><script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//esdcwebanalytics.esac.esa.int/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '30']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script><!-- End Matomo Code -->
+</head>
+<body>
+<!--begin of second insertion point--><div class="esdc_tb">
+<div id="skiptocontent"><a href="#maincontent">skip to main content</a></div>
+<ul>
+<li class="esdc_external"><div class="esdch4"><a target="_blank" href="http://www.esa.int/"><span>→</span> European Space Agency
+
+					</a></div></li>
+<li class="esdc_external"><div class="esdch4"><a href="http://www.esa.int/About_Us/ESAC" target="_blank">About
+						ESAC</a></div></li>
+</ul>
+</div>
+<div id="esdc_top-title"><div class="title"><a href="/archive/documentation/GDR3/"><h3>gaia data release 3 documentation</h3></a></div></div>
+<div class="w3-container">
+<div id="search_box_nav" align="right"><form action="/archive/documentation/GDR3/search/search.php" method="get">
+<input name="query" id="query" size="auto" action="/archive/documentation/GDR3/search/include/js_suggest/suggest.php" columns="2" autocomplete="on" delay="1500" type="text"><input value="Search" type="submit"><input name="search" value="1" type="hidden">
+</form></div>
+<div class="buttonHolder"><p class="button" style="margin:0;padding:0;"><button id="button1" class="buttonControl" aria-controls="ltx_page_navbar"><span>Show</span> Contents</button></p></div>
+</div>
+<!--end of second insertion point--><div class="main-holder w3-container">
+<nav class="ltx_page_navbar" aria-expanded="false"><a href="../../../" title="Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Gaia Data Release 3 <span class="ltx_text"> </span><span class="ltx_ref" style="font-size:90%;">Documentation release 1.3</span></span></a>
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_document">
+<a href="../../../" title="Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title">Gaia Data Release 3 <span class="ltx_text"> </span><span class="ltx_ref" style="font-size:90%;">Documentation release 1.3</span></span></a>
+<ul class="ltx_toclist ltx_toclist_document">
+<li class="ltx_tocentry ltx_tocentry_part"><a href="../../../Introduction/" title="Part I Introduction to Gaia Data Release 3 ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">I </span>Introduction to Gaia Data Release 3</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_part"><a href="../../../Data_processing/" title="Part II Gaia data processing ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">II </span>Gaia data processing</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_part">
+<a href="../../" title="Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">III </span>Gaia data analysis</span></a>
+<ul class="ltx_toclist ltx_toclist_part">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../../chap_cu4nss/" title="Chapter 7 Non-single stars ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Non-single stars</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../../chap_cu4sso/" title="Chapter 8 Solar System Objects ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">8 </span>Solar System Objects</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../../chap_cu4eo/" title="Chapter 9 Surface brightness profiles of extragalactic sources ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">9 </span>Surface brightness profiles of extragalactic sources</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="../" title="Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10 </span>Variability</span></a>
+<ul class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section">
+<a href="." title="10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.1 </span>Introduction</span></a>
+<ul class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="ssec_cu7var_overview.html" title="10.1.1 Overview ‣ 10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.1.1 </span>Overview</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection ltx_ref_self"><span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.1.2 </span>Data products in Gaia DR3</span></span></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_global/" title="10.2 Global processing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>Global processing</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_cls/" title="10.3 General classification ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.3 </span>General classification</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_agn/" title="10.4 Active galactic nuclei ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.4 </span>Active galactic nuclei</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_cep/" title="10.5 Cepheids ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.5 </span>Cepheids</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_cc/" title="10.6 Compact companions ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.6 </span>Compact companions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_eb/" title="10.7 Eclipsing binaries ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.7 </span>Eclipsing binaries</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_lpv/" title="10.8 Long period variables ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.8 </span>Long period variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_ml/" title="10.9 Microlensing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.9 </span>Microlensing</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_pt/" title="10.10 Planetary transits ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.10 </span>Planetary transits</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_rrl/" title="10.11 RR Lyrae stars ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.11 </span>RR Lyrae stars</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_sts/" title="10.12 Short-timescale variables ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.12 </span>Short-timescale variables</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_rotmod/" title="10.13 Solar-like rotational modulation ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.13 </span>Solar-like rotational modulation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="../sec_cu7var_mso/" title="10.14 Upper main-sequence oscillators ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.14 </span>Upper main-sequence oscillators</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../../chap_cu8par/" title="Chapter 11 Astrophysical parameters ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">11 </span>Astrophysical parameters</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../../chap_cu3qso/" title="Chapter 12 Integrated extragalactic tables ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">12 </span>Integrated extragalactic tables</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_part"><a href="../../../Catalogue_consolidation/" title="Part IV Gaia catalogue ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">IV </span>Gaia catalogue</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_part"><a href="../../../Gaia_archive/" title="Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">V </span>Gaia archive</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_appendix"><a href="../../../Miscellaneous/" title="Miscellaneous ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title">Miscellaneous</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="../../../bib.html" title="Bibliography ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_title">Bibliography</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main" id="maincontent">
+<header class="ltx_page_header">
+<div>
+<a href="." title="10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.1 </span>Introduction</span></a><a href="ssec_cu7var_overview.html" title="10.1.1 Overview ‣ 10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.1.1 </span>Overview</span></a><a href="../sec_cu7var_global/" title="10.2 Global processing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>Global processing</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_subsection ltx_authors_1line">
+<h1 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">10.1.2 </span>Data products in Gaia DR3</h1>
+<div class="ltx_date ltx_role_creation"></div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Variability products in Gaia DR3 contributed to the following:</p>
+<ul id="Ch10.I1" class="ltx_itemize">
+<li id="Ch10.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">In the <span class="ltx_text ltx_font_typewriter">gaia_source</span> table (Section <a href="../../../Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html" title="20.1.1 gaia_source ‣ 20.1 Main source catalogue ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20.1.1</span></a>), the field <a href="../../../Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html#gaia_source-phot_variable_flag" title="20.1.1 gaia_source ‣ 20.1 Main source catalogue ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">phot_variable_flag</a> is set to ‘VARIABLE’ when a source appears in any of the <span class="ltx_text ltx_font_typewriter">vari_*</span> tables, except for the <span class="ltx_text ltx_font_typewriter">vari_summary</span> table (which includes also non-variable sources that appear in GAPS), otherwise it is set to ‘NOT_AVAILABLE’.</p>
+</div>
+</li>
+<li id="Ch10.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The photometric time series for all Gaia sources in GAPS, located within a 5.5<math id="Ch10.I1.i2.p1.m1" class="ltx_Math" alttext="{}^{\circ}" display="inline"><msup><mi></mi><mo>∘</mo></msup></math> radius centred on the Andromeda galaxy. The approximately
+1.3 million sources in this survey are identified in the <span class="ltx_text ltx_font_typewriter">gaia_source</span> table when the field <a href="../../../Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html#gaia_source-in_andromeda_survey" title="20.1.1 gaia_source ‣ 20.1 Main source catalogue ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_andromeda_survey</a> is set to ‘true’ and their time-series statistics are available in the <span class="ltx_text ltx_font_typewriter">vari_summary</span> table.
+See <cite class="ltx_cite ltx_citemacro_citet">Evans<span class="ltx_text ltx_bib_etal"> et al.</span> (<a href="../../../bib.html#bib985" title="Gaia Data Release 3. The Gaia Andromeda Photometric Survey" class="ltx_ref">2023</a>)</cite> for more details.</p>
+</div>
+</li>
+<li id="Ch10.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_typewriter">vari_summary</span> table (Section <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20.13.1</span></a>) lists statistical parameters for all variable sources and all sources in GAPS. Additionally, it provides a series of boolean flags for the occurrence in other <span class="ltx_text ltx_font_typewriter">vari_*</span> tables:</p>
+<ul id="Ch10.I1.I1" class="ltx_itemize">
+<li id="Ch10.I1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_agn" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_agn</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_cepheid" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_cepheid</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_classification_result" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_classification_result</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_compact_companion" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_compact_companion</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_eclipsing_binary" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_eclipsing_binary</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_long_period_variable" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_long_period_variable</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i7.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_microlensing" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_microlensing</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i8.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_ms_oscillator" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_ms_oscillator</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i9.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_planetary_transit" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_planetary_transit</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i10.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_rotation_modulation" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_rotation_modulation</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i11.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_rrlyrae" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_rrlyrae</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I1.i12" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I1.i12.p1" class="ltx_para">
+<p class="ltx_p"><a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html#vari_summary-in_vari_short_timescale" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">in_vari_short_timescale</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="Ch10.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">Classification results in the <span class="ltx_text ltx_font_typewriter">vari_classifier_result</span> table (Section <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_classifier_result.html" title="20.13.2 vari_classifier_result ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20.13.2</span></a>) are represented by the fields
+<a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_classifier_result.html#vari_classifier_result-best_class_name" title="20.13.2 vari_classifier_result ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">best_class_name</a> and
+<a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_classifier_result.html#vari_classifier_result-best_class_score" title="20.13.2 vari_classifier_result ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">best_class_score</a>.
+Details of the 24 classes published in Gaia DR3 are provided in the <span class="ltx_text ltx_font_typewriter">vari_classifier_class_definition</span> table (Section <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_classifier_class_definition.html" title="20.13.4 vari_classifier_class_definition ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20.13.4</span></a>), while the <span class="ltx_text ltx_font_typewriter">vari_classifier_definition</span> table (Section <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_classifier_definition.html" title="20.13.3 vari_classifier_definition ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">20.13.3</span></a>) provides a concise description of the classification used in DR3.
+For more information, see Section <a href="../sec_cu7var_cls/" title="10.3 General classification ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.3</span></a>.</p>
+</div>
+</li>
+<li id="Ch10.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">Specific object studies (SOS) for the following variability types:</p>
+<ul id="Ch10.I1.I2" class="ltx_itemize">
+<li id="Ch10.I1.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i1.p1" class="ltx_para">
+<p class="ltx_p">active galactic nuclei (Section <a href="../sec_cu7var_agn/" title="10.4 Active galactic nuclei ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.4</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_agn.html" title="20.13.5 vari_agn ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_agn</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Cepheids candidates (Section <a href="../sec_cu7var_cep/" title="10.5 Cepheids ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.5</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_cepheid.html" title="20.13.6 vari_cepheid ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_cepheid</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i3.p1" class="ltx_para">
+<p class="ltx_p">compact companion candidates (Section <a href="../sec_cu7var_cc/" title="10.6 Compact companions ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.6</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_compact_companion.html" title="20.13.7 vari_compact_companion ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_compact_companion</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i4.p1" class="ltx_para">
+<p class="ltx_p">eclipsing binary candidates (Section <a href="../sec_cu7var_eb/" title="10.7 Eclipsing binaries ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.7</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_eclipsing_binary.html" title="20.13.8 vari_eclipsing_binary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_eclipsing_binary</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i5.p1" class="ltx_para">
+<p class="ltx_p">long period variables (Section <a href="../sec_cu7var_lpv/" title="10.8 Long period variables ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.8</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_long_period_variable.html" title="20.13.11 vari_long_period_variable ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_long_period_variable</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i6.p1" class="ltx_para">
+<p class="ltx_p">microlensing candidates (Section <a href="../sec_cu7var_ml/" title="10.9 Microlensing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.9</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_microlensing.html" title="20.13.12 vari_microlensing ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_microlensing</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i7.p1" class="ltx_para">
+<p class="ltx_p">planetary transit candidates (Section <a href="../sec_cu7var_pt/" title="10.10 Planetary transits ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.10</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_planetary_transit.html" title="20.13.14 vari_planetary_transit ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_planetary_transit</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i8.p1" class="ltx_para">
+<p class="ltx_p">RR Lyrae stars (Section <a href="../sec_cu7var_rrl/" title="10.11 RR Lyrae stars ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.11</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_rrlyrae.html" title="20.13.16 vari_rrlyrae ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_rrlyrae</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i9.p1" class="ltx_para">
+<p class="ltx_p">short-timescale variability (Section <a href="../sec_cu7var_sts/" title="10.12 Short-timescale variables ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.12</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_short_timescale.html" title="20.13.17 vari_short_timescale ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_short_timescale</a>,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i10" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i10.p1" class="ltx_para">
+<p class="ltx_p">solar-like rotational modulation candidates (Section <a href="../sec_cu7var_rotmod/" title="10.13 Solar-like rotational modulation ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.13</span></a>) in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_rotation_modulation.html" title="20.13.15 vari_rotation_modulation ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_rotation_modulation</a> table,</p>
+</div>
+</li>
+<li id="Ch10.I1.I2.i11" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize"><span class="ltx_text ltx_font_bold">–</span></span> 
+<div id="Ch10.I1.I2.i11.p1" class="ltx_para">
+<p class="ltx_p">upper main-sequence oscillators (Section <a href="../sec_cu7var_mso/" title="10.14 Upper main-sequence oscillators ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10.14</span></a>) in table <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_ms_oscillator.html" title="20.13.13 vari_ms_oscillator ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_ms_oscillator</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li id="Ch10.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">The time series in <math id="Ch10.I1.i6.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, <math id="Ch10.I1.i6.p1.m2" class="ltx_Math" alttext="G_{\rm BP}" display="inline"><msub><mi>G</mi><mi>BP</mi></msub></math>, and <math id="Ch10.I1.i6.p1.m3" class="ltx_Math" alttext="G_{\rm RP}" display="inline"><msub><mi>G</mi><mi>RP</mi></msub></math> bands of all sources listed in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_summary.html" title="20.13.1 vari_summary ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_summary</a> table are available as light curve data
+through the datalink interface. </p>
+</div>
+</li>
+<li id="Ch10.I1.i7" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i7.p1" class="ltx_para">
+<p class="ltx_p">The time series of radial velocities for a subset of 1898 RR Lyrae stars and Cepheids are provided in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_epoch_radial_velocity.html" title="20.13.9 vari_epoch_radial_velocity ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_epoch_radial_velocity</a> table and their statistical parameters are published in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_rad_vel_statistics.html" title="20.13.10 vari_rad_vel_statistics ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_rad_vel_statistics</a> table.</p>
+</div>
+</li>
+<li id="Ch10.I1.i8" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i8.p1" class="ltx_para">
+<p class="ltx_p">Classification of 2.5 million galaxies with <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_galaxy_candidates.html#galaxy_candidates-vari_best_class_score" title="20.5.1 galaxy_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_best_class_score</a> in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_galaxy_candidates.html" title="20.5.1 galaxy_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">galaxy_candidates</a> table, identified by setting the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_galaxy_candidates.html#galaxy_candidates-vari_best_class_name" title="20.5.1 galaxy_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_best_class_name</a> field equal to ‘GALAXY’. They were removed from the other ‘vari’ tables (most notably from <a href="../../../Gaia_archive/chap_datamodel/sec_dm_variability_tables/ssec_dm_vari_classifier_result.html" title="20.13.2 vari_classifier_result ‣ 20.13 Variability tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_classifier_result</a>) because their apparent variability in the Gaia data was mostly due to their extended shape rather than intrinsic variability within the galaxies themselves.</p>
+</div>
+</li>
+<li id="Ch10.I1.i9" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="Ch10.I1.i9.p1" class="ltx_para">
+<p class="ltx_p">Classification of one million AGNs in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_qso_candidates.html" title="20.5.3 qso_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">qso_candidates</a> table, identified by the field <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_qso_candidates.html#qso_candidates-vari_best_class_name" title="20.5.3 qso_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_best_class_name</a> equal to ‘AGN’. Some fields from <span class="ltx_text ltx_font_typewriter">vari_classifier_result</span> and <span class="ltx_text ltx_font_typewriter">vari_agn</span> are repeated there for convenience, while the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_qso_candidates.html#qso_candidates-vari_agn_membership_score" title="20.5.3 qso_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">vari_agn_membership_score</a> field (from the SOS module of AGN) is available exclusively in the <a href="../../../Gaia_archive/chap_datamodel/sec_dm_extra--galactic_tables/ssec_dm_qso_candidates.html" title="20.5.3 qso_candidates ‣ 20.5 Extra–galactic tables ‣ Chapter 20 Datamodel description ‣ Part V Gaia archive ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref ltx_font_typewriter">qso_candidates</a> table.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The analysis was performed with automated methods and the published sources should be considered as <em class="ltx_emph">candidates</em> of variability or of specific variability types.</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div>
+<a href="ssec_cu7var_overview.html" title="10.1.1 Overview ‣ 10.1 Introduction ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.1.1 </span>Overview</span></a>&nbsp;<a href="../../../bib.html" title="Bibliography ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">Bibliography</span></a>&nbsp;&nbsp;<a href="../sec_cu7var_global/" title="10.2 Global processing ‣ Chapter 10 Variability ‣ Part III Gaia data analysis ‣ Gaia Data Release 3 Documentation release 1.3" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">10.2 </span>Global processing</span></a>
+</div>
+<div class="ltx_page_logo">
+<a href="https://www.cosmos.esa.int/web/esdc/cookie-policy">(Cookie policy) </a>Generated  on Sat Jul 15 11:29:14 2023 by <span class="ltx_page_logo_ltxml"><a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a></span>
+</div></footer>
+</div>
+</div>
+<!--begin of third insertion point--><div class="esdc_tb"></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+
+	   var hs1 = new hideShow('button1');
+	   //var hs2 = new hideShow('button2');
+	   //var hs3 = new hideShow('button3');
+	   //var hs4 = new hideShow('button4');
+	   }); // end ready() 
+	</script><!--end of third insertion point-->
+</body>
+</html>

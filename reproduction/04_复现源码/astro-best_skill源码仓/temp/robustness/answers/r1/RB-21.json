@@ -1,0 +1,33 @@
+{
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "M31"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 5400.0,
+        "catalog": "std"
+      }
+    }
+  ],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "中心坐标仅角分精度",
+    "半径 5400 角秒由模型自行设定"
+  ],
+  "item_id": "RB-21",
+  "tier": "P",
+  "request": "查 M31 的标准星记录 (Sesame 只解析到角分级精度)。",
+  "route": "answer",
+  "answer_text": "我用 BEST 的名称解算把 M31 解到中心坐标 ra≈10.68°、dec≈41.27°（ICRS）——请注意这个解算只到角分精度（约 ±1′），不是精确中心。BEST 的标准星（std 组 = scr_lamost / scr_galah / xpsp）只能按位置锥搜、没有“按名字”检索，所以我在该中心、半径 5400″（1.5°，足以覆盖 M31 约 3° 的主体）上对 std 组做了锥形检索，取回三张成员表的交叉记录（含坐标与各波段测光；条数以返回信封的 total_count / returned_count 为准）。\n\n两点提醒：\n1. 因中心只有角分精度，这批结果是“M31 所在天区内的标准星”，不能据此把某一颗星精确认作 M31 的对应体。若你要更小或更大的天区，或只查单一成员表（例如只查 scr_lamost），告诉我范围我立刻收敛重查。\n2. 若某成员表命中 0 行，属正常——scr_lamost / scr_galah 有各自的天区覆盖，锥区落在覆盖外就是 0 行，不代表表有问题。",
+  "run_id": "r1"
+}

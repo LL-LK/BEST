@@ -1,0 +1,34 @@
+{
+  "schema": "e5-public-followup-acquisition-v1",
+  "logical_e5_units": 0,
+  "case_id": "name_M31",
+  "task": {
+    "kind": "name",
+    "name": "M31"
+  },
+  "wire_responses": [
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/nss/solve?obj=M31",
+      "status": 200,
+      "request_form": null,
+      "started_at_utc": "2026-10-12T09:12:33.281524+00:00",
+      "response_file": "wire/response-001.bin",
+      "content_type": "application/json",
+      "content_encoding": null,
+      "response_encoding": "utf-8",
+      "bytes": 58,
+      "sha256": "29f138c16c79a455b465952767b5cd7c1e70a565360b79a18f1f40b4a5fb8bc6"
+    }
+  ],
+  "observed": {
+    "name_resolution": {
+      "name": "M31",
+      "ra": 10.68470833,
+      "dec": 41.26875,
+      "remark": "",
+      "remark_external": true
+    }
+  },
+  "error": null
+}

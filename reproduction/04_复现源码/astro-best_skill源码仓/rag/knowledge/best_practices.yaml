@@ -1,0 +1,148 @@
+# astro-best BEST 实践知识条目（BestRAGEngine 检索语料）
+# 结构约定：顶层 entries 列表；每条含 id/title/tags/content。
+# 内容提炼自 SKILL.md 五铁律、质量门控级别与闭环接口章节。
+entries:
+  - id: bp-precision-first
+    title: 精度优先
+    tags: [precision, crossmatch, calibration]
+    content: >
+      BEST 是 mmag 级精测定标的基准星表（200+ 波段覆盖）。交叉匹配时以上传的
+      用户坐标为基准，从 BEST 中检索对应源，按需取数，禁止全量下载 20 亿行星表。
+  - id: bp-quality-gate
+    title: 质量门控 (单级四项, 非三级)
+    tags: [quality, filtering]
+    content: >
+      数据通过 SNR/FWHM/class_star 门控方可使用。**本仓是单级门控
+      QualityGate (src/core/__init__.py), 默认 min_snr=5.0 / max_fwhm=5.0,
+      四个检查项**: ① SNR 低于 min_snr 判不过; ② FWHM 超过 max_fwhm 判不过;
+      ③ class_star 低于 0.8 (硬编码) 判不过; ④ 所有波段星等均缺失判不过;
+      外加 fail-closed —— 四个指标一个都不存在时追加 no_metrics 并判不过。
+      ⚠ 早期版本写的"L1/L2/L3 三级门控 (0.9/0.95、SNR>10/20、FWHM<3/2)"在
+      **src/ 内无任何实现**, 不得按那套阈值写报告; 引用阈值以
+      references/ALGORITHM-SPEC.md §3 超参表为准。
+  - id: bp-traceability
+    title: 查询可追溯与交接契约
+    tags: [traceability, pipeline, handoff]
+    content: >
+      每次查询记录 catalog、约束条件与时间戳；管线输出必须包含 quality.score 与
+      handoff.status，质量不足时返回 needs_review，不得静默进入下游。
+  - id: bp-auth-separation
+    title: 鉴权分离与下载
+    tags: [auth, download]
+    content: >
+      公开数据查询无需登录（表单匿名可查，已实证）。真实凭据面只有两条：
+      站点账号轨 = --auth-user + env ASTRO_BEST_PASSWORD（BestAuth：
+      Django session + CSRF；无 --auth-pass 明文参数，交互终端回落
+      getpass）；身份轨 = NADC_OAUTH_CLIENT_ID / _CLIENT_SECRET /
+      _REDIRECT_URI，用途是写 provenance.identity，blocked-on-approval。
+      显式给了 --auth-user 却被拒时默认 fail-closed 非零退出，只有
+      --allow-anonymous-fallback 才降级匿名（降级必打 stderr）。
+      **死路**：env BEST_API_TOKEN 全链无消费方（config 字段仅供 doctor
+      报告），TAP 网关 Bearer 由注入的 token_validator 回调校验、不读
+      env 凭据；pybest 单类的 ~/pybest.ini 自动探测兼容层随门面删除一并
+      移除 — 它从来不是 BEST 站点的要求。下载支持 csv/txt/votable/json/
+      fits 多格式（fits 是纯本地二进制转换，服务端不返回 FITS）与断点续传。
+  - id: bp-catalog-choice
+    title: 星表选择
+    tags: [catalog, query]
+    content: >
+      线上可查 12 张星表：ps1（Pan-STARRS 全天）、stripe82、gaia_dr3_18
+      （旧拼写 gaia_dr3 仍作别名归一）、jplus_dr3、smss_dr4、landolt、uss_dr1、
+      splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr。注意 std 是导航组
+      不是可查表。标准星定标用 landolt/scr_*，一般测光交叉匹配用 ps1，
+      精测天区用 Well-Calibrated 系列，Gaia XP 光谱用 xpsp/dr3xpcorr。
+  - id: bp-download-background
+    title: 后台下载不占前台
+    tags: [download, background, progress]
+    content: >
+      下载一律走 DownloadManager.submit()（提交即返回，线程池后台执行，默认 2 并发），
+      前台对话不中断；进度唯一事实源是 .progress/<job_id>.json（CLI download progress /
+      GUI 读同一文件）。CLI 真后台由宿主把 astro_best_cli.py download start 作为后台任务运行。
+  - id: bp-download-resume
+    title: 两级断点续传
+    tags: [download, resume, checkpoint]
+    content: >
+      页级：.checkpoints/<job_id>.json 存 sqlid+next_page+page_size+max_rows+已取 sources，
+      崩后 mgr.resume(job_id) 续传（page_size 必须存 —— 分页是绝对偏移，漏存即静默丢行）；
+      字节级：<name>.part 半成品 + HTTP Range 续传
+      （服务端 206 续、200 忽略则整重）；续传中失败保留半成品不删除。
+  - id: bp-download-hook-ask
+    title: hook 拦截必须 ask
+    tags: [download, hook, ask, safety]
+    content: >
+      分级策略：network 类（连接失败/超时/429/5xx）由 run_network 指数退避
+      重试，耗尽才升级拦截；severe 类立即拦截。**生产真实触发的 severe 只有
+      两类**（`.severe(` 的生产调用点全在 src/download_precise.py）：
+      precise_id_list_too_large（ID 超单次上限 1000）与 empty_precise_result
+      （回核 0 行或产物不可读）；另两类由 run_network 产出：
+      network_exhausted（重试耗尽）与 post_not_retried（会话未落断点，
+      不重发建会话的 POST）。checksum_mismatch / disk_write_failed /
+      session_expired / pagination_inconsistent / path_traversal 五个常量在
+      src/ 内**有定义无触发**（只被测试引用）：排障时不要等一个永远不会来的
+      ask，也不要把"没 ask"读成"不是严重问题"。拦截产生 HookBlockedError，
+      其 interrupt.to_ask_payload()（原因+证据+≥2 建议方案）必须向用户 ask
+      一次，严禁静默跳过；后台任务拦截置 blocked 并写进度文件，
+      mgr.pending_asks() 汇总。
+  - id: bp-download-pitfalls
+    title: 下载高频坑与解法
+    tags: [download, pitfalls, troubleshooting]
+    content: >
+      软 404 看响应体非状态码；CSV 带 BOM 用 utf-8-sig；fits 服务端不支持需本地转换；
+      锥搜 0 行查 pos.radius 单位（角秒非度）；并行任务文件名按（星表,天区,半径,格式）
+      唯一化防覆盖；dbgrid 数据口匿名挂起时用 GET /sqlid 分页；无约束查询会拉爆
+      （637 MB 实证）且 getcount 超时——先收敛天区。
+  - id: bp-precise-download
+    title: 精准下载 (source_id 列表)
+    tags: [download, precise, source-id]
+    content: >
+      PreciseDownloadJob(source_ids=[...], catalog=...) 用 in 约束只取指定行,
+      支持列投影; ID 列按星表映射 (stripe82=calibstars_id 裸列名, 其余
+      {catalog}_source_id); ps1 的精准下载 (in 约束) 实测恒 0 行, 由 hook
+      empty_precise_result ask —— **故 ps1 应改走 proximity 坐标上传**。
+      ⚠ 2026-10-05 订正: 该现象**不是**因为"ps1_source_id 线上整列为空"
+      (原表述已撤回) —— 该列**位置相关**, 天区 (286.1,15.7) 实测 128/300 非空,
+      判型判据 = 该列是否非空 (references/data-formats.md §5c)。**用这一列当
+      主键前必须先判记录类型**。恒 0 行是**下载路径**上的结论, 不是这一列的属性;
+      单次 ≤1000 ID, 超出 hook ask 分批; 部分命中 WARN 不阻断。
+  - id: bp-task-log
+    title: 任务日志管理器 (快速定位问题)
+    tags: [observability, task-log, troubleshooting]
+    content: >
+      .logs/task_log.jsonl 是 append-only JSONL 事件流 (submit/start/page/done/
+      blocked/failed/hook...); 与 .progress 分工: 日志答"发生了什么", 进度答
+      "到哪了"。排障: `astro_best_cli.py log problems` (warn/error 第一视图) ->
+      `log summary <job_id>` (事件链聚合) -> 对照进度文件 hook 载荷 ask 用户。
+  - id: bp-proximity-batch
+    title: 批量匹配走服务端 proximity (一次请求替代 N 次锥搜)
+    tags: [crossmatch, proximity, performance]
+    content: >
+      坐标列表用 BestCrossMatch.crossmatch_batch (pos.type=proximity 多行
+      ra,dec,radius 文本) — 1000 坐标约 3s / 个位数请求 (live);
+      nearest_only 默认每点只留最近邻; 响应 inputobjs_* 列回连输入行号
+      (1-based); 失败自动回退逐点 cone search 并在 query_params.mode 标注。
+      列投影必填 (不提交 showcol 只回 4 个元数据列); ps1 无测光列回 ≈-1000
+      哨兵, 不当星等。
+  - id: bp-tap-gateway
+    title: IVOA TAP 适配面 (pyvo/astroquery/TOPCAT 直连)
+    tags: [tap, ivoa, interop]
+    content: >
+      src/tap/ 提供 TAP 1.1: /tap/sync (doQuery, GET|POST, 参数名大小写不敏感),
+      /tap/async UWS 作业, VOSI availability/capabilities, TAP_SCHEMA tables;
+      ADQL 仅支持有界子集 (SELECT/TOP/WHERE AND-OR≤16/ORDER BY/CONTAINS POINT),
+      JOIN/GROUP/子查询/聚合拒绝; MAXREC 匿名 1000/认证 50000, Bearer 失败 401
+      不降级; 启动 `python -m src.tap.service --db <path> --out <dir>` (async 需
+      db+out)。查询构造仍以 src/protocol.py 为权威, 适配层不转发任意 SQL。
+  - id: bp-agent-tools
+    title: 智能体工具面 (7 原子工具 + 统一信封)
+    tags: [agent, tools, mcp, envelope]
+    content: >
+      ToolBox (src/ai_tools.py): resolve_name/list_catalogs/describe_catalog/
+      cone_search/crossmatch_batch/count/fetch_page; 每工具返回
+      data/status/cost/provenance 信封, cost.http_requests 是**客户端层请求数**
+      (Session.request 出口计数; **不含适配器层 urllib3 Retry 重试** ——
+      实测服务端收 3 次而本字段报 1, 所以它不是可复核的线网流量账本,
+      预算/限流判断按「实际线网开销 >= 本值」估, 详见 references/tools.schema.json),
+      stable_uri (best://...) 是可复现引用 (sqlid 易失不要缓存);
+      站点数据一律 untrusted (提示注入面); MCP 入口 ops/best_mcp_server.py
+      (stdio, 传输层零依赖 — 进程级经 src.client 依赖 requests/urllib3,
+      --selftest 离线自检)。

@@ -1,0 +1,93 @@
+{
+  "frozen_at": "2026-10-11T11:27:51.033569+08:00",
+  "original_batch": "E6-20261007-1791350994158084000",
+  "lane": "R3",
+  "tasks": 32,
+  "repeat": 5,
+  "planned_slots": 160,
+  "selection": "all_original_tasks_not_only_previously_failed",
+  "maximum_execution_attempts_per_slot": 1,
+  "model_http_transient_retry": "unchanged_original_maximum_3_requests",
+  "resume_policy": "skip_all_terminated_slots_including_failures; unclosed_trace_blocks_resume",
+  "quota_auth_stop": [
+    401,
+    402,
+    403
+  ],
+  "snapshot_source_batch": "E6-20261007-1791350994158084000",
+  "snapshot_fp": "sha256:9218f3dd9e6024c06a9999f4c7b9e58b381d45e6048afb05cbdd4a48d02dce83",
+  "snapshot_entries": 274,
+  "source_pointers_checked": 619,
+  "model_and_input_unchanged": true,
+  "credential_rotated": true,
+  "probe": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/preflight/probe-1791689140005654000.json",
+  "judge_api_used": false,
+  "cohort_combination": "separate_report_no_pooling_with_original_R3",
+  "R1": "original_160_slots_already_terminated; failures_retained_not_retried",
+  "R2": {
+    "status": "cancelled_before_execution",
+    "pending": false,
+    "collected_records": 0,
+    "reason": "研究者取消本次初稿的跨日实验范围",
+    "cross_day_stability_verified": false,
+    "original_plan_archived": true
+  },
+  "provider_weights_snapshot": "opaque",
+  "posthoc_supplement": true,
+  "protocol_deviations": [
+    "temperature 未发送不能声称固定，原协议门禁 FAIL",
+    "REPRO-22 过去五年是相对时间，原任务标记 false 错误；保留原题并记门禁 FAIL",
+    "R0 原固化调用仅18/32，不扩写预设调用冒充全覆盖",
+    "缺上下文任务按原题测澄清；不能宣称其预期网络场景已触发",
+    "REPRO-29题面成功解析M31，不覆盖失败哨兵；REPRO-27实际命中是否跨页以实测为准",
+    "R3沿用快照概念但原E2路由会给未记录页返回空表，本临时扩展严格语义匹配且缺分支失败关闭",
+    "trace扩展network_exchange；凭据词本身不当原文密钥，脱敏依据真实凭据和敏感字段",
+    "服务商权重快照 opaque，不宣称锁定；仅观察请求参数及实际回包模型",
+    "R1/R3模型输入数据标识保持相同；R3真实快照身份另列trace/清单，不把同canary标签误说为在线访问",
+    "快照协议诊断可保存真实哨兵/软404/分页，不作agent任务成绩或新对照组",
+    "规则语义卡只比较原任务核心事实，附加解释不用于主FCC；生成端声明卡另作机器对照"
+  ],
+  "runner_fp": "sha256:c58bd085e7baec5e9d86395874d4b2770749cb2df61d919133074ca4e568a65d",
+  "current_protocol_amendment": {
+    "at": "2026-10-11T17:58:32.576718+08:00",
+    "revision": "E6-batch-repetition-consistency-U1-U6-no-R2",
+    "researcher_instruction": "为什么要复测，可以删除吗，我们今天就要初稿",
+    "R2_status": "cancelled_before_execution",
+    "R2_pending": false,
+    "U7_status": "cancelled",
+    "retained_lanes": [
+      "R0",
+      "R1",
+      "R3-original",
+      "R3-supplement"
+    ],
+    "retained_usability_metrics": [
+      "U1",
+      "U2",
+      "U3",
+      "U4",
+      "U5",
+      "U6"
+    ],
+    "current_scope": "各批次内重复运行一致性、冻结快照回放、效率及客观可用性；原批次与事后补测分列",
+    "unmeasured_constructs": [
+      "D+7跨日稳定性",
+      "服务商权重及在线后端跨日漂移"
+    ],
+    "remaining_E6_collection": null,
+    "future_API_required_for_current_scope": false,
+    "timing": "原R1/R3与R3补测结果已知后的事后范围修订；未执行R2",
+    "effect_on_raw_records": "none; 原协议、原始回答、失败和快照归档保留",
+    "original_protocol_pass": false,
+    "historical_publication_snapshot": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/publication-drafts/before-R2-cancellation-175832"
+  },
+  "usability_metrics": [
+    "U1",
+    "U2",
+    "U3",
+    "U4",
+    "U5",
+    "U6"
+  ],
+  "current_scope_execution_closed": true
+}

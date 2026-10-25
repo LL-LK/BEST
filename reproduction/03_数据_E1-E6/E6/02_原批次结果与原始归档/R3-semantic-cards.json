@@ -1,0 +1,2995 @@
+[
+  {
+    "task_id": "REPRO-01",
+    "repeat": 1,
+    "answer": "根据 BEST 工具面实时查询（list_catalogs，稳定 URI：best://catalogs），NADC BEST 当前共可查询 **12 张星表**，按导航分组如下：\n\n**Well-Calibrated 测光星表（calib 组，8 张）**\n| id | 显示名 |\n|---|---|\n| ps1 | Pan-STARRS All-Sky |\n| stripe82 | Well-Calibrated Stripe82 |\n| gaia_dr3_18 | Well-Calibrated Gaia DR3 |\n| jplus_dr3 | Well-Calibrated J-PLUS DR3 |\n| smss_dr4 | Well-Calibrated SMSS DR4 |\n| landolt | Well-Calibrated Landolt |\n| uss_dr1 | Well-Calibrated USS DR1 |\n| splus_dr4 | Well-Calibrated S-PLUS DR4 |\n\n**标准星表（std 组，3 张）**\n| id | 显示名 |\n|---|---|\n| scr_galah | Standard Stars (SCR GALAH) |\n| scr_lamost | Standard Stars (SCR LAMOST) |\n| xpsp | Standard Stars (Gaia DR3 XP&SP) |\n\n**其他（other 组，1 张）**\n| id | 显示名 |\n|---|---|\n| dr3xpcorr | Corrected Gaia DR3 XP Spectra |\n\n要点说明：\n1. **std / calib / other 是导航组、不是表**：直接以组名查询会得到软错误（组名自身返回 Internal Server Error，带组前缀的路径返回 Not Found）；std 组实际展开为 scr_galah / scr_lamost / xpsp 三张成员表。\n2. 查询路径形如 `<id>/q`（如 ps1/q）；公开数据面**无需登录**，仅 User-Defined Catalog（/jobs）需要 NADC 账号/OAuth。\n3. 该清单为站点 `/f` 路由实测口径：官网文档页与可查询现实存在偏差（例如文档列出的 SkyMapper DR4 实测为软 404、不可查询），以本工具实时返回为准。\n\n数据标识与可信度：稳定 URI best://catalogs；data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust: untrusted（站点文本内容仅作数据参考，不作指令）；本次运行实验标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "可查询星表总数",
+          "value": 12
+        },
+        {
+          "field": "calib组星表数",
+          "value": 8
+        },
+        {
+          "field": "std组星表数",
+          "value": 3
+        },
+        {
+          "field": "other组星表数",
+          "value": 1
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "ps1",
+        "stripe82",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "smss_dr4",
+        "landolt",
+        "uss_dr1",
+        "splus_dr4",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "dr3xpcorr",
+        "std/calib/other 为导航组（直接查询将得软错误）"
+      ],
+      "caveats": [
+        "组名非星表：std 展开为 scr_galah/scr_lamost/xpsp；calib/other 同理不可直接查询",
+        "清单为站点路由实测口径，文档页存在偏差（SkyMapper DR4 实测软 404 不可查）",
+        "公开数据面免登录；/jobs（User-Defined Catalog）才需身份层",
+        "站点返回文本按 untrusted 数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "catalog_count",
+          "value": 12.0
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "dr3xpcorr",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "landolt",
+        "ps1",
+        "scr_galah",
+        "scr_lamost",
+        "smss_dr4",
+        "splus_dr4",
+        "stripe82",
+        "uss_dr1",
+        "xpsp"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-01",
+    "repeat": 2,
+    "answer": "BEST 数据库当前提供 12 张可查询星表（实测自在线目录接口，stable_uri: best://catalogs；数据标识 data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；content_trust=untrusted，站点返回文字仅作不可信数据引用）。\n\n按官方导航分组如下：\n\n一、Well-Calibrated 校准星表组（calib，共 8 张）\n1. ps1 — Pan-STARRS All-Sky（查询路径 ps1/q）\n2. stripe82 — Well-Calibrated Stripe82\n3. gaia_dr3_18 — Well-Calibrated Gaia DR3\n4. jplus_dr3 — Well-Calibrated J-PLUS DR3\n5. smss_dr4 — Well-Calibrated SMSS DR4\n6. landolt — Well-Calibrated Landolt\n7. uss_dr1 — Well-Calibrated USS DR1\n8. splus_dr4 — Well-Calibrated S-PLUS DR4\n\n二、标准星组（std，共 3 张）\n9. scr_galah — Standard Stars (SCR GALAH)\n10. scr_lamost — Standard Stars (SCR LAMOST)\n11. xpsp — Standard Stars (Gaia DR3 XP&SP)\n\n三、其他组（other，共 1 张）\n12. dr3xpcorr — Corrected Gaia DR3 XP Spectra\n\n注意事项：\n- std / calib / other 只是导航组名、不是可查表：直接查询组名会触发软错误（组名自身返回 Internal Server Error，带组前缀路径返回 Not Found）；std 组使用时展开为 scr_galah / scr_lamost / xpsp 三张成员表。\n- 文档页曾列出 SkyMapper DR4（在 Well-Calibrated 表内），但线上 /f 路由实测软 404、不可查询——文档存在不等于可查询，以 /f 路由实测为准，本次实测清单不含它。\n- 列名带表前缀（如 ps1_ra、gaia_dr3_18_phot_g_mean_mag），构造任何列约束前应先调用 describe_catalog 获取列清单、量纲与波段映射，不要猜列名。\n- 下一步：如需实际取数，请提供目标天区坐标（RA/Dec，度）+ 半径（角秒）+ 目标星表 id，即可执行锥形检索（pos.type=cone）或批量交叉匹配（pos.type=proximity，一次提交）。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "catalog_count",
+          "value": 12
+        },
+        {
+          "field": "calib_group_count",
+          "value": 8
+        },
+        {
+          "field": "std_group_count",
+          "value": 3
+        },
+        {
+          "field": "other_group_count",
+          "value": 1
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "data_hash:sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9",
+        "src.protocol.CATALOG_PATHS"
+      ],
+      "caveats": [
+        "std/calib/other 为导航组非可查表，直查组名即软错误",
+        "docs-drift：SkyMapper DR4 文档页列出但线上软404不可查",
+        "content_trust=untrusted：站点文字仅作数据引用",
+        "列名带表前缀，查询前应先 describe_catalog"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "catalog_count",
+          "value": 12.0
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "dr3xpcorr",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "landolt",
+        "ps1",
+        "scr_galah",
+        "scr_lamost",
+        "smss_dr4",
+        "splus_dr4",
+        "stripe82",
+        "uss_dr1",
+        "xpsp"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-01",
+    "repeat": 3,
+    "answer": "BEST 当前共 12 张可查询星表（本次实测 list_catalogs 真实返回；stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，来源 src.protocol.CATALOG_PATHS，内容为站点数据、content_trust=untrusted）。按导航组分为三类：\n\n• Well-Calibrated（calib，8 张）：ps1（Pan-STARRS All-Sky）、stripe82（Well-Calibrated Stripe82）、gaia_dr3_18（Well-Calibrated Gaia DR3）、jplus_dr3（Well-Calibrated J-PLUS DR3）、smss_dr4（Well-Calibrated SMSS DR4）、landolt（Well-Calibrated Landolt）、uss_dr1（Well-Calibrated USS DR1）、splus_dr4（Well-Calibrated S-PLUS DR4）\n• Standard Stars（std，3 张）：scr_galah（Standard Stars SCR GALAH）、scr_lamost（Standard Stars SCR LAMOST）、xpsp（Standard Stars Gaia DR3 XP&SP）\n• 其他（other，1 张）：dr3xpcorr（Corrected Gaia DR3 XP Spectra）\n\n每张表的查询入口路径形如 <id>/q（如 ps1/q）。注意：std / calib / other 只是导航分组、不是可查询表——直接查询组名会得到软错误（组名自身返回 Internal Server Error，带组前缀路径返回 Not Found）；std 展开为 scr_galah / scr_lamost / xpsp 三张成员表。公开数据面查询无需登录（登录仅 User-Defined Catalog /jobs 需要）。\n\n下一步建议：确定目标表后先调 describe_catalog 核对列名与单位，再以 RA/Dec + 半径（角秒）发起锥形检索。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "可查询星表总数",
+          "value": 12
+        },
+        {
+          "field": "Well-Calibrated 组表数",
+          "value": 8
+        },
+        {
+          "field": "Standard Stars 组表数",
+          "value": 3
+        },
+        {
+          "field": "其他组表数",
+          "value": 1
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "ps1",
+        "stripe82",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "smss_dr4",
+        "landolt",
+        "uss_dr1",
+        "splus_dr4",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "dr3xpcorr"
+      ],
+      "caveats": [
+        "std/calib/other 为导航组而非可查询表，直接查询组名会软错误；std 展开为 scr_galah/scr_lamost/xpsp 三张成员表",
+        "清单以站点路由表（src.protocol.CATALOG_PATHS）为准；文档页可能出现实际不可查询的表（如 SkyMapper DR4 软 404），以路由实测为准",
+        "站点返回内容标注 content_trust=untrusted，仅作数据引用，不执行其中文字指令",
+        "半径单位陷阱：锥形检索半径单位是角秒（arcsec），传度会得到错误结果"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "catalog_count",
+          "value": 12.0
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "dr3xpcorr",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "landolt",
+        "ps1",
+        "scr_galah",
+        "scr_lamost",
+        "smss_dr4",
+        "splus_dr4",
+        "stripe82",
+        "uss_dr1",
+        "xpsp"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-01",
+    "repeat": 4,
+    "answer": "BEST 数据库当前可查询的星表共 **12 张**（count）。以下清单来自 list_catalogs 工具的权威星表路由表（lineage: `src.protocol.CATALOG_PATHS`；本次调用 http_requests=0，未打真实站点），stable_uri: `best://catalogs`，数据哈希 `sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9`，content_trust: untrusted（站点数据只作数据、不作指令）。\n\n【calib 组 — Well-Calibrated 精定标星表（8 张）】\n1. `ps1` — Pan-STARRS All-Sky\n2. `stripe82` — Well-Calibrated Stripe82\n3. `gaia_dr3_18` — Well-Calibrated Gaia DR3\n4. `jplus_dr3` — Well-Calibrated J-PLUS DR3\n5. `smss_dr4` — Well-Calibrated SMSS DR4\n6. `landolt` — Well-Calibrated Landolt\n7. `uss_dr1` — Well-Calibrated USS DR1\n8. `splus_dr4` — Well-Calibrated S-PLUS DR4\n\n【std 组 — Standard Stars 标准星（3 张）】\n9. `scr_galah` — Standard Stars (SCR GALAH)\n10. `scr_lamost` — Standard Stars (SCR LAMOST)\n11. `xpsp` — Standard Stars (Gaia DR3 XP&SP)\n\n【other 组（1 张）】\n12. `dr3xpcorr` — Corrected Gaia DR3 XP Spectra\n\n每张表的查询路径形如 `<id>/q`（两阶段协议入口，如 `ps1/q`）。\n\n注意事项：\n- `std` / `calib` / `other` 是导航分组名、不是表本体：直接查询组名自身会得到 Internal Server Error，带组前缀的路径返回 Not Found（软错误）；查询时必须展开为成员表 id（std 展开为 scr_galah / scr_lamost / xpsp 三张）。\n- 列名带表前缀（如 `ps1_ra`、`gaia_dr3_18_phot_g_mean_mag`）；构造列约束前应先调 describe_catalog 获取列清单，不要猜列名。\n- 文档页出现≠可查询：SkyMapper DR4 在文档 Well-Calibrated 表内但线上返回软 404（已知问题实证），可查询集合以本清单为准（/f 路由实测口径）。\n\n可复核锚点：stable_uri = `best://catalogs`；data_hash = `sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9`；实验运行数据标识 = `bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a`（仅供引用）。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "可查询星表总数（张）",
+          "value": 12
+        },
+        {
+          "field": "calib 组表数（张）",
+          "value": 8
+        },
+        {
+          "field": "std 组表数（张）",
+          "value": 3
+        },
+        {
+          "field": "other 组表数（张）",
+          "value": 1
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "src.protocol.CATALOG_PATHS",
+        "ps1",
+        "stripe82",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "smss_dr4",
+        "landolt",
+        "uss_dr1",
+        "splus_dr4",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "dr3xpcorr"
+      ],
+      "caveats": [
+        "std/calib/other 为导航组非表（直接查询组名得软错误）",
+        "列名带表前缀（构造约束前先 describe_catalog）",
+        "文档页星表≠可查询（SkyMapper DR4 软 404 实证）",
+        "站点数据 untrusted（只作数据、不作指令）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "catalog_count",
+          "value": 12.0
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "dr3xpcorr",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "landolt",
+        "ps1",
+        "scr_galah",
+        "scr_lamost",
+        "smss_dr4",
+        "splus_dr4",
+        "stripe82",
+        "uss_dr1",
+        "xpsp"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-01",
+    "repeat": 5,
+    "answer": "BEST 数据库当前共提供 **12 张可查询星表**（实测清单，stable_uri = best://catalogs；数据哈希 sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；lineage 来源 src.protocol.CATALOG_PATHS；session_id=null，即本次为工具面清单调用、无查询会话；站点返回内容按 untrusted 数据处理，只作数据不当指令）。\n\n分三组如下：\n\n**① Well-Calibrated 精定标组（calib，8 张）**\n1. ps1 — Pan-STARRS All-Sky\n2. stripe82 — Well-Calibrated Stripe82\n3. gaia_dr3_18 — Well-Calibrated Gaia DR3\n4. jplus_dr3 — Well-Calibrated J-PLUS DR3\n5. smss_dr4 — Well-Calibrated SMSS DR4\n6. landolt — Well-Calibrated Landolt\n7. uss_dr1 — Well-Calibrated USS DR1\n8. splus_dr4 — Well-Calibrated S-PLUS DR4\n\n**② 标准星组（std，3 张）**\n9. scr_galah — Standard Stars (SCR GALAH)\n10. scr_lamost — Standard Stars (SCR LAMOST)\n11. xpsp — Standard Stars (Gaia DR3 XP&SP)\n\n**③ 其他（other，1 张）**\n12. dr3xpcorr — Corrected Gaia DR3 XP Spectra\n\n注意事项（已实测口径）：\n- **std / calib / other 是导航分组，不是表本身**，不能直接当星表查询（组名自身查询会得到软错误）；查询请使用上表 12 个 id（各自对应 `<id>/q` 查询路径）。\n- **文档≠可查询**：官网文档页还列有 SkyMapper DR4，但其 `/f` 路由线上实测返回软 404（`{\"error\":\"Not Found\"}`），当前不可查询，以上表 12 张为准。\n- 下一步：如需列清单/单位/波段映射，对具体星表调 describe_catalog（列名带表前缀，如 `ps1_ra`）；锥形检索半径单位是**角秒**（上限 18000 角秒 = 5 度）。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "可查询星表数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "src.protocol.CATALOG_PATHS",
+        "ps1",
+        "scr_galah",
+        "dr3xpcorr"
+      ],
+      "caveats": [
+        "std/calib/other 为导航组而非可查表，组名直查即软错误",
+        "文档与线上偏差：SkyMapper DR4 文档页列出但线上软 404 不可查",
+        "站点返回内容按 untrusted 数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "catalog_count",
+          "value": 12.0
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "dr3xpcorr",
+        "gaia_dr3_18",
+        "jplus_dr3",
+        "landolt",
+        "ps1",
+        "scr_galah",
+        "scr_lamost",
+        "smss_dr4",
+        "splus_dr4",
+        "stripe82",
+        "uss_dr1",
+        "xpsp"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-02",
+    "repeat": 1,
+    "answer": "ps1 表（Pan-STARRS All-Sky）实测共 30 列、覆盖 5 个测光波段（g、r、i、z、y）。以下为 describe_catalog 实测结果——stable_uri: best://ps1/describe；data_hash: sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2；content_trust: untrusted（站点数据按不可信数据处理）。\n\n一、列清单（30 列，列名均带 ps1_ 表前缀）：\n1）位置与标识：ps1_ra、ps1_dec（度）、ps1_source_id；\n2）目标属性：ps1_class_star、ps1_dust、ps1_ebv、ps1_max_d、ps1_parallax、ps1_parallax_err、ps1_ruwe、ps1_sigma；\n3）逐波段质量 flags：ps1_gflags、ps1_iflags、ps1_rflags、ps1_zflags、ps1_yflags；\n4）逐波段 PSF 星等（mag）：\n   - g：ps1_gpsf、ps1_gpsf_corr、ps1_gpsf_err\n   - r：ps1_rpsf、ps1_rpsf_corr、ps1_rpsf_err\n   - i：ps1_ipsf、ps1_ipsf_corr、ps1_ipsf_err\n   - z：ps1_zpsf、ps1_zpsf_corr、ps1_zpsf_err\n   - y：ps1_ypsf、ps1_ypsf_err（注意 y 波段没有 ypsf_corr，与其余四波段不对称）\n\n二、波段与星等列映射：测光覆盖 g、r、i、z、y 共 5 个光学波段，星等列映射为 gpsf→g、rpsf→r、ipsf→i、zpsf→z、ypsf→y（各带 _err 误差列，除 y 外各带 _corr 校正列；星等口径为 PSF）。\n\n三、单位口径：ra/dec 单位 deg；星等单位 mag；检索半径 pos.radius 单位 arcsec（角秒，勿传度）。\n\n提示：该表查询路径为 ps1/q；构造列约束或投影（showcol）前应先调 describe_catalog 核对列名，不要凭缩写猜测（列名前缀分岔是本站点高频坑）。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "列数",
+          "value": 30
+        },
+        {
+          "field": "测光波段数",
+          "value": 5
+        },
+        {
+          "field": "PSF 星等列数",
+          "value": 5
+        }
+      ],
+      "key_entities": [
+        "ps1",
+        "Pan-STARRS All-Sky",
+        "best://ps1/describe",
+        "ps1/q",
+        "ps1_ra",
+        "ps1_source_id",
+        "ps1_gpsf",
+        "ps1_ypsf_err",
+        "g/r/i/z/y 波段映射"
+      ],
+      "caveats": [
+        "content_trust=untrusted（站点数据）",
+        "列名均带 ps1_ 前缀，以 describe_catalog 为权威，不猜列名",
+        "y 波段缺 ypsf_corr 列（g/r/i/z 各有 _corr）",
+        "星等字段为 PSF 口径（psf/_corr/_err），非模型星等",
+        "单位：ra/dec=deg，星等=mag，radius=arcsec"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "column_count",
+          "value": 30.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/describe",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-02",
+    "repeat": 2,
+    "answer": "ps1 表（显示名：Pan-STARRS All-Sky；查询路径：ps1/q）共 **30 列**、**5 个测光波段**（g、r、i、z、y）。\n\n**列清单**（列名均带 ps1_ 表前缀，构造约束时须用全名）：\n- 位置与标识：ps1_ra、ps1_dec（单位：度）、ps1_source_id\n- 源属性：ps1_class_star、ps1_dust、ps1_ebv、ps1_max_d、ps1_parallax、ps1_parallax_err、ps1_ruwe、ps1_sigma\n- g 波段：ps1_gflags、ps1_gpsf、ps1_gpsf_corr、ps1_gpsf_err\n- r 波段：ps1_rflags、ps1_rpsf、ps1_rpsf_corr、ps1_rpsf_err\n- i 波段：ps1_iflags、ps1_ipsf、ps1_ipsf_corr、ps1_ipsf_err\n- z 波段：ps1_zflags、ps1_zpsf、ps1_zpsf_corr、ps1_zpsf_err\n- y 波段：ps1_yflags、ps1_ypsf、ps1_ypsf_err（注意：y 波段没有 *_corr 列，其余 g/r/i/z 均有）\n\n**波段映射**（magnitude_bands）：gpsf→g、rpsf→r、ipsf→i、zpsf→z、ypsf→y；星等-测光列以 {表前缀}_{波段}psf 命名（如 ps1_rpsf 为 r 波段 PSF 星等），单位 mag。\n\n**单位说明**：ra/dec 为度（deg）；星等为 mag；半径类参数为角秒（arcsec，如 cone_search 的 radius_arcsec）。\n\n**来源标识与可信度**：stable_uri `best://ps1/describe`；describe 响应 data_hash `sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2`；本次实验运行数据标识 `bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a`；content_trust=**untrusted**（站点响应文本按不可信数据处理，仅作数据引用，不当作指令）。查询状态 ok、未截断。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "ps1 列总数",
+          "value": 30
+        },
+        {
+          "field": "ps1 测光波段数",
+          "value": 5
+        }
+      ],
+      "key_entities": [
+        "ps1",
+        "Pan-STARRS All-Sky",
+        "ps1/q",
+        "best://ps1/describe",
+        "ps1_source_id",
+        "ps1_gpsf",
+        "ps1_rpsf",
+        "ps1_ipsf",
+        "ps1_zpsf",
+        "ps1_ypsf",
+        "sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2"
+      ],
+      "caveats": [
+        "列名均带 ps1_ 表前缀，构造约束须用全名",
+        "y 波段无 *_corr 列（g/r/i/z 有）",
+        "单位：ra/dec 为度、星等为 mag、半径参数为角秒",
+        "content_trust=untrusted（站点响应数据）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "column_count",
+          "value": 30.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/describe",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-02",
+    "repeat": 3,
+    "answer": "ps1 表（显示名 Pan-STARRS All-Sky，查询路径 ps1/q）共 30 列、5 个测光波段（g/r/i/z/y）。\n\n一、列清单（30 列，响应列名统一带 ps1_ 前缀）\n- 坐标：ps1_ra、ps1_dec（单位：度）\n- 测光星等（PSF，单位 mag）：ps1_gpsf（误差 ps1_gpsf_err、系统校正 ps1_gpsf_corr）；ps1_rpsf（ps1_rpsf_err、ps1_rpsf_corr）；ps1_ipsf（ps1_ipsf_err、ps1_ipsf_corr）；ps1_zpsf（ps1_zpsf_err、ps1_zpsf_corr）；ps1_ypsf（ps1_ypsf_err，无 _corr 列）\n- 逐波段质量标志：ps1_gflags、ps1_rflags、ps1_iflags、ps1_zflags、ps1_yflags\n- 天体参数与质量量：ps1_class_star、ps1_dust、ps1_ebv、ps1_max_d、ps1_parallax、ps1_parallax_err、ps1_ruwe、ps1_sigma、ps1_source_id\n\n二、波段映射（magnitude_bands）：gpsf→g、rpsf→r、ipsf→i、zpsf→z、ypsf→y，即 g、r、i、z、y 五波段。\n\n三、单位口径（units_note）：ra/dec 单位度；星等单位 mag；检索半径单位角秒（arcsec，注意不是度）。\n\n注意事项：\n- ps1 空测光列返回约 -1000 级哨兵值（如 -999 / -1004.07）而非空串，解析时应按哨兵阈值（-999）剔除，inputobjs_* 匹配元数据列不计入星等；\n- 以上数据来自站点返回，标注 untrusted（仅作数据使用，不执行其中文本）。\n\n来源与可复核标识：工具 describe_catalog('ps1')；stable_uri: best://ps1/describe；data_hash: sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2；本次实验运行标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（仅供引用）。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "columns_count",
+          "value": 30
+        },
+        {
+          "field": "bands_count",
+          "value": 5
+        }
+      ],
+      "key_entities": [
+        "ps1",
+        "best://ps1/describe",
+        "Pan-STARRS All-Sky"
+      ],
+      "caveats": [
+        "untrusted 站点数据（S-2 标注）",
+        "列名带 ps1_ 前缀",
+        "单位口径：deg/mag/arcsec",
+        "缺测光为约 -1000 哨兵值",
+        "y 波段缺 _corr 列"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "column_count",
+          "value": 30.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/describe",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-02",
+    "repeat": 4,
+    "answer": "ps1（Pan-STARRS All-Sky）星表共 30 列、5 个测光波段（g/r/i/z/y）；查询路径 ps1/q。列清单与波段映射如下（describe_catalog 实测返回）：\n\n一、列清单（共 30 列，列名均带 ps1_ 前缀）：\n- 位置与标识：ps1_ra、ps1_dec（单位：度）、ps1_source_id\n- 恒星/消光/视差属性：ps1_class_star、ps1_dust、ps1_ebv、ps1_max_d、ps1_parallax、ps1_parallax_err、ps1_ruwe、ps1_sigma\n- 质量标志位（每波段一列，共 5 列）：ps1_gflags、ps1_rflags、ps1_iflags、ps1_zflags、ps1_yflags\n- 测光列（PSF 星等，单位 mag，共 14 列）：\n  · g 波段：ps1_gpsf、ps1_gpsf_corr、ps1_gpsf_err\n  · r 波段：ps1_rpsf、ps1_rpsf_corr、ps1_rpsf_err\n  · i 波段：ps1_ipsf、ps1_ipsf_corr、ps1_ipsf_err\n  · z 波段：ps1_zpsf、ps1_zpsf_corr、ps1_zpsf_err\n  · y 波段：ps1_ypsf、ps1_ypsf_err\n\n二、测光波段映射（magnitude_bands）：gpsf→g、rpsf→r、ipsf→i、zpsf→z、ypsf→y，共 5 个波段。注意：y 波段只有 psf 与 psf_err 两列，没有 ps1_ypsf_corr，其余 g/r/i/z 均为 psf + corr + err 三列。\n\n三、单位口径：ra/dec 为度；星等为 mag；检索半径参数单位为角秒（arcsec）。\n\n四、可复核凭据：stable_uri = best://ps1/describe；data_hash = sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2；运行数据标识 = bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；content_trust = untrusted（站点返回内容仅作数据使用）。\n\n五、使用注意：\n- PS1 仅 g/r/i/z/y 五档波段，无 u 波段；\n- 空测光列在线上可能回落 ≈-999 一类哨兵值（如 -1004.07），并非空串，解析时不应把哨兵当星等；\n- 构造约束/投影时请用带前缀全名（如 ps1_gpsf），不要凭缩写猜测。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "ps1 列数",
+          "value": 30
+        },
+        {
+          "field": "ps1 测光波段数",
+          "value": 5
+        },
+        {
+          "field": "ps1 测光相关列数（含 corr/err）",
+          "value": 14
+        }
+      ],
+      "key_entities": [
+        "ps1",
+        "Pan-STARRS All-Sky",
+        "ps1/q",
+        "best://ps1/describe"
+      ],
+      "caveats": [
+        "y 波段无 psf_corr 列",
+        "PS1 仅 g/r/i/z/y 波段（无 u）",
+        "空测光列可能回落 -999 哨兵而非空值",
+        "站点内容按 untrusted 数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "column_count",
+          "value": 30.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/describe",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-02",
+    "repeat": 5,
+    "answer": "ps1（Pan-STARRS All-Sky，查询路径 ps1/q）共 30 列、5 个测光波段（g/r/i/z/y）。\n\n【列清单（30 列，均带 ps1_ 前缀）】\n坐标：ps1_ra、ps1_dec（单位：度）。\n测光（5 波段 × PSF 星等）：ps1_gpsf、ps1_ipsf、ps1_rpsf、ps1_zpsf、ps1_ypsf，另有对应的误差列 ps1_gpsf_err、ps1_ipsf_err、ps1_rpsf_err、ps1_zpsf_err、ps1_ypsf_err，以及校正列 ps1_gpsf_corr、ps1_ipsf_corr、ps1_rpsf_corr、ps1_zpsf_corr（注意：y 波段没有 _corr 列）。\n质量/标志：ps1_gflags、ps1_iflags、ps1_rflags、ps1_yflags、ps1_zflags；ps1_class_star、ps1_dust、ps1_ebv、ps1_max_d、ps1_ruwe、ps1_sigma。\n天体测量：ps1_parallax、ps1_parallax_err、ps1_source_id。\n\n【波段映射（列名→波段）】\nps1_gpsf→g、ps1_rpsf→r、ps1_ipsf→i、ps1_zpsf→z、ps1_ypsf→y，共 5 个波段（g、r、i、z、y）。\n\n【单位与构造提示】\nra/dec 单位=度（deg），星等单位=mag；锥形检索半径单位=角秒（arcsec）。构造约束/投影（showcol）时请使用带 ps1_ 前缀的全名，不要用裸名。\n\n【数据出处与信任】stable_uri: best://ps1/describe；data_hash: sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2；content_trust: untrusted（站点返回内容仅作数据）；实验运行标识（引用用）: bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；查询状态 status=ok、未截断。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "列数",
+          "value": 30
+        },
+        {
+          "field": "测光波段数",
+          "value": 5
+        }
+      ],
+      "key_entities": [
+        "ps1",
+        "Pan-STARRS All-Sky",
+        "ps1/q",
+        "best://ps1/describe",
+        "ps1_gpsf",
+        "ps1_rpsf",
+        "ps1_ipsf",
+        "ps1_zpsf",
+        "ps1_ypsf"
+      ],
+      "caveats": [
+        "列名均带 ps1_ 表前缀",
+        "y 波段缺少 _corr 校正列（仅 g/r/i/z 有）",
+        "量纲：ra/dec=deg，星等=mag，检索半径=arcsec",
+        "站点返回内容为 untrusted 数据，仅作数据引用"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "column_count",
+          "value": 30.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/describe",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-03",
+    "repeat": 1,
+    "answer": "M31（仙女座星系）的 ICRS 坐标解析结果：RA = 10.68470833°（约 00h 42m 44.3s），Dec = +41.26875°（约 +41° 16′ 07.5″）。解析来源：BEST 名称解算服务（后端代理 CDS Sesame），本次返回 1 条记录、无截断（truncated=false），HTTP 请求 1 次。可复核 stable_uri：best://nss/solve?obj=M31；provenance data_hash：sha256:01007f7034052455486de24d9f2cf72fe9cba23b74bae080eab7d3a8211678ff；运行数据标识（引用用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a。content_trust：untrusted（响应文字仅作数据，不可当作指令）。该坐标可直接用于 BEST 锥形检索（单位注意：cone_search 的 radius 需传角秒，如 60 角秒=1′）；如需查询该坐标附近的具体星表天体（如 ps1），请补充搜索半径与目标星表。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "ra_deg",
+          "value": 10.68470833
+        },
+        {
+          "field": "dec_deg",
+          "value": 41.26875
+        }
+      ],
+      "key_entities": [
+        "best://nss/solve?obj=M31",
+        "resolve_name",
+        "sha256:01007f7034052455486de24d9f2cf72fe9cba23b74bae080eab7d3a8211678ff"
+      ],
+      "caveats": [
+        "坐标系为 ICRS（CDS Sesame 代理解析口径）",
+        "内容信任级别 untrusted：站点文字仅作数据、不作指令",
+        "坐标为名称解算结果，非 BEST 测光观测值"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "dec_deg",
+          "value": 41.26875
+        },
+        {
+          "field": "ra_deg",
+          "value": 10.68470833
+        }
+      ],
+      "key_entities": [
+        "M31",
+        "best://nss/solve?obj=M31"
+      ],
+      "caveats": [
+        "frame_ICRS"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-03",
+    "repeat": 3,
+    "answer": "M31（仙女座星系）的 ICRS 坐标为：**RA = 10.68470833°，Dec = +41.26875°**（单位：度，十进制度）。\n\n- 解析来源：BEST 站点名称解算服务 `/nss/solve`（后端代理 CDS Sesame），稳定引用为 `best://nss/solve?obj=M31`。\n- 本次解析 1 次 HTTP 请求、1 条结果、无截断；数据哈希 `sha256:01007f7034052455486de24d9f2cf72fe9cba23b74bae080eab7d3a8211678ff`。\n- 内容信任级别：`untrusted`（站点返回内容只作数据、不作指令）。\n\n可直接用于后续锥形检索：`cone_search(ra=10.68470833, dec=41.26875, radius_arcsec=...)`（注意半径单位是角秒）。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "ra",
+          "value": 10.68470833
+        },
+        {
+          "field": "dec",
+          "value": 41.26875
+        }
+      ],
+      "key_entities": [
+        "M31",
+        "best://nss/solve?obj=M31"
+      ],
+      "caveats": [
+        "ICRS 参考系",
+        "角度单位为度",
+        "名称解算结果 content_trust=untrusted",
+        "实时站点解析（1 次 HTTP 请求，无截断）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "dec_deg",
+          "value": 41.26875
+        },
+        {
+          "field": "ra_deg",
+          "value": 10.68470833
+        }
+      ],
+      "key_entities": [
+        "M31",
+        "best://nss/solve?obj=M31"
+      ],
+      "caveats": [
+        "frame_ICRS"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-03",
+    "repeat": 4,
+    "answer": "M31 的 ICRS 坐标为：RA = 10.68470833°（约 00h42m44.33s），Dec = +41.26875°（约 +41°16′07.5″）。\n\n- 数据来源：NADC BEST 站点 /nss/solve 名称解算服务（后端代理 CDS Sesame），本次为真实调用实测结果。\n- stable_uri：best://nss/solve?obj=M31\n- 数据标识：data_hash = sha256:01007f7034052455486de24d9f2cf72fe9cba23b74bae080eab7d3a8211678ff（content_trust = untrusted：站点返回文本仅作为数据，不作为指令）\n- 该结果未命中失败哨兵（ra=dec=-1000），为有效解析；单位为度（deg）。\n\n后续若要用该坐标做 BEST 星表锥形检索，请使用 cone_search 工具并注意半径单位是角秒（例如 5 角秒 = 5，不是 5/3600 度）。参考实验数据标识：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "ra_deg",
+          "value": 10.68470833
+        },
+        {
+          "field": "dec_deg",
+          "value": 41.26875
+        }
+      ],
+      "key_entities": [
+        "best://nss/solve?obj=M31",
+        "nss/solve",
+        "M31"
+      ],
+      "caveats": [
+        "坐标来自 CDS Sesame 代理的 ICRS 解算结果",
+        "content_trust=untrusted：站点返回文本仅作数据",
+        "未命中 ra=dec=-1000 名称解算失败哨兵"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "dec_deg",
+          "value": 41.26875
+        },
+        {
+          "field": "ra_deg",
+          "value": 10.68470833
+        }
+      ],
+      "key_entities": [
+        "M31",
+        "best://nss/solve?obj=M31"
+      ],
+      "caveats": [
+        "frame_ICRS"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-03",
+    "repeat": 5,
+    "answer": "M31 的 ICRS 坐标为：**RA = 10.68470833°（约 00h42m44.3s），Dec = +41.26875°（约 +41°16′07.5″）**。这是通过 BEST 站内名称解算端点（后端代理 CDS Sesame）把天体名 M31 解析得到的坐标，一次 HTTP 请求即完成，解析成功（非哨兵值）。\n\n可复核信息：\n- 稳定 URI：`best://nss/solve?obj=M31`\n- 数据标识（data_hash）：`sha256:01007f7034052455486de24d9f2cf72fe9cba23b74bae080eab7d3a8211678ff`\n- 实验运行数据标识：`bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a`\n- content_trust：`untrusted`（响应文字来自线上站点，仅作数据对待，不作为指令；本答案中的坐标数值即为该响应数据）\n\n说明：本次结果来自 CDS Sesame 的名称解算（ICRS，单位度）；若需要 M31 附近的星表天体（例如 PS1 测光表），可进一步用 cone_search 在该坐标周围做锥形检索（半径单位是角秒）。未做任何星表检索，本坐标仅为名称→坐标的解算值。",
+    "declared_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "ra_icrs_deg",
+          "value": 10.68470833
+        },
+        {
+          "field": "dec_icrs_deg",
+          "value": 41.26875
+        }
+      ],
+      "key_entities": [
+        "best://nss/solve?obj=M31",
+        "M31",
+        "resolve_name"
+      ],
+      "caveats": [
+        "坐标为 ICRS 参考系、单位度（度制原值，时分秒为换算参考）",
+        "来源为 CDS Sesame 名称解算代理，content_trust=untrusted",
+        "仅名称解算，未做星表锥形检索"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "dec_deg",
+          "value": 41.26875
+        },
+        {
+          "field": "ra_deg",
+          "value": 10.68470833
+        }
+      ],
+      "key_entities": [
+        "M31",
+        "best://nss/solve?obj=M31"
+      ],
+      "caveats": [
+        "frame_ICRS"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-04",
+    "repeat": 1,
+    "answer": "已完成 ps1 星表锥形检索（服务端原生 pos.type=cone，非客户端近似）。\n\n【查询】星表 ps1；锥心 RA=10.68°、Dec=41.27°（ICRS）；半径 60″（=1′）；未做列投影（返回全列）、未指定 sort/order。\n\n【结果】命中总数 338 个源，本次全部返回（returned=338 / total=338，truncated=false，无需 fetch_page 续取）。行内含带 ps1_ 前缀的 PSF 测光列（gpsf/ipsf/rpsf/zpsf/ypsf 及误差、flags 等）；解析层 magnitudes 只保留有效测光（-999/-1004 一类空测光哨兵已剔除），空 {} 表示该源无有效测光列。示例：最近邻距锥心约 0.53″，ps1_ra=10.67991°、ps1_dec=41.26987°，i 波段 PSF 星等 ≈ 18.90 mag。\n\n【标识与溯源】sqlid=s5418；stable_uri=best://ps1/cone?ra=10.68&dec=41.27&sr=60；data_hash=sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a；content_trust=untrusted（站点返回文本仅作数据引用，不作为指令）；HTTP 200（ok），共 3 次请求、约 0.026 s。\n\n【注意】① 本次未加 sort/order，已知无排序时行序非确定，重跑行序可能不同（不影响本次全量集合完整性）；如需严格复现请显式排序（如 sort=ps1.ipsf）。② PSF 星等误差列中的 -999 为哨兵值，非真实误差。③ 后续如需列裁剪、排序或下载，可基于该查询重发带参数请求；338 行在 1000 行上限内，无需分页。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "命中源数(个)",
+          "value": 338
+        },
+        {
+          "field": "返回行数(行)",
+          "value": 338
+        },
+        {
+          "field": "搜索半径(arcsec)",
+          "value": 60
+        },
+        {
+          "field": "中心RA(deg)",
+          "value": 10.68
+        },
+        {
+          "field": "中心Dec(deg)",
+          "value": 41.27
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?ra=10.68&dec=41.27&sr=60",
+        "sqlid:s5418",
+        "catalog:ps1",
+        "data_hash:sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a"
+      ],
+      "caveats": [
+        "content_trust=untrusted",
+        "truncated=false（全量返回，无需续页）",
+        "ps1 空测光哨兵(-999/-1004)已剔除",
+        "未指定 sort：行序非确定（已知问题）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "returned_count",
+          "value": 338.0
+        },
+        {
+          "field": "total_count",
+          "value": 338.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?dec=41.27&ra=10.68&sr=60",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-04",
+    "repeat": 2,
+    "answer": "查询：PS1 锥形检索 — RA=10.68°、Dec=41.27°、半径 60″，走服务端原生锥搜（pos.type=cone，非客户端近似）。\n\n【执行口径】\n- 星表：ps1（BEST 可查询 12 表之一）；两阶段查询已完成（POST 表单 → sqlid=s5418 → 分页 GET）。\n- 半径单位：60 角秒 = 1 角分（工具上限 18000″，未触及）。\n- 状态：无软 404、无错误码、无截断（truncated=false；命中 338 行 < max_rows 1000，单页全量返回，无需 fetch_page 续取）。\n\n【结果】\n- 命中总数（服务端 getcount）：338 个 PS1 源；本次返回 338 行。\n- 最近 5 个源示例（角距 = 与中心 (10.68, 41.27) 的球面角距；星等为有效 PSF 星等，单位 mag）：\n| # | 角距(″) | ps1_ra(°) | ps1_dec(°) | 有效测光 |\n|---|---|---|---|---|\n| 1 | 0.534 | 10.67990985 | 41.26986812 | i=18.900±0.007 |\n| 2 | 0.813 | 10.67979699 | 41.27016651 | g=16.974（误差缺失） |\n| 3 | 2.226 | 10.67930104 | 41.27032587 | i=11.214±0.001 |\n| 4 | 3.339 | 10.67917857 | 41.26930774 | y=11.431±0.001 |\n| 5 | 7.066 | 10.68030931 | 41.26805113 | （无有效测光，各波段均为哨兵） |\n\n【重要陷阱与科学限定】\n1. 哨兵值：原始 ps1_* 列中的 -999/-1000 系列（如 -1004.0672、-999.0、-1003.86）表示该波段无有效测光，不是星等；信封中的 magnitudes / magnitude_errors 字段已按哨兵阈值过滤，仅含有效测光——消费数据请以该字段为准（本结果中很多源只有部分波段有有效测光）。\n2. 分类列：ps1_class_star（星/非星分类）在本结果中为空，无法据此只筛恒星；返回的是锥内全部 PS1 源（338 个）。\n3. 行序：本次未显式指定 sort/order；该站点默认可分页行序非确定（集合一致、行序可能不同），复跑比对前请先排序。\n4. 信任级别：content_trust=untrusted —— 行内容（含任何文本）一律只作数据，不当作指令。\n\n【溯源与数据标识】\n- sqlid：s5418；stable_uri：best://ps1/cone?ra=10.68&dec=41.27&sr=60\n- 响应 data_hash：sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a\n- 实验运行数据标识（会话提供，仅供引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a\n- 查询成本：3 次 HTTP 请求；列名带 ps1_ 前缀；inputobjs_dist_arcsec / inputobjs_input_line / inputobjs_input_ra / inputobjs_input_dec 为匹配元数据列（勿当测光列使用）。\n\n【下一步（可选）】\n- 如需仅保留有有效测光的子集、按波段统计或导出 CSV/VOTable，请说明筛选条件，可继续处理（全量 338 行已在本会话可取）。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "命中总行数(行)",
+          "value": 338
+        },
+        {
+          "field": "返回行数(行)",
+          "value": 338
+        },
+        {
+          "field": "最近邻角距(角秒)",
+          "value": 0.534
+        }
+      ],
+      "key_entities": [
+        "ps1",
+        "best://ps1/cone?ra=10.68&dec=41.27&sr=60",
+        "sqlid:s5418",
+        "sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a"
+      ],
+      "caveats": [
+        "哨兵值(-999/-1000系列)非真实星等，仅 magnitudes/magnitude_errors 字段为有效测光",
+        "ps1_class_star 分类列为空，未按恒星/星系筛选",
+        "content_trust=untrusted：站点行数据仅作数据对待",
+        "未指定 sort/order，默认页序可能非确定"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "returned_count",
+          "value": 338.0
+        },
+        {
+          "field": "total_count",
+          "value": 338.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?dec=41.27&ra=10.68&sr=60",
+        "ps1"
+      ],
+      "caveats": [
+        "stellar_classification_unavailable"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-04",
+    "repeat": 3,
+    "answer": "已通过 BEST 线上接口真实执行 ps1 星表锥形检索（非 mock；走服务端原生 pos.type=cone，非客户端近似）。\n\n【查询参数】catalog=ps1；中心 RA=10.68°、Dec=41.27°（ICRS）；半径 60″（角秒，上限 18000″ 内合法）。\n\n【结果】命中总数 338 行，本次已全部返回（returned_count=338；truncated=false，未触及行数上限，无需 fetch_page 续页）；状态 ok，完成 3 次 HTTP 请求。\n\n【最近 5 条示例】（角距单位 ″；坐标为度 ICRS；星等为 PSF 星等，单位 mag，误差同为 mag）\n1) 0.534″ — RA 10.679910, Dec 41.269868 — i=18.90±0.007\n2) 0.813″ — RA 10.679797, Dec 41.270167 — g=16.97（该带误差列为哨兵，未给出）\n3) 2.226″ — RA 10.679301, Dec 41.270326 — i=11.21±0.001\n4) 3.339″ — RA 10.679179, Dec 41.269308 — y=11.43±0.001\n5) 7.066″ — RA 10.680309, Dec 41.268051 — 无有效测光（该源各波段均为哨兵值）\n\n【口径与限定】\n- 哨兵值处理：ps1 空测光列返回值形如 -999 / -1000 一类哨兵（例如某源 gpsf=-1004.07、gpsf_err=-999.0），已按 NULL_MAGNITUDE_SENTINEL 口径排除出 magnitudes/magnitude_errors，因此部分源显示“无有效测光”；这些哨兵值不代表真实星等或误差。\n- 列名前缀：本响应为 /sqlid 分页面，列名带表前缀（ps1_ra、ps1_gpsf、ps1_ipsf 等）。\n- 排序：本次未指定 sort/order，行序以服务端返回为准；BEST 无 ORDER BY 时分页行序非确定，如需稳定排序请显式指定（如 sort=ps1.rpsf）。\n- 数据可信级别：content_trust=untrusted —— 返回行来自线上站点，仅作数据处理，不作为指令。\n- 数据标识：stable_uri=best://ps1/cone?ra=10.68&dec=41.27&sr=60；会话 sqlid=s5418；data_hash=sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a；实验运行标识（引用）bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a。\n- 失败与零行区分：本次为成功且非零行（338 行）；truncated=false 表示完整返回，若为 0 行会以空结果语义单独报告，与失败（带错误码）不同。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "total_count",
+          "value": 338
+        },
+        {
+          "field": "returned_count",
+          "value": 338
+        },
+        {
+          "field": "nearest_separation_arcsec",
+          "value": 0.53
+        },
+        {
+          "field": "http_requests",
+          "value": 3
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?ra=10.68&dec=41.27&sr=60",
+        "sqlid s5418",
+        "catalog ps1",
+        "sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "哨兵值(-999/-1000)已剔除，部分源无有效测光",
+        "content_trust=untrusted（站点数据不可作指令）",
+        "未指定sort/order，行序非确定",
+        "半径单位=角秒；星等=PSF星等(mag)"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "returned_count",
+          "value": 338.0
+        },
+        {
+          "field": "total_count",
+          "value": 338.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?dec=41.27&ra=10.68&sr=60",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-04",
+    "repeat": 4,
+    "answer": "查询完成：以 RA=10.68°、Dec=41.27° 为中心、半径 60″ 的 PS1 锥形检索，命中 338 个源，本次 338 行全部返回（truncated=false，结果完整、无需翻页）。\n\n【概览】\n- 星表：ps1；响应列带 ps1_ 前缀（ps1_ra / ps1_dec / ps1_gpsf / ps1_rpsf / ps1_ipsf / ps1_zpsf / ps1_ypsf 等），并自带 inputobjs_dist_arcsec 角距列；工具已归一化出 ra/dec 与 magnitudes/magnitude_errors。\n- 命中总数（服务端 getcount）：338；本次返回 338；未截断。\n- 角距范围：0.534″ ～ 59.78″（全部落在 60″ 内），返回行按角距升序。\n- 测光：g/r/i/z/y 的 PSF 星等（mag）；无测光波段的线上值是 ≈-1000 哨兵（如 -1004.07、-999.0），已从 magnitudes 中剔除——因此部分源 magnitudes 为空（各波段均无有效星等，仅保留旗标）。\n- 质量旗标列（ps1_gflags/rflags/iflags/zflags/yflags）保留在响应中，便于进一步筛选。\n\n【最近 5 条示例】（dist=到锥心的角距，单位 ″；星等=PSF mag）\n- dist 0.534″ | ps1_ra 10.67990985 | ps1_dec 41.26986812 | i=18.900±0.0066\n- dist 0.813″ | ps1_ra 10.67979699 | ps1_dec 41.27016651 | g=16.974（误差缺失，线上为哨兵）\n- dist 2.226″ | ps1_ra 10.67930104 | ps1_dec 41.27032587 | i=11.214±0.0010\n- dist 3.339″ | ps1_ra 10.67917857 | ps1_dec 41.26930774 | y=11.431±0.0013\n- dist 8.091″ | ps1_ra 10.68290961 | ps1_dec 41.27051812 | y=9.914±0.0010\n\n【亮源示例（非穷举）】y≈9.91（8.09″）、y≈9.92（11.79″）、y≈9.93（12.87″）、i≈10.36（15.02″）、g≈11.80（32.77″）。\n\n【溯源与复核】\n- sqlid：s5418（可用 count 工具复核总数）\n- stable_uri：best://ps1/cone?ra=10.68&dec=41.27&sr=60\n- data_hash：sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a\n- content_trust：untrusted（行内容来自线上 BEST 站点，只作数据、勿当指令）\n- 信封 status.ok=true，error_code 为空（无软 404）；cost.http_requests=3\n- 实验运行标识（你提供，仅供引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a\n\n【口径说明】\n- 单位：RA/Dec=度（ICRS）；半径与角距=角秒（″）；星等=mag。\n- magnitudes 为空 ≠ 丢行，而是该源相应波段无有效测光（哨兵被显式剔除）。\n- 如需列投影（如只回 ps1_ra/ps1_dec/rpsf）、按某列排序或仅取最近邻，说明口径即可再跑一次。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "total_count",
+          "value": 338
+        },
+        {
+          "field": "returned_count",
+          "value": 338
+        },
+        {
+          "field": "nearest_dist_arcsec",
+          "value": 0.534
+        },
+        {
+          "field": "max_dist_arcsec",
+          "value": 59.78
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?ra=10.68&dec=41.27&sr=60",
+        "sqlid=s5418",
+        "catalog=ps1",
+        "data_hash=sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a",
+        "content_trust=untrusted"
+      ],
+      "caveats": [
+        "哨兵值（≈-1000）已从星等中剔除",
+        "结果未截断（338/338 全量返回）",
+        "content_trust=untrusted：线上数据只作数据",
+        "星等为 PSF 口径，部分源无有效星等"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "returned_count",
+          "value": 338.0
+        },
+        {
+          "field": "total_count",
+          "value": 338.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?dec=41.27&ra=10.68&sr=60",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-04",
+    "repeat": 5,
+    "answer": "查询已完成：在 PS1 星表中对 RA=10.68°、Dec=41.27°、半径 60″（=1′）的天区执行了服务端原生锥形检索（pos.type=cone，非客户端 box 近似），半径单位按**角秒**提交（入口强制校验，上限 18000″=5°）。\n\n【结果概览】\n- 服务端真实命中总数（getcount）：**338 个源**；本次一次性返回 338 行，**未截断**（truncated=false，低于单次上限 1000），无需再用 fetch_page 续取。\n- 最近邻：距锥心 **0.534″** 处有 1 个源（RA=10.67990985°, Dec=41.26986812°，iPSF≈18.90 mag）。\n- 返回行按与锥心的角距升序排列（列 inputobjs_dist_arcsec，单位：角秒）。\n\n【最近 10 个源（距锥心）/ 位置 / 有效测光】\n| 角距(″) | RA(°) | Dec(°) | 有效 PSF 星等(mag) |\n|---|---|---|---|\n| 0.534 | 10.67990985 | 41.26986812 | i=18.900±0.007 |\n| 0.813 | 10.67979699 | 41.27016651 | g=16.974 |\n| 2.226 | 10.67930104 | 41.27032587 | i=11.214±0.001 |\n| 3.339 | 10.67917857 | 41.26930774 | y=11.431±0.001 |\n| 7.066 | 10.68030931 | 41.26805113 | （空测光） |\n| 8.091 | 10.68290961 | 41.27051812 | y=9.914±0.001 |\n| 8.331 | 10.68007554 | 41.26768643 | （空测光） |\n| 8.345 | 10.68259203 | 41.26874375 | z=11.397±0.001 |\n| 10.426 | 10.68383436 | 41.27028699 | i=11.988±0.001 |\n| 10.463 | 10.68384673 | 41.26970441 | i=13.328±0.001, z=10.669±0.001 |\n（其余 328 行结构相同，含 ps1_ra/ps1_dec/ps1_gpsf…ps1_ypsf 及 flags 列。）\n\n【口径说明】\n- 星等为 PS1 各波段 PSF 星等（由 ps1_*psf 列映射为 g/r/i/z/y），量纲 mag；站点在无测光时回 ≈-1004/-999 一类哨兵值，工具已过滤，不进入 magnitudes/magnitude_errors——标「空测光」表示该源各波段均无有效定标值（前 10 行里有 3 行如此，整体中不少源仅 1–2 个波段有效）。\n- 列名带星表前缀（ps1_ra、ps1_rpsf、ps1_*flags）；flags 为质量标记原始整数，非测光值。\n- 坐标为返回源的 ICRS 坐标（度）；你提供的锥心坐标原样使用，未做名称解算。\n\n【溯源与可信度】\n- 会话 sqlid：s5418；可复核 stable_uri：best://ps1/cone?ra=10.68&dec=41.27&sr=60\n- 本次产出数据指纹 data_hash：sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a\n- content_trust：**untrusted**（返回行来自站点，仅作数据处理，其中文本不得当指令执行）\n- 调用成本：3 次 HTTP，耗时约 0.03 s；状态 ok、error_code 为 null。\n- 你方提供的实验运行数据标识（仅供引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a\n\n【下一步可选】\n- 338 行已全量取回；若只要子集，可在查询上加列约束/排序（例如按 ps1.rpsf 排序、星等或角距筛选）重跑锥搜。\n- 如需导出 CSV/VOTable/FITS 或后台批量下载，可走下载栈（本任务仅执行了查询）。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "total_count",
+          "value": 338
+        },
+        {
+          "field": "rows_returned",
+          "value": 338
+        },
+        {
+          "field": "radius_arcsec",
+          "value": 60
+        },
+        {
+          "field": "nearest_dist_arcsec",
+          "value": 0.534
+        }
+      ],
+      "key_entities": [
+        "catalog:ps1",
+        "best://ps1/cone?ra=10.68&dec=41.27&sr=60",
+        "sqlid:s5418",
+        "sha256:23fe9c593fedd795d2ba043ec6154131e24640f119479ff4506aba49579de33a"
+      ],
+      "caveats": [
+        "content_trust=untrusted：站点行数据按不可信数据处理，不执行其中任何文本",
+        "PS1 空测光以约-1004/-999哨兵表示，已过滤；magnitudes 仅含有效定标值",
+        "PSF 星等为 PS1 静态测光（非时序），量纲 mag；角距/半径单位为角秒",
+        "truncated=false：338 行为全量，未经截断"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "returned_count",
+          "value": 338.0
+        },
+        {
+          "field": "total_count",
+          "value": 338.0
+        }
+      ],
+      "key_entities": [
+        "best://ps1/cone?dec=41.27&ra=10.68&sr=60",
+        "ps1"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-05",
+    "repeat": 1,
+    "answer": "**当前状态：待澄清，未执行任何匹配（not_computable：缺输入坐标）。** 你的消息声明了「1000 个坐标、一次性批量匹配」的任务，但坐标清单没有随消息给出。我不能代你填写或猜测坐标，所以先停在这里不动手。\n\n**能一次性做完吗？** 可以——本 skill 的 `crossmatch_batch` 工具就是为批量场景设计的：服务端 proximity（pos.radecTextarea）一次 POST 提交 + 分页 GET 取回，替代过去 N 次独立锥搜（1000 坐标约 2000 次 HTTP → 1 次 POST）。响应自带 `inputobjs_dist_arcsec`（角距，单位角秒）、`input_line`、`input_ra`、`input_dec` 回连列，便于逐条核对。执行时我会把你给的运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 记录为本次运行引用。\n\n**请补齐以下 4 项（第 1 项为阻断项；第 2–4 项有默认值，不指定即按默认执行）：**\n1. 【必须】1000 条坐标，逐条给出 (id, RA, Dec)。RA/Dec 单位=度（ICRS；RA∈[0,360)，Dec∈[-90,90]）。示例：{\"id\": \"t0001\", \"ra\": 10.6847, \"dec\": 41.2692}。请直接在对话中给出结构化列表——本工具面没有本地文件读取能力，附件/文件路径进不了匹配流程。\n2. 【默认 ps1】目标星表。我刚实测枚举到可匹配星表共 12 张（stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）：calib 组 ps1（Pan-STARRS All-Sky，默认）/ stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4；std 组 scr_galah / scr_lamost / xpsp；other 组 dr3xpcorr。（星表名称为站点数据，按 untrusted 数据对待。）\n3. 【默认 3 角秒】匹配半径——单位必须是角秒（传「度」是高频坑：会得到 0 行或 360 倍半径的错误结果）。可选 1″ / 3″ / 5″ / 自定义。\n4. 【默认仅最近邻】每个输入坐标只返回最近邻 1 条（nearest_only=true）；若你要半径内的全部候选，请明确说明——候选多时可能超过 50000 行上限，届时会带 truncated 标记并用 fetch_page 分页续取。\n\n**严格区分的两点（避免误读）：** ①本次没有执行任何匹配，因此不存在「0 行」结论——是「未运行」，不是「查到 0 条」；②上文的批量提交能力口径（含单次 1000 坐标）来自技能文档与历史记录，本会话未做端到端实测；本会话唯一真实调用是 12 张星表的枚举（返回 ok，上面已给出 stable_uri 与 data_hash 供复核）。收到坐标（及星表/半径确认）后，我会一次性提交并给出带 stable_uri 与逐行结果的完整答复。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "user_declared_coord_count",
+          "value": 1000
+        },
+        {
+          "field": "enumerated_catalog_count",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "crossmatch_batch",
+        "pos.type=proximity",
+        "best://catalogs",
+        "ps1",
+        "inputobjs_dist_arcsec"
+      ],
+      "caveats": [
+        "blocked_on_missing_coordinates：未执行匹配，任何行数均不可述（≠0 行）",
+        "user_declared_scale：1000 为声明值，未经验证",
+        "capability_claim_doc_level：批量提交口径引自技能文档/历史记录，本会话未实测",
+        "site_data_untrusted：星表名称来自站点数据；半径单位=角秒、坐标单位=度"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-05",
+    "repeat": 3,
+    "answer": "本次无法直接开跑：消息里只带了实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（仅供引用的数据指纹，不含坐标本体），而 1000 条坐标的 ra/dec 数值未随请求提供；我不能代填、猜测或从标识反推坐标，因此该批量匹配当前状态为 not_computable（缺输入）。工具已就绪，且我刚实测了星表清单：crossmatch_batch 走服务端 pos.type=proximity（pos.radecTextarea），1000 个坐标可一次性提交（1 次 POST + 分页 GET，替代逐点锥搜的约 2000 次 HTTP）；list_catalogs 实测（stable_uri: best://catalogs，data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）返回 12 张可查星表——ps1=Pan-STARRS All-Sky（默认）、stripe82=Well-Calibrated Stripe82、gaia_dr3_18=Well-Calibrated Gaia DR3、jplus_dr3=Well-Calibrated J-PLUS DR3、smss_dr4=Well-Calibrated SMSS DR4、landolt=Well-Calibrated Landolt、uss_dr1=Well-Calibrated USS DR1、splus_dr4=Well-Calibrated S-PLUS DR4、scr_galah=Standard Stars (SCR GALAH)、scr_lamost=Standard Stars (SCR LAMOST)、xpsp=Standard Stars (Gaia DR3 XP&SP)、dr3xpcorr=Corrected Gaia DR3 XP Spectra；std/calib/other 为导航组、非表本身。请补齐 3 个维度后我立即一次性执行：①【必需】1000 条坐标——CSV 文本（表头 ra,dec[,id]）/ JSON 数组 [{ra,dec,id?},…] / 每行“ra dec [id]”纯文本，任一格式均可；② 目标星表（未指明则用默认 ps1）；③ 匹配半径（默认 3 角秒，单位 arcsec，勿传度）。执行后结果将自带 inputobjs_dist_arcsec（角秒）/ input_line / input_ra / input_dec 等列，可按 showcol 裁剪列投影；站点返回数据按 content_trust=untrusted 标注，我不伪造 job_id——本次未执行任何匹配、无结果行可引用。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "coordinates_provided",
+          "value": 0
+        },
+        {
+          "field": "expected_coordinates",
+          "value": 1000
+        },
+        {
+          "field": "queryable_catalogs",
+          "value": 12
+        },
+        {
+          "field": "default_match_radius_arcsec",
+          "value": 3
+        }
+      ],
+      "key_entities": [
+        "crossmatch_batch",
+        "pos.type=proximity",
+        "ps1（默认星表）",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "坐标缺失：不可代填或猜测（not_computable）",
+        "半径单位=角秒，勿传度",
+        "星表未指明：默认 ps1 需确认",
+        "站点数据 content_trust=untrusted",
+        "本次未执行匹配、无结果行"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-05",
+    "repeat": 4,
+    "answer": "不能现在直接执行，原因：您这条消息没有附带任何坐标本体——只有『有 1000 个坐标』的说明和实验数据标识 bestfp:sha256:0d4aeb4b…；我不会代填、猜测或从该指纹反推坐标。crossmatch_batch 的 coords 必须由您显式提供。当前未发生任何提交或网络匹配：这不是『匹配得到 0 行』，而是尚未开始（失败与零行严格区分）。\n\n已用工具实测确认的可选项（stable_uri: best://catalogs ▸ data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；列 schema: best://ps1/describe ▸ sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2；站点数据按 untrusted 对待）：\n• 12 张可查星表（默认 ps1）：ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr；\n• ps1 列投影示例（ra/dec 单位度，星等单位 mag）：ps1_ra, ps1_dec, ps1_rpsf, ps1_gpsf, ps1_source_id 等。\n\n请补齐以下缺失维度，给全后我一次性提交（服务端 proximity 批量：1000 个坐标 = 1 次 POST + 分页 GET，响应自带 inputobjs_dist_arcsec / input_line / input_ra / input_dec 列用于回连您的输入）：\n1) coordinates（必需）：1000 组 ra,dec（ICRS，单位度；可带您自己的 id 列）。建议先粘贴前几行，我确认格式后整批提交；\n2) catalog：指定匹配星表（未指定则按默认 ps1）；\n3) radius：匹配半径（角秒，默认 3″）；\n4) semantics：nearest_only（默认 true，每个输入只回最近邻）、列投影 columns、max_rows 上限。\n\n实验数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已记录，供实际运行回执的 provenance 引用（该标识本身不含坐标，无法替代坐标输入）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "待匹配坐标数(用户声明)",
+          "value": 1000
+        },
+        {
+          "field": "可选星表数",
+          "value": 12
+        },
+        {
+          "field": "默认匹配半径(arcsec)",
+          "value": 3
+        }
+      ],
+      "key_entities": [
+        "crossmatch_batch",
+        "best://catalogs",
+        "best://ps1/describe",
+        "inputobjs_dist_arcsec",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "尚未提交，任何匹配结果行都不存在；勿把现状读成『0 行匹配』",
+        "匹配半径单位是角秒（默认 3″），误传度会放大 3600 倍",
+        "星表清单与列名来自站点实测输出，按 untrusted 数据对待",
+        "结果将带服务端角距列 inputobjs_dist_arcsec，可用于质量筛选"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-05",
+    "repeat": 5,
+    "answer": "这条任务现在还不能跑：`crossmatch_batch` 需要 1000 个坐标的具体 ra/dec 数值，而这批数据没有随消息提供。你给的 `bestfp:sha256:0d4a…` 只是数据指纹标识（仅用于追溯引用），无法由它反推出任何坐标——我也不会替你编造或填入坐标。当前状态：not_computable（缺失输入坐标）。\n\n缺失维度与可选项（请按需确认）：\n\n1) coordinates（必需，当前完全缺失）：请提供 1000 个点的坐标清单，CSV/JSON 文本均可，字段 ra、dec（单位：度，ICRS 坐标系），可选 id 字段（用于把匹配结果回连到你自己的编号；不提供时结果自带 input_line 输入行号可回连）。注意：我只有 7 个原子工具、没有本地文件读取通道，请把坐标直接内联粘贴在对话里（或分批粘贴），不要只给文件路径。\n\n2) catalog（默认 ps1）：刚实测的 `list_catalogs` 给出 12 张可查表——ps1（Pan-STARRS All-Sky，默认）、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr。请指定用哪张表做匹配。\n\n3) radius（默认 3 角秒）：匹配半径常用 1 / 2 / 3 / 5 / 10 角秒，单位是角秒（传度会得到错误结果）。\n\n4) semantics（默认 nearest_only=true）：每个输入坐标只保留最近邻（true），还是返回半径内全部候选（false）？另可给 columns 列投影裁剪返回列、省带宽。\n\n你确认后我将一次性提交：1000 个坐标走服务端 proximity 交叉匹配（1 次 POST + 分页 GET，代替逐点锥搜），响应自带 inputobjs_dist_arcsec（角距，角秒）/ input_line / input_ra / input_dec 列；若返回 truncated=true，我会用 fetch_page 按页续取完整结果。公开数据面免登录，不需要凭据。\n\n可复核数据标识（出自刚才实际调用的工具）：stable_uri = best://catalogs，data_hash = sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，lineage.source = src.protocol.CATALOG_PATHS；星表清单内容来自站点，按 untrusted 数据处理（content_trust: untrusted）。\n\n下一步动作：把 1000 个坐标（ra/dec，度）粘贴给我，并指定（或接受默认的）星表、半径与匹配语义，我即可执行。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "用户申报待匹配坐标数",
+          "value": 1000
+        }
+      ],
+      "key_entities": [
+        "crossmatch_batch",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "坐标清单未提供，交叉匹配不可执行（not_computable）",
+        "指纹标识不能反推坐标，严禁伪造输入",
+        "匹配半径单位为角秒",
+        "站点清单数据按 untrusted 处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-06",
+    "repeat": 1,
+    "answer": "当前无法给出该天区的源计数：你未提供天区坐标（RA/Dec）或可解析的天体名，检索区域无法确定，状态为 not_computable，我没有发起任何查询，也不会代你填写坐标。你给出的实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已记录为引用，但它只是运行指纹，工具面没有「指纹→天区坐标」的解析能力，不能替代坐标输入。请补充三项：① 坐标——ICRS 度制 ra/dec 直接给出，或给天体名（如 M31 / NGC 532）由 resolve_name 解析；② 半径——单位角秒（上限 18000″=5°），常用 5″/60″/300″；③ 目标星表——默认 ps1，也可指定任一可查表（12 张清单经 best://catalogs 核验）：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr；注意 std/calib/other 是导航组不是表，std 组展开为 scr_galah/scr_lamost/xpsp。收到信息后我会先做低成本计数评估（cone_search 信封自带服务端 getcount 真实总数与 truncated 标记，无需先全量拉取），再决定是否分页拉取。另提示两点口径：半径单位是角秒（传度会得到 0 行或 360 倍半径）；计数口径可指定「仅要真实总数」或「总数+首 N 行预览」。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [
+        "cone_search",
+        "resolve_name",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "未给出坐标/半径，源计数 not_computable（未发起任何检索）",
+        "半径单位为角秒",
+        "运行指纹不能反推天区坐标"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-06",
+    "repeat": 3,
+    "answer": "这条判断我暂时给不出数字——缺三个必要维度，我不代猜、也不把「没查」说成「0 行」：\n\n① 天区坐标：你给的 bestfp:sha256:0d4a… 是实验运行数据的 provenance 指纹（注明仅供引用），不是坐标、也不是查询会话 sqlid，无法从中还原天区；\n② 搜索半径（角秒）；\n③ 目标星表（12 张可查表选一）。\n\n可选项：\n· 坐标两条路：直接给 RA/Dec（度，ICRS，如 ra=180.0, dec=30.0）；或给天体名（如 M31 / NGC 532），我用 resolve_name 解析——失败会显式报 E_NAME_UNRESOLVED，不给哨兵错坐标。\n· 半径：角秒（如 60 / 300 / 1800，上限 18000″=5°）。\n· 星表（清单来源 best://catalogs，data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；站点数据按 content_trust=untrusted 处理）：calib 组 ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4；std 组 scr_galah / scr_lamost / xpsp；other 组 dr3xpcorr。注：std/calib/other 是导航组不是表，不能直接查。\n\n给齐后第一步：发 cone_search，读信封里的 getcount 真实总数与 truncated 标记（如需复核，可凭返回的 sqlid 用 count 再确认）；再按预算决定拉不拉——取回时分页用 fetch_page，总数过大则先不动。\n\n当前状态：clarification（尚未执行任何查询）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "available_catalogs",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "cone_search",
+        "count",
+        "fetch_page"
+      ],
+      "caveats": [
+        "计数未执行：缺 coordinates/radius/catalog 三个维度，状态为 clarification（非失败、非零行）",
+        "bestfp 指纹是实验产物的 provenance 引用（仅供引用），不能解码为天区坐标或查询会话",
+        "搜索半径单位为角秒（上限 18000″）；星表清单来自站点数据（content_trust=untrusted），仅作选项"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-06",
+    "repeat": 4,
+    "answer": "这次先不统计，需要你补一个关键输入：消息里没有给出「这个天区」的坐标（RA/Dec）与搜索半径，我不能替你猜坐标或半径——猜填会把计数算到天区外，等于伪造结果；星表也未指定，不默认硬跑。你给的实验运行数据标识我已记录：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（仅供引用；本次未发生任何天区查询，暂无与该标识绑定的结果）。\n\n已实际调用（唯一一次，零假设）：list_catalogs，核实当前可查询星表共 12 张（单位：count；stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust: untrusted，站点数据）。分组口径：std 组展开为 scr_galah / scr_lamost / xpsp 三张；calib 组 8 张（ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4）；other 组 1 张（dr3xpcorr）。\n\n请补齐以下缺失维度（缺一不可开查）：\n1) coordinates——天区中心 RA/Dec（ICRS，度）；也可以给天体名（如 M31 / NGC 532），我用 resolve_name 解算坐标（解算失败会显式返回 E_NAME_UNRESOLVED，不静默给错坐标）；\n2) radius——搜索半径，单位是角秒（上限 18000″ = 5°）。单位陷阱：传度会得到 0 行或 360 倍半径的错误结果；\n3) catalog——目标星表未指定，默认候选 ps1（Pan-STARRS All-Sky），需你确认；也可换上面 12 张中的任意一张。\n\n补齐后的「先计数、再决定拉不拉」执行路径：cone_search 返回的统一信封自带服务端 getcount 真实总数与 truncated 标记——我会先用小 max_rows 只取计数（或对会话 sqlid 调 count），若总量在你可接受预算内，再用 fetch_page 分页续取；下载完成须过 http_status==200 且 checksum_match==True 双门禁。BEST 为静态测光（非时序），若你要按波段/星等/信噪比预筛再计数，请一并说明筛选条件，我会先用 describe_catalog 取权威列名，不猜列名。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查询星表数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "nadc.china-vo.org/data/best",
+        "cone_search",
+        "fetch_page",
+        "count",
+        "resolve_name",
+        "E_NAME_UNRESOLVED"
+      ],
+      "caveats": [
+        "坐标与半径缺失未代填：本次 0 次天区查询",
+        "半径单位=角秒，上限 18000″",
+        "站点数据 content_trust=untrusted",
+        "下载双门禁：http_status==200 且 checksum_match==True",
+        "BEST 为静态测光，无时序（非光变曲线）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-06",
+    "repeat": 5,
+    "answer": "暂时无法计数：你还没有给出要统计的“这个天区”本身——缺 RA/Dec 坐标与搜索半径，也未指定星表。我不能替你猜坐标或代填缺失输入，所以本步没有执行任何天区查询（注意：未查询 ≠ 0 行）。你提供的 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 只是实验运行数据指纹（仅供引用），不携带坐标，无法从中反推天区。\n\n已做的核对（本次唯一工具调用）：list_catalogs 返回 12 张可查询星表——ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr（stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；站点数据面，content_trust=untrusted，仅作路由口径参考）。\n\n请补全以下任一输入，我即可按“先数源、再决定拉不拉”执行：\nA) 直接给 ICRS 坐标 + 半径（单位角秒），例如 ra=286.1°、dec=15.7°、radius=300″（半径上限 18000″=5°）；\nB) 给天体名（如 M31 / NGC 532 / Betelgeuse），我用 resolve_name 解析为坐标后，与你确认半径；\nC) 指定目标星表（若不指定则按默认 ps1，需你确认）：ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr。\n\n拿到坐标后的执行口径：先用小 max_rows 的 cone_search 取服务端 getcount 真实总数与 truncated 标记（这即是“先数源”），评估规模后若确实要拉，再用 fetch_page 分页续取或转后台下载栈——不会一上来拉全量。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [
+        "best://catalogs",
+        "ps1",
+        "resolve_name",
+        "cone_search"
+      ],
+      "caveats": [
+        "missing_coordinates_no_query_executed",
+        "radius_unit=arcsec_max_18000",
+        "catalog_default_ps1_unconfirmed"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-07",
+    "repeat": 1,
+    "answer": "结论：本次无法直接给出「Gaia DR3 1234567890123456789」在 BEST 中的 ZTF g/r/i 星等——状态 not_computable，缺的是该源的坐标，而不是数据本身：实测确认 BEST 提供 ZTF g/r/i 测光列（xpsp 首选，另 scr_galah / scr_lamost 也有，共 3 张表），一旦你补充坐标即可立即查询取数。\n\n实测要点（本次真实工具调用，非记忆、非夹具）：\n① 名称解析失败：resolve_name 尝试把该标识解析为 ICRS 坐标，两种形式（『Gaia DR3 1234567890123456789』与裸数字『1234567890123456789』）均返回错误码 E_NAME_UNRESOLVED（nss/solve 无法解析；未返回哨兵坐标）。本工具集 7 个原子工具均为坐标驱动（cone_search / crossmatch_batch）或会话驱动，没有『按 Gaia source_id 直查』的入口，因此没有坐标就无法发起检索。建议顺便核实该 source_id 是否准确（1234567890123456789 形如占位样例）。\n② 数据面已定位（好消息）：逐表核对全部 12 张可查星表的列清单后，ZTF g/r/i 存在于 xpsp（Standard Stars, Gaia DR3 XP&SP；查询路径 xpsp/q），列为 ztf_g_g_xpsp / ztf_r_r_xpsp / ztf_i_i_xpsp（各带 _err 误差列），并含该源 Gaia 标识与位置列 gaiaxp_photinfo_replenish_source_id / _ra / _dec；scr_galah 与 scr_lamost 含 gztf / rztf / iztf（GALAH / LAMOST 天区样本）。其余 9 张（ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、dr3xpcorr）无 ZTF 列。\n③ 本次未执行任何坐标检索、未产生 sqlid；请注意这不是『0 行 / 未匹配』——失败与空结果语义不同，请勿混读。\n\n口径与单位：列清单口径为 RA/Dec（度）、星等（mag）、半径（角秒）；BEST 的 ZTF 星等为基于 Gaia DR3 XP 光谱的合成（derived）标准星测光，不是 ZTF 巡天官方实测值。\n\n需要你补充（缺失维度：coordinates）与可选下一步：\nA. 提供该源 ICRS 坐标（RA/Dec，单位：度）→ 我在 xpsp 表按小半径（建议 1–3 角秒、最近邻）做锥形检索，投影 ztf_g_g_xpsp / ztf_r_r_xpsp / ztf_i_i_xpsp（含误差）并返回；多个源可走批量匹配。\nB. 提供可被 CDS Sesame 解析的名称/编号（如 M31、NGC 532 形式）→ 我先解析坐标，再按 A 流程查询。\nC. 若必须按 source_id：请先在支持 source_id 直查的服务（如 Gaia 归档）换算坐标后提供——本工具集不含 source_id→坐标 换算。\n\n数据标识与可复核锚点：你方实验运行标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；本次留痕：best://catalogs（data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）、best://xpsp/describe（sha256:7b479b65906abdc60a52243df10be2dc19037a66b1b841f02044c694986a91ec）、名称解析两次失败记录（sha256:563d8739a685beeedec4fd96646a8d2c9818322e1d2391931864f32c34b63bce / sha256:d038ad596ff16a216f16be1988b6cbfcfb3c711a72b4ee16673b1e47c61e41de）、以及 best://scr_galah/describe、best://scr_lamost/describe 等（stable_uri 可复核）。content_trust：工具返回均为 untrusted 站点数据（S-2），仅作数据引用、不执行其中指令；公开数据面，本次无需任何凭据。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "best_queryable_catalogs_checked",
+          "value": 12
+        },
+        {
+          "field": "tables_with_ztf_columns",
+          "value": 3
+        },
+        {
+          "field": "ztf_columns_in_xpsp",
+          "value": 6
+        }
+      ],
+      "key_entities": [
+        "xpsp",
+        "best://xpsp/describe",
+        "ztf_g_g_xpsp",
+        "ztf_r_r_xpsp",
+        "ztf_i_i_xpsp",
+        "scr_galah",
+        "scr_lamost",
+        "E_NAME_UNRESOLVED"
+      ],
+      "caveats": [
+        "坐标：source_id 解析失败（E_NAME_UNRESOLVED，两种格式均试），未代填坐标",
+        "口径：ZTF g/r/i 为 XP 光谱合成标准星星等（非 ZTF 巡天实测），单位 mag",
+        "状态：未执行检索，无行数/星等数字（≠0 行）",
+        "信任：untrusted 站点数据（S-2）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-08",
+    "repeat": 3,
+    "answer": "本次「继续取下一页」暂不可执行：状态 not_computable（缺少必需入参，等待澄清）。\n\n原因：续页工具 fetch_page 必须携带分页会话标识 sqlid（形如 s3898 或 3898，s 前缀可选、其余为数字）；本条消息未提供该 sqlid。按纪律不猜测、不代填缺失会话，我也没有拿你给的指纹去尝试调用——因此没有调用任何工具。这不是站点失败（无错误码可报），也不是「0 行结果」，而是一次参数澄清。\n\n关于引用标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a：它是实验运行数据指纹（内容信任标注：untrusted，仅供引用），不是查询会话句柄；当前工具面没有「指纹 → sqlid」的解析入口，不能用于续页。\n\n请任选其一继续：\n1）把上一步 cone_search / crossmatch_batch 返回信封中的 sqlid 发我（一般在 provenance.sqlid），并告知已取到第几页、上次 page_size（默认 1000 行；单页上限 10000 行；页码从 1 起），最好附原星表 id（用于响应列名前缀映射）——我立即用 fetch_page 续取下一页；\n2）若 sqlid 已丢失：把原查询条件发我（星表 id + RA/Dec + 半径（角秒）+ 列投影 + sort/order），我重建会话从第 1 页重取；注意重建会得到新 sqlid，且原查询若未显式 sort+order，服务端分页行序非确定（已知问题），不保证与上次逐行一致，建议显式排序；\n3）若你保留了含 sqlid 的上一页原始响应/文件（结果信封、日志或页面存档），把其中 sqlid 贴回即可。\n\n缺失维度：分页会话标识（sqlid，归入 semantics）。下一步动作：补齐 sqlid 与已取页码后，我立即以 fetch_page(sqlid, page=已取页码+1) 续页，并在返回中标注你这次提供的运行数据标识。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [
+        "fetch_page",
+        "sqlid",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "澄清态：缺失 sqlid，未调用任何工具，无实测行数据",
+        "运行指纹仅供引用，非会话句柄（无「指纹→sqlid」解析入口）",
+        "重建会话不保证行级复现：无显式 sort+order 时分页行序非确定"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-08",
+    "repeat": 4,
+    "answer": "无法完成「继续取下一页」：本次任务上下文中没有任何上一轮查询留下的会话标识（sqlid），而你提供的 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 是「实验运行数据标识」（数据指纹，仅供引用），不是两阶段查询的会话 id，两者不能混用。\n\n我已实测：用该标识调用 fetch_page（page=1、rows=1000）得到的是一个空信封——返回 0 行、total_count=0、truncated=false、error_code=null，且 http_requests=0，即没有发生任何真实取数；它只是对非会话标识的回显，既不是「失败」（无错误码），也不是有效的「零行结果」（无真实请求），更不能当作原截断结果的下一页（真实 sqlid 形如 s3898 或 3898）。据此，本轮对「继续取页」的判定为 not_computable：以所给标识无法续取；我不猜测、不代填会话信息。\n\n继续取页需要你补充：① 上一轮 cone_search / crossmatch_batch 返回信封中的 sqlid；② 已取到第几页或多少行（用于定位「下一页」起点）；③ 对应 catalog（如 ps1，用于响应列名前缀映射）。拿到后我将以 fetch_page(sqlid=…, page=…, page_size=…) 续取，必要时先 count(sqlid) 核对总数与 truncated 标志；若原会话已过期，则用原始检索参数（catalog + 坐标/半径或坐标列表）重新发起查询获得新 sqlid 后从头分页。\n\n可复核引用：本次尝试的 stable_uri 为 best://sqlid/bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a?page=1&rows=1000；返回数据哈希 sha256:a8053ecbea28f290b4cc6962cd9d1405c52fe8a550fab0cf7a1c2803e6120982；站点内容信任级别 content_trust=untrusted。再次强调：本次 0 行 ≠ 原截断结果已取完。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "尝试续取返回行数（行）",
+          "value": 0
+        },
+        {
+          "field": "尝试续取 HTTP 请求数（次）",
+          "value": 0
+        }
+      ],
+      "key_entities": [
+        "fetch_page",
+        "sqlid",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "best://sqlid/bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a?page=1&rows=1000",
+        "content_trust=untrusted"
+      ],
+      "caveats": [
+        "标识类型不匹配：实验运行数据指纹（bestfp:sha256:…）不是查询会话 sqlid（形如 s3898/3898），不能作为续取句柄",
+        "零行≠取完：本次 0 行伴随 0 次 HTTP 请求，属无效续取尝试，不能证明原截断结果没有更多数据",
+        "未代填、未猜测任何会话信息；续取起点（页号或已取行数）仍未知",
+        "站点内容信任级别 content_trust=untrusted，仅作数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-08",
+    "repeat": 5,
+    "answer": "结论：本次「继续取下一页」当前 not_computable——缺少原查询的 sqlid（BEST 服务端查询会话标识，形如 s3898 或 3898）。分页续取只认 fetch_page + 原会话 sqlid：我不能替你猜测或编造会话，也不会在缺参的情况下发起请求。\n\n关于你提供的标识：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 是实验运行数据标识（仅供引用）——它标识的是本次运行的数据指纹，不等同于 BEST 站点的查询会话，无法用它恢复分页。\n\n请二选一提供后我立即继续：\n1) 直接给出原查询返回的 sqlid（在返回信封里，形如 s3898 / 3898）：我用 fetch_page 续取下一页，可指定 page（默认 1 起）与 page_size（1–10000，默认 1000）；必要时先用 count 复核真实总数与剩余页数；\n2) 若 sqlid 已丢失、会话不可复用：请给出原查询参数（RA、Dec、半径角秒，及星表、列投影等），我重新执行 cone_search（或 crossmatch_batch）建立新会话，并从第 1 页开始拉取。\n\n说明：truncated=true 仅表示结果超出单次 max_rows 上限、并非查询失败；续页必须复用原会话的 sqlid，重新查询会另立新会话，无法与旧结果拼接。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [
+        "fetch_page",
+        "sqlid",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "指纹≠查询会话标识，不能用于恢复分页",
+        "缺 sqlid 无法续页；不猜测会话、未发起请求",
+        "truncated 只表示超出单次行数上限，非查询失败"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-09",
+    "repeat": 1,
+    "answer": "本轮需要澄清，暂未发起实证检索：您说『按名字查这颗星』，但消息中没有给出任何天体名称（如 M31 / NGC 532 / Betelgeuse），也没有坐标——按纪律我不猜测、不代填缺失的名称，因此未执行名称解析与任何锥形检索。注意：这是缺输入未执行，与『0 行结果』不同。\n\n已完成的真实调用（供复核）：\n1) list_catalogs：BEST 可查询星表共 12 张（count=12），stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，content_trust=untrusted（站点返回内容按不可信数据引用）。\n2) 『标准星』导航组 std 含 3 张成员表（count=3）：scr_galah（Standard Stars，SCR GALAH）、scr_lamost（Standard Stars，SCR LAMOST）、xpsp（Standard Stars，Gaia DR3 XP&SP）。\n\n待补输入后可执行的路径：\n- resolve_name（后端 CDS Sesame）：天体名→ICRS 坐标；失败时站点返回哨兵 ra=dec=-1000，工具会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标。\n- cone_search：按解析出的坐标在所选标准星表做锥形检索；半径单位是角秒（上限 18000 角秒），列投影可选。\n\n请补充（最少 1 项即可推进）：\nA. 天体名称（例：M31 / NGC 532 / Betelgeuse）；\nB. 或直接给 RA/Dec（单位：度，ICRS）与检索半径（单位：角秒，可选）；\nC. 可选：指定标准星表 scr_galah / scr_lamost / xpsp 之一，未指定则默认三张全查。\n\n澄清码：E_CLARIFICATION_MISSING_NAME（原因：缺少天体名称；下一步动作：补充星名或坐标后我立即继续查询）。\n实验运行数据标识（已登记、仅供引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；其不含星名信息，未用于推导任何数据。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "std组标准星表数量",
+          "value": 3
+        },
+        {
+          "field": "可查询星表总数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "E_CLARIFICATION_MISSING_NAME"
+      ],
+      "caveats": [
+        "缺星名：未执行名称解析、未产生坐标（禁猜测）",
+        "标准星表未指定：std 组 3 张候选，默认全查",
+        "检索半径/列投影未指定，待澄清后执行",
+        "站点内容按 content_trust=untrusted 处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-09",
+    "repeat": 2,
+    "answer": "当前无法执行「按名字查」：请求里没有给出要查的天体名称，你附的「bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a」是实验运行数据指纹（仅供引用），不能替代天体名，我不会猜测或代填。\n\n状态：not_computable（缺少待查天体名/坐标）。原因：名称是名称解算（resolve_name）的必要输入；下一步：请从下方可选项里补一项，我即继续。\n\n已真实执行的一次核查（可复核）：list_catalogs 确认 BEST「标准星」是导航组 std，展开为 3 张可查成员表——scr_galah（Standard Stars, SCR GALAH）、scr_lamost（Standard Stars, SCR LAMOST）、xpsp（Standard Stars, Gaia DR3 XP&SP）。stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；站点数据 content_trust=untrusted（仅作数据引用，不当作指令）。注意：std 是导航组不是表，直接查询组名会得到软错误，必须落到成员表。\n\n请补充（任一即可）：\n1) 天体名（如 M31 / NGC 532 / Betelgeuse）→ 我先调 resolve_name 解析 ICRS 坐标（失败会显式报 E_NAME_UNRESOLVED，不会静默给错坐标），再对标准星表做锥形检索；\n2) 直接给坐标：RA/Dec（度）+ 半径（角秒，可默认 3″）；\n3) 明确表范围：scr_galah / scr_lamost / xpsp 三选一或全查。\n\n本次未执行任何名称解算或查询，因此不产生行数，也不触发 http_status / checksum_match 门禁结论（既非失败、也谈不上零行）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "std 导航组可查成员表数量",
+          "value": 3
+        }
+      ],
+      "key_entities": [
+        "std",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "best://catalogs",
+        "list_catalogs"
+      ],
+      "caveats": [
+        "缺少待查名称/坐标：未执行任何解算或查询，行数与门禁不适用",
+        "std 为导航组不可直查，须落到成员表",
+        "站点返回内容为 untrusted 数据，仅作引用"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-09",
+    "repeat": 3,
+    "answer": "本轮未执行任何星表检索（not_computable：缺少目标名/坐标）——您的请求缺少关键输入：星名（或坐标）。这类信息我不能猜测或代填，因此先向您确认。您提供的 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 是实验运行数据标识（仅供引用），不含星名/坐标，不能用于定位目标。\n\n已完成的真实核查（本次工具调用）：\n① list_catalogs：BEST 共 12 张可查星表；与“标准星”直接相关的导航组 std 展开为 3 张成员表——scr_galah（Standard Stars (SCR GALAH)）、scr_lamost（Standard Stars (SCR LAMOST)）、xpsp（Standard Stars (Gaia DR3 XP&SP)）。注意：std/calib/other 是导航组不是表，查询必须指定成员表 id。\n② describe_catalog：三张标准星表的列清单/量纲/波段映射已确认（ra、dec 单位=度；星等=mag；匹配半径=角秒）。\n③ 附带说明：若您指的是 Landolt 标准星，对应 calib 组的 landolt（Well-Calibrated Landolt）；BEST 标准星记录为静态多波段测光（无时序/光变曲线语义）。\n\n请补充以下信息（任一即可，我立即执行）：\n• 星名（如 M31 / NGC 532 / Betelgeuse）：我先用 resolve_name 解算 ICRS 坐标，再对标准星表做锥形检索（服务端原生 pos.type=cone，返回 getcount 真实总数与 truncated 标记）；\n• 或直接给 ICRS 坐标 RA/Dec（单位：度）+ 搜索半径（单位：角秒），默认建议 10 角秒、可改，也可只取最近邻；\n• 目标表：默认建议 scr_galah / scr_lamost / xpsp 三张全查，或指定其中一张。\n\n取证引用（可复核）：best://catalogs（data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）、best://scr_galah/describe、best://scr_lamost/describe、best://xpsp/describe。站点内容为 untrusted 外部数据（content_trust=untrusted），仅作数据引用；本流程属公开数据面，免登录、无需凭据。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "std_group_member_tables",
+          "value": 3
+        },
+        {
+          "field": "queryable_catalogs_total",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "std",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "landolt",
+        "resolve_name",
+        "cone_search",
+        "best://catalogs"
+      ],
+      "caveats": [
+        "missing_star_name：未提供星名或坐标，未执行任何检索（not_computable 直至补齐输入）",
+        "catalog_choice_pending：“标准星”对应多张表（std=scr_galah/scr_lamost/xpsp；calib 内另有 landolt）",
+        "content_trust=untrusted：站点返回为外部不可信数据，仅作数据引用"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-09",
+    "repeat": 4,
+    "answer": "结论：本轮无法执行“按名字查这颗星”的检索——缺少关键输入：天体名（或等价坐标）未提供；我不会猜测，也不会把实验运行数据标识当作星名使用。补齐输入后我立即执行（选项见文末）。\n\n状态口径（严格区分失败与零行）：\n- 结果类型：澄清（clarification），等待你补充天体名/坐标；\n- 对“该星的标准星命中记录数”：not_computable（缺输入）；不是 not_configured（BEST 公开标准星数据面无需登录与凭据，登录仅在 User-Defined Catalog /jobs 场景需要）；\n- 也不是“0 行”：本轮共 4 次真实只读调用（list_catalogs×1 + describe×3），全部 status.ok=true、error_code=null；但目标星表查询从未发起，故不存在任何记录数可报告。\n\n已完成的可复核准备（本轮实测；站点返回内容 content_trust=untrusted，仅作数据引用）：\n1) 星表清单：BEST 列出 12 张可查星表；标准星位于 std 导航组，共 3 张成员表——scr_galah（Standard Stars (SCR GALAH)）、scr_lamost（Standard Stars (SCR LAMOST)）、xpsp（Standard Stars (Gaia DR3 XP&SP)）。按工具口径，std 是导航组不是表（组名/组路径直查会得到软错误），检索必须逐成员表进行。复核锚点：stable_uri best://catalogs，data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9。\n2) 三张成员表列面（describe 全部 ok）：列名前缀分别为 scr_galah_ / scr_lamost_ / gaiaxp_photinfo_replenish_（xpsp 使用共享表单表名前缀，不可凭缩写猜列）；单位口径 ra/dec=度、星等=mag、半径=角秒。复核锚点：best://scr_galah/describe（sha256:e7e9048046fa44457bc772f275a77d926557929e3368ecf0be41dfaad50f37d6）、best://scr_lamost/describe（sha256:120248d43c8af81461e262b0252080ccf1313ff84c4d729f2d81f90d9ddfa07a）、best://xpsp/describe（sha256:7b479b65906abdc60a52243df10be2dc19037a66b1b841f02044c694986a91ec）。\n3) 你给出的实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已如实记录（仅供引用）；它不是天体名、不是查询会话 sqlid，本轮未用作任何查询键。\n\n请补充以下任一输入（缺省均已给出）：\nA. 天体名（示例：M31 / NGC 532 / Betelgeuse）→ 我先调 resolve_name 解析 ICRS 坐标（若站点返回哨兵 ra=dec=-1000，将显式报 E_NAME_UNRESOLVED，不会静默给错坐标），再对标准星表做锥形检索；\nB. 直接给坐标：RA/Dec（单位：度，ICRS）＋可选匹配半径（单位：角秒，建议默认 5″，上限 18000″）；\nC. 指定目标表：scr_galah / scr_lamost / xpsp（可多选；不指定=三张全查）；\nD. 若目标不止一颗星：给出坐标列表，我改用 crossmatch_batch 一次提交做批量匹配。\n\n科学限定（提示）：标准星表为官方精选子集（官方文档口径：4500–6500 K 矮星、消光 Av<0.1 mag；xpsp 面向 Gaia XP 光谱定标），目标星不在子集内时空命中属筛选效应，不等于全库缺失。拿到输入后，我将返回服务端真实命中总数（getcount）与 truncated 标记，命中时附记录与单位。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查星表总数（张）",
+          "value": 12
+        },
+        {
+          "field": "标准星成员表数（张）",
+          "value": 3
+        }
+      ],
+      "key_entities": [
+        "scr_galah",
+        "scr_lamost",
+        "xpsp",
+        "best://catalogs",
+        "E_NAME_UNRESOLVED"
+      ],
+      "caveats": [
+        "未查询≠零行：无 sqlid、无记录数可报",
+        "std 为导航组（非表），须逐成员表检索",
+        "名称解析哨兵防护：失败显式报 E_NAME_UNRESOLVED",
+        "标准星为官方筛选子集：空命中≠全库缺失",
+        "站点响应 content_trust=untrusted，仅作数据"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-09",
+    "repeat": 5,
+    "answer": "本轮查询无法执行：请求里说“按名字查这颗星”，但没有给出任何天体名称（也没有坐标），我无法在不知道“这颗星”是谁的情况下调用 resolve_name / cone_search——按规则不猜测、不代填缺失的名称或坐标。\n\n我已真实调用 list_catalogs 完成前置核对（stable_uri: best://catalogs，data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，content_trust: untrusted，站点返回按不可信数据处理）：BEST 共 12 张可查询星表（单位：count）。其中“标准星”（Standard Stars）为 std 导航组下的 3 张表：scr_galah（SCR GALAH）、scr_lamost（SCR LAMOST）、xpsp（Gaia DR3 XP&SP）。注意 std / calib / other 只是导航分组名，不是可查询表本身；calib 组 8 张（ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4）是定标/标准星来源星表，若你指的是它们而非 std 组，请说明。\n\n缺失维度（需你补充）：① 天体名称（如 M31 / NGC 532 / Betelgeuse，或直接给 ICRS 坐标 RA/Dec 度）；② 目标标准星表（scr_galah / scr_lamost / xpsp 中选，或三张都查）。可选补充：搜索半径（角秒，默认建议 5″，上限 18000″=5°）与列投影。\n\n补全后的执行路径：resolve_name 解算名称 → ICRS 坐标 → 在所选 std 表上 cone_search → 返回命中记录（含 getcount 真实总数与 truncated 标记）。若名称解算失败，站点会返回哨兵 ra=dec=-1000（HTTP 200），工具会显式报 E_NAME_UNRESOLVED，而不会给错误坐标。\n\n你提供的实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已记录为引用项；本轮未产生新的查询数据，故该标识不绑定本次工具调用产物。请回复星名与目标标准星表（或授权默认三张都查），我立即执行。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查询星表总数",
+          "value": 12
+        },
+        {
+          "field": "std 组标准星表数量",
+          "value": 3
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp"
+      ],
+      "caveats": [
+        "星名缺失：未提供任何天体名称或坐标，resolve_name/cone_search 无法执行，禁止猜测名称",
+        "标准星表口径待定：std 组（scr_galah/scr_lamost/xpsp）为准，还是 calib 组定标星表需用户明确",
+        "catalog 清单来自站点返回，content_trust=untrusted，仅作候选依据"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-10",
+    "repeat": 1,
+    "answer": "无法直接回答——本次会话里没有『刚才那片天区』的坐标上下文：您给出的实验运行数据标识 bestfp:sha256:0d4aeb4b… 是不透明的运行指纹，不包含 RA/Dec，不能据此还原目标天区；我也不能代您填入坐标去猜。已确认的给定条件：半径 5 角分＝300 角秒（锥搜工具 radius 的单位是角秒，上限 18000 角秒）；此外已真实调用 list_catalogs 取得 12 张可查星表清单（stable_uri: best://catalogs，站点内容按 untrusted 数据处理，仅作数据引用）。要完成『半径 300″ 内有什么』，还缺两个维度：①锥心坐标（ICRS 度），或一个可解析的天体名称（我用 resolve_name 解析，如 M31 / NGC 532）；②目标星表，12 张里任选：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr（未指定时 cone_search 默认 ps1）。为避免臆造坐标，在坐标补全前我没有对任何天空位置发起检索；补全后我会立即执行 cone_search 并回报真实总数与 truncated 状态。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300
+        },
+        {
+          "field": "catalog_options",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "resolve_name",
+        "cone_search",
+        "sqlid"
+      ],
+      "caveats": [
+        "会话内无前序天区上下文；实验运行数据标识为不透明指纹，不含坐标",
+        "半径已按角秒口径换算（5′ = 300″），工具单位是角秒",
+        "目标星表未指定（默认 ps1，需用户确认）",
+        "坐标缺失期间未执行任何天区检索，避免臆造坐标产生虚假结果"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-10",
+    "repeat": 2,
+    "answer": "无法执行查询——缺少定位维度（坐标），我不能猜测或代填。\n\n【为什么是“待澄清”而不是“0 行”】你说的“刚才那片天区”在本会话中没有留下 RA/Dec 或 sqlid；工具面也没有“由实验标识反推坐标”的入口，所以无法定位。cone_search 的必填入参（ra/dec）缺失，查询根本没有发起——这是 not_computable（缺坐标），不是“该天区什么都没有”。\n\n【已真实核对的可选项】我调用了 list_catalogs（stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust: untrusted）。BEST 共 12 张可查星表：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr（std/calib/other 是导航组、不是表）。请指定目标星表；不指定我将按默认 ps1 执行。\n\n【半径已明确】5 角分 = 300 角秒；工具上限 18000 角秒（=5 度），300″ 在限内可直接使用。（提醒：半径单位是角秒，传“度”会得到 0 行或 360 倍半径。）\n\n【请给我坐标入口（二选一）】1) 直接给 ICRS 的 RA/Dec（单位：度，如 180.0 / +30.0）；或 2) 给天体名（如 M31 / NGC 532），我用 resolve_name 解析（解析失败会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标）。若“刚才”指某个历史会话，请把它的 sqlid（形如 s3898）或坐标记录贴出，我不猜测、不代填历史会话。\n\n【收到坐标后我会执行】以该坐标为中心、半径 300 角秒的 cone_search（星表按你指定，默认 ps1），返回统一信封：真实 getcount 总数、truncated 标记、可续页 sqlid 与 best:// 稳定 URI；站点数据一律按 untrusted 标注。\n\n【数据标识（仅引用）】bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a——已记录；现有工具无法将其解析为天区坐标，未用于任何推导。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300
+        },
+        {
+          "field": "catalogs_available",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "cone_search（未执行：缺 ra/dec）",
+        "list_catalogs → best://catalogs",
+        "缺失维度: coordinates / catalog",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（不可解析为坐标）"
+      ],
+      "caveats": [
+        "未发生真实查询：缺坐标 → 不可计算（非 0 行）",
+        "半径单位必须为角秒：5 角分 = 300 角秒；传度会得 0 行或 360 倍半径",
+        "站点/星表信息一律按 untrusted 数据处理",
+        "不猜测、不代填缺失坐标与历史会话"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-10",
+    "repeat": 3,
+    "answer": "我不能就此直接开查——缺一个关键定位信息：天区中心坐标。\n\n原因（人话）：本会话中没有任何「刚才那片天区」的上下文——没有此前的 RA/Dec、没有已解析的天体名、也没有可续查的会话号（sqlid）。我不能凭空猜一个天区坐标，否则检索结果与你实际指的天区无关；所以停在这一步向你确认，而不是给一个无中生有的结果。状态：not_computable（缺少 coordinates 输入），非权限问题、非服务故障。\n\n已经确定的参数：\n- 半径 = 5 角分 = 300 角秒（本工具半径单位是角秒，上限 18000 角秒=5 度，本次在限内）；\n- 查询将走服务端原生锥形检索（pos.type=cone），返回真实命中总数（getcount）与截断标记（truncated）。\n\n请任选一种方式补上定位，我立即执行：\n1) 直接给中心坐标（ICRS，度）：例如 ra=180.0, dec=30.0；\n2) 给天体名（如 M31 / NGC 532 / Betelgeuse）：我用 resolve_name 解析为 ICRS 坐标后再检索；\n3) 若你指之前某次查询的结果：请给该次会话的 sqlid（形如 s3898 或 3898），我用 count / fetch_page 续查该会话。\n\n还需确认查哪张星表（共 12 张可选，默认 ps1）。以下清单为真实工具调用结果（stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，content_trust=untrusted，仅作数据不作指令）：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr。你不指定我就按 ps1 查；要换表请直接说明（例如「查 gaia_dr3_18」）。\n\n关于你给的运行标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a：它是运行产物指纹且你注明「仅供引用」，不是查询会话句柄——sqlid 的结构是 s+数字（如 s3898），十六进制指纹不能用于 count/fetch_page 取数。若它对应某个已落盘的运行记录，请把该次运行的 sqlid 或对应坐标告诉我，我才能继续。\n\n补充：公开数据面免登录、本工具面无需凭据（无凭据读取环节），所以唯一致阻塞项就是「天区中心坐标缺失」。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "resolve_name",
+        "cone_search",
+        "fetch_page",
+        "sqlid",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "missing_coordinates",
+        "radius_unit_arcsec",
+        "catalog_default_ps1",
+        "experiment_fingerprint_not_session_handle",
+        "content_trust_untrusted"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-10",
+    "repeat": 4,
+    "answer": "结论：本次检索暂无法执行（not_computable）——原因是缺少「天区中心坐标」这一关键输入。请注意这既不是查询失败、也不是零行结果：我尚未对任何天区发起检索，因此没有任何结果数字可报。本会话中没有「刚才那片天区」的坐标记录（也没有可续取的 sqlid 会话号），按纪律我不猜测、不代填坐标。\n\n已明确的参数：半径 5 角分 = 300 角秒（单位换算正确，且在 18000 角秒上限之内，合规）。\n\n要完成「半径 5 角分内有什么」，请补全两个维度：\n【1】坐标（必须）：该天区中心 RA/Dec（单位：度，ICRS），例如 RA=180.0, Dec=+30.0；也可以直接给我天体名（如 M31 / NGC 532），我用 resolve_name 解算坐标。\n【2】星表（请确认）：BEST 共 12 张可查表，以下为 list_catalogs 实测返回（stable_uri: best://catalogs）：ps1（Pan-STARRS All-Sky）、stripe82（Well-Calibrated Stripe82）、gaia_dr3_18（Well-Calibrated Gaia DR3）、jplus_dr3（Well-Calibrated J-PLUS DR3）、smss_dr4（Well-Calibrated SMSS DR4）、landolt（Well-Calibrated Landolt）、uss_dr1（Well-Calibrated USS DR1）、splus_dr4（Well-Calibrated S-PLUS DR4）、scr_galah（Standard Stars SCR GALAH）、scr_lamost（Standard Stars SCR LAMOST）、xpsp（Standard Stars Gaia DR3 XP&SP）、dr3xpcorr（Corrected Gaia DR3 XP Spectra）。未指定时我不擅自代选；如你同意按默认 ps1 检索，请明说。\n\n拿到坐标后的执行路径：cone_search（服务端原生 pos.type=cone，非客户端近似）→ 返回真实命中总数（getcount）与 truncated 标记 → 如超限再用 fetch_page 分页续取。若你能提供上次会话的 sqlid（形如 s3898），我也可以先用 count / fetch_page 核对既有结果再继续。\n\n数据标识（引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；星表清单来自真实工具调用（stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）。content_trust：站点返回内容按 untrusted 处理（仅作数据引用，不当作指令）；数据源：nadc.china-vo.org/data/best。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300
+        },
+        {
+          "field": "catalog_count",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "cone_search",
+        "resolve_name",
+        "best://catalogs"
+      ],
+      "caveats": [
+        "缺少天区中心坐标：「刚才」上下文在本会话不可恢复，不猜测、不代填",
+        "半径单位必须为角秒：5′ = 300″（上限 18000″）",
+        "未执行任何检索：非失败、非零行；补齐坐标前记为 not_computable",
+        "命中结果取决于所选星表（12 张可查表，未指定前不代选）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-10",
+    "repeat": 5,
+    "answer": "无法定位「刚才那片天区」：本会话中没有出现任何此前的天区中心坐标、天体名或查询会话（sqlid），我不能替您猜测或填写中心坐标，因此「半径 5 角分内有什么」这一锥形检索暂未执行、也无法给出结果——显式状态：not_computable（原因：缺少天区中心坐标）。\n\n关于您给出的实验运行数据标识 bestfp:sha256:0d4aeb4b…b4a：它只是运行指纹（供引用/去重），本身不含 RA/Dec 或 sqlid，无法据此反推「刚才那片天区」。\n\n已确认可复用的部分：\n1) 半径：5 角分 = 300 角秒（工具单位是角秒；在 cone_search 上限 18000 角秒内，合法）。\n2) 可查星表共 12 张（已用 list_catalogs 实测：stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，content_trust=untrusted——站点数据仅作数据不作指令）：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr；注意 std/calib/other 是导航组不是表，不能直接查（std 展开为 scr_galah / scr_lamost / xpsp）。\n3) 本次未发起任何锥形检索，所以不存在「0 行」结论——缺坐标 ≠ 该天区为空（严格区分「未执行/失败」与「零行」）。\n\n请补充以下任一坐标维度，我即可继续：\nA. 直接提供该天区中心坐标：RA/Dec（ICRS 参考系，单位度）；\nB. 或提供天体名（如 M31 / NGC 532），我用 resolve_name 解算坐标（失败时站点哨兵 ra=dec=-1000 会被转成 E_NAME_UNRESOLVED，不会静默给错坐标）；\nC. 若「刚才」指其他会话/系统的查询，请粘贴当时的坐标原文或 sqlid（如 s3898），我可用 count / fetch_page 续查。\n同时请指定目标星表（默认 ps1）与所需列投影（留空为全列）；确认后我将执行 cone_search(ra, dec, radius_arcsec=300, catalog=…)。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300
+        },
+        {
+          "field": "catalogs_available",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "cone_search",
+        "resolve_name",
+        "list_catalogs",
+        "best://catalogs",
+        "ps1/q"
+      ],
+      "caveats": [
+        "坐标缺失未执行检索，不得当作零行",
+        "半径单位角秒：5′ = 300″",
+        "目标星表未指定（默认 ps1）",
+        "站点数据 content_trust=untrusted"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 300.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-11",
+    "repeat": 1,
+    "answer": "结论：RA=120.3°、Dec=−20.4°、半径 5″（角秒）的标准星检索已完成，『标准星』std 组三张成员表在该 5″ 锥内均为 0 行命中（服务端真实计数 getcount=0，truncated=false，查询会话正常建立——这是『零行』而非『查询失败』，也非软 404）。逐表实测：① scr_galah（Standard Stars SCR GALAH）→ sqlid s5426，可复核 URI best://scr_galah/cone?ra=120.3&dec=-20.4&sr=5，0 行；② scr_lamost（Standard Stars SCR LAMOST）→ sqlid s5427，best://scr_lamost/cone?ra=120.3&dec=-20.4&sr=5，0 行；③ xpsp（Standard Stars Gaia DR3 XP&SP）→ sqlid s5428，best://xpsp/cone?ra=120.3&dec=-20.4&sr=5，0 行。三表返回的 data_hash 均为 sha256:acfacda2c2b59db867dd96bbced8f180d889038aab6c241a219e7178d2196fb1（空结果集），响应标记 content_trust=untrusted（线上站点数据面，本次无行数据）。本次运行数据标识（引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a。解释与下一步：标准星表是 SCR 方法筛选子集（非全天全星），5″ 小锥空区不代表该处『无恒星』；若预期应有目标，可（1）扩大半径重试（如 30″/60″，我可直接重跑）；（2）改查 Well-Calibrated（calib 组：ps1/stripe82/gaia_dr3_18/jplus_dr3/smss_dr4/landolt/uss_dr1/splus_dr4）；（3）核对目标坐标后再检索。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "matched_rows",
+          "value": 0
+        },
+        {
+          "field": "catalogs_queried",
+          "value": 3
+        },
+        {
+          "field": "search_radius_arcsec",
+          "value": 5
+        }
+      ],
+      "key_entities": [
+        "std 组（scr_galah/scr_lamost/xpsp）",
+        "best://scr_galah/cone?ra=120.3&dec=-20.4&sr=5",
+        "best://scr_lamost/cone?ra=120.3&dec=-20.4&sr=5",
+        "best://xpsp/cone?ra=120.3&dec=-20.4&sr=5",
+        "sqlid s5426/s5427/s5428",
+        "error_code: 无（null）"
+      ],
+      "caveats": [
+        "零行≠失败：会话正常建立、getcount=0、truncated=false",
+        "content_trust=untrusted（线上站点数据面）",
+        "标准星口径=std 组 SCR 筛选子集，非全天全星",
+        "5″ 小锥空区不代表该天区无恒星"
+      ]
+    },
+    "semantic_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "total_count",
+          "value": 0.0
+        }
+      ],
+      "key_entities": [
+        "best://scr_galah/cone?dec=-20.4&ra=120.3&sr=5",
+        "best://scr_lamost/cone?dec=-20.4&ra=120.3&sr=5",
+        "best://xpsp/cone?dec=-20.4&ra=120.3&sr=5",
+        "scr_galah",
+        "scr_lamost",
+        "xpsp"
+      ],
+      "caveats": []
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-12",
+    "repeat": 1,
+    "answer": "收到。半径换算没问题：0.5° = 1800 角秒（本工具半径单位是角秒，上限 18000″ = 5°），在允许范围内；但本条消息里缺少两个必要输入，我无法执行、也不代填或猜测：\n\n① 中心坐标（RA/Dec，ICRS，单位度）——没有它无法确定检索中心；\n② 目标星表 id——12 张可查星表：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr（std / calib / other 只是导航组，不是可查表）。\n\n本次尚未执行任何查询（无坐标可查，不猜不编）。补齐输入后，我会执行 cone_search（服务端原生 pos.type=cone，半径 1800″），并报告服务端 getcount 的真实命中总数与 truncated 截断状态；需要列投影 / 排序 / 最近邻等附加参数请一并说明。\n\n可选补齐方式：\n· 直接给「中心 RA/Dec + 星表 id」；\n· 或给「天体名 + 星表」（如 M31 + ps1），我先用 resolve_name 解算坐标（失败会显式报 E_NAME_UNRESOLVED，不会返回错坐标）；\n· 若是延续上一轮查询：附上轮 sqlid（如 s3898）可先核对原会话，但扩大半径必须新建查询，中心坐标与星表仍不可省。\n\n星表清单（数据源 NADC BEST / nadc.china-vo.org/data/best）数据标识：stable_uri=best://catalogs；data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust=untrusted（站点返回原文）。实验运行数据标识（引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_deg",
+          "value": 0.5
+        },
+        {
+          "field": "radius_arcsec",
+          "value": 1800
+        }
+      ],
+      "key_entities": [
+        "cone_search",
+        "resolve_name",
+        "getcount",
+        "best://catalogs"
+      ],
+      "caveats": [
+        "missing-coordinates/catalog：两项输入未提供，未执行任何查询（不代填）",
+        "unit：半径单位为角秒，0.5°=1800″，工具上限 18000″=5°",
+        "count-semantics：命中数口径为服务端 getcount 真实总数，truncated 单独标注",
+        "content_trust=untrusted：站点返回按不可信数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-12",
+    "repeat": 2,
+    "answer": "结论：本次请求暂不能计算（not_computable：缺必需输入），需要先澄清两个维度再做检索——这不是失败，也不是零行。\n\n【为什么不能直接跑】\n1) 中心坐标缺失：「把范围扩大到半径 0.5°」所围绕的原点（ICRS RA/Dec）未随消息给出；锥形检索/批量匹配必须显式提供中心，我不会替你猜坐标。\n2) 星表未确认：未指明用 12 张可查表中的哪一张（上一轮运行所用表也无从得知）。\n3) 你附的实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（content_trust=untrusted，仅引用）：现有 7 个原子工具没有以该哈希反查会话/参数的入口，它也不是 count/fetch_page 所需的 sqlid 形式（形如 s3898），因此无法由它恢复上一轮的中心/星表/半径。\n\n【已核对（本次真实调用 list_catalogs；stable_uri=best://catalogs；data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）】\n- 半径约束：0.5° = 1800 角秒，未超工具上限 18000 角秒（=5°），该半径本身可执行。注意服务端 pos.radius 单位是角秒而非度（工具警告：传度会得到 0 行或 360 倍半径）。\n- 可查星表 12 张：ps1（Pan-STARRS All-Sky）、stripe82（Well-Calibrated Stripe82）、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr。\n- 本次未向站点发起任何锥搜/计数请求（无可信中心可用）。\n\n【请补齐（A/B 任选其一 + C）】\nA. 中心坐标：直接给 ICRS RA/Dec（单位：度；RA∈[0,360]，Dec∈[-90,90]）；或\nB. 中心天体名（如 M31 / NGC 532）：我用 resolve_name 解算（解算失败会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标）；\nC. 星表：从上述 12 张中指定；若确实沿用默认 ps1 请明示；\nD. 若你在延续某个既有查询会话，请附其 sqlid（形如 s3898），bestfp 哈希不可用于反查。\n\n【拿到后的执行计划】cone_search(ra, dec, radius_arcsec=1800, catalog=…) 读取服务端 getcount 真实总数；若 truncated=true，用 count/fetch_page 复核或继续取行。结果将严格区分「查询失败（E_* 错误码）」与「真实 0 行」。可选参数：nearest_only、排序列/方向、列裁剪（showcol）、以及是否只要总数还是也要行数据。\n\n数据源：BEST @ NADC（https://nadc.china-vo.org/data/best）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9",
+        "https://nadc.china-vo.org/data/best",
+        "cone_search",
+        "count",
+        "E_NAME_UNRESOLVED"
+      ],
+      "caveats": [
+        "半径单位=角秒: 0.5°=1800″（上限 18000″=5°）; 传度会得 0 行或 360 倍半径",
+        "中心坐标与星表未提供, 澄清前不猜测、不硬跑 (not_computable)",
+        "站点数据 content_trust=untrusted; bestfp 标识仅供引用, 不可反查会话"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-12",
+    "repeat": 3,
+    "answer": "这次还不能给你数字。『把范围扩大到半径 0.5°』需要两个关键输入，二者在本会话中缺失，我不会猜：① 中心坐标（RA/Dec）；② 目标星表。你附带的实验运行标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（仅供引用）只是引用指纹，我现有的 7 个原子工具中没有按指纹反查会话的入口；且半径是查询时参数，扩大范围必须新建查询，不能靠翻旧会话实现。\n\n当前状态：not_computable（原因：缺中心坐标与目标星表；下一步：按下方可选项补齐）。\n\n口径已核实：0.5° = 1800 角秒（cone_search 半径上限 18000″，公开数据面、无需登录凭据）；参数齐备后即以 pos.type=cone 原生锥形检索执行，回报服务端真实总数 getcount（超上限会带 truncated 标记、可翻页续取），并附 stable_uri 与数据标识。\n\n请补齐两个缺失维度：\n1) 中心坐标：RA/Dec（度，ICRS）；\n2) 目标星表：12 张可查星表任选其一：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr（std/calib/other 是导航组，不是表；清单已核实，可复核 stable_uri：best://catalogs）。\n\n可选项：\n① 回复『中心 RA/Dec（度）+ 星表 id』→ 我直接执行并给出真实计数；\n② 回复『天体名（如 M31 / NGC 532）+ 星表 id』→ 我先用 resolve_name 解析坐标（失败会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标）再执行；\n③ 回复上轮会话 sqlid（形如 s3898）→ 我先用 count 复核上轮规模（注意：要得到扩大后的新计数仍需中心坐标）。\n\n本次未发起锥形检索，无实测数字：『缺参数/未计算』不等于『0 行』；站点数据一律按 untrusted 处理。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [
+        "cone_search",
+        "resolve_name",
+        "count",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "未计算（not_computable）：缺中心坐标与目标星表，无实测数字（缺失 ≠ 0 行）",
+        "半径换算 0.5° = 1800″，在工具上限 18000″ 内，参数齐备即可执行",
+        "bestfp 指纹仅供参考：无法经现有原子工具反查会话/参数，未猜测坐标",
+        "站点数据（含星表清单）按 untrusted 处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-12",
+    "repeat": 4,
+    "answer": "**结论：本次无法直接执行——本会话缺少上一轮查询的锥心坐标与目标星表，需要你先补充。**\n\n你说「把范围扩大到半径 0.5 度」，这指向上一轮查询，但上一轮的 RA/Dec 与星表不在本会话上下文中；按数据纪律，我不猜测、不代填缺失坐标。\n\n【半径核对（这一项没问题）】\n• 0.5° = 1800 角秒，落在 cone_search 允许区间（>0 且 ≤18000″ = 5°）内，可直接使用。\n\n【请补充两个必需项（缺一不可）】\n1. 锥心坐标：RA（度）/ Dec（度，ICRS）。若你只有天体名（如 M31 / NGC 532），我可以先用 resolve_name 解析（失败会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标）。\n2. 目标星表（本次已实测枚举，12 选一）：ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr。注意 std / calib / other 是导航组不是表，不能直接查。\n\n【补齐后一步到位】\n• 调用 cone_search(ra, dec, radius_arcsec=1800, catalog=…) → 读取服务端 getcount 真实命中总数，回答「有多少条」；若 truncated=true 再用 fetch_page 续取。\n• 计数严格区分「查询失败」与「真实 0 行」：失败走显式错误码（如软 404 的 BEST_1006），不会伪装成 0 行。\n\n【可复核信息】\n• 星表清单依据：stable_uri = best://catalogs；data_hash = sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust = untrusted（站点来源数据，经工具实测枚举）。\n• 实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已记录为引用（content_trust：未验证，仅来自你的消息）；它不含坐标/星表信息，无法用于还原上一轮查询参数。\n\n【状态】not_computable（缺 coordinates + catalog）。下一步：回复「RA=…, Dec=…, 星表=…」即可立即执行并给出真实计数。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800
+        }
+      ],
+      "key_entities": [
+        "cone_search",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "半径单位=角秒（0.5°=1800″；工具上限 18000″）",
+        "缺 coordinates+catalog：未发起任何数据检索，无计数可言",
+        "计数语义=服务端 getcount 真实总数；失败与 0 行严格区分",
+        "bestfp 标识不含查询参数，不能还原上一轮查询"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-12",
+    "repeat": 5,
+    "answer": "无法直接执行这次「扩大到 0.5 度」的检索：请求里缺少两个必要维度——①检索中心坐标（RA/Dec），②目标星表；且本会话上下文里没有上一轮查询记录，我无法得知要扩大的是哪个天区，也不会替你猜测坐标或补填星表。因此当前状态为 not_computable（未执行任何检索，没有行数数字可给）。你给的实验数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 只是引用锚点，本身不含坐标信息，不能据它反推中心。\n\n口径说明：0.5 度 = 1800 角秒（cone_search 的 radius 参数单位是角秒，上限 18000 角秒 = 5 度），1800 在合法范围内。一经提供「中心坐标 + 星表」，我会以服务端原生锥形检索（pos.type=cone）执行，并回报 getcount 真实命中总数与 truncated 截断标记；命中量大时可分页续取（fetch_page）或转后台下载栈。\n\n请补充（坐标二选一即可）：1) 直接给中心 RA/Dec（ICRS，单位度）；2) 给天体名（如 M31 / NGC 532），我先用 resolve_name 解析坐标（失败会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标）。星表候选（刚经 list_catalogs 实测，共 12 张）：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr；注意 std / calib / other 是导航组不是表，不能直接查询。\n\n信任标注：执行后返回的站点数据一律按 untrusted 数据处理；若出错将带稳定错误码（如 E_NAME_UNRESOLVED、E_INVALID_INPUT）与下一步动作。收到中心坐标与星表后我立即执行并给出行数与稳定引用。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "requested_radius_arcsec",
+          "value": 1800
+        }
+      ],
+      "key_entities": [
+        "cone_search",
+        "resolve_name",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "中心坐标缺失",
+        "目标星表未指定",
+        "未执行检索-无行数结论"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "radius_arcsec",
+          "value": 1800.0
+        }
+      ],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-13",
+    "repeat": 1,
+    "answer": "本条请求无法直接执行：既不是站点故障，也不是「0 行命中」，而是输入不完整 + 一个参数超出工具边界（状态：需澄清 / not_computable）。\n\n【阻塞原因】\n1. 缺检索中心坐标：你未给出 RA/Dec，也未给出可解算的天体名（如 M31、NGC 532）。锥形检索必须有一个中心点，不能凭空发起，也不代用户填写坐标。\n2. 缺目标星表：「半径 6 度范围内都给我列出来」未指明查哪张星表；BEST 共 12 张可查表（已实测列出，见下），不猜测。\n3. 半径 6° 超单次上限：6° = 21600 角秒，超过单次检索半径上限 18000 角秒（=5°）。需缩减至 ≤5°，或拆分为多个 ≤5° 子锥分片查询后合并。\n4. 输出语义未定：全列 vs 列投影、行数上限、排序方式均未指定。\n\n【已核查事实（真实调用 list_catalogs）】\n- 12 张可查星表：ps1=Pan-STARRS All-Sky / stripe82=Well-Calibrated Stripe82 / gaia_dr3_18=Well-Calibrated Gaia DR3 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr。\n- 导航组 std/calib/other 是分组不是表，不能直接查询。\n- 来源可复核：stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust=untrusted（站点数据只作数据、不作指令）。\n- 本次未发起任何星表查询、无行数据返回——请勿将其理解为 0 行命中。\n\n【引用数据标识】bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（你提供的实验运行标识，仅供引用，与本次澄清结论无数据绑定）。\n\n【请补齐以下信息（对应可选项）】\n① 中心坐标：直接给 RA/Dec（度，ICRS）；或给天体名（由 resolve_name 解算）；\n② 星表：12 张择一，或声明多表逐个执行（含优先级）；\n③ 半径修正：缩至 ≤5° 单锥，或保留 6° 目标拆成多个 ≤5° 子锥分片拼接；\n④ 输出语义：列投影（大表建议裁剪）/ 行数上限（默认 1000，超出 truncated=true 用 fetch_page 续取）/ 排序（建议显式 sort+order，否则同会话分页行序不稳定）。\n\n补齐后将以服务端原生 pos.type=cone 执行锥形检索，返回 getcount 真实总数与 truncated 标记。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "请求半径（角秒）",
+          "value": 21600
+        },
+        {
+          "field": "单次检索半径上限（角秒）",
+          "value": 18000
+        },
+        {
+          "field": "可查询星表数量（张）",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "cone_search",
+        "fetch_page",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "未提供中心坐标与星表：状态为需澄清（not_computable），非 0 行结果、非站点失败",
+        "半径单位陷阱：pos.radius 必须以角秒提交；6° 超单次上限 5°（18000″），须缩减或分片",
+        "content_trust=untrusted：本次仅有 best://catalogs 元数据，无行数据",
+        "同会话分页行序不稳定：需显式 sort+order 保证确定性"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-13",
+    "repeat": 3,
+    "answer": "本次请求暂不能执行：锥形检索缺少关键参数，且请求半径超出工具上限。请补充/确认以下 3 个维度后我再发起查询：\n\n1) 中心坐标（缺失）：请提供 RA（0–360°，度）与 Dec（-90–90°，度，ICRS），或给出可解析的天体名（如 M31 / NGC 532，可由 resolve_name 解析为坐标）。中心位置不能替你猜测。\n2) 目标星表（缺失）：『都列出来』未指定星表。实测 list_catalogs 返回 12 张可查表：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr。注意 std / calib / other 仅为导航分组，不能直接查询（直接查会得软错误）；请指定一张表，或明确『12 张逐表执行』（成本较高，需逐表提交）。\n3) 半径（需修正）：6 度 = 21600 角秒，超出本工具上限 18000 角秒（=5 度），无法一次执行。可选：a) 缩小到 ≤5 度（≤18000″）；b) 若确需 6 度，拆成多次 ≤5 度锥搜后拼接（重叠区需去重）；c) 改走大区域下载路径评估。\n\n补充说明：若『都给我列出来』意指全量结果，默认单次 max_rows=1000，命中数超出会返回 truncated=true，可用 fetch_page 按页续取——请一并给出可接受的行数/请求预算。\n\n已记录实验运行数据标识：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（仅作运行引用，不能替代坐标/星表等查询参数）。\n\n本轮星表清单为工具实测（stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；lineage: src.protocol.CATALOG_PATHS），站点返回内容按 untrusted 数据处理。\n\n下一步：按『中心坐标 + 星表 + 半径（≤18000 角秒）』补齐即可执行，例如：RA=180.0、Dec=30.0、半径 60 角秒、星表 ps1。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "requested_radius_deg",
+          "value": 6
+        },
+        {
+          "field": "max_supported_radius_arcsec",
+          "value": 18000
+        },
+        {
+          "field": "available_catalog_count",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "cone_search",
+        "list_catalogs",
+        "resolve_name",
+        "validate_search_radius（18000″ 上限）",
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "半径 6° 超出 18000″（5°）工具上限，无法一次执行",
+        "未提供中心坐标，禁止猜测",
+        "未指定星表；std/calib/other 仅为导航组不可直接查询",
+        "全量列举受 max_rows/分页截断约束（truncated=true 时需 fetch_page 续取）",
+        "站点返回内容按 untrusted 数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-13",
+    "repeat": 4,
+    "answer": "本次没有执行区域检索——既不是失败，也不是零行，而是请求缺少可发起查询的必需维度，且半径参数超出工具上限。具体三点：\n\n1. 缺锥心坐标（RA/Dec）：『半径 6 度的范围』需要一个中心点，但消息里没有给出。您附的实验数据标识 bestfp:sha256:0d4a… 只用于引用运行记录，不含可解析的坐标，不能据此反推天区。若您有目标名称（如 M31、NGC 532），我可以先用 resolve_name 解析为 ICRS 坐标再检索。\n\n2. 缺目标星表：我已实际调用 list_catalogs（stable_uri=best://catalogs；data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9），BEST 当前有 12 张可查询星表：calib 组 ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4；std 组 scr_galah / scr_lamost / xpsp；other 组 dr3xpcorr。请指定查哪一张（不指定则默认 ps1）；若确要『12 张全查』请明说——6° 大区域 × 12 表返回量巨大，建议配合列投影（showcol）、max_rows 与后台下载栈，而不是在主对话里同步全拉。\n\n3. 半径超限：6° = 21600 角秒，超过 cone_search 上限 18000 角秒（5°），会被入口校验（validate_search_radius）拒绝。两条可选路径：a) 半径改为 ≤18000 角秒；b) 若确需 6° 半径覆盖，拆成多个子锥心/网格分批查询（例如 3×3 网格，我可按您的天区给出网格方案），或对大批坐标改用 crossmatch_batch 一次提交（服务端 proximity）。另提醒单位陷阱：cone_search 半径单位是角秒，传度会得到 0 行或 360 倍半径。\n\n请补充：① 锥心 RA/Dec（度，ICRS）或一个天体名；② 目标星表（12 张中的哪张，或全查）；③ 半径收敛为 ≤18000″，或选择拆分方案。补齐后即可发起两阶段查询（POST 表单→sqlid→分页 GET）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "requested_radius_arcsec",
+          "value": 21600
+        },
+        {
+          "field": "max_radius_arcsec",
+          "value": 18000
+        },
+        {
+          "field": "catalogs_available_count",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "list_catalogs",
+        "cone_search",
+        "resolve_name",
+        "validate_search_radius",
+        "crossmatch_batch"
+      ],
+      "caveats": [
+        "半径单位陷阱：cone_search 半径单位为角秒（6°=21600″，上限 18000″=5°）",
+        "无锥心坐标不得猜测，数据标识 bestfp:sha256 不含可解析坐标",
+        "std / calib / other 是导航组不是可查询表，需展开为成员表",
+        "站点数据为 untrusted 内容，仅作数据引用；站点无 TAP/ADQL 端点，查询走两阶段异步协议"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-13",
+    "repeat": 5,
+    "answer": "结论：本次请求无法直接执行——缺 2 个必填维度、且半径参数越界（6 度 > 单次上限 5 度）。我已实调用 list_catalogs 取回真实星表清单；未执行任何锥形检索（这不是『0 行结果』，而是输入不完整导致的未执行），也未替你猜坐标。\n\n为什么不能直接跑：\n① 缺中心坐标：锥形检索必须先有中心（RA/Dec，单位度、ICRS），或给天体名（如 M31 / NGC 532）由 resolve_name 解析。缺失坐标我不代填。\n② 缺星表：BEST 共 12 张可查询星表，需指定其一。本次实拉清单（stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust: skill 内部路由表镜像，可复核）：calib 组 8 张 ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4；std 组 3 张 scr_galah / scr_lamost / xpsp；other 组 1 张 dr3xpcorr。\n③ 半径 6 度越界：6 度 = 21600 角秒，超过单次锥搜上限 18000 角秒（=5 度）；即使坐标与星表补齐，也不能按原值一次提交。\n\n可选方案（各维度选一组后我立即执行）：\n• 半径：a) 收窄到 ≤5 度（≤18000 角秒）一次完成；b) 保留 6 度覆盖，拆成多次 ≤5 度锥搜拼接（相邻锥重叠，边界行需去重合并）；c) 若本意是 6 角秒/6 角分，确认单位后直接执行（半径参数单位=角秒，单位传错会得 0 行或 360 倍半径）。\n• 坐标：给 RA/Dec（度），或给名称（解析失败会显式返回 E_NAME_UNRESOLVED，不会静默给错坐标）。\n• 星表：从上列 12 张中指定。\n\n执行后将返回：命中行、getcount 真实总数与 truncated 标记、单位标注与稳定 URI，供复核。\n（实验运行标识：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a）",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "requested_radius_arcsec",
+          "value": 21600
+        },
+        {
+          "field": "max_single_cone_radius_arcsec",
+          "value": 18000
+        },
+        {
+          "field": "available_catalog_count",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9"
+      ],
+      "caveats": [
+        "半径单位=角秒：6 度=21600 角秒 > 单次上限 18000 角秒（5 度），原值不可提交",
+        "缺中心坐标/目标名：未代填、未执行检索（非 0 行结果）",
+        "未指定星表：清单为本次实拉（best://catalogs），content_trust=skill 内部路由表镜像",
+        "名称解算失败将显式返回 E_NAME_UNRESOLVED（哨兵 ra=dec=-1000），不给错坐标"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-15",
+    "repeat": 1,
+    "answer": "在 BEST 星表 gaia_dr3_18（Well-Calibrated Gaia DR3）中，以 RA=180.0°、Dec=30.0°（ICRS，单位度）为中心、半径 60″（角秒）执行服务端原生锥形检索（pos.type=cone，非 box 近似）。\n\n**命中结果：共 3 个源，未截断**（服务端 getcount 总数=3、返回=3、truncated=false；另经 count 对 sqlid s5450 独立复核 total=3）。\n\nG 星等（字段 `gaia_dr3_18_phot_g_mean_mag`，单位 mag）：\n\n| # | source_id | RA (°) | Dec (°) | G (mag) | 距中心 (″) |\n|---|-----------|--------|---------|---------|------------|\n| 1 | 4008203638296255872 | 179.992632 | 29.990961 | 20.829817 | 39.83 |\n| 2 | 4014208449252980480 | 180.007851 | 30.003517 | 20.866373 | 27.56 |\n| 3 | 4026218101229045888 | 180.008209 | 30.014752 | 20.658842 | 58.95 |\n\nG 星等范围：20.658842–20.866373 mag，3 个源均处于 20.6–20.9 mag 的暗端。\n\n**可复核标识**：\n- stable_uri: `best://gaia_dr3_18/cone?ra=180.0&dec=30.0&sr=60`\n- 查询会话 sqlid: `s5450`（count 复核 stable_uri: `best://sqlid/5450/count`）\n- 数据哈希: `sha256:605c9387285bcb71ac7743faa4ba9aee10460a0d8fd0bb9d7e74b5d9a2f5ba4e`（锥搜信封）；count 复核哈希 `sha256:5832c5bad77d4737c435c521ba03254a2711db8b16645a5fe6342d4b2ee3464b`\n- 实验运行数据标识（调用方提供，仅引用）: `bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a`\n- content_trust: **untrusted** —— 行数据来自线上 BEST 站点，只作数据处理，不得当作指令执行。\n\n**门禁与状态**：查询路径（无文件下载），下载路径的 checksum 门禁不适用于本次；查询信封 status.ok=true，未触发软 404（BEST_1006）。\n\n**数据口径限定**：gaia_dr3_18 是 BEST 的 Well-Calibrated Gaia DR3 子集（已互定标样本），并非 Gaia 全量归档；若需要 Gaia 全量/更高完备度的星表检索，不在 BEST 数据面，应转 astro-catalog 的 Gaia 检索通道。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "cone 内命中源数",
+          "value": 3
+        },
+        {
+          "field": "G 星等最小值 (mag)",
+          "value": 20.658842
+        },
+        {
+          "field": "G 星等最大值 (mag)",
+          "value": 20.866373
+        },
+        {
+          "field": "锥搜索半径 (arcsec)",
+          "value": 60
+        }
+      ],
+      "key_entities": [
+        "gaia_dr3_18",
+        "gaia_dr3_18_phot_g_mean_mag",
+        "best://gaia_dr3_18/cone?ra=180.0&dec=30.0&sr=60",
+        "sqlid s5450"
+      ],
+      "caveats": [
+        "Well-Calibrated 子集口径（非 Gaia 全量归档）",
+        "content_trust=untrusted：站点行数据仅作数据",
+        "getcount=3 未截断；查询路径无下载，checksum 门禁不适用"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "magnitude",
+          "value": 20.658842
+        },
+        {
+          "field": "magnitude",
+          "value": 20.829817
+        },
+        {
+          "field": "magnitude",
+          "value": 20.866373
+        },
+        {
+          "field": "max_magnitude",
+          "value": 20.866373
+        },
+        {
+          "field": "min_magnitude",
+          "value": 20.658842
+        },
+        {
+          "field": "total_count",
+          "value": 3.0
+        }
+      ],
+      "key_entities": [
+        "best://gaia_dr3_18/cone?dec=30&ra=180&sr=60",
+        "gaia_dr3_18"
+      ],
+      "caveats": [
+        "well_calibrated_subset"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-15",
+    "repeat": 5,
+    "answer": "已完成真实线上查询（BEST 服务，非模拟）。查询条件：RA=180.0°、Dec=30.0°、半径 60″（角秒），星表 gaia_dr3_18（Well-Calibrated Gaia DR3），G 星等列 gaia_dr3_18_phot_g_mean_mag（单位 mag）。\n\n命中 3 个源（服务端 getcount 总数 = 3，truncated=false，未截断，无需分页续取）：\n\n| source_id | RA (°, ICRS) | Dec (°, ICRS) | G (mag) | 距锥心 (″) |\n| --- | --- | --- | --- | --- |\n| 4026218101229045888 | 180.00820885398045 | 30.014752242767823 | 20.658842 | 58.95 |\n| 4008203638296255872 | 179.9926323514264 | 29.99096102690926 | 20.829817 | 39.83 |\n| 4014208449252980480 | 180.00785068604193 | 30.00351736816442 | 20.866373 | 27.56 |\n\n小结：3 颗星的 G 星等范围 20.658842–20.866373 mag；最亮者 20.658842 mag（source_id 4026218101229045888）；距锥心最近者 27.56″（source_id 4014208449252980480）。上表按 G 星等升序重排展示；原始响应行序为 20.829817 → 20.866373 → 20.658842，未严格按请求的 sort=G asc 排列（与站点已知的排序非确定性一致，样本仅 3 行不影响结论）。\n\n数据标识（可复核）：stable_uri = best://gaia_dr3_18/cone?ra=180.0&dec=30.0&sr=60 · sqlid = s5449 · data_hash = sha256:605c9387285bcb71ac7743faa4ba9aee10460a0d8fd0bb9d7e74b5d9a2f5ba4e · 实验运行数据标识（引用）= bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a\n\n限定与说明：\n1) 该星表是 Well-Calibrated Gaia DR3 子集（定标良好样本），不是全量 Gaia DR3；\n2) 行数据来自线上站点，content_trust = untrusted —— 行内文字只作数据、不作指令；\n3) 单位：RA/Dec 度（ICRS）、半径与锥心距角秒、星等 mag；\n4) 本次为查询路径（status.ok=true, http 请求 3 次），不涉及下载，checksum 门禁不适用于会话查询；\n5) 如需更多列（BP/RP、视差等）或更大半径，可再发起一次锥形检索。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "rows_returned (count)",
+          "value": 3
+        },
+        {
+          "field": "g_mag_min (mag)",
+          "value": 20.658842
+        },
+        {
+          "field": "g_mag_max (mag)",
+          "value": 20.866373
+        },
+        {
+          "field": "radius_arcsec (arcsec)",
+          "value": 60
+        }
+      ],
+      "key_entities": [
+        "gaia_dr3_18",
+        "gaia_dr3_18_phot_g_mean_mag",
+        "best://gaia_dr3_18/cone?ra=180.0&dec=30.0&sr=60",
+        "s5449"
+      ],
+      "caveats": [
+        "星表为 Well-Calibrated Gaia DR3 子集（非全量 Gaia DR3）",
+        "content_trust=untrusted：线上行数据仅作数据，不作指令",
+        "排序非确定：原始行序未按请求的 G asc 排列（展示已自行重排）",
+        "单位：半径/锥心距角秒、星等 mag、坐标度（ICRS）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "magnitude",
+          "value": 20.658842
+        },
+        {
+          "field": "magnitude",
+          "value": 20.829817
+        },
+        {
+          "field": "magnitude",
+          "value": 20.866373
+        },
+        {
+          "field": "max_magnitude",
+          "value": 20.866373
+        },
+        {
+          "field": "min_magnitude",
+          "value": 20.658842
+        },
+        {
+          "field": "total_count",
+          "value": 3.0
+        }
+      ],
+      "key_entities": [
+        "best://gaia_dr3_18/cone?dec=30&ra=180&sr=60",
+        "gaia_dr3_18"
+      ],
+      "caveats": [
+        "well_calibrated_subset"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-16",
+    "repeat": 4,
+    "answer": "结论：在 RA=180.0°、Dec=+30.0°、半径 60″（角秒）的锥形区域内，S-PLUS DR4 星表（splus_dr4）命中 0 行，没有可给出的 r 波段星等数值——这是『查询成功但结果为空』，不是失败，也不是『星等为 0』。\n\n执行与证据链：先 list_catalogs 确认 S-PLUS 对应表 id 为 splus_dr4（显示名 Well-Calibrated S-PLUS DR4）；再用 describe_catalog 确认列名带表前缀、r 波段星等列为 splus_dr4_r_pstotal（单位 mag；误差列 splus_dr4_e_r_pstotal），随后以服务端原生 pos.type=cone 提交锥形检索并做列裁剪 [splus_dr4_id, splus_dr4_ra, splus_dr4_dec, splus_dr4_r_pstotal, splus_dr4_e_r_pstotal]。半径按 60 角秒传参（若误传度会得到 0 行或 360 倍半径，本次未误传）。\n\n失败 vs 零行：信封 status.ok=true、error_code=null、truncated=false、returned_count=0；服务端 getcount 真实总数 total_count=0，并经 count 端点独立复核（total=0）。若为软 404 或错误路径会显式返回错误码（如 BEST_1006 / E_SOFT_404），不会静默给零行。\n\n溯源与数据标识：sqlid=s5547；stable_uri=best://splus_dr4/cone?ra=180.0&dec=30.0&sr=60；计数复核 stable_uri=best://sqlid/s5547/count；列结构证据 best://splus_dr4/describe；data_hash=sha256:acfacda2c2b59db867dd96bbced8f180d889038aab6c241a219e7178d2196fb1（计数复核 sha256:b59b9d208f3f1bfcd8a97a62f406674e9a6904eb2fc1b0a5176568c4a4908eed）；行数据 content_trust=untrusted（来自线上站点，仅作数据处理）。你提供的实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 仅作引用附记。\n\n原因解读（背景性推断，本会话未以官方覆盖图核验）：S-PLUS 是南天巡天（T80-South，Cerro Tololo），而 RA=180°、Dec=+30° 靠近北银极（约 b≈+78°），很可能不在 S-PLUS DR4 覆盖范围内；也不排除该小锥内确无该表记录。该零结果仅代表 splus_dr4 在这一锥内无记录，不能外推到其他星表或其他天区。\n\n下一步可选：① 若目标就是 S-PLUS 数据，请核对坐标出处并提供 S-PLUS 覆盖范围（南天）内的坐标，我可立即重查；② 若目标是该天区（180°, +30°）的 r 波段星等，可考虑改用其他星表（如 Pan-STARRS ps1）代查，告知后我执行；③ 也可先让我做一次 S-PLUS 覆盖区的小半径抽样探测，验证该表数据可用性。",
+    "declared_card": {
+      "kind": "rowset",
+      "key_numbers": [
+        {
+          "field": "rows_returned",
+          "value": 0
+        },
+        {
+          "field": "total_count",
+          "value": 0
+        }
+      ],
+      "key_entities": [
+        "splus_dr4",
+        "splus_dr4_r_pstotal",
+        "s5547",
+        "best://splus_dr4/cone?ra=180.0&dec=30.0&sr=60",
+        "best://sqlid/s5547/count"
+      ],
+      "caveats": [
+        "zero_rows_not_failure：status.ok=true、error_code=null、truncated=false、getcount=0，属查询成功且结果为空",
+        "footprint：S-PLUS 为南天巡天，坐标 (180°, +30°) 靠近北银极，很可能不在 S-PLUS DR4 覆盖内（背景推断，未以官方覆盖图核验）",
+        "units：半径=60 角秒、坐标=度、星等列单位=mag",
+        "scope：结论仅限 splus_dr4 该锥内，不外推到其他星表或其他天区",
+        "trust：行数据 content_trust=untrusted（线上站点），仅作数据"
+      ]
+    },
+    "semantic_card": {
+      "kind": "value",
+      "key_numbers": [
+        {
+          "field": "total_count",
+          "value": 0.0
+        }
+      ],
+      "key_entities": [
+        "best://splus_dr4/cone?dec=30&ra=180&sr=60",
+        "splus_dr4"
+      ],
+      "caveats": [
+        "footprint_inference"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-17",
+    "repeat": 1,
+    "answer": "结论：本请求当前 not_computable ——「筛选 r 波段误差 < 0.01 mag 的对象」缺少三个必需输入维度（观测位置、目标星表、搜索半径），且 BEST 的全部数据入口都是位置驱动（锥形检索 / 批量交叉匹配），没有「全表按列筛选」的接口；原子工具面也不暴露任意服务端列约束，因此误差筛选须先按位置取回结果行、再做行级过滤（err < 0.01 mag）。\n\n本轮已实测核实（非猜测；来源：best://catalogs 与各 best://<catalog>/describe，content_trust: untrusted，站点文本仅作数据引用）：12 张可查星表中，可做 r 波段误差筛选的误差列（单位均为 mag）为——① ps1：ps1_rpsf_err（r 波段 PSF 测光误差）；② landolt：landolt_e_rmag；③ uss_dr1：uss_dr1_r_err_pstotal；④ splus_dr4：splus_dr4_e_r_pstotal；⑤ stripe82：stripe82_rmsig（多历元测量 σ，语义与单一测光误差不同，需确认）；⑥ xpsp：按测光系统分列的误差列，如 ps1_r_r_err、sdss_r_r_err、splus_r_r_err（需指定系统）。不含 r 波段误差列、无法做该筛选的星表：smss_dr4（仅 rpsf 星等）、jplus_dr3、scr_galah、scr_lamost、gaia_dr3_18（无 r 波段）、dr3xpcorr。\n\n请补充以下信息后即可继续：① 坐标：RA/Dec（度，ICRS）或天体名（如 M31 / NGC 532，经 resolve_name 解析）；或坐标列表（走 crossmatch_batch 批量匹配）。② 星表：从上述候选中选一张。③ 半径：单位角秒（上限 18000″ = 5°），如 60″ / 300″。④ 语义确认：严格「< 0.01 mag」（不含 0.01）与所选误差列。\n\n执行路径（拿到输入即执行）：单点/天区 → cone_search(catalog, ra, dec, radius_arcsec, columns=[误差列…]) → 行级过滤 err < 0.01 mag；坐标列表 → crossmatch_batch(coords, catalog, radius_arcsec) → 同样过滤。实验运行数据标识（仅供引用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a；本轮未执行真实查询（无坐标不可查），未产生 sqlid/查询产物。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "r_band_error_threshold_mag",
+          "value": 0.01
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "ps1_rpsf_err",
+        "landolt_e_rmag",
+        "uss_dr1_r_err_pstotal",
+        "splus_dr4_e_r_pstotal",
+        "stripe82_rmsig",
+        "xpsp:ps1_r_r_err",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "not_computable: 缺坐标/星表/半径，BEST 无全表筛选接口，必须先有位置",
+        "units: 阈值 0.01 mag；半径单位角秒（上限 18000″）",
+        "semantics: 误差列随星表分岔；stripe82_rmsig 为多历元 σ（非单一测光误差）待确认",
+        "content_trust: untrusted（站点返回文本仅作数据引用）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-17",
+    "repeat": 2,
+    "answer": "结论：目前无法直接执行「r 波段误差 < 0.01 mag」的对象筛选——缺少坐标/天区、星表、半径三个必填维度（不代填、不猜测）；且本工具面（7 个原子工具）没有服务端量级误差过滤参数，只能先对限定天区取数、再对返回行做本地筛选；大天区/全表直接筛选在本工具面不可行（not_computable）。\n\n【本次真实核查】list_catalogs×1 + describe_catalog×12，全部成功（status.ok=true，无失败/软 404）：\n1) BEST 共 12 张可查询星表：calib 组 8 张（ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4）、std 组 3 张（scr_galah、scr_lamost、xpsp）、other 组 1 张（dr3xpcorr）。引用：stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，content_trust=untrusted。\n2) 含（候选）r 波段误差列的 6 张表：\n- ps1：ps1_rpsf_err（星等 ps1_rpsf），可筛 ps1_rpsf_err < 0.01 mag；\n- splus_dr4：splus_dr4_e_r_pstotal（星等 splus_dr4_r_pstotal）；\n- uss_dr1：uss_dr1_r_err_pstotal（星等 uss_dr1_r_pstotal）；\n- landolt：landolt_e_rmag（星等 landolt_rmag）；\n- xpsp：多测光系统各一套（ps1_r_r_err、sdss_r_r_err、splus_r_r_err、csst_r_r_err、lsst_r_r_err 等，须先定系统）；\n- stripe82：无 *_err 命名列，候选 stripe82_rmsig / stripe82_rmrms（语义待确认）。\n3) 不适用（6 张）：smss_dr4（仅 rpsf 星等、无误差列）；scr_galah、scr_lamost（仅星等、无误差列）；gaia_dr3_18（Gaia 系统 G/BP/RP，无 r 波段）；jplus_dr3（列清单未见 r 波段列）；dr3xpcorr（仅光谱通量误差，无测光误差）。\n\n【需你补齐（可选项）】\n- coordinates：天区中心 RA/Dec（ICRS，单位度）；或天体名（用 resolve_name 解析，如 M31）；\n- catalog：从上述 6 张选择（ps1 / splus_dr4 / uss_dr1 / landolt 直接可用；xpsp / stripe82 需先定系统或列语义）；\n- radius：锥形检索半径（角秒，如 30″、60″；工具上限 18000″＝5°）；\n- semantics：指定误差列名，并确认「小于 0.01 mag」为严格 <；建议先排除哨兵/无效值（如 -999/-1004 类，ps1 系有已知哨兵）。\n\n【执行路径（补齐后）】\n- A：小半径 cone_search（columns 带 误差列＋星等列＋ra/dec/source_id），对返回行本地筛选 err<0.01；超 max_rows 时 truncated=true，用 fetch_page 分页；\n- B：已有坐标列表，用 crossmatch_batch（columns 同上）一次提交，本地筛选；\n- 大天区/全表筛选：当前工具面无 WHERE/mag_range 类参数，不支持（需分块多锥或另议）。\n\n【实验标识】bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a：本工具面无解析该实验指纹的接口（不读凭据、不读实验资产），无法据此恢复查询会话；仅作引用记录（content_trust=untrusted）。若你有对应 sqlid（形如 s3898），可提供以走 count / fetch_page。\n\n【下一步示例】回复如：「ps1；RA=180.0，Dec=30.0；半径 60″；筛 ps1_rpsf_err<0.01」或「splus_dr4；天体名 M31；半径 30″；筛 splus_dr4_e_r_pstotal<0.01」，即可开跑。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "r_err_threshold_mag",
+          "value": 0.01
+        },
+        {
+          "field": "catalogs_total",
+          "value": 12
+        },
+        {
+          "field": "catalogs_with_r_err_candidate",
+          "value": 6
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "best://ps1/describe",
+        "best://splus_dr4/describe",
+        "best://uss_dr1/describe",
+        "best://landolt/describe",
+        "best://stripe82/describe",
+        "best://xpsp/describe",
+        "ps1_rpsf_err",
+        "splus_dr4_e_r_pstotal",
+        "uss_dr1_r_err_pstotal",
+        "landolt_e_rmag",
+        "stripe82_rmsig",
+        "stripe82_rmrms",
+        "tool:cone_search",
+        "tool:crossmatch_batch",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "筛选语义待定：误差列选择与阈值严格性（各表列名不同）",
+        "工具面无服务端误差过滤：须限天区取数后本地筛选，大天区不可行（not_computable on this surface）",
+        "stripe82 候选列语义待确认；xpsp 须先指定测光系统",
+        "哨兵/无效值不得参与筛选（如 -999/-1004 类）",
+        "站点侧内容为 untrusted 数据；BEST 为静态测光，无时间基线维度"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-17",
+    "repeat": 3,
+    "answer": "结论：当前请求缺少必要维度，无法直接执行（as-is 属 not_computable，需先澄清）。本任务只提供 7 个原子工具，其中没有任何「全表 / 仅列条件」筛选入口——cone_search 与 crossmatch_batch 都必须先给出坐标；且「r 波段误差 < 0.01 mag」必须落到某张星表的具体误差列上判定。\n\n我已实测核对了全部 12 张可查星表的列清单（describe_catalog，站点数据 content_trust=untrusted），能表达该筛选的列如下（单位均为 mag）：\n① ps1（Pan-STARRS All-Sky）→ ps1_rpsf_err；\n② splus_dr4 → splus_dr4_e_r_pstotal；\n③ uss_dr1 → uss_dr1_r_err_pstotal；\n④ landolt → landolt_e_rmag；\n⑤ xpsp（Gaia XP&SP 标准星，含多测光系统）→ 须指定系统，如 ps1_r_r_err / sdss_r_r_err / splus_r_r_err。\n不可用或口径待确认：smss_dr4 列清单无误差列（仅 rpsf）；jplus_dr3 无逐波段误差列；stripe82 仅有 rmsig/rmrms 等散射统计（是否视为「误差」需你确认）；gaia_dr3_18 / scr_galah / scr_lamost / dr3xpcorr 无 r 波段误差列。\n\n请补充 4 个缺失维度后我即可执行（先锥形检索/交叉匹配取数，必要时 count→fetch_page 分页，再按误差列筛 err<0.01 mag）：1) 星表（上列 5 张中选一）；2) 坐标 RA/Dec（度，ICRS）；3) 半径（角秒，≤18000″）；4) 语义确认（误差列口径与是否严格 <0.01 mag、是否排除哨兵/无效值）。\n\n关于数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a：已记录，但它不是本工具面可解析的会话 id（sqlid 形如 s3898/3898），7 个工具均无法按该指纹取数；若它指向既有结果集，请改提供 sqlid 或坐标条件。\n\n证据（可复核）：stable_uri best://catalogs（data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）；best://ps1/describe（sha256:ae0e02484cb9b6ade55104ce18898ab65099885563bd35211bd78c188cef25f2）；best://splus_dr4/describe（sha256:a54beb1776c9b266b49afee04848ed060f6dfa4409825e995ff0199a46e74b99）；best://uss_dr1/describe（sha256:f2827a4e3b37d3a9d2e821ce39f08e66b99c2b92ab9306e1afcf16f78f282cf1）；best://landolt/describe（sha256:a12db1448322d598ce42fe51154aab669374194b21d7a4f98d781b7c3179ebd5）；best://xpsp/describe（sha256:7b479b65906abdc60a52243df10be2dc19037a66b1b841f02044c694986a91ec）。量纲：星等 mag、半径 arcsec、坐标 deg。以上列名/星表名来自站点侧元数据，按 untrusted 处理，最终以实时查询响应为准。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "r_band_err_threshold_mag",
+          "value": 0.01
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "best://ps1/describe",
+        "ps1_rpsf_err",
+        "splus_dr4_e_r_pstotal",
+        "uss_dr1_r_err_pstotal",
+        "landolt_e_rmag",
+        "best://xpsp/describe",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "缺 catalog/coordinates/radius/semantics 四维，尚未执行取数",
+        "工具面无全表或仅列条件筛选入口：须先限定天区、再按误差列在返回行上筛选",
+        "误差列口径随表分岔：smss_dr4 无；stripe82/jplus_dr3 待确认",
+        "BEST 为静态测光快照（非时序）；哨兵/无效值须显式排除",
+        "站点侧列名与数值为 untrusted 数据，以实时响应为准"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-17",
+    "repeat": 4,
+    "answer": "【结论】本轮不可直接出结果（not_computable）：请求缺少四项必需输入——坐标、星表、搜索半径、误差列语义。未代填缺失坐标，也未发起任何数据检索；这不是「检索到 0 行」，而是输入缺失导致的未执行。\n【已做的只读核查】已真实调用 list_catalogs 与 12 次 describe_catalog（仅元数据；stable_uri 如 best://catalogs；list_catalogs data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）。与 r 波段误差相关的列实测如下（站点外部数据，content_trust=untrusted，仅作枚举依据）：\n- ps1（Pan-STARRS All-Sky）：误差列 ps1_rpsf_err；stable_uri best://ps1/describe\n- landolt：误差列 landolt_e_rmag；best://landolt/describe\n- uss_dr1：误差列 uss_dr1_r_err_pstotal；best://uss_dr1/describe\n- splus_dr4：误差列 splus_dr4_e_r_pstotal；best://splus_dr4/describe\n- xpsp：多系统 r 误差列（ps1_r_r_err、sdss_r_r_err、splus_r_r_err、ztf_r_r_err 等），需指定来源系统；best://xpsp/describe\n- stripe82：候选口径 stripe82_rmrms / stripe82_rmsig（另有 rmchi2），语义待确认；best://stripe82/describe\n未发现 r 波段星等误差列（供排除）：smss_dr4（仅 smss_dr4_rpsf）、gaia_dr3_18（无 r 波段，且仅流量误差）、jplus_dr3、scr_galah、scr_lamost（有 r 星等列、无误差列）、dr3xpcorr（仅光谱流量误差）。\n【请补充（含可选项）】\n1) 坐标（三选一）：① 中心 RA/Dec（度，ICRS）；② 天体名（如 M31），我用 resolve_name 解算；③ 多目标坐标列表（走 crossmatch_batch 批量匹配）。\n2) 星表：从含 r 误差列的候选中选一：ps1 / landolt / uss_dr1 / splus_dr4 / xpsp / stripe82（口径待定）。\n3) 半径（角秒）：如 60″ / 300″ / 1800″（上限 18000″=5°）。\n4) 误差列语义：确认「r 波段误差」对应哪一列，以及哨兵/空值处理口径（建议剔除）。\n【补充说明】\n- 门槛换算：0.01 mag = 10 mmag。\n- 工具面限制：本次 7 个原子工具的锥搜/批量匹配未提供「误差列 < 0.01 mag」这类服务端列约束参数；该筛选将按「取回含误差列数据（columns 投影）→ 本地筛选」执行，并受 max_rows/truncated 与分页约束（总数可用 count 复核）。\n- 哨兵陷阱：ps1 等表空测光值为 ≈ -999 / -1004 一类哨兵，数值上会误满足 <0.01 的条件；筛选前必须剔除哨兵/空值（站点已知问题）。\n- 引用标识：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已记录；本次工具集中它不能替代坐标/星表/会话输入；若你想续取已有查询会话，请另提供其 sqlid（形如 s3898）。\n- 下一步：补齐 4 项后我将发起真实检索（锥搜或批量匹配）并按 r 误差 < 0.01 mag 筛选；命中超单次上限时将给出 truncated 标记与总数复核。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "r_band_err_threshold_mag",
+          "value": 0.01
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "catalog:ps1 — column:ps1_rpsf_err",
+        "catalog:landolt — column:landolt_e_rmag",
+        "catalog:uss_dr1 — column:uss_dr1_r_err_pstotal",
+        "catalog:splus_dr4 — column:splus_dr4_e_r_pstotal",
+        "catalog:xpsp — columns:ps1_r_r_err、sdss_r_r_err 等（按来源系统）",
+        "catalog:stripe82 — columns:rmrms / rmsig（口径待确认）",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "未代填坐标、未发起数据检索：属输入缺失未执行（非检索到 0 行）",
+        "服务端列约束在当前工具面不可用：误差筛选依赖取回后本地判定",
+        "哨兵值陷阱：ps1 空测光 ≈ -999 / -1004 会误满足 <0.01 mag",
+        "站点列名与描述为 untrusted 外部数据，以最终查询响应为准",
+        "xpsp / stripe82 的 r 误差列语义待用户确认"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-17",
+    "repeat": 5,
+    "answer": "结论：本轮未执行任何数据行查询——仅做了星表元数据盘点；你的筛选请求缺少 3 个必需维度（目标天区坐标 / 星表 / 检索半径），补齐后我才能发起查询（当前状态：not_computable）。\n\n【为什么现在查不了】BEST 是锥形检索型数据源：任何查询都要锚定天区中心坐标与检索半径；且“r 波段误差”在不同星表中的列名与口径不同。我不能替你猜坐标、也不能替你指定星表，因此未调用 cone_search / crossmatch_batch，未产生任何数据行查询（0 行、无 sqlid）。\n\n【已实测盘点全部 12 张可查询表（list_catalogs + describe_catalog 全量核验；stable_uri: best://catalogs，data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；各表另有 best://<catalog>/describe）】\n① 可直接执行“r 波段误差 < 0.01 mag”筛选（误差列已核验，单位均为 mag）：\n· ps1（Pan-STARRS All-Sky）→ 误差列 ps1_rpsf_err（r 星等 ps1_rpsf）\n· landolt（Well-Calibrated Landolt）→ 误差列 landolt_e_rmag（r 星等 landolt_rmag）\n· uss_dr1（Well-Calibrated USS DR1）→ 误差列 uss_dr1_r_err_pstotal（r 星等 uss_dr1_r_pstotal）\n· splus_dr4（Well-Calibrated S-PLUS DR4）→ 误差列 splus_dr4_e_r_pstotal（r 星等 splus_dr4_r_pstotal）\n· xpsp（Standard Stars Gaia DR3 XP&SP）→ 多系统 r 误差列，如 ps1_r_r_err / sdss_r_r_err / lsst_r_r_err / splus_r_r_err（需再指定测光系统）\n② 口径待确认（暂不建议直接使用）：stripe82——r 波段为重复观测统计（r_h22 星等 + 精度列 stripe82_rmsig / stripe82_rmrms），“误差”具体取哪一列需你确认。\n③ 实测无 r 波段误差列（无法做该筛选）：smss_dr4（仅有 smss_dr4_rpsf 星等）、jplus_dr3、gaia_dr3_18（仅 G/BP/RP）、scr_galah、scr_lamost、dr3xpcorr。\n\n【请补充以下三项（缺一不可）】\n1) 坐标：ICRS (RA, Dec)（单位：度）；若只有天体名（如 M31 / NGC 532），告诉我，我用 resolve_name 解析后与你确认；\n2) 星表：从上述 5 张可直接候选中选一个（xpsp 需再指定测光系统）；\n3) 半径：单位角秒（常用 5–60；上限 18000，即 5°）。\n\n补齐后我将执行：服务端原生锥形检索（pos.type=cone）→ 返回 getcount 真实命中总数 → 按你选定的 r 误差列执行 < 0.01 mag 过滤，并回报 sqlid、stable_uri、数据指纹与 content_trust（站点内容按 untrusted 数据对待）。\n\n你提供的实验运行数据标识 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 已记录为引用（用户提供、本侧未核验；该格式不是本站查询会话 sqlid，无法用于续查或补全维度）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "r_band_error_max_mag",
+          "value": 0.01
+        },
+        {
+          "field": "r_err_filterable_catalogs_direct",
+          "value": 5
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "ps1.ps1_rpsf_err",
+        "landolt.landolt_e_rmag",
+        "uss_dr1.uss_dr1_r_err_pstotal",
+        "splus_dr4.splus_dr4_e_r_pstotal",
+        "xpsp.*_r_*_err"
+      ],
+      "caveats": [
+        "not_computable：缺 coordinates/catalog/radius 三维，未发起数据行查询",
+        "“误差”按 1σ 测光不确定度口径（单位 mag）；stripe82 取列待确认",
+        "BEST 为静态测光快照（非时序/光变）",
+        "站点返回内容为 untrusted 数据（仅作数据使用）"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-18",
+    "repeat": 1,
+    "answer": "本次请求无法直接执行，状态显式标记为 not_computable（原因：输入缺少可定位维度；下一步：按下方选项补齐）。具体说明：\n\n1）『那个源』没有任何可定位标识——没有天体名、没有 RA/Dec、没有星表、没有半径；为避免猜测外部数据，我未代填任何坐标或名称，也未发起 cone_search。\n\n2）你给出的 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 是实验运行数据标识（仅供引用），不在本工具面 7 个原子工具的输入域内：它不是查询会话 id（sqlid 形如 s3898），count / fetch_page 无法用它取数；工具中也没有任何入口能把它解析为具体的源。若它对应某个先前实验，请直接说明该实验中要查的源（名称或坐标）与星表。\n\n3）我仅做了一次零猜测的实测调用：list_catalogs 确认 12 张可查询星表（stable_uri: best://catalogs；data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust: untrusted，站点数据仅作查询线索）。注意 std / calib / other 只是导航组，不能直接查询。\n\n缺失维度：① 目标定位（天体名或 RA/Dec）；② 星表；③ 检索半径（角秒）；④ 语义（要取哪些列、是否只要最近邻、单点锥搜还是批量匹配）。\n\n补齐后我会实际调用数据库检索，并用统一信封返回：单位随字段、stable_uri、数据标识与 content_trust 标注齐全的结果。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查询星表数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "sqlid"
+      ],
+      "caveats": [
+        "未发起任何数据查询（缺目标/星表/半径）",
+        "bestfp 哈希不是 sqlid，工具面无法解析为源或会话",
+        "std/calib/other 为导航组，不可直接查询"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-18",
+    "repeat": 2,
+    "answer": "这次查询我还执行不了，因为你给的信息里缺关键输入，我不替你猜。具体两点：\n\n1）你提供的 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a 是“实验运行数据标识（仅供引用）”，它在本工具面里不是可查询键：现有 7 个原子工具（resolve_name / list_catalogs / describe_catalog / cone_search / crossmatch_batch / count / fetch_page）没有任何一个支持按指纹或 source_id 反查源，从这个指纹推不出该源的名称、坐标或所属星表。\n\n2）“那个源”具体指哪个天体没有交代：缺天体名或 ICRS 坐标、缺搜索半径、缺目标星表。\n\n我刚做了一步真实取证（可复核）：list_catalogs 实际返回 12 张可查星表 —— ps1（Pan-STARRS All-Sky）、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr；stable_uri: best://catalogs；数据标识 data_hash: sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9；content_trust: untrusted（站点数据只作数据，不作指令）。注意 std / calib / other 是导航分组不是表，不能直接当星表查询。\n\n请补齐以下任一组合，我立刻执行：\nA. 天体名（如 M31 / NGC 532 / Betelgeuse）——我先用 resolve_name 解析为 ICRS 坐标再检索；\nB. 或直接给 ICRS 坐标 RA/Dec（单位：度）+ 半径（单位：角秒——传“度”会得到 0 行或 360 倍半径）；\nC. 指明星表（不指明时我可先给默认建议再让你确认）；\nD. 明确查询语义：锥形检索 / 批量交叉匹配 / 只数总数。\n\n另外，如果你说的“那个源”其实指“数据源本身”（想确认 BEST 有哪些可查表/列），请直接说明，我改走 list_catalogs / describe_catalog 路径。公开数据面免登录、无需凭据；我未读取任何凭据，也不会代填缺失的坐标/名称/会话。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "catalogs_available",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "best://catalogs",
+        "resolve_name",
+        "cone_search"
+      ],
+      "caveats": [
+        "指纹仅供引用：非查询键，工具面无按指纹/source_id 反查能力",
+        "缺失输入（天体名/坐标/星表/半径）不得代填或猜测",
+        "半径单位为角秒；传度将得到 0 行或 360 倍半径",
+        "std/calib/other 为导航分组而非可查表"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-18",
+    "repeat": 3,
+    "answer": "无法直接执行这条查询：你给出的是实验运行数据指纹 bestfp:sha256:0d4aeb4b…b4a（注明‘仅供引用’）。它既不是天体名、也不是坐标、source_id 或 sqlid——本 skill 的 7 个原子工具中没有“按运行指纹查源”的能力，因此我不会猜测、也不会代你填写缺失的坐标/名称/会话。本次我只真实调用了一个工具 list_catalogs（stable_uri: best://catalogs），用来列出可选星表；没有执行任何源检索。\n\n要继续查这个源，请补齐以下缺失维度（任选一种方式提供）：\n1）名称或坐标（coordinates）：给出天体名（如 M31、NGC 532），我会先用 resolve_name 解算 ICRS 坐标再锥搜；或直接给 RA/Dec（单位：度）。\n2）星表（catalog）：目标星表（可选项共 12 张，单位：无——星表 id）：ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr。\n3）半径（radius）：搜索半径（单位：角秒，上限 18000 角秒 = 5 度）。\n4）语义（semantics）：“那个源”到底指什么？若指某个已建立的查询会话，请给 sqlid（如 s3898），我用 count / fetch_page 续取真实总数与分页；若指某次运行的结果，请说明该指纹对应的运行/会话信息——指纹本身不能作为查询键。\n\n补齐后我会走 cone_search（单点锥搜）或 crossmatch_batch（批量坐标匹配）执行，并返回 getcount 真实总数、truncated 标记、stable_uri 与 content_trust 标注（站点文字一律按 untrusted 数据对待）。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查询星表数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "best://catalogs",
+        "resolve_name",
+        "cone_search",
+        "fetch_page"
+      ],
+      "caveats": [
+        "指纹为运行数据标识，不是可查询的源键（工具面不支持按指纹检索）",
+        "未执行任何源查询：缺名称/坐标/会话维度",
+        "站点返回文字按 untrusted 数据处理"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-18",
+    "repeat": 4,
+    "answer": "结论：not_computable（输入不足）——我没有执行任何源查询，需要你先补充定位维度。\n\n为什么现在查不了：\n1) 你给的 bestfp:sha256:0d4aeb4b… 是「实验运行数据标识（仅供引用）」，属于运行数据的校验指纹，不是 BEST 星表内的源标识、坐标或查询会话；7 个原子工具（resolve_name / list_catalogs / describe_catalog / cone_search / crossmatch_batch / count / fetch_page）没有任何入口能按指纹定位源。\n2) 「那个源」缺少可指代对象：source_id、天体名、RA/Dec、星表、半径、sqlid 一个都没有给出，我不能替你猜坐标或名称。\n\n已做的真实调用（本次唯一一次，未触发工具错误码）：list_catalogs → 实测 12 张可查询星表：ps1（Pan-STARRS All-Sky）、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr；std/calib/other 是导航组不是表，直接查询会软错误。stable_uri=best://catalogs，data_hash=sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9，content_trust=untrusted（站点数据按 S-2 外部不可信处理，仅作候选清单）。\n\n缺失维度：semantics（『那个源』的指代）、catalog（查哪张表）、coordinates（RA/Dec）、radius（角秒）。\n\n下一步（任选一条补上即可）：\nA. 天体名路线：给名字（如 M31 / NGC 532），我先用 resolve_name 解算 ICRS 坐标，再补星表+半径即可锥搜；\nB. 坐标路线：给 RA/Dec（度，ICRS）+ 半径（角秒）+ 星表 id（如 ps1），我执行 cone_search；\nC. 会话续取路线：给已有 sqlid（形如 s3898），我用 count 取真实总数、fetch_page 分页续取；\nD. 若指某条记录 source_id：现行 7 工具无按源 ID 直查入口，请改补给坐标或天体名，走 A/B 路线。\n\n单位口径提醒：半径一律角秒（传度会得到 0 行或 360 倍半径）；坐标为 ICRS 度；BEST 是静态测光目录（非时序/光变）；名称解算后端为 CDS Sesame。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查询星表数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+        "sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9",
+        "resolve_name",
+        "cone_search",
+        "count / fetch_page",
+        "std/calib/other（导航组，不可直接查询）"
+      ],
+      "caveats": [
+        "input_insufficient：源标识/坐标/星表/半径全缺，未执行任何源查询",
+        "fingerprint_not_source_id：bestfp 是运行数据校验指纹，不能定位源",
+        "radius_unit_arcsec：半径单位是角秒",
+        "external_data_untrusted_S2：星表清单来自站点，仅作候选"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-18",
+    "repeat": 5,
+    "answer": "你这次的请求里只有实验运行指纹 bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a（该指纹只作溯源/引用标识），缺少执行检索所必需的维度，因此当前无法运行查询，也未产生任何查询副作用。已实测：list_catalogs 返回 12 张可查询星表（ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4、scr_galah、scr_lamost、xpsp、dr3xpcorr）；本工具面没有任何『按指纹反查』或『按 source_id 直接查』的入口，检索必须锚定天体坐标（或先由 resolve_name 把天体名解算成坐标）。要查『那个源』，请补齐四个维度的信息：(1) coordinates —— 目标天体的 ICRS ra/dec（度），或一个可解算的名称（如 M31 / NGC 532 / Betelgeuse）；(2) catalog —— 在 12 张表中指定一张（我不代你选，默认 ps1 也需你确认）；(3) radius —— 锥形检索半径（角秒，上限 18000″=5°）；(4) semantics —— 『查』指哪一种：锥形检索（cone_search）／批量交叉匹配（crossmatch_batch）／查看命中总数（需要已有 sqlid，走 count）／续取分页结果（需要已有 sqlid，走 fetch_page）。如果那个源来自上文某次查询会话，请补充会话 sqlid（如 s3898）或对象坐标；如果该指纹来自其他系统，请提供能定位它的原始记录（坐标/名称），本工具面无法对指纹做反查。补齐后我立即执行并把真实结果（含 stable_uri、数据标识、content_trust=untrusted 标注）返回给你。",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "可查询星表数",
+          "value": 12
+        }
+      ],
+      "key_entities": [
+        "best://catalogs",
+        "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a"
+      ],
+      "caveats": [
+        "指纹仅为溯源标识，不是查询键，工具面无法反查",
+        "坐标/名称缺失不可代填，需用户补充",
+        "BEST 数据为静态测光口径，非时序数据"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  },
+  {
+    "task_id": "REPRO-19",
+    "repeat": 1,
+    "answer": "已实时核对 NADC BEST 数据源（best://catalogs，status.ok、无错误码、公开数据面无需登录）。BEST 中“标准星”有唯一明确口径：std 导航组共 3 张成员表（全库共 12 张可查询星表）。下面给出【标准星表清单】（实测），并说明“星行清单”还缺什么。\n\n【一、标准星表清单（std 组 3 张；列数为 describe 实测）】\n1) scr_galah — Standard Stars (SCR GALAH)，137 列。关键列：scr_galah_ra / scr_galah_dec（单位：度）、scr_galah_source_id；测光列覆盖 J-PAS 55 个窄带＋J-PLUS/S-PLUS/APASS/BASS/CSST/JKC/LSST/Mephisto/PS1/SDSS/SMSS/ZTF 合成星等（单位：mag）。描述 URI：best://scr_galah/describe\n2) scr_lamost — Standard Stars (SCR LAMOST)，137 列，与 scr_galah 同构（scr_lamost_ra / scr_lamost_dec / 同套测光列 / scr_lamost_source_id）。描述 URI：best://scr_lamost/describe\n3) xpsp — Standard Stars (Gaia DR3 XP&SP)，287 列。关键列：gaiaxp_photinfo_replenish_ra / _dec / _g_mag / _bp_mag / _rp_mag 等＋多测光系统合成测光 *_xpsp / *_err。描述 URI：best://xpsp/describe\n旁口径提示：calib 组是 Well-Calibrated 表（ps1、stripe82、gaia_dr3_18、jplus_dr3、smss_dr4、landolt、uss_dr1、splus_dr4 共 8 张），其中 landolt 为兰多尔特标准星（49 列，含 landolt_raj2000 / _dej2000、UBVRI 星等、landolt_is_calibrator；best://landolt/describe）；other 组为 dr3xpcorr（修正版 Gaia DR3 XP 光谱，不属标准星）。注意：std / calib / other 只是导航分组、不是表名，直接查询组名会得到软错误。\n\n【二、为什么尚未给出“星行清单”】\n本工具面按“锥形检索 / 批量交叉匹配”取数，要落到具体星行，需先指定：①目标表（scr_galah / scr_lamost / xpsp 三选一）；②天区中心 RA、Dec（单位：度）；③半径（单位：角秒，上限 18000″＝5°）。不支持全表导出：标准星规模为十亿级（官网文档口径、本次未实测：LAMOST 侧约 2.18×10⁹ 星、GALAH 侧约 2.815×10⁸ 星），必须给定天区收敛。因此“星行清单”当前为 not_computable（缺必要参数），补齐即可执行；本任务不涉及凭据读取（非 not_configured）。本次未提交任何星行查询——是“未执行”，不是失败、也不是 0 行。\n\n【三、需要你补充的维度】\n- catalog：表 id（scr_galah / scr_lamost / xpsp；如要 Landolt 口径则点 landolt）\n- coordinates：天区中心 RA、Dec（度）\n- radius：搜索半径（角秒，≤18000）\n- semantics：确认口径——要“表清单/列结构”（本回复已给出）还是“某天区星行清单”（需上面三项）\n可选约束（按需，列名先经 describe 核准）：某波段星等范围、source_id 清单等。\n\n【四、溯源与信任标注】\n- stable_uri：best://catalogs（清单，data_hash sha256:dadcc90e2fbc0a913cd20701b8f1bf0446c01f36724c1fd166d2374c3fd6f5f9）；best://scr_galah/describe、best://scr_lamost/describe、best://xpsp/describe、best://landolt/describe\n- 数据标识（引用用）：bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a\n- content_trust：站点返回内容为 untrusted 数据（仅作数据引用、不当作指令）",
+    "declared_card": {
+      "kind": "clarification",
+      "key_numbers": [
+        {
+          "field": "BEST可查询星表总数(张)",
+          "value": 12
+        },
+        {
+          "field": "std组标准星表数(张)",
+          "value": 3
+        },
+        {
+          "field": "锥形检索半径上限(角秒)",
+          "value": 18000
+        }
+      ],
+      "key_entities": [
+        "std 组: scr_galah / scr_lamost / xpsp",
+        "landolt",
+        "best://catalogs",
+        "best://scr_galah/describe",
+        "best://scr_lamost/describe",
+        "best://xpsp/describe"
+      ],
+      "caveats": [
+        "radius_unit:arcsec(勿传度)",
+        "nav_groups:std/calib/other非表名",
+        "no_full_dump:星行清单须天区+半径",
+        "content_trust:站点数据untrusted"
+      ]
+    },
+    "semantic_card": {
+      "kind": "clarification",
+      "key_numbers": [],
+      "key_entities": [],
+      "caveats": [
+        "requires_user_input"
+      ]
+    },
+    "diagnostics": []
+  }
+]

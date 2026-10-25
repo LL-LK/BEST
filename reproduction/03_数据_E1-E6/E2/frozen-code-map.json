@@ -1,0 +1,23 @@
+{
+  "<REPO_ROOT>\\evals\\groundtruth\\frozen_runner.py": "code/evals/groundtruth/frozen_runner.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\frozen_transport.py": "code/evals/groundtruth/frozen_transport.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\canonical.py": "code/evals/groundtruth/canonical.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\gold\\gen_gold.py": "code/evals/groundtruth/gold/gen_gold.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\gold\\gold_algorithms.py": "code/evals/groundtruth/gold/gold_algorithms.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\gold\\gold_dictionaries.py": "code/evals/groundtruth/gold/gold_dictionaries.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\__init__.py": "code/evals/groundtruth/metrics/__init__.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m1_rows.py": "code/evals/groundtruth/metrics/m1_rows.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m2_fields.py": "code/evals/groundtruth/metrics/m2_fields.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m3_units.py": "code/evals/groundtruth/metrics/m3_units.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m4_structure.py": "code/evals/groundtruth/metrics/m4_structure.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m5_states.py": "code/evals/groundtruth/metrics/m5_states.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m6_version.py": "code/evals/groundtruth/metrics/m6_version.py",
+  "<REPO_ROOT>\\evals\\groundtruth\\metrics\\m7_determinism.py": "code/evals/groundtruth/metrics/m7_determinism.py",
+  "<REPO_ROOT>\\src\\client.py": "code/src/client.py",
+  "<REPO_ROOT>\\src\\protocol.py": "code/src/protocol.py",
+  "<REPO_ROOT>\\src\\query_builder.py": "code/src/query_builder.py",
+  "<REPO_ROOT>\\docs\\E2-RERUN-PROTOCOL-v2-2026-10-11.md": "code/docs/E2-RERUN-PROTOCOL-v2-2026-10-11.md",
+  "<USER_HOME>\\Desktop\\论文\\e2和e5重构计划\\过程审计与产物_2026-10-11\\process-artifacts\\e2-v2-confirmatory\\prepare_assets.py": "operations/prepare_assets.py",
+  "<USER_HOME>\\Desktop\\论文\\e2和e5重构计划\\过程审计与产物_2026-10-11\\process-artifacts\\e2-v2-confirmatory\\freeze_prereg.py": "operations/freeze_prereg.py",
+  "<USER_HOME>\\Desktop\\论文\\e2和e5重构计划\\过程审计与产物_2026-10-11\\process-artifacts\\e2-v2-confirmatory\\execute_e2_v2.py": "operations/execute_e2_v2.py"
+}

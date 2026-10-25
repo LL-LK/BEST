@@ -1,0 +1,185 @@
+{
+  "best_data": {
+    "method": "five_live_cones_plus_counts",
+    "fingerprint_before": "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+    "before_path": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/canary/preparation/before/canary.json",
+    "all_probes_valid": true,
+    "after_gate": "per_lane_append_only"
+  },
+  "skill": {
+    "fingerprint": "sha256:6e1de5270a828853dcf4e78ce0f7fff3d757b462d4761fe0802420aa44d6e2bd",
+    "scan_roots": [
+      "src",
+      "ops",
+      "evals",
+      "contracts",
+      "references",
+      "static",
+      "agents",
+      "SKILL.md",
+      "README.md",
+      "architecture.md",
+      "manifest.yaml"
+    ],
+    "materials": {
+      "SKILL.md": "sha256:665feb9e9c6cc6cc74a4b1f73aed1d5fa9a7b2ddaab03b70c75af04207b976d9",
+      "README.md": "sha256:91035cfd5c105c4275e7932f9d01922c663d67a1d6f836aa6787a967c2638e29",
+      "manifest.yaml": "sha256:6fdeb1437c3641c793bf5760246a9363a297be9d0e3f208041ae0f1a5b23750f",
+      "architecture.md": "sha256:2115b669107826ed85cb0efb05e280a1a2897205b2d9c4f6540bd2e21b90d082",
+      "contracts/io-contract.md": "sha256:ac99ec9017449f2b93c9c5af40e0eba7c2f8b122590da8b9b66b577db903b2a9",
+      "static/core/stance.md": "sha256:b1b18d0615cace91a12a75d7969455e223b655560d849caf1ec36493b21934bd",
+      "static/core/workflow.md": "sha256:1f3f296260eb7d36f41657d4f43d95024a2799281c80b77f52b91f585834c66e",
+      "static/core/output-format.md": "sha256:d2fe4902786a7506a92b696b439b4e3fc56c8448d642d1b547c4535fbd8ce51f",
+      "agents/openai.yaml": "sha256:acac7562d85082e96b83a2ec41a6fcdc8137c9c3776c4742c18069e51ea23536",
+      "references/llms.txt": "sha256:2f44cb4067e28d6c20cf0142a50528831f99527e5c3b44f10f6c65f8e8619768",
+      "references/tools.schema.json": "sha256:deb4ea8723e61ca090193dbf3308dc99ed053370aed7ec4cf65ca19ec8efa0d9",
+      "rag/knowledge/domain_rules.yaml": "sha256:0838b8616c3c60fc3b0df70b705bb18ac8cd9647bec404334033bfd90771844c",
+      "rag/knowledge/known_issues.yaml": "sha256:20fb4905cb976ea6428b5a3afb5a51a9c95655287b8f940557938d20d8f89032",
+      "references/photometric-systems.md": "sha256:998dafd55d96c35e96f683d0b4d7086e3d7b886455a7812912c045853ba7145a"
+    }
+  },
+  "model": {
+    "requested": "deepseek-flash",
+    "returned_preflight": "deepseek-flash",
+    "provider": "configured_third_party",
+    "endpoint": "https://api.deepseek.com/responses",
+    "weights_snapshot_date": "opaque"
+  },
+  "system_prompt": {
+    "fingerprint": "sha256:768689527513a67472ee66a06634bfc3a775ad8952f5ff7111903bccfee90a50",
+    "bytes": 102912,
+    "file": "frozen/system-prompt.txt"
+  },
+  "tool_schema": {
+    "code_side": "sha256:deb4ea8723e61ca090193dbf3308dc99ed053370aed7ec4cf65ca19ec8efa0d9",
+    "mcp_tools_list": "sha256:de4b86f72de1c3b42c5355db4a559cc08d822705e1c7cfe47bfce754ccf0ad36",
+    "function_tools": "sha256:876f556ff5442299f2078f6353374db091615bd1221f86cd5d450cbf7775114c"
+  },
+  "eval_data": {
+    "task_set_fp": "sha256:86a37f526c07f372f8787c7f76e3b25765f6d87a1ee4ef08de96dc878b74cb0f",
+    "task_files": {
+      "evals/repro/tasks/REPRO-01.yaml": "sha256:56b55c935a3f6e68cb7e557c3da68c0206c222e4218a460aee8d027668addae1",
+      "evals/repro/tasks/REPRO-02.yaml": "sha256:9e28ff2e970103624c74c4e8bf88f589bdacb83fe656bed42b11416a4eecbb02",
+      "evals/repro/tasks/REPRO-03.yaml": "sha256:b963c1237d104aefad3633b956d6d8c719a968beff35f7001991a6fd6ad494e7",
+      "evals/repro/tasks/REPRO-04.yaml": "sha256:22cddb95144afcb812993375762cd3b7ca67c411b05fe3830b740bd1197a6366",
+      "evals/repro/tasks/REPRO-05.yaml": "sha256:2ac31a3d29c00daf1dfac38aff367c6270b22fff7b9c887301728c2c56752303",
+      "evals/repro/tasks/REPRO-06.yaml": "sha256:92c28ff59f2d8e4ff50d99a1f7fac8883ef38056665be8678c000ba937be0049",
+      "evals/repro/tasks/REPRO-07.yaml": "sha256:e733476fa725142cd85e4fd9ca411635b6bf726f5056db796d623f25e77b2d77",
+      "evals/repro/tasks/REPRO-08.yaml": "sha256:431b413e24bcd8113aa6082174f8f9930c52972241543d0c9578f4f31d07d3c0",
+      "evals/repro/tasks/REPRO-09.yaml": "sha256:188726f3fd43f8a43d22dd05a0b47121c95279d4c31a9e7a897e57f76a0532a3",
+      "evals/repro/tasks/REPRO-10.yaml": "sha256:04097b85f30a7c57f390ccaaa7a42a9c8601cb10266878d6154c4414b4fda301",
+      "evals/repro/tasks/REPRO-11.yaml": "sha256:bdbe6626a8bb7153d91703d837d2f9f1b6a08cf5d32f198d32761716e8961a41",
+      "evals/repro/tasks/REPRO-12.yaml": "sha256:2b79b60040c0aa754f85173b9a65e27e2f2ac2c96d46d5762f048e280f9e6421",
+      "evals/repro/tasks/REPRO-13.yaml": "sha256:33a4b8d27f6b240f889ac1662285467a3c6796ce83ae95ce3c1e12ca098d1512",
+      "evals/repro/tasks/REPRO-14.yaml": "sha256:30d15efd94c4c1e25f5f8e09b9466b3050264ea2dfe8498341f81ac6f3649103",
+      "evals/repro/tasks/REPRO-15.yaml": "sha256:c6e10feec0fb9d2713fbfced4c7766ce5cfaa334bc04418b8b5da2b0092bbe6d",
+      "evals/repro/tasks/REPRO-16.yaml": "sha256:02dffc421b861ab9955b3768dfb7e65dc7a3620ffad4fdd38600a69edffa2bb8",
+      "evals/repro/tasks/REPRO-17.yaml": "sha256:b9d8e46049036a14992e782a9e0d1512c47f4ba25550facda41a042784bae4f4",
+      "evals/repro/tasks/REPRO-18.yaml": "sha256:3a5c0bd9f8c3e65bceb142966ead2ce9bf46ae0a5fc6a716a35c324e63251f57",
+      "evals/repro/tasks/REPRO-19.yaml": "sha256:f153821931ca95cf1a2cf5d0ec77944f0214d8d6750e30bd9558d51cb4dffbab",
+      "evals/repro/tasks/REPRO-20.yaml": "sha256:ee3ed13f8ed9c9d4e0dbd4230a5d04b330ad426d9a35f477fd1f8675b3a61f8a",
+      "evals/repro/tasks/REPRO-21.yaml": "sha256:56c1b416fdde7d227387adfc15aec32f948fbda52cc4d9fb0e9d01f0976be2a3",
+      "evals/repro/tasks/REPRO-22.yaml": "sha256:03c5350490d6cf1dcce0426185d938ed35e1864b9372c604fb8c11b8b91089de",
+      "evals/repro/tasks/REPRO-23.yaml": "sha256:62d983223ac6b654f02da9e214b9a9adf4a367e1d5d4307133347ce7e81be8e8",
+      "evals/repro/tasks/REPRO-24.yaml": "sha256:32a76a7a4e5c2888046413c61f6241f5440436dd3a2eaf111129f1e4314cec7a",
+      "evals/repro/tasks/REPRO-25.yaml": "sha256:017b167687cf934e848c6b6d4c9b8f9fe23f96dd7a30fd877d4fe891dbeb3803",
+      "evals/repro/tasks/REPRO-26.yaml": "sha256:f96aa7142f6143dae7128e9db766b644421fb66c94437c8083805ad865d54226",
+      "evals/repro/tasks/REPRO-27.yaml": "sha256:ebb29c78493383ceca2bde965337ce6ea086614f8674f77344f9385440576813",
+      "evals/repro/tasks/REPRO-28.yaml": "sha256:2048ecb4a6aa341c16ca13f8c243dd62be518128dce1bef6b02caa4d220f49f9",
+      "evals/repro/tasks/REPRO-29.yaml": "sha256:1e0e69a26ae465df9cafde0737a084d10f9100dcc6cd6296f5d53df171b90623",
+      "evals/repro/tasks/REPRO-30.yaml": "sha256:dbf51e5659fbbaca7e8d6f12e8292bd11080e76041193dc64521262d0d7c0030",
+      "evals/repro/tasks/REPRO-31.yaml": "sha256:89a20af9059e1b81c2a857e9f03f880dab2fa8a01e0596fedbc12be8e3f0c2cc",
+      "evals/repro/tasks/REPRO-32.yaml": "sha256:5873cef3d220b3e2eac0094d655497d1f422e672270afd704fedcf7160522c16"
+    },
+    "total": 32,
+    "snapshot_status": "freeze_after_R1_before_R3",
+    "snapshot_manifest": "snapshot_manifest.json",
+    "relative_time_tasks": [
+      "REPRO-22"
+    ],
+    "context_policy": "original_utterance_only_no_invented_context"
+  },
+  "sampling": {
+    "actual_request_parameters": {
+      "model": "deepseek-flash",
+      "store": false,
+      "max_output_tokens": 32768,
+      "reasoning": {
+        "effort": "max"
+      }
+    },
+    "temperature": null,
+    "temperature_sent": false,
+    "seed": {
+      "requested": null,
+      "honored": false
+    },
+    "top_p": {
+      "requested": null,
+      "honored": false
+    }
+  },
+  "execution": {
+    "prepared_at": "2026-10-11T11:27:51.029036+08:00",
+    "timezone": "Asia/Shanghai",
+    "repeat": 5,
+    "pilot": [
+      "REPRO-01",
+      "REPRO-03",
+      "REPRO-04",
+      "REPRO-07",
+      "REPRO-11",
+      "REPRO-15",
+      "REPRO-27",
+      "REPRO-28",
+      "REPRO-30",
+      "REPRO-32"
+    ],
+    "lanes": [
+      "R3"
+    ],
+    "R2": "not_applicable_to_R3_only_supplement",
+    "systems": [
+      "E6-full-skill-seven-tools"
+    ],
+    "max_model_turns": 16,
+    "original_batch": "E6-20261007-1791350994158084000",
+    "supplementary_cohort": true
+  },
+  "environment": {
+    "python": "3.14.7",
+    "packages_fp": "sha256:2b0126bf54133cca941312dc0ba06d4376fa4fb6d85346bb950ba8912e1d3d4a",
+    "rate_limit_R1": 2.0,
+    "rate_limit_R3": 0.0,
+    "concurrency": 1,
+    "http_cache": false,
+    "proxy_present": false,
+    "best_api_token_present": false
+  },
+  "collection_code": {
+    "files": {
+      "common_e6.py": "sha256:c32460e0a1e69ab7af88bd16963e9ebd8b5a1e395cbaceb231025fe99cfea37e",
+      "model_e6.py": "sha256:cc0e7ba67592e74bc5e082ebffb35794f4b003e7d1ffa2472c57c0f024244f12",
+      "trace_e6.py": "sha256:1c7e802dd5b4de7c023fedd0cac22902d5c89f9637d1362a8ed2567e2b34ec4a",
+      "transport_e6.py": "sha256:8f89f1128026a201db8f4aaa391e11ed3b2489cc4a4cfef3fe9f7089b9d8f52f",
+      "run_e6_formal.py": "sha256:2b23995d4185c0a1a4aade050d7702bd2a0094eac9d31b246271527846b437ba",
+      "prepare_e6.py": "sha256:f159ba2feaf8d0537431f177824968bf80e9ec7958b92a9306f1f62945b0e439",
+      "r0_e6.py": "sha256:502fab89fe45227cc422da62663352fe8d1d7d8f78a79218c8962aad91533354",
+      "snapshot_diagnostics_e6.py": "sha256:aeecad6107bd92fa14657beb78868c221cfbbfc00b80f870b803222c25c92bd2"
+    },
+    "fingerprint": "sha256:94f35efb085bbd841f954075abe0c2ab168fbda5cf37ec03dc00484ce904d8ba"
+  },
+  "protocol_deviations": [
+    "temperature 未发送不能声称固定，原协议门禁 FAIL",
+    "REPRO-22 过去五年是相对时间，原任务标记 false 错误；保留原题并记门禁 FAIL",
+    "R0 原固化调用仅18/32，不扩写预设调用冒充全覆盖",
+    "缺上下文任务按原题测澄清；不能宣称其预期网络场景已触发",
+    "REPRO-29题面成功解析M31，不覆盖失败哨兵；REPRO-27实际命中是否跨页以实测为准",
+    "R3沿用快照概念但原E2路由会给未记录页返回空表，本临时扩展严格语义匹配且缺分支失败关闭",
+    "trace扩展network_exchange；凭据词本身不当原文密钥，脱敏依据真实凭据和敏感字段",
+    "服务商权重快照 opaque，不宣称锁定；仅观察请求参数及实际回包模型",
+    "R1/R3模型输入数据标识保持相同；R3真实快照身份另列trace/清单，不把同canary标签误说为在线访问",
+    "快照协议诊断可保存真实哨兵/软404/分页，不作agent任务成绩或新对照组",
+    "规则语义卡只比较原任务核心事实，附加解释不用于主FCC；生成端声明卡另作机器对照"
+  ]
+}

@@ -1,0 +1,28 @@
+case_id: boundary_pole_dec
+category: boundary
+snapshot_id: syn_pole_boundary
+main_metrics:
+- M1
+- M3
+query:
+  catalog: ps1
+  ra: 0.0
+  dec: 90.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+notes: '金标准: dec=90 合法 (合法域含端点), 本快照落在锥内的行全部应判进, 逐行期望以 gold/boundary_pole_dec.json
+  的 row_keys / field_values 为准 (换素材前按 syn 快照 的 BEST_SYN_* 行键写了个案, 那些行已退役, 不再复述)。天极几何要点:
+  cos(dec)→0 时 RA 差的贡献趋零 —— 本快照的 RA 跨度很大而 dec 全部贴近 90°, 行却 仍全部在 60" 内, 若被测在天极附近对 RA
+  差做线性近似会显著虚增角距 (M1/M3 量纲探针: 角距非负、坐标不越界)。GT 一律用 wrap-safe 的独立 haversine, 复算过程写入审核清单
+  (angular_distance_arcsec)。
+
+  '
+gold_focus: 天极几何 (cos(dec)→0, RA 差贡献趋零) + 60" 半径含等号判定

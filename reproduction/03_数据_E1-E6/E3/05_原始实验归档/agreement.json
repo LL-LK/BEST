@@ -1,0 +1,6 @@
+{
+  "status": "pending",
+  "note": "当前对话助手直接主评，独立天文专家复核待完成",
+  "agreement": null,
+  "reason": "未收到独立专家评分，不能计算AC1、α、ICC或加权κ"
+}

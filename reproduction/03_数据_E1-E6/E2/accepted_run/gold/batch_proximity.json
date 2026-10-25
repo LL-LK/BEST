@@ -1,0 +1,180 @@
+{
+  "gold_id": "gold_batch_proximity",
+  "case_id": "batch_proximity",
+  "snapshot_id": "sha256:23202aba6e8635422d873f8ea132ce30c8633dbeac1bc93561911cb80b40a2a5",
+  "data_version": "ps1@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:c01c73ed9b463616bf6ae17f977a24266bbd63057df180307687c3a55a3d07a6"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_ps1_proximity_n3_5d2580ec/rows_full.csv",
+  "max_rows": 50000,
+  "key_field": "input_index:source_id",
+  "row_keys": [
+    "in0:179.999041540,29.999727280",
+    "in1:180.001102570,29.999453560",
+    "in2:180.000408140,29.998951750"
+  ],
+  "row_count": 3,
+  "field_values": {
+    "in0:179.999041540,29.999727280": {
+      "ps1_ra": {
+        "v": 179.99904154,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99972728,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8802043547206"
+      }
+    },
+    "in1:180.001102570,29.999453560": {
+      "ps1_ra": {
+        "v": 180.00110257,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99945356,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8803005565208"
+      }
+    },
+    "in2:180.000408140,29.998951750": {
+      "ps1_ra": {
+        "v": 180.00040814,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99895175,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8802348337593"
+      }
+    }
+  },
+  "field_values_sampled": false,
+  "null_semantics": {
+    "in0:179.999041540,29.999727280": {
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null"
+    },
+    "in1:180.001102570,29.999453560": {
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null"
+    },
+    "in2:180.000408140,29.998951750": {
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null"
+    }
+  },
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "ps1_ra": "deg",
+    "ps1_dec": "deg",
+    "ps1_rpsf": "mag"
+  },
+  "precision_map": {
+    "ps1_ra": 3,
+    "ps1_dec": 3,
+    "ps1_rpsf": 3
+  },
+  "ordering": {
+    "key": "input_index",
+    "order": "asc",
+    "declared": true,
+    "sequence": [
+      "in0:179.999041540,29.999727280",
+      "in1:180.001102570,29.999453560",
+      "in2:180.000408140,29.998951750"
+    ],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "note": "proximity 批量一次响应不分页, 分页指标记 N/A"
+  },
+  "truncation": {
+    "expected_total": 3,
+    "expected_truncated": false,
+    "expected_returned": 3
+  },
+  "result_state": "rows",
+  "batch_inputs": [
+    {
+      "input_index": 0,
+      "input_ra": 180.0,
+      "input_dec": 30.0,
+      "matched_key": "179.999041540,29.999727280",
+      "separation_arcsec": 3.1453417978426845,
+      "candidates": 3
+    },
+    {
+      "input_index": 1,
+      "input_ra": 180.0011,
+      "input_dec": 29.9995,
+      "matched_key": "180.001102570,29.999453560",
+      "separation_arcsec": 0.1673758947982568,
+      "candidates": 3
+    },
+    {
+      "input_index": 2,
+      "input_ra": 180.0004,
+      "input_dec": 29.999,
+      "matched_key": "180.000408140,29.998951750",
+      "separation_arcsec": 0.17554414429937726,
+      "candidates": 3
+    }
+  ],
+  "dist_cross_check": [],
+  "notes": ""
+}

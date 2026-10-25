@@ -1,0 +1,184 @@
+{
+  "scope": "post-run descriptive diagnosis, not new confirmatory inference; overlapping failed checks are not additive",
+  "primary": {
+    "paired_task_count": 56,
+    "nonzero_task_differences": 19,
+    "positive_tasks": 13,
+    "negative_tasks": 6,
+    "tied_tasks": 37,
+    "common_all_success_tasks": 15,
+    "common_all_failure_tasks": 15,
+    "net_additional_success_cells": 12,
+    "delta": 0.07142857142857142,
+    "task_difference_sd": 0.28222983480433045,
+    "task_difference_standard_error": 0.03771454807727186,
+    "exact_sign_flip_p_independently_recomputed": 0.08848190307617188,
+    "bootstrap_ci_from_frozen_analysis": [
+      0.0,
+      0.1488095238095238
+    ]
+  },
+  "by_arm": [
+    {
+      "arm": "B0",
+      "units": 168,
+      "rule_successes": 29,
+      "rule_rate": 0.17261904761904762,
+      "incomplete_session_check": 5,
+      "final_json_failures": 107,
+      "reference_integrity_failures": 107,
+      "first_decision_failures": 130
+    },
+    {
+      "arm": "B1",
+      "units": 168,
+      "rule_successes": 44,
+      "rule_rate": 0.2619047619047619,
+      "incomplete_session_check": 18,
+      "final_json_failures": 107,
+      "reference_integrity_failures": 107,
+      "first_decision_failures": 118
+    },
+    {
+      "arm": "B2a",
+      "units": 168,
+      "rule_successes": 82,
+      "rule_rate": 0.4880952380952381,
+      "incomplete_session_check": 38,
+      "final_json_failures": 42,
+      "reference_integrity_failures": 42,
+      "first_decision_failures": 70
+    },
+    {
+      "arm": "B2b",
+      "units": 168,
+      "rule_successes": 83,
+      "rule_rate": 0.49404761904761907,
+      "incomplete_session_check": 23,
+      "final_json_failures": 31,
+      "reference_integrity_failures": 32,
+      "first_decision_failures": 58
+    },
+    {
+      "arm": "B3",
+      "units": 168,
+      "rule_successes": 95,
+      "rule_rate": 0.5654761904761905,
+      "incomplete_session_check": 23,
+      "final_json_failures": 31,
+      "reference_integrity_failures": 33,
+      "first_decision_failures": 45
+    },
+    {
+      "arm": "A1",
+      "units": 168,
+      "rule_successes": 89,
+      "rule_rate": 0.5297619047619048,
+      "incomplete_session_check": 21,
+      "final_json_failures": 27,
+      "reference_integrity_failures": 29,
+      "first_decision_failures": 41
+    },
+    {
+      "arm": "A2",
+      "units": 168,
+      "rule_successes": 91,
+      "rule_rate": 0.5416666666666666,
+      "incomplete_session_check": 20,
+      "final_json_failures": 24,
+      "reference_integrity_failures": 25,
+      "first_decision_failures": 47
+    },
+    {
+      "arm": "A3",
+      "units": 168,
+      "rule_successes": 90,
+      "rule_rate": 0.5357142857142857,
+      "incomplete_session_check": 18,
+      "final_json_failures": 24,
+      "reference_integrity_failures": 24,
+      "first_decision_failures": 50
+    },
+    {
+      "arm": "A4",
+      "units": 168,
+      "rule_successes": 93,
+      "rule_rate": 0.5535714285714286,
+      "incomplete_session_check": 18,
+      "final_json_failures": 26,
+      "reference_integrity_failures": 27,
+      "first_decision_failures": 49
+    },
+    {
+      "arm": "A5",
+      "units": 168,
+      "rule_successes": 98,
+      "rule_rate": 0.5833333333333334,
+      "incomplete_session_check": 17,
+      "final_json_failures": 22,
+      "reference_integrity_failures": 23,
+      "first_decision_failures": 43
+    },
+    {
+      "arm": "A6",
+      "units": 168,
+      "rule_successes": 89,
+      "rule_rate": 0.5297619047619048,
+      "incomplete_session_check": 21,
+      "final_json_failures": 28,
+      "reference_integrity_failures": 28,
+      "first_decision_failures": 47
+    },
+    {
+      "arm": "sham",
+      "units": 168,
+      "rule_successes": 91,
+      "rule_rate": 0.5416666666666666,
+      "incomplete_session_check": 14,
+      "final_json_failures": 25,
+      "reference_integrity_failures": 26,
+      "first_decision_failures": 46
+    }
+  ],
+  "categories": [
+    {
+      "category": "clarification",
+      "tasks": 7,
+      "units_per_arm": 21,
+      "B3_successes": 8,
+      "B2b_successes": 6,
+      "net_successes": 2,
+      "rate_difference": 0.09523809523809523
+    },
+    {
+      "category": "data",
+      "tasks": 11,
+      "units_per_arm": 33,
+      "B3_successes": 19,
+      "B2b_successes": 22,
+      "net_successes": -3,
+      "rate_difference": -0.09090909090909091
+    },
+    {
+      "category": "refusal",
+      "tasks": 32,
+      "units_per_arm": 96,
+      "B3_successes": 63,
+      "B2b_successes": 53,
+      "net_successes": 10,
+      "rate_difference": 0.10416666666666667
+    },
+    {
+      "category": "semantic",
+      "tasks": 6,
+      "units_per_arm": 18,
+      "B3_successes": 5,
+      "B2b_successes": 2,
+      "net_successes": 3,
+      "rate_difference": 0.16666666666666666
+    }
+  ],
+  "observed_power_computed": false,
+  "original_scores_changed": false,
+  "trials_added": 0
+}

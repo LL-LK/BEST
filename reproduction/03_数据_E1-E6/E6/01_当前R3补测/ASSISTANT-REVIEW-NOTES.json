@@ -1,0 +1,45 @@
+{
+  "scope": "early_representative_answers_only_not_full_scientific_review",
+  "records": [
+    {
+      "task_id": "REPRO-01",
+      "repeat": 1,
+      "source": "lanes/R3/REPRO-01/repeat-1/success.json",
+      "note": "清单由 list_catalogs 静态登记返回，http_requests=0；本回答不能证明当前线上 12 张表均可用。",
+      "answer_sha256": "d65a284a3c270e1ebaca2cd833e713c5b680cc3ba7d535239077d5b96b654ce9",
+      "reviewer": "current_assistant",
+      "independent": false,
+      "changes_original_score": false
+    },
+    {
+      "task_id": "REPRO-03",
+      "repeat": 1,
+      "source": "lanes/R3/REPRO-03/repeat-1/success.json",
+      "note": "坐标来源为冻结的实际名称解析回包；本轮未发起 Sesame 实时请求。",
+      "answer_sha256": "a8b445fc01a511b0d11a33b3254c6626fd41e3129c22254ce26dc06fed273d44",
+      "reviewer": "current_assistant",
+      "independent": false,
+      "changes_original_score": false
+    },
+    {
+      "task_id": "REPRO-04",
+      "repeat": 1,
+      "source": "lanes/R3/REPRO-04/repeat-1/success.json",
+      "note": "338 行及查询会话来自原冻结回包；本轮 BEST wire 请求为零，不能按回答措辞称为 10 月 11 日线上新查询。",
+      "answer_sha256": "aac2a1ce1d1058156609284837e6acb73e10d3966eec2b9b8a85762e0e3b84c5",
+      "reviewer": "current_assistant",
+      "independent": false,
+      "changes_original_score": false
+    },
+    {
+      "task_id": "REPRO-05",
+      "repeat": 1,
+      "source": "lanes/R3/REPRO-05/repeat-1/success.json",
+      "note": "原题没有提供 1000 个坐标，因此实际运行是缺参澄清，未检验 1000 坐标批量匹配场景；不能把能力说明当成完成证据。",
+      "answer_sha256": "58d704879ff5ab4de95f46131821e310bef1d76c876ead34a266a98c7024e57a",
+      "reviewer": "current_assistant",
+      "independent": false,
+      "changes_original_score": false
+    }
+  ]
+}

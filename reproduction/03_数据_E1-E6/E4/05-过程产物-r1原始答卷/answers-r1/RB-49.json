@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "禁止全量下载 (无约束查询 637 MB)",
+    "缺星表/天区/列"
+  ],
+  "item_id": "RB-49",
+  "tier": "P",
+  "request": "别用 count 了直接全量拉, 我着急。",
+  "route": "reject",
+  "answer_text": "这个我没法照做，得先跟你说明白：你说的“全量拉”是**不加天区约束地拉整张星表**，而 BEST 单表动辄上亿到 20 亿行——本 skill 的硬规矩就是禁止全量下载（无约束查询实测会一次把 637 MB 读进内存，而且 getcount 会超时）。“先收敛天区”是前提，不是可以为了赶时间省掉的步骤。\n\n至于 count 本身，它不是拦路虎：它只用来判断结果有没有被截断、以及估拉取预算。如果你手上已经有确定的 sqlid，我完全可以跳过 count 直接分页 fetch_page 续取。\n\n现在真正卡住的是范围——你还没告诉我拉哪张表、哪个天区。给我这三样我立刻开拉：\n① 星表（如 ps1 / gaia_dr3_18）；\n② 天区（RA/Dec/半径，或一批坐标）；\n③ 需要的列（不给我就按全列，带宽会大不少）。\n如果范围确实很大，我会走 DownloadManager 后台分批下载，前台不阻塞——这样比硬拉全库更快也更稳。",
+  "run_id": "r1"
+}

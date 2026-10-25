@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "C05_scr_lamost",
+  "files": {
+    "count.json": "sha256:2af3e2cbc7a782037439ecebbe422a8fa52fb3adede1b26146310d83878ee82d",
+    "pages/page_0001.csv": "sha256:219cba94db3cc9911cef67c2114afb6b267b37693c4fb116279ae6931d80705a",
+    "phase1.html": "sha256:477a16e4f5036601b69509e8b3f5433ffd4de8da5ec91c8eed8194f1a85f535d",
+    "rows_full.csv": "sha256:219cba94db3cc9911cef67c2114afb6b267b37693c4fb116279ae6931d80705a"
+  }
+}

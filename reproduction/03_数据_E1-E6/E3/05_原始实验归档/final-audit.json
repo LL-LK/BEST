@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-06T04:48:18+08:00",
+  "batch": "e3-b5ad6d180c9f42ce",
+  "frozen_assets": "verified",
+  "generation_and_primary_network_calls_during_resume": 0,
+  "resume_success_answers_unchanged": true,
+  "collection_counts": {
+    "('S-A', 'fixture', 1)": 32,
+    "('S-A', 'fixture', 2)": 32,
+    "('S-A', 'fixture', 3)": 32,
+    "('S-A', 'live', 1)": 4,
+    "('S-A', 'live', 2)": 4,
+    "('S-A', 'live', 3)": 4,
+    "('S-B', 'fixture', 1)": 32,
+    "('S-B', 'fixture', 2)": 32,
+    "('S-B', 'fixture', 3)": 32,
+    "('S-B', 'live', 1)": 4,
+    "('S-B', 'live', 2)": 4,
+    "('S-B', 'live', 3)": 4
+  },
+  "same_live_data_for_both_groups": true,
+  "main_answers": 192,
+  "live_answers": 24,
+  "independent_main_items": 32,
+  "slr_denominator_each_repeat": 14,
+  "expert_ready_answers": 219,
+  "expert_template_is_blank": true,
+  "explicit_group_model_fields_absent_in_expert_samples": true,
+  "secret_scan_excludes_env_only": true,
+  "secret_matches": [],
+  "git_status_matches_preparation": true,
+  "actual_api_usage_records": 222,
+  "incomplete_attempts_preserved": 5,
+  "primary_scores": 216,
+  "hidden_primary_controls": 3,
+  "selftest": {
+    "passed": true,
+    "metascore": 1.0,
+    "results": {
+      "control-1": true,
+      "control-2": true,
+      "control-3": true
+    }
+  },
+  "expert_agreement": null,
+  "expert_status": "pending",
+  "test_evidence": "tests.log: 68 passed in 10.13s"
+}

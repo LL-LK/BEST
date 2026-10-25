@@ -1,0 +1,77 @@
+skill: astro-best
+kind: envelope
+# 2026-10-05 修复轮 (H5-01, G2-05): 本文件此前声明 astro-data-envelope-v2 /
+# astro-decision-envelope-v2, 而唯一的实现 src/provenance.py:195 固定发
+# astro-envelope-v1, v2 独有的 9 个字段在 src/ 内零实现。
+#
+# 判定: **v1 是权威形态, 契约是落后的一方**。这不是"两边都改一点"的折中 ——
+# 契约被改写成实现的实况, 并且下面逐条给出可复核的判据:
+#   1) 共识: input/output/provenance 三份契约 + io-contract.md + architecture.md
+#      + docs/architecture/implementation-plan.md + layer-architecture-diagrams-plan.md
+#      + README.md 共 8 处均写 astro-envelope-v1, 本文件是**唯一**异议者;
+#   2) 实跑: build_envelope 的顶层键 = data / data_hash / lineage / provenance /
+#      schema / status, v2 字段 (pipeline_id / stage / artifacts / metrics /
+#      workflow_id / data_envelope_ref / llm_scientific_assessment / checkpoint /
+#      human_review) 命中数为 **0**;
+#   3) 悬空来源: 本文件原引的 _shared/skill-engine/pipeline-contract.md, 以及脚注
+#      里的 scripts/refactor/materialize_contracts.py 与 spec/skills-spec.yaml,
+#      在本仓**都不存在** —— v2 是从一份不在仓内的外部计划物化来的, 从未接线;
+#   4) 既有架构决定: docs/architecture/implementation-plan.md:113 明写
+#      "astro-envelope-v1: 线协议名称 (非版本字段), 保留标识符";
+#   5) 消费方已钉死: test/unit/auth/test_provenance.py:67 /
+#      test/unit/audit_round/test_review_surface.py:134 /
+#      test/integration/test_download_feature_integration.py:360 三处断言
+#      schema == "astro-envelope-v1", 注释写明"改它等于让跨 skill 传递全断"。
+#
+# 为什么 decision_envelope 记 emitted: false 而不是"欠实现": 本 skill 按设计就
+# 不产决策信封 —— pipeline-stage.contract.yaml:14 声明
+# emit_decision_envelope: false (L1 确定性数据流, 0% LLM)。故下面只登记形状与
+# 不产出的理由, 不作任何"将要产出"的承诺; 谁要启用它, 先改那份契约。
+#
+# 对齐由 test/unit/meta/test_envelope_contract_alignment.py 双向守护 (字段集与
+# schema 名都要与 build_envelope 的实跑输出逐字相等), 不靠人记。
+data_envelope:
+  schema: astro-envelope-v1
+  # 逐字段形状 = src/provenance.py build_envelope 的实跑输出 (2026-10-05 核对)。
+  status: ready            # 调用方原样透传; 缺省 "ready"。取值域见 output.contract.yaml 的 handoff.status
+  data: null               # 结果载荷本身; 与 data_hash 同源 (先 to_dict 再哈希)
+  data_hash: "sha256:<64 位小写十六进制>"
+  # 哈希前像的权威算法 (src/provenance.py compute_data_hash): 规范化 JSON, 因此
+  # 不依赖 dict 键序/缩进/空白, 任何一方都能重算并逐位比对。
+  data_hash_preimage: "json.dumps(data, sort_keys=True, ensure_ascii=False, separators=(',',':')).encode('utf-8')"
+  provenance:
+    skill: astro-best
+    timestamp: "<UTC ISO8601>"
+    session_id: ""         # 同一次运行复用同一 id: 散落的信封靠它归组
+    # identity 三键**仅在已授权时整块出现**; 未授权时整块省略 —— 落一个空块会被
+    # 下游读成"授权过但字段为空", 与"未授权"混淆, 破坏可复核性。
+    identity:
+      umtId: ""
+      ldap_id: ""
+      name: ""
+  lineage:
+    inputs_ref: []         # 上游 data_hash 列表 (内容寻址; 记哈希不记可变路径)
+    outputs_ref: []
+    completeness_gate:     # 完整性门的真实判定, 随信封走
+      required: true
+      value: 1.0           # 缺省按载荷是否为空诚实取值: 空载荷 0.0, 非空 1.0
+decision_envelope:
+  emitted: false
+  reason: "L1 确定性数据流, 0% LLM (pipeline-stage.contract.yaml:14); 本 skill 不产决策信封, 下游不得等待它"
+  # 以下形状仅作登记, **当前无任何代码产出**。启用前须先接线再解除 emitted: false。
+  schema: astro-decision-envelope-v1
+  workflow_id: "WF-BEST"
+  data_envelope_ref: ""
+  llm_scientific_assessment:
+    classification_hypothesis: ""
+    confidence: null
+    literature_citations: []
+    recommended_action: ""
+  checkpoint:
+    gate_name: astro_best_gate
+    status: PASSED_PENDING_HUMAN  # | FAILED | WAIVED
+  human_review:
+    reviewed_by: ""
+    decision: APPROVED  # APPROVED | REJECTED | ADJUST_PARAM | PENDING
+    notes: ""
+    timestamp_utc: ""

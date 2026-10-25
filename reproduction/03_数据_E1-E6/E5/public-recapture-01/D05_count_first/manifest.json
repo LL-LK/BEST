@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "D05_count_first",
+  "files": {
+    "count.json": "sha256:ae20368d6314c1dee18d21d9609b8454c31f056c902f4bb39e932f0d719e3136",
+    "pages/page_0001.csv": "sha256:9af101abb8b4226c26d28ffb31e24973b50818d4944f7c636c2f822b860ccb02",
+    "phase1.html": "sha256:65a9e4be0f7e4b4a7398e91447c62a26da7fe1361912f416bb4c6212388f9e34",
+    "rows_full.csv": "sha256:9af101abb8b4226c26d28ffb31e24973b50818d4944f7c636c2f822b860ccb02"
+  }
+}

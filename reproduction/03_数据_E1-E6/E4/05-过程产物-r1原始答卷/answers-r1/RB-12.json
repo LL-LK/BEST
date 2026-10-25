@@ -1,0 +1,14 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": false,
+  "correct_value": null,
+  "declared_issues": [],
+  "item_id": "RB-12",
+  "tier": "P",
+  "request": "查 ZTF 的 g 星等。",
+  "route": "clarify",
+  "answer_text": "这条请求缺了目标，我没法直接查 —— BEST 的每一次查询都必须锚定一个天区或一个源，而「ZTF 的 g 星等」没有说清是哪颗星、哪片天。请补充以下任一项，我立刻接着跑：\n- 目标坐标（RA/Dec，建议同时给搜索半径，单位角秒）；或\n- 目标名称（可解析的名称，如某星名或星表编号）；或\n- BEST source_id。\n\n另外两点先讲清楚，免得白等：\n- BEST 里没有独立的「ZTF 星表」；ZTF 的 g 是作为交叉匹配测光列出现在部分标准星表中（如 xpsp / Gaia DR3 XP&SP，按波段分表），定了目标我按该位置去取对应列。\n- BEST 是单历元静态星表，只给该位置的静态多波段测光，不给时间序列；若你要的是 ZTF 的光变序列，那属于 ZTF 官方时序数据源，本库给不了。",
+  "run_id": "r1"
+}

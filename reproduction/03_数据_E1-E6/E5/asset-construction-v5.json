@@ -1,0 +1,17 @@
+{
+  "D04_missing_class_star": 174,
+  "D04_qualified_rows": 0,
+  "class_counts": {
+    "clarification": 7,
+    "data": 11,
+    "refusal": 32,
+    "semantic": 6
+  },
+  "human_review": "pending post-run",
+  "logical_e5_units": 0,
+  "n_cells": 2016,
+  "n_tasks": 56,
+  "private": "<WORK_ROOT>\\private\\confirmatory-v5",
+  "public": "<WORK_ROOT>\\public\\confirmatory-v5",
+  "source_utterances_preserved": true
+}

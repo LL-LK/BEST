@@ -1,0 +1,8 @@
+{
+  "identity": "HOST\\e5scorerv4",
+  "logical_e5_units": 2016,
+  "sealed_input_hash_verified": true,
+  "scores_sha256": "2a030fb9e6f5a362a2f5dc485e01c5b1e5ece8ef6ab1735596dff9ca6da75a5c",
+  "analysis_sha256": "906c0d7e6a7e2333d58b2eb2165df2e4ea77616b5bea34f91f4ae37a85a3d8c7",
+  "human_review": "pending post-run"
+}

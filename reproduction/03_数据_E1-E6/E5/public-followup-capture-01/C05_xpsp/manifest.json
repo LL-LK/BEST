@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "C05_xpsp",
+  "files": {
+    "count.json": "sha256:2af3e2cbc7a782037439ecebbe422a8fa52fb3adede1b26146310d83878ee82d",
+    "pages/page_0001.csv": "sha256:c64de4ae4cebc6180cca2ce937ff1158ec57f2caa7fc57a761d4c6c0fa086c90",
+    "phase1.html": "sha256:1357388e96cb62281bafbaf0d89a745ab5e6dfd2fdd13b8d58341c1fa141f441",
+    "rows_full.csv": "sha256:c64de4ae4cebc6180cca2ce937ff1158ec57f2caa7fc57a761d4c6c0fa086c90"
+  }
+}

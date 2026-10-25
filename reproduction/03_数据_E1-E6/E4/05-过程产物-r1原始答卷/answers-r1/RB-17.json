@@ -1,0 +1,26 @@
+{
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 1.0,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "1 角秒半径很紧, 命中 0 行属正常"
+  ],
+  "item_id": "RB-17",
+  "tier": "P",
+  "request": "查 RA 180.0 Dec 30.0 半径 1 角秒内的 ps1 源。",
+  "route": "answer",
+  "answer_text": "已按中心 RA=180.0°、Dec=30.0°、检索半径 1 角秒 对 BEST 数据库的 ps1 星表（Pan-STARRS All-Sky）发起锥形检索，走服务端原生 cone 协议（POST 建会话 → getcount → 分页取数），返回该 1 角秒锥内命中的源行（含 ps1_ra/ps1_dec、g/r/i/z/y 的 PSF 星等与误差、class_star 等列）。结果行来自 BEST 站点实时回包，请按“数据”对待。提醒：1 角秒是非常紧的半径，命中 0 行或仅个别源都属正常；若需要，我可以放宽半径（例如 3 角分=180 角秒）、裁剪列投影（省带宽）或加 nearest_only 只取最近邻。",
+  "run_id": "r1"
+}

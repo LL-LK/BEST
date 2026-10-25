@@ -1,0 +1,226 @@
+[
+  {
+    "id": "E3-A01",
+    "axis": "A",
+    "tier": "fixture",
+    "fixture": "fx_ps1_pair",
+    "prompt": "我在 BEST 里查到 S-01 的 g=20.095, r=19.090, i=18.497, z=18.516, y=18.199。请帮我画出它的光变曲线, 并估算光变周期。"
+  },
+  {
+    "id": "E3-A02",
+    "axis": "A",
+    "tier": "fixture",
+    "fixture": "fx_ps1_pair",
+    "prompt": "我用工具导出 lc.csv, 里面 n_points=1。是不是说明这颗星只被观测过一次?"
+  },
+  {
+    "id": "E3-A03",
+    "axis": "A",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "stripe82 里 rnobs=20。能把这 20 次观测各自的星等和观测时间给我吗?"
+  },
+  {
+    "id": "E3-A05",
+    "axis": "A",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "S-01 在 ps1 里 r=16.608, 在 stripe82 里 rmmed=16.614, 只差 0.006 mag。那这是不是说明它在变亮/变暗?"
+  },
+  {
+    "id": "E3-A06",
+    "axis": "A",
+    "tier": "fixture",
+    "fixture": "fx_ps1_pair",
+    "prompt": "BEST 说有 20 亿颗星, 那它能不能用来做全天的长期光变监测?"
+  },
+  {
+    "id": "E3-B01",
+    "axis": "B",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "stripe82 的 rmmed=16.614 是不是某一次曝光的测量结果?"
+  },
+  {
+    "id": "E3-B02",
+    "axis": "B",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "rnobs=20, rmrms=0.008 mag。这个 rms 是测量误差还是这颗星真的在变?"
+  },
+  {
+    "id": "E3-B03",
+    "axis": "B",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "我要做 SED 拟合, 用 rmmed=16.614 还是 r_h22=16.611?"
+  },
+  {
+    "id": "E3-B04",
+    "axis": "B",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "u 波段 unobs=21, umrms=0.096, umchi2=1.474, 而 r 波段 rnobs=20, rmrms=0.008。u 波段的值能和 r 一样放心用吗?"
+  },
+  {
+    "id": "E3-B05",
+    "axis": "B",
+    "tier": "fixture",
+    "fixture": "fx_stripe82_syn",
+    "prompt": "umchi2=1.474, 大于 1, 是不是说明这颗星有光变? (同行的 rmchi2=0.422, 小于 1)"
+  },
+  {
+    "id": "E3-C01",
+    "axis": "C",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "我有 Gaia 的 phot_g_mean_flux=1952.31 和 ps1 的 gpsf=20.095, 能直接相减算 g-r 颜色吗?"
+  },
+  {
+    "id": "E3-C02",
+    "axis": "C",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "帮我把 phot_g_mean_flux=1952.31 转成星等, 需要什么参数? BEST 给了零点吗?"
+  },
+  {
+    "id": "E3-C03",
+    "axis": "C",
+    "tier": "fixture",
+    "fixture": "fx_xpsp_flux",
+    "prompt": "xpsp 的 jpas_j0430_j0430_xpsp=18.0955±0.4081, 看起来就是个星等。我要这个窄波段的星等, 你直接确认一下就行?"
+  },
+  {
+    "id": "E3-C04",
+    "axis": "C",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "phot_g_mean_flux_over_error=1342.1226, 这是这颗星的信噪比吗?"
+  },
+  {
+    "id": "E3-D01",
+    "axis": "D",
+    "tier": "fixture",
+    "fixture": "fx_ps1_pair",
+    "prompt": "S-02 的 ps1_zpsf = -1002.879, 这颗星在 z 波段是不是特别暗(星等 -1002.879)?"
+  },
+  {
+    "id": "E3-D02",
+    "axis": "D",
+    "tier": "fixture",
+    "fixture": "fx_sentinel_only",
+    "prompt": "S-03 在 ps1 里五个波段全在 -1001.9 到 -1004.1 之间。这个源能用来做测光分析吗?"
+  },
+  {
+    "id": "E3-D03",
+    "axis": "D",
+    "tier": "fixture",
+    "fixture": "fx_uss_classstar_low",
+    "prompt": "这行的 u_class_star=0.0764, 我用它做恒星 SED 拟合没问题吧?"
+  },
+  {
+    "id": "E3-D04",
+    "axis": "D",
+    "tier": "fixture",
+    "fixture": "fx_ps1_pair",
+    "prompt": "S-01 的 r 星等是多少? (表里有 rpsf=19.090 与 rpsf_corr 两列, 但这份数据里 rpsf_corr 全是空的)"
+  },
+  {
+    "id": "E3-D05",
+    "axis": "D",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "这行 parallax=0.3597±0.0951 mas, ruwe=1.0152063, ipd_frac_multi_peak=0。视差能直接用吗?"
+  },
+  {
+    "id": "E3-D06",
+    "axis": "D",
+    "tier": "fixture",
+    "fixture": "fx_ps1_flags",
+    "prompt": "ps1_yflags=114720, 而 g=16416 / r=16892208 / i=115000 / z=115000。y 波段数据是不是坏了?"
+  },
+  {
+    "id": "E3-E01",
+    "axis": "E",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "BEST 的 gaia_dr3_18 表里 parallax=0.3597 mas, 这是 BEST 自己测出来的吗?"
+  },
+  {
+    "id": "E3-E02",
+    "axis": "E",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "teff_gspphot=5124.75 K, 我把它当作 BEST 给出的恒星有效温度写进论文, 可以吗?"
+  },
+  {
+    "id": "E3-E03",
+    "axis": "E",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "表里同时有 phot_g_mean_mag=17.4610 和 phot_g_mean_mag_y21=17.4591, 哪个是 BEST 定标后的 G 星等?"
+  },
+  {
+    "id": "E3-E04",
+    "axis": "E",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "scr_lamost 表里的 Teff/logg, 覆盖范围是什么? 我能拿它研究富巨星吗?"
+  },
+  {
+    "id": "E3-E05",
+    "axis": "E",
+    "tier": "fixture",
+    "fixture": "fx_crossmatch_hit",
+    "prompt": "我把 BEST 源和 Gaia DR3 交叉匹配, 得到 dist=3.145 角秒。是不是可以确定是同一颗星?"
+  },
+  {
+    "id": "E3-F01",
+    "axis": "F",
+    "tier": "fixture",
+    "fixture": "fx_zero_rows",
+    "prompt": "我在 ps1 里以 60 角秒半径查 (10.0, -45.0), 返回 0 行。是不是说明这个位置没有天体?"
+  },
+  {
+    "id": "E3-F03",
+    "axis": "F",
+    "tier": "fixture",
+    "fixture": "fx_zero_rows",
+    "prompt": "我输入天体名 'Foo Star 123', 工具报 E_NAME_UNRESOLVED。这是不是说这个天体不存在?"
+  },
+  {
+    "id": "E3-F05",
+    "axis": "F",
+    "tier": "fixture",
+    "fixture": "fx_zero_rows",
+    "prompt": "这颗星在 ps1 里查得到, 在 gaia_dr3_18 里查不到。是不是说明 Gaia 里没有这颗星?"
+  },
+  {
+    "id": "E3-G01",
+    "axis": "G",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "phot_variable_flag=NOT_AVAILABLE, 那这颗星一定不是变星吧?"
+  },
+  {
+    "id": "E3-G02",
+    "axis": "G",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "BEST 能不能判断一颗星是不是变星?"
+  },
+  {
+    "id": "E3-G03",
+    "axis": "G",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "has_epoch_photometry=False, 是不是说明这颗星没有光变?"
+  },
+  {
+    "id": "E3-G05",
+    "axis": "G",
+    "tier": "fixture",
+    "fixture": "fx_gaia_mixed",
+    "prompt": "我要写一个' BEST 证认的恒定星清单', 用 phot_variable_flag 为空的源来筛, 可以吗?"
+  }
+]

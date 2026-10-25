@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://nadc.china-vo.org/sr/images/favicon.ico">
+    
+    <title>Pan-STARRS | BEst STar database</title>
+    
+    
+
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/open-iconic/font/css/open-iconic-bootstrap.css">
+	<link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2-bootstrap.css">
+    <link rel="stylesheet" href="/data/best/static/css/style.css">
+    
+<link rel="stylesheet" type="text/css" href="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/themes/icon.css">
+
+    
+
+    
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://nadc.china-vo.org/sr/js/jquery.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/popper.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/select2.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap-treeview.min.js"></script>
+    <script src="/data/best/static/js/script.js?v=2"></script>
+    <script type="text/javascript">
+        var prx = '/data/best';
+        var csrf_token = "IjRkNzhkYzBmMTU2YThmMTc5NWU5MDQxZTgzMWQ3ZjZkNTVlZjYxODAi.asIIlg.tehXLTlLB8rtlJA2aSxQMpPfqHk";
+        
+        var is_authenticated = false;
+        
+    </script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="//analytics.escience.org.cn/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '23']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+    
+<script src="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/jquery.easyui.min.js"></script>
+<script src="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/datagrid-filter.js"></script>
+<script src="https://nadc.china-vo.org/sr/js/samp.js"></script>
+<script src="/data/best/static/js/search-result.js"></script>
+<script>
+var id_column_name = 'ps1_';
+$(function(){
+    $('#tbl').datagrid({
+        url:'/data/best/sqlid/s4930?output.fmt=dbgrid',
+        title:'ps1',
+        fit:true,
+        toolbar:'#tb',
+        pagination:true,
+        rownumbers:true,
+        singleSelect:false,
+        pageNumber:1,
+        pageSize:100,
+        pageList:[20,50,100,300],
+        sortName:"ps1_source_id",
+        sortOrder:"asc",
+        clientPaging:false,
+        columns:[[
+            {field:'checkboxxx',checkbox:true},
+            
+            
+            {field:'inputobjs_dist_arcsec',title:'dist_arcsec',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_line',title:'input_line',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_ra',title:'input_ra',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_dec',title:'input_dec',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ra',title:'ra',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_dec',title:'dec',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_class_star',title:'class_star',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_dust',title:'dust',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ebv',title:'ebv',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_gflags',title:'gflags',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_gpsf',title:'gpsf',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_gpsf_corr',title:'gpsf_corr',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_gpsf_err',title:'gpsf_err',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_iflags',title:'iflags',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ipsf',title:'ipsf',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ipsf_corr',title:'ipsf_corr',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ipsf_err',title:'ipsf_err',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_max_d',title:'max_d',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_parallax',title:'parallax',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_parallax_err',title:'parallax_err',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_rflags',title:'rflags',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_rpsf',title:'rpsf',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_rpsf_corr',title:'rpsf_corr',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_rpsf_err',title:'rpsf_err',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ruwe',title:'ruwe',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_sigma',title:'sigma',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_source_id',title:'source_id',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_yflags',title:'yflags',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ypsf',title:'ypsf',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_ypsf_err',title:'ypsf_err',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_zflags',title:'zflags',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_zpsf',title:'zpsf',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_zpsf_corr',title:'zpsf_corr',width:150,align:'center',sortable:true},
+            
+            {field:'ps1_zpsf_err',title:'zpsf_err',width:150,align:'center',sortable:true},
+            
+            
+        ]],
+		onBeforeLoad:function(param){
+            window.history.pushState(null, null, '/data/best/sqlid/s4930?'+getPageParam());
+		},
+		onLoadSuccess: function(data) {
+            if (data.total === 999999999999) {
+                var pager = $('#tbl').datagrid('getPager');
+                pager.pagination('loading');
+                pager.pagination({
+                    showPageInfo: false,
+                    afterPageText: '',
+                });
+                $.ajax({
+                    url: "/data/best/sqlid/4930/getcount",
+                    type: "GET",
+                    success: function(response) {
+                        var pager = $('#tbl').datagrid('getPager');
+                        pager.pagination({
+                            total: response.total,
+                            showPageInfo: true,
+                            afterPageText: 'of {pages}',
+                        });
+                        pager.pagination('loaded');
+                    }
+                });
+            }
+        },
+        onLoadError: function(e){
+            console.log(e);
+        }
+    });
+});
+function getPageParam(){
+	var opt = $('#tbl').datagrid('options');
+	return "rows="+opt.pageSize+"&page="+opt.pageNumber+"&sort="+(null==opt.sortName || 'null'==opt.sortName?"":opt.sortName)+"&order="+(null==opt.sortOrder || 'null'==opt.sortOrder?"":opt.sortOrder);
+}
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark topNav-bg index-topNav">
+    <div class="container-fluid index-navbar-container">
+        <div class="row" style="margin: 0px;width: 100%;">
+            <div class="collapse navbar-collapse" id="chinavo-navbar">
+                <ul class="navbar-nav mr-auto chinavoNavbar-ul">
+                    
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best">BEST</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Query
+                        </a>
+                        <div class="dropdown-menu chinavoDropdownMenu" aria-labelledby="navbarDropdown0">
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/std">Standard Stars</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib/ps1/f">Pan-STARRS All-Sky Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib">Well-Calibrated Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="/data/best/other">Corrected Gaia DR3 XP Spectra</a>
+                            
+                            
+                        </div>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/jobs">User-Defined</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/catalog">Catalog</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/news">News</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/help">Help</a>
+                        </li>
+                        
+                        
+                    
+                    
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto chinavoNavbar-ul">
+                    
+                    <li class="nav-item"><a class="nav-link" href="/data/best/user/login?next=https://nadc.china-vo.org/data/best/ps1/q">Login</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<div class="container-fluid">
+    
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/">Home</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/calib">Calibrated Catalog</a>
+        
+    </li>
+
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/ps1/f">Query Pan-STARRS</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/sqlid/s4930">Result</a>
+        
+    </li>
+
+    </ol>
+</nav>
+
+<div id="mpanel" class="easyui-panel">
+    <div id="tbl" />
+    <div id="tb">
+        
+        <a href="#" class="easyui-menubutton" data-options="menu:'#smsave',iconCls:'icon-save'">Save Table</a>
+        <div id="smsave" style="width:200px;">
+            <div id="vot" data-options="iconCls:'icon-xml'" onclick="open_link(get_saveas_url('votable', true))">Save page as VOTable</div>
+            <div id="csv" data-options="iconCls:'icon-csv'" onclick="open_link(get_saveas_url('csv', true))">Save page as CSV</div>
+            <div id="json" data-options="iconCls:'icon-json'" onclick="open_link(get_saveas_url('json', true))">Save page as JSON</div>  
+            <div class="menu-sep"></div>
+            <div id="votall" data-options="iconCls:'icon-xml'" onclick="open_link(get_saveas_url('votable', false))">Save all as VOTable</div>
+            <div id="csvall" data-options="iconCls:'icon-csv'" onclick="open_link(get_saveas_url('csv', false))">Save all as CSV</div>
+            <div id="jsonall" data-options="iconCls:'icon-json'" onclick="open_link(get_saveas_url('json', false))">Save all as JSON</div>  
+        </div>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#smnotifyall',iconCls:'icon-samp'">Boradcast Table</a>
+        <div id="smnotifyall" style="width:200px;">
+            <div id="samp" data-options="iconCls:'icon-samp'" onclick="samp_notify(true)">Boradcast page</div>
+            <div class="menu-sep"></div>
+            <div id="sampall" data-options="iconCls:'icon-samp'" onclick="samp_notify(false)">Boradcast all</div>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

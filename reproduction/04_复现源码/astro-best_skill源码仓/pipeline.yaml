@@ -1,0 +1,36 @@
+# astro-best Pipeline Declaration
+
+pipeline:
+  name: astro-best
+  domain: collection
+  description: "BEST database high-precision photometry skill — nadc.china-vo.org/data/best"
+  stage: 04-collection
+
+  dependencies: []  # Q-57: astro-common 在两处探测根均不存在, 已移除 (原为虚构依赖)
+
+  sub_skills:
+    - astro-catalog   # 交叉匹配主理 (SKILL.md 重定向表; 仓内真实存在)
+
+  outputs:
+    - type: best_source
+      description: "BEST source with quality gate validation"
+      format: json
+    - type: multiband_photometry
+      description: "Quality-filtered multi-band static photometry (BEST has no time series)"
+      format: csv/json
+    - type: best_crossmatch
+      description: "Coordinate-based cross-match results"
+      format: json
+
+  workflows:
+    - id: best_query
+      steps:
+        - name: "Cone search BEST database"
+          # Q-56: 符号路径须可 importlib resolve (原 src.best_cone_search  AttributeError)
+          tool: src.scripts.best_cone_search.cone_search
+        - name: "Quality gate validation"
+          # Q-56: 原 src.quality_gate AttributeError (真实为 src.core.QualityGate)
+          tool: src.core.QualityGate
+        - name: "Cross-match coordinates"
+          # Q-56: 原 src.crossmatch AttributeError (真实为 src.crossmatch.BestCrossMatch)
+          tool: src.crossmatch.BestCrossMatch

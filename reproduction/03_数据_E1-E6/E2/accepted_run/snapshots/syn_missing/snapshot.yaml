@@ -1,0 +1,38 @@
+snapshot_id: syn_missing
+kind: S
+catalog: ps1
+columns:
+- ps1_source_id
+- ps1_ra
+- ps1_dec
+- ps1_rpsf
+- ps1_gpsf
+- ps1_class_star
+- ps1_snr
+row_count: 3
+data_version: ps1@2026-09-28
+page_size: 1000
+sort_key: ps1_source_id
+fetched_at: '2026-09-28'
+query:
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 5.0
+  catalog: ps1
+  max_rows: 1000
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_gpsf
+  - ps1_class_star
+  - ps1_snr
+  - ps1_ypsf
+endpoint:
+  submit: /data/best/ps1/q
+  page: /data/best/sqlid/{sqlid}?output.fmt=csv&rows=1000&page=1
+  count: /data/best/sqlid/{count}/getcount
+note: "S 类 (合成, 照抄真实形态)。承载 E2 §5 场景 7 缺失字段 (F8):\n① 整列缺失 — 查询投影含 ps1_ypsf, 但响应 CSV 无该列 (其余列正常);\n   被测必须把 ps1_ypsf 显式标 null\
+  \ 并记 warn, 不得填 0、不得填哨兵、不得从邻波段推算;\n② 部分行空串 — 行2 ps1_rpsf 为空串 (缺测, 不是 0);\n③ 哨兵值行 — 行1 ps1_gpsf=-1004.0910078678945, 行2 ps1_gpsf=-999.0\
+  \ (两种真实哨兵形态)。\nsqlid 为占位 (s0002)。"

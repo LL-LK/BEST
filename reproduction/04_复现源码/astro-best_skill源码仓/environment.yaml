@@ -1,0 +1,25 @@
+# environment.yaml — astro-best 运行环境锁 (按 src/ 真实 import 核对生成)
+# 维护纪律: 本文件与真实 import 面的一致性由
+# test/unit/meta/test_environment_lock.py 守护 (AST 扫描 src/ops/evals/examples),
+# 新增/删除依赖必须同步本文件, 否则门禁红。
+name: astro-best
+skill_name: astro-best
+conda_env: astro-best
+channels: [conda-forge, defaults]
+
+dependencies:
+  - python>=3.10
+  # ── 硬依赖 (client/downloader/query 主路径) ─────────────────────────────
+  - requests>=2.28
+  - urllib3>=2.0          # requests 传递依赖, 但 src/ 直接 import (Retry), 显式声明
+  - pyyaml>=6.0           # import 名 yaml
+  # ── 数据互操作 (导入面存在, 缺失时显式失败而非静默降级) ──────────────────
+  - astropy>=5.3          # pybest fits 导出 / tap VOTable 序列化
+  - numpy>=1.24           # evals/semantics/agreement.py 一致性统计 (κ/α/AC1/ICC 的矩阵运算)
+  # ── 可选增强 (惰性 import, 缺失仅关闭对应通道) ──────────────────────────
+  - pyvo>=1.5             # src/tap/client.py 远端 TAP 模式 (pyvo.dal.TAPService)
+  # ── 本地工具 (G8) ───────────────────────────────────────────────────────
+  - pytest>=7.0
+  - pytest-cov>=4.0
+  - pip:
+      - ruff>=0.1

@@ -1,0 +1,30 @@
+{
+  "task": {
+    "kind": "raw",
+    "catalog": "ps1",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 0.0,
+    "note": "radius=0: 被 validate_search_radius 拒在发包前, 只能绕行取证"
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "bytes": 12405,
+      "at": "2026-10-04T08:03:36.154670+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000,
+    "success": true,
+    "raw_status": 200,
+    "raw_is_soft_404": false,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": null,
+    "raw_note": "radius=0: 被 validate_search_radius 拒在发包前, 只能绕行取证"
+  }
+}

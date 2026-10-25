@@ -1,0 +1,60 @@
+# astro-best — 工具配置文件 (无构建段: skill 以源码树分发, 禁版本号, 见 README.md 治理规则)
+
+[tool.pytest.ini_options]
+# evals 必须进 testpaths: 此前只写 ["test"], 裸 `pytest` / IDE 里随手一键跑只收
+# 845 个用例, 静默漏掉 E1~E6 的 355 个实验单测 (占全量 29.6%)。门禁命令
+# `pytest test/ evals/` 因显式给路径一直是对的, 漏的只有日常裸跑。
+testpaths = ["test", "evals"]
+norecursedirs = [".git", "build", "dist", ".gemini"]
+pythonpath = ["."]
+python_files = ["test_*.py"]
+markers = [
+    "live: marks tests requiring live external network connectivity",
+]
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["docs", "temp", "best_data", ".checkpoints"]
+
+[tool.ruff.lint]
+# 2026-09-28 修复轮增量启用 (docs/FIX-PLAN-2026-09-28.md Phase 6):
+#   RET — 冗余 return/赋值 (既有违规已清零);
+#   SIM — 可简化结构 (既有违规已清零, contextlib.suppress 替 try-except-pass);
+#   S   — 安全面 (生产目录 10 处误报/已缓解项已定点 noqa + 中文理由;
+#         TRY 集违规量 185 条且多为风格类, 留待下一轮, 不搞大爆炸式切换)。
+# 窄规则集 (E/F/W/B/I) 曾漏报模块级重复定义与未使用属性 — F811/F841 现已
+# 在 F 族内确认生效, 并由 test/unit/meta/test_gate_blindspots.py 的 AST
+# 重复定义扫描兜底 (结构门禁, 见该文件 docstring)。
+select = ["E", "F", "W", "B", "I", "RET", "SIM", "S"]
+ignore = ["B008", "B905", "E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+# 测试目录豁免 (2026-09-28 宽规则集启用时逐类裁定, 全部是测试夹具的误报):
+#   S101 — pytest 断言即测试本体, 不是生产不变量;
+#   S105/S106 — 夹具里的假 token/api_token 字面量 (真实凭据零字面量铁律
+#               由 test/unit/auth 的扫描守护, 与 S 规则无关);
+#   S108 — 用例故意用 /tmp 路径断言落盘行为 (pytest tmp_path 之外的固定路径);
+#   S310 — 桩 URL 走注入的 request 可调用体, 不经真实网络出口;
+#   S314 — 用例解析的是自家桩生成的 XML (无不可信输入);
+#   S603/S607 — 图示生成脚本的子进程调用 (本机 draw.io 渲染, 测试面);
+#   S608 — ADQL 白名单测试里的 SQL 字符串构造;
+#   SIM102/SIM115/SIM117 — 测试代码的显式风格 (嵌套 with/逐行 open 在
+#                           断言现场更可读)。
+"test/*" = ["E402", "F401", "F841", "S101", "S105", "S106", "S108",
+            "S310", "S314", "S603", "S607", "S608", "SIM102", "SIM115",
+            "SIM117"]
+# evals/<实验>/tests/ 与 test/ 同口径: pytest 断言即测试本体, 夹具假 token
+# 与固定路径是测试手段 (生产纪律由对应审计器守护, 与 S 规则无关)
+"evals/*/tests/*" = ["E402", "F401", "F841", "S101", "S105", "S106", "S108",
+                     "S310", "S314", "S603", "S607", "S608", "SIM102",
+                     "SIM115", "SIM117"]
+# ops/audit/* 治理测量工具 (2026-10-01 自 temp/ 提升入库的一次性体检脚本):
+#   S603/S607 — 脚本只对**本地 git 只读查询** (show/diff/ls-files) 起子进程,
+#     argv 固定、参数是仓内相对路径, 无外部输入面;
+#   E402/F841/SIM102/SIM115 — 一次性脚本的既有风格债 (ROOT 相对化 bootstrap 在
+#     导入之后、未用局部变量、可用 with/合并 if), 属测量器件不是交付逻辑。
+# 工具自身的注释/docstring 规范由 ops/audit/comment_audit.py 同口径守护 (已清零)。
+"ops/audit/*" = ["E402", "F841", "S603", "S607", "SIM102", "SIM115"]

@@ -1,0 +1,58 @@
+{
+  "gold_id": "gold_empty_field",
+  "case_id": "empty_field",
+  "snapshot_id": "sha256:e378f9abc8f0200897639acac34f8e3f923092175a3c90f833b1674903e1c339",
+  "data_version": "ps1@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:c01c73ed9b463616bf6ae17f977a24266bbd63057df180307687c3a55a3d07a6"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_ps1_ra10.0_dec-45.0_r60.0as/rows_full.csv",
+  "max_rows": 1000,
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [],
+  "row_count": 0,
+  "field_values": {},
+  "field_values_sampled": false,
+  "field_values_sampling_rule": "all(<=50)",
+  "null_semantics": {},
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "ps1_ra": "deg",
+    "ps1_dec": "deg",
+    "ps1_rpsf": "mag"
+  },
+  "precision_map": {
+    "ps1_ra": 3,
+    "ps1_dec": 3,
+    "ps1_rpsf": 3
+  },
+  "ordering": {
+    "key": null,
+    "order": "asc",
+    "declared": false,
+    "sequence": [],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "last_page_full": false,
+    "extra_page_expected_empty": false
+  },
+  "truncation": {
+    "expected_total": 0,
+    "expected_truncated": false,
+    "expected_returned": 0
+  },
+  "result_state": "empty",
+  "missing_columns": [
+    "ps1_source_id",
+    "ps1_ra",
+    "ps1_dec",
+    "ps1_rpsf"
+  ],
+  "notes": "金标准: success=true ∧ rows=0 ∧ total=0 ∧ truncated=false ∧ error 为空 (E2 §5 #4)。M5 四态判据: EMPTY 不得被冒充成 ERROR, 也不得把\"服务端 会话死了\"报成\"天上没源\" (反向混淆同样阻断)。A 的 syn_empty 快照 rows_full.csv 为空文件 (snapshot.yaml row_count=0) — GT 读空行集得 空结果; 若快照缺失, GT fail-closed (FileNotFoundError, 不发明数据)。\n"
+}

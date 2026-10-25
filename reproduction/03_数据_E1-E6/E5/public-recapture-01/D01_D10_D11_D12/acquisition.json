@@ -1,0 +1,103 @@
+{
+  "schema": "e5-public-acquisition-v1",
+  "case_id": "D01_D10_D11_D12",
+  "task": {
+    "kind": "cone",
+    "catalog": "ps1",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 5.0
+  },
+  "logical_e5_units": 0,
+  "wire_responses": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "request_form": {
+        "output.fmt": "html",
+        "pos_group": "ra,dec",
+        "pos.type": "cone",
+        "pos.racenter": "180.0",
+        "pos.deccenter": "30.0",
+        "pos.radius": "5.0",
+        "showcol": [
+          "ps1.ra",
+          "ps1.dec",
+          "ps1.class_star",
+          "ps1.dust",
+          "ps1.ebv",
+          "ps1.gflags",
+          "ps1.gpsf",
+          "ps1.gpsf_corr",
+          "ps1.gpsf_err",
+          "ps1.iflags",
+          "ps1.ipsf",
+          "ps1.ipsf_corr",
+          "ps1.ipsf_err",
+          "ps1.max_d",
+          "ps1.parallax",
+          "ps1.parallax_err",
+          "ps1.rflags",
+          "ps1.rpsf",
+          "ps1.rpsf_corr",
+          "ps1.rpsf_err",
+          "ps1.ruwe",
+          "ps1.sigma",
+          "ps1.source_id",
+          "ps1.yflags",
+          "ps1.ypsf",
+          "ps1.ypsf_err",
+          "ps1.zflags",
+          "ps1.zpsf",
+          "ps1.zpsf_corr",
+          "ps1.zpsf_err"
+        ]
+      },
+      "started_at_utc": "2026-10-12T08:57:12.425837+00:00",
+      "response_file": "wire/response-001.bin",
+      "content_type": "text/html; charset=utf-8",
+      "content_encoding": "gzip",
+      "response_encoding": "utf-8",
+      "bytes": 15457,
+      "sha256": "1588784a19cbbf30fab3b04bf660b41b40b1900f43adf7232f0475a65a6ab824"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/7983/getcount",
+      "status": 200,
+      "request_form": null,
+      "started_at_utc": "2026-10-12T08:57:15.723477+00:00",
+      "response_file": "wire/response-002.bin",
+      "content_type": "application/json",
+      "content_encoding": null,
+      "response_encoding": "utf-8",
+      "bytes": 12,
+      "sha256": "160f5e6d66675f020cde82cd1724a1e6fafb0e5095c7a2c65b692057bea0bf20"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s7983?output.fmt=csv&rows=1000&page=1&sort=ps1_ra&order=asc",
+      "status": 200,
+      "request_form": null,
+      "started_at_utc": "2026-10-12T08:57:17.224040+00:00",
+      "response_file": "wire/response-003.bin",
+      "content_type": "text/csv; charset=utf-8",
+      "content_encoding": null,
+      "response_encoding": "utf-8",
+      "bytes": 1142,
+      "sha256": "5a98795e4b3afc78833cb393e89387bd3eb175ceaeced542a156b04cf4d1b1cf"
+    }
+  ],
+  "observed": {
+    "page_size": 1000,
+    "returned_count": 3,
+    "success": true,
+    "total_count": 3,
+    "truncated": false,
+    "error_code": null
+  },
+  "error": null,
+  "byte_fidelity": "wire/*.bin stores requests Response.content; legacy CSV/HTML files are decoded UTF-8 derivatives",
+  "items_sha256": "657946a35b5e18bd9241eae9a31bbd0e32adfe6df81899ffb018328af9b7a426"
+}

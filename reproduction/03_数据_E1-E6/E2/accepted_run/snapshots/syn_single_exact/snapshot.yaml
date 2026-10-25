@@ -1,0 +1,17 @@
+snapshot_id: syn_single_exact
+kind: S
+material_class: synthetic-protocol-fixture
+catalog: ps1
+columns:
+- gaiaxp_photinfo_replenish_source_id
+- gaiaxp_photinfo_replenish_ra
+- gaiaxp_photinfo_replenish_dec
+- gaiaxp_photinfo_replenish_bp_mag
+- gaiaxp_photinfo_replenish_ruwe
+- correctedxpspecv1_c2
+row_count: 1
+data_version: synthetic@2026-10-11
+page_size: 1000
+sort_key: gaiaxp_photinfo_replenish_source_id
+fetched_at: '2026-10-11'
+note: 合成精确ID匹配fixture；取代缺失的旧dr3xpcorr快照，不代表实站样本。

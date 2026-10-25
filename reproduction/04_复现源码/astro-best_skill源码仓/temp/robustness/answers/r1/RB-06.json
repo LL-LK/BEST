@@ -1,0 +1,26 @@
+{
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 120.3,
+        "dec": -20.4,
+        "radius_arcsec": 300,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "http_requests": 0,
+  "corrected": true,
+  "declared": true,
+  "correct_value": 300,
+  "declared_issues": [
+    "5 角分 → 300 角秒 单位换算已声明"
+  ],
+  "item_id": "RB-06",
+  "tier": "P",
+  "request": "帮我查 RA 120.3 Dec -20.4 半径 5 角分内的 ps1 源。",
+  "route": "autocorrect",
+  "answer_text": "好的，已按 RA=120.3°、Dec=-20.4° 为中心检索 BEST 的 ps1 星表。你写的是“半径 5 角分”，该锥形检索接口的半径单位是角秒，所以我换算成 300 角秒（5 角分 × 60）后提交——若照字面传 5，会被当成 5 角秒，搜索范围只有你要的 1/60。命中的 ps1 源已取回（列名带 ps1_ 前缀，如 ps1_ra、ps1_dec 等），结果如下。",
+  "run_id": "r1"
+}

@@ -1,0 +1,3 @@
+# 在此填写本次跑批的 system prompt (全文), 并与 manifest.system_prompt_version 对齐。
+# 注意: prompt 里不得出现任何题目的答案提示 (应选哪个工具/半径换算成多少/要不要先问用户)。
+# 本次工具 schema: tools.schema.json @ 6cba9dce98e8d000

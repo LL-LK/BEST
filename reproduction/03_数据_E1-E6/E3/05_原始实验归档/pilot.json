@@ -1,0 +1,7 @@
+{
+  "answered": 42,
+  "scored": 42,
+  "expected": 42,
+  "passed": true,
+  "meaning": "采集结构与反证门槛通过；不是模型表现达标，也不是双专家κ校准"
+}

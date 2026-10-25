@@ -1,0 +1,14 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": false,
+  "correct_value": null,
+  "declared_issues": [],
+  "item_id": "RB-14",
+  "tier": "P",
+  "request": "查 Gaia DR3 1234567890123456789 在 BEST 标准星表中的记录。",
+  "route": "clarify",
+  "answer_text": "这条我查不了，先说清原因，再说怎么才能查：\n\n**1）没有「BEST 标准星表」这一张表。** `std` 是站点上的导航分组（Standard Stars），不是可查询表 —— `/std/q`、`/std/f` 直接返回 `{\"error\":\"Internal Server Error\"}`。它的三个可查询成员是 `scr_galah`、`scr_lamost`、`xpsp`。要查得先指定其中一张。\n\n**2）BEST 没有按 Gaia source_id 检索的公开端点。** 站点查询只支持按位置定位：位置锥搜（`pos.type=cone`，`ra/dec` + 半径）或 proximity 批量坐标匹配（上传 `ra,dec[,radius]` 列表）。我手上的工具面（resolve_name / list_catalogs / describe_catalog / cone_search / crossmatch_batch / count / fetch_page）也没有任何一个接受 source_id 作为输入。所以只给我 `1234567890123456789` 这个号，我发不出任何有效请求。\n\n**3）我也不会替你补一条记录。** 这个 19 位数值我无法在 BEST 里核实，凭空给一套 ra/dec 和星等是最糟的结果 —— 本 skill 的处置约定就是「按 ID 查不到就显式失败，不伪造数据」。\n\n**能查的路径（给我其一即可）：**\n- 这颗星的赤经赤纬（ICRS，度）→ 我用 `cone_search` 在指定成员表上按位置找（半径默认 300″；`scr_galah`/`scr_lamost` 极稀疏，建议直接 1800″）。\n- 或一份坐标清单 → 我用 `crossmatch_batch` 走服务端 proximity 一次批量匹配。\n- 若你要的是 Gaia DR3 本身的天体测量/测光记录，`gaia_dr3_18` 表（155 列，含 `gaia_dr3_18_source_id`）同样按坐标可查 —— 但它属 calib 组，不是标准星组。\n\n另外提醒：若你的本意是问「这颗星是不是变星」，BEST 是单历元静态星表，既无时序也不给变星判定，这个我同样给不出。",
+  "run_id": "r1"
+}

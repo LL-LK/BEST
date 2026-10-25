@@ -1,0 +1,32 @@
+skill: astro-best
+output_schema: BestResultSet
+# Phase 5 重建: 行为四维 + docstring 覆盖维度 (Phase 7 验收锚);
+# 权重和必须 = 1.0 且维度集合必须与 runner 可算的五维一致 (runner 代码校验);
+# pass_score 必须高于 warn_line。权重/合格线的**变更登记**在
+# evals/_data/scoring-weights-ledger.yaml —— 改本文件而不登记, 门禁会红。
+dimensions:
+  correctness:
+    weight: 0.30
+    criterion: 行为用例真实执行通过率 (门禁/算法/scope/字段 全链路) + 审计无 CRITICAL
+  gate_compliance:
+    weight: 0.25
+    criterion: 阻断性门禁逐项真实执行满足 (http_status, checksum_match; actual 不再取自文件名)
+  determinism:
+    weight: 0.15
+    criterion: 相同给定输入重复运行结果一致; 场景探针全绿
+  provenance:
+    weight: 0.10
+    criterion: provenance/envelope 契约存在且内容非空 (data_hash/lineage 字段在)
+  docstring_coverage:
+    weight: 0.20
+    criterion: "src/ 公开函数 docstring 覆盖率 (五要素——职责/参数量纲/返回/异常/门禁关系)"
+pass_score: 0.9
+warn_line: 0.85
+# 原 gates_thresholds 段已删 (N1-02): 它与 evals/cases/*.yaml 的 threshold: 块
+# 重复同一组门禁阈值, 而后者才是被 case_executor 真执行的那一份 —— 两处同值
+# 即两个 SSOT。门禁阈值的唯一真值在用例文件里, 本文件不再声明副本。
+# 原值备查: http_status == 200 (count) / checksum_match == true (bool)
+in_scope_coverage:
+  - NADC BEST REST API 认证
+  - 两阶段异步查询
+  - 流式下载

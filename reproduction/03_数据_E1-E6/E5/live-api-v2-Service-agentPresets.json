@@ -1,0 +1,224 @@
+{
+  "platform": "host",
+  "provider": "Service",
+  "method": "listService",
+  "data": {
+    "mode": "service",
+    "service": {
+      "key": "agentPresets",
+      "description": "Registry of YAML-declared presets and the revisions live Agents retain.",
+      "access": {
+        "optional": {
+          "expression": "ctx.get(\"agentPresets\")",
+          "requiresUndefinedCheck": true
+        },
+        "hardDependency": {
+          "inject": [
+            "agentPresets"
+          ],
+          "expression": "ctx.agentPresets"
+        }
+      },
+      "methods": [
+        {
+          "signature": "async register(definition: PresetDefinition): Promise<() => Promise<void>>",
+          "description": "Register and eagerly load a definition; activation failure remains visible in the roster.",
+          "parameters": [
+            {
+              "name": "definition",
+              "description": "Parsed configuration supplied by the declaring plugin."
+            }
+          ],
+          "returns": "Definition disposer after activation or its diagnostic settles; the declaring plugin owns it."
+        },
+        {
+          "signature": "async list(): Promise<AgentPreset[]>",
+          "description": "Read every declared preset, including activation failures.",
+          "parameters": [],
+          "returns": "Display metadata and loading diagnostics."
+        },
+        {
+          "signature": "@Remote('list') async remoteExportList(): Promise<AgentPresetRoster>",
+          "description": "Read the selection roster.",
+          "parameters": [],
+          "returns": "Current presets, each marked when it is the default."
+        },
+        {
+          "signature": "async resolve(id?: string): Promise<AgentPreset>",
+          "description": "Resolve an identity without starting an Agent.",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Explicit preset or the current default."
+            }
+          ],
+          "returns": "Current metadata, including failure when activation failed."
+        },
+        {
+          "signature": "@Remote('read') readDocument(agentPreset: string): Promise<AgentPresetDocument>",
+          "description": "Read one declaration's child plugin list as YAML, for viewing only.",
+          "parameters": [
+            {
+              "name": "agentPreset",
+              "description": "Preset identity."
+            }
+          ],
+          "returns": "The declared composition beside its published metadata."
+        },
+        {
+          "signature": "async mount(ctx: Context, id?: string): Promise<AgentPreset>",
+          "description": "Bind an unpublished Agent to the current preset revision.",
+          "parameters": [
+            {
+              "name": "ctx",
+              "description": "Agent context from its setup callback."
+            },
+            {
+              "name": "id",
+              "description": "Requested preset, or the default."
+            }
+          ],
+          "returns": "Bound preset identity."
+        },
+        {
+          "signature": "composeFrom(ctx: Context, parent: Context): string | undefined",
+          "description": "Join a child to the exact revision retained by its parent.",
+          "parameters": [
+            {
+              "name": "ctx",
+              "description": "Child Agent context."
+            },
+            {
+              "name": "parent",
+              "description": "Parent Agent context."
+            }
+          ],
+          "returns": "Inherited preset id, or undefined in a preset-free composition."
+        },
+        {
+          "signature": "composedPreset(ctx: Context): string | undefined",
+          "description": "Read the preset a live Agent uses.",
+          "parameters": [
+            {
+              "name": "ctx",
+              "description": "Agent context."
+            }
+          ],
+          "returns": "Its preset id, if bound."
+        },
+        {
+          "signature": "serviceFor<K extends string & keyof Context>(agent: { ctx: Context }, name: K): Context[K] | undefined",
+          "description": "Read a service supplied inside an Agent's isolated preset group.",
+          "parameters": [
+            {
+              "name": "agent",
+              "description": "Agent whose composition is queried."
+            },
+            {
+              "name": "name",
+              "description": "Cordis service name."
+            }
+          ],
+          "returns": "The service, or undefined."
+        },
+        {
+          "signature": "async recompose(ctx: Context, id: string): Promise<AgentPreset>",
+          "description": "Rebind a blank Agent; the caller owns the blank-session check.",
+          "parameters": [
+            {
+              "name": "ctx",
+              "description": "Agent context."
+            },
+            {
+              "name": "id",
+              "description": "Requested preset."
+            }
+          ],
+          "returns": "The bound identity."
+        },
+        {
+          "signature": "@Remote('select') async select(agent: Agent, agentPreset: string): Promise<string>",
+          "description": "Select a preset before a session starts its first turn.",
+          "parameters": [
+            {
+              "name": "agent",
+              "description": "Target Agent."
+            },
+            {
+              "name": "agentPreset",
+              "description": "Requested identity."
+            }
+          ],
+          "returns": "Committed preset identity."
+        },
+        {
+          "signature": "async acquireScope(id?: string): Promise<{ key: ScopeKey } & AsyncDisposable>",
+          "description": "Read current registrations for cold transcript presentation.",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Preset identity or the default."
+            }
+          ],
+          "returns": "A revision lease; dispose it after the scoped read completes."
+        },
+        {
+          "signature": "compositionInventory(): Promise<AgentPresetComposition[]>",
+          "description": "Read plugin rows without creating an Agent.",
+          "parameters": [],
+          "returns": "Current declaration metadata and activation states."
+        }
+      ]
+    },
+    "referencedTypes": [
+      {
+        "name": "Agent",
+        "declaration": "export interface Agent {\n    readonly id: SessionId;\n}"
+      },
+      {
+        "name": "AgentPresetComposition",
+        "declaration": "export interface AgentPresetComposition {\n    readonly id: string;\n    readonly name?: string;\n    readonly isDefault: boolean;\n    readonly broken?: string;\n    readonly rows: readonly AgentPresetCompositionRow[];\n}"
+      },
+      {
+        "name": "AgentPresetCompositionRow",
+        "declaration": "export interface AgentPresetCompositionRow {\n    readonly entryId: string | null;\n    readonly moduleName: string;\n    readonly enabled: CompositionRowEnablement;\n    readonly condition?: string;\n    readonly fiberState?: FiberState;\n}"
+      },
+      {
+        "name": "AgentPresetDocument",
+        "declaration": "export interface AgentPresetDocument {\n    readonly agentPreset: string;\n    readonly content: string;\n    readonly name?: string;\n    readonly description?: string;\n}"
+      },
+      {
+        "name": "AgentPresetRoster",
+        "declaration": "export interface AgentPresetRoster {\n    readonly presets: readonly AgentPresetRow[];\n}"
+      },
+      {
+        "name": "AgentPresetRow",
+        "declaration": "export interface AgentPresetRow {\n    readonly id: string;\n    readonly isDefault: boolean;\n    readonly name?: string;\n    readonly description?: string;\n    readonly broken?: string;\n}"
+      },
+      {
+        "name": "Branded",
+        "declaration": "export type Branded<B extends string> = string & {\n    readonly [BRAND]: B;\n};"
+      },
+      {
+        "name": "CompositionRowEnablement",
+        "declaration": "export type CompositionRowEnablement = boolean | 'conditional';"
+      },
+      {
+        "name": "FiberState",
+        "declaration": "export const enum FiberState {\n    PENDING,\n    LOADING,\n    ACTIVE,\n    FAILED,\n    DISPOSED,\n    UNLOADING\n}"
+      },
+      {
+        "name": "PresetDefinition",
+        "declaration": "export interface PresetDefinition {\n    readonly id: string;\n    readonly name?: string;\n    readonly description?: string;\n    readonly order?: number;\n    readonly plugins: readonly (Omit<EntryOptions, 'id' | 'disabled'> & {\n        id?: string;\n        disabled?: EntryOptions['disabled'] | JsExpr;\n    })[];\n}"
+      },
+      {
+        "name": "ScopeKey",
+        "declaration": "export type ScopeKey = object;"
+      },
+      {
+        "name": "SessionId",
+        "declaration": "export type SessionId = Branded<'SessionId'>;"
+      }
+    ]
+  }
+}

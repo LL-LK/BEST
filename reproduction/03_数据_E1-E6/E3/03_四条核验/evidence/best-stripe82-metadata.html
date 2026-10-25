@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://nadc.china-vo.org/sr/images/favicon.ico">
+    
+    <title>
+
+#329 bestphot_calib.stripe82
+
+ | BEst STar database</title>
+    
+    
+
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/open-iconic/font/css/open-iconic-bootstrap.css">
+	<link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2-bootstrap.css">
+    <link rel="stylesheet" href="/data/best/static/css/style.css">
+    
+<link rel="stylesheet" type="text/css" href="/data/best/static/css/search.css">
+
+    
+
+    
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://nadc.china-vo.org/sr/js/jquery.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/popper.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/select2.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap-treeview.min.js"></script>
+    <script src="/data/best/static/js/script.js?v=2"></script>
+    <script type="text/javascript">
+        var prx = '/data/best';
+        var csrf_token = "IjBkM2U1ODZmZTc0ZWMzNzc3YmVjYmIyMzBlY2VhMjcxNDhjZjRhM2Ui.aspaqA.vZt8NCbfOUrMRVrD772cSOuxvTU";
+        
+        var is_authenticated = false;
+        
+    </script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="//analytics.escience.org.cn/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '23']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+    
+<script>
+$(function(){
+    $('input[name="showcolcheckall"]').click(function(){
+		checked=$(this).prop('checked');
+        var tbl_id=$(this).attr('data');
+		$('input[name="showcol"]').each(function(i,data){
+            if($(this).attr('data')==tbl_id){
+                $(this).prop('checked', checked);
+            }
+        });
+	});
+    $('#solvename').click(function(e){
+        e.preventDefault();
+        obj = $('#pos_objname').val();
+        $.get('/data/best/nss/solve?obj='+obj,function(json){
+            $('#pos_cra').val(json.ra);
+            $('#pos_cdec').val(json.dec);
+        });
+    });
+    $('.pos_rect').click(function(e){
+        $('#pos_rect').prop("checked", "checked");	
+    });
+    $('.pos_cone').click(function(e){
+        $('#pos_cone').prop("checked", "checked");	
+    });
+    $('.pos_proximity').click(function(e){
+        $('#pos_proximity').prop("checked", "checked");	
+    });
+    $('.pos_none').click(function(e){
+        $('#pos_none').prop("checked", "checked");	
+    });
+    $('.operation').change(function(e){
+        var tbl_col=$(e.currentTarget).attr('ref');
+        var op_val=$(this).children('option:selected').val();
+        disable_and_hide_item($('#'+tbl_col+'_between'));
+        disable_and_hide_item($('#'+tbl_col+'_indiv'));
+        disable_and_hide_item($('#'+tbl_col+'_simple'));
+        if(op_val==''){
+            //pass
+        }else if(op_val=='in'){
+            enable_and_show_item($('#'+tbl_col+'_indiv'));
+        }else if(op_val=='between'){
+            enable_and_show_item($('#'+tbl_col+'_between'));
+        }else{
+            enable_and_show_item($('#'+tbl_col+'_simple'));
+        }
+    });
+});
+function enable_and_show_item(item){
+    $(item).show();
+    var cd=$(item).children('input,textarea,select');
+    $.each(cd, function(index, item){
+        $(item).removeAttr('disabled');
+    });
+}
+function disable_and_hide_item(item){
+    $(item).hide();
+    var cd=$(item).children('input,textarea,select');
+    $.each(cd, function(index, item){
+        $(item).attr('disabled','disabled');
+    });
+}
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark topNav-bg index-topNav">
+    <div class="container-fluid index-navbar-container">
+        <div class="row" style="margin: 0px;width: 100%;">
+            <div class="collapse navbar-collapse" id="chinavo-navbar">
+                <ul class="navbar-nav mr-auto chinavoNavbar-ul">
+                    
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best">BEST</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Query
+                        </a>
+                        <div class="dropdown-menu chinavoDropdownMenu" aria-labelledby="navbarDropdown0">
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/std">Standard Stars</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib/ps1/f">Pan-STARRS All-Sky Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib">Well-Calibrated Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="/data/best/other">Corrected Gaia DR3 XP Spectra</a>
+                            
+                            
+                        </div>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/jobs">User-Defined</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/catalog">Catalog</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/news">News</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/help">Help</a>
+                        </li>
+                        
+                        
+                    
+                    
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto chinavoNavbar-ul">
+                    
+                    <li class="nav-item"><a class="nav-link" href="/data/best/user/login?next=https://nadc.china-vo.org/data/best/t/329">Login</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<div class="container-fluid">
+    
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/">Home</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item active" aria-current="page">
+        
+            #329 bestphot_calib.stripe82
+        
+    </li>
+
+        
+    </ol>
+</nav>
+
+<form method="post" enctype="multipart/form-data" action="/data/best/t/329/q ">
+    <input type="hidden" name="csrf_token" value="IjBkM2U1ODZmZTc0ZWMzNzc3YmVjYmIyMzBlY2VhMjcxNDhjZjRhM2Ui.aspaqA.vZt8NCbfOUrMRVrD772cSOuxvTU">
+    
+
+    
+    
+    <div>
+        <div><label class="weighted_label">POSITION CONSTRAINTS : </label> </div>
+        
+        <div style="padding: 20px;">
+            <b>COORDINATE GROUP:</b>
+            <select name="pos_group">
+                
+                <option value="ra,dec">ra & dec</option>
+                
+            </select>
+        </div>
+        
+        <table class="search" style="width:95%" align="center">
+	        <tbody>
+	        	<tr class="pos_rect">
+	        		<td rowspan="2"><span><input id="pos_rect" name="pos.type" type="radio" value="rect"  > Rectangle</span></td>
+		            <td>min</td>
+		            <td>ra <input name="pos.ramin" type="text"></td>
+		            <td>dec <input name="pos.decmin" type="text"></td>
+					<td rowspan="2"><span>(max 10 square degrees)</span></td>
+	            </tr>
+	            <tr class="pos_rect"><td>max</td>
+					<td>ra <input name="pos.ramax" type="text"></td>
+					<td>dec <input name="pos.decmax" type="text"></td>
+	            </tr>
+	            <tr class="pos_cone">
+	            	<td rowspan="2"><span><input id="pos_cone" name="pos.type" type="radio" value="cone" > Cone</span></td>
+					<td rowspan="2">center</td>
+					<td colspan="2" align="center">solve target name: <input id="pos_objname" type="text"> <button id="solvename">Solve</button></td>
+					<td rowspan="2">
+                        <div>radius <input id="pos_cradius" name="pos.radius" type="text" value=""> arcsec</div>
+                        <div><label><input name="cone_nearestonly" type="checkbox"> Nearest Only</label></div>
+                    </td>
+	            </tr>
+	            <tr class="pos_cone">
+		            <td>ra <input id="pos_cra" name="pos.racenter" type="text" value=""></td>
+                    <td>dec <input id="pos_cdec" name="pos.deccenter" type="text" value=""></td>
+	            </tr>
+	            <tr class="pos_proximity">
+	            	<td><span><input id="pos_proximity" name="pos.type" type="radio" value="proximity" > Proximity</span></td>
+	            	<td colspan="3"><div style="float: left;width: 55%;">list of ra,dec[,radius_in_arcsec]<br>
+<textarea name="pos.radecTextarea" rows="4" style="width: 100%;">#ra,dec,sep
+308.500219,-1.227713,2</textarea></div>
+	              <div style="float: right;width: 40%; align-items: center; justify-content: center;">
+                            <p>&nbsp;</p>
+                            <p>or Upload File (<a href="https://nadc.china-vo.org/sr/files/radecradius.txt" target="_blank">Sample</a>)</p>
+                            <p><input class="bigInput" type="file" name="pos.posfile" accept=".txt,.csv"></p>
+                        </div>
+                        </td>
+                    <td>
+                        <div>Default radius <input name="pos.defaultRadius" type="text" value="2"> arcsec</div>
+                        <div><label><input name="proximity_nearestonly" type="checkbox"> Nearest Only</label></div>
+                    </td>
+         </tr>
+         <tr class="pos_none">
+           <td><span><input name="pos.type" id="pos_none" type="radio" value="none" checked> None</span></td>
+           <td colspan="4">No position constraint</td>
+         </tr>
+       </tbody>
+     </table>
+    </div>
+    
+    <div>
+        <label class="weighted_label">OUPUT FORMAT: </label> 
+        <select name="output.fmt"> 
+            <option value="csv">CSV</option>
+            <option value="txt">TXT</option>
+            <option value="json">JSON</option>
+            <option value="votable">VOTable</option>
+            <option selected value="html">Webpage</option>
+        </select> 
+    </div>
+    
+    <div>
+        <label class="weighted_label">SUBMIT : </label> 
+        <input class="weighted_btn" style="margin-left: 50px;" type="reset" value="Reset"/> 
+        <input class="weighted_btn" style="margin-left: 50px;" type="submit" value="Submit"/>
+    </div>
+
+    <div><label class="weighted_label">MORE CONSTRAINTS : </label></div>
+    <table id="form_tbl" class="search" style="width: 95%;" align="center">
+    
+    <tr><td colspan="7" style="text-align: center;font-weight: bold;">[ <a href="/data/best/t/329">bestphot_calib.stripe82</a> ]</td></tr>
+    <tr>
+        <td class="text-middle" style="width: 70px;">Show<br/><label style="font-style: italic;"><input type="checkbox" name="showcolcheckall" data="329" /> all</label></td>
+        <td class="text-middle" style="width: 70px;">Sort<br/><label style="font-style: italic;"><input name="order" type="checkbox" value="desc"/> desc</label></td>
+        <td class="text-middle">Name</td>
+        <td class="text-middle">Operation</td>
+        <td class="text-middle">Constraint</td>
+        <td class="text-left">Sample</td>
+        <td class="text-left">Description</td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_calibstars_id" data="329" value="stripe82.calibstars_id" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_calibstars_id" value="stripe82.calibstars_id" type="radio"></td>
+        <td class="text-middle">calibstars_id</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_calibstars_id" name="stripe82.calibstars_id.operation" id="stripe82_calibstars_id_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_calibstars_id_simple">
+                <input disabled="disabled" type="text" name="stripe82.calibstars_id.constraint" id="stripe82_calibstars_id_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_calibstars_id_indiv">
+                <textarea disabled="disabled" name="stripe82.calibstars_id.textarea" id="stripe82_calibstars_id_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.calibstars_id.file" id="stripe82_calibstars_id_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_calibstars_id_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.calibstars_id.min" id="stripe82_calibstars_id_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.calibstars_id.max" id="stripe82_calibstars_id_max" />
+            </div>
+        </td>
+        <td class="text-left">CALIBSTARS_0000001</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_ra" data="329" value="stripe82.ra" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_ra" value="stripe82.ra" type="radio"></td>
+        <td class="text-middle">ra</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_ra" name="stripe82.ra.operation" id="stripe82_ra_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_ra_simple">
+                <input disabled="disabled" type="text" name="stripe82.ra.constraint" id="stripe82_ra_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_ra_indiv">
+                <textarea disabled="disabled" name="stripe82.ra.textarea" id="stripe82_ra_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.ra.file" id="stripe82_ra_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_ra_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.ra.min" id="stripe82_ra_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.ra.max" id="stripe82_ra_max" />
+            </div>
+        </td>
+        <td class="text-left">308.500219</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_dec" data="329" value="stripe82.dec" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_dec" value="stripe82.dec" type="radio"></td>
+        <td class="text-middle">dec</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_dec" name="stripe82.dec.operation" id="stripe82_dec_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_dec_simple">
+                <input disabled="disabled" type="text" name="stripe82.dec.constraint" id="stripe82_dec_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_dec_indiv">
+                <textarea disabled="disabled" name="stripe82.dec.textarea" id="stripe82_dec_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.dec.file" id="stripe82_dec_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_dec_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.dec.min" id="stripe82_dec_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.dec.max" id="stripe82_dec_max" />
+            </div>
+        </td>
+        <td class="text-left">-1.227713</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rarms" data="329" value="stripe82.rarms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rarms" value="stripe82.rarms" type="radio"></td>
+        <td class="text-middle">rarms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rarms" name="stripe82.rarms.operation" id="stripe82_rarms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rarms_simple">
+                <input disabled="disabled" type="text" name="stripe82.rarms.constraint" id="stripe82_rarms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rarms_indiv">
+                <textarea disabled="disabled" name="stripe82.rarms.textarea" id="stripe82_rarms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rarms.file" id="stripe82_rarms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rarms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rarms.min" id="stripe82_rarms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rarms.max" id="stripe82_rarms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.0227</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_decrms" data="329" value="stripe82.decrms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_decrms" value="stripe82.decrms" type="radio"></td>
+        <td class="text-middle">decrms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_decrms" name="stripe82.decrms.operation" id="stripe82_decrms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_decrms_simple">
+                <input disabled="disabled" type="text" name="stripe82.decrms.constraint" id="stripe82_decrms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_decrms_indiv">
+                <textarea disabled="disabled" name="stripe82.decrms.textarea" id="stripe82_decrms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.decrms.file" id="stripe82_decrms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_decrms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.decrms.min" id="stripe82_decrms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.decrms.max" id="stripe82_decrms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.0227</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_nb" data="329" value="stripe82.nb" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_nb" value="stripe82.nb" type="radio"></td>
+        <td class="text-middle">nb</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_nb" name="stripe82.nb.operation" id="stripe82_nb_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_nb_simple">
+                <input disabled="disabled" type="text" name="stripe82.nb.constraint" id="stripe82_nb_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_nb_indiv">
+                <textarea disabled="disabled" name="stripe82.nb.textarea" id="stripe82_nb_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.nb.file" id="stripe82_nb_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_nb_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.nb.min" id="stripe82_nb_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.nb.max" id="stripe82_nb_max" />
+            </div>
+        </td>
+        <td class="text-left">7</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_ar" data="329" value="stripe82.ar" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_ar" value="stripe82.ar" type="radio"></td>
+        <td class="text-middle">ar</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_ar" name="stripe82.ar.operation" id="stripe82_ar_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_ar_simple">
+                <input disabled="disabled" type="text" name="stripe82.ar.constraint" id="stripe82_ar_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_ar_indiv">
+                <textarea disabled="disabled" name="stripe82.ar.textarea" id="stripe82_ar_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.ar.file" id="stripe82_ar_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_ar_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.ar.min" id="stripe82_ar_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.ar.max" id="stripe82_ar_max" />
+            </div>
+        </td>
+        <td class="text-left">0.587</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_unobs" data="329" value="stripe82.unobs" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_unobs" value="stripe82.unobs" type="radio"></td>
+        <td class="text-middle">unobs</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_unobs" name="stripe82.unobs.operation" id="stripe82_unobs_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_unobs_simple">
+                <input disabled="disabled" type="text" name="stripe82.unobs.constraint" id="stripe82_unobs_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_unobs_indiv">
+                <textarea disabled="disabled" name="stripe82.unobs.textarea" id="stripe82_unobs_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.unobs.file" id="stripe82_unobs_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_unobs_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.unobs.min" id="stripe82_unobs_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.unobs.max" id="stripe82_unobs_max" />
+            </div>
+        </td>
+        <td class="text-left">3</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_ummed" data="329" value="stripe82.ummed" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_ummed" value="stripe82.ummed" type="radio"></td>
+        <td class="text-middle">ummed</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_ummed" name="stripe82.ummed.operation" id="stripe82_ummed_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_ummed_simple">
+                <input disabled="disabled" type="text" name="stripe82.ummed.constraint" id="stripe82_ummed_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_ummed_indiv">
+                <textarea disabled="disabled" name="stripe82.ummed.textarea" id="stripe82_ummed_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.ummed.file" id="stripe82_ummed_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_ummed_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.ummed.min" id="stripe82_ummed_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.ummed.max" id="stripe82_ummed_max" />
+            </div>
+        </td>
+        <td class="text-left">23.87</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_ummu" data="329" value="stripe82.ummu" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_ummu" value="stripe82.ummu" type="radio"></td>
+        <td class="text-middle">ummu</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_ummu" name="stripe82.ummu.operation" id="stripe82_ummu_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_ummu_simple">
+                <input disabled="disabled" type="text" name="stripe82.ummu.constraint" id="stripe82_ummu_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_ummu_indiv">
+                <textarea disabled="disabled" name="stripe82.ummu.textarea" id="stripe82_ummu_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.ummu.file" id="stripe82_ummu_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_ummu_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.ummu.min" id="stripe82_ummu_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.ummu.max" id="stripe82_ummu_max" />
+            </div>
+        </td>
+        <td class="text-left">23.823</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_umsig" data="329" value="stripe82.umsig" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_umsig" value="stripe82.umsig" type="radio"></td>
+        <td class="text-middle">umsig</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_umsig" name="stripe82.umsig.operation" id="stripe82_umsig_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_umsig_simple">
+                <input disabled="disabled" type="text" name="stripe82.umsig.constraint" id="stripe82_umsig_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_umsig_indiv">
+                <textarea disabled="disabled" name="stripe82.umsig.textarea" id="stripe82_umsig_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.umsig.file" id="stripe82_umsig_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_umsig_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.umsig.min" id="stripe82_umsig_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.umsig.max" id="stripe82_umsig_max" />
+            </div>
+        </td>
+        <td class="text-left">0.611</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_umrms" data="329" value="stripe82.umrms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_umrms" value="stripe82.umrms" type="radio"></td>
+        <td class="text-middle">umrms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_umrms" name="stripe82.umrms.operation" id="stripe82_umrms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_umrms_simple">
+                <input disabled="disabled" type="text" name="stripe82.umrms.constraint" id="stripe82_umrms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_umrms_indiv">
+                <textarea disabled="disabled" name="stripe82.umrms.textarea" id="stripe82_umrms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.umrms.file" id="stripe82_umrms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_umrms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.umrms.min" id="stripe82_umrms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.umrms.max" id="stripe82_umrms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.06</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_umchi2" data="329" value="stripe82.umchi2" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_umchi2" value="stripe82.umchi2" type="radio"></td>
+        <td class="text-middle">umchi2</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_umchi2" name="stripe82.umchi2.operation" id="stripe82_umchi2_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_umchi2_simple">
+                <input disabled="disabled" type="text" name="stripe82.umchi2.constraint" id="stripe82_umchi2_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_umchi2_indiv">
+                <textarea disabled="disabled" name="stripe82.umchi2.textarea" id="stripe82_umchi2_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.umchi2.file" id="stripe82_umchi2_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_umchi2_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.umchi2.min" id="stripe82_umchi2_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.umchi2.max" id="stripe82_umchi2_max" />
+            </div>
+        </td>
+        <td class="text-left">0.056</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_gnobs" data="329" value="stripe82.gnobs" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_gnobs" value="stripe82.gnobs" type="radio"></td>
+        <td class="text-middle">gnobs</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_gnobs" name="stripe82.gnobs.operation" id="stripe82_gnobs_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_gnobs_simple">
+                <input disabled="disabled" type="text" name="stripe82.gnobs.constraint" id="stripe82_gnobs_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_gnobs_indiv">
+                <textarea disabled="disabled" name="stripe82.gnobs.textarea" id="stripe82_gnobs_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.gnobs.file" id="stripe82_gnobs_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_gnobs_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.gnobs.min" id="stripe82_gnobs_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.gnobs.max" id="stripe82_gnobs_max" />
+            </div>
+        </td>
+        <td class="text-left">6</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_gmmed" data="329" value="stripe82.gmmed" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_gmmed" value="stripe82.gmmed" type="radio"></td>
+        <td class="text-middle">gmmed</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_gmmed" name="stripe82.gmmed.operation" id="stripe82_gmmed_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_gmmed_simple">
+                <input disabled="disabled" type="text" name="stripe82.gmmed.constraint" id="stripe82_gmmed_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_gmmed_indiv">
+                <textarea disabled="disabled" name="stripe82.gmmed.textarea" id="stripe82_gmmed_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.gmmed.file" id="stripe82_gmmed_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_gmmed_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.gmmed.min" id="stripe82_gmmed_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.gmmed.max" id="stripe82_gmmed_max" />
+            </div>
+        </td>
+        <td class="text-left">22.388</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_gmmu" data="329" value="stripe82.gmmu" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_gmmu" value="stripe82.gmmu" type="radio"></td>
+        <td class="text-middle">gmmu</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_gmmu" name="stripe82.gmmu.operation" id="stripe82_gmmu_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_gmmu_simple">
+                <input disabled="disabled" type="text" name="stripe82.gmmu.constraint" id="stripe82_gmmu_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_gmmu_indiv">
+                <textarea disabled="disabled" name="stripe82.gmmu.textarea" id="stripe82_gmmu_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.gmmu.file" id="stripe82_gmmu_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_gmmu_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.gmmu.min" id="stripe82_gmmu_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.gmmu.max" id="stripe82_gmmu_max" />
+            </div>
+        </td>
+        <td class="text-left">22.269</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_gmsig" data="329" value="stripe82.gmsig" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_gmsig" value="stripe82.gmsig" type="radio"></td>
+        <td class="text-middle">gmsig</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_gmsig" name="stripe82.gmsig.operation" id="stripe82_gmsig_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_gmsig_simple">
+                <input disabled="disabled" type="text" name="stripe82.gmsig.constraint" id="stripe82_gmsig_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_gmsig_indiv">
+                <textarea disabled="disabled" name="stripe82.gmsig.textarea" id="stripe82_gmsig_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.gmsig.file" id="stripe82_gmsig_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_gmsig_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.gmsig.min" id="stripe82_gmsig_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.gmsig.max" id="stripe82_gmsig_max" />
+            </div>
+        </td>
+        <td class="text-left">0.05</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_gmrms" data="329" value="stripe82.gmrms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_gmrms" value="stripe82.gmrms" type="radio"></td>
+        <td class="text-middle">gmrms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_gmrms" name="stripe82.gmrms.operation" id="stripe82_gmrms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_gmrms_simple">
+                <input disabled="disabled" type="text" name="stripe82.gmrms.constraint" id="stripe82_gmrms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_gmrms_indiv">
+                <textarea disabled="disabled" name="stripe82.gmrms.textarea" id="stripe82_gmrms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.gmrms.file" id="stripe82_gmrms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_gmrms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.gmrms.min" id="stripe82_gmrms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.gmrms.max" id="stripe82_gmrms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.154</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_gmchi2" data="329" value="stripe82.gmchi2" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_gmchi2" value="stripe82.gmchi2" type="radio"></td>
+        <td class="text-middle">gmchi2</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_gmchi2" name="stripe82.gmchi2.operation" id="stripe82_gmchi2_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_gmchi2_simple">
+                <input disabled="disabled" type="text" name="stripe82.gmchi2.constraint" id="stripe82_gmchi2_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_gmchi2_indiv">
+                <textarea disabled="disabled" name="stripe82.gmchi2.textarea" id="stripe82_gmchi2_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.gmchi2.file" id="stripe82_gmchi2_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_gmchi2_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.gmchi2.min" id="stripe82_gmchi2_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.gmchi2.max" id="stripe82_gmchi2_max" />
+            </div>
+        </td>
+        <td class="text-left">1.554</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rnobs" data="329" value="stripe82.rnobs" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rnobs" value="stripe82.rnobs" type="radio"></td>
+        <td class="text-middle">rnobs</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rnobs" name="stripe82.rnobs.operation" id="stripe82_rnobs_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rnobs_simple">
+                <input disabled="disabled" type="text" name="stripe82.rnobs.constraint" id="stripe82_rnobs_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rnobs_indiv">
+                <textarea disabled="disabled" name="stripe82.rnobs.textarea" id="stripe82_rnobs_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rnobs.file" id="stripe82_rnobs_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rnobs_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rnobs.min" id="stripe82_rnobs_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rnobs.max" id="stripe82_rnobs_max" />
+            </div>
+        </td>
+        <td class="text-left">7</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rmmed" data="329" value="stripe82.rmmed" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rmmed" value="stripe82.rmmed" type="radio"></td>
+        <td class="text-middle">rmmed</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rmmed" name="stripe82.rmmed.operation" id="stripe82_rmmed_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rmmed_simple">
+                <input disabled="disabled" type="text" name="stripe82.rmmed.constraint" id="stripe82_rmmed_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rmmed_indiv">
+                <textarea disabled="disabled" name="stripe82.rmmed.textarea" id="stripe82_rmmed_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rmmed.file" id="stripe82_rmmed_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rmmed_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rmmed.min" id="stripe82_rmmed_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rmmed.max" id="stripe82_rmmed_max" />
+            </div>
+        </td>
+        <td class="text-left">20.832</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rmmu" data="329" value="stripe82.rmmu" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rmmu" value="stripe82.rmmu" type="radio"></td>
+        <td class="text-middle">rmmu</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rmmu" name="stripe82.rmmu.operation" id="stripe82_rmmu_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rmmu_simple">
+                <input disabled="disabled" type="text" name="stripe82.rmmu.constraint" id="stripe82_rmmu_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rmmu_indiv">
+                <textarea disabled="disabled" name="stripe82.rmmu.textarea" id="stripe82_rmmu_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rmmu.file" id="stripe82_rmmu_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rmmu_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rmmu.min" id="stripe82_rmmu_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rmmu.max" id="stripe82_rmmu_max" />
+            </div>
+        </td>
+        <td class="text-left">20.834</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rmsig" data="329" value="stripe82.rmsig" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rmsig" value="stripe82.rmsig" type="radio"></td>
+        <td class="text-middle">rmsig</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rmsig" name="stripe82.rmsig.operation" id="stripe82_rmsig_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rmsig_simple">
+                <input disabled="disabled" type="text" name="stripe82.rmsig.constraint" id="stripe82_rmsig_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rmsig_indiv">
+                <textarea disabled="disabled" name="stripe82.rmsig.textarea" id="stripe82_rmsig_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rmsig.file" id="stripe82_rmsig_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rmsig_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rmsig.min" id="stripe82_rmsig_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rmsig.max" id="stripe82_rmsig_max" />
+            </div>
+        </td>
+        <td class="text-left">0.017</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rmrms" data="329" value="stripe82.rmrms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rmrms" value="stripe82.rmrms" type="radio"></td>
+        <td class="text-middle">rmrms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rmrms" name="stripe82.rmrms.operation" id="stripe82_rmrms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rmrms_simple">
+                <input disabled="disabled" type="text" name="stripe82.rmrms.constraint" id="stripe82_rmrms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rmrms_indiv">
+                <textarea disabled="disabled" name="stripe82.rmrms.textarea" id="stripe82_rmrms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rmrms.file" id="stripe82_rmrms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rmrms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rmrms.min" id="stripe82_rmrms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rmrms.max" id="stripe82_rmrms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.056</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_rmchi2" data="329" value="stripe82.rmchi2" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_rmchi2" value="stripe82.rmchi2" type="radio"></td>
+        <td class="text-middle">rmchi2</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_rmchi2" name="stripe82.rmchi2.operation" id="stripe82_rmchi2_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_rmchi2_simple">
+                <input disabled="disabled" type="text" name="stripe82.rmchi2.constraint" id="stripe82_rmchi2_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_rmchi2_indiv">
+                <textarea disabled="disabled" name="stripe82.rmchi2.textarea" id="stripe82_rmchi2_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.rmchi2.file" id="stripe82_rmchi2_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_rmchi2_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.rmchi2.min" id="stripe82_rmchi2_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.rmchi2.max" id="stripe82_rmchi2_max" />
+            </div>
+        </td>
+        <td class="text-left">1.05</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_inobs" data="329" value="stripe82.inobs" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_inobs" value="stripe82.inobs" type="radio"></td>
+        <td class="text-middle">inobs</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_inobs" name="stripe82.inobs.operation" id="stripe82_inobs_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_inobs_simple">
+                <input disabled="disabled" type="text" name="stripe82.inobs.constraint" id="stripe82_inobs_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_inobs_indiv">
+                <textarea disabled="disabled" name="stripe82.inobs.textarea" id="stripe82_inobs_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.inobs.file" id="stripe82_inobs_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_inobs_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.inobs.min" id="stripe82_inobs_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.inobs.max" id="stripe82_inobs_max" />
+            </div>
+        </td>
+        <td class="text-left">7</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_immed" data="329" value="stripe82.immed" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_immed" value="stripe82.immed" type="radio"></td>
+        <td class="text-middle">immed</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_immed" name="stripe82.immed.operation" id="stripe82_immed_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_immed_simple">
+                <input disabled="disabled" type="text" name="stripe82.immed.constraint" id="stripe82_immed_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_immed_indiv">
+                <textarea disabled="disabled" name="stripe82.immed.textarea" id="stripe82_immed_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.immed.file" id="stripe82_immed_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_immed_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.immed.min" id="stripe82_immed_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.immed.max" id="stripe82_immed_max" />
+            </div>
+        </td>
+        <td class="text-left">20.168</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_immu" data="329" value="stripe82.immu" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_immu" value="stripe82.immu" type="radio"></td>
+        <td class="text-middle">immu</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_immu" name="stripe82.immu.operation" id="stripe82_immu_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_immu_simple">
+                <input disabled="disabled" type="text" name="stripe82.immu.constraint" id="stripe82_immu_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_immu_indiv">
+                <textarea disabled="disabled" name="stripe82.immu.textarea" id="stripe82_immu_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.immu.file" id="stripe82_immu_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_immu_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.immu.min" id="stripe82_immu_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.immu.max" id="stripe82_immu_max" />
+            </div>
+        </td>
+        <td class="text-left">20.202</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_imsig" data="329" value="stripe82.imsig" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_imsig" value="stripe82.imsig" type="radio"></td>
+        <td class="text-middle">imsig</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_imsig" name="stripe82.imsig.operation" id="stripe82_imsig_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_imsig_simple">
+                <input disabled="disabled" type="text" name="stripe82.imsig.constraint" id="stripe82_imsig_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_imsig_indiv">
+                <textarea disabled="disabled" name="stripe82.imsig.textarea" id="stripe82_imsig_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.imsig.file" id="stripe82_imsig_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_imsig_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.imsig.min" id="stripe82_imsig_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.imsig.max" id="stripe82_imsig_max" />
+            </div>
+        </td>
+        <td class="text-left">0.015</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_imrms" data="329" value="stripe82.imrms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_imrms" value="stripe82.imrms" type="radio"></td>
+        <td class="text-middle">imrms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_imrms" name="stripe82.imrms.operation" id="stripe82_imrms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_imrms_simple">
+                <input disabled="disabled" type="text" name="stripe82.imrms.constraint" id="stripe82_imrms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_imrms_indiv">
+                <textarea disabled="disabled" name="stripe82.imrms.textarea" id="stripe82_imrms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.imrms.file" id="stripe82_imrms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_imrms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.imrms.min" id="stripe82_imrms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.imrms.max" id="stripe82_imrms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.046</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_imchi2" data="329" value="stripe82.imchi2" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_imchi2" value="stripe82.imchi2" type="radio"></td>
+        <td class="text-middle">imchi2</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_imchi2" name="stripe82.imchi2.operation" id="stripe82_imchi2_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_imchi2_simple">
+                <input disabled="disabled" type="text" name="stripe82.imchi2.constraint" id="stripe82_imchi2_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_imchi2_indiv">
+                <textarea disabled="disabled" name="stripe82.imchi2.textarea" id="stripe82_imchi2_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.imchi2.file" id="stripe82_imchi2_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_imchi2_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.imchi2.min" id="stripe82_imchi2_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.imchi2.max" id="stripe82_imchi2_max" />
+            </div>
+        </td>
+        <td class="text-left">1.105</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_znobs" data="329" value="stripe82.znobs" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_znobs" value="stripe82.znobs" type="radio"></td>
+        <td class="text-middle">znobs</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_znobs" name="stripe82.znobs.operation" id="stripe82_znobs_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_znobs_simple">
+                <input disabled="disabled" type="text" name="stripe82.znobs.constraint" id="stripe82_znobs_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_znobs_indiv">
+                <textarea disabled="disabled" name="stripe82.znobs.textarea" id="stripe82_znobs_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.znobs.file" id="stripe82_znobs_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_znobs_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.znobs.min" id="stripe82_znobs_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.znobs.max" id="stripe82_znobs_max" />
+            </div>
+        </td>
+        <td class="text-left">7</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_zmmed" data="329" value="stripe82.zmmed" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_zmmed" value="stripe82.zmmed" type="radio"></td>
+        <td class="text-middle">zmmed</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_zmmed" name="stripe82.zmmed.operation" id="stripe82_zmmed_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_zmmed_simple">
+                <input disabled="disabled" type="text" name="stripe82.zmmed.constraint" id="stripe82_zmmed_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_zmmed_indiv">
+                <textarea disabled="disabled" name="stripe82.zmmed.textarea" id="stripe82_zmmed_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.zmmed.file" id="stripe82_zmmed_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_zmmed_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.zmmed.min" id="stripe82_zmmed_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.zmmed.max" id="stripe82_zmmed_max" />
+            </div>
+        </td>
+        <td class="text-left">19.9</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_zmmu" data="329" value="stripe82.zmmu" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_zmmu" value="stripe82.zmmu" type="radio"></td>
+        <td class="text-middle">zmmu</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_zmmu" name="stripe82.zmmu.operation" id="stripe82_zmmu_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_zmmu_simple">
+                <input disabled="disabled" type="text" name="stripe82.zmmu.constraint" id="stripe82_zmmu_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_zmmu_indiv">
+                <textarea disabled="disabled" name="stripe82.zmmu.textarea" id="stripe82_zmmu_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.zmmu.file" id="stripe82_zmmu_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_zmmu_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.zmmu.min" id="stripe82_zmmu_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.zmmu.max" id="stripe82_zmmu_max" />
+            </div>
+        </td>
+        <td class="text-left">19.818</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_zmsig" data="329" value="stripe82.zmsig" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_zmsig" value="stripe82.zmsig" type="radio"></td>
+        <td class="text-middle">zmsig</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_zmsig" name="stripe82.zmsig.operation" id="stripe82_zmsig_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_zmsig_simple">
+                <input disabled="disabled" type="text" name="stripe82.zmsig.constraint" id="stripe82_zmsig_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_zmsig_indiv">
+                <textarea disabled="disabled" name="stripe82.zmsig.textarea" id="stripe82_zmsig_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.zmsig.file" id="stripe82_zmsig_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_zmsig_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.zmsig.min" id="stripe82_zmsig_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.zmsig.max" id="stripe82_zmsig_max" />
+            </div>
+        </td>
+        <td class="text-left">0.04</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_zmrms" data="329" value="stripe82.zmrms" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_zmrms" value="stripe82.zmrms" type="radio"></td>
+        <td class="text-middle">zmrms</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_zmrms" name="stripe82.zmrms.operation" id="stripe82_zmrms_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_zmrms_simple">
+                <input disabled="disabled" type="text" name="stripe82.zmrms.constraint" id="stripe82_zmrms_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_zmrms_indiv">
+                <textarea disabled="disabled" name="stripe82.zmrms.textarea" id="stripe82_zmrms_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.zmrms.file" id="stripe82_zmrms_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_zmrms_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.zmrms.min" id="stripe82_zmrms_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.zmrms.max" id="stripe82_zmrms_max" />
+            </div>
+        </td>
+        <td class="text-left">0.116</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_zmchi2" data="329" value="stripe82.zmchi2" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_zmchi2" value="stripe82.zmchi2" type="radio"></td>
+        <td class="text-middle">zmchi2</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_zmchi2" name="stripe82.zmchi2.operation" id="stripe82_zmchi2_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_zmchi2_simple">
+                <input disabled="disabled" type="text" name="stripe82.zmchi2.constraint" id="stripe82_zmchi2_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_zmchi2_indiv">
+                <textarea disabled="disabled" name="stripe82.zmchi2.textarea" id="stripe82_zmchi2_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.zmchi2.file" id="stripe82_zmchi2_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_zmchi2_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.zmchi2.min" id="stripe82_zmchi2_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.zmchi2.max" id="stripe82_zmchi2_max" />
+            </div>
+        </td>
+        <td class="text-left">1.212</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_u_h22" data="329" value="stripe82.u_h22" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_u_h22" value="stripe82.u_h22" type="radio"></td>
+        <td class="text-middle">u_h22</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_u_h22" name="stripe82.u_h22.operation" id="stripe82_u_h22_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_u_h22_simple">
+                <input disabled="disabled" type="text" name="stripe82.u_h22.constraint" id="stripe82_u_h22_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_u_h22_indiv">
+                <textarea disabled="disabled" name="stripe82.u_h22.textarea" id="stripe82_u_h22_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.u_h22.file" id="stripe82_u_h22_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_u_h22_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.u_h22.min" id="stripe82_u_h22_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.u_h22.max" id="stripe82_u_h22_max" />
+            </div>
+        </td>
+        <td class="text-left">23.823</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_g_h22" data="329" value="stripe82.g_h22" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_g_h22" value="stripe82.g_h22" type="radio"></td>
+        <td class="text-middle">g_h22</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_g_h22" name="stripe82.g_h22.operation" id="stripe82_g_h22_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_g_h22_simple">
+                <input disabled="disabled" type="text" name="stripe82.g_h22.constraint" id="stripe82_g_h22_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_g_h22_indiv">
+                <textarea disabled="disabled" name="stripe82.g_h22.textarea" id="stripe82_g_h22_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.g_h22.file" id="stripe82_g_h22_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_g_h22_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.g_h22.min" id="stripe82_g_h22_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.g_h22.max" id="stripe82_g_h22_max" />
+            </div>
+        </td>
+        <td class="text-left">22.267</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_r_h22" data="329" value="stripe82.r_h22" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_r_h22" value="stripe82.r_h22" type="radio"></td>
+        <td class="text-middle">r_h22</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_r_h22" name="stripe82.r_h22.operation" id="stripe82_r_h22_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_r_h22_simple">
+                <input disabled="disabled" type="text" name="stripe82.r_h22.constraint" id="stripe82_r_h22_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_r_h22_indiv">
+                <textarea disabled="disabled" name="stripe82.r_h22.textarea" id="stripe82_r_h22_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.r_h22.file" id="stripe82_r_h22_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_r_h22_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.r_h22.min" id="stripe82_r_h22_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.r_h22.max" id="stripe82_r_h22_max" />
+            </div>
+        </td>
+        <td class="text-left">20.835</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_i_h22" data="329" value="stripe82.i_h22" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_i_h22" value="stripe82.i_h22" type="radio"></td>
+        <td class="text-middle">i_h22</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_i_h22" name="stripe82.i_h22.operation" id="stripe82_i_h22_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_i_h22_simple">
+                <input disabled="disabled" type="text" name="stripe82.i_h22.constraint" id="stripe82_i_h22_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_i_h22_indiv">
+                <textarea disabled="disabled" name="stripe82.i_h22.textarea" id="stripe82_i_h22_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.i_h22.file" id="stripe82_i_h22_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_i_h22_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.i_h22.min" id="stripe82_i_h22_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.i_h22.max" id="stripe82_i_h22_max" />
+            </div>
+        </td>
+        <td class="text-left">20.2</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td class="text-middle"><input name="showcol" id="stripe82_z_h22" data="329" value="stripe82.z_h22" type="checkbox" checked></td>
+        <td class="text-middle"><input name="sort" id="stripe82_z_h22" value="stripe82.z_h22" type="radio"></td>
+        <td class="text-middle">z_h22</td>
+        <td class="text-middle">
+            <select class="operation" ref="stripe82_z_h22" name="stripe82.z_h22.operation" id="stripe82_z_h22_operation">
+                <option value=""></option>
+                <option value="equal">==</option>
+                <option value="notequal">!=</option>
+                <option value="less">&lt;</option>
+                <option value="lessequal">&lt;=</option>
+                <option value="grater">&gt;</option>
+                <option value="greaterequal">&gt;=</option>
+                <option value="between">between</option>
+                <option value="contains">contains</option>
+                <option value="in">in</option>
+            </select>
+        </td>
+        <td class="text-middle">
+            <div style="display: none;" id="stripe82_z_h22_simple">
+                <input disabled="disabled" type="text" name="stripe82.z_h22.constraint" id="stripe82_z_h22_constraint" />
+            </div>
+            <div style="display: none;" id="stripe82_z_h22_indiv">
+                <textarea disabled="disabled" name="stripe82.z_h22.textarea" id="stripe82_z_h22_textarea" style="width: 100%;"></textarea><br/>
+                or upload file
+                <input disabled="disabled" type="file" name="stripe82.z_h22.file" id="stripe82_z_h22_file" accept=".txt,.csv" />
+            </div>
+            <div style="display: none;" id="stripe82_z_h22_between">
+                <label>Min:</label><input disabled="disabled" type="text" name="stripe82.z_h22.min" id="stripe82_z_h22_min" />&nbsp;&nbsp;
+                <label>Max:</label><input disabled="disabled" type="text" name="stripe82.z_h22.max" id="stripe82_z_h22_max" />
+            </div>
+        </td>
+        <td class="text-left">19.814</td>
+        <td class="text-left"></td>
+    </tr>
+    
+    <tr>
+        <td colspan="7" class="text-middle">
+            <input class="weighted_btn" type="reset" value="Reset"/>
+            <input class="weighted_btn" type="submit" value="Submit"/>
+        </td>
+    </tr>
+    
+    </table>
+</form>
+
+</div>
+
+<footer class="nadcFooter">
+    <div class="container-fluid foot-container">
+        <div id="footer">
+            <div style="float:left;">
+                Copyright © 2023, <a href="http://www.nao.cas.cn/">National Astronomical Observatories</a>, Chinese Academy of Sciences <br>
+                Address: 20A Datun Road, Chaoyang District, Beijing, 100101, China<br>
+                <a href="http://www.beian.miit.gov.cn/">京ICP备05002854号-4</a> 文保网安备案号1101050056  E-mail: support(at)china-vo.org
+            </div>
+            <div style="float:right; width:200px; text-align:right;">
+                <a href="http://www.china-vo.org/"><img border="0" src="https://nadc.china-vo.org/sr/images/power_logo_white.png"></a>
+                <a href="https://nadc.china-vo.org/"><img border="0" height="71" width="267" src="https://nadc.china-vo.org/sr/images/logo_nsti_and_nadc.png"></a></div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "worker_boundary_pass": true,
+  "checks": {
+    "public_input_readable": true,
+    "outside_sibling_hidden": true,
+    "repo_answer_key_hidden": true,
+    "traversal_key_hidden": true,
+    "input_write_denied": true,
+    "output_write_allowed": true,
+    "network_egress_denied": true,
+    "network_namespace_isolated": true,
+    "network_no_default_route": true,
+    "network_no_external_interface": true,
+    "controlled_host_sentinel_blocked": true
+  }
+}

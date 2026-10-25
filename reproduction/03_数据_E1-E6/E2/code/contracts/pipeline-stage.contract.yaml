@@ -1,0 +1,30 @@
+skill: astro-best
+kind: pipeline-stage
+stage: "collection"  # pipeline-manifest.yaml skills[].stage
+envelope_convention: contracts/envelope.contract.yaml
+state_machine:  # 计划书 §6 五状态机 —— **设计意图, 未实现** (读 state_machine_status)
+  - INTAKE
+  - VALIDATE
+  - EXECUTE
+  - GATE
+  - EMIT
+state_machine_status: >-
+  unimplemented (设计意图, 非可执行契约)。2026-10-05 复核: src/ ops/ evals/ 的
+  .py 对 INTAKE/VALIDATE/EXECUTE/GATE/EMIT 零命中, 没有任何代码实现、推进或
+  消费该状态机; 真实编排面是 src/core/pipeline.py 的
+  "配置 -> BestSkillClient -> cone_search", 无状态迁移。后果: 任何模板或报告
+  不得据此声称"已按五状态机完成" —— 未运行的状态机被文档断言为已完成, 比没有
+  这个状态机更糟 (H2-02 处置: 模板删声明 + 契约标状态, 暂不实现)。补齐实现
+  或删除本键前, 它只是意图登记, 任何门禁都不得依赖它。
+degradation:  # 优雅降级 (Graceful Degradation)
+  strategy: 保留原始输入 + handoff.status=needs_review
+  consume_data_envelope: true
+  emit_decision_envelope: false  # L1 确定性数据流 0% LLM
+upstream_skills: []  # 由 pipeline-manifest.yaml 管线链路接线
+downstream_skills:
+  - "astro-catalog"
+  - "astro-clean"
+
+# ---
+# managed_as: SSOT contract (受管版本库受控资产，由 test_gen_contracts.py 守护)
+# note: 统一规范契约，作为真源受管，不依赖外部生成脚本。

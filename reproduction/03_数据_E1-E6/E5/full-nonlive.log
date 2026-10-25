@@ -1,0 +1,10 @@
+G:\python.data\Lib\site-packages\pytest_asyncio\plugin.py:207: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the fixture caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to function scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+........................................................................ [ 51%]
+................................................................s...     [100%]
+- generated xml file: <USER_HOME>\Desktop\����\e2��e5�ع��ƻ�\E5_ִ��_2026-10-12_v4_01\full-nonlive.junit.xml -
+==================== ʵ���ʲ��������Ž� (Asset Pre-flight Summary) =====================
+\u2705 [ASSET_GATE_OK] \u6838\u5fc3\u590d\u73b0\u5e95\u5ea7\u6750\u6599 100% \u9f50\u5907 (tools.schema, e2_gold, e2_snapshots, e5_items, e5_captures)
+139 passed, 1 skipped in 259.70s (0:04:19)

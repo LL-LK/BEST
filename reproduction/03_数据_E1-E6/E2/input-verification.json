@@ -1,0 +1,15 @@
+{
+  "accepted_run_id": "e2-v2-20d9fd4d7fdb4ee48cb7f81bd5e13105",
+  "accepted_unique_repeats": 63,
+  "cases": 21,
+  "frozen_input_files": 206,
+  "frozen_code_hashes_matched": 21,
+  "independent_gold": {
+    "pass": true,
+    "n_pass": 21,
+    "n_cases": 21,
+    "n_na": 34
+  },
+  "original_outputs_not_overwritten": true,
+  "diagnostic_runs_not_merged": true
+}

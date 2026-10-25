@@ -1,0 +1,3 @@
+# 在此填写本次跑批的 system prompt (全文), 并与 manifest.system_prompt_version 对齐。
+# 注意: prompt 里不得出现任何用例的处置提示 (该拒绝还是澄清、合法区间是多少、不许调哪个工具)。
+# 本次 rubric hash: 5a7652c183ac8a31

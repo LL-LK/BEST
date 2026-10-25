@@ -1,0 +1,27 @@
+case_id: large_60000_rows
+category: huge
+snapshot_id: syn_ps1_60000_rows_20261011
+main_metrics:
+- M1
+- M2
+- M4
+- M7
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 1800.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  sort: ps1_source_id
+  order: asc
+  max_rows: 50000
+  page_size: 1000
+expect:
+  result_state: rows
+notes: 置换 huge_3700rows 槽。60,000 行、60 个1000行页的确定性合成压力数据；查询上限50,000，期望返回50页并报告total=60000/truncated=true。不得写成实站60,000行结果。
+replacement_slot: huge_3700rows
+gold_focus: 60页全量真值、截断三元组与50页返回上限

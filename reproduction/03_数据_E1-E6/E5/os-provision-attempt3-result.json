@@ -1,0 +1,63 @@
+﻿{
+    "schema":  "e5-os-provision-v1",
+    "status":  "PROVISIONED_UNVERIFIED",
+    "experiment_units":  0,
+    "root":  "<WORK_ROOT>",
+    "created":  [
+                    {
+                        "name":  "E5HarnessV4",
+                        "sid":  "S-1-5-21-0000000000-000000000-0000000000-1006",
+                        "admin":  false,
+                        "expires":  "7 days",
+                        "password_logged":  false,
+                        "credential_protection":  "DPAPI under current user; ACL admin/current user only"
+                    },
+                    {
+                        "name":  "E5Scorer",
+                        "sid":  "S-1-5-21-0000000000-000000000-0000000000-1007",
+                        "admin":  false,
+                        "expires":  "7 days",
+                        "password_logged":  false,
+                        "credential_protection":  "DPAPI under current user; ACL admin/current user only"
+                    }
+                ],
+    "acl_changes":  [
+                        {
+                            "path":  "<USER_HOME>\\AppData\\Local\\Programs\\DeepSeek Harness",
+                            "sid":  "S-1-5-21-0000000000-000000000-0000000000-1006",
+                            "rights":  "ReadAndExecute",
+                            "type":  "Allow",
+                            "recursive_reset":  false
+                        },
+                        {
+                            "path":  "<REPO_ROOT>",
+                            "sid":  "S-1-5-21-0000000000-000000000-0000000000-1006",
+                            "rights":  "FullControl",
+                            "type":  "Deny",
+                            "recursive_reset":  false
+                        },
+                        {
+                            "path":  "<TOOL_ROOT>\\deepseek\\.dsh\\sessions",
+                            "sid":  "S-1-5-21-0000000000-000000000-0000000000-1006",
+                            "rights":  "FullControl",
+                            "type":  "Deny",
+                            "recursive_reset":  false
+                        },
+                        {
+                            "path":  "<TOOL_ROOT>\\deepseek\\.dsh\\.credentials.yaml",
+                            "sid":  "S-1-5-21-0000000000-000000000-0000000000-1006",
+                            "rights":  "FullControl",
+                            "type":  "Deny",
+                            "recursive_reset":  false
+                        },
+                        {
+                            "path":  "<TOOL_ROOT>\\deepseek\\.science",
+                            "sid":  "S-1-5-21-0000000000-000000000-0000000000-1006",
+                            "rights":  "FullControl",
+                            "type":  "Deny",
+                            "recursive_reset":  false
+                        }
+                    ],
+    "error":  null,
+    "finished_at_utc":  "2026-10-12T08:02:57.4049527Z"
+}

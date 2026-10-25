@@ -1,0 +1,10 @@
+(node:3688) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(Use `DeepSeek Harness --trace-deprecation ...` to show where the warning was created)
+dsh: warning: 7 entries did not activate
+session-log-download (@deepseek-ai/dsh-session-log-export): pending (waiting for service: connection)
+open-in-app (@deepseek-ai/dsh-host-open-in-app): pending (waiting for services: webServer, connection)
+directory-picker (@deepseek-ai/dsh-host-directory-picker-auto): pending (waiting for service: webServer)
+session-controller (@deepseek-ai/dsh-api-session-controller): pending (waiting for service: fileUploads)
+client-hmr (@deepseek-ai/dsh-client-hmr): pending (waiting for service: webServer)
+file-upload (@deepseek-ai/dsh-client-file-upload): pending (waiting for service: connection)
+ui-deliverables (@deepseek-ai/dsh-client-ui-deliverables): pending (waiting for services: connection, sessionController)

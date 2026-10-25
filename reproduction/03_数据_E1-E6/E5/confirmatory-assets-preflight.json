@@ -1,0 +1,252 @@
+{
+  "schema": "e5-confirmatory-asset-preflight-v4",
+  "logical_e5_units": 0,
+  "task_count": 56,
+  "arm_count": 12,
+  "planned_units": 2016,
+  "source_items_sha256": "657946a35b5e18bd9241eae9a31bbd0e32adfe6df81899ffb018328af9b7a426",
+  "missing_decision_class": [
+    "E5-D01",
+    "E5-D02",
+    "E5-D03",
+    "E5-D04",
+    "E5-D05",
+    "E5-D06",
+    "E5-D07",
+    "E5-D08",
+    "E5-D09",
+    "E5-D10",
+    "E5-D11",
+    "E5-D12",
+    "E5-C01",
+    "E5-C02",
+    "E5-C03",
+    "E5-C04",
+    "E5-C05",
+    "E5-C06",
+    "E5-R01",
+    "E5-R02",
+    "E5-R03",
+    "E5-R04",
+    "E5-R05",
+    "E5-R06",
+    "E5-S01",
+    "E5-S02",
+    "E5-S03",
+    "E5-S04",
+    "E5-S05",
+    "E5-S06",
+    "E5-R07",
+    "E5-R08",
+    "E5-R09",
+    "E5-R10",
+    "E5-R11",
+    "E5-R12",
+    "E5-R13",
+    "E5-R14",
+    "E5-R15",
+    "E5-R16",
+    "E5-R17",
+    "E5-R18",
+    "E5-R19",
+    "E5-R20",
+    "E5-R21",
+    "E5-R22",
+    "E5-R23",
+    "E5-R24",
+    "E5-R25",
+    "E5-R26",
+    "E5-R27",
+    "E5-R28",
+    "E5-R29",
+    "E5-R30",
+    "E5-R31",
+    "E5-R32"
+  ],
+  "gold_reference_issues": [
+    {
+      "item": "E5-D01",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/cone_5as.json",
+      "canonical_sha256": "952eb8ea77e4402db38003bf8c58f1ede38def35710a586334cbcb76000015b2",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D02",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count",
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/cone_60as.json",
+      "canonical_sha256": "ab4576a447090443273adfc840184cf5c8d13d1423d0e3d4489cdbf77bdf5901",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D03",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count",
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/cone_60as.json",
+      "canonical_sha256": "ab4576a447090443273adfc840184cf5c8d13d1423d0e3d4489cdbf77bdf5901",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D04",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count",
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/multi_filter_mag_snr.json",
+      "canonical_sha256": "38ad1aaa1f3e13a86dea0ff2a92329f2752909db1c26d144d22ea23efbfca3ca",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D05",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/huge_3700rows.json",
+      "canonical_sha256": "40f65587ac9e0f4762a02be6b2f102ef55878be21fcfe7463c8942a750bb3216",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D06",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/huge_over_cap.json",
+      "canonical_sha256": "4b83f45e206f4975b66a80875e65d439b547a4efac5e49a3a3363f755b93e401",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D07",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count",
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/boundary_page_exact.json",
+      "canonical_sha256": "4ff8224cbaae80801c2d519090e02b1d99a0ae8e1c6f952633c221f9003d9eb8",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D09",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count",
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/batch_proximity.json",
+      "canonical_sha256": "d0852a2f4a7dd29646b332cfa27cc96eca9c43aac5a963638ddd92acf521ea41",
+      "answer_values_exported": false
+    },
+    {
+      "item": "E5-D11",
+      "kind": "embedded_gold_differs_from_current_canonical",
+      "fields": [
+        "row_count",
+        "row_keys"
+      ],
+      "canonical_reference": "evals/groundtruth/gold/sentinel_value.json",
+      "canonical_sha256": "81dba5610b207ffb5427f355f3c744f04e4886bb33881a3a48251942aa954a36",
+      "answer_values_exported": false
+    }
+  ],
+  "systems": [
+    {
+      "id": "A1",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "1e2d62579af0c3b8c4bb121c83df1b4197c17fe4406193337bf92580da7d3170"
+    },
+    {
+      "id": "A2",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "ba472a9b12b7bd1dc98e8b44772d443702d298de571ff632522f3be3e561ddac"
+    },
+    {
+      "id": "A3",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "784117dbc7ba7021245066483477f697ade69a4b1351cd6a5b49008c6f0baa5a"
+    },
+    {
+      "id": "A4",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "eecb657f74cc5d88ecba888cf59898e8c8e1845a2164ee111a6981c4b9dccc3b"
+    },
+    {
+      "id": "A5",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "0fce3444436f98d62038ee019f1b850675b71bfbfff91d80c31ba9d008561845"
+    },
+    {
+      "id": "A6",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "186396900bb502b17ee82fc5f797971a42c08169bca11b8fafe064060fc1f4e7"
+    },
+    {
+      "id": "B0",
+      "llm_mode": "scripted",
+      "tool_face": "none",
+      "sha256": "a430cdcb35527504eec0b72ae9b52ece91527204ae5094957ab9e1ff658411e0"
+    },
+    {
+      "id": "B1",
+      "llm_mode": "scripted",
+      "tool_face": "none",
+      "sha256": "38a99f9022973760a7e5a17b09e18ddc7026884389073dcc5f19d451f0fd7478"
+    },
+    {
+      "id": "B2a",
+      "llm_mode": "scripted",
+      "tool_face": "raw_protocol",
+      "sha256": "170a75fffee137e67c719737b45168066eac2b7c664aff50b14ee2829fedc8e5"
+    },
+    {
+      "id": "B2b",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "c8ac7226937c8b2fe25dca5fee918570619ec890896c8bcc7e1e03127e1048be"
+    },
+    {
+      "id": "B3",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "ff26aa7f10e5286b41ebe0393a7ab0e23dde042b2091a024ad647ee2b8767969"
+    },
+    {
+      "id": "sham_placeholder",
+      "llm_mode": "scripted",
+      "tool_face": "toolbox",
+      "sha256": "46be50b60636cccaf545c01dfe1361d91b17e7ef1a4804c019f2fcff5c02be9f"
+    }
+  ],
+  "statistics_conflicts": [
+    {
+      "asset": "evals/ablation/metrics/stats.py",
+      "existing": "3 repeats -> majority-vote task Boolean",
+      "required": "3 repeats -> within-arm task success proportion, then task-paired difference"
+    },
+    {
+      "asset": "evals/ablation/metrics/stats.py",
+      "existing": "MAIN_FAMILY = B0/B1/B2b/A1-A5",
+      "required": "primary B3-B2b; one Holm family A1-A6 vs B3; separate A2-sham length control"
+    }
+  ],
+  "confirmatory_go": false,
+  "reason": "Existing assets remain historical/scripted and statistically incompatible; independent live cell exporter, frozen arm prompts/schema, gold/rubric repairs and confirmatory analysis are not sealed. Human review is post-run and does not block this status."
+}

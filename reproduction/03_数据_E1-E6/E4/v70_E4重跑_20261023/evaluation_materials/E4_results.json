@@ -1,0 +1,56 @@
+{
+  "repeats": {
+    "sb1": {
+      "disposal": [
+        34,
+        35
+      ],
+      "weighted": [
+        8,
+        18
+      ],
+      "rules_only": [
+        28,
+        35
+      ]
+    },
+    "sb2": {
+      "disposal": [
+        35,
+        35
+      ],
+      "weighted": [
+        13,
+        21
+      ],
+      "rules_only": [
+        32,
+        35
+      ]
+    },
+    "sb3": {
+      "disposal": [
+        34,
+        35
+      ],
+      "weighted": [
+        10,
+        16
+      ],
+      "rules_only": [
+        30,
+        35
+      ]
+    }
+  },
+  "classification": "first acceptable disposition in the archived answer key; remaining acceptable dispositions preserved in the appendix",
+  "compound_text_only": [
+    15,
+    18
+  ],
+  "protocol": [
+    15,
+    15
+  ],
+  "digest": "ffce49a51c781c8a"
+}

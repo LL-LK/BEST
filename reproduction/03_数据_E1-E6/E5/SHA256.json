@@ -1,0 +1,14 @@
+{
+  "analysis.json": "906c0d7e6a7e2333d58b2eb2165df2e4ea77616b5bea34f91f4ae37a85a3d8c7",
+  "delivery-verification.json": "95c7cce05be31a856a5186b1495502443553579cfe0b413b6b2a8ed783fb415e",
+  "E5_public_reproduction.zip": "729ee85f7d97eb8dd3a575c7e253a405a426a9bd6c322f19d9285ce3ca88164c",
+  "E5_results.pdf": "be20694f4923905cd6ded5b0d170395cca097d4ba3c9dfb8e1a021afa2c3d434",
+  "E5_results.png": "a24103ace1f6d5a46203d2eaef9168b68b7c3b41750741499acb51cf223ba027",
+  "E5_结果报告.md": "5b412a144fba0f074f2a8fbf9d22e96cd1478f91f775cb0f29fe3d1902a1a47a",
+  "execution-diagnostics.json": "e0b2a170bd4cc06fa388afd8bfe310e09fa820f2292dce5c819ae51fc05fe564",
+  "glmm-sensitivity.json": "75d26e9553c0c89cce73f7a743ac7a5e4718b371cc0bbe925577a49b8ced4ca1",
+  "human-review-pending.csv": "6a95a626b4d7014dd9c16aad1ae913843a8dfc0d17f4135539529bc003820854",
+  "scorer-receipt.json": "1230deeaeee7b6afa0771e1e15e014cc8070f2c412a86f71e6c31f3ba3988c6d",
+  "scores.csv": "c743ebd84c6c4f2bc78ac9f9ed665867327782b2fffef1177fe69bd9a9410e0d",
+  "scores.json": "2a030fb9e6f5a362a2f5dc485e01c5b1e5ece8ef6ab1735596dff9ca6da75a5c"
+}

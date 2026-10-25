@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "ps1 无 J 波段 (仅 g/r/i/z/y)",
+    "缺目标天体"
+  ],
+  "item_id": "RB-09",
+  "tier": "P",
+  "request": "查这颗星在 ps1 的 J 波段星等。",
+  "route": "clarify",
+  "answer_text": "这条请求有两个问题，先跟你确认后我再查：\n\n1）没指明是哪颗星。“这颗星”我这边没有上下文，请给出星名（如 Gaia DR3 source_id / 2MASS 名）或坐标（RA/Dec，并说明是 J2000 的度还是时分秒）。\n\n2）Pan-STARRS（PS1）没有 J 波段。PS1 的滤光片是 g、r、i、z、y（外加 w），BEST 的 PS1 全天表（`ps1`）里可用的星等也只有这五条 PSF 星等：`ps1_gpsf`、`ps1_rpsf`、`ps1_ipsf`、`ps1_zpsf`、`ps1_ypsf`，没有 `J` 列。近红外 J 波段属于 2MASS / VISTA / UKIDSS 这类系统，BEST 的测光系统清单里也不含标准 J 波段（J-PLUS/J-PAS 的 \"J0378…J1007\" 是窄带，不是近红外 J）。\n\n所以请二选一：\n- 如果你要的是 PS1 的测光，告诉我改成哪个波段（g/r/i/z/y），我按你给的星做锥形检索；\n- 如果你确实要 J 波段星等，那得换数据源（2MASS/VISTA/UKIDSS），不在 BEST 的 PS1 表里，我可以帮你确认哪条路走。",
+  "run_id": "r1"
+}

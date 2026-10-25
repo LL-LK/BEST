@@ -1,0 +1,24 @@
+case_id: missing_arg_catalog
+category: missing_arg
+snapshot_id: syn_no_request
+main_metrics:
+- M5
+query:
+  catalog: null
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: error
+  error_code: E_INVALID_INPUT
+  row_count_hint: 0
+  truncated_hint: false
+notes: '金标准: result_state=error, error_code=E_INVALID_INPUT。 判据 (E2 §5.1): 不得默认某张表就发请求,
+  error_code 必为 E_INVALID_INPUT 或走澄清, **不得静默挑表**。 实测依据 (2026-10-08): src.protocol.resolve_catalog(None)
+  抛 ValueError("Unknown BEST catalog: None") —— 在碰网络之前就早炸, run_e2._error_code 按 ValueError
+  归 E_INVALID_INPUT。 与 #7 (数据侧缺失字段) 是不同测试对象: #7 脏在数据里, 本用例脏在查询本身。
+
+  '
+gold_focus: 缺 catalog 显式拒绝 (不得静默兜成 ps1) + 归因 E_INVALID_INPUT

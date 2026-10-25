@@ -1,0 +1,13 @@
+{
+  "schema": "e5-user-amendment-v4",
+  "date": "2026-10-12",
+  "original_protocol_sha256": "ae893bda404f18a8657f50e88b9a2a7b8df0ac92fde6034c73b9d6df6af68ab3",
+  "v4_sha256": "df5c7aae6f2b8a8414df240c4f0cc2ef3e44b08f6af17edc116707914f7d9017",
+  "authorization": "execute E5; move human review later; use installed Harness CLI 0.2.0-rc.2 and Claude Science mode",
+  "human_review": "pending_post_run",
+  "confirmatory_units": 0,
+  "targets": [
+    "<USER_HOME>\\Desktop\\论文\\e2和e5重构计划\\E5_确认性执行协议_v4_Harness020rc2_ClaudeScience_2026-10-12.md",
+    "<REPO_ROOT>\\docs\\e5-execution-protocol-v4-2026-10-12.md"
+  ]
+}

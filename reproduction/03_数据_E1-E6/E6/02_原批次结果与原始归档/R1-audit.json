@@ -1,0 +1,2819 @@
+{
+  "validation": [
+    {
+      "record": "lanes/R1/REPRO-01/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-01/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-01/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-01/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-02/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-02/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-02/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-02/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-02/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-03/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-03/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-03/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-03/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-03/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-04/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-04/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-04/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-04/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-04/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-05/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-05/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-05/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-05/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-05/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-06/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-06/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-06/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-06/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-08/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-08/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-08/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-08/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-09/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-09/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-09/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-09/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-09/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-10/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-10/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-10/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-10/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-11/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-11/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-12/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-12/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-12/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-12/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-12/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-13/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-13/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-13/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-13/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-13/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-14/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-14/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-14/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-14/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-14/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-15/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-15/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-15/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-16/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-16/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-16/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-17/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-17/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-17/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-17/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-18/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-18/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-18/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-18/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-19/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-19/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-19/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-19/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-19/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-20/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-20/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-20/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-20/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-20/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-21/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-21/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-21/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-22/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-22/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-22/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-22/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-23/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-23/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-23/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-23/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-24/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-24/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-24/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-24/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-24/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-25/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-25/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-25/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-25/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-26/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-26/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-26/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-26/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-27/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-27/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-28/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-28/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-28/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-28/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-29/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-29/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-29/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-29/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-29/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-30/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-30/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-30/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-30/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-30/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-31/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-31/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-31/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-31/repeat-5/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-32/repeat-1/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-32/repeat-2/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-32/repeat-3/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-32/repeat-4/success.json",
+      "errors": []
+    },
+    {
+      "record": "lanes/R1/REPRO-32/repeat-5/success.json",
+      "errors": []
+    }
+  ],
+  "attempt_files": 161,
+  "failure_attempts": 30,
+  "actual_execution_dates": {
+    "actual_first_started_UTC": "2026-10-07T05:31:24.273367+00:00",
+    "actual_last_known_ended_UTC": "2026-10-07T13:14:15.882103+00:00",
+    "unknown_ended_at_attempts": 1,
+    "actual_dates_Asia_Shanghai": [
+      "2026-10-07"
+    ],
+    "crossed_UTC_midnight": false,
+    "crossed_Asia_Shanghai_midnight": false
+  },
+  "model_api_failures": {
+    "failed_generation_responses": 0,
+    "affected_attempts": 0,
+    "http_status_counts": {},
+    "insufficient_balance_attempts": 0,
+    "attempts": [],
+    "scope": "生成模型API运营故障；不归为BEST后端或科学能力失败，未返回usage保持未知"
+  },
+  "planned_slot_attempted": 160,
+  "terminated_slots": 160,
+  "terminated_attempts": 161,
+  "failure_efficiency": {
+    "EF1": {
+      "eta_ratio_of_sums": 0.9715909090909091,
+      "actual_session_requests": 176,
+      "protocol_lower_bound_requests": 171,
+      "per_run": [
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0.9,
+        0.9047619047619048,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1
+      ],
+      "limitation": "按观测成功工具协议下界；非独立任务最优策略oracle，不能把错误零请求当高效率"
+    },
+    "EF2": {
+      "agent_wall_with_wait": {
+        "n": 29,
+        "p50": 116.41599604100065,
+        "p90": 276.6269874247999
+      },
+      "agent_monotonic_with_wait": {
+        "n": 29,
+        "p50": 116.41599604100065,
+        "p90": 276.6269874247999
+      },
+      "agent_utc_timestamp_span": {
+        "n": 29,
+        "p50": 116.420378,
+        "p90": 401.13867839999995
+      },
+      "cross_clock_discrepancies": [
+        {
+          "task_id": "REPRO-27",
+          "repeat": 2,
+          "trace": "attempt-1.jsonl",
+          "UTC_timestamp_span_s": 6181.499657,
+          "monotonic_duration_s": 240.91920020900216,
+          "UTC_minus_monotonic_s": 5940.580456790998
+        },
+        {
+          "task_id": "REPRO-16",
+          "repeat": 3,
+          "trace": "attempt-1.jsonl",
+          "UTC_timestamp_span_s": 495.585996,
+          "monotonic_duration_s": 185.5159202499999,
+          "UTC_minus_monotonic_s": 310.0700757500001
+        }
+      ],
+      "timing_scope": "run.wall_s is measured time.monotonic duration; UTC span separately reported, gap cause unverified; mismatch threshold 1s diagnostic only",
+      "agent_wall_without_measured_wait": {
+        "n": 29,
+        "p50": 116.41599604100065,
+        "p90": 276.6269712576001
+      },
+      "agent_wall_missing_runs": 1,
+      "interrupted_wall_observed_lower_bounds": [
+        33.50631912499921
+      ],
+      "tool_elapsed_with_wait": {
+        "n": 30,
+        "p50": 4.276,
+        "p90": 30.309600000000025
+      },
+      "measured_wait_s": 214.54722408397447
+    },
+    "http_requests": {
+      "n": 30,
+      "p50": 3.0,
+      "p90": 15.600000000000009
+    },
+    "EF3": {
+      "point": 0.0,
+      "redundant": 0,
+      "tool_calls": 154,
+      "scope": "原协议分子仅重复cone_search/crossmatch_batch，分母所有派发工具。所有工具同参重复另列诊断，不自动断言重复无用。",
+      "all_tools_exact_repeat_count": 0,
+      "exact_repeats_by_tool": {}
+    },
+    "EF4": {
+      "point": null,
+      "ineffective": 0,
+      "retries": 0,
+      "scope": "显式trace retry（模型HTTP瞬时重试）；原样不变策略是协议代理指标，不证明瞬时重试无益。BEST内部历史另计，agent重复调用未自动标记retry。"
+    },
+    "EF5": {
+      "per_run": [
+        {
+          "task_id": "REPRO-17",
+          "repeat": 1,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-28",
+          "repeat": 1,
+          "fetch_page_calls": 1,
+          "true_totals": [
+            174
+          ],
+          "rows_materialized_distinct": 174,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "6058",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": true,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-10",
+          "repeat": 5,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-26",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-21",
+          "repeat": 4,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            174,
+            174,
+            174
+          ],
+          "rows_materialized_distinct": 348,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5824",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            },
+            {
+              "sqlid": "5825",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            },
+            {
+              "sqlid": "5826",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-21",
+          "repeat": 5,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            174,
+            174,
+            174
+          ],
+          "rows_materialized_distinct": 348,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5827",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            },
+            {
+              "sqlid": "5828",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            },
+            {
+              "sqlid": "5829",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-27",
+          "repeat": 1,
+          "fetch_page_calls": 1,
+          "true_totals": [
+            174
+          ],
+          "rows_materialized_distinct": 174,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5848",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": true,
+          "over_paging": 1,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 2,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": true
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-27",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            174
+          ],
+          "rows_materialized_distinct": 174,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "6002",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-27",
+          "repeat": 2,
+          "fetch_page_calls": 4,
+          "true_totals": [
+            174
+          ],
+          "rows_materialized_distinct": 174,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5849",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": true,
+          "over_paging": 2,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 2,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": true
+            },
+            {
+              "page": 3,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": true
+            },
+            {
+              "page": 1,
+              "page_size": 10000,
+              "total_count": 0,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-18",
+          "repeat": 1,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-11",
+          "repeat": 4,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            0,
+            0,
+            0
+          ],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5515",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5516",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5517",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-11",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          "rows_materialized_distinct": 3,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [
+            {
+              "call_seq": 60,
+              "sqlid": null,
+              "total": null,
+              "ok": null,
+              "materialized_server_row_positions": null,
+              "complete": null,
+              "note": "已派发但工具结果未完成；网络原件保留，typed行覆盖未知，不能忽略该请求。"
+            },
+            {
+              "sqlid": "5505",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5506",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5507",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5508",
+              "total": 2,
+              "ok": true,
+              "materialized_server_row_positions": 2,
+              "complete": true
+            },
+            {
+              "sqlid": "5509",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5510",
+              "total": 1,
+              "ok": true,
+              "materialized_server_row_positions": 1,
+              "complete": true
+            },
+            {
+              "sqlid": "5511",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5512",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5513",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 2,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 1,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": null,
+              "over": null
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-11",
+          "repeat": 2,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            0,
+            0,
+            0,
+            46,
+            0,
+            33885
+          ],
+          "rows_materialized_distinct": 6,
+          "truncated_observed": true,
+          "all_requested_data_materialized": false,
+          "all_query_rows_materialized": false,
+          "per_query_materialization": [
+            {
+              "call_seq": 42,
+              "sqlid": null,
+              "total": null,
+              "ok": false,
+              "materialized_server_row_positions": null,
+              "complete": false,
+              "note": "无可验证查询会话；fallback total_count可能为输入数，不能当服务端行总数或忽略该请求。"
+            },
+            {
+              "sqlid": "5498",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5499",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5500",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5501",
+              "total": 46,
+              "ok": true,
+              "materialized_server_row_positions": 3,
+              "complete": false
+            },
+            {
+              "sqlid": "5502",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5504",
+              "total": 33885,
+              "ok": true,
+              "materialized_server_row_positions": 3,
+              "complete": false
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 46,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": null,
+              "over": null
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 33885,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-16",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            0,
+            0,
+            174,
+            0,
+            1144
+          ],
+          "rows_materialized_distinct": 274,
+          "truncated_observed": true,
+          "all_requested_data_materialized": false,
+          "all_query_rows_materialized": false,
+          "per_query_materialization": [
+            {
+              "sqlid": "5564",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5565",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5566",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            },
+            {
+              "sqlid": "5567",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5568",
+              "total": 1144,
+              "ok": true,
+              "materialized_server_row_positions": 100,
+              "complete": false
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 1144,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-16",
+          "repeat": 2,
+          "fetch_page_calls": 1,
+          "true_totals": [
+            0,
+            0,
+            0,
+            174,
+            174,
+            0,
+            174,
+            174
+          ],
+          "rows_materialized_distinct": 179,
+          "truncated_observed": true,
+          "all_requested_data_materialized": false,
+          "all_query_rows_materialized": false,
+          "per_query_materialization": [
+            {
+              "sqlid": "5551",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5557",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5558",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5559",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 5,
+              "complete": false
+            },
+            {
+              "sqlid": "5560",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 5,
+              "complete": false
+            },
+            {
+              "sqlid": "5561",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5562",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            },
+            {
+              "sqlid": "5563",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 5,
+              "complete": false
+            }
+          ],
+          "pagination_exercised": true,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 10000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-16",
+          "repeat": 5,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            0,
+            174
+          ],
+          "rows_materialized_distinct": 2,
+          "truncated_observed": true,
+          "all_requested_data_materialized": false,
+          "all_query_rows_materialized": false,
+          "per_query_materialization": [
+            {
+              "sqlid": "5577",
+              "total": 0,
+              "ok": true,
+              "materialized_server_row_positions": 0,
+              "complete": true
+            },
+            {
+              "sqlid": "5578",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 2,
+              "complete": false
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 0,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-08",
+          "repeat": 2,
+          "fetch_page_calls": 1,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": true,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-01",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-06",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-07",
+          "repeat": 1,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-07",
+          "repeat": 4,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-07",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-07",
+          "repeat": 2,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-07",
+          "repeat": 5,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-31",
+          "repeat": 4,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": false,
+          "all_query_rows_materialized": false,
+          "per_query_materialization": [
+            {
+              "call_seq": 3,
+              "sqlid": null,
+              "total": null,
+              "ok": false,
+              "materialized_server_row_positions": null,
+              "complete": false,
+              "note": "无可验证查询会话；fallback total_count可能为输入数，不能当服务端行总数或忽略该请求。"
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-22",
+          "repeat": 3,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-25",
+          "repeat": 5,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            174
+          ],
+          "rows_materialized_distinct": 174,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5837",
+              "total": 174,
+              "ok": true,
+              "materialized_server_row_positions": 174,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 174,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-23",
+          "repeat": 2,
+          "fetch_page_calls": 0,
+          "true_totals": [],
+          "rows_materialized_distinct": 0,
+          "truncated_observed": false,
+          "all_requested_data_materialized": null,
+          "all_query_rows_materialized": null,
+          "per_query_materialization": [],
+          "pagination_exercised": false,
+          "over_paging": null,
+          "actual_page_requests": [],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-15",
+          "repeat": 2,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            3,
+            3
+          ],
+          "rows_materialized_distinct": 3,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5539",
+              "total": 3,
+              "ok": true,
+              "materialized_server_row_positions": 3,
+              "complete": true
+            },
+            {
+              "sqlid": "5540",
+              "total": 3,
+              "ok": true,
+              "materialized_server_row_positions": 3,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 3,
+              "over": false
+            },
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 3,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        },
+        {
+          "task_id": "REPRO-15",
+          "repeat": 5,
+          "fetch_page_calls": 0,
+          "true_totals": [
+            3
+          ],
+          "rows_materialized_distinct": 3,
+          "truncated_observed": false,
+          "all_requested_data_materialized": true,
+          "all_query_rows_materialized": true,
+          "per_query_materialization": [
+            {
+              "sqlid": "5546",
+              "total": 3,
+              "ok": true,
+              "materialized_server_row_positions": 3,
+              "complete": true
+            }
+          ],
+          "pagination_exercised": false,
+          "over_paging": 0,
+          "actual_page_requests": [
+            {
+              "page": 1,
+              "page_size": 1000,
+              "total_count": 3,
+              "over": false
+            }
+          ],
+          "note": "依据真实session总数/page_size检查越界；逐查询实取覆盖指全集，REPRO-28只要求首页，全集未取不等于用户任务未完成。未知总数null。"
+        }
+      ],
+      "over_paging": 3,
+      "runs_with_measured_page_budget": 15,
+      "scope_exercised_runs": 5
+    },
+    "EF6": {
+      "point": 0.0,
+      "zero_request_runs": 0,
+      "metadata_runs": 1
+    },
+    "EF7": {
+      "tokens_in_per_run": [
+        33748,
+        365897,
+        33749,
+        33747,
+        689541,
+        320446,
+        294574,
+        344875,
+        null,
+        72445,
+        120304,
+        152183,
+        340016,
+        null,
+        461418,
+        null,
+        76118,
+        68338,
+        33748,
+        186290,
+        33760,
+        231533,
+        298871,
+        171915,
+        68519,
+        33744,
+        155474,
+        33745,
+        202005,
+        108941
+      ],
+      "tokens_out_per_run": [
+        8038,
+        6703,
+        14228,
+        19493,
+        38305,
+        31423,
+        35206,
+        34548,
+        null,
+        8126,
+        11422,
+        34114,
+        47183,
+        null,
+        66345,
+        null,
+        17474,
+        2996,
+        12786,
+        57672,
+        22913,
+        57674,
+        51224,
+        52787,
+        10502,
+        32769,
+        7757,
+        23622,
+        21669,
+        7559
+      ],
+      "tokens_in_observed_sum": 6590661,
+      "tokens_out_observed_sum": 771405,
+      "missing_usage_runs": 3,
+      "model_requests": 96,
+      "model_requests_without_complete_usage": 3,
+      "usage_policy": "回包已知usage全部相加；超时/缺usage使该次完整总量null，已知部分仍进入observed_sum。",
+      "price": null,
+      "currency_cost": null
+    },
+    "network_cost_audit": [
+      {
+        "task_id": "REPRO-17",
+        "repeat": 1,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 0,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-28",
+        "repeat": 1,
+        "session_requests": 6,
+        "native_tool_calls": 3,
+        "completed_tool_results": 3,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 3,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 6,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-10",
+        "repeat": 5,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 0,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-26",
+        "repeat": 3,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 1,
+        "model_function_call_items_without_dispatch": 1,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-21",
+        "repeat": 4,
+        "session_requests": 9,
+        "native_tool_calls": 4,
+        "completed_tool_results": 4,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 4,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 9,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-21",
+        "repeat": 5,
+        "session_requests": 9,
+        "native_tool_calls": 5,
+        "completed_tool_results": 5,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 5,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 9,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-27",
+        "repeat": 1,
+        "session_requests": 6,
+        "native_tool_calls": 4,
+        "completed_tool_results": 4,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 4,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 6,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-27",
+        "repeat": 3,
+        "session_requests": 4,
+        "native_tool_calls": 3,
+        "completed_tool_results": 3,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 3,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 4,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-27",
+        "repeat": 2,
+        "session_requests": 13,
+        "native_tool_calls": 8,
+        "completed_tool_results": 8,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 8,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 13,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-18",
+        "repeat": 1,
+        "session_requests": 0,
+        "native_tool_calls": 1,
+        "completed_tool_results": 1,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 1,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-11",
+        "repeat": 4,
+        "session_requests": 9,
+        "native_tool_calls": 7,
+        "completed_tool_results": 7,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 7,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 9,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-11",
+        "repeat": 3,
+        "session_requests": 30,
+        "native_tool_calls": 14,
+        "completed_tool_results": 13,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 1,
+        "model_requested_function_call_items": 15,
+        "model_function_call_items_without_dispatch": 1,
+        "requests_without_recorded_tool_result": 3,
+        "observed_wire_attempts_or_lower_bound": 30,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-11",
+        "repeat": 2,
+        "session_requests": 21,
+        "native_tool_calls": 11,
+        "completed_tool_results": 11,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 11,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 23,
+        "has_network_error": true
+      },
+      {
+        "task_id": "REPRO-16",
+        "repeat": 3,
+        "session_requests": 15,
+        "native_tool_calls": 7,
+        "completed_tool_results": 7,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 7,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 15,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-16",
+        "repeat": 2,
+        "session_requests": 27,
+        "native_tool_calls": 12,
+        "completed_tool_results": 12,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 12,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 27,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-16",
+        "repeat": 5,
+        "session_requests": 7,
+        "native_tool_calls": 5,
+        "completed_tool_results": 5,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 5,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 7,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-08",
+        "repeat": 2,
+        "session_requests": 0,
+        "native_tool_calls": 1,
+        "completed_tool_results": 1,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 1,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-01",
+        "repeat": 3,
+        "session_requests": 0,
+        "native_tool_calls": 1,
+        "completed_tool_results": 1,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 1,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-06",
+        "repeat": 3,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 0,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-07",
+        "repeat": 1,
+        "session_requests": 1,
+        "native_tool_calls": 14,
+        "completed_tool_results": 14,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 14,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 1,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-07",
+        "repeat": 4,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 0,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-07",
+        "repeat": 3,
+        "session_requests": 3,
+        "native_tool_calls": 16,
+        "completed_tool_results": 16,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 16,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 3,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-07",
+        "repeat": 2,
+        "session_requests": 2,
+        "native_tool_calls": 15,
+        "completed_tool_results": 15,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 15,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 2,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-07",
+        "repeat": 5,
+        "session_requests": 1,
+        "native_tool_calls": 14,
+        "completed_tool_results": 14,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 14,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 1,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-31",
+        "repeat": 4,
+        "session_requests": 0,
+        "native_tool_calls": 1,
+        "completed_tool_results": 1,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 1,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-22",
+        "repeat": 3,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 0,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-25",
+        "repeat": 5,
+        "session_requests": 3,
+        "native_tool_calls": 1,
+        "completed_tool_results": 1,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 1,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 3,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-23",
+        "repeat": 2,
+        "session_requests": 0,
+        "native_tool_calls": 0,
+        "completed_tool_results": 0,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 0,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 0,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-15",
+        "repeat": 2,
+        "session_requests": 7,
+        "native_tool_calls": 5,
+        "completed_tool_results": 5,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 5,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 7,
+        "has_network_error": false
+      },
+      {
+        "task_id": "REPRO-15",
+        "repeat": 5,
+        "session_requests": 3,
+        "native_tool_calls": 2,
+        "completed_tool_results": 2,
+        "all_tools_exact_repeats": {},
+        "native_calls_without_recorded_tool_result": 0,
+        "model_requested_function_call_items": 2,
+        "model_function_call_items_without_dispatch": 0,
+        "requests_without_recorded_tool_result": 0,
+        "observed_wire_attempts_or_lower_bound": 3,
+        "has_network_error": false
+      }
+    ],
+    "legacy_efficiency_unfit_for_primary": {
+      "ef1": 0.8235936682365254,
+      "per_run": [
+        1.0,
+        0.6666666666666666,
+        1.0,
+        1.0,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.75,
+        0.6153846153846154,
+        1.0,
+        0.6666666666666666,
+        0.6,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.7142857142857143,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.6666666666666666,
+        1.0,
+        0.7142857142857143,
+        0.6666666666666666
+      ],
+      "with_rate_limit_p50": 4.276,
+      "with_rate_limit_p90": 30.309600000000025,
+      "without_rate_limit_p50": 4.276,
+      "without_rate_limit_p90": 30.309600000000025,
+      "ef3": 0.0,
+      "redundant": 0,
+      "total": 0,
+      "ef4": 0.0,
+      "ineffective": 0,
+      "ef5_over_paging": 8,
+      "ef6": 0.10526315789473684,
+      "metadata_runs": 19,
+      "ef7_tokens_in": [
+        33748,
+        365897,
+        33749,
+        33747,
+        689541,
+        320446,
+        294574,
+        344875,
+        null,
+        72445,
+        120304,
+        152183,
+        340016,
+        null,
+        461418,
+        null,
+        76118,
+        68338,
+        33748,
+        186290,
+        33760,
+        231533,
+        298871,
+        171915,
+        68519,
+        33744,
+        155474,
+        33745,
+        202005,
+        108941
+      ],
+      "ef7_tokens_out": [
+        8038,
+        6703,
+        14228,
+        19493,
+        38305,
+        31423,
+        35206,
+        34548,
+        null,
+        8126,
+        11422,
+        34114,
+        47183,
+        null,
+        66345,
+        null,
+        17474,
+        2996,
+        12786,
+        57672,
+        22913,
+        57674,
+        51224,
+        52787,
+        10502,
+        32769,
+        7757,
+        23622,
+        21669,
+        7559
+      ],
+      "note": "external; null = harness 未提供, 禁止估算填数"
+    }
+  },
+  "failures": [
+    {
+      "task_id": "REPRO-17",
+      "repeat": 1,
+      "trace": "attempt-1.jsonl",
+      "error": "最终答案字段缺失",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-28",
+      "repeat": 1,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-10",
+      "repeat": 5,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-26",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "Expecting ':' delimiter: line 1 column 11 (char 10)",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-21",
+      "repeat": 4,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-21",
+      "repeat": 5,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-27",
+      "repeat": 1,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-27",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-27",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "Response ended prematurely",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-18",
+      "repeat": 1,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-11",
+      "repeat": 4,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-11",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "Out of range float values are not JSON compliant: nan",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "tool_pairing_incomplete",
+        "final_answer_missing_or_duplicate",
+        "run_total_cost_mismatch"
+      ]
+    },
+    {
+      "task_id": "REPRO-11",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-16",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "Response ended prematurely",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-16",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-16",
+      "repeat": 5,
+      "trace": "attempt-1.jsonl",
+      "error": "进程已退出且trace未闭合；确切退出时刻/尚未返回的模型usage未知",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate",
+        "run_boundary_missing"
+      ]
+    },
+    {
+      "task_id": "REPRO-08",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-01",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-06",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-07",
+      "repeat": 1,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-07",
+      "repeat": 4,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-07",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-07",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-07",
+      "repeat": 5,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-31",
+      "repeat": 4,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-22",
+      "repeat": 3,
+      "trace": "attempt-1.jsonl",
+      "error": "模型响应未完成、有错误或缺实际模型标识",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-25",
+      "repeat": 5,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-23",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-15",
+      "repeat": 2,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    },
+    {
+      "task_id": "REPRO-15",
+      "repeat": 5,
+      "trace": "attempt-1.jsonl",
+      "error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+      "snapshot_misses": [],
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ]
+    }
+  ]
+}

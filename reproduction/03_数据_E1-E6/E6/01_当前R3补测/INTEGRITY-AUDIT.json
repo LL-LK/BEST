@@ -1,0 +1,3117 @@
+{
+  "at": "2026-10-11T17:29:22.412729+08:00",
+  "batch": "E6-R3-supplement-20261011-1791689271010679000",
+  "totals": {
+    "R3_attempts": 160,
+    "R3_completed": 133,
+    "R3_valid": 133
+  },
+  "records": [
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-01/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-01",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6b31e90876c0dd74c5ab6b61ba5a46c1b7ccbf4e9a49e152bc53b3f4ae9a848f"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-01/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-01",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "e4142a0b9d575807dd5720cfa65ac34ab458a1e367c0beb5b4eb62616df7bb2d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-01/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-01",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "65dc85419270318adc4a7403e4f8639693439cf130c232cd091b293312242815"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-01/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-01",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "e48da2fcd4a2967c2c3302eb14698409fbdafb37f933738e3e7a4b0b10dec9f3"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-01/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-01",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "7d7bc9828c6c3d48ea2f3d3a7e88833eede0f849b1df7a6a2d40ebcad3cd1d8d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-02/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-02",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6128c0532a61ecb0a055529b74598e0110ea484d04f3f6a0e4d6257c7b0f7282"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-02/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-02",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "3e078b32b985f0eb740b10074bafd382f91e9315a2328a424b37199e50b8c5d8"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-02/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-02",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "1d88012fa57abb861bdbc8bbcf26795796e5fa01e936445db5f38acdb680cae0"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-02/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-02",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "9703f3cda122829f329745070708b499cbdfc7af33b9e52c93c26d713e0282b5"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-02/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-02",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "675fd3fa390b3ad2986356db05ecfba6b11693f098c920d84bc5da804a882ce6"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-03/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-03",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "fadb0e52b17f088436d73087f0cf0918d2251140e1f1046f77c3cbf3c297f103"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-03/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-03",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "62f61b7dda74b47a64d355003c8d70c9eb1228fd3734b16935de7b90b0aafcda"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-03/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-03",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 2,
+      "R3_replay_source_checks": 2,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "c700afd3bca8d870bfeb0bd6ea4274edd33f58d9b57d0ac07e263b2e7dd3bfc7"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-03/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-03",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0bed6da41ecb92579b6ed576e900eec0bc4a4f1caaabea0f43bfe0900fb48992"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-03/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-03",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "293965b8a1f85960d2e451382a4a7a064cf52cd67905807e2ca5e162bf0e4572"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-04/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-04",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "3dc78a0029f8d760da19928065b1d4526ccf324d0cc561edc70e3c632a4401ed"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-04/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-04",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "471f5534ef0bf28dd1c2830f57ff8092baedfe9ae662095a9850b3e811f5b91a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-04/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-04",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "c2a854d34094a091203a02b04b6fb86d490a8a277222ee72a83a04452ed23016"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-04/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-04",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "2937d636cb7e94fe0395040238f5797c55597ece0cac0ae03d7ac66554bcce14"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-04/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-04",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "5bd2919c85a5a09123c38a5b48a5c8c62a169a45e155c45e912b4c7cc2d717c0"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-05/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-05",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "09f92a2bba7cfd81034b66c4d8029f62ffb8ac1987d7bbba1465e5598c29a146"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-05/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-05",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "905b8b5b36229a7e72b51b613cf20982f5ce40de0232c2259ca03dccf98169fa"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-05/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-05",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "dd93ea4e0e89e8336658dd9310c0921a02cc3193f48624ac130951afde255515"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-05/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-05",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "a4bf498d07e701c44a764789ebd5a1420d03e1a42f7c30197b07c3d3ad55dec0"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-05/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-05",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8b1f69ac0ca30123e2b1977a21f0b9ad22faf1a71521311ddb2c5fd459c0152a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-06/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-06",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "2544a286075584d9e1e89bf11adbc7b4407ed30ebead6ff16b62dd2f7647165a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-06/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-06",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0b3b1e7337bb4d052a3eca79f03a0b21378ba6f1e7b4463c5e95e5b2b4ab2d3e"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-06/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-06",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "850f9bdeb53245aa248feca9307142ac2043334b96c4a7adea65c2cb96b8c71e"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-06/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-06",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "792f3796f2aaaf855ba8865e6df403693ce275b0f96f2a79ad8e7bdaff9db18f"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-06/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-06",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "4b14d50a17aba6e55f6568c59e4036fc61f2fb6ace09a73ce7ac30653ee17507"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-07/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-07",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "e33a01ee95545643b426bee1a0829abd03c3d531195a57d19011f86c21268c02"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-07/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-07",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "cf0a5b53309f582c9f418ea33e514c4dcfd3c7f73f796dbe3241270ef6b5ea00"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-07/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-07",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "411807738f45e2bafec681507ed50f1c6a435941c8c27e68974177ece6168aee"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-07/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-07",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ab3d187c9be449dd193aec94bfd2628e2df989781566004720a6d9c5826c2d28"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-07/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-07",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "73a5d03e8f7aedc41a00be810936e9f616125fe973920be47f3ceb52be70af3c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-08/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-08",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "2263b0b1a88d159644a6098d9046557358968ee2277cdb46417b5b5f95346281"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-08/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-08",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "3b183f27c7a741b20ed7c2fd30d3e0a9430e541d78f0f49b1927b767e94f2930"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-08/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-08",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "c979bf66d30596b87a09dcff1ab992c507149ec5be748faf1421756931f39c2d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-08/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-08",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "123722a80187142d8c7a59d5ceeefb63e37c52590d03981d366376f913145dbb"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-08/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-08",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "a6877095aeda422785227f5f0f2858d1c51c31f538c94ad5bde1c22df0b1dcc1"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-09/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-09",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "2ab291d45ba1099df2118734cf4fdce8f34d1d9e15597000ccdc07a75df66190"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-09/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-09",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8e15f26111a2b3f08986e2f85e6fc1365d31f1c1d1a7750187207012c5985485"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-09/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-09",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "f96a1afb29b9f23c41d5f4142dbe3f06fcde7f74102c747d1c10d82837e35d94"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-09/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-09",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ffb83483f2f82f2c2666f0cd829f02e2a8fd65ab06a8ee3a96fd79173ed6c13a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-09/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-09",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8b1eab93c1e0a3afce87bb1624ee90437368bf69f166403aa15e15e89949f7da"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-10/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-10",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "e0fb903a7333f69a8fbe6bf0a084dd40c5f4ca570844e103e55f65559e974079"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-10/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-10",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8f5c0c6e42046270d746b9ab2fa643ed473c3dd8467affb4f3552ba132e3de34"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-10/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-10",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "56eba6d4d52b99ed652668f52eb6c5b91cd84f5c9e4edcfb3c4f1e3d63e28e79"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-10/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-10",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "86abcfd4d206c0f2649fa2c60fabcb570304e419e982c2ac9abd251d76d179e4"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-10/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-10",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6490b476f0c9294b2448f5a21265561eae499b1c92d14546bbfa14ed749dffe3"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-11/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-11",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:17",
+        "snapshot_miss:21",
+        "snapshot_miss:25",
+        "snapshot_miss:31"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 8
+      },
+      "generation_requests": 8,
+      "network_exchanges": 31,
+      "R3_replay_source_checks": 31,
+      "R3_expected_snapshot_misses": [
+        "sha256:6ba4dea91ad7cc67909423e26fd4ef2904eea5e858eaa3e1084d32b386469537",
+        "sha256:1e8c57fbb8cf021437b51b07391ebef88b0197e9586fcaa81f1876ae042ae0c0",
+        "sha256:c467e6f2d16b645187bdcda5e0e1f82f614ce7e68f8a627142e146e1c15c1709",
+        "sha256:6ba4dea91ad7cc67909423e26fd4ef2904eea5e858eaa3e1084d32b386469537"
+      ],
+      "trace_sha256": "0db2f3d4f10cf535d6e68eb73914d11434848da05a0c64ba7fc77a144efe30a5"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-11/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-11",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:32",
+        "snapshot_miss:36",
+        "snapshot_miss:40"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 15,
+      "R3_replay_source_checks": 15,
+      "R3_expected_snapshot_misses": [
+        "sha256:dac3f433a136109d438b4de83f718247ebfebfce0fa3f190a49b388ce1d63448",
+        "sha256:20665746122305327e2a368bac85b204f6cc1faae4ebb35a3789fee67e1ae6d7",
+        "sha256:41703d18c6f1eee29eab77519528b9357254600c08234541f4a8394761caf5de"
+      ],
+      "trace_sha256": "4a6d7a6a5a787c2ae61ae85d840575941870203163c22767ff2eab316a736380"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-11/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-11",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "tool_pairing_incomplete",
+        "final_answer_missing_or_duplicate",
+        "run_total_cost_mismatch"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 30,
+      "R3_replay_source_checks": 30,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "cf6a98adf80dbc8937cd1a23fb7804d3d9e2b8f66807036e3a56aa94914725fd"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-11/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-11",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:43",
+        "snapshot_miss:47",
+        "snapshot_miss:51",
+        "snapshot_miss:57"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 6
+      },
+      "generation_requests": 6,
+      "network_exchanges": 16,
+      "R3_replay_source_checks": 16,
+      "R3_expected_snapshot_misses": [
+        "sha256:dac3f433a136109d438b4de83f718247ebfebfce0fa3f190a49b388ce1d63448",
+        "sha256:20665746122305327e2a368bac85b204f6cc1faae4ebb35a3789fee67e1ae6d7",
+        "sha256:41703d18c6f1eee29eab77519528b9357254600c08234541f4a8394761caf5de",
+        "sha256:ca6bc494c76e1d837afad051a8533541588e09e372d7e7c48b74d2fbd35bc175"
+      ],
+      "trace_sha256": "3d5a77e5bbffe0a380726d0b9017177772bb23186466b5e02363d5a0ff4126be"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-11/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-11",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 9,
+      "R3_replay_source_checks": 9,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "7e3a4aee28f0e6f6e44cb450b85a023789cd7aa829ec0261ea96b8296730b2d1"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-12/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-12",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "20476b41e9e02706514894ba09a32bba269887e73f17290ec76c46ef21c41dff"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-12/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-12",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "585fbfca8c06d65e43070dac8682f79fb8997ff3ab7b47489101f03debbdd37c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-12/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-12",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "789164556ac189b96ba2965fb133ff634e02f1016bc94c19d2d2a1d677008149"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-12/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-12",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "4b82418f29b3731f5eca79053c6ad5912fa976f5ede43c67c1951585633dbf9c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-12/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-12",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "81b49feabdec896e853107c62dcfe8e6627e9a657542064cf646cd9554dcc0c0"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-13/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-13",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "7612ec32ab381e7427efd151e5f8b9d8591ed5f95fec2885e22f233174120d26"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-13/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-13",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "065b6b1bdd61200ecde50b198f0da8d6302e268d6fdb23516e7acd5124292c46"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-13/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-13",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "12de32ff5119f5c11bfdd764f7ac2cef8091da4b14e04cbceb258820eab6c820"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-13/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-13",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "981ef10e122c2e86f4a652b399257eee610f86fd3cb5ea7a57126d8ca9891b58"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-13/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-13",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "d90a0194d24e39aa0db7cccc859615565ddb38e1110a16cf6fb32c7cf98f3547"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-14/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-14",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:11",
+        "snapshot_miss:18",
+        "snapshot_miss:23",
+        "snapshot_miss:29",
+        "snapshot_miss:36",
+        "snapshot_miss:42",
+        "snapshot_miss:52",
+        "snapshot_miss:56",
+        "snapshot_miss:64"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 8
+      },
+      "generation_requests": 8,
+      "network_exchanges": 23,
+      "R3_replay_source_checks": 23,
+      "R3_expected_snapshot_misses": [
+        "sha256:59819e22988c3e58638f9e7b16a7d30d4fa0a7e2ca2fbe55a772efea39bc7087",
+        "sha256:1ccb9aa2d7c1e830eff7af63210d0abd21c47289565c2383d8ee9213a16a8c98",
+        "sha256:edf8e49e449513cf5c48bdf71ab70e0c2a71ef844a59fdbb6c91409ae71883ec",
+        "sha256:edf8e49e449513cf5c48bdf71ab70e0c2a71ef844a59fdbb6c91409ae71883ec",
+        "sha256:dc17174706d7bf9fa34b9eeeb58e4924acb6ae7b1c022c1d533f49900e934fdd",
+        "sha256:10a19f9c0950301d1d1501c625217c5395f68e6c283315c3d819fa474865ac8e",
+        "sha256:c1f79f9fcea392d2bcb7d9986446a452cced0b0e6b3fc686a79e354a59203cd4",
+        "sha256:b00510235c0c7235a5050afd1d32185103c198bbb1e8c69264ec6cdd445a862e",
+        "sha256:10a19f9c0950301d1d1501c625217c5395f68e6c283315c3d819fa474865ac8e",
+        "sha256:c1f79f9fcea392d2bcb7d9986446a452cced0b0e6b3fc686a79e354a59203cd4",
+        "sha256:b00510235c0c7235a5050afd1d32185103c198bbb1e8c69264ec6cdd445a862e"
+      ],
+      "trace_sha256": "3c06c13b198fa82637fb8adbc62cf291513ac9a023bbcf72e68d989be734bc7c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-14/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-14",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:33",
+        "snapshot_miss:37",
+        "snapshot_miss:43",
+        "snapshot_miss:47",
+        "snapshot_miss:51",
+        "snapshot_miss:55",
+        "snapshot_miss:59",
+        "snapshot_miss:63",
+        "snapshot_miss:69",
+        "snapshot_miss:73",
+        "snapshot_miss:79",
+        "snapshot_miss:83",
+        "snapshot_miss:87"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 8
+      },
+      "generation_requests": 8,
+      "network_exchanges": 26,
+      "R3_replay_source_checks": 26,
+      "R3_expected_snapshot_misses": [
+        "sha256:43fbcd5ddcde059903eec7a190c1ed3667aaa1ab57ff5ca1e36d1c3aaa16e4c5",
+        "sha256:c6af12763f11423f9ab57cce44c838e7844fe6730b9e864c2c511e6ead654f2b",
+        "sha256:947f99d6baa03a5ec356a6ce78c0e40174bc6dd7c8d371ad2e93bbdabfe54e9e",
+        "sha256:4c45e466bfb9eb9f6863751f6482a6f7e5f930a818651930d8e15181f20a57ad",
+        "sha256:786fa517ee29ffe1f22b2e23184decdb650b91cbb19a82d3577a9ad4088fa51f",
+        "sha256:3e8eaad45c81b424a2e481a44cdbef62c28873f2c4ec63c657f6186ac98fad67",
+        "sha256:6c19226d475c60a2a8ad3ce45f825365187e1961f4d6d9cb0d6d5c269b8e8872",
+        "sha256:3b278c013b1dd7692bf65d54be712200a68ee41746b91f5bca274ef95ed05989",
+        "sha256:947f99d6baa03a5ec356a6ce78c0e40174bc6dd7c8d371ad2e93bbdabfe54e9e",
+        "sha256:43fbcd5ddcde059903eec7a190c1ed3667aaa1ab57ff5ca1e36d1c3aaa16e4c5",
+        "sha256:c1f79f9fcea392d2bcb7d9986446a452cced0b0e6b3fc686a79e354a59203cd4",
+        "sha256:c6fc78b8e8640181f6851e52e045a9e85289fa351dad8a63bcf8fdcc0dcd5df2",
+        "sha256:2bdd4b992be839bbfab5bbd7cd64146176cec053d073d23a2230ff529eacf1fb"
+      ],
+      "trace_sha256": "1b3b811d7d91c2f047bbb40bd83996fe2c2da62399e8a7ce878a85c3dbf432a8"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-14/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-14",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:15",
+        "snapshot_miss:21",
+        "snapshot_miss:35",
+        "snapshot_miss:41",
+        "snapshot_miss:45",
+        "snapshot_miss:49",
+        "snapshot_miss:53",
+        "snapshot_miss:57"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 20,
+      "R3_replay_source_checks": 20,
+      "R3_expected_snapshot_misses": [
+        "sha256:4c45e466bfb9eb9f6863751f6482a6f7e5f930a818651930d8e15181f20a57ad",
+        "sha256:3e8eaad45c81b424a2e481a44cdbef62c28873f2c4ec63c657f6186ac98fad67",
+        "sha256:43fbcd5ddcde059903eec7a190c1ed3667aaa1ab57ff5ca1e36d1c3aaa16e4c5",
+        "sha256:947f99d6baa03a5ec356a6ce78c0e40174bc6dd7c8d371ad2e93bbdabfe54e9e",
+        "sha256:786fa517ee29ffe1f22b2e23184decdb650b91cbb19a82d3577a9ad4088fa51f",
+        "sha256:6c19226d475c60a2a8ad3ce45f825365187e1961f4d6d9cb0d6d5c269b8e8872",
+        "sha256:3b278c013b1dd7692bf65d54be712200a68ee41746b91f5bca274ef95ed05989",
+        "sha256:c6af12763f11423f9ab57cce44c838e7844fe6730b9e864c2c511e6ead654f2b"
+      ],
+      "trace_sha256": "230af7a79b4146bcfc686daae5bc800ca64351ae0cc9e60a7468886782e4b35b"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-14/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-14",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:11",
+        "snapshot_miss:17"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 2,
+      "R3_replay_source_checks": 2,
+      "R3_expected_snapshot_misses": [
+        "sha256:c0cfe4a2091c18d77604b8ad36f30e50fa37bdc0262d64b32dded6a253a50c55",
+        "sha256:c0cfe4a2091c18d77604b8ad36f30e50fa37bdc0262d64b32dded6a253a50c55"
+      ],
+      "trace_sha256": "9e59f4e66004f981c8cf322904b583f52b453b759613919ae3ba2448ae7bb0b1"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-14/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-14",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:13",
+        "snapshot_miss:17",
+        "snapshot_miss:33",
+        "snapshot_miss:44",
+        "snapshot_miss:60",
+        "snapshot_miss:64",
+        "snapshot_miss:70",
+        "snapshot_miss:74",
+        "snapshot_miss:78",
+        "snapshot_miss:82",
+        "snapshot_miss:86"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 7
+      },
+      "generation_requests": 7,
+      "network_exchanges": 26,
+      "R3_replay_source_checks": 26,
+      "R3_expected_snapshot_misses": [
+        "sha256:3d76a512a95692e96900328452c7fde6176e6d23c190554a6fe48cc6aee0f225",
+        "sha256:de6b4560fcab0dc53896c41eeba8570bceaea362436c13a0b0414671925a4078",
+        "sha256:2f8eadc1ae5c965a38a760c05c19056a5c5b346637907f21974e36e5069d8514",
+        "sha256:4c45e466bfb9eb9f6863751f6482a6f7e5f930a818651930d8e15181f20a57ad",
+        "sha256:43fbcd5ddcde059903eec7a190c1ed3667aaa1ab57ff5ca1e36d1c3aaa16e4c5",
+        "sha256:3e8eaad45c81b424a2e481a44cdbef62c28873f2c4ec63c657f6186ac98fad67",
+        "sha256:947f99d6baa03a5ec356a6ce78c0e40174bc6dd7c8d371ad2e93bbdabfe54e9e",
+        "sha256:786fa517ee29ffe1f22b2e23184decdb650b91cbb19a82d3577a9ad4088fa51f",
+        "sha256:6c19226d475c60a2a8ad3ce45f825365187e1961f4d6d9cb0d6d5c269b8e8872",
+        "sha256:3b278c013b1dd7692bf65d54be712200a68ee41746b91f5bca274ef95ed05989",
+        "sha256:c6af12763f11423f9ab57cce44c838e7844fe6730b9e864c2c511e6ead654f2b"
+      ],
+      "trace_sha256": "43131dea2df49ba6a82a42d03984fe8efef2f854ca3f9a654c4d88caf51c9954"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-15/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-15",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0a03ce82b838611f93cd8209414d9df6960e63ced62ac175887656d8e554c556"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-15/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-15",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 7,
+      "R3_replay_source_checks": 7,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "92ed961e1e50ef51536f62b6887e6f2ee453101c039ebb01178eeaf61d92b62c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-15/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-15",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:11",
+        "snapshot_miss:17",
+        "snapshot_miss:23",
+        "snapshot_miss:27",
+        "snapshot_miss:36",
+        "snapshot_miss:41",
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 6
+      },
+      "generation_requests": 6,
+      "network_exchanges": 11,
+      "R3_replay_source_checks": 11,
+      "R3_expected_snapshot_misses": [
+        "sha256:496195d6b704e360d2cef8ad368d144e9c7a3762d87bd25dacb26da5c955e726",
+        "sha256:8d272732147c5ff8c056175cb0f1aa96350821ba904570ae7e42b2ff3790e3d4",
+        "sha256:2a8190e5921f1e9e06c9442ac4fea92bf6c5c6d5571ee524d6159d31a7c05b98",
+        "sha256:f1bcec7f111eff029c7951d7b463e35a0b994b69861e86860865584dd066925e",
+        "sha256:8d272732147c5ff8c056175cb0f1aa96350821ba904570ae7e42b2ff3790e3d4",
+        "sha256:c678d0b968305ff02bd375c9bcf7b2b35cd37b6348796ccf06f44f9e37225bd4",
+        "sha256:8d272732147c5ff8c056175cb0f1aa96350821ba904570ae7e42b2ff3790e3d4"
+      ],
+      "trace_sha256": "38202943c8c67614a4070d2b3fe30744dff42e372b53ad91ebd59345fa6def41"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-15/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-15",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ba80216b91d4aeb0b7512aeb7fc930a30be548b89f223226aa11d523e5580163"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-15/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-15",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "50a768aa23a39010cb04f5ce94e0e3783db4e1c5ff33e00055f617a3c090801a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-16/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-16",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 9,
+      "R3_replay_source_checks": 9,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "5705f3900b5e72b841e59b2a2fe307163e21b108247e18d387ae0b81a55351fb"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-16/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-16",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 7,
+      "R3_replay_source_checks": 7,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6b78c20a8500d7f9d68331d2f1a32ef56f402cba6b6e8f7b675bba96eee6e327"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-16/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-16",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:11",
+        "snapshot_miss:17",
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 9,
+      "R3_replay_source_checks": 9,
+      "R3_expected_snapshot_misses": [
+        "sha256:8cf20c73977ebdc1f357c903f1a693e0bd5482fcf60e145a754b7a59a78b0cff",
+        "sha256:8cf20c73977ebdc1f357c903f1a693e0bd5482fcf60e145a754b7a59a78b0cff"
+      ],
+      "trace_sha256": "759265a0483edd1cc37333f6b63f4f09e62d80036f3d6877c9ee3c129eb8fccf"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-16/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-16",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:16"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [
+        "sha256:e5f1f485b68cd3124a286594bbf966634af46224bf561f7820b25c451a1ac05b"
+      ],
+      "trace_sha256": "5c955bef65307b8878a2e804363619ef1e9b9a4ca315bae4d197cef017647510"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-16/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-16",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:32"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 7
+      },
+      "generation_requests": 7,
+      "network_exchanges": 12,
+      "R3_replay_source_checks": 12,
+      "R3_expected_snapshot_misses": [
+        "sha256:435f0bb9559f74171396781c592d042fa12d0494c693c0fa22acde930879cc37"
+      ],
+      "trace_sha256": "92ad71cf84fb52a65af9a50f2d39c887ddd39ce1846603df9d0bc0ab312608b3"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-17/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-17",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0316a0ddd1814bbaed55b571f91e64aa7cbde62e82c2a4a1ae34e91837666590"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-17/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-17",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "cdebd0214002c371bd06a749a5b8ccf420ee4dd505255ac59fb02549a98b53f7"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-17/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-17",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "5a37a4694f7cda7d9d8a8f1c56b56a259c3b1bcd5c070d3c5628f604facb55bf"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-17/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-17",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "9750ad4072d98dfca9f4a1847aaccb1ad09f7fbb82dab66d6a1a23a0df2a81a2"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-17/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-17",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "58fc9c67a9949c82ad4fea60205279886a08182b0eb2602c1f8cdead7a8d3b65"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-18/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-18",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "1ab43888245e64c3520c6bafa309a7cc16e72817ae87a5413788e1900ed667d0"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-18/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-18",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "350f916c4e818b86b9ca178918cb945015fe2a37281d93f2af109f660dcaddd7"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-18/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-18",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "1f9ccad40b567c1c7c9f99f798be28ee8cd4fc9c31c08ee33cdb276a4becf9ae"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-18/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-18",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "9878eb191bd622fc16239d374dde5fe528684fe6081e869c51ea15d94e3f679f"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-18/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-18",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6de718d744a030c9f0d7d5bf36c65a36b82decba954801ec7d435e3393e52c8e"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-19/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-19",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "a76ad3fd7abf5331d6ff79c01315b4d187c5b0cba13ca6a55cce8171b518c9d5"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-19/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-19",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ccb61f99e64750fac74125ba27a27e42c87f4406e95630d628e0ba46cc1824dc"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-19/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-19",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "9efbbdd6e2e3fdf597dcc000b353d82648667f665ba8525400ed71854c34a5ad"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-19/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-19",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "64c11d87809eac22a1ffeac26f76243c31ee8a5c460df73e8af20491a73fda42"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-19/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-19",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "07691aee11fde4fcbb1664c9fc81386d2d9f82473b18f707909549487b095449"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-20/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-20",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "32c6e031d546096ea8f61272e7d5e12fae77d77b78073e058b4e7bdf07f897d3"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-20/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-20",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "cd9ce78264c06e551fb0e037efa15dd4fc54726bcc04e700f31d6ee759eb745d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-20/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-20",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8ab11fe40c9f82c89db09228b67ff20ad176ccae9a5d3e211ac7e686bd6a1e45"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-20/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-20",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ae44c18fdda9d2cd2db74e05f56f759ced3710f5cba7e26b769ad190704be6de"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-20/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-20",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "626060fa2cf2073851bae4ebb146f5145241b87034eddb0e29a0713904575183"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-21/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-21",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:11"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 7,
+      "R3_replay_source_checks": 7,
+      "R3_expected_snapshot_misses": [
+        "sha256:8f0a86622d335b23a4074a5733735a92d48a39e3724071aa6858cbaf097710a2"
+      ],
+      "trace_sha256": "61b72a214fce2648f365ab98e5a213422476239203ba4150c3881ad102126d90"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-21/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-21",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:22",
+        "snapshot_miss:26",
+        "snapshot_miss:30",
+        "snapshot_miss:36",
+        "snapshot_miss:46"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 6
+      },
+      "generation_requests": 6,
+      "network_exchanges": 16,
+      "R3_replay_source_checks": 16,
+      "R3_expected_snapshot_misses": [
+        "sha256:f79629f4a464123144bb9313d75cb8642c164ebb9b3c5cfde601a60294a0fdf8",
+        "sha256:5beba617175db0377f66a303d317683d7a5c2f83395f83aa259353f23e934116",
+        "sha256:5c737d8dbdd3bd5b773761f11deb6f1eb85932eef783a6f716dc98f3836fbba0",
+        "sha256:eca9a043e7363b04aaff4308f5999cb0e8895aea0a856df6863ca4254b8c2a8b",
+        "sha256:b6674e3cec76d46727ca0c5a9c5869df9eae5b3b878c0a21f965db87f66740f3"
+      ],
+      "trace_sha256": "b5da87b7439ee80e5caaf1fdacee329bbc1944b29c2bd0692c471ce59c1e8f03"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-21/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-21",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 6,
+      "R3_replay_source_checks": 6,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "b0b980637a92512359a2b695683b5aa2e1233908fd548d15458c0933a61f89c2"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-21/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-21",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:11",
+        "snapshot_miss:17"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 6
+      },
+      "generation_requests": 6,
+      "network_exchanges": 8,
+      "R3_replay_source_checks": 8,
+      "R3_expected_snapshot_misses": [
+        "sha256:2a8ed45f8c55b7634b68369b00875f4f3ffcadbe8b7b4f567a7870d3cf5048f3",
+        "sha256:2a8ed45f8c55b7634b68369b00875f4f3ffcadbe8b7b4f567a7870d3cf5048f3"
+      ],
+      "trace_sha256": "cbddfdf1442681de44768376b02fa7c3a8ae17db76a5922554a725a832e61455"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-21/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-21",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:9",
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 8,
+      "R3_replay_source_checks": 8,
+      "R3_expected_snapshot_misses": [
+        "sha256:550f673f0d9d801c755d3dec3fa384a49da4e2e014faf8485d9759d802d448ba"
+      ],
+      "trace_sha256": "6e4097957bfd0157a534396fe8ea5c30304924b786123f9de7d72eee2d310848"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-22/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-22",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "a44f34f222153b01b5a9516876a38585d86f2bbe9b212378c3fc8f384f18a6f0"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-22/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-22",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {},
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "c32ee207d5b2523d79db88a25743d607f8995b23aaa8c140caed418603bb0ff3"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-22/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-22",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8b36902c1f14750a8a06537c9bfb24bde2b9e72547baf454fb409aeed8d949d4"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-22/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-22",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "bfaca7e70aec15f5fed4157b780916d42a9288bae01e78d6bafb78d5eb2b2148"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-22/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-22",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "14a752cd17cfd18e5d092f1da85b491c3b8327a1b4183de65ebdc19691218c84"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-23/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-23",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "660346066d0fa91e3676a64c0c4bbe8bd59c136f14d8a19d749a4ad7940181b1"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-23/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-23",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "45e189a0f6aec86dd2b669cff276a8a64e0202d4b43037b1ce6c606d712ba963"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-23/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-23",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "147cc1a2c3fb38e628d84b7776f3abad9a6ac3b62b11dff9817d5e393632641d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-23/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-23",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "cd57d3dfa8d2ff163473ddcbab2f09105f305179b93a3043c1cc6ec1be2a1790"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-23/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-23",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "10ca417265324b82797e9388f958a3a0efbebaed9741cd2c0f29ad7d90eea807"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-24/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-24",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "055858489465aa64ffa3c29e56fe4d8829df516fd10e5ef99648797e11c30aed"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-24/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-24",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0b794eefb61271a43c5c7ceebc8b1912f4d097f662e908b3c019ed1270ac3789"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-24/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-24",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0bfc1e20ffdade08acc5a60581d686d86d3af81bb12c33cebe1477a61ba1a2d2"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-24/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-24",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "a95768fca826ce544e9814aa4ffba51c8eac88e8b917753d90ea1c3ad3318c0d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-24/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-24",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "bef7a651df8854b27366cf2a128db0f23c8db900b7cde728d27fb8155ce42937"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-25/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-25",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "050c2bcfe3961dd28354e5594917059b7d95ab7afe8eb1b6ce18b6298be11338"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-25/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-25",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "d1a8896ecfc72968e9943dbb8b38f0f5905eba17d0139f4d4cb167204c0c2bce"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-25/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-25",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "32a82effdf4257ebb6e82218e3cc365e142ea4183d443abbded2a19fbdafa30d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-25/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-25",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "e867d98e0c2ef56f491ef28601ceac5f2cb1114ca0efbd7a3e030ca46d43214e"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-25/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-25",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 3,
+      "R3_replay_source_checks": 3,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6e8f62fa1bb466a60f6a22114c8d817f59f1defc3fbc03ab171232fdced0f5e9"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-26/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-26",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ab4ce125e75f4dbbe13fd4c9bb07f96187e30f472e51275f96b585d029790052"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-26/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-26",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "996c9c43dc4f32058d5074d19d17185b0903828c62667417d0b806308e868e04"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-26/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-26",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "final_answer_missing_or_duplicate"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "22d3df5b797b91493697f87f7ab374584621052286e250a0d90b127cc8795aaa"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-26/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-26",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "00693303630fa74137505ad9f2e4134b838603753b6cb03eb64d3afb2d11f09a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-26/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-26",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 1
+      },
+      "generation_requests": 1,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "366a0fd00e9f78e8029350b9f60543fabcaab462de067ed9157c60a39248d48d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-27/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-27",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 4
+      },
+      "generation_requests": 4,
+      "network_exchanges": 5,
+      "R3_replay_source_checks": 5,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "b943685d592536e675e5ade8b40f9d84096b15a4556698f7318d064b52e8245e"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-27/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-27",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": false,
+      "validation_errors": [
+        "snapshot_miss:18"
+      ],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 5
+      },
+      "generation_requests": 5,
+      "network_exchanges": 9,
+      "R3_replay_source_checks": 9,
+      "R3_expected_snapshot_misses": [
+        "sha256:46f68c2ec13f54821ab8a1d65616bc783a5ceb0c0cdd7fafabfa060e161b6987"
+      ],
+      "trace_sha256": "7a8bb6f9229e3690cc3fcc55ae9b9cac3830cdf7f7f03900b3678d968d9b5ce5"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-27/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-27",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "38f128aee50c6e3ac73472fbf257fc885e4162f0492b206d49590e0e3d6480d4"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-27/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-27",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "bcb931eae3059851ded25ca5f478679667145f5326ac4422990d60f674314e2a"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-27/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-27",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "4b73e7229ac13ec0d35043d7b5962705c2e2589e76673a8721ddeadfcdcdfcd5"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-28/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-28",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 4,
+      "R3_replay_source_checks": 4,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "2c449bb962bb5f32d0a382eada85a4b74aa4ae525c1698e59ac6d480d2abc14f"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-28/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-28",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 6,
+      "R3_replay_source_checks": 6,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "69435b3362ddf2fa7e6298786c90adf5cb5b95c002630bfb6fbce084182ec01f"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-28/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-28",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 6,
+      "R3_replay_source_checks": 6,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "0148aa344bf77ff64eb2fe5e8197af49556aec93970e431ca273b26f668f31be"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-28/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-28",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 6,
+      "R3_replay_source_checks": 6,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ddf45813a6acc7775a971de86b1d98ec76c1b3c9b1ecef8add4b44ea8c137c4c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-28/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-28",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 6,
+      "R3_replay_source_checks": 6,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ee861f60446de94ce64ea06b0ce39bfaa62a62de36e7ade316c7b3d6ef58be53"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-29/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-29",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8ab50b8d7800938b290bc5086e59a017ea7ce06c1a00b621799fa8a06a28ab04"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-29/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-29",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "fc77abdc8396bef63c5b7d0bd15bffeb6540e8aed9371ccab930c5b5cee4681c"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-29/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-29",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6d0e897722acb7bb0d34a9cbf739fc6fcc71f1f3716e92df9c418807e47a4c3b"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-29/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-29",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "912e8309f1110effad3ecb3385c3fd013c906b55af325bf04ae9c6ec367cae8b"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-29/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-29",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 1,
+      "R3_replay_source_checks": 1,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "c2af1f79f875ad80d44f7cbb7503242f270642ad81d7e81e682ebc14ae0b146f"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-30/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-30",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8b680d22e041428ae22078e76ad99a99b63acf0862d34da8fadf6ec5bf780439"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-30/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-30",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "5010c1b6e760dbd84e7d5e59b981c935b934e7013cb9ac617994a2b3213c5a02"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-30/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-30",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "ca063eecb335d93776df8bf4e9922d7f76e3f0aecb5f9c3fdf86ee9225b7d8de"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-30/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-30",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8a3039e953e846811a7ddf0f8bc2ffd7e4d83f4b568f018d6e8fee0926f8b771"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-30/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-30",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 3
+      },
+      "generation_requests": 3,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "6ca7729139fe2b062a2b73c436dbd517d841235768ea6ef195fad5a2ad999665"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-31/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-31",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "3bb530c4abaf818e2ac1709c0476fba0369e8d3468b0323515bcbc4256c8b250"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-31/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-31",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "509a8cf7ed083218ad2139cbaca714ed9abcbb16170adc39cac75d7143bfa267"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-31/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-31",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "d7b95257e08dbe02f2b672b1ad61c5a32a6f81a3bba98f233859c5c5d0ca3c0b"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-31/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-31",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "8a956d0e61d298aa6b1bfe5a091504bdb19bb1129842eb49ff6ec41cde526e44"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-31/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-31",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "240e5c9adb16d79fc81891139d83bcea0c8343e1673f9989e014a3ffa1f44c78"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-32/repeat-1/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-32",
+      "repeat": "repeat-1",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "b725d9b590f14ea2caeec3e752f80831025a9bd24c4e445822b4d34b3a7aaae8"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-32/repeat-2/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-32",
+      "repeat": "repeat-2",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "2c821df22a732e4e13ca897f5831848af0cc55b6da3d6f99a6fb8dda49564c40"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-32/repeat-3/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-32",
+      "repeat": "repeat-3",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "88a9a4202f7a4449c322d76549f817f71aa02a8d8e2947b1d80471b04904f73d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-32/repeat-4/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-32",
+      "repeat": "repeat-4",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "9889d769bf87add18d63fbaf2a0af74bac2f44965788bd32307a425895399f3d"
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-32/repeat-5/attempt-1.jsonl",
+      "lane": "R3",
+      "task": "REPRO-32",
+      "repeat": "repeat-5",
+      "result_exists": true,
+      "completed": true,
+      "validation_errors": [],
+      "frozen_input_errors": [],
+      "models": {
+        "deepseek-flash": 2
+      },
+      "generation_requests": 2,
+      "network_exchanges": 0,
+      "R3_replay_source_checks": 0,
+      "R3_expected_snapshot_misses": [],
+      "trace_sha256": "e56fec04086a793b66700779bc06e3d4b5a3819652a9e5e3aaaecb58e5be4abf"
+    }
+  ],
+  "credential_scan": {
+    "hits": [],
+    "scope": "结构字段、sk-模式、解码回包；已知 API 密钥精确扫描可用性单列",
+    "exact_known_api_key_scan_available": false,
+    "reason": "收尾时本机配置已无 API 密钥；仅离线统计，不恢复或使用认证。",
+    "generic_scan_passed": true
+  },
+  "snapshot": {
+    "present": true,
+    "entries": 274,
+    "source_pointers_checked": 619,
+    "errors": []
+  },
+  "judge_api_used": false,
+  "U7_raters": 0,
+  "R2_collected": false,
+  "protocol_pass": false,
+  "note": "失败原件仍保留；其无最终答案/快照缺失是无效原因，不以删除失败提高成绩。"
+}

@@ -1,0 +1,7 @@
+{
+  "actual_date_Asia_Shanghai": "2026-10-11",
+  "due_date_Asia_Shanghai": "2026-10-14",
+  "expected_rejection_observed": true,
+  "api_requests_made": 0,
+  "test_result": "date_guard_passed_not_an_experiment_failure"
+}

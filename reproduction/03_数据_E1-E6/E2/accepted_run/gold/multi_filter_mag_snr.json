@@ -1,0 +1,363 @@
+{
+  "gold_id": "gold_multi_filter_mag_snr",
+  "case_id": "multi_filter_mag_snr",
+  "snapshot_id": "sha256:3d9db8554e0ba0d40d94e7247c258a58f93114674e8dc515e584051d0083cbdd",
+  "data_version": "ps1@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:c01c73ed9b463616bf6ae17f977a24266bbd63057df180307687c3a55a3d07a6"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as_fps1_gpsfbetween-ps1_gpsf_errless/rows_full.csv",
+  "max_rows": 1000,
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [
+    "180.005190020,29.997032180",
+    "180.001102570,29.999453560",
+    "179.999236030,29.995430620",
+    "180.007877000,30.003347000",
+    "179.992629887,29.990963452"
+  ],
+  "row_count": 5,
+  "field_values": {
+    "180.005190020,29.997032180": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00519002,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99703218,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8803845006476"
+      },
+      "ps1_gpsf": {
+        "v": 18.39218046192316,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf_err": {
+        "v": 0.0111060002818703,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    },
+    "180.001102570,29.999453560": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00110257,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99945356,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8803005565208"
+      },
+      "ps1_gpsf": {
+        "v": 18.59922452197401,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf_err": {
+        "v": 0.0102059999480843,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    },
+    "179.999236030,29.995430620": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99923603,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99543062,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8799743703634"
+      },
+      "ps1_gpsf": {
+        "v": 18.350620181386436,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf_err": {
+        "v": 0.0071809999644756,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    },
+    "180.007877000,30.003347000": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.007877,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.003347,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 18.237046250293144,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 19.150592756968553,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf_err": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-999.0"
+      }
+    },
+    "179.992629887,29.990963452": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.9926298868248,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.990963452075345,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 18.689316379130158,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 19.766427818978944,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf_err": {
+        "v": 0.0392530001699924,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    }
+  },
+  "field_values_sampled": false,
+  "field_values_sampling_rule": "all(<=50)",
+  "null_semantics": {
+    "180.005190020,29.997032180": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_gpsf_err": "value"
+    },
+    "180.001102570,29.999453560": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_gpsf_err": "value"
+    },
+    "179.999236030,29.995430620": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_gpsf_err": "value"
+    },
+    "180.007877000,30.003347000": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_gpsf_err": "null"
+    },
+    "179.992629887,29.990963452": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_gpsf_err": "value"
+    }
+  },
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "ps1_ra": "deg",
+    "ps1_dec": "deg",
+    "ps1_rpsf": "mag",
+    "ps1_gpsf": "mag",
+    "ps1_gpsf_err": "mag"
+  },
+  "precision_map": {
+    "ps1_ra": 3,
+    "ps1_dec": 3,
+    "ps1_rpsf": 3,
+    "ps1_gpsf": 3,
+    "ps1_gpsf_err": 3
+  },
+  "ordering": {
+    "key": "ps1_rpsf",
+    "order": "asc",
+    "declared": true,
+    "sequence": [
+      "180.005190020,29.997032180",
+      "180.001102570,29.999453560",
+      "179.999236030,29.995430620",
+      "180.007877000,30.003347000",
+      "179.992629887,29.990963452"
+    ],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 1,
+    "page_hashes": [
+      "aa71da518ae1fc8ea3825ffc3f058e0430227a04292a8e9632d4c832f022514e"
+    ],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "last_page_full": false,
+    "extra_page_expected_empty": false
+  },
+  "truncation": {
+    "expected_total": 5,
+    "expected_truncated": false,
+    "expected_returned": 5
+  },
+  "result_state": "rows",
+  "missing_columns": [],
+  "notes": "三条 AND 约束全部设计成「闭区间端点恰有行落在其上」 — 钉死 E2 §5 #3 的 \"闭区间端点取等\": 任一端点被实现成开区间就会掉行 (recall<1.0); 筛完应剩的行数 以 gold/multi_filter_mag_snr.json 的 row_count 为准 (复核要点里已由金标准渲染)。 谓词语义 (between 的 min/max 解析、数值比较) 由 GT 独立实现; 被测的 服务端过滤语义不在工具面 (E1 NL2T-17), 本场景的约束在 GT 侧对 rows_full 过滤, 对应被测\"拉回本地过滤\"路径的对账。\n"
+}

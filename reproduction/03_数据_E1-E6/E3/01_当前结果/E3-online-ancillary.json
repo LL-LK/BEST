@@ -1,0 +1,132 @@
+{
+  "S-A": [
+    {
+      "sfa": 0.8888888888888888,
+      "ungr": 0.043478260869565216,
+      "ucr": 0.2,
+      "slr": 0.0,
+      "rqc": 0.9,
+      "pass_rate": 0.75,
+      "counts": {
+        "critical_hit": 8,
+        "critical_total": 9,
+        "qualifier_hit": 9,
+        "qualifier_total": 10,
+        "numbers_total": 23,
+        "unsourced_num": 1,
+        "claims_total": 25,
+        "unsupported_claim": 5,
+        "fatal_num": 0
+      },
+      "n_items": 4,
+      "slr_denominator": 2
+    },
+    {
+      "sfa": 0.8888888888888888,
+      "ungr": 0.12,
+      "ucr": 0.2608695652173913,
+      "slr": 0.0,
+      "rqc": 0.9,
+      "pass_rate": 0.75,
+      "counts": {
+        "critical_hit": 8,
+        "critical_total": 9,
+        "qualifier_hit": 9,
+        "qualifier_total": 10,
+        "numbers_total": 25,
+        "unsourced_num": 3,
+        "claims_total": 23,
+        "unsupported_claim": 6,
+        "fatal_num": 0
+      },
+      "n_items": 4,
+      "slr_denominator": 2
+    },
+    {
+      "sfa": 0.8888888888888888,
+      "ungr": 0.05263157894736842,
+      "ucr": 0.28,
+      "slr": 0.0,
+      "rqc": 0.9,
+      "pass_rate": 0.75,
+      "counts": {
+        "critical_hit": 8,
+        "critical_total": 9,
+        "qualifier_hit": 9,
+        "qualifier_total": 10,
+        "numbers_total": 19,
+        "unsourced_num": 1,
+        "claims_total": 25,
+        "unsupported_claim": 7,
+        "fatal_num": 0
+      },
+      "n_items": 4,
+      "slr_denominator": 2
+    }
+  ],
+  "S-B": [
+    {
+      "sfa": 0.4444444444444444,
+      "ungr": 0.07142857142857142,
+      "ucr": 0.375,
+      "slr": 0.0,
+      "rqc": 0.6,
+      "pass_rate": 0.25,
+      "counts": {
+        "critical_hit": 4,
+        "critical_total": 9,
+        "qualifier_hit": 6,
+        "qualifier_total": 10,
+        "numbers_total": 14,
+        "unsourced_num": 1,
+        "claims_total": 24,
+        "unsupported_claim": 9,
+        "fatal_num": 0
+      },
+      "n_items": 4,
+      "slr_denominator": 2
+    },
+    {
+      "sfa": 0.7777777777777778,
+      "ungr": 0.15384615384615385,
+      "ucr": 0.21052631578947367,
+      "slr": 0.0,
+      "rqc": 0.8,
+      "pass_rate": 0.5,
+      "counts": {
+        "critical_hit": 7,
+        "critical_total": 9,
+        "qualifier_hit": 8,
+        "qualifier_total": 10,
+        "numbers_total": 13,
+        "unsourced_num": 2,
+        "claims_total": 19,
+        "unsupported_claim": 4,
+        "fatal_num": 0
+      },
+      "n_items": 4,
+      "slr_denominator": 2
+    },
+    {
+      "sfa": 0.7777777777777778,
+      "ungr": 0.14285714285714285,
+      "ucr": 0.36363636363636365,
+      "slr": 0.0,
+      "rqc": 0.8,
+      "pass_rate": 0.5,
+      "counts": {
+        "critical_hit": 7,
+        "critical_total": 9,
+        "qualifier_hit": 8,
+        "qualifier_total": 10,
+        "numbers_total": 14,
+        "unsourced_num": 2,
+        "claims_total": 22,
+        "unsupported_claim": 8,
+        "fatal_num": 0
+      },
+      "n_items": 4,
+      "slr_denominator": 2
+    }
+  ]
+}

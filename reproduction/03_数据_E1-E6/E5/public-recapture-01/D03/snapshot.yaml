@@ -1,0 +1,15 @@
+snapshot_id: D03
+kind: LIVE
+material_class: live-pure
+catalog: ps1
+row_count: 1000
+data_version: ps1@2026-10-12-live
+page_size: 1000
+fetched_at: 2026-10-12
+endpoint:
+  submit: https://nadc.china-vo.org/data/best/ps1/q
+  count: https://nadc.china-vo.org/data/best/sqlid/{count}/getcount
+note: |
+  **真实抓取** (ops/live_fetch.py --execute, 铁律 7 有条件豁免)。回包逐字节来自站点,
+  未做任何改写或补行; request_log 见 capture_log.json, 文件哈希见 manifest.json。
+  抓到数据不等于金标准判定通过 —— E2 回放基线与放行断言是独立检验环节。

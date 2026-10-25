@@ -1,0 +1,238 @@
+{
+  "gold_id": "gold_null_zero_twins",
+  "case_id": "null_zero_twins",
+  "snapshot_id": "sha256:ed6942820d09e20272aa312e3ad999e5e726a5636a323ebd8405d613ba1f3415",
+  "data_version": "synthetic@2026-10-11",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:c01c73ed9b463616bf6ae17f977a24266bbd63057df180307687c3a55a3d07a6"
+  },
+  "rows_source": "snapshot:syn_null_zero_twins_20261011/rows_full.csv",
+  "max_rows": 1000,
+  "key_field": "source_id",
+  "row_keys": [
+    "BEST_NZ_0001",
+    "BEST_NZ_0002",
+    "BEST_NZ_0003"
+  ],
+  "row_count": 3,
+  "field_values": {
+    "BEST_NZ_0001": {
+      "ps1_source_id": {
+        "v": "BEST_NZ_0001",
+        "t": "string",
+        "unit": null,
+        "atol": null,
+        "rtol": null
+      },
+      "ps1_ra": {
+        "v": 180.0001,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.0001,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 18.2,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0910078678945"
+      },
+      "ps1_class_star": {
+        "v": 0.99,
+        "t": "float",
+        "unit": null,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    },
+    "BEST_NZ_0002": {
+      "ps1_source_id": {
+        "v": "BEST_NZ_0002",
+        "t": "string",
+        "unit": null,
+        "atol": null,
+        "rtol": null
+      },
+      "ps1_ra": {
+        "v": 180.0002,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.0002,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-999.0"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "BEST_NZ_0003": {
+      "ps1_source_id": {
+        "v": "BEST_NZ_0003",
+        "t": "string",
+        "unit": null,
+        "atol": null,
+        "rtol": null
+      },
+      "ps1_ra": {
+        "v": 180.0003,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.0003,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 17.9,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 18.05,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": 0.0,
+        "t": "float",
+        "unit": null,
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      }
+    }
+  },
+  "field_values_sampled": false,
+  "field_values_sampling_rule": "all(<=50)",
+  "null_semantics": {
+    "BEST_NZ_0001": {
+      "ps1_source_id": "value",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "value"
+    },
+    "BEST_NZ_0002": {
+      "ps1_source_id": "value",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "BEST_NZ_0003": {
+      "ps1_source_id": "value",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "zero"
+    }
+  },
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "ps1_ra": "deg",
+    "ps1_dec": "deg",
+    "ps1_rpsf": "mag",
+    "ps1_gpsf": "mag"
+  },
+  "precision_map": {
+    "ps1_ra": 3,
+    "ps1_dec": 3,
+    "ps1_rpsf": 3,
+    "ps1_gpsf": 3
+  },
+  "ordering": {
+    "key": null,
+    "order": "asc",
+    "declared": false,
+    "sequence": [
+      "BEST_NZ_0001",
+      "BEST_NZ_0002",
+      "BEST_NZ_0003"
+    ],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 1,
+    "page_hashes": [
+      "cc905e60844d9017bf681c3efbddb00ce5042886e3cd5140eb1b0369c2e18392"
+    ],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "last_page_full": false,
+    "extra_page_expected_empty": false
+  },
+  "truncation": {
+    "expected_total": 3,
+    "expected_truncated": false,
+    "expected_returned": 3
+  },
+  "result_state": "rows",
+  "missing_columns": [],
+  "notes": "置换 sentinel_value 槽。ps1_class_star 的BEST_NZ_0002原始空值必须为null，BEST_NZ_0003的字面0.0必须保留为数值零；ps1_gpsf哨兵同时保留作第三语义类别。"
+}

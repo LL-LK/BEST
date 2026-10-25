@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://nadc.china-vo.org/sr/images/favicon.ico">
+    
+    <title>SCR LAMOST | BEst STar database</title>
+    
+    
+
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/open-iconic/font/css/open-iconic-bootstrap.css">
+	<link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2-bootstrap.css">
+    <link rel="stylesheet" href="/data/best/static/css/style.css">
+    
+<link rel="stylesheet" type="text/css" href="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/themes/icon.css">
+
+    
+
+    
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://nadc.china-vo.org/sr/js/jquery.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/popper.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/select2.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap-treeview.min.js"></script>
+    <script src="/data/best/static/js/script.js?v=2"></script>
+    <script type="text/javascript">
+        var prx = '/data/best';
+        var csrf_token = "IjAzYzAyYmJhZGRiMDMxMzRjNmMwZDk1NDMwZWI0N2ZkYWI5ZGYwMTki.asykXw.f8s07mpxzEsnAlbDvoBdxELMA_g";
+        
+        var is_authenticated = false;
+        
+    </script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="//analytics.escience.org.cn/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '23']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+    
+<script src="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/jquery.easyui.min.js"></script>
+<script src="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/datagrid-filter.js"></script>
+<script src="https://nadc.china-vo.org/sr/js/samp.js"></script>
+<script src="/data/best/static/js/search-result.js"></script>
+<script>
+var id_column_name = 'scr_lamost_';
+$(function(){
+    $('#tbl').datagrid({
+        url:'/data/best/sqlid/s7993?output.fmt=dbgrid',
+        title:'scr_lamost',
+        fit:true,
+        toolbar:'#tb',
+        pagination:true,
+        rownumbers:true,
+        singleSelect:false,
+        pageNumber:1,
+        pageSize:100,
+        pageList:[20,50,100,300],
+        sortName:"scr_lamost_source_id",
+        sortOrder:"asc",
+        clientPaging:false,
+        columns:[[
+            {field:'checkboxxx',checkbox:true},
+            
+            
+            {field:'inputobjs_dist_arcsec',title:'dist_arcsec',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_line',title:'input_line',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_ra',title:'input_ra',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_dec',title:'input_dec',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ra',title:'ra',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_dec',title:'dec',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0780jpas',title:'j0780jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0790jpas',title:'j0790jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0800jpas',title:'j0800jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0810jpas',title:'j0810jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0820jpas',title:'j0820jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0830jpas',title:'j0830jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0840jpas',title:'j0840jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0850jpas',title:'j0850jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0860jpas',title:'j0860jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0870jpas',title:'j0870jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0880jpas',title:'j0880jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0890jpas',title:'j0890jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0900jpas',title:'j0900jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0910jpas',title:'j0910jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j1007jpas',title:'j1007jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gsdssjpas',title:'gsdssjpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_isdssjpas',title:'isdssjpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rsdssjpas',title:'rsdssjpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ujpas',title:'ujpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ujavajpas',title:'ujavajpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0580jpas',title:'j0580jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0590jpas',title:'j0590jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0600jpas',title:'j0600jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0610jpas',title:'j0610jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0620jpas',title:'j0620jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0630jpas',title:'j0630jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0640jpas',title:'j0640jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0650jpas',title:'j0650jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0660jpas',title:'j0660jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0670jpas',title:'j0670jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0680jpas',title:'j0680jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0690jpas',title:'j0690jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0700jpas',title:'j0700jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0710jpas',title:'j0710jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0720jpas',title:'j0720jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0730jpas',title:'j0730jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0740jpas',title:'j0740jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0750jpas',title:'j0750jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0760jpas',title:'j0760jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0770jpas',title:'j0770jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0378jpas',title:'j0378jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0390jpas',title:'j0390jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0400jpas',title:'j0400jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0410jpas',title:'j0410jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0420jpas',title:'j0420jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0430jpas',title:'j0430jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0440jpas',title:'j0440jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0450jpas',title:'j0450jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0460jpas',title:'j0460jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0470jpas',title:'j0470jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0480jpas',title:'j0480jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0490jpas',title:'j0490jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0500jpas',title:'j0500jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0510jpas',title:'j0510jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0520jpas',title:'j0520jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0530jpas',title:'j0530jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0540jpas',title:'j0540jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0550jpas',title:'j0550jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0560jpas',title:'j0560jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0570jpas',title:'j0570jpas',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_bapass',title:'bapass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_vapass',title:'vapass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gapass',title:'gapass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_iapass',title:'iapass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rapass',title:'rapass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zapass',title:'zapass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gbass',title:'gbass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rbass',title:'rbass',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gcsst',title:'gcsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_icsst',title:'icsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rcsst',title:'rcsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ucsst',title:'ucsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ycsst',title:'ycsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zcsst',title:'zcsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ujkc',title:'ujkc',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_bjkc',title:'bjkc',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_vjkc',title:'vjkc',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rjkc',title:'rjkc',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ijkc',title:'ijkc',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0378jplus',title:'j0378jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0395jplus',title:'j0395jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0410jplus',title:'j0410jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0430jplus',title:'j0430jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0515jplus',title:'j0515jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0660jplus',title:'j0660jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_j0861jplus',title:'j0861jplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gjplus',title:'gjplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ijplus',title:'ijplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rjplus',title:'rjplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ujplus',title:'ujplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zjplus',title:'zjplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_glsst',title:'glsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ilsst',title:'ilsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rlsst',title:'rlsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ulsst',title:'ulsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ylsst',title:'ylsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zlsst',title:'zlsst',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gmephisto',title:'gmephisto',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_imephisto',title:'imephisto',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rmephisto',title:'rmephisto',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_umephisto',title:'umephisto',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_vmephisto',title:'vmephisto',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zmephisto',title:'zmephisto',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gps1',title:'gps1',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ips1',title:'ips1',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rps1',title:'rps1',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_yps1',title:'yps1',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zps1',title:'zps1',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gsdss',title:'gsdss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_isdss',title:'isdss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rsdss',title:'rsdss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_usdss',title:'usdss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zsdss',title:'zsdss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gsmss',title:'gsmss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_ismss',title:'ismss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rsmss',title:'rsmss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_usmss',title:'usmss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_vsmss',title:'vsmss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zsmss',title:'zsmss',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f378splus',title:'f378splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f395splus',title:'f395splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f410splus',title:'f410splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f430splus',title:'f430splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f515splus',title:'f515splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f660splus',title:'f660splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_f861splus',title:'f861splus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gsplus',title:'gsplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_isplus',title:'isplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rsplus',title:'rsplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_usplus',title:'usplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_zsplus',title:'zsplus',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_gztf',title:'gztf',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_iztf',title:'iztf',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_rztf',title:'rztf',width:150,align:'center',sortable:true},
+            
+            {field:'scr_lamost_source_id',title:'source_id',width:150,align:'center',sortable:true},
+            
+            
+        ]],
+		onBeforeLoad:function(param){
+            window.history.pushState(null, null, '/data/best/sqlid/s7993?'+getPageParam());
+		},
+		onLoadSuccess: function(data) {
+            if (data.total === 999999999999) {
+                var pager = $('#tbl').datagrid('getPager');
+                pager.pagination('loading');
+                pager.pagination({
+                    showPageInfo: false,
+                    afterPageText: '',
+                });
+                $.ajax({
+                    url: "/data/best/sqlid/7993/getcount",
+                    type: "GET",
+                    success: function(response) {
+                        var pager = $('#tbl').datagrid('getPager');
+                        pager.pagination({
+                            total: response.total,
+                            showPageInfo: true,
+                            afterPageText: 'of {pages}',
+                        });
+                        pager.pagination('loaded');
+                    }
+                });
+            }
+        },
+        onLoadError: function(e){
+            console.log(e);
+        }
+    });
+});
+function getPageParam(){
+	var opt = $('#tbl').datagrid('options');
+	return "rows="+opt.pageSize+"&page="+opt.pageNumber+"&sort="+(null==opt.sortName || 'null'==opt.sortName?"":opt.sortName)+"&order="+(null==opt.sortOrder || 'null'==opt.sortOrder?"":opt.sortOrder);
+}
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark topNav-bg index-topNav">
+    <div class="container-fluid index-navbar-container">
+        <div class="row" style="margin: 0px;width: 100%;">
+            <div class="collapse navbar-collapse" id="chinavo-navbar">
+                <ul class="navbar-nav mr-auto chinavoNavbar-ul">
+                    
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best">BEST</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Query
+                        </a>
+                        <div class="dropdown-menu chinavoDropdownMenu" aria-labelledby="navbarDropdown0">
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/std">Standard Stars</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib/ps1/f">Pan-STARRS All-Sky Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib">Well-Calibrated Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="/data/best/other">Corrected Gaia DR3 XP Spectra</a>
+                            
+                            
+                        </div>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/jobs">User-Defined</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/catalog">Catalog</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/news">News</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/help">Help</a>
+                        </li>
+                        
+                        
+                    
+                    
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto chinavoNavbar-ul">
+                    
+                    <li class="nav-item"><a class="nav-link" href="/data/best/user/login?next=https://nadc.china-vo.org/data/best/scr_lamost/q">Login</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<div class="container-fluid">
+    
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/">Home</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/std">Standard Stars</a>
+        
+    </li>
+
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/scr_lamost/f">Query SCR LAMOST</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/sqlid/s7993">Result</a>
+        
+    </li>
+
+    </ol>
+</nav>
+
+<div id="mpanel" class="easyui-panel">
+    <div id="tbl" />
+    <div id="tb">
+        
+        <a href="#" class="easyui-menubutton" data-options="menu:'#smsave',iconCls:'icon-save'">Save Table</a>
+        <div id="smsave" style="width:200px;">
+            <div id="vot" data-options="iconCls:'icon-xml'" onclick="open_link(get_saveas_url('votable', true))">Save page as VOTable</div>
+            <div id="csv" data-options="iconCls:'icon-csv'" onclick="open_link(get_saveas_url('csv', true))">Save page as CSV</div>
+            <div id="json" data-options="iconCls:'icon-json'" onclick="open_link(get_saveas_url('json', true))">Save page as JSON</div>  
+            <div class="menu-sep"></div>
+            <div id="votall" data-options="iconCls:'icon-xml'" onclick="open_link(get_saveas_url('votable', false))">Save all as VOTable</div>
+            <div id="csvall" data-options="iconCls:'icon-csv'" onclick="open_link(get_saveas_url('csv', false))">Save all as CSV</div>
+            <div id="jsonall" data-options="iconCls:'icon-json'" onclick="open_link(get_saveas_url('json', false))">Save all as JSON</div>  
+        </div>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#smnotifyall',iconCls:'icon-samp'">Boradcast Table</a>
+        <div id="smnotifyall" style="width:200px;">
+            <div id="samp" data-options="iconCls:'icon-samp'" onclick="samp_notify(true)">Boradcast page</div>
+            <div class="menu-sep"></div>
+            <div id="sampall" data-options="iconCls:'icon-samp'" onclick="samp_notify(false)">Boradcast all</div>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

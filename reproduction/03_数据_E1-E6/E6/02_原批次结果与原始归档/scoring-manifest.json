@@ -1,0 +1,33 @@
+{
+  "code": {
+    "test_e6_review.py": "sha256:016a9efc3666ef42e1e9417df0fb2beec916f8078b0310dba7f19a55b2d843cc",
+    "prepare_e6.py": "sha256:f159ba2feaf8d0537431f177824968bf80e9ec7958b92a9306f1f62945b0e439",
+    "resume_formal_e6.py": "sha256:aba13b49d0f0bca3977eda48010844587333823426522511ac8fbbfcdcb01fff",
+    "test_e6_formal.py": "sha256:055bfe9d1e30f28a9c0b8154dcb39a2d9bc9aa192faee541d2fffac41f75b1d3",
+    "metrics_e6.py": "sha256:7173c9d3572a763cef72fbceae343ceed7e630148c8ad5a8086376fe83345269",
+    "prepare_repository_results.py": "sha256:defe69dd92b00dc1a6849368f3c05b6d34c735b2e4e952c92a89379db7d3eb1d",
+    "trace_e6.py": "sha256:1c7e802dd5b4de7c023fedd0cac22902d5c89f9637d1362a8ed2567e2b34ec4a",
+    "wire_semantics_audit_e6.py": "sha256:6e1b2b5f91b2d4b4cffbc058dc64df7b38b8bdcecd82871e80892a9b1ce16231",
+    "semantic_cards_e6.py": "sha256:ca62b007970d26e82b42c3b093df3534a83c0f9f10b09e69eee6765aa9d6ac04",
+    "snapshot_diagnostics_e6.py": "sha256:aeecad6107bd92fa14657beb78868c221cfbbfc00b80f870b803222c25c92bd2",
+    "review_dump_e6.py": "sha256:6fc4178bc82759aff7def23a9377845f359a37fc41539bde2dbe35228c84c81e",
+    "efficiency_usability_e6.py": "sha256:230e41d05b132255c7ca0c809678f4f97daa566ad939e2d1dc4253d43d3c607d",
+    "launch_formal_e6.py": "sha256:33ac7845b4ba9eecd93dee6c1a6cc3d5dc6e40b34030073ff4ab86af0af84dbb",
+    "probe_e6.py": "sha256:52cb0fd2d658d605fb5040a368fb08d5a6f168e14beb0fe8c50342819a09c942",
+    "run_e6_formal.py": "sha256:2b23995d4185c0a1a4aade050d7702bd2a0094eac9d31b246271527846b437ba",
+    "common_e6.py": "sha256:c32460e0a1e69ab7af88bd16963e9ebd8b5a1e395cbaceb231025fe99cfea37e",
+    "final_delivery_e6.py": "sha256:32260e85615457745de541f9a44bef4929fcbe586924c3c22b0355d420095315",
+    "coverage_e6.py": "sha256:2791a2f2451bd752ddaab7344506537eec37ffff7bbcb07788f8448841db109d",
+    "audit_delivery_e6.py": "sha256:1654329fcea835b0d1a40f74289bf5dbd5d591139a4e9b3872f25b97fa01178a",
+    "r0_e6.py": "sha256:502fab89fe45227cc422da62663352fe8d1d7d8f78a79218c8962aad91533354",
+    "model_e6.py": "sha256:cc0e7ba67592e74bc5e082ebffb35794f4b003e7d1ffa2472c57c0f024244f12",
+    "statistics_e6.py": "sha256:74160f7c53c6002f7d36165cd585da3df6eea79274ac74f25ff17e6f58e7b78f",
+    "transport_e6.py": "sha256:8f89f1128026a201db8f4aaa391e11ed3b2489cc4a4cfef3fe9f7089b9d8f52f",
+    "report_e6.py": "sha256:4d9049fa69805071aa1bc60c6a99333c10acc346dd29de74d8b05aef66e3b910"
+  },
+  "fp": "sha256:742e7a72f44162081e3d875af1e33c8af71df9d64a9e0d4b251cb601a9fc9ddc",
+  "judgement": "current_assistant_no_judge_api",
+  "semantic_scope": "task_core_facts_from_actual_answer; candidate_model_card_retained_and_number_checked",
+  "U7": "missing_no_independent_raters",
+  "notes": "规则抽取与当前助手复核，不能代替独立盲评"
+}

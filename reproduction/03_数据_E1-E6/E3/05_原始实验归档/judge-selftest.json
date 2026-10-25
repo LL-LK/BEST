@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "metascore": 1.0,
+  "results": {
+    "control-1": true,
+    "control-2": true,
+    "control-3": true
+  }
+}

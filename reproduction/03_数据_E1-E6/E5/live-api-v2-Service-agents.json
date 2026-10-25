@@ -1,0 +1,453 @@
+{
+  "platform": "host",
+  "provider": "Service",
+  "method": "listService",
+  "data": {
+    "mode": "service",
+    "service": {
+      "key": "agents",
+      "description": "Agent service (`ctx.agents`): tracks live agents and carries the initiating Agent through one process-local asynchronous driver chain. Agent *creation* is provided by whichever plugin implements the AgentFactory (`@deepseek-ai/dsh-agent-loop`), registered via setFactory.\n\nInitiator methods provide same-process causal attribution only. Ambient presence is neither liveness proof nor authorization; subjects and owners remain explicit, as does identity at worker, process, persistence, and wire boundaries. Returned Promise boundaries drain during teardown, except a nested lineage that starts an owning-fiber unload is excluded from its own drain.",
+      "access": {
+        "optional": {
+          "expression": "ctx.get(\"agents\")",
+          "requiresUndefinedCheck": true
+        },
+        "hardDependency": {
+          "inject": [
+            "agents"
+          ],
+          "expression": "ctx.agents"
+        }
+      },
+      "methods": [
+        {
+          "signature": "currentInitiator(): Agent | undefined",
+          "description": "Read the Agent that initiated the inherited asynchronous driver chain. Use this optional form for logging, tracing, metrics, or host attribution that also supports agentless calls. When a parent creates a child, setup reports the causal parent while the setup callback's Agent parameter identifies the child.",
+          "parameters": [],
+          "returns": "the inherited Agent, or `undefined` outside an initiator boundary and inside an explicit clearing boundary.",
+          "throws": [
+            "when this service instance has been disposed."
+          ]
+        },
+        {
+          "signature": "requireInitiator(): Agent",
+          "description": "Read the initiating Agent and fail when no initiator boundary is active. Use this for private helpers contractually below a driver, or for a deployment-owned outbound request whose contract forbids agentless calls. Generic or direct-call paths use optional lookup or explicit request fields.",
+          "parameters": [],
+          "returns": "the inherited Agent.",
+          "throws": [
+            "when no initiator is active or this service instance has been disposed."
+          ]
+        },
+        {
+          "signature": "withInitiator<T>(agent: Agent, operation: () => T): T",
+          "description": "Run an operation with one exact Agent as its process-local initiator. The exact synchronous value or Promise returned by the operation is preserved. Custom drivers and test harnesses wrap their complete returned foreground lifetime. A queue or wire receiver may establish this boundary only after validating explicit identity and resolving the exact live Agent; this method does neither. Detached work remains owned by the subsystem that starts it.",
+          "parameters": [
+            {
+              "name": "agent",
+              "description": "initiating Agent to inherit; presence is neither liveness proof nor authorization."
+            },
+            {
+              "name": "operation",
+              "description": "synchronous or asynchronous operation to invoke."
+            }
+          ],
+          "returns": "the exact value returned by `operation`.",
+          "throws": [
+            "when the initiator scope is closing/disposed, or when `operation` throws."
+          ]
+        },
+        {
+          "signature": "withoutInitiator<T>(operation: () => T): T",
+          "description": "Run an operation inside a boundary that hides any inherited initiating Agent. The exact synchronous value or Promise is preserved. Use this while creating lazy shared timers, queue pumps, pool maintenance, watchers, or exporters so they do not inherit the first Agent that happens to initialize them. It clears only initiator attribution, not explicit fields, and does not own or drain detached resources.",
+          "parameters": [
+            {
+              "name": "operation",
+              "description": "synchronous or asynchronous operation to invoke without an initiator."
+            }
+          ],
+          "returns": "the exact value returned by `operation`.",
+          "throws": [
+            "when the initiator scope is closing/disposed, or when `operation` throws."
+          ]
+        },
+        {
+          "signature": "setFactory(factory: AgentFactory): () => void",
+          "description": "Register the agent-creation factory (the loop calls this on construction, effect-scoped). A traced Cordis service is canonicalized to its concrete target; each create/resume call is then traced through that caller's context so ownership follows the caller without stacking proxy layers. Throws if a factory is already registered. Returns the disposer; on dispose the factory slot is cleared.",
+          "parameters": [
+            {
+              "name": "factory",
+              "description": "the loop-owned factory {@link create}/{@link resume} delegate to."
+            }
+          ],
+          "returns": "the disposer that clears the factory slot. The exact Cordis effect disposer (single-shot): composite (generator) effects may yield it directly — exact identity nests the teardown in order."
+        },
+        {
+          "signature": "async create(options: CreateAgentOptions): Promise<AgentHandle>",
+          "description": "Create and publish a new agent through the registered factory. Distinct from register (which records an already-constructed agent): this constructs the agent and its session. Rejects if no factory is registered or creation/setup fails. The resolved AgentHandle lets the owner tear down exactly this agent.",
+          "parameters": [
+            {
+              "name": "options",
+              "description": "shared identity, optional live parent, session seed/metadata, and agent options."
+            }
+          ],
+          "returns": "the handle after setup, rollback-covered publication, and loop start complete."
+        },
+        {
+          "signature": "async resume(options: ResumeAgentOptions): Promise<AgentHandle>",
+          "description": "Load a persisted session and resume an agent on it through the registered factory. Rejects if no factory is registered; the factory rejects if session persistence is not configured or persistence/setup fails.",
+          "parameters": [
+            {
+              "name": "options",
+              "description": "persisted identity, optional live parent, configuration, and setup."
+            }
+          ],
+          "returns": "the handle after setup, rollback-covered publication, and loop start complete."
+        },
+        {
+          "signature": "register(agent: Agent): ReturnType<Context['effect']>",
+          "description": "Register a live agent with source `startup`. Rejects if the id is already registered or a serial `agent/created` listener fails. Emits `agent/disposed` when the calling fiber is disposed — both with the agent's scope carrier (`scopeTarget(agent, agent)`): the subject is the agent in hand, so the emits are scope-filtered regardless of which context invoked `register` (calling through `agent.ctx` scopes EFFECTS; dispatch scoping always requires passing the carrier). The entry is a runtime root; factory-backed creation uses `options.parentAgent` for child ownership. Await the registration before using the agent.",
+          "parameters": [
+            {
+              "name": "agent",
+              "description": "the already-constructed agent to record in the store."
+            }
+          ],
+          "returns": "the awaitable Cordis effect disposer (single-shot; a repeat call returns undefined without awaiting an in-flight teardown). Exact identity is load-bearing: a composite (generator) effect that owns a teardown ORDER — the agent factory's lifecycle chain — must yield THIS function so Cordis nests the unregistration at that yield position; yielding a wrapper would leave it disposing as a concurrent sibling on owner unload, unregistering the agent (and emitting `agent/disposed`) while its final turn is still draining."
+        },
+        {
+          "signature": "enter(agent: Agent, owner: Agent | undefined): () => void",
+          "description": "Insert an already-constructed agent without announcing it. This is the advanced ordered-lifecycle primitive used by the async agent factory: it first completes setup while the agent is unpublished, then assigns the returned detach closure into its pre-installed composite teardown before calling announce. Ordinary callers use register.",
+          "parameters": [
+            {
+              "name": "agent",
+              "description": "the prepared, unpublished agent."
+            },
+            {
+              "name": "owner",
+              "description": "explicitly supplied live runtime owner, or undefined for a top-level runtime root. This is runtime ownership, not the resumed session's durable parent lineage."
+            }
+          ],
+          "returns": "an idempotent closure that removes this exact entry and emits `agent/disposed` with listener failures contained. When called from a `agent/created` listener, removal and disposal wait until the serial creation dispatch settles."
+        },
+        {
+          "signature": "async announce(agent: Agent, source: SessionStartSource, signal?: AbortSignal): Promise<void>",
+          "description": "Announce an agent previously inserted with enter.",
+          "parameters": [
+            {
+              "name": "agent",
+              "description": "the live inserted agent to announce."
+            },
+            {
+              "name": "source",
+              "description": "fresh creation, resume, clear, or compaction source."
+            },
+            {
+              "name": "signal",
+              "description": "optional factory initialization cancellation signal passed to listeners."
+            }
+          ],
+          "returns": "completion of the serial creation listeners; a listener failure rejects.",
+          "throws": [
+            "if `agent` is not the exact live registry entry for its id, or its creation announcement already began (including a reentrant call from a creation listener)."
+          ]
+        },
+        {
+          "signature": "get(id: SessionId): Agent | undefined",
+          "description": "Look up a live agent.",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "the shared agent/session id to look up."
+            }
+          ],
+          "returns": "the agent, or undefined when no live agent has that id."
+        },
+        {
+          "signature": "isOwnedBy(id: SessionId, owner: Agent): boolean",
+          "description": "Test whether a live agent was created through one exact parent agent's scoped context. Runtime ownership is independent of durable session lineage and remains unambiguous when unrelated providers reuse an id.",
+          "parameters": [
+            {
+              "name": "id",
+              "description": "the candidate child agent's shared agent/session id."
+            },
+            {
+              "name": "owner",
+              "description": "the expected runtime creator agent."
+            }
+          ],
+          "returns": "true only while the exact child entry is live under that owner."
+        },
+        {
+          "signature": "list(): Agent[]",
+          "description": "All live agents, in registration order.",
+          "parameters": [],
+          "returns": "a fresh array; mutating it does not affect the registry."
+        },
+        {
+          "signature": "roots(): Agent[]",
+          "description": "All live top-level agents in registration order. A top-level agent was created without an owning agent context; durable session lineage does not affect this runtime relation, so a resumed fork may still be a root.",
+          "parameters": [],
+          "returns": "a fresh array; mutating it does not affect the registry."
+        }
+      ]
+    },
+    "referencedTypes": [
+      {
+        "name": "Agent",
+        "declaration": "export interface Agent {\n    readonly id: SessionId;\n}"
+      },
+      {
+        "name": "AgentCancelCause",
+        "declaration": "export type AgentCancelCause = {\n    readonly kind: 'user';\n} | {\n    readonly kind: 'parent';\n} | {\n    readonly kind: 'hook';\n    readonly reason: string;\n} | {\n    readonly kind: 'disposed';\n};"
+      },
+      {
+        "name": "AgentFactory",
+        "declaration": "export interface AgentFactory {\n    createAgent(ownerCtx: Context, options: CreateAgentOptions): Promise<AgentHandle>;\n    resume(ownerCtx: Context, options: ResumeAgentOptions): Promise<AgentHandle>;\n}"
+      },
+      {
+        "name": "AgentHandle",
+        "declaration": "export interface AgentHandle {\n    agent: Agent;\n    dispose(): Promise<void>;\n}"
+      },
+      {
+        "name": "AgentOptions",
+        "declaration": "export interface AgentOptions {\n    provider?: string;\n    model?: string;\n    reasoningEffort?: ReasoningEffortId;\n    maxTokens?: number;\n}"
+      },
+      {
+        "name": "AgentSetup",
+        "declaration": "export type AgentSetup = (agentCtx: Context, agent: Agent) => AgentSetupCommit | Promise<AgentSetupCommit | void> | void;"
+      },
+      {
+        "name": "AgentSetupCommit",
+        "declaration": "export interface AgentSetupCommit {\n    commit(): void;\n}"
+      },
+      {
+        "name": "AssistantMessage",
+        "declaration": "export interface AssistantMessage extends MessageBase {\n    readonly role: 'assistant';\n    readonly source: ModelMessageSource;\n}"
+      },
+      {
+        "name": "AssistantProviderMetadata",
+        "declaration": "export interface AssistantProviderMetadata {\n    provider: string;\n    model: string;\n    replayState?: unknown;\n}"
+      },
+      {
+        "name": "AssistantStreamRecord",
+        "declaration": "export type AssistantStreamRecord = {\n    readonly type: 'text-chunks';\n    readonly time0: number;\n    readonly index: number;\n    readonly dt: readonly number[];\n    readonly texts: readonly string[];\n} | {\n    readonly type: 'reasoning-chunks';\n    readonly time0: number;\n    readonly index: number;\n    readonly dt: readonly number[];\n    readonly texts: readonly string[];\n} | {\n    readonly type: 'tool-call-chunks';\n    readonly time0: number;\n    readonly index: number;\n    readonly dt: readonly number[];\n    readonly id: ToolCallId;\n    readonly name?: string;\n    readonly args: readonly string[];\n} | {\n    readonly type: 'chunk';\n    readonly time: number;\n    readonly chunk: StreamChunk;\n};"
+      },
+      {
+        "name": "AttachmentId",
+        "declaration": "export type AttachmentId = Branded<'AttachmentId'>;"
+      },
+      {
+        "name": "Branded",
+        "declaration": "export type Branded<B extends string> = string & {\n    readonly [BRAND]: B;\n};"
+      },
+      {
+        "name": "BrandedNumber",
+        "declaration": "export type BrandedNumber<B extends string> = number & {\n    readonly [BRAND]: B;\n};"
+      },
+      {
+        "name": "ContentBlockMap",
+        "declaration": "export interface ContentBlockMap {\n    'text': TextBlock;\n    'reasoning': ReasoningBlock;\n    'image': ImageBlock;\n    'file': FileBlock;\n    'tool-call': ToolCallBlock;\n    'tool-addition': ToolAdditionBlock;\n    'tool-removal': ToolRemovalBlock;\n}"
+      },
+      {
+        "name": "ContentBlockType",
+        "declaration": "export type ContentBlockType = keyof ContentBlockMap;"
+      },
+      {
+        "name": "CreateAgentOptions",
+        "declaration": "export interface CreateAgentOptions {\n    readonly sessionId: SessionId;\n    readonly parentAgent?: Agent;\n    readonly meta?: {\n        readonly cwd?: string;\n        readonly parentSession?: SessionId;\n        readonly isSeeded?: boolean;\n        readonly origin?: 'subagent';\n        readonly delegationDepth?: number;\n        readonly agentPreset?: string;\n    };\n    readonly inheritedEventCount?: SessionLogOffset;\n    readonly seed?: readonly SessionEvent[];\n    readonly agentOptions?: AgentOptions;\n    readonly signal?: AbortSignal;\n    readonly setup?: AgentSetup;\n}"
+      },
+      {
+        "name": "DeveloperMessage",
+        "declaration": "export interface DeveloperMessage extends MessageBase {\n    readonly role: 'developer';\n}"
+      },
+      {
+        "name": "EpochHeader",
+        "declaration": "export interface EpochHeader {\n    config: LlmCallConfig;\n    adapterDefaults?: LlmCallConfigAdapterDefaults;\n    tools?: ToolSchema[];\n    system?: never;\n}"
+      },
+      {
+        "name": "FileAttachmentRef",
+        "declaration": "export interface FileAttachmentRef {\n    attachmentId: AttachmentId;\n    name: string;\n    bytes: number;\n}"
+      },
+      {
+        "name": "FileBlock",
+        "declaration": "export interface FileBlock {\n    type: 'file';\n    attachment: FileAttachmentRef;\n}"
+      },
+      {
+        "name": "FinishReason",
+        "declaration": "export type FinishReason = FinishReasonMap[keyof FinishReasonMap];"
+      },
+      {
+        "name": "FinishReasonMap",
+        "declaration": "export interface FinishReasonMap {\n    'stop': {\n        kind: 'stop';\n    };\n    'tool-calls': {\n        kind: 'tool-calls';\n    };\n    'max-tokens': {\n        kind: 'max-tokens';\n    };\n    'aborted': {\n        kind: 'aborted';\n        failure: LlmFailure;\n    };\n    'error': {\n        kind: 'error';\n        failure: LlmFailure;\n    };\n}"
+      },
+      {
+        "name": "ImageAttachmentRef",
+        "declaration": "export interface ImageAttachmentRef {\n    attachmentId: AttachmentId;\n    mediaType: ImageMediaType;\n    bytes: number;\n    width: number;\n    height: number;\n    name?: string;\n    originalDimensions?: {\n        width: number;\n        height: number;\n    };\n}"
+      },
+      {
+        "name": "ImageBlock",
+        "declaration": "export interface ImageBlock {\n    type: 'image';\n    attachment: ImageAttachmentRef;\n    offloaded?: true;\n}"
+      },
+      {
+        "name": "ImageMediaType",
+        "declaration": "export type ImageMediaType = 'image/png' | 'image/jpeg' | 'image/webp' | 'image/gif';"
+      },
+      {
+        "name": "JsonValue",
+        "declaration": "export type JsonValue = null | boolean | number | string | JsonValue[] | {\n    [key: string]: JsonValue;\n};"
+      },
+      {
+        "name": "LlmCallConfig",
+        "declaration": "export interface LlmCallConfig {\n    provider: string;\n    model: string;\n    reasoningEffort?: ReasoningEffortId;\n    temperature?: number;\n    maxTokens?: number;\n    stop?: string[];\n}"
+      },
+      {
+        "name": "LlmCallConfigAdapterDefaults",
+        "declaration": "export interface LlmCallConfigAdapterDefaults {\n    reasoningEffort?: true;\n    maxTokens?: true;\n}"
+      },
+      {
+        "name": "LlmFailure",
+        "declaration": "export interface LlmFailure {\n    readonly message: string;\n    readonly code: string;\n    readonly status?: number;\n    readonly providerRetryAfterMs?: number;\n    readonly requestId?: ProviderRequestId;\n    readonly offloadImages?: number;\n}"
+      },
+      {
+        "name": "MessageSourceMap",
+        "declaration": "export interface MessageSourceMap {\n    user: {\n        kind: 'user';\n    };\n    model: ModelMessageSource;\n    tool: ToolMessageSource;\n    'system-prompt': SystemPromptMessageSource;\n}"
+      },
+      {
+        "name": "ModelMessageSource",
+        "declaration": "export interface ModelMessageSource extends AssistantProviderMetadata {\n    kind: 'model';\n}"
+      },
+      {
+        "name": "ProviderRequestId",
+        "declaration": "export type ProviderRequestId = Branded<'ProviderRequestId'>;"
+      },
+      {
+        "name": "ReasoningBlock",
+        "declaration": "export interface ReasoningBlock {\n    type: 'reasoning';\n    text: string;\n}"
+      },
+      {
+        "name": "ReasoningEffortId",
+        "declaration": "export type ReasoningEffortId = Branded<'ReasoningEffortId'>;"
+      },
+      {
+        "name": "ReplayEnvelope",
+        "declaration": "export interface ReplayEnvelope {\n    response: unknown;\n    blocks?: readonly unknown[];\n}"
+      },
+      {
+        "name": "RequestContext",
+        "declaration": "export interface RequestContext {\n    provider: string;\n    model: string;\n    contextWindow?: number;\n    systemPromptUpdate?: SystemPromptUpdate;\n}"
+      },
+      {
+        "name": "RequestHeaderReason",
+        "declaration": "export type RequestHeaderReason = 'initial' | 'resume' | 'change' | 'series';"
+      },
+      {
+        "name": "ResumeAgentOptions",
+        "declaration": "export interface ResumeAgentOptions {\n    readonly resumeSessionId: SessionId;\n    readonly parentAgent?: Agent;\n    readonly agentOptions?: AgentOptions;\n    readonly signal?: AbortSignal;\n    readonly setup?: AgentSetup;\n}"
+      },
+      {
+        "name": "SessionEvent",
+        "declaration": "export type SessionEvent<T extends SessionEventType = SessionEventType> = {\n    [K in SessionEventType]: {\n        type: K;\n        seq: SessionSeq;\n        time: number;\n        data: SessionEventMap[K];\n        ignorable?: true;\n    } & (K extends SurfaceEventType ? SurfaceIntent<K> : {\n        surfaceOp?: never;\n        sourceEventSeqs?: never;\n    });\n}[T];"
+      },
+      {
+        "name": "SessionEventMap",
+        "declaration": "export interface SessionEventMap {\n    'turn/start': {\n        turn: number;\n    };\n    'turn/end': {\n        turn: number;\n        reason: TurnEndReason;\n    };\n    'step/start': {\n        turn: number;\n        step: number;\n    };\n    'step/end': {\n        turn: number;\n        step: number;\n    };\n    'user/message': UserMessage;\n    'developer/message': {\n        turn: number;\n        step: number;\n        message: DeveloperMessage;\n        headerSeq?: SessionSeq;\n    };\n    'system/message': {\n        turn: number;\n        step: number;\n        message: SystemMessage;\n    };\n    'assistant/message': {\n        turn: number;\n        step: number;\n        message: AssistantMessage;\n        stream: AssistantStreamRecord[];\n        usage?: TokenUsage;\n        interrupted?: true;\n    };\n    'assistant/attempt': {\n        turn: number;\n        step: number;\n        stream: AssistantStreamRecord[];\n    };\n    'tool/call': {\n        turn: number;\n        step: number;\n        callId: ToolCallId;\n        name: string;\n        arguments: string;\n    };\n    'tool/result': {\n        turn: number;\n        step: number;\n        message: ToolResultMessage;\n        error?: {\n            name: string;\n            code: string;\n            reason?: string;\n        };\n        meta?: JsonValue;\n    };\n    'request/header': {\n        header: EpochHeader;\n        reason: RequestHeaderReason;\n        startsSeries?: true;\n    };\n    'request/context': RequestContext;\n    'session/end-seed': {\n   /* …truncated — full shape in source */"
+      },
+      {
+        "name": "SessionEventType",
+        "declaration": "export type SessionEventType = keyof SessionEventMap;"
+      },
+      {
+        "name": "SessionId",
+        "declaration": "export type SessionId = Branded<'SessionId'>;"
+      },
+      {
+        "name": "SessionLogOffset",
+        "declaration": "export type SessionLogOffset = BrandedNumber<'SessionLogOffset'>;"
+      },
+      {
+        "name": "SessionSeq",
+        "declaration": "export type SessionSeq = BrandedNumber<'SessionSeq'>;"
+      },
+      {
+        "name": "SessionStartSource",
+        "declaration": "export type SessionStartSource = 'startup' | 'resume' | 'clear' | 'compact';"
+      },
+      {
+        "name": "StreamChunk",
+        "declaration": "export type StreamChunk = {\n    type: 'block-start';\n    index: number;\n    blockType: ContentBlockType;\n} | {\n    type: 'text-delta';\n    index: number;\n    text: string;\n} | {\n    type: 'reasoning-delta';\n    index: number;\n    text: string;\n} | {\n    type: 'tool-call-delta';\n    index: number;\n    id: ToolCallId;\n    name?: string;\n    argumentsDelta: string;\n} | {\n    type: 'block-end';\n    index: number;\n    block: ContentBlock;\n} | {\n    type: 'usage';\n    usage: TokenUsage;\n} | {\n    type: 'finish';\n    reason: FinishReason;\n    replayState?: ReplayEnvelope;\n};"
+      },
+      {
+        "name": "SurfaceEventType",
+        "declaration": "export type SurfaceEventType = 'system/message' | 'developer/message' | 'user/message' | 'assistant/message' | 'tool/result';"
+      },
+      {
+        "name": "SurfaceIntent",
+        "declaration": "export type SurfaceIntent<T extends SurfaceEventType = SurfaceEventType> = {\n    surfaceOp: SurfaceOp;\n} & (T extends 'assistant/message' ? {\n    sourceEventSeqs?: never;\n} : {\n    sourceEventSeqs?: SessionSeq[];\n});"
+      },
+      {
+        "name": "SurfaceOp",
+        "declaration": "export type SurfaceOp = 'append' | {\n    op: 'replace';\n    startSeq: SessionSeq;\n    endSeq: SessionSeq;\n};"
+      },
+      {
+        "name": "SystemMessage",
+        "declaration": "export interface SystemMessage extends MessageBase {\n    readonly role: 'system';\n    readonly source: MessageSourceMap['system-prompt'];\n}"
+      },
+      {
+        "name": "SystemPromptMessageSource",
+        "declaration": "export interface SystemPromptMessageSource {\n    kind: 'system-prompt';\n}"
+      },
+      {
+        "name": "SystemPromptUpdate",
+        "declaration": "export type SystemPromptUpdate = 'in-history';"
+      },
+      {
+        "name": "TokenUsage",
+        "declaration": "export interface TokenUsage {\n    inputTokens: number;\n    outputTokens: number;\n    totalTokens?: number;\n    cacheReadTokens?: number;\n    cacheWriteTokens?: number;\n    reasoningTokens?: number;\n}"
+      },
+      {
+        "name": "ToolAdditionBlock",
+        "declaration": "export interface ToolAdditionBlock {\n    type: 'tool-addition';\n    toolName: string;\n    tool?: never;\n}"
+      },
+      {
+        "name": "ToolCallBlock",
+        "declaration": "export interface ToolCallBlock {\n    type: 'tool-call';\n    id: ToolCallId;\n    name: string;\n    arguments: string;\n}"
+      },
+      {
+        "name": "ToolCallId",
+        "declaration": "export type ToolCallId = Branded<'ToolCallId'>;"
+      },
+      {
+        "name": "ToolMessageSource",
+        "declaration": "export interface ToolMessageSource {\n    kind: 'tool';\n    callId: ToolCallId;\n}"
+      },
+      {
+        "name": "ToolRemovalBlock",
+        "declaration": "export interface ToolRemovalBlock {\n    type: 'tool-removal';\n    toolName: string;\n}"
+      },
+      {
+        "name": "ToolResultMessage",
+        "declaration": "export interface ToolResultMessage extends MessageBase {\n    readonly role: 'tool';\n    readonly source: ToolMessageSource;\n    readonly toolCallId: ToolCallId;\n    readonly isError?: boolean;\n}"
+      },
+      {
+        "name": "ToolSchema",
+        "declaration": "export interface ToolSchema {\n    deferLoading?: true;\n    name: string;\n    description: string;\n    parameters: Record<string, unknown>;\n}"
+      },
+      {
+        "name": "TurnEndCancelCause",
+        "declaration": "export type TurnEndCancelCause = AgentCancelCause | {\n    readonly kind: 'legacy';\n};"
+      },
+      {
+        "name": "TurnEndReason",
+        "declaration": "export type TurnEndReason = TurnEndReasonMap[keyof TurnEndReasonMap];"
+      },
+      {
+        "name": "TurnEndReasonMap",
+        "declaration": "export interface TurnEndReasonMap {\n    completed: {\n        kind: 'completed';\n    };\n    aborted: {\n        kind: 'aborted';\n        reason: TurnEndCancelCause;\n    };\n    blocked: {\n        kind: 'blocked';\n    };\n    error: {\n        kind: 'error';\n        error: LlmFailure;\n    };\n    'max-tokens': {\n        kind: 'max-tokens';\n    };\n    interrupted: {\n        kind: 'interrupted';\n    };\n    forked: {\n        kind: 'forked';\n    };\n}"
+      },
+      {
+        "name": "UserMessage",
+        "declaration": "export interface UserMessage extends MessageBase {\n    readonly role: 'user';\n}"
+      }
+    ]
+  }
+}

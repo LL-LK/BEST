@@ -1,0 +1,17 @@
+{
+  "schema": "e5-zero-unit-seal-verification-v1",
+  "logical_e5_units": 0,
+  "sealed_dir": "<WORK_ROOT>\\evidence\\gate-journal\\sealed\\science-canary-v1",
+  "session_id": "session-9c80f38e-de96-4b07-a15c-5001c78fa556",
+  "source_session_sha256": "4810cc2ddca6a57ca50316a52eb31a5eefd1f059186b9f94b0b5fce74b4b00ed",
+  "source_event_count": 21,
+  "verification": {
+    "ok": true,
+    "problems": [],
+    "n_traces": 1,
+    "run_id": "science-canary-v1",
+    "protocol_sha256": "e0016d5d02d704d6f1ac2ca8a1af689db3aed792cc320cc996a92d9b9d8cf6bf"
+  },
+  "confirmatory_go": false,
+  "scope": "restricted Claude Science persona + one integration fixture; not 12-arm E5"
+}

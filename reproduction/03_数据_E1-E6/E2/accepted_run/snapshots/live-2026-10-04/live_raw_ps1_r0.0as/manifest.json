@@ -1,0 +1,9 @@
+{
+  "files": {
+    "capture_log.json": "0fecfd9a4a50cf95635bf0a7d59be7a0100c16bcb44959dcec552d5904e43a48",
+    "phase1.html": "b563b8e7e1e444824a331a46272d712f92f87619828963f8652ee44eeef6feac",
+    "raw_response.txt": "b563b8e7e1e444824a331a46272d712f92f87619828963f8652ee44eeef6feac",
+    "snapshot.yaml": "fa084cba53bd37a633987931576df368cefea2094a57a4ec31c1cb0f205e567b"
+  },
+  "algorithm": "sha256"
+}

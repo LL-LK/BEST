@@ -1,0 +1,250 @@
+{
+  "at": "2026-10-11T18:05:17.355265+08:00",
+  "batch": "E6-R3-supplement-20261011-1791689271010679000",
+  "report": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000/REPORT.md",
+  "paper_paragraph": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000/论文补充段落.md",
+  "results": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000/FINAL-RESULTS.json",
+  "artifacts": {
+    "ARCHIVE-VERIFICATION.json": {
+      "sha256": "62be3a1b078aa5cb612c7c7d2bda93a9f137ba9323ccab65589b6dea26235e54",
+      "bytes": 161
+    },
+    "ASSISTANT-REVIEW-NOTES.json": {
+      "sha256": "2d06371f726a202c8e02b18bfb62aa7e8c541b3d7e17426ba2a135c62d344a0c",
+      "bytes": 1933
+    },
+    "DELIVERY-TESTS.log": {
+      "sha256": "e8b12eb9c14e20ba6d6f42d6a6564099a0106363b2d2c716df325fb3a6e8b6f6",
+      "bytes": 98
+    },
+    "DOCX-VERIFICATION.json": {
+      "sha256": "cde51cba3fd0085ba4c6fd1d22b703612a2c332d91c6ac069b5be83cbe8fb20d",
+      "bytes": 586
+    },
+    "DRAFT-DOCX-VERIFICATION.json": {
+      "sha256": "6c57dc693712f7bbdf0a2e29dbb469999ab41cf4b6e803ff99ca4656f9106af2",
+      "bytes": 631
+    },
+    "E3与E6-论文初稿.docx": {
+      "sha256": "87e4325aceab4db738f8641f69758cd8aec4a4314d0cc2a8e6052af7abf84d29",
+      "bytes": 48221
+    },
+    "E3与E6-论文初稿.md": {
+      "sha256": "b83fe69c7030a1a7f262ffead78d518b40ffe7a91f407798b5c14a5852ba91f9",
+      "bytes": 17255
+    },
+    "E3与E6-论文方法与结果-修订版.docx": {
+      "sha256": "eb8021c8855e245ca077acd8756e6a588fed144b9606beb28c5f663f1f0affc3",
+      "bytes": 48216
+    },
+    "E3与E6-论文方法与结果-修订版.md": {
+      "sha256": "6a801165a865d36755aafa18c38df73d8ed1ea0c40c95f2a03ad99652d0f5a7f",
+      "bytes": 17004
+    },
+    "FAILURE-EXPLANATIONS.json": {
+      "sha256": "73375903e7e87dc2768975d8453caeae4c3363f705336c036d18a0bfe0a1e0da",
+      "bytes": 11594
+    },
+    "FINAL-RESULTS.json": {
+      "sha256": "c76dda3ee7db2aa7c2607793d009d823d45433c188b71e68409d73b2d4e311c3",
+      "bytes": 1104677
+    },
+    "FINAL-TESTS-311.log": {
+      "sha256": "15639aefb327ff4e0d686bf664df6e6ceb40af888667ac16a5b7224531d49bb6",
+      "bytes": 421
+    },
+    "FINAL-TESTS-313.log": {
+      "sha256": "c74e8ec1448768c651624fffb6e82f6fa4cdac9ea46f45adb11cd1902e215347",
+      "bytes": 421
+    },
+    "FINAL-TESTS-314.log": {
+      "sha256": "6354b18318546e823873c0f5d71382515a670bad62e30273e8e31955a292c44b",
+      "bytes": 421
+    },
+    "FINAL-TESTS.log": {
+      "sha256": "10467f58692ad4b805fdc73f2dbd090d036bc1b9b07504b3a027c5ddf0866542",
+      "bytes": 421
+    },
+    "INTEGRITY-AUDIT.json": {
+      "sha256": "04df0fdba2aa57e557184ecff5bf89a569505b745bccad3e192acee4e44bce6c",
+      "bytes": 117952
+    },
+    "OFFLINE-FINALIZATION.json": {
+      "sha256": "c3a84f99046a57fb67e9806a0370a3ba66814c5c1e371c4bb2747832a2ff746e",
+      "bytes": 641
+    },
+    "OFFLINE-FINALIZATION.log": {
+      "sha256": "cb6633669c50c687cc78b11313def23c4d22f60103254a3140a9b8c2affa4c8c",
+      "bytes": 712
+    },
+    "OPERATIONAL-TIMING-NOTE.json": {
+      "sha256": "db0059bcc995f55bfc32cbdd7ba390be36715a9ecf7a205d4361efde2e1ff717",
+      "bytes": 671
+    },
+    "PORTABLE-SNAPSHOT-VERIFICATION.json": {
+      "sha256": "34dffdf1c7bcfb8783ece2d08a02371bb4d0533a92ad1019b8947c202fc74d41",
+      "bytes": 95
+    },
+    "PROTOCOL-AMENDMENT-R2-CANCELLATION.json": {
+      "sha256": "7281419936cbb3f71c50902e5d2e4f9395624a65d7880cd6d7c0e414572c0d74",
+      "bytes": 1184
+    },
+    "PROTOCOL-AMENDMENT-U7-REMOVAL.json": {
+      "sha256": "c6f36f89875e6716d3fb209b5508a8de8f561c889b99cb9c23baa95b4036935a",
+      "bytes": 710
+    },
+    "R2-DATE-GUARD-PREFLIGHT.json": {
+      "sha256": "e36f8c8a0a040347a2710852cc3e870be208a7baadc025356cf673e797d412cc",
+      "bytes": 219
+    },
+    "R3-consistency.json": {
+      "sha256": "732fc08bcbe02b65c215a18638c8b3708c2f857f1b1a6b06df9e69dfc042dd3d",
+      "bytes": 157184
+    },
+    "R3-declared-card-consistency.json": {
+      "sha256": "aac74483b62bac817b950f6bf31ff4f55fd91bc91b1255176c3db22ae2f6097b",
+      "bytes": 155840
+    },
+    "R3-efficiency.json": {
+      "sha256": "01e27619c72ee398740de3eb78edbf3e5381671fe7906e8689da68a79f8f8124",
+      "bytes": 438974
+    },
+    "R3-semantic-cards.json": {
+      "sha256": "4e3b0c09175d3de1395a28cb5c2ddd17e42ca95331521fca949189dec544f1c1",
+      "bytes": 451437
+    },
+    "R3-usability.json": {
+      "sha256": "4e9fc4b6278a3224ea9d4e9f1ef7bbf698b135bbecfcfc8658132bf22c8c70eb",
+      "bytes": 321308
+    },
+    "README.md": {
+      "sha256": "5016c84fd29da00ff5c4e985cf32baaa236cd1efd5298a503b7fab88658947df",
+      "bytes": 2015
+    },
+    "REMAINING-WORK.md": {
+      "sha256": "50b6f020e26f9256d7c3b8af3189de2884b43230adf024759cc79574e4e94c02",
+      "bytes": 941
+    },
+    "REPORT.md": {
+      "sha256": "7c4e1bf7a80f2188ae0f6fe24429238c8e83208f47e72f1bbbc5b2448cd732d4",
+      "bytes": 5676
+    },
+    "RUN-STATUS.json": {
+      "sha256": "8ea9790525fd6908de8a80cbf10ccc26e75ab5a87f1679af38d2a9b2dc6541a3",
+      "bytes": 200
+    },
+    "SUPPLEMENT-PROTOCOL.json": {
+      "sha256": "210f78c90128b543c688201fd289909335e39a105fd0aee4ba8fe2149a2e868d",
+      "bytes": 4106
+    },
+    "TESTS.log": {
+      "sha256": "e713cfdae61565a8f0f608d283c80cb1862588d6445850080165709857d80f9f",
+      "bytes": 340
+    },
+    "run_manifest.json": {
+      "sha256": "301714896b929f79a4475201d7bcded43fb2e9636e6e6e58f680c134d09cef8f",
+      "bytes": 10492
+    },
+    "scoring-manifest.json": {
+      "sha256": "55f630e0ff3bbb525f74b5f085753fdaf84256338ba109206a6f19def8781eeb",
+      "bytes": 3757
+    },
+    "失败记录.md": {
+      "sha256": "ad1afa57c733f04c78a7bf13929359d3630ae2361958dd64390d1ffe284c7009",
+      "bytes": 2018
+    },
+    "论文补充段落.md": {
+      "sha256": "d68c62da4ae9616c119806cc737fcdf764a3b3d324612e235422deb15b029af7",
+      "bytes": 2202
+    }
+  },
+  "raw_archive": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000-原始证据.zip",
+  "raw_archive_sha256": "38d5cff6eab953324b67c350992fef4fd2704e41959de90236bb5d4ff2db1704",
+  "raw_archive_bytes": 70429564,
+  "original_e3_e6_paper_unchanged": true,
+  "bundled_snapshot_source_traces": 94,
+  "delivery_integrity_audit": {
+    "passed": true,
+    "unexpected_evidence_errors": [],
+    "invalid_output_traces": 27,
+    "known_partial_trace_failures": [
+      {
+        "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/lanes/R3/REPRO-11/repeat-3/attempt-1.jsonl",
+        "errors": [
+          "tool_pairing_incomplete",
+          "final_answer_missing_or_duplicate",
+          "run_total_cost_mismatch"
+        ],
+        "reason": "NaN 工具回包序列化中断；工具结果和成本对账存在缺段，仍属无效记录"
+      }
+    ],
+    "exact_known_api_key_scan_available": false,
+    "scope": "source/input/snapshot integrity separate from failed output validity; credential scan scope disclosed"
+  },
+  "remaining": [],
+  "excluded_subjective_metric": "U7",
+  "current_protocol_amendment": {
+    "at": "2026-10-11T17:58:32.576718+08:00",
+    "revision": "E6-batch-repetition-consistency-U1-U6-no-R2",
+    "researcher_instruction": "为什么要复测，可以删除吗，我们今天就要初稿",
+    "R2_status": "cancelled_before_execution",
+    "R2_pending": false,
+    "U7_status": "cancelled",
+    "retained_lanes": [
+      "R0",
+      "R1",
+      "R3-original",
+      "R3-supplement"
+    ],
+    "retained_usability_metrics": [
+      "U1",
+      "U2",
+      "U3",
+      "U4",
+      "U5",
+      "U6"
+    ],
+    "current_scope": "各批次内重复运行一致性、冻结快照回放、效率及客观可用性；原批次与事后补测分列",
+    "unmeasured_constructs": [
+      "D+7跨日稳定性",
+      "服务商权重及在线后端跨日漂移"
+    ],
+    "remaining_E6_collection": null,
+    "future_API_required_for_current_scope": false,
+    "timing": "原R1/R3与R3补测结果已知后的事后范围修订；未执行R2",
+    "effect_on_raw_records": "none; 原协议、原始回答、失败和快照归档保留",
+    "original_protocol_pass": false,
+    "historical_publication_snapshot": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/publication-drafts/before-R2-cancellation-175832"
+  },
+  "protocol_complete": false,
+  "paper_document": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000/E3与E6-论文初稿.docx",
+  "paper_markdown": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000/E3与E6-论文初稿.md",
+  "document_visual_verification": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/docs/results/2026-10-11/e6-r3-supplement/E6-R3-supplement-20261011-1791689271010679000/DRAFT-DOCX-VERIFICATION.json",
+  "actual_archive_verification": {
+    "snapshot_entries": 274,
+    "source_traces": 94,
+    "source_pointers_checked": 619,
+    "passed": true,
+    "zip_crc_passed": true,
+    "zero_network_calls": true
+  },
+  "tests_passed": 314,
+  "collection_status": {
+    "terminal_slots": 160,
+    "valid": 133,
+    "failed": 27,
+    "full_five_valid_tasks": 21,
+    "planned_tasks": 32,
+    "running": false
+  },
+  "R2_effective_api_key_needed": false,
+  "E3_independent_quantitative_agreement_available": false,
+  "R2_status": "cancelled_before_execution",
+  "current_scope_execution_closed": true,
+  "historical_paper_documents": [
+    "E3与E6-论文方法与结果-修订版.docx",
+    "E3与E6-论文方法与结果-修订版.md"
+  ],
+  "numeric_results_changed": false,
+  "new_network_calls_this_revision": 0
+}

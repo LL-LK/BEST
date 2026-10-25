@@ -1,0 +1,39 @@
+{
+  "gold_id": "gold_missing_arg_radius",
+  "case_id": "missing_arg_radius",
+  "snapshot_id": "sha256:6ab219a534678e4f195655af86ceba5c0c4b485c357431709799da89b7678694",
+  "data_version": "synthetic@2026-10-11",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:c01c73ed9b463616bf6ae17f977a24266bbd63057df180307687c3a55a3d07a6"
+  },
+  "rows_source": "snapshot:syn_no_request (error-state, 无行集)",
+  "max_rows": 1000,
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [],
+  "row_count": 0,
+  "field_values": {},
+  "null_semantics": {},
+  "unit_map": {},
+  "precision_map": {},
+  "ordering": {
+    "key": null,
+    "order": null,
+    "sequence": [],
+    "declared": false
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))"
+  },
+  "truncation": {
+    "expected_total": 0,
+    "expected_truncated": false,
+    "expected_returned": 0
+  },
+  "result_state": "error",
+  "expected_error_code": "E_INVALID_INPUT",
+  "notes": "金标准: result_state=error, error_code=E_INVALID_INPUT。 判据 (E2 §5.1): **不得**默默套一个默认半径 —— 半径默认值是静默错数据的 最短路径。 实测依据 (2026-10-08): 与 missing_arg_coords 同一处互斥校验 (src.protocol.build_query_form), radius_arcsec is None 即抛 ValueError, 归 E_INVALID_INPUT。\n"
+}

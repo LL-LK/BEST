@@ -1,0 +1,16 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "半径 0 非正 (合法域 (0,18000] 角秒)"
+  ],
+  "item_id": "RB-07",
+  "tier": "P",
+  "request": "查 RA 120.3 Dec -20.4 半径 0 的 ps1 源。",
+  "route": "reject",
+  "answer_text": "这条查询我没法直接发出去：检索半径必须是**正数**（单位是角秒），你给的“0”会被入口校验直接拒绝——0 或负半径属于无意义查询，系统不会向 BEST 服务端发请求。\n\n请给一个 >0 且 ≤18000（即 5 度）的半径。比如 ps1 常用的 180 角秒（3 角分），我就可以按 RA=120.3、Dec=-20.4 帮你查 ps1 源；如果你想要更小范围，也可以直接告诉我几角秒。",
+  "run_id": "r1"
+}

@@ -1,0 +1,27 @@
+snapshot_id: syn_null_zero_twins_20261011
+kind: S
+material_class: synthetic-null-zero-twins
+catalog: ps1
+columns:
+- ps1_source_id
+- ps1_ra
+- ps1_dec
+- ps1_rpsf
+- ps1_gpsf
+- ps1_class_star
+row_count: 3
+data_version: synthetic@2026-10-11
+page_size: 1000
+sort_key: ps1_source_id
+fetched_at: '2026-10-11'
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  max_rows: 1000
+paired_cells:
+- column: ps1_class_star
+  null_key: BEST_NZ_0002
+  zero_key: BEST_NZ_0003
+note: 同列ps1_class_star含原始空单元与字面0.0；保留CSV原始字节，语义双生夹具。

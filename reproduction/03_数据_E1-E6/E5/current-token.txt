@@ -1,0 +1,41 @@
+
+USER INFORMATION
+----------------
+
+User Name     SID                                          
+============= =============================================
+HOST\user S-1-5-21-0000000000-000000000-0000000000-1001
+
+
+GROUP INFORMATION
+-----------------
+
+Group Name                             Type             SID                                                                                                         Attributes                                        
+====================================== ================ =========================================================================================================== ==================================================
+Mandatory Label\Medium Mandatory Level Label            S-1-16-8192                                                                                                                                                   
+Everyone                               Well-known group S-1-1-0                                                                                                     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\本地帐户和管理员组成员    Well-known group S-1-5-114                                                                                                   Group used for deny only                          
+HOST\docker-users                   Alias            S-1-5-21-0000000000-000000000-0000000000-1005                                                               Mandatory group, Enabled by default, Enabled group
+BUILTIN\Administrators                 Alias            S-1-5-32-544                                                                                                Group used for deny only                          
+BUILTIN\Users                          Alias            S-1-5-32-545                                                                                                Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\INTERACTIVE               Well-known group S-1-5-4                                                                                                     Mandatory group, Enabled by default, Enabled group
+CONSOLE LOGON                          Well-known group S-1-2-1                                                                                                     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\Authenticated Users       Well-known group S-1-5-11                                                                                                    Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\This Organization         Well-known group S-1-5-15                                                                                                    Mandatory group, Enabled by default, Enabled group
+MicrosoftAccount\user@example.com     User             S-1-11-96-<MSA_SID> Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\本地帐户                  Well-known group S-1-5-113                                                                                                   Mandatory group, Enabled by default, Enabled group
+LOCAL                                  Well-known group S-1-2-0                                                                                                     Mandatory group, Enabled by default, Enabled group
+NT AUTHORITY\云帐户身份验证            Well-known group S-1-5-64-36                                                                                                 Mandatory group, Enabled by default, Enabled group
+
+
+PRIVILEGES INFORMATION
+----------------------
+
+Privilege Name                Description                          State   
+============================= ==================================== ========
+SeShutdownPrivilege           Shut down the system                 Disabled
+SeChangeNotifyPrivilege       Bypass traverse checking             Enabled 
+SeUndockPrivilege             Remove computer from docking station Disabled
+SeIncreaseWorkingSetPrivilege Increase a process working set       Disabled
+SeTimeZonePrivilege           Change the time zone                 Disabled
+

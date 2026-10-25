@@ -1,0 +1,14 @@
+{
+  "task_id": "REPRO-22",
+  "repeat": 2,
+  "recorded_error": "Response ended prematurely",
+  "calendar_span_s": 8606.597941,
+  "monotonic_wall_s": 338.5872662499969,
+  "unexplained_difference_s": 8268.010674750003,
+  "at": "2026-10-11T16:31:44.135052+08:00",
+  "interpretation": "实际网络超时与分块响应中断已记录；时钟跨度与单调计时差额原因未确认，不能归为模型推理耗时。",
+  "operation": "为防止后续空闲休眠，启动临时 caffeinate -i -w 46399，随采集进程结束自动退出；不修改持久电源设置。",
+  "sampling_parameters_changed": false,
+  "ended_slot_retried": false,
+  "judge_api_used": false
+}

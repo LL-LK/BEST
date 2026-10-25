@@ -1,0 +1,72 @@
+{
+  "schema": "e5-statistics-qualification-v5",
+  "logical_e5_units": 0,
+  "scope": "synthetic test vectors in memory only; no experimental records exported",
+  "checks": [
+    {
+      "name": "paired-exact-versus-SciPy",
+      "vector": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "pass": true
+    },
+    {
+      "name": "paired-exact-versus-SciPy",
+      "vector": [
+        3,
+        -1,
+        2,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "paired-exact-versus-SciPy",
+      "vector": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "paired-exact-versus-SciPy",
+      "vector": [
+        -3,
+        -3,
+        -3,
+        -3
+      ],
+      "pass": true
+    },
+    {
+      "name": "one-success-in-three-is-one-third-not-majority-vote",
+      "pass": true
+    },
+    {
+      "name": "ablation-family-includes-A6-only",
+      "pass": true
+    },
+    {
+      "name": "missing-matrix-rejected",
+      "pass": true
+    },
+    {
+      "name": "duplicate-matrix-rejected",
+      "pass": true
+    },
+    {
+      "name": "historical-matrix-rejected",
+      "pass": true
+    },
+    {
+      "name": "Holm-adjusted-p-monotone",
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

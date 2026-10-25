@@ -1,0 +1,47 @@
+{
+  "files": 4,
+  "findings": [
+    {
+      "file": "<WORKSPACE>\\10_脱敏复现包\\BEST_v70_E4数据更新与批注核验_20261023\\source\\main.tex",
+      "line": 60,
+      "severity": "review",
+      "kind": "editing-placeholder",
+      "text": "\\correspondence{\\PH{作者名（E-mail：待补充）}}"
+    },
+    {
+      "file": "<WORKSPACE>\\10_脱敏复现包\\BEST_v70_E4数据更新与批注核验_20261023\\source\\main.tex",
+      "line": 65,
+      "severity": "review",
+      "kind": "editing-placeholder",
+      "text": "\\CNAffiliation{\\PH{¹ }\\PH{单位名称，部门，城市}\\PH{ }\\PH{邮编；}\\PH{*}\\PH{通信作者}\\PH{ E-mail}\\PH{：待补充}}"
+    },
+    {
+      "file": "<WORKSPACE>\\10_脱敏复现包\\BEST_v70_E4数据更新与批注核验_20261023\\source\\main.tex",
+      "line": 488,
+      "severity": "review",
+      "kind": "editing-placeholder",
+      "text": "待补充。"
+    },
+    {
+      "file": "<WORKSPACE>\\10_脱敏复现包\\BEST_v70_E4数据更新与批注核验_20261023\\BEST_v70_论文正文.pdf",
+      "line": 4,
+      "severity": "review",
+      "kind": "editing-placeholder",
+      "text": "¹ 单位名称，部门，城市邮编；*通信作者E-mail：待补充"
+    },
+    {
+      "file": "<WORKSPACE>\\10_脱敏复现包\\BEST_v70_E4数据更新与批注核验_20261023\\BEST_v70_论文正文.pdf",
+      "line": 44,
+      "severity": "review",
+      "kind": "editing-placeholder",
+      "text": "*通信作者：作者名（E-mail：待补充）"
+    },
+    {
+      "file": "<WORKSPACE>\\10_脱敏复现包\\BEST_v70_E4数据更新与批注核验_20261023\\BEST_v70_论文正文.pdf",
+      "line": 1292,
+      "severity": "review",
+      "kind": "editing-placeholder",
+      "text": "待补充。"
+    }
+  ]
+}

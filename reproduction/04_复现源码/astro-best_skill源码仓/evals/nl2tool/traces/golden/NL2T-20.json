@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-20",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 field_reference。 可选: 请指明是哪个星表的哪一列（如 stripe82_gnobs / stripe82_gmmed / ps1_gpsf）。",
+  "source": "golden-from-annotation"
+}

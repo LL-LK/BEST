@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "D04_unfiltered",
+  "files": {
+    "count.json": "sha256:725861ae3e1753c35739e9174d072d1c1bb27200b6aa2f9b15fb032f8ae4ae3b",
+    "pages/page_0001.csv": "sha256:c489564d7ab5ecadde5b5bf62b525b1ec95e21b7e03168fc02b888a55361ad14",
+    "phase1.html": "sha256:59185ab360b856cc4da45a1281888259674d401a7814746ef48ce326f04d81ed",
+    "rows_full.csv": "sha256:c489564d7ab5ecadde5b5bf62b525b1ec95e21b7e03168fc02b888a55361ad14"
+  }
+}

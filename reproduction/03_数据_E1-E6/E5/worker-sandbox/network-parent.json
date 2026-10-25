@@ -1,0 +1,6 @@
+{
+  "host_sentinel_ip": "127.0.0.1",
+  "host_sentinel_port": 46021,
+  "parent_network_namespace": "net:[4026531840]",
+  "positive_control": "reachable-before-bwrap"
+}

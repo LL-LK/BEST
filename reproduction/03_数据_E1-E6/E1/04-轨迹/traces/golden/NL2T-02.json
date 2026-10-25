@@ -1,0 +1,14 @@
+{
+  "task_id": "NL2T-02",
+  "route": "answer",
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "已按工具面完成查询并汇报结果 (含 total/returned/truncated 三元组)。",
+  "source": "golden-from-annotation"
+}

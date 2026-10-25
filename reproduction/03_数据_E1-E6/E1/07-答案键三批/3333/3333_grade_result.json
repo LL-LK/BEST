@@ -1,0 +1,440 @@
+{
+  "summary": {
+    "dims": {
+      "toolset": 0.7857142857142857,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": 0.8571428571428571,
+      "reject": 0.875
+    },
+    "dim_n": {
+      "toolset": 28,
+      "param": 9,
+      "convert": 6,
+      "redundant": 28,
+      "clarify": 7,
+      "reject": 6
+    },
+    "weighted": 0.9089285714285714,
+    "pass": true,
+    "warn": true,
+    "red_line_tasks": [],
+    "n_tasks": 28,
+    "dim_failures": [
+      {
+        "dim": "toolset",
+        "value": 0.7857,
+        "line": 0.9,
+        "n": 28
+      },
+      {
+        "dim": "clarify",
+        "value": 0.8571,
+        "line": 1.0,
+        "n": 7
+      },
+      {
+        "dim": "reject",
+        "value": 0.875,
+        "line": 1.0,
+        "n": 6
+      }
+    ],
+    "thin_dims": []
+  },
+  "per_task": [
+    {
+      "task_id": "NL2T-01",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-02",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-03",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-04",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-05",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-06",
+      "gold_route": "answer",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-07",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-08",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-09",
+      "gold_route": "answer",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-10",
+      "gold_route": "answer",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-11",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 0.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-12",
+      "gold_route": "answer",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-13",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-14",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-15",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-16",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-17",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-18",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-19",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-20",
+      "gold_route": "clarify",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-21",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-22",
+      "gold_route": "reject",
+      "pred_route": "reject",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-23",
+      "gold_route": "reject",
+      "pred_route": "reject",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-24",
+      "gold_route": "reject",
+      "pred_route": "clarify",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-25",
+      "gold_route": "answer",
+      "pred_route": "answer",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-26",
+      "gold_route": "reject",
+      "pred_route": "reject",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-27",
+      "gold_route": "reject",
+      "pred_route": "reject",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": []
+    },
+    {
+      "task_id": "NL2T-28",
+      "gold_route": "reject",
+      "pred_route": "reject",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 0.25
+      },
+      "red_lines": []
+    }
+  ]
+}

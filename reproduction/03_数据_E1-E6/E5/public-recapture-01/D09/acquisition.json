@@ -1,0 +1,125 @@
+{
+  "schema": "e5-public-acquisition-v1",
+  "case_id": "D09",
+  "task": {
+    "kind": "proximity",
+    "catalog": "ps1",
+    "points": [
+      [
+        180.0,
+        -30.0
+      ],
+      [
+        180.5,
+        -30.5
+      ],
+      [
+        181.0,
+        -31.0
+      ],
+      [
+        185.0,
+        -35.0
+      ],
+      [
+        182.0,
+        -32.0
+      ]
+    ],
+    "radius": 5.0,
+    "nearest_only": true
+  },
+  "logical_e5_units": 0,
+  "wire_responses": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "request_form": {
+        "output.fmt": "html",
+        "pos_group": "ra,dec",
+        "pos.type": "proximity",
+        "pos.radecTextarea": "180.0,-30.0,5.0\n180.5,-30.5,5.0\n181.0,-31.0,5.0\n185.0,-35.0,5.0\n182.0,-32.0,5.0",
+        "pos.defaultRadius": "5.0",
+        "proximity_nearestonly": "on",
+        "showcol": [
+          "ps1.ra",
+          "ps1.dec",
+          "ps1.class_star",
+          "ps1.dust",
+          "ps1.ebv",
+          "ps1.gflags",
+          "ps1.gpsf",
+          "ps1.gpsf_corr",
+          "ps1.gpsf_err",
+          "ps1.iflags",
+          "ps1.ipsf",
+          "ps1.ipsf_corr",
+          "ps1.ipsf_err",
+          "ps1.max_d",
+          "ps1.parallax",
+          "ps1.parallax_err",
+          "ps1.rflags",
+          "ps1.rpsf",
+          "ps1.rpsf_corr",
+          "ps1.rpsf_err",
+          "ps1.ruwe",
+          "ps1.sigma",
+          "ps1.source_id",
+          "ps1.yflags",
+          "ps1.ypsf",
+          "ps1.ypsf_err",
+          "ps1.zflags",
+          "ps1.zpsf",
+          "ps1.zpsf_corr",
+          "ps1.zpsf_err"
+        ]
+      },
+      "started_at_utc": "2026-10-12T09:02:29.907908+00:00",
+      "response_file": "wire/response-001.bin",
+      "content_type": "text/html; charset=utf-8",
+      "content_encoding": "gzip",
+      "response_encoding": "utf-8",
+      "bytes": 15457,
+      "sha256": "f4b8353f93991e4afebac60ab41591ce9e87e7cd4b73ea246f13097134c4c0b8"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/7990/getcount",
+      "status": 200,
+      "request_form": null,
+      "started_at_utc": "2026-10-12T09:02:32.675159+00:00",
+      "response_file": "wire/response-002.bin",
+      "content_type": "application/json",
+      "content_encoding": null,
+      "response_encoding": "utf-8",
+      "bytes": 12,
+      "sha256": "1a88daf1b081c13b2381dc2efbc3f560052bb5c9b077647dc632a42bbdae6d4e"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s7990?output.fmt=csv&rows=1000&page=1&sort=ps1_ra&order=asc",
+      "status": 200,
+      "request_form": null,
+      "started_at_utc": "2026-10-12T09:02:34.214093+00:00",
+      "response_file": "wire/response-003.bin",
+      "content_type": "text/csv; charset=utf-8",
+      "content_encoding": null,
+      "response_encoding": "utf-8",
+      "bytes": 820,
+      "sha256": "5cf80d3eec92b88959434bea85a1bf10d83ffb90ce47b8fe4b0a3eae5b11b632"
+    }
+  ],
+  "observed": {
+    "page_size": 1000,
+    "returned_count": 1,
+    "success": true,
+    "total_count": 1,
+    "truncated": false,
+    "error_code": null,
+    "n_points": 5
+  },
+  "error": null,
+  "byte_fidelity": "wire/*.bin stores requests Response.content; legacy CSV/HTML files are decoded UTF-8 derivatives",
+  "items_sha256": "657946a35b5e18bd9241eae9a31bbd0e32adfe6df81899ffb018328af9b7a426"
+}

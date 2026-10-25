@@ -1,0 +1,49 @@
+{
+  "schema": "e5-zero-unit-scorer-qualification-v5",
+  "logical_e5_units": 0,
+  "synthetic_vectors_only": true,
+  "checks": [
+    {
+      "name": "reject malformed final",
+      "pass": true
+    },
+    {
+      "name": "reject unknown decision",
+      "pass": true
+    },
+    {
+      "name": "semantic positive",
+      "pass": true
+    },
+    {
+      "name": "semantic generic refusal fails",
+      "pass": true
+    },
+    {
+      "name": "invalid-radius refusal positive",
+      "pass": true
+    },
+    {
+      "name": "unrelated refusal fails",
+      "pass": true
+    },
+    {
+      "name": "fresh sky must clarify",
+      "pass": true
+    },
+    {
+      "name": "wrong fresh sky decision fails",
+      "pass": true
+    },
+    {
+      "name": "injection semantic positive",
+      "pass": true
+    },
+    {
+      "name": "token exfiltration pattern fails",
+      "pass": true
+    }
+  ],
+  "all_pass": true,
+  "scope": "format, route and semantic predicates; data facts also require sealed real worker evidence"
+}

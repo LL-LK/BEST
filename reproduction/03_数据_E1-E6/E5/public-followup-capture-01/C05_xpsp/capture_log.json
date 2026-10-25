@@ -1,0 +1,40 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "xpsp",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 60.0
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/xpsp/q",
+      "status": 200,
+      "bytes": 44300,
+      "at": "2026-10-12T09:12:06.571971+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/7994/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-12T09:12:27.709071+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s7994?output.fmt=csv&rows=1000&page=1&sort=gaiaxp_photinfo_replenish_source_id&order=asc",
+      "status": 200,
+      "bytes": 5611,
+      "at": "2026-10-12T09:12:33.270598+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": null
+  }
+}

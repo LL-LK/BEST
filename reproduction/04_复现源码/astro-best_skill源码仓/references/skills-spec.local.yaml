@@ -1,0 +1,106 @@
+# skills-spec.local.yaml — astro-best 本地自包含规范切片快照 (Fallback SSOT)
+#
+# 用于在脱离 twskills 大仓独立分发时作为本地规范源，保证 100% 独立交付。
+# 结构与大仓 scripts/refactor/spec/skills-spec.yaml 保持兼容 (该文件仅存在于
+# monorepo 根, 本 skill 包内不可达 — 故本快照是独立分发时的唯一规范源)。
+#
+# Phase 4 扩片记录 (动机: 原切片只声明 12 个 algorithms / 2 个 gates /
+# 4 个 fields, 而 src/ 下有 57 个模块 — TAP-UWS、DownloadManager、PreciseDownloadJob、
+# 序列化格式、provenance、任务日志、AiTools/MCP、OAuth TokenStore、checkpoint 全部
+# 不在契约内, 于是 templates/gen_config_template.yaml 能靠 6 处死路径长期存活):
+#   - algorithms 补齐到 31 项, 每条 module 指向**权威实现位置** (不是薄壳再导出处);
+#   - 新增 executable_gates 四条可执行门禁 (每条带 cmp/value/unit/check);
+#   - input.fields 补 4 项, output.fields 补 5 项。
+# 全部 module 路径由 test/unit/meta/test_module_paths.py 强制校验「可导入 + 同名
+# 符号存在」, 死路径从此无法再进 spec / contracts / io-contract.md。
+
+meta:
+  schema: skills-spec-local-v1
+  skill: astro-best
+  standalone: true
+
+skills:
+  astro-best:
+    plan_row_sec2: 2
+    strength: S2
+    pipeline_stage: "collection"
+    in_scope:
+      - "NADC BEST 表单应用（Django CSRF session）认证 —— 站点不提供 TAP/ADQL/REST-JSON 接口"
+      - "两阶段异步查询"
+      - "流式下载"
+    delegates:
+      crossmatch: "astro-catalog"      # 通用检索/交叉匹配主理; BEST 自身数据的批量匹配仍归本 skill
+      data_clean: "astro-clean"        # CCD/图像归约主理
+    input:
+      schema: BestQuery
+      # 字段清单必须与 BestQuery 构造器一致 (references/client-api-reference.md §BestQuery);
+      # 站点无 SQL 通道、BEST_API_TOKEN 客户端无 Bearer 通道, 故两者均不列 (fallback-protocols.md FB-2);
+      # source_ids 也不列: BEST 无按 source_id 查的端点 (/q 走位置锥搜或 proximity 坐标批量)。
+      fields:
+        ra: {type: float, unit: "deg", source: io-contract}
+        dec: {type: float, unit: "deg", source: io-contract}
+        radius_arcsec: {type: float, unit: "arcsec", source: io-contract}
+    output:
+      schema: BestResultSet
+      fields:
+        data: {type: object, unit: "mixed", source: master-plan}
+        status: {type: string, unit: "dimensionless", source: master-plan}
+        fmt: {type: string, unit: "dimensionless", source: io-contract}
+        rows: {type: integer, unit: "count", source: io-contract}
+        job_id: {type: string, unit: "dimensionless", source: io-contract}
+        checksum: {type: string, unit: "dimensionless", source: io-contract}
+        progress: {type: object, unit: "dimensionless", source: io-contract}
+    gates:
+      - {name: http_status, cmp: '==', value: 200, unit: "count", source: master-plan}
+      - {name: checksum_match, cmp: '==', value: true, unit: "bool", source: master-plan}
+    # 可执行门禁 (executable_gates): 与上方 gates 分开声明 — gates 是 master-plan
+    # 钉死的两条阻断性门禁 (数量被 test/unit/contracts/test_gen_gates.py 断言为 2),
+    # 而这四条是本 skill 自己可判定的运行时门禁, 每条带比较符/阈值/量纲/判定说明,
+    # 结构完备性由 test/unit/meta/test_module_paths.py 校验。
+    executable_gates:
+      - {name: fmt_in_whitelist, cmp: 'in', value: LOCAL_EXPORT_FORMATS, unit: "dimensionless", source: io-contract, check: "output.fmt 必须落在 src.serialization.LOCAL_EXPORT_FORMATS 白名单内, 未知格式显式报错而非静默回落 JSON"}
+      - {name: rows_nonneg, cmp: '>=', value: 0, unit: "count", source: io-contract, check: "返回行数 rows 不得为负; 负行数只可能来自截断判定或解析 bug"}
+      - {name: sqlid_resolved, cmp: '!=', value: "", unit: "dimensionless", source: io-contract, check: "两阶段查询第二阶段必须拿到非空 sqlid (sqlid != \"\"), 空 sqlid 即查询会话从未真正建立"}
+      - {name: path_within_output_dir, cmp: 'within', value: output_dir, unit: "path", source: io-contract, check: "落盘路径归一化后必须位于 output_dir 内, 拒绝 ../ 穿越与绝对路径逃逸"}
+    algorithms:
+      # --- 脚本入口与协议校验 (查询主链) ---
+      - {name: cone_search, module: "src.scripts.best_cone_search"}
+      - {name: validate_adql_query, module: "src.scripts.guards"}
+      - {name: crossmatch_with_gaia, module: "src.scripts.best_crossmatch_pipeline"}
+      # --- 客户端与领域模型 (权威实现位置; src.client / src 包内的薄壳再导出路径仍可用) ---
+      - {name: BestAuth, module: "src.auth.session"}   # 认证态已从 src.client 拆至 src.auth.session
+      - {name: BestClient, module: "src.client"}
+      - {name: BestCrossMatch, module: "src.crossmatch"}
+      - {name: BestMultiBandPhotometry, module: "src.multiband_photometry"}
+      - {name: BestDownloader, module: "src.downloader"}   # 落盘辅助在 src.download_artifacts / src.best_export
+      - {name: BestQuery, module: "src.query_builder"}
+      - {name: BestQueryResult, module: "src.models"}      # 旧契约写的 astro_best 模块不存在, 权威处是 src.models
+      # --- 配置与编排 ---
+      - {name: AstroBestConfig, module: "src.scripts.config"}   # 权威处是 src.scripts.config (非 src.config)
+      - {name: AstroBestPipeline, module: "src.core.pipeline"} # 权威处是 src.core.pipeline (非 src.pipeline)
+      - {name: QueryContext, module: "src.scripts.context"}
+      - {name: QualityGate, module: "src.core"}
+      - {name: BestSkillClient, module: "src.core"}
+      # --- TAP / UWS 适配面 ---
+      - {name: TapGateway, module: "src.tap.service"}
+      - {name: TapHTTPServer, module: "src.tap.service"}
+      - {name: TapExecutor, module: "src.tap.executor"}
+      - {name: TapUWSMixin, module: "src.tap.uws_service"}
+      # --- 下载链路 (作业栈 / 精准下载 / 进度 / 断点 / 任务日志) ---
+      - {name: DownloadManager, module: "src.download_manager"}
+      - {name: PreciseDownloadJob, module: "src.download_precise"}
+      - {name: ProgressStore, module: "src.download_progress"}
+      - {name: DownloadCheckpoint, module: "src.scripts.checkpoint"}
+      - {name: TaskLogger, module: "src.task_log"}   # 权威类名 TaskLogger; src.task_log 无 TaskLog 别名
+      # --- 序列化四函数 (本地落盘格式面) ---
+      - {name: column_is_numeric, module: "src.serialization"}
+      - {name: is_identifier_column, module: "src.serialization"}
+      - {name: normalize_output_format, module: "src.serialization"}
+      - {name: votable_document, module: "src.serialization"}
+      # --- 血缘信封与 AI 工具面 ---
+      - {name: build_envelope, module: "src.provenance"}   # 权威构造函数; src.provenance 无 ProvenanceStore 类
+      - {name: TokenStore, module: "src.auth.nadc_oauth"}
+      - {name: ensure_access_token, module: "src.auth.nadc_oauth"}   # token 过期恢复单点 (auth §5.5): NADC 无 refresh_token, 过期只能重走授权流
+      - {name: TokenExpiredError, module: "src.auth.nadc_oauth"}   # 过期且无恢复手段的显式错误 (消息带恢复命令; NadcOAuthError 子类)
+      - {name: ToolBox, module: "src.ai_tools"}
+    weights: {tests: 3, templates: 2, evals: 3, contracts: 2}

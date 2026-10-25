@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "“那个源”无先行词",
+    "缺目标星表"
+  ],
+  "item_id": "RB-42",
+  "tier": "P",
+  "request": "查一下那个源的 r 星等。",
+  "route": "clarify",
+  "answer_text": "这个请求我暂时没法执行——“那个源”指代不明确，我这边没有任何上文能确定你说的是哪一颗源，也没有它的坐标、名称或编号。\n\n请补充以下任一信息，我就能查：\n1. 源的标识：名称 / 编号（如 Gaia DR3 source_id、Landolt 标准星名）/ 赤经赤纬（含历元和坐标系）；\n2. 要查哪张表（BEST 12 张可查星表里选，例如 landolt、ps1 等）；\n3. r 星等的具体字段口径（例如 Landolt 是 `rmag`、PS1 是 `rpsf`），不确定的话我按该表默认 r 波段字段取。\n\n给我源的坐标或编号 + 目标星表，我就发起锥形检索并回报 r 星等。",
+  "run_id": "r1"
+}

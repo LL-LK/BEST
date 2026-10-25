@@ -1,0 +1,163 @@
+<html>
+<head>
+<title>The UW value-added Catalogs based on the Sloan Digital Sky Survey Data</title>
+</head>
+
+<BODY bgcolor="EEEEFF">
+ 
+<font color="blue">
+</font> 
+<hr>
+<h1>The SDSS Stripe 82 Standard Star Catalog </h1>
+<hr>
+
+<P>
+<h3> <font color=\"red\"> The latest release (Thanjavur et al. 2021): </font> </h3>
+<A href=../calib82/dataV2/stripe82calibStars_v4.1.dat> 
+v4.1 </A>   (an intermediate data product) and
+<A href=../calib82/dataV2/stripe82calibStars_v4.2.dat> 
+v4.2: the new and improved catalog! </A>   (both 235 MB).
+
+<pre>
+The file format for new versions v4.1 and v4.2 is the same as described below for
+the now obsolete version v2.6. </pre>
+<hr>
+
+
+<P>
+<h3> <font color=\"red\"> An alternative calibration from Huang and Yuan (2022) </font> </h3>
+using LAMOST spectra and Gaia photometry: 
+<A href=../calib82/dataV2/stripe82calibStars_HuangYuan2022.dat.gz> 
+catalog </A>   (86 MB as gzip-ed; expands to 274 MB) and
+<A href=../calib82/dataV2/HuangYuan2022.pdf> paper.</A> 
+ 
+<hr>
+
+
+
+<P>
+The v2.6 release (Ivezic et al. 2007): 
+<A href=stripe82calibStars_v2.6.dat> as a gzipped ascii file (67 MB).
+</A> (see below for a subset matched to 2MASS) 
+
+
+<P>
+This catalog lists positions and ugriz photometry for 1,006,849 candidate 
+standard stars from SDSS stripe 82 (|Dec|<1.266 deg and RA in the
+range 20h 34m to 4h 00m; about 300 sq.deg.). Details about the construction 
+and testing of the catalog are described in 
+<A href=205821.web.pdf> Ivezic et al. 2007 (Astronomical Journal, 134, 973)</A>.
+A quick selection summary is:
+<pre>
+ 1) unresolved source in imaging data, at least one band with 
+    photometric error below 0.05 mag
+ 2) processing flags BRIGHT, SATUR, BLENDED, or EDGE are not set
+ 3) at least 4 observations in gri
+ 4) non-variable (chi2 < 3 in gri)
+ 5) the final standard error of the mean r band mag: <0.05 mag
+</pre>
+
+<P> <font color=\"red\"> Where did variables go? 
+<A href=S82variables.html> Click here for light curve data</A> </font> 
+
+<P>
+The random photometric errors are below 0.01 mag for stars brighter than 
+(19.5, 20.5, 20.5, 20, 18.5) in ugriz, respectively (about twice as good 
+as for individual SDSS runs). The spatial variation of photometric zeropoints 
+is not larger than 0.01 mag (rms). 
+
+
+After 41 header lines, the catalog data file includes one line per star, 
+and each line lists (in this order):
+<pre>
+0) every line starts with the string CALIBSTARS
+1) RA Dec RArms Decrms: the mean position and its rms per coordinate,
+     this is J2000, decimal degrees for RA and Dec, and arcsec for rms
+     NB: standard errors can be computed as rms/sqrt(Ntot)
+2) Ntot: the total number of epochs
+3) Ar: the Schlegel, Finkbeiner & Davis (1998) ISM extinction value in 
+    the r band; extinction in other bands can be computed as [Rv=3.1]: 
+     Am = Cm*Ar, with Cm=(1.873, 1.377, 0.758, 0.537) for m=(ugiz) 
+4) and then in each band (ugriz, in this order):
+      (Nobs mmed mmu msig mrms mchi2), which are: 
+      the total number of observations in this band
+      the median magnitude 
+      the mean magnitude
+      the standard error for the mean (1.25 larger for the median)
+      the root-mean-square scatter
+      chi2 per degree of freedom (computed using the mean magnitude)
+</pre>
+
+
+Note that this catalog can also be used to calibrate photometric data 
+obtained in standard BVRI bandpasses by applying griz to BVRI transformations 
+described in <A href=205821.web.pdf>
+Ivezic et al. 2007 (Astronomical Journal, 134, 973)</A>.
+
+
+For more details, in case of problems, etc., send email to 
+Z. Ivezic (ivezic@astro.washington.edu). Technical and other information 
+about SDSS can be found on www.sdss.org. 
+
+<h3> What do these measurements mean? </h3>
+The listed magnitudes are discussed in gory detail in <A href=205821.web.pdf>
+Ivezic et al. 2007 (Astronomical Journal, 134, 973)</A>. Eqs. 1-3
+describe theoretical meaning and definitions of SDSS magnitudes. In reality,
+there are numerous sources of errors (see Section 2.5). If you are comparing
+these data to models, the most important error is the offset of SDSS photometric
+system from the AB magnitude scale (about 0.04 mag in the u band!). The bandpasses 
+that define the SDSS photometric system (Phi in the paper) are listed in the second 
+column, as a function of wavelength listed in the first column, in these files: 
+<A href=SDSSbandpasses_u.dat> u bandpass</A>, 
+<A href=SDSSbandpasses_g.dat> g bandpass</A>, 
+<A href=SDSSbandpasses_r.dat> r bandpass</A>, 
+<A href=SDSSbandpasses_i.dat> i bandpass</A>, 
+<A href=SDSSbandpasses_z.dat> z bandpass</A>. The remaining six columns 
+in each file list actual measured bandpasses plotted in Fig. 6 from that paper (all are 
+multiplied by the transmissivity of a standard atmosphere at 1.3 airmasses)
+
+<h3> Matches to 2MASS Point Source Catalog </h3>
+
+<P>
+<font color=\"red\"> The v2.6 release matched to 2MASS PSC: </font> 
+<A href=stripe82calibStars_2MASS_v2.6.dat.gz> as a gzipped ascii file (26 MB).
+</A>
+
+There are 313,859 2MASS matches within 3 arcsec. There is no header
+in this file. Each line begins with identical data from the SDSS Stripe 82 
+Standard Star Catalog, and then the following 2MASS data are appended:
+ra2MASS, dec2MASS, J, Jerr, H, Herr, K, Kerr, theta, where theta is 
+the distance between the SDSS and 2MASS positions (in arcsec). Only
+2MASS sources that pass flag cuts listed in Covey et al. (2007, 
+Astronomical Journal, 134, 2398) are used in matching. For all other
+details about the SDSS-2MASS point source sample, please see Covey et al. 
+In particular, for some applications you may want a more stringent 
+cut on distance than the generous 3 arcsec we applied. 
+
+
+
+
+<h3> Referencing </h3>
+The reference entry for this catalog is Ivezic, Z., Smith, J.A., Miknaitis, G., 
+et al. 2007, Astronomical Journal, 134, 973. If using v4.2, please cite also
+Thanjavur et al. 2021 (submitted to MNRAS). In addition, we would greatly 
+appreciate if you add the standard SDSS acknowledgement to your paper:
+
+<P> 
+<font color="brown">
+Funding for the SDSS and SDSS-II has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, the U.S. Department of Energy, the National Aeronautics and Space Administration, the Japanese Monbukagakusho, the Max Planck Society, and the Higher Education Funding Council for England. The SDSS Web Site is http://www.sdss.org/.
+<P>
+    The SDSS is managed by the Astrophysical Research Consortium for the Participating Institutions. The Participating Institutions are the American Museum of Natural History, Astrophysical Institute Potsdam, University of Basel, University of Cambridge, Case Western Reserve University, University of Chicago, Drexel University, Fermilab, the Institute for Advanced Study, the Japan Participation Group, Johns Hopkins University, the Joint Institute for Nuclear Astrophysics, the Kavli Institute for Particle Astrophysics and Cosmology, the Korean Scientist Group, the Chinese Academy of Sciences (LAMOST), Los Alamos National Laboratory, the Max-Planck-Institute for Astronomy (MPIA), the Max-Planck-Institute for Astrophysics (MPA), New Mexico State University, Ohio State University, University of Pittsburgh, University of Portsmouth, Princeton University, the United States Naval Observatory, and the University of Washington.
+</font>
+
+<hr>
+<P>
+<A HREF="mailto:ivezic@astro.washington.edu">Please send us your comments or suggestions.</A>
+<hr>
+Version 2.1 from Dec 28, 2020. 
+<hr>
+
+</body>
+</html>
+
+Version 1.1 from Mar 8, 2007. 

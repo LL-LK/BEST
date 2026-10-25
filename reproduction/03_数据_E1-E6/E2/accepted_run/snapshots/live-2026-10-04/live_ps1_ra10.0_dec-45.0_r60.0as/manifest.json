@@ -1,0 +1,11 @@
+{
+  "files": {
+    "capture_log.json": "a7e726718eba7bb42298f53c62412b53f7f749e6b64774c733fa0029e87944f9",
+    "count.json": "2af3e2cbc7a782037439ecebbe422a8fa52fb3adede1b26146310d83878ee82d",
+    "pages/page_0001.csv": "e3ccfd4d2128938340b412adbee8d1294f40f688a9fe9ac6de2cd3b82c540653",
+    "phase1.html": "c4a45daabec58712847151e76c5d3a64440484ed823e94ae7449ad4763f20718",
+    "rows_full.csv": "e3ccfd4d2128938340b412adbee8d1294f40f688a9fe9ac6de2cd3b82c540653",
+    "snapshot.yaml": "31feb23386fe08aa58a24ae33c46cc7581bc7a49903b96ec1cfac6d1b3e122e5"
+  },
+  "algorithm": "sha256"
+}

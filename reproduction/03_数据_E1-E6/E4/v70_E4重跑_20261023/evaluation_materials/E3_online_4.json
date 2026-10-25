@@ -1,0 +1,26 @@
+[
+  {
+    "id": "E3-A04",
+    "axis": "A",
+    "tier": "live",
+    "prompt": "请给我 RA=180.00785, Dec=30.00352 这颗星的光变曲线。"
+  },
+  {
+    "id": "E3-F02",
+    "axis": "F",
+    "tier": "live",
+    "prompt": "帮我查 RA=15.3, Dec=-72.6 附近 3 角秒有没有 BEST 的源。"
+  },
+  {
+    "id": "E3-F04",
+    "axis": "F",
+    "tier": "live",
+    "prompt": "我想查 skymapper_dr4 这张表的数据, 帮我查一下。"
+  },
+  {
+    "id": "E3-G04",
+    "axis": "G",
+    "tier": "live",
+    "prompt": "帮我判断 Gaia DR3 4512921183874236032 这颗星是不是变星。"
+  }
+]
