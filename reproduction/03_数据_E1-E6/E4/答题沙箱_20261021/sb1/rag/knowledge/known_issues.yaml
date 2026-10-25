@@ -1,0 +1,63 @@
+# astro-best known_issues.yaml — 已知缺陷与规避 (L3 专属 RAG, 只增不减)
+issues:
+  - title: NADC 无公开 API 文档化 SLA
+    symptom: 服务偶发 5xx/维护窗口, 无官方状态页。
+    workaround: 指数退避 (urllib3 Retry 单层, 基数 2s, max_retries=3) + 失败如实记 error_code=E_BACKEND; 下载栈走 HookBlockedError(network_exhausted) 置 blocked 待 ask; 高优先作业改约窗口重跑。⚠ 无运行期 status 叫 query_failed（见 fallback-protocols.md 头）
+    severity: medium
+    tags: [rest, availability]
+  - title: 主引用论文未刊出 (Xiao et al. 2025 Scientific Data submitted)
+    symptom: BEST 数据库主引用仍为官网标注的 "submitted", 暂无可验 DOI。
+    workaround: 文档引用以官网 URL 为准, DOI 字段标 unverified-source, 严禁编造;
+      次级引用 Huang et al. (2024, ApJS, 271, 13, DOI 10.3847/1538-4365/ad18b1)
+      已经 Crossref 实核 verified, 可正常引用。
+    severity: low
+    tags: [citation, unverified-source]
+  - title: 文档页星表与可查询现实存在偏差 (SkyMapper DR4)
+    symptom: catalog 文档页 Well-Calibrated 表列 SkyMapper DR4 (34G), 但
+      /skymapper_dr4/f 返回 {"error":"Not Found"} 软 404, calib 分组页无此表。
+    workaround: 凡文档页出现的星表, 以 /f 路由实测为准; 查询前先探测再构造;
+      本地镜像见 references/photometric-systems.md §6 (实证)。
+    severity: low
+    tags: [docs-drift, soft-404, catalog]
+  - title: BEST 网页表单字段会演进
+    symptom: 上游加列/改键时约束构造失效 (注 — 旧条目提到的
+      _build_filter_rules 反推路径已随 P1-4 移除, 约束只走 phase-1 表单)。
+    workaround: 约束构造集中在 BestQuery.build()/BestClient._build_form, 字段白名单
+      集中维护并写入 references/client-api-reference.md; 列名以 describe_catalog 为准。
+    severity: medium
+    tags: [form, schema-drift]
+  - title: 分页结果排序非确定 (无 ORDER BY)
+    symptom: 同一 sqlid 连续两次 GET (不带 sort/order) 行数相同但行序不同,
+      集合重叠仅约 1/50 (实测, temp/live_filterrules_ab_results.json)。
+    workaround: 需要稳定分页/对比时必须显式 sort+order (cone_search/crossmatch_batch
+      的 sort/order 参数, P1-8 已接线); 集合比较前先排序。
+    severity: medium
+    tags: [pagination, ordering]
+  - title: 已修复 P0 三项 (留档)
+    symptom: 软 404 无检测 (http_status==200 门禁失效) / total_count 返回本地解析行数 /
+      交叉匹配 N+1 请求灾难。
+    workaround: 均已修复并回归 — is_soft_error+Soft404Error (P0-3, 错误码 BEST_1006)、
+      BestClient._count getcount + truncated (P0-2, V-4 live 实证 770/156676)、
+      BestCrossMatch.crossmatch_batch proximity (P0-1, live N=1000 通过);
+      证据 temp/live_getcount_results.json / temp/live_proximity_p1_8_results.json。
+    severity: resolved
+    tags: [resolved, soft-404, count, proximity]
+  - title: ps1 空测光列回 ≈-1000 哨兵 (实证)
+    symptom: ps1 无测光列的值是 -1004.07/-999.0 一类哨兵而非空串; 旧解析把哨兵
+      当星等 (inputobjs_* 元数据列还因首字母 i 被误吞成 i 波段)。
+    workaround: BestSource.from_row 与 src/tap/formats.convert_table_rows 共用
+      NULL_MAGNITUDE_SENTINEL=-999 阈值, 哨兵与匹配元数据列均不进 magnitudes。
+    severity: resolved
+    tags: [resolved, sentinel, photometry]
+  - title: IVOA TAP/OAuth 历史资产曾被误删 (回忆)
+    symptom: pybest 打包产物树 (git 6f00efeb^ 可取回) 的 pybest/tap/ + oauth.py 随 Phase 8 扁平化
+      重组从 best 分支删除, 只剩 test/upstream 的 skip 守卫, 无可见线索。
+    workaround: 已迁回 src/tap/ (stdlib 传输面); OAuth 现行版即其演进 (src/auth/);
+      迁回忆审与恢复方法见 references/site-endpoints-and-interactions.md §8。
+    severity: resolved
+    tags: [resolved, migration, tap, oauth]
+  - title: 大区域下载内存峰值
+    symptom: max_rows=50000 行 CSV 一次读入内存偏高。
+    workaround: 分批 (limit + 分页 sqlid); 云侧批量走 ops/cloud_modelscope/dispatch.py。
+    severity: low
+    tags: [download, memory]

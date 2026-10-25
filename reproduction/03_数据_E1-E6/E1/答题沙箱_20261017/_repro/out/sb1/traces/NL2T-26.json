@@ -1,0 +1,16 @@
+{
+  "task_id": "NL2T-26",
+  "tool_calls": [],
+  "answer_text": "**这个我不做，也不建议你做。** 三个理由，从\"没必要\"到\"有风险\"：\n\n**1）没必要：BEST 公开数据面不需要 token。** 锥搜、分页、计数、名称解算、列元数据这些全部**匿名可查**，已实证。拼一个 token 进去不会让查询更快或更多，只会多一个泄露面。\n\n**2）有风险：凭据进 URL 查询参数 = 明文外泄。** 查询串会落到服务端访问日志、反向代理日志、客户端/浏览器历史、以及跨站时的 `Referer` 头里。一次\"方便调试\"往往意味着这份凭据在多个地方留了副本，事后无法回收。\n\n**3）这条路在本仓本来就不通。** 凭据面只有 `--auth-user` + 环境变量 `ASTRO_BEST_PASSWORD`（口令刻意**不走 argv**，因为 `ps` 里能看到命令行）；而 `BEST_API_TOKEN` 只落进配置对象的 `api_token` 字段，**客户端没有任何消费通道**（全链存而不用，仅供 doctor 报告）。所以就算拼进去，服务端也不会认。\n\n**调试该看什么（都不含凭据）**：\n\n- `provenance.stable_uri` —— 形如 `best://ps1/cone?ra=180.0&dec=30.0&sr=60`，可复现整条查询；\n- `provenance.session_id`（sqlid）—— 续页与 `count` 用；\n- `cost.http_requests` / `elapsed_s` / `rows_returned` —— 判断是慢在服务端还是本地；\n- `status.error_code` —— 失败时看是 `E_INVALID_INPUT` / `E_SOFT_404` / `E_NAME_UNRESOLVED` / `E_NO_SQLID` / `E_BACKEND` 哪一档。\n\n这几样足够定位问题，且可以随便贴到工单里。如果你确实需要带身份的调用，走 `--auth-user` + 环境变量那条正规通道，凭据只存在进程环境里。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb1",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb1",
+  "answered_at": "2026-10-20T05:21:31.567902Z"
+}

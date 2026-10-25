@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-01",
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "BEST 当前可查 **12 张星表**，按站点导航分三组：\n\n**Well-Calibrated（calib，8 张）**\n- `ps1` — Pan-STARRS All-Sky（全天，g/r/i/z/y）\n- `stripe82` — Well-Calibrated Stripe82（赤道精测天区）\n- `gaia_dr3_18` — Well-Calibrated Gaia DR3（注意线上 id 带 `_18`，没有 `gaia_dr3` 这张表，旧拼写只作别名归一）\n- `jplus_dr3` — Well-Calibrated J-PLUS DR3\n- `smss_dr4` — Well-Calibrated SMSS DR4\n- `landolt` — Well-Calibrated Landolt（经典标准星）\n- `uss_dr1` — Well-Calibrated USS DR1\n- `splus_dr4` — Well-Calibrated S-PLUS DR4\n\n**Standard Stars（std，3 张）**\n- `scr_galah` — 标准星 × GALAH 交叉表（137 列）\n- `scr_lamost` — 标准星 × LAMOST 交叉表（137 列）\n- `xpsp` — Gaia DR3 XP&SP 光谱-测光（139 张表单表，287 个可选列）\n\n**other（1 张）**\n- `dr3xpcorr` — 修正后的 Gaia DR3 XP 光谱（17 列）\n\n两个要避开的坑：\n1. `std` / `calib` / `other` 是**导航分组，不是表**。拿组名当星表 id 查会得到软错误（组名自身返回 Internal Server Error，带组前缀的路径返回 Not Found），必须用上面 12 个裸 id。\n2. 官网文档页列了 SkyMapper DR4，但线上不可查询（`/skymapper_dr4/f` 软 404），**文档存在 ≠ 可查询**。\n\n另外提醒口径：能查 ≠ 该天区有数据。`stripe82` 只覆盖赤道精测天区，`smss_dr4`/`splus_dr4` 只覆盖南天巡天天区，锥区落在天区外返回 0 行是正常结果。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb3-r3",
+  "attempt": 3,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "repro",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb3",
+  "answered_at": "2026-10-20T05:40:28.943540Z"
+}

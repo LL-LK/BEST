@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-01",
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "BEST 目前有 **12 张可查询星表**，按站点的三个导航组排列如下（`std` / `calib` / `other` 只是分组名，不是星表，直接当星表 id 提交会拿到软错误）：\n\n**calib（精测定标组，7 张）**\n\n| 星表 id | 内容 |\n|---|---|\n| `ps1` | Pan-STARRS 全天（站点上也作 `calib/ps1`） |\n| `stripe82` | Stripe82 精测天区 |\n| `gaia_dr3_18` | Gaia DR3 精测定标（155 列） |\n| `jplus_dr3` | J-PLUS DR3 精测定标 |\n| `smss_dr4` | SMSS DR4 精测定标 |\n| `landolt` | Landolt 标准星 |\n| `uss_dr1` | USS DR1 精测定标 |\n| `splus_dr4` | S-PLUS DR4 精测定标 |\n\n**std（标准星组，3 张成员表）**\n\n| 星表 id | 内容 |\n|---|---|\n| `scr_galah` | 标准星 × GALAH 交叉表（137 列） |\n| `scr_lamost` | 标准星 × LAMOST 交叉表（137 列） |\n| `xpsp` | Gaia DR3 XP&SP 光谱-测光（1 张共享位置表 + 138 张分波段表，287 个可选列） |\n\n**other（1 张）**\n\n| 星表 id | 内容 |\n|---|---|\n| `dr3xpcorr` | 修正后的 Gaia DR3 XP 光谱（`gaiaxp_photinfo_replenish` + `correctedxpspecv1`，共 17 列） |\n\n几个容易踩的点，先说明清楚：\n\n1. **没有 `gaia_dr3` 这张表。** 线上 id 必须带 `_18` 后缀，`gaia_dr3/f`、`gaia_dr3/q` 都是软 404，列前缀也写作 `gaia_dr3_18.`。\n2. **`std` 不是表。** `/std/f`、`/std/q` 返回 Internal Server Error，它只是 Standard Stars 分组页，实际成员是 `scr_galah` / `scr_lamost` / `xpsp` 三张；带组前缀的路径（`/std/{表}/f`、`/other/{表}/f`）也一律软 404，只有 calib 组的 8 张支持带前缀访问。\n3. **\"可查询\"不等于\"任意天区都有源\"。** 各表的巡天覆盖范围不同，锥区落在覆盖外返回 0 行属正常；标准星类表本身很稀疏，用它必须先有已知坐标（按位置查，不能按名字查）。\n\n另外说明一点能力边界：这 12 张是**测光/光谱星表**这一维度，与站点另一套\"测光系统\"（APASS…ZTF 共 19 个）不是一回事，后者不能直接当 `catalog` 参数传。若你要查的是某张表的具体列名、量纲与波段映射，我可以对该表取列元数据后再给约束条件——告诉我星表 id 即可。\n\n如果你接下来要检索，请补齐这几个维度，我才能定参数：**天体标识或坐标**（给出 ICRS 的 RA/Dec，或给名字由我解算）、**检索半径**（角秒，上限 18000″=5°）、**星表 id**（从上面 12 个里选）、以及是否需要限定**波段/列投影**。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb2-r2",
+  "attempt": 2,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "repro",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb2",
+  "answered_at": "2026-10-20T06:14:22.950634Z"
+}

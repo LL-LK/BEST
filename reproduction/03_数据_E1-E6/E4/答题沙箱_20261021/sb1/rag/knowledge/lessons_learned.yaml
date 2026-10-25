@@ -1,0 +1,407 @@
+lessons:
+  - id: L-precise-ps1-source-id-empty
+    title: "[已撤回 2026-10-05] \"ps1_source_id 线上逐行为空\" —— 该列是**位置相关**, 不是空列"
+    lesson: >
+      ~~原结论 (已撤回): ps1 锥搜/矩形查询响应含 ps1_source_id 列但**所有行
+      值为空**, 故精准下载 (in 约束) 必 0 行。~~
+      **订正 (以 references/data-formats.md §5c 为 SSOT)**: ps1 回包把**两类互斥
+      记录首尾相接**返回 —— 对象记录 (ps1_source_id/class_star/ruwe/parallax 有值,
+      而 gpsf/rpsf/zpsf 混 `nan`) 与点源记录 (对象级列整列空串, 点源级列有值含
+      -100x 哨兵)。**判型一行判据: ps1_source_id 非空 ⇔ 对象记录**。两者**分段
+      连续** (A 组占据索引 0..N-1), 占比**随天区变**。
+      **正确表述: 用这一列当主键前必须先判记录类型** —— 不是"这一列是空列"。
+      2026-10-05 实跑复核 (r=600"/300 行, 同一条语句换天区): 非空行数
+      (286.1,15.7)=**128**、 (180.0,30.0)=**0**、 (10.68,41.27)=**0**。
+      旧结论是**在 (180.0,30.0) 单点测得的局部结论被当成了全局属性**;
+      三个采样点里两个恰好为 0, 所以它在多数天区"看起来对", 这正是它危险的原因。
+      **仍然成立的部分** (勿一并撤回): (a) 精准下载 (in 约束) 在 ps1 恒 0 行,
+      由 hook empty_precise_result 拦截 ask (设计内, 不是 bug) —— 那是**下载路径**
+      的结论, 不是这一列的属性; (b) 列名前缀规律因星表而异 (ps1 带前缀,
+      stripe82 裸列名 calibstars_id 且值非空 CALIBSTARS_*), from_row 的 ID 别名表
+      漏 calibstars_id 曾导致 stripe82 下载丢 ID (已修+回归)。
+      教训: "每张表都有 {catalog}_source_id" 只是 CATALOG_COLUMNS 的本地口径,
+      线上列名与值必须逐星表实测; 更要紧的是 —— **推广前先问"这个结论是在几个
+      采样点上测的"**, 单点结论不得写成全局属性。
+    anchor: "references/data-formats.md §5c (SSOT) · temp/U1-live-ps1-recordtype.txt (2026-10-05 三天区实跑) · temp/diag_cols.py; temp/live_precise_results.json (原结论的旧证据)"
+    tags: [live-verified, precise-download, schema-drift, retracted, position-dependent]
+
+  - id: L-precise-constraint-object-type
+    title: "live 抓: 约束 dict 传入 downloader 路径 AttributeError"
+    lesson: >
+      精准下载首版把 in 约束构造成 dict ({"name","constraint","value"}) 传给
+      downloader.download_by_constraints, 但 client._build_form 直接取
+      c.name/c.constraint 属性 (protocol._constraint_value 的 dict 兼容只覆盖
+      build_query_form 一层)。live 一跑就 AttributeError。修复: 传
+      ColumnConstraint 对象; 单测钉死"约束对象类型 + name/constraint 值"。
+      教训: 同一数据在协议层有两个消费形态 (dict/对象), 跨层传参必须按最严格
+      消费方的类型构造; 类型兼容注释要写清覆盖到哪一层。
+    anchor: "src/download_precise.py::_in_constraint"
+    tags: [live-verified, type-safety, regression]
+
+  - id: L-download-parallel-filename-collision
+    title: "并行下载自动同名互相覆盖 (live 实证, 已修)"
+    lesson: >
+      live 冒烟: 两个并行 RegionJob (同星表同格式不同天区) 的
+      downloader 自动文件名都是 best_ps1_c2.csv (只按 catalog+约束数+格式生成),
+      后完成的任务 os.replace 覆盖前一个。修复: DownloadManager 在未指定
+      output_file 时按 (星表,ra,dec,半径,格式) 生成确定性唯一名。教训:
+      "自动命名"在并行场景必须含任务区分维度; 单 sequential 使用看不出来,
+      并行/live 才会暴露 — 新能力必须过一遍并行+live 双验证。
+    anchor: "src/download_manager.py::_run_region"
+    tags: [download, parallel, live-verified, regression]
+
+  - id: L-download-hook-exception-taxonomy
+    title: "hook 分级: 非网络异常不得包装成 network ask (测试抓到)"
+    lesson: >
+      download_hooks.run_network 初版把任何异常 (含 ValueError 等编程错误)
+      都归入 network_exhausted 拦截并生成 ask — 单测 test_non_retryable_
+      raises_immediately 抓到。修复: 仅网络类 (ConnectionError/Timeout/
+      429/5xx) 重试后拦截, 其余原样抛出。教训: 分级拦截的"类别判定"必须
+      有单测钉死, 否则 ask 泛滥会让用户对所有错误做决策, 稀释 ask 的信号价值。
+    anchor: "src/download_hooks.py::run_network"
+    tags: [hooks, taxonomy, regression]
+
+  - id: L-progress-bar-gbk-fallback
+    title: "Windows GBK 控制台渲染块字符崩 (进度条 ASCII 回退)"
+    lesson: >
+      render_text_bar 初版用 Unicode 块字符 (█░), 在 Windows GBK 控制台
+      打印抛 UnicodeEncodeError (冒烟脚本实测崩）。修复: _bar_chars() 按
+      sys.stdout.encoding 探测, 不支持则回退 #/-。教训: 任何面向 CLI 的
+      文本渲染必须过一遍"最窄编码控制台"; 回退比强制 UTF-8 输出更稳。
+    anchor: "src/download_progress.py::_bar_chars"
+    tags: [cli, windows, encoding, regression]
+
+  - id: L-live-hang-isolate-before-conclude
+    title: "live 冒烟假挂: 先隔离再下结论 (并行任务 20s 无进度)"
+    lesson: >
+      后台下载 live 冒烟首跑: 两并行任务 20s 0 页, 疑似管理器
+      死锁。隔离步骤: 直接调用 download_region (2.1s 完成) -> 单任务管理器
+      (1.6s 完成) -> 两并行管理器 (2.3s 完成) — 全部正常, 首跑是服务端瞬时
+      慢。教训: live 异常先逐层隔离 (裸调用->单线程->多线程) 再定位, 不要
+      直接猜"并发死锁"; 本次三个隔离脚本留在 temp/ 可复跑。
+    anchor: "temp/debug_parallel.py"
+    tags: [live-verified, debugging, concurrency]
+
+  - id: L-reference-layering-usage-vs-citations
+    title: "references/ 只放智能体使用向内容, 论文引文下沉 rag/knowledge/citations.yaml"
+    lesson: >
+      按用户指示重组知识分层: references/ = 智能体怎么用 skill
+      (端点/表单/交互/协议/live 状态), rag/knowledge/ = 结构化规则与论文引文。
+      站点端点与交互全图新增 references/site-endpoints-and-interactions.md
+      (实机浏览器深潜取证); 11 条论文引文 (9 verified + 2 unverified) 全部移入
+      rag/knowledge/citations.yaml, references 各处只留 short-id 指针。
+      教训: 文档分层先问"谁消费" — 智能体执行用 references, 引文/规则检索用
+      rag; 混放会让引文审查与使用文档互相污染。
+    anchor: "references/site-endpoints-and-interactions.md"
+    tags: [docs, layering, citations]
+
+  - id: L-dbgrid-endpoint-hangs
+    title: "站点结果页 dbgrid 数据口对匿名会话挂起 (GET 分页才是权威取数路径)"
+    lesson: >
+      实机浏览器深潜: 结果页 easyui datagrid 的
+      POST /sqlid/{id}?output.fmt=dbgrid (body page/rows/sort/order) 在匿名
+      Chromium 会话中 >75s 无响应 (含强制 reload 仍无响应事件); 同参 requests
+      快速返回 {"error":"Internal Server Error"}。而 GET /sqlid/{id}?output.fmt=csv
+      分页与 getcount 全部正常。教训: (a) 站点自身网格数据通道当前不可作为数据源,
+      本 skill 的两阶段 GET 设计是对的路; (b) "浏览器里挂着" 与 "requests 报错"
+      是同一服务端缺陷的两种表现, 记录时都要写; (c) 复测转运后应更新
+      site-endpoints-and-interactions.md §6 快照。
+    anchor: "temp/site_dive/run3_requests.json"
+    tags: [live-verified, site-defect, dbgrid]
+
+  - id: L-live-pos-radius-arcsec
+    title: "pos.radius 单位是角秒不是度 (表单页实证, 指南曾写错)"
+    lesson: >
+      全链路联通测试: 以 pos.radius=0.05 (按度理解=3′) POST /ps1/q
+      返回 sqlid 但 total=0; 改为 180 (角秒) 后 total=1870。抓取 /ps1/f 表单页
+      实证输入框标注 `radius <input name="pos.radius"> arcsec`, proximity
+      文本区提示 `ra,dec[,radius_in_arcsec]` — 单位为角秒。best-database-guide.md
+      字段表原写「度/度/度」是错的 (传度得 0 行或 360 倍半径)。教训: 表单字段
+      单位必须以表单页 input 旁标注为权威, 文档推断会错; protocol 层传 arcsec
+      的代码路径本就正确, 是文档漂移。
+    anchor: "temp/live_connectivity_results.json::post_q_cone_html"
+    tags: [protocol, live-verified, units, docs-drift]
+
+  - id: L-live-fits-votable-export-bugs
+    title: "只有 live 才暴露的落盘缺陷: fits 无分支 + votable 列类型按名猜"
+    lesson: >
+      PYBEST_RUN_LIVE=1 test/live 首跑 2 failed: (1) _save_result 对 fmt=fits
+      无任何写入分支 -> tmppath 从未创建 -> os.replace FileNotFoundError (离线
+      mock 测试从不覆盖 fits 路径所以没抓到); (2) votable dtype 规则
+      `col in ("ra","dec") or endswith("mag")` 漏判带表前缀的实测列名
+      (ps1_ra/ps1_dec 被判 char -> astropy 解析为字符串)。修复: fits 按 guide
+      口径本地转换 BinTableHDU; votable/FITS 列类型改按整列取值推断
+      (_column_is_numeric)。教训: 落盘多态分支必须每个 fmt 都有至少一个
+      (可 mock 的) 测试; 列类型不能按列名猜, 实测列名带表前缀。
+    anchor: "src/pybest.py::_save_result"
+    tags: [export, live-verified, regression]
+
+  - id: L-docs-list-vs-queryable-reality
+    title: "文档页列出的星表不一定可查询 (SkyMapper DR4 实证)"
+    lesson: >
+      官网 catalog 文档页 Well-Calibrated 表列 SkyMapper DR4 (34G), 但
+      GET /skymapper_dr4/f 返回 {"error":"Not Found"} 软 404, /calib 分组页
+      只有 7 张表无 skymapper。教训: 该站软 404 惯例 (200 + error body) 意味着
+      「文档存在 ≠ 端点存在」; 任何文档页新出现的星表/端点, 接入前必须先探测
+      /f 或 /q 路由再写入可查询清单。
+    anchor: "references/photometric-systems.md::6"
+    tags: [docs-drift, soft-404, catalog]
+
+  - id: L-crossref-upgrade-citations
+    title: "官网文献页 + Crossref 实核把 unverified-source 升级为 9 条 verified DOI"
+    lesson: >
+      官网 help 页 Citation 段提供 Huang et al. (2024, ApJS, 271, 13) 完整
+      BibTeX (DOI 10.3847/1538-4365/ad18b1), catalog 文档页提供 8 个
+      Well-Calibrated 表文献; 逐条 Crossref REST 核验后 9/9 verified (含官网页
+      漏写期刊名的 ApJS 259,26 与页码 L24 补全)。教训: 外部服务型 skill 的
+      「无 DOI」状态应定期用官网文档页 + Crossref 复审, 不要永久停留在
+      unverified-source; 主引用 (Xiao 2025 submitted) 仍无 DOI 须保持标注。
+    anchor: "references/ALGORITHM-SPEC.md::5"
+    tags: [citation, crossref, verified]
+
+  - id: L-tap-facade-default
+    title: "BestSkillClient 默认端点曾与 BestClient 不一致"
+    lesson: >
+      核心 REST 默认 NADC (BEST_BASE_URL), 而 BestSkillClient 历史默认清华
+      TAP 门面; Phase 3 以 DEFAULT_TAP_URL 显式区分并加 tap_url 属性别名,
+      避免"同一 client 两个端点"的隐式漂移。
+    anchor: "src/core/__init__.py::DEFAULT_TAP_URL"
+    tags: [endpoints, compat]
+
+  - id: L-live-protocol-form-verified
+    title: "协议层表单键集实网验证通过 (Q-01 修复的活服务器证据)"
+    lesson: >
+      Phase 8 受控取样 (ra=180/dec=30/r=60″, ps1, max 3 行): protocol.build_query_form
+      生成的 pos.type=cone + pos.racenter/deccenter/radius + showcol + output.fmt=html
+      表单被活服务器接受, 两阶段协议返回 sqlid=s3878; 响应 CSV 含表头行且带
+      inputobjs_* 邻近列 (锥搜服务端生效的证据)。旧 box-between .constraint 键集
+      与服务端不相交的缺陷 (锥形检索结构性失效) 确认消除。
+    anchor: "temp/live_sampling_results.json::V-2-header"
+    tags: [protocol, live-verified, Q-01]
+
+  - id: L-live-header-and-pagination
+    title: "实网证实 CSV 带表头 + 分页语义 (Q-02/Q-05 的实证锚)"
+    lesson: >
+      同一 sqlid 分页取样 (rows=2): page1/page2 各 3 行 = 1 表头 + 2 数据行 —
+      (a) 表头行确实存在, parse_csv_rows 的 has_header 动态判定有实证;
+      (b) rows/page 分页参数语义正确, 页大小即行数; (c) 幻影源 (表头行进结果)
+      的根因确认是旧位置分割无表头跳过。
+    anchor: "temp/live_sampling_results.json::V-3-pagination"
+    tags: [protocol, live-verified, Q-02, Q-05]
+
+  - id: L-oauth-endpoint-reachable
+    title: "NADC OAuth 端点实网可达 (首次连接被重置为瞬时故障)"
+    lesson: >
+      Phase 8 V-6: oauth.china-vo.org 首次探测 ConnectionReset (瞬时), 重试即
+      HTTP 200。教训: 探测类失败应一次重试再记 baseline_debt, 不直接把瞬时故障
+      当不可达。真实授权流仍需 client_id 审批 (blocked-on-approval)。
+    anchor: "temp/live_sampling_results.json::V-6-oauth"
+    tags: [oauth, live-verified, resilience]
+
+  - id: L-p0-fixes-live-verification
+    title: "P0 三项修复的 live 判定方法 (软404/真实计数/批量匹配)"
+    lesson: >
+      (a) 判定性实验设计 — filterRules 是否冗余不能靠"行数相同"
+      (无 ORDER BY 时同一会话两次 GET 行序都不同), 要用 razor-thin 约束
+      (15.0–15.001) 看带/不带是否都 0 行, 结论: phase-1 键已约束会话,
+      filterRules 冗余已移除; (b) getcount 在约束会话稳定 (770/156676 两级
+      实测), truncated 语义成立; (c) proximity 压力到 N=1000 无长度限制。
+      教训: "A/B 结果不一致"先排查非确定性 (排序/抽样) 再下功能结论;
+      判定性实验要比边界行为, 不是比数量。
+    anchor: "temp/live_filterrules_decisive_results.json; temp/live_getcount_results.json"
+    tags: [live-verified, experiment-design, p0]
+
+  - id: L-sentinel-and-metadata-column-pollution
+    title: "哨兵值与匹配元数据列污染星等 (live 抓到, 已修)"
+    lesson: >
+      live: ps1 空测光列回 ≈-1000 哨兵 (gpsf=-1004.07, err=-999.0),
+      proximity 响应的 inputobjs_* 元数据列又以波段字母 i 开头 — 旧 from_row
+      把两者都吞进 magnitudes。修复: from_row 跳过元数据列 + 哨兵阈值 -999,
+      TAP 序列化共用同一常量。教训: 站点数据进入强类型模型前, 先盘点该站点的
+      "空值编码" (哨兵/空串/NULL 拼写) 与"非数据列" (元数据/行号), 它们往往
+      共享同一批字符特征, 单测要用真实响应行做夹具。
+    anchor: "src/models/__init__.py::from_row; temp/diag_proximity_row.py"
+    tags: [live-verified, data-semantics, regression]
+
+  - id: L-test-patch-lifecycle
+    title: "测试补丁生命周期: patch 退出会还原 ToolBox 包装的 session.request"
+    lesson: >
+      ai_tools 测试初版在 with patch.object(...) 块内构造 ToolBox、块外调用 —
+      with 退出把 session.request 还原成真实方法 (ToolBox 的计数器被覆盖),
+      后续调用静默打到真实站点 (约 15 个真实请求, 特征: 返回真实 sqlid)。
+      修复: patcher.start() + autouse fixture 统一 stop。教训: "包装型"组件
+      (计数器/重试器/钩子) 的测试必须让补丁活过一次完整调用周期; 发现测试
+      打了真实网络时, 先查补丁作用域再查组件。
+    anchor: "test/unit/ai_tools/test_ai_tools.py::_stop_patchers"
+    tags: [testing, regression, network-safety]
+
+  - id: L-tap-asset-migration
+    title: "IVOA TAP/OAuth 资产被扁平化重组误删 — 迁回忆审"
+    lesson: >
+      实现的 pybest/tap/ + oauth.py 随打包目录在 6f00efeb (Phase 8
+      扁平化) 从 best 分支删除, 只剩 test/upstream 的 skip 守卫, 用户两轮后
+      回头找不到"以前做过的 IVOA 接口与鉴权"。已迁回 src/tap/ (传输层 stdlib
+      重写, 零新依赖) 并在 references/site-endpoints-and-interactions.md §8
+      留迁移锚点。教训: 结构清理 (删目录/移动) 前必须确认被删能力是否已被新
+      位置覆盖, 并在 references 记录"旧位置→新位置"映射; git 历史可取回不等于
+      可发现。
+    anchor: "references/site-endpoints-and-interactions.md §8; src/tap/__init__.py"
+    tags: [migration, governance, tap, oauth]
+
+  - id: L-static-column-tables-drift
+    title: "静态列白名单与线上漂移: 幻影列静默丢列, 漏登记 fail-closed 拒列 (2026-09-29)"
+    lesson: >
+      线上端点审计 (temp/audit_column_drift.py, 12 星表逐个对账) 发现两类
+      静默漂移: (a) smss_dr4/uss_dr1 已被站点按波段重构 — 旧登记的
+      source_id/psf_mag (smss) 与 source_id/ra/dec/psf_mag (uss) 全部下线,
+      服务端**静默丢弃**未知 showcol 键: smss 默认投影只剩 ra/dec, uss
+      响应甚至退回无表头全表 (parse 出 90 个 metadata_* 幻影列);
+      (b) gaia_dr3_18 (27/155), scr_galah/scr_lamost (33/137), xpsp (11/287)
+      只登记了线上可选列的一小部分, qualify_column fail-closed 让其余列
+      **不可请求**。已按线上全量重写 CATALOG_COLUMNS/CATALOG_FORM_TABLES 并
+      加 wire-fact 门禁 (test_static_columns_match_the_live_showcol_counts)。
+      教训: 静态镜像外部服务的 schema 时必须配"线上列数门禁", 否则两类漂移
+      都不抛异常 — 一类丢数据, 一类丢功能, 只有逐星表对账能发现。
+    anchor: "temp/audit_column_drift_results.json; temp/audit_acceptance_results.json"
+    tags: [live-verified, schema-drift, gate]
+
+  - id: L-from-row-form-table-prefix
+    title: "xpsp/dr3xpcorr 响应前缀是表单表名不是星表名 — from_row 只剥星表前缀致整列丢失"
+    lesson: >
+      xpsp/dr3xpcorr 的位置与 Gaia 测光列在共享表单表
+      gaiaxp_photinfo_replenish, 响应列名是 gaiaxp_photinfo_replenish_ra /
+      _g_mag (而非 xpsp_ra / xpsp_g_mag)。from_row 只剥 {catalog}_ 前缀,
+      剥不中 → ra/dec/source_id/magnitudes 全部为空, 锥搜"成功"但
+      BestSource 是空壳 (live 验收 bands=[] 抓到时已存在多轮)。修复:
+      前缀剥离集 = 星表名 ∪ 该星表全部表单表名 (长前缀优先, 防
+      jpas_u/jpas_ujava 误剥)。教训: "响应列名 = {catalog}_{col}" 只是多数
+      星表的惯例, 多表星表的响应前缀是**表名**; 行模型的前缀剥离必须与
+      catalog_tables 同源, 不能只认星表名。
+    anchor: "src/models/__init__.py::from_row; temp/audit_acceptance_results.json"
+    tags: [live-verified, models, regression, schema-drift]
+
+  - id: L-uss-bare-response-naming
+    title: "uss_dr1 的 CSV 响应是裸名 (datagrid 才带前缀), sort 两种拼写都收"
+    lesson: >
+      uss_dr1 按波段重构后 (12 波段 × ra/dec/mag/flag/class_star), CSV
+      响应列名是裸名 ra_u/u_pstotal (同站点其他星表与它自己的 datagrid 都用
+      {catalog}_ 前缀)。两个后果: (a) from_row 剥前缀落空后裸名直接命中
+      CATALOG_MAG_COLUMNS (键即裸名), 星等正常落 magnitudes, 但没有规范化
+      ra/dec (ra_u 不是 ra) — 这是诚实的, 该星表本就没有单一位置;
+      (b) /sqlid 的 sort 参数对裸名与带前缀名**都接受** (asc/desc 反转实测),
+      静态表沿用带前缀拼写与站点 datagrid 一致。教训: 命名惯例要按端点
+      分别实测 (CSV 序列化与 datagrid 字段可以不一致), 别用一个星表的
+      规律推全部。
+    anchor: "temp/audit_uss_sort_naming.py; temp/audit_uss_result_page.py"
+    tags: [live-verified, naming, sort]
+
+  - id: L-sort-phantom-column-ignored
+    title: "幻影排序列被服务端静默忽略 (asc/desc 不反转) — P0-1 定序分页对 smss/uss 曾失效"
+    lesson: >
+      P0-1 分页定序注入的排序列若已不在线上 (smss_dr4_source_id /
+      uss_dr1_source_id 随星表重构下线), 服务端不报错、不排序 —
+      asc/desc 行序完全相同 (判定方法: 同页 asc vs desc 首行比较)。
+      此时 page=N 偏移翻页退回无序, 静默重复/丢行风险回归。
+      修复: 排序列改指向线上真实列 (smss_dr4_ra / uss_dr1_ra_u)。
+      另注: ps1 的注入排序列 ps1_source_id 在**结果集全为点源记录时**整列为空,
+      ORDER BY 空列同样空转 (2026-10-05 订正: 该列**位置相关**而非恒空 ——
+      天区 (286.1,15.7) 实测 128/300 非空, 见
+      L-precise-ps1-source-id-empty 与 references/data-formats.md §5c),
+      但 2026-09-29 复测服务端自然序当前稳定
+      (同页 3 次一致, 3 页 0 重复), 保留站点 datagrid 同款 sort 值作防御。
+      教训: "注入了 sort" ≠ "排序生效", 验收必须用 asc/desc 反转证明;
+      排序列必须与列清单同源守门 (test_protocol 已有
+      pagination_sort_key ∈ CATALOG_COLUMNS 断言)。
+    anchor: "temp/audit_sort_applied.py; temp/audit_ps1_pagination_stability.py"
+    tags: [live-verified, pagination, sort, regression]
+
+  - id: L-site-behavior-drift-recheck
+    title: "live 快照会过期: dbgrid 从挂起变软错误, email-exists 端点已下线 (2026-09-29)"
+    lesson: >
+      复测 2026-07 的深潜结论: (a) dbgrid 数据口匿名 POST 从 ">75s 挂起"
+      变为 123ms 快速返回 {"error":"Internal Server Error"} (软 404 家族),
+      结论方向不变 (仍不可用), 但现象描述必须更新; (b) /user/email-exists
+      从 script.js 证言的账号端点变为软 404 (疑似下线); (c) calib/ 前缀
+      只对 calib 组成员有效 (std/other 组成员软 404), 旧文档"两种前缀均
+      接受"过宽。教训: references 的 live 状态快照要标复测日期,
+      "端点行为"与"端点存在性"都要定期重采 — 站点在演进, 快照会过期。
+    anchor: "temp/audit_dbgrid_recheck_results.json; temp/audit_endpoints_live_results.json"
+    tags: [live-verified, docs-drift, recheck]
+
+  - id: L-interpreter-third-party-boundary
+    title: "本机双解释器边界: 跑测试/live 探针必须用带 third-party 的解释器"
+    lesson: >
+      本机存在两个 Python: 系统解释器 (G:/python.data/python.exe) 已装
+      requests/pyyaml/pytest — 全量测试、live 探针、本仓全部脚本都用它;
+      DSH managed Python 无任何第三方包 — import requests 即失败。
+      另: astropy/pyvo 未装 → FITS 导出与 src/tap/client.py 远端 TAP
+      通道走惰性降级 (不阻断主链), 相关用例 skip。教训: 探针/测试脚本
+      开头固定解释器路径或在文档写明边界; 跨会话交接时"换个 python 就跑不了"
+      是最常见的时间陷阱。
+    anchor: "temp/selfbuilt_python_audit_2026-09-27.md"
+    tags: [environment, boundary, live-verified]
+
+  - id: L-doc-claims-vs-code-triggerpoints
+    title: "文档声称的行为必须 grep 得到触发点 (2026-09-29 references 严谨性审计)"
+    lesson: >
+      对 references/ 12 份文件逐条对账代码, 挖出 3 条 P1: download-playbook
+      宣称 4 类 severe hook (checksum/disk/session/pagination) 与 fallback
+      FB-5 的"sha256 重读重试"协议 — src/ 里 SEVERE_* 常量与 option 模板
+      **有定义无触发** (grep `.severe(` 生产调用点只有精准下载两类), 校验和
+      期望值生产零传入 (核对实际不发生); 另 tools.schema.json 声明
+      page_size maximum=10000 而全链无校验 (越界值原样进 URL)。
+      这与 DEBUG-ISSUES 轮"声称的控制未接线"是同一规律, 只是发生在**文档侧**。
+      方法: (a) 文档声称某行为 -> grep 触发点/inspect 符号双口径核实;
+      (b) schema/契约声明的边界 -> 确认代码有对应断言; (c) 修法二选一 —
+      改写文档为实况, 或接线代码让文档变真 (本轮两者都做了, 各配回归)。
+      衍生: 转载数字 (如"637 MB") 必须能追到 evidence 文件, 否则降级为定性表述。
+    anchor: "temp/audit_acceptance_results.json; test/unit/meta/test_module_paths.py"
+    tags: [docs-rigor, audit, regression, gate]
+
+  - id: L-token-expiry-no-refresh-recovery
+    title: "无 refresh_token 的过期恢复: 恢复路径必须是显式单点, 不能靠静默降级兜底"
+    lesson: >
+      NADC 通行证 OAuth 官方不签发 refresh_token, token 典型 3600 s 过期 —
+      长跑任务 (>1h) 的身份必然中途失效。旧形态: provenance 侧过期即"身份块
+      整块省略" (匿名可查场景的正确降级), 但没有任何路径告诉调用方"该重新
+      授权了", 无头调用方也拿不到任何信号 — 401/空身份晚一个任务周期才暴露。
+      修复形态: ensure_access_token(store, reauth) 作为唯一恢复单点 —
+      有交互通道注入 reauth 自动重走授权并落缓存; 无通道抛 TokenExpiredError
+      (消息带确切恢复命令) 让批处理 rc=1。CLI 侧 oauth status 三态
+      (valid/expired/missing) + oauth token 无头管道面。教训: 对"会过期的
+      凭据", 恢复路径要先于使用路径设计 — "检测→恢复→使用"必须收敛在一个
+      调用点, 且失败时必须带可执行的恢复命令, 而不是把过期当正常状态吞掉。
+    anchor: "src/auth/nadc_oauth.py::ensure_access_token; ops/astro_best_cli.py::cmd_oauth"
+    tags: [auth, token-lifecycle, recovery, regression]
+
+  - id: L-windows-posix-permission-degradation-dpapi
+    title: "0600 在 Windows 是假纪律: 权限位退化处用 DPAPI, 别用记录了 chmod 调用自我安慰"
+    lesson: >
+      os.chmod(path, 0o600) 在 Windows 上只兑现只读标志, st_mode 恒报 0o666 —
+      "token 缓存 0600" 的纪律在 Windows 等于无保护, 而同机其他用户可原样读走
+      Bearer 凭据。旧回归测试在 Windows 上只能断言"chmod 被以 0600 调用过"
+      (记录调用 ≠ 保护落地), 另一个 POSIX 权限位用例直接 skip — 等于"无保护
+      也无门禁"。修复形态: 落盘格式版本化 (v2 信封) + 平台门禁静态保护 —
+      Windows 走 crypt32 CryptProtectData (CURRENT_USER, ctypes 零依赖),
+      POSIX 维持 0600; DPAPI 失败告警回退明文信封 (可用性优先但留痕),
+      v1 旧缓存兼容读取。本机实机验证 (真加密/真解密/篡改拒解密)。
+      教训: (a) 安全纪律要按平台分别取证 — POSIX 成立的断言在 Windows 可能
+      整个落空; (b) monkeypatch 记录调用只能当最小断言, 不能当保护证据;
+      (c) 凭据文件加静态保护时格式要带版本号, 否则旧缓存读不回来。
+    anchor: "src/auth/nadc_oauth.py::_protect_record; test/unit/scripts/test_nadc_oauth_permissions.py"
+    tags: [auth, windows, security, dpapi, regression]
+
+  - id: L-changelog-prepend-above-header
+    title: "CHANGELOG 条目被 prepend 到 `# Changelog` 标题之上 (fe47788a) — 追加位在标题行附近时要核验落点"
+    lesson: >
+      2026-09-30 清理"剩余问题"时发现: fe47788a 新增的 Phase 5 条目整块插在
+      `# Changelog` 标题**之上**, 且尾部段落残损 (不可重构的乱码片段, 引用一个
+      仓内不存在的产物名)。同类风险: 向"标题 + 倒序条目"结构的文件追加内容时,
+      若锚点选错 (选到文件首行而非标题后的第一个条目), 新内容就会跑到标题外面;
+      生成长尾段落还可能写乱。修法: 按时间倒序归位 + 只保留可核实事实 (乱码
+      尾段删除, 过期告诫按实况改写 — 该条目"monorepo 生成器仍产旧名"的告诫
+      经核实已过期)。教训: (a) 追加文档条目后肉眼核验"标题仍在最前、条目在
+      标题后"; (b) 结构类文档值得补一条轻量机器守门 (存在性/顺序);
+      (c) 残损文本按"可核实事实重写"处理, 不猜原意。
+    anchor: "CHANGELOG.md; git show fe47788a -- astro-best/CHANGELOG.md"
+    tags: [docs, changelog, hygiene, regression]

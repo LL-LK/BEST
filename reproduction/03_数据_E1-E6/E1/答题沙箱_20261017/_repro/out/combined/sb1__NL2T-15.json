@@ -1,0 +1,34 @@
+{
+  "task_id": "NL2T-15",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "gaia_dr3_18",
+        "columns": [
+          "gaia_dr3_18_ra",
+          "gaia_dr3_18_dec",
+          "gaia_dr3_18_source_id",
+          "gaia_dr3_18_phot_g_mean_mag",
+          "gaia_dr3_18_phot_bp_mean_mag",
+          "gaia_dr3_18_phot_rp_mean_mag"
+        ]
+      }
+    }
+  ],
+  "answer_text": "中心 (180.0, 30.0)、半径 60″、查 Gaia DR3 的 G 星等，星表用 **`gaia_dr3_18`**。\n\n三个列名口径（这里最容易踩坑）：\n\n1. **表 id 是 `gaia_dr3_18`，不是 `gaia_dr3`。** 线上没有 `gaia_dr3` 这张表，`gaia_dr3/f`、`gaia_dr3/q` 都是软 404，列前缀同样是 `gaia_dr3_18_`。\n2. **G 星等列是 `gaia_dr3_18_phot_g_mean_mag`**（不是 `gmag`、也不是 `phot_g_mag`）。同一张表里还有 `gaia_dr3_18_phot_bp_mean_mag` / `gaia_dr3_18_phot_rp_mean_mag`，我一起投出来了 —— 只有 G 一个波段做不了颜色，BP/RP 基本白送。\n3. **口径要说清**：这张表是\"Gaia DR3 精测定标\"，**身份与天体测量量来自 Gaia，恒星参数来自 Gaia 流水线，只有测光是经 BEST 重定标的**。所以这列 G 星等不能笼统说成\"BEST 测的\"。\n\n我用 `columns` 做了投影（只取这 6 列），没取全 155 列 —— 60″ 锥里源不少，全列很吃带宽，而你要的就是 G 星等。\n\n一个提醒：G 是**白光宽带**，和 Johnson V、SDSS r 都不是一个系统，跨表比较前要先做系统变换，别直接和 `ps1_rpsf` 相减。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "repro",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb1",
+  "answered_at": "2026-10-20T05:20:49.987279Z"
+}

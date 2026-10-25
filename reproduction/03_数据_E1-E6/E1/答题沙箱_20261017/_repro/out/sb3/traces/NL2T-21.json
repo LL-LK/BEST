@@ -1,0 +1,38 @@
+{
+  "task_id": "NL2T-21",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_rpsf",
+          "ps1_rpsf_err",
+          "ps1_gpsf",
+          "ps1_ipsf",
+          "ps1_class_star"
+        ],
+        "sort": "ps1.rpsf",
+        "order": "asc",
+        "max_rows": 10
+      }
+    }
+  ],
+  "answer_text": "\"最亮\"在星等里是**数值最小**，所以按 r 波段升序排、取头部：\n\n- 排序列 **`sort=\"ps1.rpsf\"`**（带表前缀的 PSF 星等列，不是 `rpsf_err`、也不是 `r_corr`）\n- 方向 **`order=\"asc\"`**（升序 = 最亮在前；写 desc 会拿到最暗的）\n- `max_rows=10` 而不是 1——原因见下面第 2 点\n\n**三个必须说的判读点：**\n\n1. **`sort` 和 `order` 必须成对出现。** 服务端把两者放在同一个分支里：只发 `order` 不发 `sort`，站点不报错、排序静默不生效，分页退回无序；只发 `sort` 不发 `order` 则方向按默认 asc。所以两者我一起给。\n2. **`max_rows=1` 会踩哨兵。** 无 r 波段测量的源，`ps1_rpsf` 回的是 ≈ **-1000 的哨兵**（-999/-1004 一类），升序排会把这些\"假最亮\"顶到最前面。所以我取前 10 行，剔掉 `rpsf < -100` 与 `rpsf_err` 异常的，再报真正的第一名。\n3. **这一带最亮的很可能是星系，不是恒星。** 这是 M31 方向外的普通天区（RA 180/Dec 30），但仍建议看 `ps1_class_star`：低于 0.8 基本是星系或混合源。如果你要的是\"最亮的**恒星**\"，说一声，我加 `class_star` 约束重排——只按 rpsf 排出来的冠军常常是延展源。\n\n另外，`ps1` 只有 PSF 星等（`rpsf`），没有孔径星等；如果你要的是孔径测光下的最亮，得换 `splus_dr4`（`r_pstotal`）或 `smss_dr4`（`rpsf` 六波段）这类表。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb3-r3",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb3",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb3",
+  "answered_at": "2026-10-20T05:41:59.887118Z"
+}

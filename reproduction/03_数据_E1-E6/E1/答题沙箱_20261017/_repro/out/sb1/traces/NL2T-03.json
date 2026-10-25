@@ -1,0 +1,23 @@
+{
+  "task_id": "NL2T-03",
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "M31"
+      }
+    }
+  ],
+  "answer_text": "M31（仙女座星系，NGC 224）的 ICRS 坐标：\n\n- **RA = 10.68470833°**（约 00h42m44.3s）\n- **Dec = +41.26875°**（约 +41°16′07.5″）\n\n坐标由 BEST 的 `nss/solve` 端点代理 CDS Sesame 解算得到，单位是度，可直接作为 `cone_search` 的 `ra` / `dec` 入参。\n\n一个使用提醒：M31 是**星系，属扩展源**，角直径约 3°（核心约 1°）。用它做后续检索时半径要按扩展尺度取 —— 60″ 只能覆盖核区几十角秒的范围，想覆盖整个星系盘需要 1° 量级（`radius_arcsec` 上限 18000″，即 5°，够用）。另外该天区 `ps1` 有覆盖，`stripe82` / `splus_dr4` / `smss_dr4` 不在其 survey 天区内，锥搜会回 0 行（属正常覆盖问题，不是故障）。\n\n告诉我你要的半径和星表，我直接把这个坐标提交检索。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb1",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb1",
+  "answered_at": "2026-10-20T05:20:20.376288Z"
+}

@@ -1,0 +1,38 @@
+# 本模板的消费者: 无代码消费者; 仅由 evals TemplatesAuditor 审计消费
+# (逐份读取扫版本号铁律, 不解析内容语义; 没有任何生产代码或测试读取本文件)。
+#
+# H2-02 (2026-10-05): 删掉了原 summary 段里"已按五段状态流程 … 完成"那句。
+# 那五个状态名在 contracts/pipeline-stage.contract.yaml 里只是**设计意图,
+# 代码零实现** (src/ ops/ evals/ 的 .py 零命中), 模板替一段从未跑过的流程
+# 背书等于伪造完成声明。真实编排面是 src/core/pipeline.py 的
+# "配置 -> BestSkillClient -> cone_search", 没有任何状态迁移可引用。
+# 本文件刻意不复述那几个状态名, 也不复述"五段状态流程"这个说法: 守门测试
+# (test_rag_knowledge_vs_code.py::TestNoFabricatedStageClaims) 全文扫描,
+# 复述即红 (含注释)。
+skill: astro-best
+output_schema: BestResultSet
+report:
+  title: "{{task.title}}"
+  skill_rank_meta:
+    strength: S2          # 机器字段与 registry/SKILL-INDEX/强度矩阵一致 (S2 Specialist)
+    pipeline_stage: "collection"
+    role: data-source     # BEST 数据源主理方
+  sections:
+    - id: summary
+      body: |
+        astro-best 数据面 (pipeline_stage: collection) 本次运行结果如下。
+        - data = {{output.data}}
+        - status = {{output.status}}
+    - id: quality_gates
+      body: |
+        gate http_status: {{gates.http_status.passed}} (阈值 == 200 count)
+        gate checksum_match: {{gates.checksum_match.passed}} (阈值 == True bool)
+    - id: provenance
+      body: |
+        data_hash: {{envelope.data_hash}}
+        session_id: {{envelope.provenance.session_id}}
+
+# ---
+# generated_by: scripts/refactor/materialize_templates.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

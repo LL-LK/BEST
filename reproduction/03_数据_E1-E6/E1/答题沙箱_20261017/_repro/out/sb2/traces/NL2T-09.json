@@ -1,0 +1,43 @@
+{
+  "task_id": "NL2T-09",
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "Betelgeuse"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 88.7929,
+        "dec": 7.4071,
+        "radius_arcsec": 5,
+        "catalog": "scr_galah",
+        "max_rows": 100
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 88.7929,
+        "dec": 7.4071,
+        "radius_arcsec": 5,
+        "catalog": "scr_lamost",
+        "max_rows": 100
+      }
+    }
+  ],
+  "answer_text": "**先说一个必须避开的坑：BEST 里没有叫 `std` 的表。** `std` 是\"标准星\"这个**导航分组**，直接拿它去查会吃软错误（`/std/f` 返回 Internal Server Error）。它底下展开成三张成员表：`scr_galah`（标准星 × GALAH 交叉表）、`scr_lamost`（标准星 × LAMOST 交叉表）、`xpsp`（Gaia DR3 XP&SP 光谱-测光）。所以\"查标准星记录\"必须落到具体成员表 id 上。\n\n**我做的两步**：\n\n1. `resolve_name(\"Betelgeuse\")` —— 参宿四解算为 **RA = 88.7929°、Dec = +7.4071°（ICRS/J2000）**。这一步是必须的，因为标准星表**只能按位置锥搜，不能按名字检索**——站点没有\"按名字查表\"的入口，`resolve_name` 是唯一的按名查坐标通道。\n2. 用这个坐标、**5 角秒**半径，分别查 `scr_galah` 和 `scr_lamost`。半径取 5″ 是因为参宿四是点源、且这两张是交叉匹配表，5″ 足够覆盖交叉匹配的位置误差，又不会把邻近源带进来。\n\n**关于结果，有一点要提前讲清楚**：这两张是**交叉表**，只收录\"标准星目录里、且被 GALAH/LAMOST 观测过\"的源。参宿四是 M1-2 型红超巨星、亮度极高（V≈0.5 等），在 GALAH 和 LAMOST 的选源里通常会被**亮端截断**排除，所以两张表**很可能都是 0 行**——这不代表查错了，而是它不在这些巡天的样本里。0 行是正常结果，不是故障。\n\n**如果你要的其实是\"参宿四作为标准星\"这件事本身**，那更对口的是 `landolt`（Landolt 标准星表，calib 分组）。但要提醒：`landolt` 全表 45712 行摊到全天约 1 行 / 3.7 平方度，任何 0.5° 锥都大概率 0 行，而且它收录的是 Landolt 自己那套暗星标准星，参宿四这种 0 等星不在其中。要查我也可以按同一坐标试，但预期同样是空。\n\n请确认一下你要的口径是哪一种：**(a) 参宿四在这几张交叉表里的记录**（我上面已查）、**(b) Landolt 标准星表里是否有它**（我可以再发一次锥搜）、还是 **(c) 你要的是 BEST 里参宿四的测光值**——那应该查 `ps1`（g/r/i/z/y PSF 星等），我按同一坐标直接给你。",
+  "http_requests": 3,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb2-r2",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb2",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb2",
+  "answered_at": "2026-10-20T06:23:23.538723Z"
+}

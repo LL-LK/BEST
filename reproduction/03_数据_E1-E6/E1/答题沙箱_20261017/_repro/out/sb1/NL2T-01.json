@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-01",
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "BEST 目前有 **12 张可查询星表**，按站点导航分三组：\n\n- **calib（精测定标）8 张**：`ps1`（Pan-STARRS All-Sky）、`stripe82`（Well-Calibrated Stripe82）、`gaia_dr3_18`（Well-Calibrated Gaia DR3）、`jplus_dr3`（J-PLUS DR3）、`smss_dr4`（SMSS DR4）、`landolt`（Landolt 标准星）、`uss_dr1`（USS DR1）、`splus_dr4`（S-PLUS DR4）。站点分组页把 `ps1` 单列在 All-Sky 项下，所以那一页看起来只有 7 张。\n- **std（标准星）3 张**：`scr_galah`、`scr_lamost`、`xpsp`（Gaia DR3 XP&SP 光谱-测光）。\n- **other 1 张**：`dr3xpcorr`（改正后的 Gaia DR3 XP 光谱）。\n\n三个使用提醒：\n\n1. `std` / `calib` / `other` 是**导航分组，不是表**。直接把组名当星表 id 传会拿到软错误（组名自身回 Internal Server Error，带组前缀的路径回 Not Found），必须展开到成员表。\n2. **没有 `gaia_dr3` 这张表**，线上 id 带 `_18` 后缀，写成 `gaia_dr3` 会 404；旧拼写只在客户端内部被归一。\n3. 各表天区覆盖强非均匀且互不重叠：`splus_dr4` / `smss_dr4` 只覆盖南天 survey 天区，`landolt` 极稀疏（全表 4.5 万行，摊全天约 1 行 / 3.7 平方度），`jplus_dr3` 在其公认天区实测仍为 0 行（疑似站方覆盖异常）。所以\"某表查不到\"和\"该表没覆盖这里\"是两件事。\n\n要具体查哪张表的列，告诉我表名，我调 `describe_catalog` 给你列清单。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb1",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\sb1",
+  "answered_at": "2026-10-20T05:20:20.374051Z"
+}

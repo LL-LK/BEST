@@ -1,0 +1,38 @@
+# 本模板的消费者: 无代码消费者; 仅由 [已净化]审计消费
+# (逐份读取扫版本号铁律, 不解析内容语义; 没有任何生产代码或测试读取本文件)。
+# params 下的 module 值是文档性声明, 必须对齐真实权威实现位置 —— 填错会让
+# 读者按不存在的模块去查代码 (本模板此前有 6 处此类死路径, 已按 src/ 实况修正)。
+skill: astro-best
+params:  # 白盒算子超参 (占位, 值由 references/ALGORITHM-SPEC.md 校准)
+  BestAuth.module: "src.auth.session"
+  BestAuth.enabled: true
+  BestClient.module: "src.client"
+  BestClient.enabled: true
+  BestSkillClient.module: "src.core"
+  BestSkillClient.enabled: true
+  BestCrossMatch.module: "src.crossmatch"
+  BestCrossMatch.enabled: true
+  BestCrossMatchJob.module: "src.models"
+  BestCrossMatchJob.enabled: true
+  BestCrossMatchResult.module: "src.models"
+  BestCrossMatchResult.enabled: true
+  BestMultiBandPhotometry.module: "src.multiband_photometry"
+  BestMultiBandPhotometry.enabled: true
+  BestDownloader.module: "src.downloader"
+  BestDownloader.enabled: true
+  BestQuery.module: "src.query_builder"
+  BestQuery.enabled: true
+  BestQueryResult.module: "src.models"
+  BestQueryResult.enabled: true
+  AstroBestConfig.module: "src.scripts.config"
+  AstroBestConfig.enabled: true
+  AstroBestPipeline.module: "src.core.pipeline"
+  AstroBestPipeline.enabled: true
+gates:
+  http_status: {cmp: "==", value: 200}
+  checksum_match: {cmp: "==", value: True}
+
+# ---
+# generated_by: scripts/refactor/materialize_templates.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

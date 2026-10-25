@@ -1,0 +1,89 @@
+# astro-best 查询模板配置 (人读配置模板; 可消费键统一收进 defaults, Q-31)
+#
+# 本模板的消费者: src.scripts.config.AstroBestConfig.from_yaml (唯一加载
+# 入口, 只读 defaults 映射) + test/unit/meta/test_phase4_wiring.py
+# ::test_consumable_keys_inside_defaults + evals TemplatesAuditor
+# (对 defaults 键集做深度检查)。
+#
+# Q-31 修复: from_yaml 只读 defaults 映射, 原顶层 sibling 键 (tap_url/api_url/
+# timeout/quality/download/crossmatch) 全部丢失。现可消费键统一收进 defaults;
+# 其余分组键保留为文档性分组 (from_yaml 按白名单过滤并 WARN, 见 config.py)。
+#
+# H2-04 (2026-10-05) 两条硬约束, 改本文件前先读:
+#   1. defaults 里每个键必须在 AstroBestConfig 的 dataclass 字段集内。字段集
+#      白名单 = {base_url, api_token, rate_limit, max_retries, timeout,
+#      output_dir, tap_url, min_snr, max_fwhm, quality_filter};
+#      集外的键 from_yaml 只 WARN 丢弃, 用户照着改毫无效果 (旧版 9 个键就栽在
+#      这里, 已移到 unconsumed_reference 并逐条注明真实归属面)。
+#   2. defaults 的取值必须与该字段的 dataclass 缺省**逐项一致 (含类型)**。
+#      旧版 timeout 60 / rate_limit 1.0 / output_dir "./best_data" 三项漂移:
+#      按模板初始化等于限流间隔减半、超时砍半, 同一 skill 两条入口两种节流口径。
+#   守门测试: test/unit/meta/test_phase4_wiring.py::TestTemplateDefaults 逐字段
+#   对账 dataclass 缺省 —— 漂移即红, 不靠人记。
+#
+# tap_url 是历史兼容键名 (base_url 别名), 必须指向真实服务: BEST 没有
+# TAP/ADQL 端点, 也没有 /data/best/api —— 正因如此, 旧版那个指向该地址的
+# api_url 键从来就不是可配项 (见 unconsumed_reference)。
+
+defaults:
+  # 连接 (AstroBestConfig 白名单字段; tap_url 是 base_url 的别名键)
+  base_url: "https://nadc.china-vo.org/data/best"
+  tap_url: "https://nadc.china-vo.org/data/best"
+  timeout: 120
+  rate_limit: 2.0
+  max_retries: 3
+  output_dir: "best_data"
+  # 质量门控 (AstroBestConfig 白名单字段)
+  min_snr: 5.0
+  max_fwhm: 5.0
+  quality_filter: true
+  # 原先此处还有 log_level: "INFO" —— AH3-08 实测零消费方 (全仓无人读该字段,
+  # 且全仓不装 logging handler), 已随该字段一并从 dataclass 退役, 故不在 defaults。
+
+# unconsumed_reference: **当前未被 from_yaml 消费**的人读参考值 (H2-04 处置)。
+# 放在 defaults 里只会被白名单过滤 WARN 掉 (用户改了不起作用), 故移出到本段,
+# 每条注明真实归属面; 谁要把某条接成配置项, 先改 src/scripts/config.py 的
+# dataclass 字段, 再搬回 defaults。
+unconsumed_reference:
+  api_url:
+    value: "https://nadc.china-vo.org/data/best"
+    owner: >-
+      无此端点。api_url 连 dataclass 字段都不是 —— 旧注释把它算进
+      「AstroBestConfig 白名单字段」是错的。端点唯一可配键是 base_url /
+      tap_url; BEST 不提供 /data/best/api 这个路径。
+  max_records:
+    value: 1000
+    owner: >-
+      查询面参数, 非配置项: src/models/input.py 的 max_records 缺省 1000,
+      CLI 侧是 --max, 工具层是 max_rows。
+  bands:
+    value: ["g", "r", "i", "z"]
+    owner: >-
+      波段标签由星表决定 (各星表 CATALOG_MAG_COLUMNS), 无全局默认清单;
+      「clear」不是任何星表的波段标签, 透传给 protocol.magnitude_column()
+      会抛 ValueError。ps1 发布 g/r/i/z/y 五项, 此处四项是子集。
+  min_points:
+    value: 3
+    owner: >-
+      方法缺省, 非配置项: BestSkillClient.validate_multiband_photometry 的
+      min_points 形参 (默认 3)。
+  batch_size:
+    value: 5000
+    owner: >-
+      无消费方: 全仓无此配置键; 分页批大小走 page_size 调用参数。
+  resume:
+    value: true
+    owner: >-
+      无消费方: 断点续传由 .checkpoints/<job_id>.json + 调用方的 resumable
+      标志决定 (精准下载强制 resumable=True)。
+  default_radius_arcsec:
+    value: 5.0
+    owner: >-
+      调用面参数, 非配置项: protocol 层的逐行默认匹配半径 (form 的
+      pos.defaultRadius), 不读配置文件。
+  best_reference:
+    value: true
+    owner: "无消费方: 全仓无此键。"
+  confidence_threshold:
+    value: 0.7
+    owner: "无消费方: 全仓无此键。"

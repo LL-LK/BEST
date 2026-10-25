@@ -1,11 +1,10 @@
 {
-  "zip": "F:\\论文\\BEST-Skill投稿包_v72_20261024.zip",
-  "sha256_file": "F:\\论文\\BEST-Skill投稿包_v72_20261024.zip.sha256",
-  "sha256": "97CFD5B69C0C15A2CE06A0F9FA63F0F9034ED00A7996DE17349CC80AA83AA420",
-  "files": 2511,
-  "uncompressed_bytes": 1075485873,
-  "zip_bytes": 920194468,
-  "created_at": "2026-10-24T07:32:17",
+  "zip_name": "BEST-Skill投稿包_v72_20261025.zip",
+  "zip_sha256": "D4A7B6075EF3F99B2A30EC5ECFC4C5295A2C5D2AB253EA6183CB1A66193A7EC0",
+  "files": 4206,
+  "uncompressed_bytes": 1093885384,
+  "zip_bytes": 927650364,
+  "created_at": "2026-10-25T06:34:36",
   "contents": [
     "01_稿件",
     "02_图表",

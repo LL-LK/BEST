@@ -1,0 +1,174 @@
+# astro-best citations.yaml — BEST 相关真实论文引用 (结构化知识层)
+#
+# 定位: 论文 reference 的权威存放处。references/ 只放"智能体怎么用 skill"的
+# 使用向内容; 需要引文时检索本文件 (rag/astro_rag.py 自动加载)。
+# 核验纪律: 每条 DOI 均以 Crossref REST 逐字段实核 (证据 temp/crossref_verify*.json); "to be submitted" 条目无 DOI,
+# status 必须保持 unverified, 严禁编造。
+citations:
+  - id: C-huang-2024-xpspec
+    short: "Huang et al. (2024, ApJS, 271, 13)"
+    title: "A Comprehensive Correction of the Gaia DR3 XP Spectra"
+    authors: ["Bowen Huang", "Haibo Yuan", "Maosheng Xiang", "Yang Huang",
+              "Kai Xiao", "Shuai Xu", "Ruoyi Zhang", "Lin Yang",
+              "Zexi Niu", "Hongrui Gu"]
+    journal: "The Astrophysical Journal Supplement Series"
+    year: 2024
+    volume: "271"
+    issue: "1"
+    page: "13"
+    doi: "10.3847/1538-4365/ad18b1"
+    arxiv: "2401.12006"
+    ads: "2024ApJS..271...13H"
+    status: verified
+    verified_via: "Crossref REST; 与官网 help 页官方 BibTeX 一致"
+    relevance: "BEST 官方指定引用之一; dr3xpcorr/xpsp 表的科学基础 (Gaia DR3 XP 光谱改正)"
+    bibtex: |
+      @ARTICLE{2024ApJS..271...13H,
+        author = {{Huang}, Bowen and {Yuan}, Haibo and {Xiang}, Maosheng
+          and {Huang}, Yang and {Xiao}, Kai and {Xu}, Shuai and {Zhang}, Ruoyi
+          and {Yang}, Lin and {Niu}, Zexi and {Gu}, Hongrui},
+        title = "{A Comprehensive Correction of the Gaia DR3 XP Spectra}",
+        journal = {\apjs}, year = 2024, month = mar, volume = {271},
+        number = {1}, eid = {13}, pages = {13},
+        doi = {10.3847/1538-4365/ad18b1},
+        archivePrefix = {arXiv}, eprint = {2401.12006},
+        primaryClass = {astro-ph.IM},
+        adsurl = {https://ui.adsabs.harvard.edu/abs/2024ApJS..271...13H}
+      }
+
+  - id: C-xiao-2025-scidata
+    short: "Xiao et al. (2025, Scientific Data, submitted)"
+    title: "BEST standard star database (Scientific Data, submitted)"
+    authors: ["Kai Xiao", "et al."]
+    journal: "Scientific Data"
+    year: 2025
+    doi: null
+    status: unverified
+    verified_via: "官网 help 页 Citation 段 (采集); 仍为 submitted, 无 DOI"
+    relevance: "BEST 数据库主引用; 未刊出前保持 unverified-source 标注"
+    bibtex: null
+
+  - id: C-xiao-yuan-2022-ps1
+    short: "Xiao & Yuan (2022, AJ, 163, 185)"
+    title: "Validation and Improvement of the Pan-STARRS Photometric Calibration with the Stellar Color Regression Method"
+    authors: ["Kai Xiao", "Hai-Bo Yuan"]
+    journal: "The Astronomical Journal"
+    year: 2022
+    volume: "163"
+    page: "185"
+    doi: "10.3847/1538-3881/ac540a"
+    status: verified
+    verified_via: "Crossref REST"
+    relevance: "ps1 (Pan-STARRS All-Sky) 星表定标论文"
+
+  - id: C-xiao-2023-ps1-lamost
+    short: "Xiao, Yuan, Huang et al. (2023, ApJS, 268, 53)"
+    title: "Improvement of Pan-STARRS Photometric Calibration with LAMOST and Gaia"
+    authors: ["Kai Xiao", "Hai-Bo Yuan", "Yang Huang"]
+    journal: "The Astrophysical Journal Supplement Series"
+    year: 2023
+    volume: "268"
+    page: "53"
+    doi: "10.3847/1538-4365/acee73"
+    status: verified
+    verified_via: "Crossref REST"
+    relevance: "ps1 星表定标改进论文 (LAMOST+Gaia)"
+
+  - id: C-yang-2021-gaia
+    short: "Yang, Yuan, Zhang et al. (2021, ApJL, 908, L24)"
+    title: "Correction to the Photometric Magnitudes of the Gaia Early Data Release 3"
+    authors: ["Y. Yang", "H. Yuan", "X. Zhang"]
+    journal: "The Astrophysical Journal Letters"
+    year: 2021
+    volume: "908"
+    page: "L24"
+    doi: "10.3847/2041-8213/abdbae"
+    status: verified
+    verified_via: "Crossref REST; 官网写 908,24, Crossref 为 908,L24 (同页)"
+    relevance: "Gaia Photometry 精测星表论文"
+
+  - id: C-huang-yuan-2022-stripe82
+    short: "Huang & Yuan (2022, ApJS, 259, 26)"
+    title: "Photometric Recalibration of the SDSS Stripe 82 to a Few Millimagnitude Precision with the Stellar Color Regression Method and Gaia EDR3"
+    authors: ["Yang Huang", "Hai-Bo Yuan"]
+    journal: "The Astrophysical Journal Supplement Series"
+    year: 2022
+    volume: "259"
+    page: "26"
+    doi: "10.3847/1538-4365/ac470d"
+    status: verified
+    verified_via: "Crossref REST; 官网页漏写期刊名, Crossref 补全为 ApJS"
+    relevance: "stripe82 星表论文 (SCR 方法 + Gaia EDR3)"
+
+  - id: C-xiao-2023-jplus
+    short: "Xiao, Yuan, López-Sanjuan et al. (2023, ApJS, 269, 58)"
+    title: "J-PLUS: Photometric Recalibration with the Stellar Color Regression Method and an Improved Gaia XP Synthetic Photometry Method"
+    authors: ["Kai Xiao", "Hai-Bo Yuan", "Carlos López-Sanjuan"]
+    journal: "The Astrophysical Journal Supplement Series"
+    year: 2023
+    volume: "269"
+    page: "58"
+    doi: "10.3847/1538-4365/ad0645"
+    status: verified
+    verified_via: "Crossref REST"
+    relevance: "jplus_dr3 星表论文"
+
+  - id: C-lopezsanjuan-2024-jplus
+    short: "López-Sanjuan, Vázquez Ramió, Xiao et al. (2024, A&A, 683, A29)"
+    title: "J-PLUS: Toward a homogeneous photometric calibration using Gaia BP/RP low-resolution spectra"
+    authors: ["C. López-Sanjuan", "H. Vázquez Ramió", "K. Xiao"]
+    journal: "Astronomy & Astrophysics"
+    year: 2024
+    volume: "683"
+    page: "A29"
+    doi: "10.1051/0004-6361/202346012"
+    status: verified
+    verified_via: "Crossref REST"
+    relevance: "jplus_dr3 星表齐次化定标论文"
+
+  - id: C-xiao-2024-splus
+    short: "Xiao, Huang, Yuan et al. (2024, ApJS, 271, 41)"
+    title: "S-PLUS: Photometric Recalibration with the Stellar Color Regression Method and an Improved Gaia XP Synthetic Photometry Method"
+    authors: ["Kai Xiao", "Yang Huang", "Hai-Bo Yuan"]
+    journal: "The Astrophysical Journal Supplement Series"
+    year: 2024
+    volume: "271"
+    page: "41"
+    doi: "10.3847/1538-4365/ad24fa"
+    status: verified
+    verified_via: "Crossref REST"
+    relevance: "splus_dr4 星表论文"
+
+  - id: C-li-2025-uss
+    short: "Li, Xiao, Huang, Yuan et al. (2025, ApJS, 277, 26)"
+    title: "The S-PLUS Ultra-short Survey: Photometric Recalibration with the Best Star Database"
+    authors: ["X. Li", "K. Xiao", "Y. Huang", "H. Yuan"]
+    journal: "The Astrophysical Journal Supplement Series"
+    year: 2025
+    volume: "277"
+    page: "26"
+    doi: "10.3847/1538-4365/adaf27"
+    status: verified
+    verified_via: "Crossref REST"
+    relevance: "uss_dr1 (S-PLUS Ultra-short Survey) 星表论文"
+
+  - id: C-huang-2025-landolt
+    short: "Huang, Yuan et al. (2025, to be submitted)"
+    title: "Landolt standard stars (to be submitted)"
+    authors: ["Yang Huang", "Hai-Bo Yuan"]
+    journal: null
+    year: 2025
+    doi: null
+    status: unverified
+    verified_via: "官网 catalog 文档页; to be submitted, 无 DOI"
+    relevance: "landolt 星表论文; 未刊出前保持 unverified-source"
+
+# 引用规范 (智能体引文时遵守):
+#   1. 对外引文只能取 status=verified 的条目; unverified 条目引用时必须显式标注
+#      "to be submitted / 无 DOI"。
+#   2. DOI 与 Crossref 不一致时以 Crossref 为准并回写本文件。
+#   3. 新文献进本文件前必须走 §复现: Crossref REST 逐字段比对。
+rules:
+  - id: R-citation-discipline
+    rule: "verified 才可静默引用; unverified 必须带标注; 严禁编造 DOI"
+    anchor: "temp/crossref_verify.json"

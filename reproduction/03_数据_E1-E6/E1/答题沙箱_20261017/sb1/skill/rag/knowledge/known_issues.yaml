@@ -1,0 +1,132 @@
+# astro-best known_issues.yaml — 已知缺陷与规避 (L3 专属 RAG, 只增不减)
+issues:
+  - title: NADC 无公开 API 文档化 SLA
+    symptom: 服务偶发 5xx/维护窗口, 无官方状态页。
+    workaround: 指数退避 (urllib3 Retry 单层, 基数 2s, max_retries=3) + 失败如实记 error_code=E_BACKEND; 下载栈走 HookBlockedError(network_exhausted) 置 blocked 待 ask; 高优先作业改约窗口重跑。⚠ 无运行期 status 叫 query_failed（见 fallback-protocols.md 头）
+    severity: medium
+    tags: [rest, availability]
+  - title: 主引用论文未刊出 (Xiao et al. 2025 Scientific Data submitted)
+    symptom: BEST 数据库主引用仍为官网标注的 "submitted", 暂无可验 DOI。
+    workaround: 文档引用以官网 URL 为准, DOI 字段标 unverified-source, 严禁编造;
+      次级引用 Huang et al. (2024, ApJS, 271, 13, DOI 10.3847/1538-4365/ad18b1)
+      已经 Crossref 实核 verified, 可正常引用。
+    severity: low
+    tags: [citation, unverified-source]
+  - title: 文档页星表与可查询现实存在偏差 (SkyMapper DR4)
+    symptom: catalog 文档页 Well-Calibrated 表列 SkyMapper DR4 (34G), 但
+      /skymapper_dr4/f 返回 {"error":"Not Found"} 软 404, calib 分组页无此表。
+    workaround: 凡文档页出现的星表, 以 /f 路由实测为准; 查询前先探测再构造;
+      本地镜像见 references/photometric-systems.md §6 (实证)。
+    severity: low
+    tags: [docs-drift, soft-404, catalog]
+  - title: BEST 网页表单字段会演进
+    symptom: 上游加列/改键时约束构造失效 (注 — 旧条目提到的
+      _build_filter_rules 反推路径已随 P1-4 移除, 约束只走 phase-1 表单)。
+    workaround: 约束构造集中在 BestQuery.build()/BestClient._build_form, 字段白名单
+      集中维护并写入 references/client-api-reference.md; 列名以 describe_catalog 为准。
+    severity: medium
+    tags: [form, schema-drift]
+  - title: 分页结果排序非确定 (无 ORDER BY)
+    symptom: 同一 sqlid 连续两次 GET (不带 sort/order) 行数相同但行序不同,
+      集合重叠仅约 1/50 (实测, temp/live_filterrules_ab_results.json)。
+    workaround: 需要稳定分页/对比时必须显式 sort+order (cone_search/crossmatch_batch
+      的 sort/order 参数, P1-8 已接线); 集合比较前先排序。
+    severity: medium
+    tags: [pagination, ordering]
+  - title: 已修复 P0 三项 (留档)
+    symptom: 软 404 无检测 (http_status==200 门禁失效) / total_count 返回本地解析行数 /
+      交叉匹配 N+1 请求灾难。
+    workaround: 均已修复并回归 — is_soft_error+Soft404Error (P0-3, 错误码 BEST_1006)、
+      BestClient._count getcount + truncated (P0-2, V-4 live 实证 770/156676)、
+      BestCrossMatch.crossmatch_batch proximity (P0-1, live N=1000 通过);
+      证据 temp/live_getcount_results.json / temp/live_proximity_p1_8_results.json。
+    severity: resolved
+    tags: [resolved, soft-404, count, proximity]
+  - title: ps1 空测光列回 ≈-1000 哨兵 (实证)
+    symptom: ps1 无测光列的值是 -1004.07/-999.0 一类哨兵而非空串; 旧解析把哨兵
+      当星等 (inputobjs_* 元数据列还因首字母 i 被误吞成 i 波段)。
+    workaround: BestSource.from_row 与 src/tap/formats.convert_table_rows 共用
+      NULL_MAGNITUDE_SENTINEL=-999 阈值, 哨兵与匹配元数据列均不进 magnitudes。
+    severity: resolved
+    tags: [resolved, sentinel, photometry]
+  - title: 测光**上侧**缺测哨兵 99.0 (实证, 2026-10-06 补录)
+    symptom: splus_dr4 的 *_pstotal 列用 99.0 而不是 ≈-1000 表示"无测量";
+      旧判定只看下侧哨兵带, 于是 99.0 被当成一颗真实星等写进结果 ——
+      全仓 87 份真实快照里 284 处 (34,379 行)。
+    workaround: BestSource.from_row 与 convert_table_rows 共用
+      NULL_MAGNITUDE_UPPER_SENTINEL=99.0, **只在测光列**判 ——
+      视差等天体测量列的 99.0 是合法毫秒值, 无差别套用会抹掉真实视差。
+      坐实依据 —— splus_dr4_u_pstotal 真值域 15.5649..27.9548 (n=398),
+      99.0 为最大值且与真值域之间是干净空档, 同批 *_err 列的 99.0
+      计数与值列逐格相等 (14/14)。回归 test/unit/models/test_sentinel_upper.py。
+    severity: resolved
+    tags: [resolved, sentinel, photometry]
+  - title: 同一波段多列时过滤列与取值列分裂 (实证, 2026-10-06 补录)
+    symptom: scr_galah 给每个波段标签发三列 (u 带 = ujkc/usdss/usplus, 全表 30 列
+      塌成 10 个标签)。查询层 magnitude_column 取首个匹配列下发约束, 行模型却是
+      后写覆盖 —— 最后一列 usplus 赢。用户按 band="u" 下的条件落在 ujkc 上, 返回的
+      却是 usplus 的值。
+    workaround: from_row 改为**首个有值的列胜出**, 与 magnitude_column 取同一列。
+      实测系统偏差 0.16963370 mag (ujkc 13.548055 vs usplus 13.717689), 修后
+      14 个可比行 0 处不一致。回归 test/unit/models/test_magnitude_mapping.py。
+    severity: resolved
+    tags: [resolved, photometry, band-mapping, cross-table]
+  - title: 标识符被 float() 静默改写 (实证, 2026-10-06 补录)
+    symptom: convert_table_rows 对每列无条件 float(), 使 gaia_dr3_18_source_id 的
+      4512921183874236032 (>2^53) 落成 4.512921183874236e+18; VOTable 出口因有
+      column_is_numeric 护栏而未损坏, 于是两个出口对同一份数据给出两个标识符。
+    workaround: 复用 src/serialization.py::must_stay_text 单一判据 (前导零 /
+      超 2^53 整数字面量), 按**值形态**判而非列名 —— 新星表新增标识符列
+      自动受保护。实测 87 份快照 744,344 格 —— 修前 1,074 格不可逆损坏, 修后 0 格。
+    severity: resolved
+    tags: [resolved, serialization, identifier, data-integrity]
+  - title: 星等列识别漏真实列名 + 误收误差列 (实证, 2026-10-06 补录)
+    symptom: 判据只认 endswith("mag"), 而站点实际发布 ps1_gpsf / splus_dr4_u_pstotal /
+      gaia_dr3_18_phot_g_mean_mag 这类不含 mag 字样的列名 —— BestProcessor.bright_sources
+      对绝大多数星表整表空转 (真实 ps1 行 gpsf=15.0 在 mag_limit=16 下被整行剔除);
+      反向地, 误差列名以星等列名结尾 (splus_dr4_e_u_pstotal / ps1_gpsf_err) 会被
+      判成星等, votable_document 给它挂 unit="mag"。
+    workaround: 两处都改用 src/serialization.py::is_magnitude_column —— 由
+      protocol.CATALOG_MAG_COLUMNS 现场推导后缀集; 该函数再先用
+      MAGNITUDE_ERROR_SUFFIXES (由 CATALOG_MAG_ERROR_COLUMNS 对称推导) 排除误差列。
+      回归 test/unit/serialization/test_magnitude_column_predicate.py。
+    severity: resolved
+    tags: [resolved, photometry, serialization, unit-metadata]
+  - title: uss_dr1 快照的坐标标签与内容不符 (实证, 2026-10-06 复核发现)
+    symptom: 快照目录名声称锥心 ra=120.3 dec=-20.4 r=300", 而 rows_full.csv 的
+      实际内容是 ra∈[0.70, 2.24]、dec∈[-1.41, 1.41] —— 差约 120° 赤经。对照组
+      可证快照命名约定本身可靠 —— 同批 10 个 ps1 快照坐标**全部**与标签吻合, 且随
+      半径单调放大 (5"→±0.02°、60"→±0.04°、900"→±0.08°)。
+    consequence: 连带影响 AH3-03/P0-B 的处置。审计把它记成「uss_dr1 全表
+      2000/2000 行失位置」的识别失败, 本轮**实现了**从分波段坐标列 (ra_<band>)
+      兜底的修法并实测可读出位置, 随后**撤回** —— 因为无法证实这些坐标与查询
+      天区的对应关系, 补值等于把「看得见的缺失」(ra=None) 换成「看不见的错误」
+      (定位到错误天区), 与铁律 5 禁的那一类相同。2026-09-29 那条用例当初拒绝
+      兜底的理由正是这一点, 本轮复核支持它的判断。
+    workaround: 维持现状 —— from_row 只认裸位置列, uss_dr1 保留 ra=None。
+      该表的分波段坐标**确实是**同一天球位置的多次测量 (同一行各波段几乎相同
+      —— 0.7036883 / 0.7036042 / 0.70360595), 但与查询天区的对应关系待证。
+      待办 —— 实站重抓一份 uss_dr1 锥搜快照, 核对回包天区与提交参数是否一致;
+      一致则本条升为「兜底可安全开启」, 不一致则根因在捕获侧而非模型层。
+    severity: open
+    tags: [open, astrometry, snapshot-integrity, uss_dr1]
+  - title: .env 从未被读取 (实证, 2026-10-06 补录)
+    symptom: .env.example 第 2 行教用户 "Copy to .env and fill in your credentials",
+      而全仓零代码读 .env —— 用户照做后凭据进不了进程, 表现为「配了却不生效」。
+    workaround: src/scripts/config.py::load_dotenv_file (~40 行 stdlib, 不引
+      python-dotenv), 只在 CLI 入口调用; 真实环境变量优先于文件值, 加载器
+      只记条数与路径绝不记值。回归 test/unit/scripts/test_dotenv_loading.py。
+    severity: resolved
+    tags: [resolved, config, dotenv, credentials]
+  - title: IVOA TAP/OAuth 历史资产曾被误删 (回忆)
+    symptom: pybest 打包产物树 (git 6f00efeb^ 可取回) 的 pybest/tap/ + oauth.py 随 Phase 8 扁平化
+      重组从 best 分支删除, 只剩 test/upstream 的 skip 守卫, 无可见线索。
+    workaround: 已迁回 src/tap/ (stdlib 传输面); OAuth 现行版即其演进 (src/auth/);
+      迁回忆审与恢复方法见 references/site-endpoints-and-interactions.md §8。
+    severity: resolved
+    tags: [resolved, migration, tap, oauth]
+  - title: 大区域下载内存峰值
+    symptom: max_rows=50000 行 CSV 一次读入内存偏高。
+    workaround: 分批 (limit + 分页 sqlid); 重算力作业改在仓外自行调度 (本仓已于 2026-10-06 移除云端分发组件)。
+    severity: low
+    tags: [download, memory]

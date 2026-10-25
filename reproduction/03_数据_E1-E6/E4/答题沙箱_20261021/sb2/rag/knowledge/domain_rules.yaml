@@ -1,0 +1,46 @@
+# astro-best domain_rules.yaml — 领域硬规则 (RAG 语料, 只增不减)
+#
+# 本文件是 DOMAIN_BOOST 权重第二档 (0.2): 问"怎么鉴权 / 什么算门禁"的查询
+# 必然命中这里, 所以每条规则都必须与**当前代码**一致 —— 知识面把一条代码
+# 明说"是死路"的通道写成可用, 比没有这条知识更糟 (H2-01 修复口径)。
+rules:
+  - id: http-gate
+    title: "HTTP 200 必要不充分: 还要并查响应体 (软 404)"
+    description: >
+      非 200 一律错误路径, 不降级为部分结果。**但 200 本身也不是充分的**:
+      未知路由返回 HTTP 200 + {"error":"Not Found"} (22 B) 与
+      {"error":"Internal Server Error"}, 站点行为已变 (2026-09-29 复测为快速软错误,
+      旧快照记 ">75s 挂起")。因此门禁是"状态码 ==200 **且** 响应体非 error 体",
+      收口在 src/protocol.py::is_soft_error / Soft404Error。只查状态码会把软 404
+      读成"无数据"。
+    tags: [http, gates]
+  - id: checksum-gate
+    title: "校验和一致 (SHA-256, 落盘后整文件自洽判)"
+    description: >
+      落盘后对**整个文件**算一次 SHA-256, 与**写前**按落盘编码算的意图摘要比对
+      (恒定时间比较 digests_match); 取值是真布尔, 所以门禁
+      checksum_match==True 当前**可达** —— 不是逐段流式校验。不一致时
+      **既不重试也不告警**: 无外部基准时只把 False 如实记进
+      <name>.provenance.json sidecar 与日志, 不会拦下这次运行; 外部期望值
+      expected_sha256 目前只是 _save_result 的形参, 生产落盘调用点零传入, 因此
+      本门禁当前只能证明"写了且没被改", **不能**证明"与服务端发来的一致"。
+      (checksum_mismatch 这个 severe 类别有定义无触发, 别等一个永远不会来的拦截。)
+    tags: [download, gates]
+  - id: auth-surface-real
+    title: "真实鉴权面 = 匿名可查 + --auth-user/ASTRO_BEST_PASSWORD"
+    description: >
+      公开数据面 (锥搜/分页/计数/名称解算/列元数据) 匿名可查, 已实证; 需要
+      登录时唯一凭据面是 CLI --auth-user + env ASTRO_BEST_PASSWORD (交互终端
+      回落 getpass; 刻意不提供 --auth-pass, 口令不走 argv), 认证实现是
+      BestAuth (Django session + CSRF, src/auth/session.py)。显式给了凭据
+      却被站点拒时**默认 fail-closed 非零退出**; 必须显式
+      --allow-anonymous-fallback 才降级匿名并打 stderr 警告 (静默降级会让
+      这次运行与一次纯匿名运行完全不可区分)。NADC 通行证 OAuth
+      (NADC_OAUTH_CLIENT_ID / _CLIENT_SECRET / _REDIRECT_URI) 是身份层,
+      用途是写 provenance.identity, 当前 blocked-on-approval, 不是查询凭据。
+      **死路登记**: env BEST_API_TOKEN 只落进 AstroBestConfig.api_token,
+      客户端无此通道 (src/scripts/config.py), 全链存而不用 (src/core/
+      __init__.py), 该字段仅供 doctor 报告用; TAP 网关的 Bearer 由调用方
+      注入的 token_validator 回调校验 (src/tap/service.py), 不读任何 env
+      凭据; pybest 单类的 ~/pybest.ini 自动探测兼容层随门面删除一并移除。
+    tags: [security, auth]

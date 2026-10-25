@@ -1,0 +1,37 @@
+{
+  "task_id": "NL2T-04",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_gpsf",
+          "ps1_rpsf",
+          "ps1_ipsf",
+          "ps1_zpsf",
+          "ps1_ypsf",
+          "ps1_class_star"
+        ],
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "已按你给的参数在 `ps1` 表做锥形检索：\n\n- 中心：RA = 10.68°、Dec = 41.27°（ICRS，J2000）\n- 半径：60 角秒（**注意本工具的半径单位是角秒**，不是度；60″ = 1′）\n- 星表：`ps1`（Pan-STARRS 全天）\n- 列：只取了坐标 + 五波段 PSF 星等 + 点源分类，没拉全 30 列，省带宽\n\n结果怎么读，有三点需要先跟你说清楚：\n\n1. **行数不保证一次取全**。单次上限 1000 行，超出时返回 `truncated=true`。这个天区（M31 核心西南侧）星密度不低，若被截断，我会先用 `count` 拿服务端真实总数，再用 `fetch_page` 按 1000 行/页续取，不会把\"只拿到前 1000 行\"当成\"总共就这些\"。\n2. **星等列有哨兵值**。`ps1_gpsf` 等 PSF 列在没测到光的源上是 `nan`，分页响应里还会出现约 −1000 的哨兵带、`*_psf_err` 是 `-999.0`。所以如果你要按星等上限筛（比如\"只要亮于 18 等的\"），不能直接对这些列做数值比较——会把\"没测光\"误算成\"很暗\"。需要的话我在结果侧先剔哨兵再筛。\n3. **这是 PSF 星等**，不是孔径星等。要跟别的星表做颜色比对时注意口径一致。\n\n要我把结果落成 csv 或只保留某个波段/某个星等区间，说一声就行；如果你其实想要的是**整个 M31 星系范围**（角径约 3°×1°）而不是这 60″ 的小锥，那半径得放大到 5400–9000 角秒（工具上限 18000 角秒 = 5°），现在的 60″ 只覆盖核心一小块。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb2-r2",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb2",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb2",
+  "answered_at": "2026-10-20T06:22:08.134260Z"
+}

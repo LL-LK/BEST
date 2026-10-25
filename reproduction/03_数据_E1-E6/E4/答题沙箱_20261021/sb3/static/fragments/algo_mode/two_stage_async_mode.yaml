@@ -1,0 +1,15 @@
+fragment:
+  id: algo_mode/two_stage_async_mode
+  algo: best_two_stage_async
+  entry: src.client:BestClient._execute_query -> _fetch_sqlid_data
+  backend: form 提交换 sqlid, 再凭 sqlid 轮询拉取 (天然异步)
+  hyperparams:
+    output_format: {default: csv, enum: [csv, txt, votable, json]}   # 线上白名单 (protocol.SUPPORTED_OUTPUT_FORMATS); fits 不在其中
+    max_rows: {default: 50000, unit: count}
+    radius_deg: {unit: deg, note: "BestQuery.cone 口径; download_region 用 arcsec — 勿混"}
+  outputs:
+    sqlid: "阶段一作业标识"
+    sources: "BestSource 行集 (仅来自真实响应)"
+  degrade:
+    trigger: "429/5xx 超退避上限"
+    action: "下载栈抛 HookBlockedError(network_exhausted) 置任务 blocked 待 ask; 打包云侧改约窗口 (FB-3) —— 无运行期 status 值叫 rate_limited"

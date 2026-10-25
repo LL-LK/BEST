@@ -1,0 +1,91 @@
+# astro-best — 声明式加载地图 (Master Plan §4 组件 2 / §2 第 2 行)
+# 定位: BEST 数据库唯一数据源主理方 (外部数据源驱动, 不委派自身数据面)。
+# strength/role 为机器字段: 强度收敛后与 registry/SKILL-INDEX/强度矩阵
+# 四方一致记为 S2 Specialist (存活方, astro-best-sync 已合并下沉至本 skill);
+# 叙事层与定位见 docs/architecture/file-size-budget.md §8。
+name: astro-best
+role: data-source
+strength: S2
+standalone: true
+pipeline_stage: collection
+delegation_note: "通用检索/交叉匹配主理转 astro-catalog; 数据清洗转 astro-clean; BEST 自身数据查询不委派"
+
+# ── 三维 axes: inputs × modes × sinks ────────────────────────────────────
+axes:
+  inputs:
+    - best_query        # BestQuery() 无参构造 + 链式挂约束 (.catalog()/.cone()/…); 凭据不走查询对象 (真实鉴权面见 static/core/workflow.md)
+    - crossmatch_list   # 待匹配坐标对
+    - quality_policy    # 质量门控 (min_snr/max_fwhm)
+  modes:
+    - two_phase_query   # POST 表单→sqlid→分页 GET (BestClient)
+    - stream_download   # 流式下载 + checksum (BestDownloader)
+    - proximity_batch   # 服务端 proximity 批量匹配 (BestCrossMatch.crossmatch_batch)
+  sinks:
+    - result_json       # BestResultSet 信封 (data/status) —— 按契约声明保留, 当前未接线 (无生产构造点, 见下方 quality_gates)
+    - multiband_photometry_csv    # 多波段静态测光 CSV/JSON 导出 (BestMultiBandPhotometry.to_csv/to_json)
+    - query_audit       # 查询审计 (http 状态/校验和/sqlid)
+
+# ── always_load: 任何会话必须注入的最小上下文 ─────────────────────────────
+always_load:
+  - SKILL.md
+  - README.md            # 必读链第一跳: 逐文件能力边界 + 文件树 SSOT + 治理规则
+  - manifest.yaml
+  - architecture.md
+  - contracts/io-contract.md
+  - static/core/stance.md
+  - static/core/workflow.md
+  - static/core/output-format.md
+  - agents/openai.yaml
+
+# ── on_demand: 按场景路由惰性加载 ─────────────────────────────────────────
+# 口径: 每一份 static/fragments/ 下的片段都必须出现在某个场景的清单里 ——
+# README 逐文件表把它们标为 on_demand, 加载地图少列一份就等于"模型按 README 去取
+# 会拿不到"(A8-05: 原先只列了 2/8)。test/unit/knowledge/test_knowledge_slots.py
+# 的 TestFragmentRouting 逐文件核这一条, 两处不再各说各话。
+on_demand:
+  two_phase_query:
+    - references/ALGORITHM-SPEC.md      # REST/TAP 端点表 + 两阶段协议
+    - static/fragments/algo_mode/best_two_phase.yaml
+    - static/fragments/algo_mode/two_stage_async_mode.yaml   # 两阶段异步模式契约 (entry/hyperparams/degrade)
+  auth_login:
+    - static/fragments/algo_mode/best_auth_mode.yaml         # 认证算法模式 (与 auth 子命令联动)
+  stream_download:
+    - static/fragments/data_source/best_catalogs.md
+  batch_crossmatch:
+    - src/scripts/best_crossmatch_pipeline.py   # legacy 逐点脚本 (兼容面)
+    - src/crossmatch.py                        # 现行服务端 proximity 批量匹配
+  target_type_judgement:              # 目标类型/测光区域/标准星语义 (E3 语义轴 D/E 取用)
+    - static/fragments/target_type/best_ttype.md
+    - static/fragments/target_type/photometry_region.md
+    - static/fragments/target_type/standard_star.md
+  degradation:
+    - references/fallback-protocols.md
+    - static/fragments/data_source/nadc_endpoints.md   # 端点知识: 降级时才知道该换哪个入口
+    - rag/knowledge/known_issues.yaml
+    - rag/knowledge/lessons_learned.yaml
+
+# ── entry_points ──────────────────────────────────────────────────────────
+entry_points:
+  python:
+    module: src            # 包名 = src; python -m src
+  cli:
+    local: ops/astro_best_cli.py            # doctor / rag / slots / capture / config / refs / oauth / download / log (9 个子命令)
+    cloud: ops/cloud_modelscope/dispatch.py
+  rag:
+    standalone: rag/astro_rag.py     # BM25+词桶+RRF 本地检索执行器
+  tree_gate:
+    verify: ops/verify_tree_integrity.py  # 文件树完整性硬门禁 (README 树清单 SSOT)
+
+redirects:
+  - {from: "交叉匹配与星表坐标查询 (旧 best 内嵌逐点匹配)", to: "astro-catalog", reason: "检索/交叉匹配主理 (球面 KD-Tree 锥搜); 现行 proximity 批量匹配仍属本 skill"}
+  - {from: "原始数据清洗 (旧 best 内联清洗)", to: "astro-clean", reason: "2D 校准/剔除主理"}
+  - {from: "自身 NADC BEST REST/TAP 异步客户端", to: "astro-best", reason: "声明行: 本 skill 的 BestClient/两阶段异步查询仍可用 (外部数据源驱动, 不重定向)"}
+
+# ── 质量门禁 (G6/G7 校验锚; 与 contracts/io-contract.md 一致) ─────────────
+# 接线状态 (V1 修复 E5 P1-02): 下列两条 blocking 门禁在生产链路**无填充点**,
+# 按契约声明保留 (非死代码): 唯一求值实现是 src/models/output.py 的
+# BestResultSet.gates_passed() (fail-closed, 缺省即判否), 但该类在 src/ 内
+# 零生产构造点。缺的是构造链, 走 Q-08 路线 (见 SKILL.md 质量门禁段)。
+quality_gates:
+  - {name: http_status, cmp: "==", value: 200, unit: "count"}
+  - {name: checksum_match, cmp: "==", value: True, unit: "bool"}

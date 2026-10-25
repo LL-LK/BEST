@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
+r"""
 投稿包机器可检验验收清单。
 路径从脚本自身位置推导（scripts/ 的上上级即包根），不依赖任何绝对路径，
 因此在审稿人的机器上直接可用。
 
-用法：python 08_清单与SHA256\scripts\acceptance_check.py
+用法：python 08_清单与SHA256/scripts/acceptance_check.py
 """
 import os, re, sys, csv, json, zipfile, datetime
 sys.stdout.reconfigure(encoding='utf-8')

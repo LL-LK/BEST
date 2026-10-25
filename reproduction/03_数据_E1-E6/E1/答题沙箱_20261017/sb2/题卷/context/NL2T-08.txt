@@ -1,0 +1,2 @@
+[user] 查 RA=180.0、Dec=30.0、半径 60″ 内的 ps1 源。
+[tool_result] status.truncated = true, sqlid = s3898, returned_count = 1000, total_count = 5000

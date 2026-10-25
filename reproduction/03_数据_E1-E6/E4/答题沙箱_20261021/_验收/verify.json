@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-22T14:28:58",
+  "A": {
+    "ok": true,
+    "identical": true,
+    "counts": {
+      "sb1": 171,
+      "sb2": 171,
+      "sb3": 171
+    },
+    "hash_now": {
+      "sb1": "2687c97f0a252207",
+      "sb2": "2687c97f0a252207",
+      "sb3": "2687c97f0a252207"
+    },
+    "hash_recorded": {
+      "sb1": "2687c97f0a252207",
+      "sb2": "2687c97f0a252207",
+      "sb3": "2687c97f0a252207"
+    },
+    "drift_since_build": []
+  },
+  "B": {
+    "ok": true,
+    "code": 0,
+    "tail": "{\"at\": \"2026-10-22T14:29:02\", \"n_tokens\": 166, \"n_history\": 35, \"excluded_public\": [\"RB-44.correction.to: gaia_dr3_18\"], \"ok\": true, \"batch_meta\": {\"hits\": [], \"ok\": true}}\n  sb1: OK (0 hits, 171 files)\n  sb2: OK (0 hits, 171 files)\n  sb3: OK (0 hits, 171 files)\n  _batch/: OK (0 hits)\n"
+  },
+  "C": {
+    "ok": true,
+    "audit_with_probe": 1,
+    "audit_after_cleanup": 0,
+    "probe": "ra=-5 越界; 若指 355° (wrap 候选) 请确认后重试"
+  },
+  "D": {
+    "ok": true,
+    "rows": [
+      {
+        "box": "sb1",
+        "ok": true,
+        "problems": [],
+        "n_per_item": 53,
+        "import_ok": true
+      },
+      {
+        "box": "sb2",
+        "ok": true,
+        "problems": [],
+        "n_per_item": 53,
+        "import_ok": true
+      },
+      {
+        "box": "sb3",
+        "ok": true,
+        "problems": [],
+        "n_per_item": 53,
+        "import_ok": true
+      }
+    ]
+  },
+  "ok": true
+}

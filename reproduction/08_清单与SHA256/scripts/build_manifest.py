@@ -27,6 +27,11 @@ def main():
     total = 0
     for dirpath, dirnames, filenames in os.walk(a.root):
         dirnames[:] = [d for d in dirnames if d not in ('.git', '__pycache__', '.pytest_cache')]
+        # 默认跳过所有以 _ 开头的顶层目录（_work 工作区、_push_stage 暂存仓），它们不随包外发
+        rel_dir = os.path.relpath(dirpath, a.root)
+        if rel_dir != '.' and rel_dir.split(os.sep)[0].startswith('_'):
+            dirnames[:] = []
+            continue
         for fn in sorted(filenames):
             fp = os.path.join(dirpath, fn)
             rel = os.path.relpath(fp, a.root).replace('\\', '/')

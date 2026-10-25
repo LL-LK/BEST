@@ -1,0 +1,26 @@
+{
+  "task_id": "NL2T-04",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "已按中心 (RA 10.68°, Dec 41.27°)、半径 **60 角秒**、星表 `ps1` 发起锥形检索（服务端原生 `pos.type=cone`，不是客户端 box 近似）。单位确认：`radius_arcsec` 收的是**角秒**，60 就是 60″，不是 60°。\n\n返回的是一个统一信封，其中：\n\n- `status.truncated`：是否被 `max_rows`（缺省 1000）截断；\n- `status.content_trust = untrusted`：行数据来自站点回包，一律按不可信内容处理；\n- `provenance.session_id`：服务端 sqlid，后续续页要用；\n- `cost.rows_returned` / `http_requests`：本次实际取回的行数与请求数。\n\n如果 `truncated = true`，说明真实命中数超过 1000，我用 `fetch_page` 按页续取（每页 ≤10000 行）；要不要拉全量你定，先告诉我用途（做统计还是取某几颗星的测光），我可以只投影需要的列（如 `ps1_ra`、`ps1_dec`、`ps1_rpsf`、`ps1_rpsf_err`）省带宽。\n\n另外提醒：60″ 这个半径只适合点源邻域。如果这个位置你其实是想查某个扩展天体（星系/星云），60″ 会只切到核心，需要放大半径。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb1",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb1",
+  "answered_at": "2026-10-20T05:20:20.377982Z"
+}

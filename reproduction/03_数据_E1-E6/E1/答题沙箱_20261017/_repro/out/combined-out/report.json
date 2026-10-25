@@ -1,0 +1,1524 @@
+{
+  "dims": {
+    "toolset": 0.9642857142857143,
+    "param": 1.0,
+    "convert": 1.0,
+    "redundant": 1.0,
+    "clarify": 0.8571428571428571,
+    "reject": 1.0
+  },
+  "dim_n": {
+    "toolset": 28,
+    "param": 15,
+    "convert": 10,
+    "redundant": 28,
+    "clarify": 7,
+    "reject": 6
+  },
+  "weighted": 0.975,
+  "pass": true,
+  "warn": true,
+  "red_line_tasks": [],
+  "n_tasks": 28,
+  "dim_failures": [
+    {
+      "dim": "clarify",
+      "value": 0.8571,
+      "line": 1.0,
+      "n": 7
+    }
+  ],
+  "thin_dims": [],
+  "missing_traces": [],
+  "short_attempts": [],
+  "blockers": [],
+  "coverage_complete": true,
+  "expect_attempts": 3,
+  "task_grades": [
+    {
+      "task_id": "NL2T-01",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "list_catalogs"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "list_catalogs"
+          ],
+          "gold": [
+            "list_catalogs"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-02",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "describe_catalog"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "describe_catalog"
+          ],
+          "gold": [
+            "describe_catalog"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-03",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "resolve_name"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "resolve_name"
+          ],
+          "gold": [
+            "resolve_name"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-04",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "max_rows",
+            "nearest_only"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-05",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "crossmatch_batch"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "crossmatch_batch"
+          ],
+          "gold": [
+            "crossmatch_batch"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        0.6874999999999999,
+        1.0,
+        1.0
+      ],
+      "variance": 0.021701388888888905,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-06",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search",
+          "count"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search",
+            "count"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-07",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "list_catalogs"
+        ],
+        "toolset": {
+          "tp": 0,
+          "pred": [
+            "list_catalogs"
+          ],
+          "gold": [],
+          "probes": [
+            "list_catalogs"
+          ]
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": false,
+          "probe_hit": false,
+          "data_called": false,
+          "questioning": false,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        0.9,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0022222222222222214,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-08",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "fetch_page"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "fetch_page"
+          ],
+          "gold": [
+            "fetch_page"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-09",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "resolve_name",
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 2,
+          "pred": [
+            "cone_search",
+            "resolve_name"
+          ],
+          "gold": [
+            "cone_search",
+            "resolve_name"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 2,
+          "total": 2,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "convert": {
+          "hits": 0,
+          "n": 0,
+          "skipped": 1
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        0.8076923076923077
+      ],
+      "variance": 0.008218277449046678,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-10",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "max_rows"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-11",
+      "dims": {
+        "toolset": 0.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 0.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 0,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": true,
+          "probe_hit": true,
+          "data_called": true,
+          "questioning": true,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "variance": 7.703719777548943e-34,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-12",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search",
+          "count"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search",
+            "count"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-13",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": true,
+          "probe_hit": true,
+          "data_called": false,
+          "questioning": false,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-14",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "max_rows"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        0.25
+      ],
+      "variance": 0.125,
+      "unstable": true
+    },
+    {
+      "task_id": "NL2T-15",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "max_rows"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-16",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "max_rows"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-17",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": false,
+          "probe_hit": true,
+          "data_called": false,
+          "questioning": false,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-18",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": true,
+          "probe_hit": true,
+          "data_called": false,
+          "questioning": true,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-19",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": true,
+          "probe_hit": true,
+          "data_called": false,
+          "questioning": true,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-20",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "clarify": {
+          "keyword_hit": false,
+          "probe_hit": true,
+          "data_called": false,
+          "questioning": false,
+          "assumption_declared": false
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-21",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "nearest_only"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-22",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "reject": {
+          "declared": true,
+          "has_code": false,
+          "has_reason": true,
+          "reason_semantic": true,
+          "has_alt": true,
+          "alt_verbatim": false,
+          "alt_fallback": true,
+          "alt_channels": {
+            "external": true,
+            "tool": false,
+            "entry": false
+          },
+          "capability_hits": [
+            "光变",
+            "时序",
+            "周期"
+          ],
+          "missing": [],
+          "banned_called": []
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        0.2,
+        1.0
+      ],
+      "variance": 0.14222222222222222,
+      "unstable": true
+    },
+    {
+      "task_id": "NL2T-23",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "reject": {
+          "declared": true,
+          "has_code": false,
+          "has_reason": true,
+          "reason_semantic": true,
+          "has_alt": true,
+          "alt_verbatim": false,
+          "alt_fallback": true,
+          "alt_channels": {
+            "external": true,
+            "tool": true,
+            "entry": true
+          },
+          "capability_hits": [
+            "全表",
+            "整表"
+          ],
+          "missing": [],
+          "banned_called": []
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-24",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "reject": {
+          "declared": true,
+          "has_code": false,
+          "has_reason": true,
+          "reason_semantic": true,
+          "has_alt": true,
+          "alt_verbatim": false,
+          "alt_fallback": true,
+          "alt_channels": {
+            "external": false,
+            "tool": true,
+            "entry": true
+          },
+          "capability_hits": [
+            "上传",
+            "/jobs"
+          ],
+          "missing": [],
+          "banned_called": []
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-25",
+      "dims": {
+        "toolset": 1.0,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": null
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "cone_search"
+        ],
+        "toolset": {
+          "tp": 1,
+          "pred": [
+            "cone_search"
+          ],
+          "gold": [
+            "cone_search"
+          ],
+          "probes": []
+        },
+        "param": {
+          "hits": 1,
+          "total": 1,
+          "hallucinations": [],
+          "defaulted_keys": [
+            "max_rows"
+          ]
+        },
+        "convert": {
+          "hits": 1,
+          "n": 1,
+          "skipped": 0
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-26",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "reject": {
+          "declared": true,
+          "has_code": false,
+          "has_reason": true,
+          "reason_semantic": true,
+          "has_alt": true,
+          "alt_verbatim": false,
+          "alt_fallback": true,
+          "alt_channels": {
+            "external": false,
+            "tool": true,
+            "entry": true
+          },
+          "capability_hits": [
+            "token",
+            "TOKEN",
+            "口令",
+            "凭据"
+          ],
+          "missing": [],
+          "banned_called": []
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-27",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [],
+        "toolset": {
+          "tp": 0,
+          "pred": [],
+          "gold": [],
+          "probes": []
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "reject": {
+          "declared": true,
+          "has_code": false,
+          "has_reason": false,
+          "reason_semantic": false,
+          "has_alt": true,
+          "alt_verbatim": false,
+          "alt_fallback": true,
+          "alt_channels": {
+            "external": true,
+            "tool": false,
+            "entry": true
+          },
+          "capability_hits": [
+            "影像",
+            "cutout"
+          ],
+          "missing": [
+            "reason"
+          ],
+          "banned_called": []
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        0.9,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0022222222222222214,
+      "unstable": false
+    },
+    {
+      "task_id": "NL2T-28",
+      "dims": {
+        "toolset": 1.0,
+        "param": null,
+        "convert": null,
+        "redundant": 1.0,
+        "clarify": null,
+        "reject": 1.0
+      },
+      "red_lines": [],
+      "evidence": {
+        "predicted_tools": [
+          "list_catalogs"
+        ],
+        "toolset": {
+          "tp": 0,
+          "pred": [
+            "list_catalogs"
+          ],
+          "gold": [],
+          "probes": [
+            "list_catalogs"
+          ]
+        },
+        "param": {
+          "hits": 0,
+          "total": 0,
+          "hallucinations": [],
+          "defaulted_keys": []
+        },
+        "redundant": {
+          "extra": [],
+          "duplicates": 0
+        },
+        "reject": {
+          "declared": true,
+          "has_code": false,
+          "has_reason": true,
+          "reason_semantic": true,
+          "has_alt": true,
+          "alt_verbatim": false,
+          "alt_fallback": true,
+          "alt_channels": {
+            "external": true,
+            "tool": false,
+            "entry": false
+          },
+          "capability_hits": [
+            "2MASS",
+            "J 波段"
+          ],
+          "missing": [],
+          "banned_called": []
+        },
+        "s1_independent": []
+      },
+      "attempts": 3,
+      "attempt_scores": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "variance": 0.0,
+      "unstable": false
+    }
+  ],
+  "unstable_tasks": [
+    "NL2T-14",
+    "NL2T-22"
+  ],
+  "trace_sources": [
+    "live-run"
+  ],
+  "threshold_required": false
+}

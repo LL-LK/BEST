@@ -1,0 +1,16 @@
+{
+  "task_id": "NL2T-23",
+  "tool_calls": [],
+  "answer_text": "**\"把整张 ps1 导出成 FITS\"这件事，BEST 做不到，卡在两处，我逐条说明。**\n\n**1）没有全表导出通道。** 这 7 个工具只有\"按位置锥搜\"（`cone_search` 必须给中心 + 半径）和\"批量坐标匹配\"，**没有 `SELECT * FROM ps1` 这条路**。而且这不是缺个开关：`ps1` 约 **20 亿星**、200+ 波段，无约束拉全表会把服务端拖垮并触发限流 —— 历史上无约束内联 CSV 是数百 MB 量级的口径。\n\n**2）站点不支持 `fits` 输出格式。** `output.fmt` 只接受 `html` / `csv` / `txt` / `json` / `votable` / `dbgrid`，**请求 `fits` 拿到的是结果页 HTML**，不是 FITS 文件。所以 FITS 从来不是\"下载格式\"，只能是**本地把 CSV 转成二进制表**（`serialization.write_fits`，走 astropy 的 `BinTableHDU`，没装 astropy 会直接抛错并提示安装）。\n\n**可以走的路径**：\n\n- **按天区分批导（推荐）**：给中心 + 半径 → `cone_search`（`max_rows` 按页设，最大 10000）→ `fetch_page` 续页 → 每块落 CSV → 本地转 FITS。单次半径上限 18000″（5°），更大就切块。\n- **要\"整表\"**：走 Pan-STARRS 官方数据发布（PS1 DR2 的 catalog 批量分发）或 BEST 站点侧的批量导出，而不是这套工具面。\n- **只要一部分列**：告诉我列投影，导出的 FITS 只含这些列，体积能小一个量级。\n\n**请给我**：天区（中心 RA/Dec + 半径）、要哪些列、输出目录。我按\"分块 + 分页 + 本地转 FITS\"的方式做，并在落盘后做 SHA-256 校验和（校验和只证明\"写了且没被改\"，不证明\"与服务端发来的一致\"—— 后者没有外部基准可比）。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb1",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\sb1",
+  "answered_at": "2026-10-20T05:21:18.219888Z"
+}

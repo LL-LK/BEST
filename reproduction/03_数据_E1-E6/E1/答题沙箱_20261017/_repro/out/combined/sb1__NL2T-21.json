@@ -1,0 +1,37 @@
+{
+  "task_id": "NL2T-21",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "sort": "ps1.rpsf",
+        "order": "asc",
+        "max_rows": 1,
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_source_id",
+          "ps1_rpsf",
+          "ps1_rpsf_err",
+          "ps1_class_star"
+        ]
+      }
+    }
+  ],
+  "answer_text": "按 r 波段排最亮，口径是这样定的：\n\n- **星等越小越亮**，所以\"最亮\"= 按 `ps1_rpsf` **升序**（`order: asc`）取第一行，不是降序。\n- **用 PSF 星等 `ps1.rpsf`，不用 `_corr`（视宁度改正）也不用 `_err`** —— 排序键和你要报的数必须是同一个口径，混用会出现\"排序按 rpsf、报数报 corr\"的错位。\n- `max_rows: 1` 只回最亮那一行，不做全量拉取；列投影只留坐标、标识、r 星等与误差、形态分类。\n\n**一个必须处理的坑：`ps1_rpsf` 有空值/哨兵。** 空值在升序里会排在最前（被当成最小），于是\"第一行\"可能是一颗**根本没有 r 波段测光**的源，而不是最亮的那颗。所以我报结果前会先检查首行的 `ps1_rpsf` 是否为空或哨兵（空串 / `nan` / `-32768` 一类），若命中就顺延到第一条**有真实测光值**的行，并告诉你\"跳过 N 条缺测\"。\n\n另外确认一下\"最亮\"的判据：我这里按 **PSF 星等**。如果你要的是\"总流量最大\"（亮星系用 PSF 会低估），应该改用 Kron/孔径星等 —— 但 `ps1` 这张表**只发布 PSF 星等**（g/r/i/z/y 五个 `*psf`），没有 Kron 列，所以这张表内只能按 PSF 判。要按总流量判，得换表或换数据源。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "repro",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb1",
+  "answered_at": "2026-10-20T05:21:18.218880Z"
+}

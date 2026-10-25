@@ -1,0 +1,23 @@
+{
+  "task_id": "NL2T-02",
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "`ps1`（Pan-STARRS 全天，站点亦作 `calib/ps1`，同一张表）共 **30 列**，列名一律带 `ps1_` 前缀，波段覆盖 **g / r / i / z / y 五个**（**没有 u 波段**）。\n\n**位置与标识**\n\n- `ps1_ra`、`ps1_dec` —— 赤经/赤纬，单位度，ICRS\n- `ps1_source_id` —— 源编号\n\n**测光（每个波段一组，共 5×4 列）**\n\n| 波段 | 星等 | 改正星等 | 误差 | 质量标记 |\n|---|---|---|---|---|\n| g | `ps1_gpsf` | `ps1_gpsf_corr` | `ps1_gpsf_err` | `ps1_gflags` |\n| r | `ps1_rpsf` | `ps1_rpsf_corr` | `ps1_rpsf_err` | `ps1_rflags` |\n| i | `ps1_ipsf` | `ps1_ipsf_corr` | `ps1_ipsf_err` | `ps1_iflags` |\n| z | `ps1_zpsf` | `ps1_zpsf_corr` | `ps1_zpsf_err` | `ps1_zflags` |\n| y | `ps1_ypsf` | `ps1_ypsf_corr` | `ps1_ypsf_err` | `ps1_yflags` |\n\n星等是 **PSF 测光星等**（不是孔径星等，所以列名是 `*psf` 而不是 `*ap`），`*_corr` 是做过星系消光改正的版本。\n\n**天体性质与质量列**\n\n- `ps1_class_star` —— 点源/延展源分类判据（越接近 1 越像点源）\n- `ps1_ebv` —— 视线方向 E(B−V) 红化；`ps1_dust` —— 尘埃图取值\n- `ps1_parallax`、`ps1_parallax_err` —— 视差及误差\n- `ps1_ruwe` —— 天体测量拟合优度（Gaia 口径，>1.4 通常视为解算可疑）\n- `ps1_sigma`、`ps1_max_d` —— 与邻源的距离类质量指标\n\n**两点使用时要注意的**：一是这些列名在锥形检索里必须带前缀（`ps1_gpsf`，不是 `gpsf`），`columns` 参数按这个写法裁列最省带宽；二是 `*psf` 列在没测到的源上不是空值，而是 `nan` 或约 −1000 的哨兵带、`*_err` 是 `-999.0`，做星等上限筛选时会把\"没测光\"的源当成\"很暗\"计入，需要先剔除哨兵再判。\n\n如果你要的是 u 波段或更多波段，ps1 给不了，可换 `splus_dr4`（12 波段，含 u）或 `jplus_dr3`；需要其它表的列清单，告诉我表 id，我用同一个工具取给你。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb2-r2",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb2",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb2",
+  "answered_at": "2026-10-20T06:21:56.019301Z"
+}

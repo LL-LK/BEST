@@ -1,0 +1,12 @@
+{
+  "box": "sb1",
+  "answers_dir": "_answers/sb1",
+  "n_questions": 53,
+  "question_set_sha": "1158050a6d85a1f1",
+  "rubric_hash": "03ada2f41a7f5f75cd4dc9ed3fdc3b8d7d4eec25d0162ff5f6b000d80a5880e3",
+  "tools_schema_hash": "6cba9dce98e8d000f9389165cf6298ea1b5c8a02c95043274ef7dce3ef24038c",
+  "model_id": "FILL-ME",
+  "system_prompt_version": "FILL-ME",
+  "network": "FILL-ME",
+  "note": "本卡只含批次对账信息。题面来源分类与同族映射见 _index/批次溯源.md。"
+}

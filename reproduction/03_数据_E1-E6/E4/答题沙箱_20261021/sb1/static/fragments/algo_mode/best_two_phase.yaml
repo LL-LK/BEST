@@ -1,0 +1,13 @@
+# best_two_phase.yaml — astro-best 两阶段协议静态切片
+two_phase:
+  step1: "POST /{catalog}/q  form(output.fmt=html) -> html(sqlid)"
+  step2: "GET /sqlid/{sqlid}?page -> json/csv 分页"
+  count: "GET /sqlid/{numeric_id}/getcount -> {\"total\": N}  (去 s 前缀)"
+  endpoint_rest: "https://nadc.china-vo.org/data/best"
+  endpoint_note: "BEST 无 TAP/ADQL 端点；best.astro.tsinghua.edu.cn 无 A 记录（实测）"
+  soft_404: '未知路由返回 HTTP 200 + {"error":"Not Found"}，门禁不得只看状态码'
+gates: {http_status: "==200 且响应体非 {\"error\":…} (软 404 收口在 protocol.is_soft_error)", checksum_match: "==true (写前意图摘要 vs 写后读回摘要, 真布尔)"}
+# 凭据: 公开数据面匿名可查; 需要登录时唯一凭据面 = CLI --auth-user + env ASTRO_BEST_PASSWORD
+# (交互终端回落 getpass), 认证由 BestAuth.login(username, password) 在客户端内部完成, 无 env 直读通道。
+# 死路登记: BEST_API_TOKEN 客户端无此通道 (只覆盖 config.py env_map 的 api_token 配置项), 不是凭据来源, 勿再当 override 用。
+env: {password_env: ASTRO_BEST_PASSWORD, username_arg: "--auth-user", rate_limit_s: 2.0}

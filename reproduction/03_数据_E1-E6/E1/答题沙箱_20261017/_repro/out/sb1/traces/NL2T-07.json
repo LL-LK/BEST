@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-07",
+  "tool_calls": [
+    {
+      "tool": "list_catalogs",
+      "args": {}
+    }
+  ],
+  "answer_text": "**这件事 BEST 做不到，两条都卡住**，我说明是哪两条、以及怎么绕：\n\n**1）ZTF 的 g/r/i 星等在 BEST 里查不到。** BEST 的 12 张可查询星表是 `ps1`、`stripe82`、`gaia_dr3_18`、`jplus_dr3`、`smss_dr4`、`landolt`、`uss_dr1`、`splus_dr4`、`scr_galah`、`scr_lamost`、`xpsp`、`dr3xpcorr` —— **没有 ZTF 表**。ZTF 在 BEST 里只是\"测光系统\"这一维度上的一个定标参考系统（19 个系统之一），不是一张能查的表。所以 `ZTF g/r/i` 这三列不存在于任何可查询表里。\n\n**2）按 Gaia `source_id` 直接查，BEST 没有这个端点。** `/q` 只接受两种输入：位置锥搜（中心 + 半径）或 proximity 批量坐标；**没有 by-id 查询**。`resolve_name` 走的是 CDS Sesame 名字解算，`Gaia DR3 1234567890123456789` 是源编号不是天体名，Sesame 解不出来（会返回 `E_NAME_UNRESOLVED`）。\n\n**可走的替代路径**（按你要的东西分）：\n\n- **只要这颗星的 BEST 测光** → 先去 Gaia Archive 用 `source_id = 1234567890123456789` 取它的 `ra` / `dec`（ICRS，度），再把坐标发我，我用 `cone_search` 在 `gaia_dr3_18` 表上取 G / BP / RP（`gaia_dr3_18_phot_g_mean_mag` 等），必要时加 `nearest_only` 只取最近邻。这是\"BEST 里这颗星有什么\"的正解。\n- **一定要 ZTF g/r/i** → 去 ZTF 官方渠道（IRSA / ZTF Data Release 的 light-curve 或 Science Archive），BEST 侧没有这条数据面。\n- **要跨系统的同源星等** → BEST 的价值是\"同一套定标下的多系统星等\"，`gaia_dr3_18`（G/BP/RP）+ `ps1`（g/r/i/z/y）能覆盖光学段，但不含 ZTF 波段。\n\n把坐标给我，我立刻走第一条。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb1-r1",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb1",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb1",
+  "answered_at": "2026-10-20T05:20:33.987950Z"
+}

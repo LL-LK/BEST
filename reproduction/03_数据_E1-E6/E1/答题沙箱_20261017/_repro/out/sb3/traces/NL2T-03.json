@@ -1,0 +1,23 @@
+{
+  "task_id": "NL2T-03",
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "M31"
+      }
+    }
+  ],
+  "answer_text": "M31（仙女座星系）的 ICRS 坐标：\n\n- **RA = 10.68470833°**（00h42m44.3s）\n- **Dec = +41.26875°**（+41°16′07.5″）\n\n这是站点名称解算（后端代理 CDS Sesame）返回的星系中心坐标，单位是度、历元 ICRS/J2000。\n\n两点说明：\n1. 解算失败时站点会返回哨兵 `ra=-1000, dec=-1000`（HTTP 200），此时工具报 `E_NAME_UNRESOLVED` 而**不会**把 -1000 当坐标给你——所以看到报错就是真没解出来，换个名字写法（`M 31` / `NGC 224` / `Andromeda`）再试即可。\n2. M31 是**扩展源**，角径约 3°（视场里横跨近 6 个满月）。上面这对坐标是核心位置；如果你想覆盖整个星系盘，单次锥搜半径上限是 18000″（5°），需要按 2°–3° 的子锥分区扫再合并，否则只会拿到核区那一小块。",
+  "http_requests": 1,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb3-r3",
+  "attempt": 1,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "sb3",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb3",
+  "answered_at": "2026-10-20T05:40:35.646452Z"
+}

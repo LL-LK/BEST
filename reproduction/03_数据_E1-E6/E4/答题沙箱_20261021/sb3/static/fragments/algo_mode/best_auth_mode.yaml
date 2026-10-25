@@ -1,0 +1,14 @@
+fragment:
+  id: algo_mode/best_auth_mode
+  algo: best_auth
+  entry: src.client:BestAuth.login         # 真实函数锚点
+  backend: requests.Session + CSRF 表单提取
+  hyperparams:
+    rate_limit: {default: 2.0, unit: s, note: "相邻请求最小间隔"}
+    max_retries: {default: 3, unit: count, note: "指数退避 1->2->4s"}
+  outputs:
+    session: "认证态 session (内存态, 不落盘)"
+    authenticated: "BestAuth.authenticated == True 才可提交"
+  degrade:
+    trigger: "凭据缺失 / 302 回登录页"
+    action: "有用户名无口令时打印 stderr Warning 后按匿名继续 (auth=None); BestAuth.login 回 False 不抛异常, 调用方决定是否降级; 降级须显式 --allow-anonymous-fallback (FB-2) —— 无运行期 status 值叫 not_configured/auth_failed"

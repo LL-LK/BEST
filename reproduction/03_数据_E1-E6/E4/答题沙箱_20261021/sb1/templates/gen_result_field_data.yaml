@@ -1,0 +1,15 @@
+# 本模板的消费者: 无代码消费者; 仅由 evals TemplatesAuditor 审计消费
+# (逐份读取扫版本号铁律, 不解析内容语义; 没有任何生产代码或测试读取本文件)。
+skill: astro-best
+kind: result_field
+field: data
+type: object
+unit: "mixed"
+body:
+  - "data = {{output.data}} [mixed]"
+  - "门禁符合性: 见 output.contract.yaml"
+
+# ---
+# generated_by: scripts/refactor/materialize_templates.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

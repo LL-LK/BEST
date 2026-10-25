@@ -1,0 +1,20 @@
+
+══════════════════════════════════════════════════════════════════
+  ④ 判分（逐箱 + 三次重复）
+══════════════════════════════════════════════════════════════════
+  sb1: weighted=0.9429  pass=True  red=[]
+        {'toolset': 0.9643, 'param': 0.9333, 'convert': 1.0, 'redundant': 1.0, 'clarify': 0.7857, 'reject': 0.9167}
+  sb2: weighted=0.9607  pass=True  red=[]
+        {'toolset': 0.9286, 'param': 1.0, 'convert': 1.0, 'redundant': 0.9643, 'clarify': 0.8571, 'reject': 1.0}
+  sb3: weighted=0.9554  pass=True  red=[]
+        {'toolset': 0.9286, 'param': 0.9643, 'convert': 1.0, 'redundant': 1.0, 'clarify': 0.8571, 'reject': 1.0}
+  combined: weighted=0.9750  pass=True  red=[]
+            {'toolset': 0.9643, 'param': 1.0, 'convert': 1.0, 'redundant': 1.0, 'clarify': 0.8571, 'reject': 1.0}
+            unstable=['NL2T-14', 'NL2T-22']
+
+══════════════════════════════════════════════════════════════════
+  汇总
+══════════════════════════════════════════════════════════════════
+  grade     ✅ 通过
+  耗时 12.4s
+  日志 → <USER_HOME>\E1-答题沙箱-2026-10-17\_repro\out\repro_all-20261020-152453.log

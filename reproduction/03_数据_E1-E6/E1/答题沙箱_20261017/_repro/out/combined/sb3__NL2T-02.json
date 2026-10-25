@@ -1,0 +1,23 @@
+{
+  "task_id": "NL2T-02",
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "`ps1`（Pan-STARRS All-Sky）共 **30 列**，其中测光波段 **5 个：g / r / i / z / y**（PS1 原生系统，**没有 u 波段**）。\n\n**测光列（核心）**\n| 波段 | PSF 星等 | 误差 | 改正星等 |\n|---|---|---|---|\n| g | `ps1_gpsf` | `ps1_gpsf_err` | `ps1_gpsf_corr` |\n| r | `ps1_rpsf` | `ps1_rpsf_err` | `ps1_rpsf_corr` |\n| i | `ps1_ipsf` | `ps1_ipsf_err` | `ps1_ipsf_corr` |\n| z | `ps1_zpsf` | `ps1_zpsf_err` | `ps1_zpsf_corr` |\n| y | `ps1_ypsf` | `ps1_ypsf_err` | —（y 波段无 corr 列） |\n\n**位置与标识**：`ps1_ra`、`ps1_dec`（度，ICRS）、`ps1_source_id`（19 位整数串）。\n\n**质量/形态列**：`ps1_class_star`（恒星形态判据，本表唯一可用的质量过滤列）、`ps1_gflags` / `ps1_rflags` / `ps1_iflags` / `ps1_zflags` / `ps1_yflags`、`ps1_sigma`、`ps1_max_d`、`ps1_ruwe`。\n\n**其他**：`ps1_ebv`、`ps1_dust`、`ps1_parallax`、`ps1_parallax_err`。\n\n（30 列 = 坐标 2 + PSF 星等 5 + 误差 5 + corr 4 + flags 5 + class_star / dust / ebv / parallax / parallax_err / sigma / max_d / ruwe / source_id 共 9。）\n\n三个使用提醒：\n1. 列名带表前缀（`ps1_`），构造投影时用全名，别猜裸名。\n2. **无测光列的值不是空串，而是 ≈ -1000 的哨兵**（实测 -1004.07 / -999.0 一类）。当星等用会把哨兵当成极亮源，必须先按 `-999` 阈值剔除。\n3. 本表**没有** nobs / 逐历元列，只有一个定标后的汇总星等；也没有 u 波段——需要 u 请换 `stripe82`（`u_h22`）或 `smss_dr4`/`splus_dr4`。",
+  "http_requests": 0,
+  "s1_events": [],
+  "parse_warnings": [],
+  "run_id": "2026-10-20-sb3-r3",
+  "attempt": 3,
+  "model_id": "DeepSeek-V4.1-Flash",
+  "system_prompt_version": "沙箱预填最小版 v2（tools.schema.json @ 20cb4e4cf61ea2be）",
+  "source": "live-run",
+  "batch": "repro",
+  "sandbox": "<USER_HOME>\\E1-答题沙箱-2026-10-17\\_repro\\data\\sb3",
+  "answered_at": "2026-10-20T05:44:11.785742Z"
+}

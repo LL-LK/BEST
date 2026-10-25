@@ -1,0 +1,207 @@
+# contracts/measurements/sort-columns.yaml —— 排序列的**实测**登记表
+#
+# 职责: 记录「某一列在某张表的某次真实回包里到底有没有值」这一**实测事实**,
+#   使 `src/protocol.py` 的 PAGINATION_SORT_COLUMNS 有据可依, 而不是靠注释里的
+#   一次观测。断言从这份登记表取 (test/unit/client/test_client_pagination_sort.py),
+#   不再把结论硬编码在测试里。
+#
+# 为什么需要它: 2026-10-07 查出 `known_empty = {"ps1_source_id","uss_dr1_ra_u"}`
+#   这条断言**两条都被证伪** ——
+#     · `ps1_source_id` 的空值率**位置相关**: (180,30) 样本 0/1000 非空,
+#       而 (286.1,15.7) 实测 128 行非空 ⇒ 它不是"恒空列", 只是那个天区恰好空。
+#     · `uss_dr1_ra_u` 在 96 列回包里**根本不存在同名列** (回包是裸名 `ra_u`)
+#       ⇒ 它不是"空列", 是**登记名写错**。把"不存在"混进"恒空"是两种病。
+#
+# 口径 (判据写死在这里, 避免各处自己解释):
+#   · `present_in_payload`: 该列名是否出现在**回包表头**里。false = 登记名错,
+#     注入它服务端不会认。
+#   · 一行观测 = 一个 (catalog, region) 上的一次真实回包。`non_empty_rows` 是
+#     该列在**样本行**里非空的行数 (空串与字面 nan 都算空 —— 服务端两种都用)。
+#   · **没有观测 = 未知**, 不等于空。判据只看"已观测到的", 不把"没测到"当空列。
+#
+# 证据等级沿用 references §11 的四档: LIVE=真实请求+字节级产物 / SNAPSHOT=入库快照
+#   可当场复算 / TEMP=仅 temp 下观测, 换机拿不到 / UNTESTED=未取证。
+#
+# 维护: 实测后由 `python ops/gen_measurement_registry.py` 重算并覆写本文件
+#   (`--check` 只校验不写)。**手改本文件前先跑 `--check`** —— 它会报出与实测不符的条目。
+#
+# 禁版本号 (铁律 1): 本文件刻意不含 version / schema_version 键。
+#   它的"版本"是 git 提交本身。
+
+observations:
+- catalog: ps1
+  column: ps1_source_id
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  sample_rows: 174
+  non_empty_rows: 0
+  present_in_payload: true
+  evidence: SNAPSHOT
+  observed_on: '2026-10-04'
+  note: 该天区该样本内整列为空 —— 但这是**位置相关**, 不是该列的固有属性
+- catalog: ps1
+  column: ps1_source_id
+  ra: 286.1
+  dec: 15.7
+  radius_arcsec: 300.0
+  sample_rows: 300
+  non_empty_rows: 128
+  present_in_payload: true
+  evidence: TEMP
+  observed_on: '2026-10-05'
+  note: 同一列在另一天区**非空** ⇒ "恒空列"的说法被这条直接推翻
+- catalog: uss_dr1
+  column: uss_dr1_ra_u
+  ra: 120.3
+  dec: -20.4
+  radius_arcsec: 300.0
+  sample_rows: 1000
+  non_empty_rows: 0
+  present_in_payload: false
+  evidence: TEMP
+  observed_on: '2026-10-07'
+  note: 96 列回包里**没有这一列**; 裸名 ra_u 才有。服务端只认裸名
+- catalog: uss_dr1
+  column: ra_u
+  ra: 120.3
+  dec: -20.4
+  radius_arcsec: 300.0
+  sample_rows: 1000
+  non_empty_rows: 1000
+  present_in_payload: true
+  evidence: TEMP
+  observed_on: '2026-10-07'
+  note: PAGINATION_SORT_COLUMNS 实际登记值 (裸名), 1000/1000 非空
+- catalog: dr3xpcorr
+  column: gaiaxp_photinfo_replenish_source_id
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 300.0
+  sample_rows: 1
+  non_empty_rows: 1
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
+- catalog: gaia_dr3_18
+  column: gaia_dr3_18_source_id
+  ra: 286.1
+  dec: 15.7
+  radius_arcsec: 300.0
+  sample_rows: 200
+  non_empty_rows: 200
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
+- catalog: jplus_dr3
+  column: jplus_dr3_ra
+  ra: 10.0
+  dec: -60.0
+  radius_arcsec: 300.0
+  sample_rows: 0
+  non_empty_rows: 0
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: 该天区 0 数据行 —— 只说明这里没数据, **不能**据此说列空; present_in_payload 来自表头, 仍有效
+- catalog: landolt
+  column: landolt_source_id
+  ra: 10.68
+  dec: 41.27
+  radius_arcsec: 300.0
+  sample_rows: 0
+  non_empty_rows: 0
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: 该天区 0 数据行 —— 只说明这里没数据, **不能**据此说列空; present_in_payload 来自表头, 仍有效
+- catalog: ps1
+  column: ps1_ra
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  sample_rows: 174
+  non_empty_rows: 174
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
+- catalog: scr_galah
+  column: scr_galah_source_id
+  ra: 120.0
+  dec: -20.4
+  radius_arcsec: 1800.0
+  sample_rows: 1
+  non_empty_rows: 1
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
+- catalog: scr_lamost
+  column: scr_lamost_source_id
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 1800.0
+  sample_rows: 137
+  non_empty_rows: 137
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: 换天区+放大半径复测
+- catalog: smss_dr4
+  column: smss_dr4_ra
+  ra: 120.3
+  dec: -20.4
+  radius_arcsec: 1800.0
+  sample_rows: 200
+  non_empty_rows: 200
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
+- catalog: splus_dr4
+  column: splus_dr4_id
+  ra: 120.3
+  dec: -20.4
+  radius_arcsec: 1800.0
+  sample_rows: 0
+  non_empty_rows: 0
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: 该天区 0 数据行 —— 只说明这里没数据, **不能**据此说列空; present_in_payload 来自表头, 仍有效
+- catalog: stripe82
+  column: stripe82_calibstars_id
+  ra: 30.0
+  dec: 0.0
+  radius_arcsec: 1800.0
+  sample_rows: 200
+  non_empty_rows: 200
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: 换天区复测
+- catalog: uss_dr1
+  column: ra_u
+  ra: 120.3
+  dec: -20.4
+  radius_arcsec: 300.0
+  sample_rows: 200
+  non_empty_rows: 200
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
+- catalog: xpsp
+  column: gaiaxp_photinfo_replenish_source_id
+  ra: 10.68
+  dec: 41.27
+  radius_arcsec: 300.0
+  sample_rows: 200
+  non_empty_rows: 200
+  present_in_payload: true
+  evidence: LIVE
+  observed_on: '2026-10-08'
+  note: ''
