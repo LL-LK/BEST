@@ -11,12 +11,20 @@
   ],
   "stats": {
     "files": 4206,
-    "bytes": 1092425494,
+    "bytes": 1092749864,
     "text_files": 3863,
     "binary_files": 43,
     "skipped_self": 106
   },
-  "identifying": [],
+  "identifying": [
+    [
+      "验收_stdout.txt",
+      14,
+      "工作区绝对路径",
+      "F:\\论文\\11_投稿包\\08_清单与SHA256\\验收结果报告.md",
+      "需人工确认"
+    ]
+  ],
   "non_identifying": [
     [
       "main.tex",

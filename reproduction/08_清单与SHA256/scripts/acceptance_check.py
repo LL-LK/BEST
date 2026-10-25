@@ -145,5 +145,5 @@ L += ['## 说明', '',
 out = os.path.join(PKG, '08_清单与SHA256', '验收结果报告.md')
 with open(out, 'w', encoding='utf-8') as f:
     f.write('\n'.join(L) + '\n')
-print('\n写出:', out)
+print('\n写出: 08_清单与SHA256/验收结果报告.md')
 print('总体:', '全部通过' if all(r[2] == 'PASS' for r in results) else '存在未通过项')
