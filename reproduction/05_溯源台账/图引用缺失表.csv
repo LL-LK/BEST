@@ -1,0 +1,7 @@
+﻿论文文件,论文行号,引用命令,引用参数,引用目标,解析后绝对路径,存在性,SHA256,字节数
+main.tex,130,\includegraphics,width=\textwidth,figures/fig1_architecture.pdf,<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\figures\fig1_architecture.pdf,存在,c33f1db234fd3a83c220a7303e16f2e5c2ea62054dc0b7d08729958467e862b8,239891
+main.tex,211,\includegraphics,width=0.96\textwidth,figures/fig2_data_model.png,<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\figures\fig2_data_model.png,存在,c61728803f2dd727eb26f646f556975222136074999f99d6bf15d83c9aac6e49,1108878
+main.tex,279,\includegraphics,width=\linewidth,figures/fig3_e1.pdf,<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\figures\fig3_e1.pdf,存在,9464428e8325b848bd92713c0dbc9e883f8eb102ec595bbefc46f01d6c91c8b2,73535
+main.tex,333,\includegraphics,width=\linewidth,figures/fig4_e3.pdf,<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\figures\fig4_e3.pdf,存在,603468b69ec2bd7e5775fd44a2395d6a26d0f43ba024a55c122d76a522658e29,88747
+main.tex,360,\includegraphics,width=\linewidth,figures/fig5_e4.pdf,<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\figures\fig5_e4.pdf,存在,364894e90cbcc6e1bde924169bec878c2074997e212445d25da0d7161db1587b,55028
+main.tex,438,\includegraphics,width=\linewidth,figures/fig6_e6.pdf,<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\figures\fig6_e6.pdf,存在,05b48dcfa4b85b70ade0edc7079364d953a4dcc484a0ecb70419e7abdf7f5cd4,43881

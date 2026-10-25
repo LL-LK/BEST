@@ -1,0 +1,12 @@
+﻿python : F:\����\11_Ͷ���\_work\_����\build_provenance_ledger.py:5: SyntaxWarning: invalid escape sequence '\_'
+所在位置 行:1 字符: 1
++ python '<WORKSPACE>\11_投稿包\_work\_复核\build_provenance_ledger.py' 2>&1 | Out ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (F:\����\11_Ͷ���...e sequence '\_':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  ������Դ��MCode ���Ự 2026-10-24 ������ʵ��Ķ������㣨_work\_����\ ���ĸ�����ű������ݺ˶� md����
+������: 59
+һ�����ж��ֲ�: {'һ��': 45, '�ھ���ͬ': 5, '��һ��': 6, '��֤��': 3}
+��ʵ��ֲ�: {'ȫ��': 5, 'E1': 7, 'E2': 4, 'E3': 14, 'E4': 7, 'E5': 9, 'E6': 9, '���ְ�': 2, '����': 1, '���': 1}
+д��: F:\����\11_Ͷ���\05_��Դ̨��\������Դ��.csv

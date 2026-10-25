@@ -1,0 +1,11 @@
+% 本机字体兼容：仅把缺失的 Unicode 下标字形映射为标准文本下标。
+% 不改变正文、公式含义或任何实验数值。
+\RequirePackage{newunicodechar}
+\newunicodechar{ₜ}{\textsubscript{t}}
+\newunicodechar{ⱼ}{\textsubscript{j}}
+
+% 仅在无商业字体的构建环境中启用兼容开源字体；投稿时请使用期刊指定的授权字体。
+\providecommand\WordSongFont{}
+\providecommand\WordHeiFont{}
+\providecommand\WordKaiFont{}
+\providecommand\WordFangFont{}

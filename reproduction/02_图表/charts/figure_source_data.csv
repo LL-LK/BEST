@@ -1,0 +1,29 @@
+﻿experiment,metric,value,scope
+E1,weighted_mean,0.9529761904761905,three answer sets
+E1,median_aggregate,0.975,per task per dimension median
+E1,toolset,0.9404761904761905,mean across answer sets
+E1,param,0.9658730158730159,mean across answer sets
+E1,convert,1.0,mean across answer sets
+E1,redundant,0.9880952380952381,mean across answer sets
+E1,clarify,0.8333333333333333,mean across answer sets
+E1,reject,0.9722222222222222,mean across answer sets
+E3,S-A_sfa,0.9014084507042254,archived v54 values
+E3,S-A_ungr,0.07142857142857142,archived v54 values
+E3,S-A_ucr,0.3026315789473684,archived v54 values
+E3,S-A_slr,0.0,archived v54 values
+E3,S-A_rqc,0.958904109589041,archived v54 values
+E3,S-A_pass_rate,0.8125,archived v54 values
+E3,S-B_sfa,0.6619718309859155,archived v54 values
+E3,S-B_ungr,0.15680473372781065,archived v54 values
+E3,S-B_ucr,0.42727272727272725,archived v54 values
+E3,S-B_slr,0.14285714285714285,archived v54 values
+E3,S-B_rqc,0.8767123287671232,archived v54 values
+E3,S-B_pass_rate,0.40625,archived v54 values
+E4,protocol,1.0,authoritative r1 batch
+E4,language,0.7428571428571429,authoritative r1 batch
+E6,TSC,0.8636904761904762,archived v54 values
+E6,PAC_call,0.85375,archived v54 values
+E6,RDC,0.7285714285714286,archived v54 values
+E6,FCC,0.8672619047619048,archived v54 values
+E5,B2b,0.9755859375,"formal primary, program verified"
+E5,B3_compact,0.9716796875,"formal primary, program verified"

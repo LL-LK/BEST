@@ -1,0 +1,336 @@
+{
+  "source_file": "<WORKSPACE>\\04_实验数据\\E5_消融\\正式结果_2026-10-12\\scores.json",
+  "source_sha256": "2A030FB9E6F5A362A2F5DC485E01C5B1E5ECE8EF6AB1735596DFF9CA6DA75A5C",
+  "method": {
+    "unit": "task; three repetitions first averaged within task and arm",
+    "sign_flip": "exact paired sign-flip on per-task integer count differences, |sum| statistic, zero differences retain equal task weight",
+    "bootstrap": "task-cluster bootstrap, 10000 resamples, seed=20261012, percentile 2.5/97.5",
+    "multiplicity": "Holm monotone adjustment over the 6-ablation family (A1-A6); primary B3-B2b and length control excluded from the family"
+  },
+  "primary_B3_minus_B2b": {
+    "left": "B3",
+    "right": "B2b",
+    "n_tasks": 56,
+    "left_rate": 0.5654761904761905,
+    "right_rate": 0.49404761904761907,
+    "delta_pp": 7.142857142857142,
+    "task_cluster_bootstrap_95_ci_pp": [
+      0.0,
+      14.88
+    ],
+    "p_exact_paired_sign_flip": 0.08848190307617188,
+    "nonzero_task_diffs": 19
+  },
+  "baselines_B3_vs": {
+    "B0": {
+      "left": "B3",
+      "right": "B0",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.17261904761904762,
+      "delta_pp": 39.285714285714285,
+      "task_cluster_bootstrap_95_ci_pp": [
+        27.38,
+        51.19
+      ],
+      "p_exact_paired_sign_flip": 1.7413549358025193e-07,
+      "nonzero_task_diffs": 38
+    },
+    "B1": {
+      "left": "B3",
+      "right": "B1",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.2619047619047619,
+      "delta_pp": 30.357142857142854,
+      "task_cluster_bootstrap_95_ci_pp": [
+        19.64,
+        41.07
+      ],
+      "p_exact_paired_sign_flip": 1.5385448932647705e-06,
+      "nonzero_task_diffs": 34
+    },
+    "B2a": {
+      "left": "B3",
+      "right": "B2a",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.4880952380952381,
+      "delta_pp": 7.738095238095237,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -1.79,
+        17.26
+      ],
+      "p_exact_paired_sign_flip": 0.15014219284057617,
+      "nonzero_task_diffs": 24
+    }
+  },
+  "ablations_B3_vs": {
+    "A1": {
+      "left": "B3",
+      "right": "A1",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.5297619047619048,
+      "delta_pp": 3.571428571428571,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -3.57,
+        11.9
+      ],
+      "p_exact_paired_sign_flip": 0.46097564697265625,
+      "nonzero_task_diffs": 19,
+      "holm": {
+        "p_raw": 0.46097564697265625,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A2": {
+      "left": "B3",
+      "right": "A2",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.5416666666666666,
+      "delta_pp": 2.380952380952381,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -4.76,
+        9.52
+      ],
+      "p_exact_paired_sign_flip": 0.6420612335205078,
+      "nonzero_task_diffs": 23,
+      "holm": {
+        "p_raw": 0.6420612335205078,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A3": {
+      "left": "B3",
+      "right": "A3",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.5357142857142857,
+      "delta_pp": 2.9761904761904763,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -4.17,
+        10.71
+      ],
+      "p_exact_paired_sign_flip": 0.5601882934570312,
+      "nonzero_task_diffs": 20,
+      "holm": {
+        "p_raw": 0.5601882934570312,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A4": {
+      "left": "B3",
+      "right": "A4",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.5535714285714286,
+      "delta_pp": 1.1904761904761905,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -5.95,
+        7.74
+      ],
+      "p_exact_paired_sign_flip": 0.8692383766174316,
+      "nonzero_task_diffs": 24,
+      "holm": {
+        "p_raw": 0.8692383766174316,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A5": {
+      "left": "B3",
+      "right": "A5",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.5833333333333333,
+      "delta_pp": -1.7857142857142856,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -8.33,
+        4.76
+      ],
+      "p_exact_paired_sign_flip": 0.7418651580810547,
+      "nonzero_task_diffs": 21,
+      "holm": {
+        "p_raw": 0.7418651580810547,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A6": {
+      "left": "B3",
+      "right": "A6",
+      "n_tasks": 56,
+      "left_rate": 0.5654761904761905,
+      "right_rate": 0.5297619047619048,
+      "delta_pp": 3.571428571428571,
+      "task_cluster_bootstrap_95_ci_pp": [
+        -2.98,
+        10.71
+      ],
+      "p_exact_paired_sign_flip": 0.426422119140625,
+      "nonzero_task_diffs": 18,
+      "holm": {
+        "p_raw": 0.426422119140625,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    }
+  },
+  "length_control_A2_minus_sham": {
+    "left": "A2",
+    "right": "sham",
+    "n_tasks": 56,
+    "left_rate": 0.5416666666666666,
+    "right_rate": 0.5416666666666666,
+    "delta_pp": 0.0,
+    "task_cluster_bootstrap_95_ci_pp": [
+      -4.76,
+      4.76
+    ],
+    "p_exact_paired_sign_flip": 1.0,
+    "nonzero_task_diffs": 15
+  },
+  "descriptive_rates": {
+    "B0": 0.172619,
+    "B1": 0.261905,
+    "B2a": 0.488095,
+    "B2b": 0.494048,
+    "B3": 0.565476,
+    "A1": 0.529762,
+    "A2": 0.541667,
+    "A3": 0.535714,
+    "A4": 0.553571,
+    "A5": 0.583333,
+    "A6": 0.529762,
+    "sham": 0.541667
+  },
+  "descriptive_usage": {
+    "B0": {
+      "mean_tool_calls": 0.0,
+      "mean_output_tokens": 1372.8512
+    },
+    "B1": {
+      "mean_tool_calls": 0.0,
+      "mean_output_tokens": 1560.881
+    },
+    "B2a": {
+      "mean_tool_calls": 14.0714,
+      "mean_output_tokens": 5569.494
+    },
+    "B2b": {
+      "mean_tool_calls": 7.2262,
+      "mean_output_tokens": 4036.8036
+    },
+    "B3": {
+      "mean_tool_calls": 4.8452,
+      "mean_output_tokens": 3534.7738
+    },
+    "A1": {
+      "mean_tool_calls": 5.8929,
+      "mean_output_tokens": 3599.006
+    },
+    "A2": {
+      "mean_tool_calls": 4.756,
+      "mean_output_tokens": 3535.1369
+    },
+    "A3": {
+      "mean_tool_calls": 5.1667,
+      "mean_output_tokens": 3550.4167
+    },
+    "A4": {
+      "mean_tool_calls": 5.0298,
+      "mean_output_tokens": 3593.375
+    },
+    "A5": {
+      "mean_tool_calls": 3.8929,
+      "mean_output_tokens": 3214.7083
+    },
+    "A6": {
+      "mean_tool_calls": 5.6964,
+      "mean_output_tokens": 3630.9345
+    },
+    "sham": {
+      "mean_tool_calls": 5.5536,
+      "mean_output_tokens": 3508.0893
+    }
+  },
+  "headline_reduction_checks": {
+    "tool_calls_B3_minus_B2b_pct": 32.9495,
+    "output_tokens_B3_minus_B2b_pct": 12.4363
+  },
+  "by_decision_class": {
+    "clarification": {
+      "n_tasks": 7,
+      "rates": {
+        "B0": 0.095238,
+        "B1": 0.047619,
+        "B2a": 0.285714,
+        "B2b": 0.285714,
+        "B3": 0.380952,
+        "A1": 0.285714,
+        "A2": 0.285714,
+        "A3": 0.238095,
+        "A4": 0.333333,
+        "A5": 0.428571,
+        "A6": 0.142857,
+        "sham": 0.333333
+      }
+    },
+    "data": {
+      "n_tasks": 11,
+      "rates": {
+        "B0": 0.0,
+        "B1": 0.0,
+        "B2a": 0.363636,
+        "B2b": 0.666667,
+        "B3": 0.575758,
+        "A1": 0.515152,
+        "A2": 0.545455,
+        "A3": 0.515152,
+        "A4": 0.666667,
+        "A5": 0.545455,
+        "A6": 0.515152,
+        "sham": 0.515152
+      }
+    },
+    "refusal": {
+      "n_tasks": 32,
+      "rates": {
+        "B0": 0.25,
+        "B1": 0.40625,
+        "B2a": 0.583333,
+        "B2b": 0.552083,
+        "B3": 0.65625,
+        "A1": 0.645833,
+        "A2": 0.6875,
+        "A3": 0.625,
+        "A4": 0.635417,
+        "A5": 0.708333,
+        "A6": 0.677083,
+        "sham": 0.697917
+      }
+    },
+    "semantic": {
+      "n_tasks": 6,
+      "rates": {
+        "B0": 0.166667,
+        "B1": 0.222222,
+        "B2a": 0.444444,
+        "B2b": 0.111111,
+        "B3": 0.277778,
+        "A1": 0.222222,
+        "A2": 0.055556,
+        "A3": 0.444444,
+        "A4": 0.166667,
+        "A5": 0.166667,
+        "A6": 0.222222,
+        "sham": 0.0
+      }
+    }
+  }
+}

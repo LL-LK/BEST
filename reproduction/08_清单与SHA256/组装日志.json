@@ -1,0 +1,325 @@
+{
+  "assembled_at": "2026-10-24T06:43:59",
+  "package_root": "<WORKSPACE>\\11_投稿包",
+  "stages": [
+    {
+      "stage": "稿件正文",
+      "source": "10_脱敏复现包\\BEST_v72_图2嵌入正文确认_20261023\\source",
+      "dest": "01_稿件",
+      "files": 27,
+      "bytes": 9428833,
+      "note": "v72 基线：main.tex + supplementary_material.tex + 编译类 + figures/（原样保留目录层级）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "图表源工程",
+      "source": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\图表源码",
+      "dest": "02_图表",
+      "files": 33,
+      "bytes": 596856,
+      "note": "图表生成器与 source_data.json（含 E1 三箱 0.9429/0.9607/0.9554 的图源数据）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "图表README",
+      "source": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\图表源码\\README.md",
+      "dest": "02_图表\\README.md",
+      "files": 0,
+      "bytes": 855,
+      "note": "",
+      "not_copied_large": []
+    },
+    {
+      "stage": "E1 实验产物",
+      "source": "04_实验数据\\E1_自然语言到工具调用\\实验产物",
+      "dest": "03_数据_E1-E6\\E1\\原始三链与判分器",
+      "files": 220,
+      "bytes": 2246914,
+      "note": "E1 原始三链（3333/4444/5555）证据，含 0.9089/0.9089/0.9446 旧链评分与维度分数报告",
+      "not_copied_large": []
+    },
+    {
+      "stage": "E1 重新判分证据",
+      "source": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence",
+      "dest": "03_数据_E1-E6\\E1\\v55_重新判分_20261020",
+      "files": 8,
+      "bytes": 196839,
+      "note": "★论文口径证据：E1_summary.json / E1_sb1-sb3 / E1_combined / E1_tasks.yaml / 判分报告-三箱-2026-10-20.md / 泄漏检查-三箱-2026-10-20.md。注意：同目录另有 E4/E5/E6/formal-scores 等其他实验证据，本包只取 E1_* 与判分报告-三箱、泄漏检查-三箱",
+      "not_copied_large": [
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\ACTUAL-BUDGET-AUDIT.json",
+          "bytes": 430
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\drive_analysis.json",
+          "bytes": 20081
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\drive_report.md",
+          "bytes": 5168
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\drive_scores.csv",
+          "bytes": 236476
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\E4_authoritative_r1.md",
+          "bytes": 12490
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\E5_development_analysis.json",
+          "bytes": 1122
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\E5_historical_analysis.json",
+          "bytes": 20081
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\formal-analysis.json",
+          "bytes": 4453
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\formal-scores.json",
+          "bytes": 3298027
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\input_sha256.json",
+          "bytes": 187
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\POSTRUN-INTEGRITY.json",
+          "bytes": 836
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\PREREGISTRATION.md",
+          "bytes": 4044
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\scoring.receipt.json",
+          "bytes": 88
+        },
+        {
+          "path": "10_脱敏复现包\\BEST_v55_实验更新_20261020\\BEST_v55\\evidence\\SUSPEND-TIMING-DEVIATIONS.json",
+          "bytes": 1667
+        }
+      ]
+    },
+    {
+      "stage": "E2 冻结确认性实验",
+      "source": "04_实验数据\\E2_结果一致性\\实验产物",
+      "dest": "03_数据_E1-E6\\E2",
+      "files": 397,
+      "bytes": 144501865,
+      "note": "E2 v2 冻结快照确认性重跑：accepted_run(results.json 21/21、63/63)、gold、scenarios、snapshots、operations、code、preregistration",
+      "not_copied_large": []
+    },
+    {
+      "stage": "E3 实验产物",
+      "source": "04_实验数据\\E3_科学忠实性\\实验产物",
+      "dest": "03_数据_E1-E6\\E3",
+      "files": 66,
+      "bytes": 6721811,
+      "note": "E3 全部实验产物：01_当前结果（指标汇总/主测分母/main-recomputed）、02_教师反馈、03_四条核验、04_匿名审核材料、05_原始实验归档",
+      "not_copied_large": [
+        {
+          "path": "04_实验数据\\E3_科学忠实性\\实验产物\\05_原始实验归档\\original-evidence.tar.gz",
+          "bytes": 19771660
+        }
+      ]
+    },
+    {
+      "stage": "E4 实验产物",
+      "source": "04_实验数据\\E4_鲁棒性与安全性\\实验产物",
+      "dest": "03_数据_E1-E6\\E4",
+      "files": 326,
+      "bytes": 916448,
+      "note": "E4 全部实验产物：用例集与判据表、判定器与执行器、注入器夹具、r1 权威结果与逐条判定表",
+      "not_copied_large": []
+    },
+    {
+      "stage": "E5 正式结果与成果",
+      "source": "04_实验数据\\E5_消融",
+      "dest": "03_数据_E1-E6\\E5",
+      "files": 522,
+      "bytes": 764762269,
+      "note": "E5 确认性消融：正式结果_2026-10-12（scores.json 2016 格）、论文成果、复现脚本、执行过程。执行过程_v4_01 的过程日志体积大，按复现必检原则保留全部",
+      "not_copied_large": []
+    },
+    {
+      "stage": "E6 实验产物",
+      "source": "04_实验数据\\E6_可复现性\\实验产物",
+      "dest": "03_数据_E1-E6\\E6",
+      "files": 62,
+      "bytes": 9353081,
+      "note": "E6 全部实验产物：01_当前R3补测（论文所报告批次）、02_原批次结果与原始归档（含 69 次 HTTP 402 的 R3-audit.json）、辅助程序。两处大体积原始证据归档不复制，见 08_清单与SHA256 的指针",
+      "not_copied_large": [
+        {
+          "path": "04_实验数据\\E6_可复现性\\实验产物\\02_原批次结果与原始归档\\original-evidence.tar.gz",
+          "bytes": 78745536
+        },
+        {
+          "path": "04_实验数据\\E6_可复现性\\实验产物\\03_补测原始证据\\E6-R3-supplement-20261011-1791689271010679000-原始证据.zip",
+          "bytes": 70429564
+        }
+      ]
+    },
+    {
+      "stage": "被测对象源码仓",
+      "source": "04_实验数据\\00_共享底座\\astro-best_skill源码仓",
+      "dest": "04_复现源码\\astro-best_skill源码仓",
+      "files": 2901,
+      "bytes": 363820575,
+      "note": "被测对象本体（2901 文件）。整仓保留相对依赖，未拆分",
+      "not_copied_large": []
+    },
+    {
+      "stage": "最小复现包_E1",
+      "source": "10_脱敏复现包\\E1_最小复现包.zip",
+      "dest": "04_复现源码\\最小复现包\\E1_最小复现包.zip",
+      "files": 1,
+      "bytes": 3178778,
+      "note": "脱敏版最小复现包（E1）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "最小复现包_E2",
+      "source": "10_脱敏复现包\\E2_最小复现包.zip",
+      "dest": "04_复现源码\\最小复现包\\E2_最小复现包.zip",
+      "files": 1,
+      "bytes": 52173004,
+      "note": "脱敏版最小复现包（E2）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "最小复现包_E3",
+      "source": "10_脱敏复现包\\E3_最小复现包.zip",
+      "dest": "04_复现源码\\最小复现包\\E3_最小复现包.zip",
+      "files": 1,
+      "bytes": 23464611,
+      "note": "脱敏版最小复现包（E3）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "最小复现包_E4",
+      "source": "10_脱敏复现包\\E4_最小复现包.zip",
+      "dest": "04_复现源码\\最小复现包\\E4_最小复现包.zip",
+      "files": 1,
+      "bytes": 2719312,
+      "note": "脱敏版最小复现包（E4）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "最小复现包_E5",
+      "source": "10_脱敏复现包\\E5_最小复现包.zip",
+      "dest": "04_复现源码\\最小复现包\\E5_最小复现包.zip",
+      "files": 1,
+      "bytes": 229049670,
+      "note": "脱敏版最小复现包（E5）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "最小复现包_E6",
+      "source": "10_脱敏复现包\\E6_最小复现包.zip",
+      "dest": "04_复现源码\\最小复现包\\E6_最小复现包.zip",
+      "files": 1,
+      "bytes": 148191554,
+      "note": "脱敏版最小复现包（E6）",
+      "not_copied_large": []
+    },
+    {
+      "stage": "替换规则表",
+      "source": "10_脱敏复现包\\REPLACEMENT-RULES.md",
+      "dest": "04_复现源码\\REPLACEMENT-RULES.md",
+      "files": 1,
+      "bytes": 4262,
+      "note": "",
+      "not_copied_large": []
+    },
+    {
+      "stage": "脱敏日志",
+      "source": "10_脱敏复现包\\DESENSITIZATION-LOG.md",
+      "dest": "04_复现源码\\DESENSITIZATION-LOG.md",
+      "files": 1,
+      "bytes": 32718,
+      "note": "",
+      "not_copied_large": []
+    },
+    {
+      "stage": "主会话独立复核件",
+      "source": "11_投稿包\\_work\\_复核",
+      "dest": "05_溯源台账\\主会话独立复算件",
+      "files": 17,
+      "bytes": 123530,
+      "note": "MCode 主会话 2026-10-24 的四个独立复算脚本与三份口径核对 md",
+      "not_copied_large": []
+    },
+    {
+      "stage": "替换规则表",
+      "source": "10_脱敏复现包\\REPLACEMENT-RULES.md",
+      "dest": "07_脱敏与README\\REPLACEMENT-RULES.md",
+      "files": 1,
+      "bytes": 4262,
+      "note": "",
+      "not_copied_large": []
+    },
+    {
+      "stage": "脱敏日志",
+      "source": "10_脱敏复现包\\DESENSITIZATION-LOG.md",
+      "dest": "07_脱敏与README\\DESENSITIZATION-LOG.md",
+      "files": 1,
+      "bytes": 32718,
+      "note": "",
+      "not_copied_large": []
+    },
+    {
+      "stage": "脱敏总览",
+      "source": "10_脱敏复现包\\README-总览.md",
+      "dest": "07_脱敏与README\\README-脱敏总览.md",
+      "files": 1,
+      "bytes": 4346,
+      "note": "",
+      "not_copied_large": []
+    }
+  ],
+  "totals": {
+    "files": 4590,
+    "bytes": 1761524256
+  },
+  "not_copied_large_files": [
+    {
+      "path": "04_实验数据\\E3_科学忠实性\\实验产物\\05_原始实验归档\\original-evidence.tar.gz",
+      "bytes": 19771660,
+      "sha256": "8B399042A7C5DE5AA8D9571395FB4C5487F73247F93786A5C1CF68BD57CCB417"
+    },
+    {
+      "path": "04_实验数据\\E6_可复现性\\实验产物\\02_原批次结果与原始归档\\original-evidence.tar.gz",
+      "bytes": 78745536,
+      "sha256": "8BB21F69B883D21B103EF86FDCE3ADBD71D7745E1823F3164DF76CD8848221A4"
+    },
+    {
+      "path": "04_实验数据\\E6_可复现性\\实验产物\\03_补测原始证据\\E6-R3-supplement-20261011-1791689271010679000-原始证据.zip",
+      "bytes": 70429564,
+      "sha256": "38D5CFF6EAB953324B67C350992FEF4FD2704E41959DE90236BB5D4FF2DB1704"
+    },
+    {
+      "path": "10_脱敏复现包\\六个实验最小复现包_脱敏版_20261013.zip",
+      "bytes": 456863497,
+      "sha256": "3AA315CF2C8D4885B58F18F6F663B0FF541BF1C934F1352A80B3F8C4BE8AC31B"
+    },
+    {
+      "path": "10_脱敏复现包\\_build\\E3_最小复现包\\03-E3-科学忠实性\\05_原始实验归档\\original-evidence.tar.gz",
+      "bytes": 19705550,
+      "sha256": "8DFD968EA50A4FCBF49D441FB69CFCD01D1780BC1D905C51C8933F66B6394861"
+    },
+    {
+      "path": "10_脱敏复现包\\_build\\E6_最小复现包\\03-E6-可复现性\\02_原批次结果与原始归档\\original-evidence.tar.gz",
+      "bytes": 77836570,
+      "sha256": "BAC1BA62B79F9C472CABF9AFF6340241EC7965F0E4AF1BEE290E97EB78852F83"
+    },
+    {
+      "path": "10_脱敏复现包\\_build\\E6_最小复现包\\03-E6-可复现性\\03_补测原始证据\\E6-R3-supplement-20261011-1791689271010679000-原始证据.zip",
+      "bytes": 70428393,
+      "sha256": "E54A63631BFEF625A3198A9E7569EB2534909B7CAF354CA25138D6D748D00FC4"
+    }
+  ]
+}

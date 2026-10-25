@@ -1,0 +1,83 @@
+﻿{
+  "three_batch_weighted": [
+    0.908929,
+    0.908929,
+    0.944643
+  ],
+  "mean_of_three": 0.9208333333333334,
+  "sample_stdev_of_three": 0.020619652471058052,
+  "paper_mean": 0.953,
+  "verdict_per_batch": [
+    {
+      "batch": "3333",
+      "archive": 0.9089,
+      "paper": 0.9429,
+      "match": false
+    },
+    {
+      "batch": "4444",
+      "archive": 0.9089,
+      "paper": 0.9607,
+      "match": false
+    },
+    {
+      "batch": "5555",
+      "archive": 0.9446,
+      "paper": 0.9554,
+      "match": false
+    }
+  ],
+  "recomputed_dim_means_across_batches": {
+    "toolset": 0.837302,
+    "param": 1.0,
+    "convert": 1.0,
+    "redundant": 1.0,
+    "clarify": 0.904762,
+    "reject": 0.791667
+  },
+  "verdict_dims": {
+    "toolset": {
+      "archive": 0.8373,
+      "paper": 0.9405,
+      "match": false
+    },
+    "param": {
+      "archive": 1.0,
+      "paper": 0.9659,
+      "match": false
+    },
+    "convert": {
+      "archive": 1.0,
+      "paper": 1.0,
+      "match": true
+    },
+    "redundant": {
+      "archive": 1.0,
+      "paper": 0.9881,
+      "match": false
+    },
+    "clarify": {
+      "archive": 0.9048,
+      "paper": 0.8333,
+      "match": false
+    },
+    "reject": {
+      "archive": 0.7917,
+      "paper": 0.9722,
+      "match": false
+    }
+  },
+  "median_aggregation": {
+    "dims": {
+      "toolset": 0.785714,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": 0.857143,
+      "reject": 0.875
+    },
+    "weighted": 0.9089285714285714,
+    "paper_weighted": 0.975,
+    "match": false
+  }
+}

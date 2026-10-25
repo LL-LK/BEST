@@ -75,37 +75,40 @@ BEST 是一个测光标准星数据库，**不提供逐历元时序**，也**不
 
 ```bash
 # E1 判定器接线检查
-pytest evals/nl2tool -q --co            # → 159 tests collected
-
-# E2 冻结快照回放核验
-python reproduce_e2.py --verify-only    # → 冻结输入 / 代码 / Gold 全部一致
+pytest skill/evals/nl2tool -q --co            # → 159 tests collected
 
 # E4 接线检查
-pytest evals/robustness -q --co         # → 53 tests collected
+pytest skill/evals/robustness -q --co         # → 53 tests collected
+
+# E2 冻结快照回放核验
+python skill/reproduce_e2.py --verify-only    # → 冻结输入 / 代码 / Gold 全部一致
 ```
 
 ### 4.2 统计量独立复算（随包提供脚本）
 
 ```bash
 # E5 全量统计复算：2016 格 → 各臂通过率、精确配对符号翻转、Holm、bootstrap CI
-python 05_溯源台账/主会话独立复算件/verify_e5_independent.py
-python 05_溯源台账/主会话独立复算件/verify_e5_contrasts.py
+python reproduction/05_溯源台账/主会话独立复算件/verify_e5_independent.py
+python reproduction/05_溯源台账/主会话独立复算件/verify_e5_contrasts.py
 
 # E1 三箱加权分复算（旧链 vs 论文口径，两套不可混用）
-python 05_溯源台账/主会话独立复算件/verify_e1_batches.py
+python reproduction/05_溯源台账/主会话独立复算件/verify_e1_batches.py
 ```
 
 ### 4.3 投稿包自身的机器验收
 
 ```bash
 # 隐私扫描（识别性命中应为 0）
-python 08_清单与SHA256/scripts/scan_privacy.py 01_稿件 02_图表 03_数据_E1-E6 04_复现源码 05_溯源台账 06_专家盲评包 07_脱敏与README 08_清单与SHA256
+python reproduction/08_清单与SHA256/scripts/scan_privacy.py \
+    reproduction/01_稿件 reproduction/02_图表 reproduction/03_数据_E1-E6 \
+    reproduction/04_复现源码 reproduction/05_溯源台账 reproduction/06_专家盲评包 \
+    reproduction/07_脱敏与README reproduction/08_清单与SHA256
 
 # 六项结构与可复现性验收
-python 08_清单与SHA256/scripts/acceptance_check.py
+python reproduction/08_清单与SHA256/scripts/acceptance_check.py
 
 # 逐文件 SHA256 清单
-python 08_清单与SHA256/scripts/build_manifest.py
+python reproduction/08_清单与SHA256/scripts/build_manifest.py
 ```
 
 ### 4.4 需要模型凭据的部分

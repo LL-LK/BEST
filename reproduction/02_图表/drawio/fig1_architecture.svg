@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 920" width="1536" height="920">
+  <defs>
+    <linearGradient id="grad0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DEEFFD" />
+      <stop offset="100%" stop-color="#E3F4FE" />
+    </linearGradient>
+    <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF6FF" />
+      <stop offset="100%" stop-color="#DEEFFA" />
+    </linearGradient>
+    <linearGradient id="grad7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF6FF" />
+      <stop offset="100%" stop-color="#DEEFFA" />
+    </linearGradient>
+    <linearGradient id="grad11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF6FF" />
+      <stop offset="100%" stop-color="#DEEFFA" />
+    </linearGradient>
+    <linearGradient id="grad15" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF6FF" />
+      <stop offset="100%" stop-color="#DEEFFA" />
+    </linearGradient>
+    <linearGradient id="grad19" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF6FF" />
+      <stop offset="100%" stop-color="#DEEFFA" />
+    </linearGradient>
+    <linearGradient id="grad22" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EAF7FF" />
+      <stop offset="100%" stop-color="#F5FBFF" />
+    </linearGradient>
+    <linearGradient id="grad23" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DDF2FE" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad24" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF2DF" />
+      <stop offset="100%" stop-color="#FFF9F0" />
+    </linearGradient>
+    <linearGradient id="grad25" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF1DC" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad26" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDF9EF" />
+      <stop offset="100%" stop-color="#F6FCF6" />
+    </linearGradient>
+    <linearGradient id="grad27" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E6F4E9" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad37" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6FBFF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad41" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6FBFF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad45" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6FBFF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad49" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6FBFF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad53" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6FBFF" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="grad92" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8F6FF" />
+      <stop offset="100%" stop-color="#DFF2FF" />
+    </linearGradient>
+    <linearGradient id="grad95" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad107" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad113" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad118" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad126" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad132" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad140" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4FAFF" />
+    </linearGradient>
+    <linearGradient id="grad150" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E9F6FF" />
+      <stop offset="100%" stop-color="#E2F2FF" />
+    </linearGradient>
+    <linearGradient id="grad153" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F5F0FF" />
+    </linearGradient>
+    <linearGradient id="grad154" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DCD2F8" />
+      <stop offset="100%" stop-color="#EBE6FC" />
+    </linearGradient>
+    <linearGradient id="grad161" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF2E2" />
+      <stop offset="100%" stop-color="#FFF6EC" />
+    </linearGradient>
+    <linearGradient id="grad163" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCE3C6" />
+      <stop offset="100%" stop-color="#FFF9F2" />
+    </linearGradient>
+    <linearGradient id="grad169" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DDEFFF" />
+      <stop offset="100%" stop-color="#EFF8FF" />
+    </linearGradient>
+    <linearGradient id="grad174" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBE1CC" />
+      <stop offset="100%" stop-color="#FFF9F2" />
+    </linearGradient>
+    <linearGradient id="grad191" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8F5FF" />
+      <stop offset="100%" stop-color="#F7FCFF" />
+    </linearGradient>
+    <linearGradient id="grad211" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F9FFFA" />
+    </linearGradient>
+    <linearGradient id="grad218" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2FAF3" />
+    </linearGradient>
+    <linearGradient id="grad221" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2FAF3" />
+    </linearGradient>
+    <linearGradient id="grad224" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2FAF3" />
+    </linearGradient>
+    <linearGradient id="grad227" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2FAF3" />
+    </linearGradient>
+    <linearGradient id="grad230" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2FAF3" />
+    </linearGradient>
+    <linearGradient id="grad233" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F2FAF3" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1536" height="920" fill="#FFFFFF" />
+  <rect x="25" y="10" width="1486" height="152" rx="9" ry="9" fill="url(#grad0)" stroke="#46AFF5" stroke-width="1.5" />
+  <text x="768.0" y="48.45" font-family="Microsoft YaHei, sans-serif" font-size="26" font-weight="700" fill="#131920" text-anchor="middle">五状态执行控制  (Five-State Execution Control)</text>
+  <rect x="287" y="64" width="962" height="92" rx="12" ry="12" fill="#FFFFFF" stroke="#9ACBF5" stroke-width="1" />
+  <rect x="315" y="77" width="149" height="69" rx="9" ry="9" fill="url(#grad3)" stroke="#2180D4" stroke-width="1.5" />
+  <text x="389.5" y="104.3" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#131920" text-anchor="middle">接收</text>
+  <text x="389.5" y="131.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#121720" text-anchor="middle">INTAKE</text>
+  <line x1="472" y1="111" x2="508" y2="111" stroke="#265D9B" stroke-width="3" stroke-linecap="round" />
+  <polygon points="508.00,111.00 494.00,103.00 494.00,119.00" fill="#265D9B" />
+  <rect x="506" y="77" width="149" height="69" rx="9" ry="9" fill="url(#grad7)" stroke="#2180D4" stroke-width="1.5" />
+  <text x="580.5" y="104.3" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#131920" text-anchor="middle">校验</text>
+  <text x="580.5" y="131.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#121720" text-anchor="middle">VALIDATE</text>
+  <line x1="663" y1="111" x2="699" y2="111" stroke="#265D9B" stroke-width="3" stroke-linecap="round" />
+  <polygon points="699.00,111.00 685.00,103.00 685.00,119.00" fill="#265D9B" />
+  <rect x="697" y="77" width="149" height="69" rx="9" ry="9" fill="url(#grad11)" stroke="#2180D4" stroke-width="1.5" />
+  <text x="771.5" y="104.3" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#131920" text-anchor="middle">执行</text>
+  <text x="771.5" y="131.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#121720" text-anchor="middle">EXECUTE</text>
+  <line x1="854" y1="111" x2="890" y2="111" stroke="#265D9B" stroke-width="3" stroke-linecap="round" />
+  <polygon points="890.00,111.00 876.00,103.00 876.00,119.00" fill="#265D9B" />
+  <rect x="888" y="77" width="149" height="69" rx="9" ry="9" fill="url(#grad15)" stroke="#2180D4" stroke-width="1.5" />
+  <text x="962.5" y="104.3" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#131920" text-anchor="middle">门禁</text>
+  <text x="962.5" y="131.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#121720" text-anchor="middle">GATE</text>
+  <line x1="1045" y1="111" x2="1081" y2="111" stroke="#265D9B" stroke-width="3" stroke-linecap="round" />
+  <polygon points="1081.00,111.00 1067.00,103.00 1067.00,119.00" fill="#265D9B" />
+  <rect x="1079" y="77" width="149" height="69" rx="9" ry="9" fill="url(#grad19)" stroke="#2180D4" stroke-width="1.5" />
+  <text x="1153.5" y="104.3" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#131920" text-anchor="middle">输出</text>
+  <text x="1153.5" y="131.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#121720" text-anchor="middle">EMIT</text>
+  <rect x="26" y="175" width="309" height="735" rx="13" ry="13" fill="url(#grad22)" stroke="#2687DC" stroke-width="1.3" stroke-dasharray="5 4" />
+  <rect x="27" y="176" width="307" height="75" rx="12" ry="12" fill="url(#grad23)" stroke="none" stroke-width="0" />
+  <rect x="351" y="175" width="884" height="735" rx="14" ry="14" fill="url(#grad24)" stroke="#F19D30" stroke-width="1.3" stroke-dasharray="5 4" />
+  <rect x="352" y="176" width="882" height="75" rx="12" ry="12" fill="url(#grad25)" stroke="none" stroke-width="0" />
+  <rect x="1251" y="175" width="260" height="735" rx="14" ry="14" fill="url(#grad26)" stroke="#38985A" stroke-width="1.3" stroke-dasharray="5 4" />
+  <rect x="1252" y="176" width="258" height="75" rx="12" ry="12" fill="url(#grad27)" stroke="none" stroke-width="0" />
+  <text x="179.5" y="211.1" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#171C26" text-anchor="middle">输入契约</text>
+  <text x="178.0" y="238.8" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#171C26" text-anchor="middle">(Input Contract)</text>
+  <text x="794.0" y="210.5" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#191B1D" text-anchor="middle">执行与协议适配  (Execution and Protocol Adaptation)</text>
+  <text x="1381.5" y="212.1" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#151A19" text-anchor="middle">结果信封</text>
+  <text x="1382.0" y="239.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#161C19" text-anchor="middle">(Result Envelope)</text>
+  <ellipse cx="178.0" cy="274.55" rx="11.55" ry="11.55" opacity="1.0" fill="#245581" stroke="none" stroke-width="1" />
+  <rect x="158.05" y="287.15" width="39.9" height="17.85" rx="14.700000000000001" ry="14.700000000000001" fill="#245581" stroke="#245581" stroke-width="1" />
+  <text x="186.0" y="337.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#1B1C25" text-anchor="middle">自然语言请求</text>
+  <text x="181.5" y="368.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="400" fill="#1E2227" text-anchor="middle">(Natural Language Request)</text>
+  <rect x="54" y="399" width="261" height="74" rx="11" ry="11" fill="url(#grad37)" stroke="#287AC3" stroke-width="1.3" />
+  <text x="213.0" y="429.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#171C22" text-anchor="middle">参数解析</text>
+  <text x="213.5" y="457.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#1A1B22" text-anchor="middle">(Parameter Parsing)</text>
+  <line x1="180" y1="473" x2="180" y2="490" stroke="#245888" stroke-width="2.1" stroke-linecap="round" />
+  <polygon points="180.00,490.00 187.10,476.90 172.90,476.90" fill="#245888" />
+  <rect x="54" y="494" width="261" height="74" rx="11" ry="11" fill="url(#grad41)" stroke="#287AC3" stroke-width="1.3" />
+  <text x="213.0" y="524.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#171C22" text-anchor="middle">参数校验</text>
+  <text x="213.5" y="552.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#1A1B22" text-anchor="middle">(Parameter Validation)</text>
+  <line x1="180" y1="568" x2="180" y2="588" stroke="#245888" stroke-width="2.1" stroke-linecap="round" />
+  <polygon points="180.00,588.00 187.10,574.90 172.90,574.90" fill="#245888" />
+  <rect x="54" y="592" width="261" height="74" rx="11" ry="11" fill="url(#grad45)" stroke="#287AC3" stroke-width="1.3" />
+  <text x="213.0" y="622.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#171C22" text-anchor="middle">语义校验</text>
+  <text x="213.5" y="650.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#1A1B22" text-anchor="middle">(Semantic Validation)</text>
+  <line x1="180" y1="666" x2="180" y2="689" stroke="#245888" stroke-width="2.1" stroke-linecap="round" />
+  <polygon points="180.00,689.00 187.10,675.90 172.90,675.90" fill="#245888" />
+  <rect x="54" y="693" width="261" height="74" rx="11" ry="11" fill="url(#grad49)" stroke="#287AC3" stroke-width="1.3" />
+  <text x="213.0" y="723.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#171C22" text-anchor="middle">任务规划</text>
+  <text x="213.5" y="751.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#1A1B22" text-anchor="middle">(Task Planning)</text>
+  <line x1="180" y1="767" x2="180" y2="792" stroke="#245888" stroke-width="2.1" stroke-linecap="round" />
+  <polygon points="180.00,792.00 187.10,778.90 172.90,778.90" fill="#245888" />
+  <rect x="54" y="796" width="261" height="74" rx="11" ry="11" fill="url(#grad53)" stroke="#287AC3" stroke-width="1.3" />
+  <text x="213.0" y="826.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#171C22" text-anchor="middle">执行准备</text>
+  <text x="213.5" y="854.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#1A1B22" text-anchor="middle">(Execution Preparation)</text>
+  <line x1="180" y1="372" x2="180" y2="394" stroke="#245581" stroke-width="2.1" stroke-linecap="round" />
+  <polygon points="180.00,394.00 187.10,380.90 172.90,380.90" fill="#245581" />
+  <rect x="75" y="417" width="25.6" height="31.200000000000003" rx="3.2" ry="3.2" fill="#FFFFFF" stroke="#26557F" stroke-width="2.4000000000000004" />
+  <line x1="80.6" y1="425.0" x2="95.0" y2="425.0" stroke="#26557F" stroke-width="2.4000000000000004" stroke-linecap="round" />
+  <line x1="80.6" y1="432.2" x2="95.0" y2="432.2" stroke="#26557F" stroke-width="2.0" stroke-linecap="round" />
+  <line x1="80.6" y1="437.8" x2="91.0" y2="437.8" stroke="#26557F" stroke-width="2.0" stroke-linecap="round" />
+  <line x1="80.6" y1="443.4" x2="95.0" y2="443.4" stroke="#26557F" stroke-width="2.0" stroke-linecap="round" />
+  <ellipse cx="96.6" cy="440.2" rx="6.4" ry="6.4" opacity="1.0" fill="white" stroke="#26557F" stroke-width="2.0" />
+  <line x1="101.4" y1="445.0" x2="107.80000000000001" y2="451.4" stroke="#26557F" stroke-width="2.4000000000000004" stroke-linecap="round" />
+  <rect x="76" y="514" width="25.6" height="31.200000000000003" rx="3.2" ry="3.2" fill="#FFFFFF" stroke="#26557F" stroke-width="2.4000000000000004" />
+  <line x1="81.6" y1="522.0" x2="96.0" y2="522.0" stroke="#26557F" stroke-width="2.4000000000000004" stroke-linecap="round" />
+  <line x1="81.6" y1="529.2" x2="96.0" y2="529.2" stroke="#26557F" stroke-width="2.0" stroke-linecap="round" />
+  <line x1="81.6" y1="534.8" x2="92.0" y2="534.8" stroke="#26557F" stroke-width="2.0" stroke-linecap="round" />
+  <line x1="81.6" y1="540.4" x2="96.0" y2="540.4" stroke="#26557F" stroke-width="2.0" stroke-linecap="round" />
+  <rect x="83.2" y="511.6" width="12.0" height="4.800000000000001" rx="1.6" ry="1.6" fill="white" stroke="#26557F" stroke-width="1.6" />
+  <line x1="75.4" y1="623.8" x2="90.6" y2="610.2" stroke="#27557F" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="90.6" y1="610.2" x2="101.8" y2="623.0" stroke="#27557F" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="90.6" y1="610.2" x2="91.4" y2="637.4" stroke="#27557F" stroke-width="1.6" stroke-linecap="round" />
+  <ellipse cx="75.4" cy="623.8" rx="4.0" ry="4.0" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.4000000000000004" />
+  <ellipse cx="90.6" cy="610.2" rx="4.0" ry="4.0" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.4000000000000004" />
+  <ellipse cx="101.8" cy="623.0" rx="4.0" ry="4.0" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.4000000000000004" />
+  <ellipse cx="91.4" cy="637.4" rx="4.0" ry="4.0" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.4000000000000004" />
+  <rect x="77" y="709" width="26.24" height="31.979999999999997" rx="3.28" ry="3.28" fill="#FFFFFF" stroke="#26557F" stroke-width="2.46" />
+  <line x1="82.74" y1="717.2" x2="97.5" y2="717.2" stroke="#26557F" stroke-width="2.46" stroke-linecap="round" />
+  <line x1="82.74" y1="724.58" x2="97.5" y2="724.58" stroke="#26557F" stroke-width="2.05" stroke-linecap="round" />
+  <line x1="82.74" y1="730.32" x2="93.4" y2="730.32" stroke="#26557F" stroke-width="2.05" stroke-linecap="round" />
+  <line x1="82.74" y1="736.06" x2="97.5" y2="736.06" stroke="#26557F" stroke-width="2.05" stroke-linecap="round" />
+  <ellipse cx="90.0" cy="833.0" rx="15.0" ry="15.0" opacity="1.0" fill="none" stroke="#245581" stroke-width="5" />
+  <line x1="106.0" y1="833.0" x2="113.0" y2="833.0" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="101.31370849898477" y1="844.3137084989847" x2="106.2634559672906" y2="849.2634559672906" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="90.0" y1="849.0" x2="90.0" y2="856.0" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="78.68629150101523" y1="844.3137084989847" x2="73.7365440327094" y2="849.2634559672906" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="74.0" y1="833.0" x2="67.0" y2="833.0" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="78.68629150101523" y1="821.6862915010153" x2="73.7365440327094" y2="816.7365440327094" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="90.0" y1="817.0" x2="90.0" y2="810.0" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="101.31370849898475" y1="821.6862915010153" x2="106.26345596729058" y2="816.7365440327094" stroke="#245581" stroke-width="5" stroke-linecap="round" />
+  <line x1="322" y1="536" x2="356" y2="536" stroke="#2D689E" stroke-width="5" stroke-linecap="round" />
+  <polygon points="356.00,536.00 340.00,526.00 340.00,546.00" fill="#2D689E" />
+  <rect x="365" y="236" width="518" height="333" rx="9" ry="9" fill="url(#grad92)" stroke="#2D9BFA" stroke-width="1.2" />
+  <text x="543.5" y="263.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#14264A" text-anchor="middle">七项原子工具</text>
+  <text x="749.5" y="264.675" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="400" fill="#1A2744" text-anchor="middle">(7 Atomic Tools)</text>
+  <rect x="382" y="279" width="243" height="65" rx="10" ry="10" fill="url(#grad95)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="537.0" y="305.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">星表枚举</text>
+  <text x="533.0" y="330.8625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23232A" text-anchor="middle">（发现可用星表）</text>
+  <rect x="409" y="317.2" width="25.35" height="7.15" rx="0" ry="0" fill="#285B89" stroke="none" stroke-width="0" />
+  <ellipse cx="421.675" cy="324.02500000000003" rx="12.675" ry="4.2250000000000005" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="0.78" />
+  <ellipse cx="421.675" cy="317.52500000000003" rx="12.675" ry="4.2250000000000005" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="0.78" />
+  <rect x="409" y="310.05" width="25.35" height="7.15" rx="0" ry="0" fill="#285B89" stroke="none" stroke-width="0" />
+  <ellipse cx="421.675" cy="316.875" rx="12.675" ry="4.2250000000000005" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="0.78" />
+  <ellipse cx="421.675" cy="310.375" rx="12.675" ry="4.2250000000000005" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="0.78" />
+  <rect x="409" y="302.9" width="25.35" height="7.15" rx="0" ry="0" fill="#285B89" stroke="none" stroke-width="0" />
+  <ellipse cx="421.675" cy="309.725" rx="12.675" ry="4.2250000000000005" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="0.78" />
+  <ellipse cx="421.675" cy="303.225" rx="12.675" ry="4.2250000000000005" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="0.78" />
+  <rect x="637" y="279" width="243" height="65" rx="10" ry="10" fill="url(#grad107)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="792.0" y="305.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">计数</text>
+  <text x="788.0" y="330.8625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23232A" text-anchor="middle">（读取命中总数）</text>
+  <rect x="666" y="312" width="6" height="18" rx="2" ry="2" fill="#245581" stroke="none" stroke-width="0" />
+  <rect x="675" y="302" width="6" height="28" rx="2" ry="2" fill="#245581" stroke="none" stroke-width="0" />
+  <rect x="684" y="291" width="6" height="39" rx="2" ry="2" fill="#245581" stroke="none" stroke-width="0" />
+  <rect x="382" y="351" width="243" height="65" rx="10" ry="10" fill="url(#grad113)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="537.0" y="377.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">名称解析</text>
+  <text x="533.0" y="402.8625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23232A" text-anchor="middle">（名称转换为坐标）</text>
+  <ellipse cx="418.68" cy="377.32" rx="8.32" ry="8.32" opacity="1.0" fill="none" stroke="#26557F" stroke-width="1.92" />
+  <line x1="425.08" y1="383.72" x2="434.04" y2="393.32" stroke="#26557F" stroke-width="2.24" stroke-linecap="round" />
+  <rect x="637" y="351" width="243" height="65" rx="10" ry="10" fill="url(#grad118)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="792.0" y="377.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">分页读取</text>
+  <text x="788.0" y="402.8625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23232A" text-anchor="middle">（获取分页记录）</text>
+  <rect x="666" y="369" width="20.48" height="24.96" rx="2.56" ry="2.56" fill="#FFFFFF" stroke="#26557F" stroke-width="1.92" />
+  <line x1="670.48" y1="375.4" x2="682.0" y2="375.4" stroke="#26557F" stroke-width="1.92" stroke-linecap="round" />
+  <line x1="670.48" y1="381.16" x2="682.0" y2="381.16" stroke="#26557F" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="670.48" y1="385.64" x2="678.8" y2="385.64" stroke="#26557F" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="670.48" y1="390.12" x2="682.0" y2="390.12" stroke="#26557F" stroke-width="1.6" stroke-linecap="round" />
+  <rect x="382" y="423" width="243" height="65" rx="10" ry="10" fill="url(#grad126)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="537.0" y="449.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">坐标锥搜</text>
+  <text x="533.0" y="474.8625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23232A" text-anchor="middle">（检索指定天区）</text>
+  <ellipse cx="426.0" cy="455.0" rx="13.0" ry="13.0" opacity="1.0" fill="none" stroke="#245581" stroke-width="3" />
+  <line x1="407" y1="455" x2="445" y2="455" stroke="#245581" stroke-width="2" stroke-linecap="round" />
+  <line x1="426" y1="437" x2="426" y2="473" stroke="#245581" stroke-width="2" stroke-linecap="round" />
+  <rect x="637" y="423" width="243" height="65" rx="10" ry="10" fill="url(#grad132)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="792.0" y="449.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">星表描述</text>
+  <text x="788.0" y="474.375" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="400" fill="#23232A" text-anchor="middle">（字段、波段与单位）</text>
+  <rect x="666" y="441" width="20.48" height="24.96" rx="2.56" ry="2.56" fill="#FFFFFF" stroke="#26557F" stroke-width="1.92" />
+  <line x1="670.48" y1="447.4" x2="682.0" y2="447.4" stroke="#26557F" stroke-width="1.92" stroke-linecap="round" />
+  <line x1="670.48" y1="453.16" x2="682.0" y2="453.16" stroke="#26557F" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="670.48" y1="457.64" x2="678.8" y2="457.64" stroke="#26557F" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="670.48" y1="462.12" x2="682.0" y2="462.12" stroke="#26557F" stroke-width="1.6" stroke-linecap="round" />
+  <rect x="382" y="495" width="243" height="65" rx="10" ry="10" fill="url(#grad140)" stroke="#58AAF0" stroke-width="1.3" />
+  <text x="537.0" y="521.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#16191D" text-anchor="middle">批量交叉匹配</text>
+  <text x="533.0" y="546.375" font-family="Microsoft YaHei, sans-serif" font-size="15" font-weight="400" fill="#23232A" text-anchor="middle">（建立位置对应关系）</text>
+  <line x1="412.19" y1="524.33" x2="426.06" y2="511.92" stroke="#27557F" stroke-width="1.46" stroke-linecap="round" />
+  <line x1="426.06" y1="511.92" x2="436.28" y2="523.6" stroke="#27557F" stroke-width="1.46" stroke-linecap="round" />
+  <line x1="426.06" y1="511.92" x2="426.79" y2="536.74" stroke="#27557F" stroke-width="1.46" stroke-linecap="round" />
+  <ellipse cx="412.19" cy="524.33" rx="3.65" ry="3.65" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.19" />
+  <ellipse cx="426.06" cy="511.92" rx="3.65" ry="3.65" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.19" />
+  <ellipse cx="436.28" cy="523.6" rx="3.65" ry="3.65" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.19" />
+  <ellipse cx="426.79" cy="536.74" rx="3.65" ry="3.65" opacity="1.0" fill="#FFFFFF" stroke="#27557F" stroke-width="2.19" />
+  <rect x="896" y="236" width="327" height="331" rx="9" ry="9" fill="url(#grad150)" stroke="#58ABF4" stroke-width="1.2" />
+  <text x="1061.0" y="263.8" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#111822" text-anchor="middle">协议适配网关</text>
+  <text x="1062.0" y="289.5" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="400" fill="#171F25" text-anchor="middle">(Protocol Gateway)</text>
+  <rect x="906" y="305" width="307" height="234" rx="11" ry="11" fill="url(#grad153)" stroke="#9976DE" stroke-width="1.4" />
+  <rect x="907" y="305" width="304" height="66" rx="9" ry="9" fill="url(#grad154)" stroke="none" stroke-width="0" />
+  <text x="1062.5" y="335.0" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#15151A" text-anchor="middle">TAP/ADQL 适配</text>
+  <text x="1061.5" y="360.675" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="400" fill="#141923" text-anchor="middle">(TAP/ADQL Adapter)</text>
+  <text x="928" y="410.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#151825" text-anchor="start">◆  同步查询（Sync Query）</text>
+  <text x="928" y="446.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#151825" text-anchor="start">◆  异步查询（Async Query）</text>
+  <text x="929" y="479.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#151825" text-anchor="start">◆  受支持查询子集</text>
+  <text x="955" y="506.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#151825" text-anchor="start">(Supported Subset)</text>
+  <rect x="365" y="583" width="858" height="210" rx="9" ry="9" fill="url(#grad161)" stroke="#EAA43F" stroke-width="1.1" />
+  <text x="826.0" y="604.825" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="700" fill="#161924" text-anchor="middle">身份与访问控制  (Identity and Access Control)</text>
+  <rect x="373" y="620" width="271" height="167" rx="10" ry="10" fill="url(#grad163)" stroke="#ED9E47" stroke-width="1.1" />
+  <rect x="388.39" y="643.09" width="21.560000000000002" height="19.25" rx="3.85" ry="3.85" fill="#245581" stroke="#245581" stroke-width="1" />
+  <rect x="393.78" y="633.08" width="10.780000000000001" height="16.94" rx="5.390000000000001" ry="5.390000000000001" fill="none" stroke="#245581" stroke-width="3.08" />
+  <ellipse cx="399.17" cy="650.79" rx="2.31" ry="2.31" opacity="1.0" fill="white" stroke="none" stroke-width="1" />
+  <text x="526.5" y="645.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#171A22" text-anchor="middle">BEST 原站会话</text>
+  <text x="528.0" y="673.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1D25" text-anchor="middle">(BEST Session)</text>
+  <rect x="650" y="620" width="281" height="167" rx="10" ry="10" fill="url(#grad169)" stroke="#4FA4E8" stroke-width="1.1" />
+  <ellipse cx="686.0" cy="653.0" rx="13.0" ry="13.0" opacity="1.0" fill="none" stroke="#245581" stroke-width="7" />
+  <line x1="673" y1="665" x2="660" y2="679" stroke="#245581" stroke-width="7" stroke-linecap="round" />
+  <text x="808.5" y="645.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#171A22" text-anchor="middle">网关授权与配额</text>
+  <text x="810.0" y="672.5375" font-family="Microsoft YaHei, sans-serif" font-size="15.5" font-weight="400" fill="#1C1D25" text-anchor="middle">(Gateway Authorization)</text>
+  <rect x="937" y="620" width="277" height="167" rx="10" ry="10" fill="url(#grad174)" stroke="#F09C48" stroke-width="1.1" />
+  <ellipse cx="965.4" cy="640.02" rx="9.02" ry="9.02" opacity="1.0" fill="#245581" stroke="none" stroke-width="1" />
+  <rect x="949.82" y="649.86" width="31.159999999999997" height="13.94" rx="11.479999999999999" ry="11.479999999999999" fill="#245581" stroke="#245581" stroke-width="1" />
+  <text x="1093.5" y="645.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#171A22" text-anchor="middle">NADC 身份记录</text>
+  <text x="1095.0" y="673.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1D25" text-anchor="middle">(NADC Identity)</text>
+  <text x="391" y="706.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1B1D" text-anchor="start">◆  会话管理</text>
+  <text x="425" y="726.2" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="400" fill="#1C1B1D" text-anchor="start">(Session Management)</text>
+  <text x="391" y="757.525" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1B1D" text-anchor="start">◆  请求来源验证</text>
+  <text x="425" y="777.7" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="400" fill="#1C1B1D" text-anchor="start">(Request Verification)</text>
+  <text x="668" y="706.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1B1D" text-anchor="start">◆  访问授权</text>
+  <text x="697" y="726.7" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="400" fill="#1C1B1D" text-anchor="start">(Access Control)</text>
+  <text x="668" y="756.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1B1D" text-anchor="start">◆  请求配额</text>
+  <text x="697" y="777.2" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="400" fill="#1C1B1D" text-anchor="start">(Request Quota)</text>
+  <text x="953" y="706.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1B1D" text-anchor="start">◆  独立身份路径</text>
+  <text x="983" y="726.7" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="400" fill="#1C1B1D" text-anchor="start">(Independent Identity)</text>
+  <text x="953" y="756.025" font-family="Microsoft YaHei, sans-serif" font-size="17" font-weight="400" fill="#1C1B1D" text-anchor="start">◆  来源记录与溯源</text>
+  <text x="978" y="777.05" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="400" fill="#1C1B1D" text-anchor="start">(Source Record &amp; Provenance)</text>
+  <rect x="365" y="805" width="859" height="109" rx="9" ry="9" fill="url(#grad191)" stroke="#2793DF" stroke-width="1.3" />
+  <rect x="390" y="864.2" width="44.849999999999994" height="12.649999999999999" rx="0" ry="0" fill="#285B89" stroke="none" stroke-width="0" />
+  <ellipse cx="412.425" cy="876.275" rx="22.424999999999997" ry="7.475" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="1.38" />
+  <ellipse cx="412.425" cy="864.775" rx="22.424999999999997" ry="7.475" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="1.38" />
+  <rect x="390" y="851.55" width="44.849999999999994" height="12.649999999999999" rx="0" ry="0" fill="#285B89" stroke="none" stroke-width="0" />
+  <ellipse cx="412.425" cy="863.625" rx="22.424999999999997" ry="7.475" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="1.38" />
+  <ellipse cx="412.425" cy="852.125" rx="22.424999999999997" ry="7.475" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="1.38" />
+  <rect x="390" y="838.9" width="44.849999999999994" height="12.649999999999999" rx="0" ry="0" fill="#285B89" stroke="none" stroke-width="0" />
+  <ellipse cx="412.425" cy="850.975" rx="22.424999999999997" ry="7.475" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="1.38" />
+  <ellipse cx="412.425" cy="839.475" rx="22.424999999999997" ry="7.475" opacity="1.0" fill="#285B89" stroke="#FFFFFF" stroke-width="1.38" />
+  <text x="614.5" y="830.975" font-family="Microsoft YaHei, sans-serif" font-size="23" font-weight="700" fill="#161923" text-anchor="middle">BEST 两阶段查询</text>
+  <text x="952.5" y="830.325" font-family="Microsoft YaHei, sans-serif" font-size="21" font-weight="400" fill="#161923" text-anchor="middle">(Two-Stage Query on BEST)</text>
+  <ellipse cx="485.0" cy="852.0" rx="15.0" ry="15.0" opacity="1.0" fill="#3E81CC" stroke="none" stroke-width="1" />
+  <text x="485.0" y="857.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+  <ellipse cx="485.0" cy="886.0" rx="15.0" ry="15.0" opacity="1.0" fill="#3E81CC" stroke="none" stroke-width="1" />
+  <text x="485.0" y="891.85" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+  <text x="526" y="860.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="400" fill="#171C25" text-anchor="start">提交查询条件，建立结果集</text>
+  <text x="866" y="858.7125" font-family="Microsoft YaHei, sans-serif" font-size="14.5" font-weight="400" fill="#171C25" text-anchor="start">(Submit query and create result set)</text>
+  <text x="526" y="897.35" font-family="Microsoft YaHei, sans-serif" font-size="18" font-weight="400" fill="#171C25" text-anchor="start">读取结果集的计数和分页记录</text>
+  <text x="930" y="897.2" font-family="Microsoft YaHei, sans-serif" font-size="16" font-weight="400" fill="#171C25" text-anchor="start">(Get count and paged results)</text>
+  <rect x="1267" y="266" width="229" height="134" rx="12" ry="12" fill="url(#grad211)" stroke="#B7D8C5" stroke-width="1" />
+  <text x="1382.0" y="301.3" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#141B18" text-anchor="middle">统一结果结构</text>
+  <rect x="1356" y="328" width="41.6" height="50.7" rx="5.2" ry="5.2" fill="#FFFFFF" stroke="#26557F" stroke-width="3.9000000000000004" />
+  <line x1="1365.1" y1="341.0" x2="1388.5" y2="341.0" stroke="#26557F" stroke-width="3.9000000000000004" stroke-linecap="round" />
+  <line x1="1365.1" y1="352.7" x2="1388.5" y2="352.7" stroke="#26557F" stroke-width="3.25" stroke-linecap="round" />
+  <line x1="1365.1" y1="361.8" x2="1382.0" y2="361.8" stroke="#26557F" stroke-width="3.25" stroke-linecap="round" />
+  <line x1="1365.1" y1="370.9" x2="1388.5" y2="370.9" stroke="#26557F" stroke-width="3.25" stroke-linecap="round" />
+  <rect x="1286" y="412" width="196" height="64" rx="10" ry="10" fill="url(#grad218)" stroke="#73B58B" stroke-width="1.2" />
+  <text x="1384.5" y="436.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#1C2224" text-anchor="middle">结果结构</text>
+  <text x="1384.0" y="462.3625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23272A" text-anchor="middle">（统一组织方式）</text>
+  <rect x="1286" y="492" width="196" height="64" rx="10" ry="10" fill="url(#grad221)" stroke="#73B58B" stroke-width="1.2" />
+  <text x="1384.5" y="516.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#1C2224" text-anchor="middle">执行状态</text>
+  <text x="1384.0" y="542.3625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23272A" text-anchor="middle">（查询完成情况）</text>
+  <rect x="1286" y="572" width="196" height="64" rx="10" ry="10" fill="url(#grad224)" stroke="#73B58B" stroke-width="1.2" />
+  <text x="1384.5" y="596.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#1C2224" text-anchor="middle">返回数据</text>
+  <text x="1384.0" y="622.3625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23272A" text-anchor="middle">（实际返回记录）</text>
+  <rect x="1286" y="652" width="196" height="64" rx="10" ry="10" fill="url(#grad227)" stroke="#73B58B" stroke-width="1.2" />
+  <text x="1384.5" y="676.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#1C2224" text-anchor="middle">内容摘要</text>
+  <text x="1384.0" y="702.3625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23272A" text-anchor="middle">（比较数据内容）</text>
+  <rect x="1286" y="732" width="196" height="64" rx="10" ry="10" fill="url(#grad230)" stroke="#73B58B" stroke-width="1.2" />
+  <text x="1384.5" y="756.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#1C2224" text-anchor="middle">数据来源</text>
+  <text x="1384.0" y="782.3625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23272A" text-anchor="middle">（关联原始来源）</text>
+  <rect x="1286" y="812" width="196" height="64" rx="10" ry="10" fill="url(#grad233)" stroke="#73B58B" stroke-width="1.2" />
+  <text x="1384.5" y="836.175" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="700" fill="#1C2224" text-anchor="middle">步骤关联</text>
+  <text x="1384.0" y="862.3625" font-family="Microsoft YaHei, sans-serif" font-size="16.5" font-weight="400" fill="#23272A" text-anchor="middle">（连接处理过程）</text>
+  <line x1="1229" y1="536" x2="1258" y2="536" stroke="#2D689E" stroke-width="5" stroke-linecap="round" />
+  <polygon points="1258.00,536.00 1242.00,526.00 1242.00,546.00" fill="#2D689E" />
+</svg>

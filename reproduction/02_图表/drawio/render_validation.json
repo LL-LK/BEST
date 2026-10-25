@@ -1,0 +1,24 @@
+[
+  {
+    "figure": "fig1_architecture",
+    "native_shapes": 91,
+    "editable_text_lines": 92,
+    "canvas": [
+      1536,
+      920
+    ],
+    "font": "Microsoft YaHei",
+    "out_of_canvas_text": []
+  },
+  {
+    "figure": "fig2_data_model",
+    "native_shapes": 64,
+    "editable_text_lines": 48,
+    "canvas": [
+      1400,
+      1050
+    ],
+    "font": "Microsoft YaHei",
+    "out_of_canvas_text": []
+  }
+]

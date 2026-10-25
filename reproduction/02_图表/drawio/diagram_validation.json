@@ -1,0 +1,20 @@
+[
+  {
+    "name": "图1｜BEST-Skill 总体架构",
+    "vertices": 183,
+    "connectors": 54,
+    "canvas": [
+      1536,
+      920
+    ]
+  },
+  {
+    "name": "图2｜数据准备与评价设计",
+    "vertices": 112,
+    "connectors": 20,
+    "canvas": [
+      1400,
+      1050
+    ]
+  }
+]

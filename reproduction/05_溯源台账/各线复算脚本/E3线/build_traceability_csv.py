@@ -1,0 +1,358 @@
+# -*- coding: utf-8 -*-
+"""生成 溯源表_E3.csv（UTF-8 with BOM），SHA256 实算，不手填。"""
+from pathlib import Path
+import json, csv, io, sys, hashlib
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
+WORK = Path(r'<WORKSPACE>\11_投稿包\_work\E1E2E3')
+ARC = Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\05_原始实验归档')
+CUR = Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\01_当前结果')
+FB = Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\02_教师反馈')
+V71 = Path(r'<WORKSPACE>\05_评审与验收\BEST_v71_三项实验源头追查_20261023')
+V72 = Path(r'<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023')
+OUT = WORK / '溯源表_E3.csv'
+
+
+def sha(p):
+    h = hashlib.sha256()
+    with open(p, 'rb') as f:
+        for c in iter(lambda: f.read(1 << 20), b''):
+            h.update(c)
+    return h.hexdigest()
+
+
+def S(p):
+    p = Path(p)
+    return (sha(p), p.stat().st_size) if p.exists() else ('（文件不存在）', 0)
+
+
+R = Path(r'<WORKSPACE>\11_投稿包\_work\E1E2E3\_scripts\recompute_e3_independent.py')
+MINE = 'python "<WORKSPACE>\\11_投稿包\\_work\\E1E2E3\\_scripts\\recompute_e3_independent.py"'
+
+F = {
+    'main.tex': V72 / 'source' / 'main.tex',
+    'supp': V72 / 'source' / 'supplementary_material.tex',
+    'metrics_csv': CUR / 'E3-指标汇总.csv',
+    'denom_csv': CUR / 'E3-主测分母.csv',
+    'counts_csv': CUR / 'E3-逐回答计数.csv',
+    'tar': ARC / 'original-evidence.tar.gz',
+    'bundle': ARC / 'bundle.json',
+    'manifest': ARC / 'manifest.json',
+    'protocol': ARC / 'PROTOCOL.md',
+    'agreement': ARC / 'agreement.json',
+    'selftest': ARC / 'judge-selftest.json',
+    'tsum': FB / 'teacher-review-summary.json',
+    'trec': FB / 'teacher-review-records.json',
+    'review_audit': FB / 'review-audit.json',
+    'claims_csv': V71 / 'e3_unsupported_claims.csv',
+    'acounts_csv': V71 / 'e3_answer_counts.csv',
+    'recomp_json': V71 / 'e3_recomputed.json',
+    'val_json': V71 / 'e3_score_validation.json',
+    'b03': V71 / 'evidence' / 'E3_B03_r2_original.json',
+    'v71_report': V71 / '源头核验报告.md',
+    'full_xlsx': Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\04_匿名审核材料\E3-全量匿名审核表.xlsx'),
+    'simple_xlsx': Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\04_匿名审核材料\E3-匿名审核简表.xlsx'),
+    'online': CUR / 'E3-online-ancillary.json',
+    'sens': CUR / 'E3-sensitivity-exclude-E04.json',
+    'four': Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\03_四条核验\four-entry-verification.json'),
+    'stats_py': Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\辅助程序\statistics_e3.py'),
+    'scoring_py': Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\辅助程序\scoring.py'),
+    'prep_py': Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\辅助程序\prepare.py'),
+}
+H = {k: S(v) for k, v in F.items()}
+
+
+def h(k):
+    return H[k][0]
+
+
+def sz(k):
+    return H[k][1]
+
+
+rows = []
+
+
+def add(cid, exp, pfile, pline, ptext, pval, evpath, evsha, cmd, verdict, tag, note):
+    rows.append({
+        'claim_id': cid, '实验': exp, '论文文件': pfile, '论文行号': pline,
+        '论文原文片段': ptext, '论文呈现值': pval, '证据文件路径': evpath,
+        '证据SHA256': evsha, '可复现命令': cmd, '一致性判定': verdict,
+        '来源标签': tag, '备注': note})
+
+
+MAIN = 'source/main.tex'
+SUP = 'source/supplementary_material.tex'
+
+# ---------- 主指标 ----------
+add('E3-01', 'E3', MAIN, '327;346;66(中文摘要)',
+    '完整配置 S-A 的关键科学断言命中率为 90.14\\%，基础包装器 S-B 为 66.20\\%，差值为 23.94 个百分点',
+    'SFA: S-A 90.14% / S-B 66.20% / 差值 23.94pp',
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv（原始主测32题）'
+    '；04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-主测分母.csv；'
+    '05_原始实验归档/original-evidence.tar.gz（逐条 scores/*.json）',
+    h('metrics_csv') + ' | ' + h('denom_csv') + ' | ' + h('tar'),
+    MINE + '（重算 SFA = Σcritical_hit ÷ Σcritical_total）',
+    '一致', '[官方产物文件]',
+    f'三重复原始值 S-A 65/71、64/71、64/71；S-B 53/71、47/71、47/71；'
+    f'中位数 S-A 90.1408%、S-B 66.1972%、差值 23.9437pp。四舍五入后与论文 90.14/66.20/23.94 完全吻合。'
+    f'分母口径：每重复 71 条关键断言。')
+
+add('E3-02', 'E3', MAIN, '327',
+    '配对题号自助法 95\\% 置信区间为 12.68--33.33 个百分点',
+    '95%CI 12.68~33.33pp', '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv；'
+    '05_原始实验归档/original-evidence.tar.gz；辅助程序/statistics_e3.py',
+    h('metrics_csv') + ' | ' + h('tar') + ' | ' + h('stats_py'),
+    MINE + '（np.random.default_rng(20261006)、10000 次题号成组重抽，'
+    '与 statistics_e3.py summarize() 同种子同算法）',
+    '一致', '[官方产物文件]',
+    '我方独立复算得 12.6779~33.3255pp，四舍五入 12.68~33.33，与论文一致。'
+    '注意：区间为题号成组自助法区间，不是评阅者不确定性区间。')
+
+add('E3-03', 'E3', MAIN, '327',
+    '严格合格率的双侧精确 McNemar 检验为 $p=0.00049$',
+    'p = 0.00049', '04_实验数据/E3_科学忠实性/实验产物/05_原始实验归档/original-evidence.tar.gz；'
+    '辅助程序/statistics_e3.py',
+    h('tar') + ' | ' + h('stats_py'),
+    MINE + '（逐题取 3 次重复多数合格后配对，n01=0、n10=12、n=12）',
+    '一致', '[官方产物文件]',
+    '复算 p=0.00048828125，四舍五入 0.00049，与论文一致。'
+    '检验对象是「逐回答 pass」的题级多数合格，不是逐主张科学裁定。')
+
+# ---------- 辅助指标 ----------
+add('E3-04', 'E3', MAIN, '329',
+    '无来源科学数值率由 15.68\\% 降至 7.14\\%',
+    'UNGR: S-B 15.68% → S-A 7.14%',
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv；E3-主测分母.csv；'
+    '05_原始实验归档/original-evidence.tar.gz',
+    h('metrics_csv') + ' | ' + h('denom_csv') + ' | ' + h('tar'),
+    MINE + '（UNGR = Σunsourced_num ÷ Σnumbers_total）',
+    '一致', '[官方产物文件]',
+    'S-B 三重复 30/294=10.2041%、53/338=15.6805%、50/285=17.5439%，中位数 15.6805%；'
+    'S-A 21/298=7.0470%、29/240=12.0833%、23/322=7.1429%，中位数 7.1429%。与论文一致。')
+
+add('E3-05', 'E3', MAIN, '329',
+    '无支撑科学主张率由 42.73\\% 降至 30.26\\%',
+    'UCR: S-B 42.73% → S-A 30.26%',
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv；E3-主测分母.csv；'
+    '05_原始实验归档/original-evidence.tar.gz（逐条 scores/*.json 的 score.claims）',
+    h('metrics_csv') + ' | ' + h('denom_csv') + ' | ' + h('tar'),
+    MINE + '（UCR = Σunsupported_claim ÷ Σclaims_total，组内先汇总分子分母再相除）',
+    '一致（口径＝三重复中位数）', '[官方产物文件]',
+    '★口径判定：论文取的是三次重复比率的中位数，不是池化。'
+    'S-A 三重复 63/230=27.3913%、75/233=32.1888%、69/228=30.2632%，中位数 30.2632%→30.26%；'
+    'S-B 三重复 94/220=42.7273%、105/225=46.6667%、90/212=42.4528%，中位数 42.7273%→42.73%。'
+    '池化口径另计：S-A 207/691=29.9566%（≈29.96%），S-B 289/657=43.9878%（≈43.99%）。'
+    '两种口径不可互换；论文呈现值与中位数口径一致。'
+    '★限定：分母为「回答中实际枚举的科学主张数」，分母本身由主评助手给定，'
+    '故该值可复算但不等同于经独立专家逐主张裁定的客观错误率。')
+
+add('E3-06', 'E3', MAIN, '329',
+    '必要限定语覆盖率由 87.67\\% 提高至 95.89\\%',
+    'RQC: S-B 87.67% → S-A 95.89%',
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv；E3-主测分母.csv；'
+    '05_原始实验归档/original-evidence.tar.gz',
+    h('metrics_csv') + ' | ' + h('denom_csv') + ' | ' + h('tar'),
+    MINE + '（RQC = Σqualifier_hit ÷ Σqualifier_total）',
+    '一致', '[官方产物文件]',
+    'S-B 64/73、64/73、60/73，中位数 87.6712%；S-A 68/73、71/73、70/73，中位数 95.8904%。与论文一致。')
+
+add('E3-07', 'E3', MAIN, '329;348',
+    '静态测光数据的时间序列误述率由 14.29\\% 降至 0\\%',
+    'SLR: S-B 14.29% → S-A 0%',
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv；E3-主测分母.csv；'
+    '05_原始实验归档/bundle.json（slr_ids）；05_原始实验归档/original-evidence.tar.gz',
+    h('metrics_csv') + ' | ' + h('denom_csv') + ' | ' + h('bundle') + ' | ' + h('tar'),
+    MINE + '（SLR = Σcounts.static_as_lc（限 slr_ids 内题）÷ len(slr_ids)）',
+    '一致（数值）；标注口径缺口（量表文字与实际分母不同）', '[官方产物文件]',
+    'S-B 3/14=21.4286%、6/14=14.2857%、4/14=7.1429%，中位数 14.2857%→14.29%；S-A 0/14=0%。'
+    '★口径缺口：官方量表 rubric.metrics.SLR 写「A+B+G = 16 题」，'
+    '而离线主测实际分母为 bundle.json → slr_ids 共 14 题'
+    '（A+B+G 轴共 16 题，其中 A04、G04 为在线辅测题，不并入离线主测）。'
+    '建议口径：改写为「A+B+G 轴 16 题，其中在线辅测 A04/G04 不计入离线主测，离线分母 14 题」。'
+    '本行仅标记，不改论文，交人工裁决。')
+
+add('E3-08', 'E3', MAIN, '329;349',
+    '严格合格率由 40.62\\% 提高至 81.25\\%',
+    'pass_rate: S-B 40.62% → S-A 81.25%',
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-指标汇总.csv；E3-主测分母.csv；'
+    '05_原始实验归档/original-evidence.tar.gz',
+    h('metrics_csv') + ' | ' + h('denom_csv') + ' | ' + h('tar'),
+    MINE + '（pass_rate = Σcounts.pass ÷ 32）',
+    '一致', '[官方产物文件]',
+    'S-B 18/32=56.25%、13/32=40.625%、13/32=40.625%，中位数 40.625%；'
+    'S-A 28/32=87.5%、26/32=81.25%、26/32=81.25%，中位数 81.25%。'
+    '备注（舍入口径）：40.625% 若按四舍五入（half-up）为 40.63%，论文取 40.62%（half-even/截断）；'
+    '差异仅在末位，不影响结论，建议统一舍入口径。')
+
+# ---------- 样本量与机制 ----------
+add('E3-09', 'E3', MAIN, '38(BEST.docx.txt 3.3 节对应段);SUP:541',
+    '离线主测含 32 个题号，共 192 份回答；另设 4 题在线辅测，共 24 份回答，'
+    '同题同次的实际 BEST 回包供两组解释。离线输入为语义测试夹具，不视为真实天体观测；在线辅测不并入主指标。',
+    '32 题 ×2 组 ×3 重复 = 192；在线 4 题 ×2 组 ×3 重复 = 24',
+    '05_原始实验归档/original-evidence.tar.gz（192 fixture + 24 live 份 answers/scores）；'
+    '05_原始实验归档/bundle.json（items 36：32 fixture + 4 live）；'
+    '04_实验数据/E3_科学忠实性/实验产物/01_当前结果/E3-逐回答计数.csv（216 行）',
+    h('tar') + ' | ' + h('bundle') + ' | ' + h('counts_csv'),
+    MINE + '（tier 计数器：fixture 192、live 24；bundle items 36）',
+    '一致', '[官方产物文件]',
+    '归档逐回答台账 192 条与 E3-逐回答计数.csv 的 192 条 fixture 记录逐键一致，差异 0。'
+    '★统计独立性限定（manifest.json → protocol.limitations）：'
+    '「主測为32个独立题号，三次重复不视为96个独立样本；不宣称达到预设检验效力」。'
+    '自变量是 32 个题号，不是 192 份回答。')
+
+add('E3-10', 'E3', MAIN, 'P99(抽取文本 draft_paragraphs.txt 旧稿);现行 v72 正文见 main.tex:327-329',
+    '主评分共标记 18 条科学红线，全部落在基础包装器组的 16 份回答中，完整配置组未被标记。',
+    '18 条红线 / 16 份回答（S-B）；S-A 0',
+    '05_原始实验归档/original-evidence.tar.gz（各份 counts.redlines）',
+    h('tar'),
+    MINE + '（按 group 汇总 counts.redlines 非空的回答数与红线总条数）',
+    '一致', '[官方产物文件]',
+    '复算：S-B 16 份回答含红线、红线总条数 18；S-A 0 份、0 条。与论文表述一致。'
+    '★注：该数字取自 v16 抽取文本（旧稿段落 P99）；v72 main.tex 未再单列此句，'
+    '若以 v72 为准请人工确认该句是否仍在稿中。')
+
+add('E3-11', 'E3', '05_评审与验收/BEST_v71_三项实验源头追查_20261023/源头核验报告.md', '55',
+    'S-A 的96份回答中83份至少有一项被标为无支撑；80份达到逐回答pass条件，其中67份仍含无支撑主张。',
+    '96 / 83 / 80 / 67',
+    '05_原始实验归档/original-evidence.tar.gz（逐条 scores/*.json）',
+    h('tar'),
+    MINE + '（answers_with_unsupported_claim / passed_answers / passed_with_unsupported_claim）',
+    '一致', '[我方复现]',
+    '我方独立重算：S-A 96 份中 83 份至少一项 unsupported、80 份 pass、67 份 pass 且仍含 unsupported，'
+    '与核验报告完全一致。对照组 S-B：96 份全部含 unsupported、44 份 pass、44 份 pass 且含 unsupported。'
+    '★这组数字解释了主指标与 UCR 为何可以并存：关键断言只检查题目预设必答要点，'
+    'UCR 枚举回答实际提出的全部科学主张，二者分母与判定对象不同。'
+    '原评分器 pass 条件＝关键断言全命中 ∧ 无禁答冲突 ∧ 无科学红线，'
+    '未把「任何额外 unsupported 主张为零」设为独立通过条件，故 81.25% 与 30.26% 非算术矛盾。')
+
+# ---------- 判定者与独立性 ----------
+add('E3-12', 'E3', '05_原始实验归档/manifest.json（protocol.primary_judge / self_rating_risk）；'
+    '05_原始实验归档/agreement.json；02_教师反馈/teacher-review-summary.json',
+    'protocol.primary_judge（mode/context_isolated）与 protocol.self_rating_risk',
+    'protocol.primary_judge.mode = "current_assistant"；context_isolated = false；'
+    'self_rating_risk = "主评助手参与准备且看到组别映射，匿名材料不保证评阅人盲性；无独立评分上下文"',
+    '原逐项主评由参与准备的助手完成，评分上下文未独立隔离',
+    '04_实验数据/E3_科学忠实性/实验产物/05_原始实验归档/manifest.json；'
+    '05_原始实验归档/agreement.json；02_教师反馈/teacher-review-summary.json；'
+    '05_原始实验归档/judge-selftest.json',
+    h('manifest') + ' | ' + h('agreement') + ' | ' + h('tsum') + ' | ' + h('selftest'),
+    'python -c "import json;d=json.load(open(r\'<WORKSPACE>\\04_实验数据\\E3_科学忠实性\\实验产物\\05_原始实验归档\\manifest.json\',encoding=\'utf-8-sig\'));'
+    'print(json.dumps(d[\'protocol\'],ensure_ascii=False,indent=1))"',
+    '一致（这是限制陈述，非数值）', '[原始归档]',
+    '★必须如实写进交付的限制：30.26% 可复算，但不得表述为「已完成独立专家逐主张裁定的客观错误率」。'
+    'manifest.protocol.design 原文亦写明「当前对话助手主评＋独立天文专家全量盲评；不是原双专家主评协议」，'
+    '即独立专家全量盲评是协议设计中的应做项，尚未执行。'
+    'agreement.json 状态仍为 pending（agreement=null）。'
+    'judge-selftest.json 为助手自检（metascore 1.0、control-1/2/3 全通过），属自检而非独立裁定。')
+
+add('E3-13', 'E3', '02_教师反馈/teacher-review-summary.json（status/note/coverage/reviewer_metadata）',
+    'status / note / coverage / reviewer_metadata 字段',
+    'status = "qualitative_feedback_received_incomplete"；'
+    'note = "收到一份老师填写的匿名定性回表；213/216份真实回答有勾选或意见。逐项量化专家复核未完成。"',
+    '老师回表覆盖 213/216 份真实回答（属定性反馈，未替换逐项量化标签）',
+    '04_实验数据/E3_科学忠实性/实验产物/02_教师反馈/teacher-review-summary.json；'
+    'teacher-review-records.json；review-audit.json',
+    h('tsum') + ' | ' + h('trec') + ' | ' + h('review_audit'),
+    'python -c "import json;d=json.load(open(r\'<WORKSPACE>\\04_实验数据\\E3_科学忠实性\\实验产物\\02_教师反馈\\teacher-review-summary.json\',encoding=\'utf-8-sig\'));'
+    'print(d[\'status\'],d[\'real_answers_with_feedback\'],d[\'real_answers_expected\'],d[\'reviewer_metadata\'],d[\'agreement\'])"',
+    '一致（这是限制陈述，非数值）', '[原始归档]',
+    '★复核要点：①expected_materials=219、materials_matched=219、real_answers_expected=216、'
+    'real_answers_with_feedback=213（缺 3 份：S-B_E3-B03_r3、S-A_E3-B05_r2、S-A_E3-B01_r1）；'
+    '②agreement=null、agreement_statistics 全 null（ac1/α/icc/加权κ 均未计算）；'
+    '③protocol_complete=false、full_scorecards_imported=false；'
+    '④reviewer_metadata 全部为 null（name/date/是否参与出题/是否接触过组别均未登记）；'
+    '⑤teacher-review-records.json 中 teacher_name/teacher_date 亦全为 null；'
+    '⑥raw_ticks=205、raw_comments=11，勾选含义未确认，控制项 3 份仅 2 份明确识别出预设错误。'
+    '结论：回表是定性反馈，不是逐项科学裁定；不得用它支撑「已完成专家盲评」。')
+
+add('E3-14', 'E3', '（归档证据，不在论文正文）05_评审与验收/BEST_v71_…/e3_unsupported_claims.csv',
+    '全表 496 行；列：key,group,item_id,repeat,quote,archived_reason,source,score_sha256',
+    '496 条无支撑主张的归档标签、引文和理由',
+    '496 条（fixture 主测 192 份内）',
+    '05_评审与验收/BEST_v71_三项实验源头追查_20261023/e3_unsupported_claims.csv；'
+    '04_实验数据/E3_科学忠实性/实验产物/05_原始实验归档/original-evidence.tar.gz',
+    h('claims_csv') + ' | ' + h('tar'),
+    MINE + '（逐条比对 CSV 与归档 score.claims 的 (key, quote, reason, source, score_sha256)）',
+    '一致（逐条可复核）', '[官方产物文件]',
+    '复核结论：CSV 496 行 ↔ 归档 496 条 unsupported claim，按 (key, quote) 多重集完全相等，'
+    '归档有而 CSV 无 = 0、CSV 有而归档无 = 0。字段完整性：quote 非空 496/496 且 496/496 逐字'
+    '可在原始回答正文中定位；archived_reason 非空 496/496；score_sha256 与归档原始 score 文件'
+    '哈希一致 496/496；分组 S-B 289 条、S-A 207 条。'
+    '★唯一空字段：source 列 496/496 全空 —— 但这不是遗漏，归档中 supported 主张 951/951 均带 source，'
+    'unsupported 主张按定义无来源可引，故该列对 unsupported 恒空；'
+    '其代价是归档未记录「该主张本应由哪份材料支撑」，独立复核时需由评审自行补齐（见盲评包「依据来源定位」列）。'
+    '★归档全量 1493 条主张中 unsupported 542 条（含在线辅测 46 条），'
+    '对应论文主指标的 496 条仅为离线主测部分。')
+
+# ---------- 指标定义 ----------
+add('E3-15', 'E3', SUP + ':697-701（指标定义段）；:637-649（逐项字段量表）',
+    'rubric.metrics（指标定义段）与 rubric.fields（逐项字段量表段）',
+    '关键科学断言命中率｜无来源科学数值率｜无支撑科学主张率｜'
+    '静态测光数据的时间序列误述率｜必要限定语覆盖率',
+    'SFA/UNGR/UCR/SLR/RQC 的分子分母定义',
+    '05_原始实验归档/bundle.json（rubric.metrics / rubric.fields）；'
+    '04_实验数据/E3_科学忠实性/辅助程序/statistics_e3.py（metrics() 实现）',
+    h('bundle') + ' | ' + h('stats_py'),
+    MINE + '（按 statistics_e3.metrics() 同一公式实现重算六项指标）',
+    '一致', '[官方产物文件]',
+    '论文定义与官方量表 rubric.metrics 五项口径逐项对应；'
+    'rubric.metrics.SLR 的分母文字「A+B+G = 16 题」与实际离线分母 14 题不符，见 E3-07 行。')
+
+# ---------- 盲评包与损坏 ----------
+add('E3-16', 'E3', '（工程交付，非论文数值）04_匿名审核材料/E3-匿名审核简表.xlsx',
+    'xl/worksheets/sheet1.xml（审核总表）P 列状态公式',
+    '匿名审核工作簿公式出现引用失效错误（断链）',
+    '简表 1533 处断链错误；全量表 0 处',
+    '04_实验数据/E3_科学忠实性/实验产物/04_匿名审核材料/E3-匿名审核简表.xlsx；'
+    '04_匿名审核材料/E3-全量匿名审核表.xlsx',
+    h('simple_xlsx') + ' | ' + h('full_xlsx'),
+    'python "<WORKSPACE>\\11_投稿包\\_work\\E1E2E3\\_scripts\\diag_review_workbooks_v2.py"',
+    '已定位并绕开（原简表不可原位修复）', '[官方产物文件]',
+    '★损坏范围（逐 XML 实测）：E3-匿名审核简表.xlsx 的 sheet1.xml（审核总表）含 1533 处 Excel 引用失效错误码，'
+    '分布在 221 个公式内；成因是简表只保留「审核总表」「题目与回答」两表，'
+    '而审核总表 P 列公式原跨表引用「逐项判定」「数值登记」「主张登记」三表，删除工作表后引用断裂，'
+    '悬空引用名记为 REF。E3-全量匿名审核表.xlsx（7 表）实测 0 处该错误、悬空引用 0、'
+    '2952 个内部超链接全部有效、公式主体完好。'
+    'E3-老师审核表-修复版.xlsx 实测 0 处。'
+    '结论：损坏仅限简表；本盲评包以未受损的全量表为基底重建，无需原位修复。')
+
+add('E3-17', 'E3', '（工程交付）11_投稿包/_work/E1E2E3/盲评包/BEST_E3_专家盲评工作簿_v1.xlsx / .docx',
+    '盲评包 v1 全部产物',
+    'E3 专家盲评工作簿（待真人填写）',
+    '219 份样本全覆盖；新增评阅人ID/评阅日期/逐项理由/仲裁记录表/仲裁人字段',
+    '11_投稿包/_work/E1E2E3/盲评包/BEST_E3_专家盲评工作簿_v1.xlsx；'
+    '…_v1.docx；…_v1/README_盲评操作说明.md',
+    h('full_xlsx') + ' | ' + h('claims_csv'),
+    'python "<WORKSPACE>\\11_投稿包\\_work\\E1E2E3\\_scripts\\build_blind_xlsx.py"；'
+    'python "<WORKSPACE>\\11_投稿包\\_work\\E1E2E3\\_scripts\\build_blind_docx.py"；'
+    'python "<WORKSPACE>\\11_投稿包\\_work\\E1E2E3\\_scripts\\verify_blind_xlsx.py"',
+    '自检通过（空白表、无断链、无助手判定）', '[我方复现]',
+    '交付态自检：引用失效错误码 0 处、公式 4353 条、跨表悬空引用 0、超链接 2952 有效、'
+    '待填写栏非空单元格 0、冻结只读表与基底差异 0 单元格、'
+    '逐项判定/数值登记/主张登记原列意外差异 0（仅 6 处表头文字明确化，均在变更清单登记）。'
+    '本包不含任何助手评分、组别映射或代填判定；由真人填写。')
+
+# ---------- 未决与口径建议 ----------
+add('E3-18', 'E3', '（口径待裁决项，未改论文）',
+    '建议口径清单（3 条）',
+    '建议：①SLR 离线分母口径改述；②40.625% 的舍入口径统一；'
+    '③30.26% 的表述补上「主评由参与准备的助手完成、尚未经独立专家逐主张裁定」的限制句。',
+    '（建议口径，未落笔）',
+    '04_实验数据/E3_科学忠实性/实验产物/05_原始实验归档/manifest.json；'
+    'bundle.json（rubric.metrics.SLR）；01_当前结果/E3-指标汇总.csv',
+    h('manifest') + ' | ' + h('bundle') + ' | ' + h('metrics_csv'),
+    '（依 E3-07 / E3-08 / E3-12 行的复算结果）',
+    '仅标记，不改论文（交人工裁决）', '[我方复现]',
+    '本轮未修改论文任何文字、未修改任何分数值、未重评分、未删除任何不利结果。')
+
+with OUT.open('w', encoding='utf-8-sig', newline='') as f:
+    w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+    w.writeheader()
+    w.writerows(rows)
+
+print('已写出:', OUT, OUT.stat().st_size, 'bytes')
+print('行数:', len(rows))
+for r in rows:
+    print(f"  {r['claim_id']:8s} {r['一致性判定'][:34]:36s} {r['论文呈现值'][:44]}")

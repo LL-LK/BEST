@@ -1,0 +1,211 @@
+{
+  "weights": {
+    "toolset": 0.3,
+    "param": 0.25,
+    "convert": 0.15,
+    "redundant": 0.1,
+    "clarify": 0.1,
+    "reject": 0.1
+  },
+  "batches": {
+    "3333": {
+      "file": "<WORKSPACE>\\04_实验数据\\E1_自然语言到工具调用\\实验产物\\07-答案键三批\\3333\\3333_grade_result.json",
+      "sha256": "17D1642C66F2A37805376108CD00610758E7895CBAF91E00C47BD95E51BD8A64",
+      "bytes": 9506,
+      "archived_weighted": 0.9089285714285714,
+      "archived_dims": {
+        "toolset": 0.7857142857142857,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": 0.8571428571428571,
+        "reject": 0.875
+      },
+      "archived_dim_n": {
+        "toolset": 28,
+        "param": 9,
+        "convert": 6,
+        "redundant": 28,
+        "clarify": 7,
+        "reject": 6
+      },
+      "archived_pass": true,
+      "archived_warn": true,
+      "archived_red_line_tasks": [],
+      "n_tasks": 28,
+      "recomputed_weighted": 0.9089285714285714,
+      "matches_archive": true
+    },
+    "4444": {
+      "file": "<WORKSPACE>\\04_实验数据\\E1_自然语言到工具调用\\实验产物\\07-答案键三批\\4444\\4444_grade_result.json",
+      "sha256": "F55FA6F035DB1A5C0A02A673E227B401767690AE9AE5A972ED402F52204790B7",
+      "bytes": 9506,
+      "archived_weighted": 0.9089285714285714,
+      "archived_dims": {
+        "toolset": 0.7857142857142857,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": 0.8571428571428571,
+        "reject": 0.875
+      },
+      "archived_dim_n": {
+        "toolset": 28,
+        "param": 9,
+        "convert": 6,
+        "redundant": 28,
+        "clarify": 7,
+        "reject": 6
+      },
+      "archived_pass": true,
+      "archived_warn": true,
+      "archived_red_line_tasks": [],
+      "n_tasks": 28,
+      "recomputed_weighted": 0.9089285714285714,
+      "matches_archive": true
+    },
+    "5555": {
+      "file": "<WORKSPACE>\\04_实验数据\\E1_自然语言到工具调用\\实验产物\\07-答案键三批\\5555\\5555_grade_result.json",
+      "sha256": "7411FCE1A9CBA634FED8628E8C784E8F93B7EB4610DA2B7E83FCBEEE5C42D1D5",
+      "bytes": 10199,
+      "archived_weighted": 0.9446428571428571,
+      "archived_dims": {
+        "toolset": 0.9404761904761905,
+        "param": 1.0,
+        "convert": 1.0,
+        "redundant": 1.0,
+        "clarify": 1.0,
+        "reject": 0.625
+      },
+      "archived_dim_n": {
+        "toolset": 28,
+        "param": 14,
+        "convert": 8,
+        "redundant": 28,
+        "clarify": 7,
+        "reject": 6
+      },
+      "archived_pass": true,
+      "archived_warn": true,
+      "archived_red_line_tasks": [],
+      "n_tasks": 28,
+      "recomputed_weighted": 0.9446428571428571,
+      "matches_archive": true
+    }
+  },
+  "three_batch_weighted": [
+    0.9089285714285714,
+    0.9089285714285714,
+    0.9446428571428571
+  ],
+  "mean_of_three": 0.9208333333333334,
+  "sample_stdev_of_three": 0.020619652471058052,
+  "paper_claims": {
+    "per_batch": [
+      0.9429,
+      0.9607,
+      0.9554
+    ],
+    "mean": 0.953,
+    "sample_stdev": 0.0092,
+    "dim_means": {
+      "toolset": 0.9405,
+      "param": 0.9659,
+      "convert": 1.0,
+      "redundant": 0.9881,
+      "clarify": 0.8333,
+      "reject": 0.9722
+    },
+    "median_aggregation_weighted": 0.975,
+    "median_aggregation_dims": {
+      "toolset": 0.9643,
+      "param": 1.0
+    }
+  },
+  "verdict_per_batch": [
+    {
+      "batch": "3333",
+      "archive": 0.9089,
+      "paper": 0.9429,
+      "match": false
+    },
+    {
+      "batch": "4444",
+      "archive": 0.9089,
+      "paper": 0.9607,
+      "match": false
+    },
+    {
+      "batch": "5555",
+      "archive": 0.9446,
+      "paper": 0.9554,
+      "match": false
+    }
+  ],
+  "verdict_mean": {
+    "archive_mean": 0.9208333333333334,
+    "paper_mean": 0.953,
+    "match": false,
+    "note": "归档三批均值 0.9208；论文 0.9530 与之不符，且落在维度分数-3333答案-20261007.md 所述「带 primer 估计 ≈0.95–0.97」的估计区间内"
+  },
+  "recomputed_dim_means_across_batches": {
+    "toolset": 0.8373015873015873,
+    "param": 1.0,
+    "convert": 1.0,
+    "redundant": 1.0,
+    "clarify": 0.9047619047619048,
+    "reject": 0.7916666666666666
+  },
+  "verdict_dims": {
+    "toolset": {
+      "archive": 0.8373,
+      "paper": 0.9405,
+      "match": false
+    },
+    "param": {
+      "archive": 1.0,
+      "paper": 0.9659,
+      "match": false
+    },
+    "convert": {
+      "archive": 1.0,
+      "paper": 1.0,
+      "match": true
+    },
+    "redundant": {
+      "archive": 1.0,
+      "paper": 0.9881,
+      "match": false
+    },
+    "clarify": {
+      "archive": 0.9048,
+      "paper": 0.8333,
+      "match": false
+    },
+    "reject": {
+      "archive": 0.7917,
+      "paper": 0.9722,
+      "match": false
+    }
+  },
+  "median_aggregation": {
+    "method": "同题同维对三批取中位数，再按维度汇总并按权重折算",
+    "dims": {
+      "toolset": 0.7857142857142857,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": 0.8571428571428571,
+      "reject": 0.875
+    },
+    "weighted": 0.9089285714285714,
+    "paper_weighted": 0.975,
+    "match": false,
+    "paper_toolset": 0.9643,
+    "recomputed_toolset": 0.7857142857142857
+  },
+  "route_alignment_claimed": {
+    "3333": "23/28 (82.1%)",
+    "4444": "19/28 (67.9%)"
+  }
+}

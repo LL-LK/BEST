@@ -1,0 +1,378 @@
+{
+  "E1": {
+    "weighted": 0.9529761904761905,
+    "dims": {
+      "toolset": 0.9404761904761905,
+      "param": 0.9658730158730159,
+      "convert": 1.0,
+      "redundant": 0.9880952380952381,
+      "clarify": 0.8333333333333333,
+      "reject": 0.9722222222222222
+    },
+    "n": {
+      "toolset": 28,
+      "param": "14–15",
+      "convert": "9–10",
+      "redundant": 28,
+      "clarify": 7,
+      "reject": 6
+    },
+    "per_box": [
+      0.9428571428571428,
+      0.9607142857142857,
+      0.9553571428571429
+    ],
+    "combined": 0.975,
+    "combined_dims": {
+      "toolset": 0.9642857142857143,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": 0.8571428571428571,
+      "reject": 1.0
+    }
+  },
+  "E3": {
+    "medians": {
+      "S-A": {
+        "sfa": 0.9014084507042254,
+        "ungr": 0.07142857142857142,
+        "ucr": 0.3026315789473684,
+        "slr": 0.0,
+        "rqc": 0.958904109589041,
+        "pass_rate": 0.8125
+      },
+      "S-B": {
+        "sfa": 0.6619718309859155,
+        "ungr": 0.15680473372781065,
+        "ucr": 0.42727272727272725,
+        "slr": 0.14285714285714285,
+        "rqc": 0.8767123287671232,
+        "pass_rate": 0.40625
+      }
+    },
+    "mcnemar": {
+      "a_only": 12,
+      "b_only": 0,
+      "p": 0.00048828125
+    },
+    "archived_difference_CI": [
+      0.12676056338028163,
+      0.33333333333333326
+    ]
+  },
+  "E4": {
+    "protocol": {
+      "correct": 15,
+      "total": 15
+    },
+    "language": {
+      "correct": 26,
+      "total": 35
+    },
+    "categories": [
+      {
+        "label": "A 确定性纠正",
+        "correct": 2,
+        "total": 4
+      },
+      {
+        "label": "B 确定性拒绝",
+        "correct": 13,
+        "total": 17
+      },
+      {
+        "label": "C 请求澄清",
+        "correct": 8,
+        "total": 10
+      },
+      {
+        "label": "D 安全停止",
+        "correct": 2,
+        "total": 2
+      },
+      {
+        "label": "合法直接回答",
+        "correct": 1,
+        "total": 2
+      }
+    ],
+    "weighted_criteria": {
+      "correct": 7,
+      "total": 16
+    },
+    "must_not_call_red_lines": 4,
+    "deferred_composite_cases": 18
+  },
+  "E6": {
+    "TSC": {
+      "point": 0.8636904761904762,
+      "ci": [
+        0.7869047619047621,
+        0.930952380952381
+      ]
+    },
+    "PAC_call": {
+      "point": 0.85375,
+      "ci": [
+        0.7980149954212454,
+        0.9066034798534799
+      ]
+    },
+    "RDC": {
+      "point": 0.7285714285714286,
+      "ci": [
+        0.6315476190476191,
+        0.8166815476190475
+      ]
+    },
+    "FCC": {
+      "point": 0.8672619047619048,
+      "ci": [
+        0.780952380952381,
+        0.9404761904761906
+      ]
+    }
+  },
+  "E1_legacy": {
+    "weighted": 0.7803446553446554,
+    "dims": {
+      "toolset": 0.8076923076923077,
+      "param": 0.7142857142857143,
+      "convert": 0.6363636363636364,
+      "redundant": 0.9615384615384616,
+      "clarify": 0.9285714285714286,
+      "reject": 0.75
+    },
+    "n": {
+      "toolset": 26,
+      "param": 14,
+      "convert": 11,
+      "redundant": 26,
+      "clarify": 7,
+      "reject": 4
+    }
+  },
+  "E5": {
+    "complete": true,
+    "scope": "independent crossmatch primary; diagnostic task set reported separately",
+    "N": 1024,
+    "total_sources": 1120,
+    "cells": 2240,
+    "rates": {
+      "B2b": {
+        "success": 999,
+        "N": 1024
+      },
+      "B3_compact": {
+        "success": 995,
+        "N": 1024
+      }
+    },
+    "primary": {
+      "N": 1024,
+      "delta": -0.00390625,
+      "only_B3": 18,
+      "only_B2b": 22,
+      "q": 0.0390625,
+      "p": 0.6358280026288412
+    },
+    "primary_stratified_pair_bootstrap_95CI": [
+      -0.015625,
+      0.0078125
+    ],
+    "alpha": 0.05,
+    "positive_significant": false,
+    "secondary_Holm_family": [
+      {
+        "test": "primary_layer_0",
+        "N": 128,
+        "delta": -0.0078125,
+        "only_B3": 0,
+        "only_B2b": 1,
+        "q": 0.0078125,
+        "p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_1",
+        "N": 128,
+        "delta": -0.015625,
+        "only_B3": 1,
+        "only_B2b": 3,
+        "q": 0.03125,
+        "p": 0.625,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_2",
+        "N": 128,
+        "delta": 0.0,
+        "only_B3": 0,
+        "only_B2b": 0,
+        "q": 0.0,
+        "p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_3",
+        "N": 128,
+        "delta": 0.015625,
+        "only_B3": 3,
+        "only_B2b": 1,
+        "q": 0.03125,
+        "p": 0.625,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_4",
+        "N": 128,
+        "delta": -0.0234375,
+        "only_B3": 1,
+        "only_B2b": 4,
+        "q": 0.0390625,
+        "p": 0.375,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_5",
+        "N": 128,
+        "delta": 0.0,
+        "only_B3": 5,
+        "only_B2b": 5,
+        "q": 0.078125,
+        "p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_6",
+        "N": 128,
+        "delta": -0.0078125,
+        "only_B3": 3,
+        "only_B2b": 4,
+        "q": 0.0546875,
+        "p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "primary_layer_7",
+        "N": 128,
+        "delta": 0.0078125,
+        "only_B3": 5,
+        "only_B2b": 4,
+        "q": 0.0703125,
+        "p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "diagnostic_stratum_1",
+        "N": 32,
+        "delta": 0.03125,
+        "only_B3": 1,
+        "only_B2b": 0,
+        "q": 0.03125,
+        "p": 1.0,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "diagnostic_stratum_3",
+        "N": 32,
+        "delta": 0.09375,
+        "only_B3": 3,
+        "only_B2b": 0,
+        "q": 0.09375,
+        "p": 0.25,
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "diagnostic_stratum_4",
+        "N": 32,
+        "delta": -0.1875,
+        "only_B3": 1,
+        "only_B2b": 7,
+        "q": 0.25,
+        "p": 0.0703125,
+        "holm_adjusted_p": 0.9140625
+      },
+      {
+        "test": "tool_calls",
+        "p": 0.9013098690130987,
+        "paired_mean_difference": -0.0126953125,
+        "assumption": "paired sign exchangeability; 10000 Monte Carlo permutations",
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "wall_seconds",
+        "p": 0.5150484951504849,
+        "paired_mean_difference": 1.4735188691405707,
+        "assumption": "paired sign exchangeability; 10000 Monte Carlo permutations",
+        "holm_adjusted_p": 1.0
+      },
+      {
+        "test": "output_tokens",
+        "p": 0.055394460553944605,
+        "paired_mean_difference": 138.4443359375,
+        "assumption": "paired sign exchangeability; 10000 Monte Carlo permutations",
+        "holm_adjusted_p": 0.7755224477552245
+      }
+    ],
+    "error_spectrum": {
+      "B2b": {
+        "required_scientific_facts_incorrect_or_missing": 24,
+        "complete_required_data_file_or_operation_missing": 8,
+        "data_delivery_missing": 8,
+        "native_submission_missing": 8,
+        "ordinary_native_noncompletion": 9
+      },
+      "B3_compact": {
+        "complete_required_data_file_or_operation_missing": 12,
+        "required_scientific_facts_incorrect_or_missing": 27,
+        "data_delivery_missing": 11,
+        "native_submission_missing": 11,
+        "ordinary_native_noncompletion": 13
+      }
+    },
+    "scorer_identity": "xiaotan\\e5scorerv4",
+    "human_scientific_review": "pending",
+    "no_significance_based_stopping": true,
+    "guard": "equal public delivery checks, not scientific answer repair",
+    "not_pooled_with_development": true
+  },
+  "E4_legacy": {
+    "protocol": {
+      "correct": 15,
+      "total": 15
+    },
+    "language": {
+      "correct": 25,
+      "total": 35
+    },
+    "categories": [
+      {
+        "label": "A 确定性纠正",
+        "correct": 2,
+        "total": 4
+      },
+      {
+        "label": "B 确定性拒绝",
+        "correct": 13,
+        "total": 17
+      },
+      {
+        "label": "C 请求澄清",
+        "correct": 8,
+        "total": 10
+      },
+      {
+        "label": "D 安全停止",
+        "correct": 1,
+        "total": 2
+      },
+      {
+        "label": "合法直接回答",
+        "correct": 1,
+        "total": 2
+      }
+    ]
+  }
+}

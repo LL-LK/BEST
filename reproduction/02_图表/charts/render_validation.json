@@ -1,0 +1,38 @@
+[
+  {
+    "figure": "fig3_e1",
+    "canvas": [
+      1200.0,
+      1150.0
+    ],
+    "text_nodes": 30,
+    "clipped_text": []
+  },
+  {
+    "figure": "fig4_e3",
+    "canvas": [
+      1200.0,
+      1290.0
+    ],
+    "text_nodes": 38,
+    "clipped_text": []
+  },
+  {
+    "figure": "fig5_e4",
+    "canvas": [
+      1200.0,
+      1150.0
+    ],
+    "text_nodes": 29,
+    "clipped_text": []
+  },
+  {
+    "figure": "fig6_e6",
+    "canvas": [
+      1200.0,
+      768.0
+    ],
+    "text_nodes": 16,
+    "clipped_text": []
+  }
+]
