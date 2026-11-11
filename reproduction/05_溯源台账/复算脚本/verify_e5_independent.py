@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 独立复算 E5 确认性消融结果（不依赖任何中间结论，直接读原始归档）。
-来源：<WORKSPACE>\\04_实验数据\\E5_消融\\正式结果_2026-10-12\\scores.json
-目标：复现 05_评审与验收\\BEST_v71_三项实验源头追查_20261023\\源头核验报告.md 中的
       B3=95/168=56.55%、A5=98/168=58.33%、净差3格、精确符号翻转检验 p=0.741865、
       95%题目重抽样区间 -8.93~+4.76 个百分点，以及按 decision_class 的净格分解。
 只读原始文件，不写回、不修改。
 """
+from pathlib import Path
 import json, hashlib, itertools, random
 from collections import defaultdict, Counter
 
-SRC = r"<WORKSPACE>\04_实验数据\E5_消融\正式结果_2026-10-12\scores.json"
+SRC = Path(__file__).resolve().parents[2] / "03_数据_E1-E6/E5/scores.json"
 
 def sha256(path):
     h = hashlib.sha256()
@@ -45,7 +44,7 @@ def main():
     rows = json.loads(raw.decode("utf-8"))
 
     out = {}
-    out["source_file"] = SRC
+    out["source_file"] = SRC.relative_to(Path(__file__).resolve().parents[2]).as_posix()
     out["source_sha256"] = digest
     out["source_bytes"] = len(raw)
     out["total_cells"] = len(rows)

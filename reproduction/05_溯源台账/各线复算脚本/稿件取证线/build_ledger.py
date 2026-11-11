@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""生成 BEST v72 稿件数字溯源表 / 图引用缺失表 / 论文数字清单。
+"""生成 BEST 稿件数字溯源表 / 图引用缺失表 / 论文数字清单。
 
 用法： python build_ledger.py
 只读 <WORKSPACE> 的 01-10 与 99 目录；所有写入限定在 11_投稿包\\_work\\稿件取证\\ 内。
@@ -8,7 +8,7 @@ import csv, hashlib, os, sys, collections
 
 ROOT = r"<WORKSPACE>"
 OUT = os.path.join(ROOT, r"11_投稿包\_work\稿件取证")
-SRC = os.path.join(ROOT, r"10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source")
+SRC = os.path.join(ROOT, r"01_稿件")
 MAIN = "main.tex"
 SUPP = "supplementary_material.tex"
 
@@ -29,10 +29,10 @@ EV = {
     "E3_FINRES":  (r"04_实验数据\E3_科学忠实性\实验产物\01_当前结果\FINAL-RESULTS.json", "[官方产物文件]"),
     "E3_COUNTS":  (r"05_评审与验收\BEST_v71_三项实验源头追查_20261023\e3_answer_counts.csv", "[我方复现]"),
     "E3_VALID":   (r"05_评审与验收\BEST_v71_三项实验源头追查_20261023\scripts\validate_e3_scores.py", "[我方复现]"),
-    "E4_SRC":     (r"10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\E4图复现\source_data.json", "[官方产物文件]"),
+    "E4_SRC":     (r"10_脱敏复现包\稿件\E4图复现\source_data.json", "[官方产物文件]"),
     "E4_RAW":     (r"10_脱敏复现包\BEST_v70_E4数据更新与批注核验_20261023\work\E4_input\_复现\out\grade_r2.json", "[原始归档]"),
-    "E4_RES":     (r"10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\evaluation_materials\E4_results.json", "[官方产物文件]"),
-    "E4_RECORDS": (r"10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\evaluation_materials\E4_scored_records.json", "[官方产物文件]"),
+    "E4_RES":     (r"10_脱敏复现包\稿件\evaluation_materials\E4_results.json", "[官方产物文件]"),
+    "E4_RECORDS": (r"10_脱敏复现包\稿件\evaluation_materials\E4_scored_records.json", "[官方产物文件]"),
     "E4_V70MET":  (r"10_脱敏复现包\BEST_v70_E4数据更新与批注核验_20261023\work\E4_input\_复现\expected\metrics.json", "[官方产物文件]"),
     "E4_R1":      (r"04_实验数据\E4_鲁棒性与安全性\实验产物\07-结果(r1权威)\REPORT-r1.md", "[官方产物文件]"),
     "E4_TAKE":    (r"99_缓存与临时\取证_E4_口径分解_20261022.md", "[我方复现]"),

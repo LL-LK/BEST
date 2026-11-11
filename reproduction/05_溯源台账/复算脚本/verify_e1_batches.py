@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-E1 三批评分结果的独立复算与 v72 论文呈现值比对。
-目标：判定 v72 稿件 main.tex:273/291 的
+E1 三批评分结果的独立复算与论文呈现值比对。
+目标：判定 稿件 main.tex:273/291 的
       三组加权分 0.9429 / 0.9607 / 0.9554、均值 0.9530、样本标准差 0.0092、
       六维均值 0.9405/0.9659/1.0000/0.9881/0.8333/0.9722、
       中位汇总 0.9750（工具集合 0.9643、参数 1.0000）
 是否可从归档证据复现。
-证据：<WORKSPACE>\\04_实验数据\\E1_自然语言到工具调用\\实验产物\\07-答案键三批\\{3333,4444,5555}\\*_grade_result.json
 """
+from pathlib import Path
 import json, os, hashlib, statistics
 
-BASE = r"<WORKSPACE>\04_实验数据\E1_自然语言到工具调用\实验产物\07-答案键三批"
-OUT = r"<WORKSPACE>\11_投稿包\_work\_复核\E1_独立复算与口径核对.json"
+BASE = Path(__file__).resolve().parents[2] / "03_数据_E1-E6/E1/07-答案键三批"
 WEIGHTS = {'toolset': 0.30, 'param': 0.25, 'convert': 0.15,
            'redundant': 0.10, 'clarify': 0.10, 'reject': 0.10}
 DIMS = list(WEIGHTS)
@@ -131,8 +130,6 @@ def main():
     # 5) 路由对齐率（维度分数报告口径）
     out['route_alignment_claimed'] = {'3333': '23/28 (82.1%)', '4444': '19/28 (67.9%)'}
 
-    with open(OUT, 'w', encoding='utf-8') as f:
-        json.dump(out, f, ensure_ascii=False, indent=2)
     print(json.dumps({
         'three_batch_weighted': [round(v, 6) for v in weighted_vals],
         'mean_of_three': out['mean_of_three'],

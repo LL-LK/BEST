@@ -6,7 +6,7 @@
 import csv, re, sys, os
 
 ROOT = r"<WORKSPACE>"
-SRC = os.path.join(ROOT, r"10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source")
+SRC = os.path.join(ROOT, r"01_稿件")
 LEDGER = os.path.join(ROOT, r"11_投稿包\_work\稿件取证\溯源表_稿件.csv")
 
 

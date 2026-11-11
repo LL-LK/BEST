@@ -275,17 +275,16 @@ ev_files = [
     V71 / 'e3_recomputed.json', V71 / 'e3_score_validation.json',
     V71 / 'evidence' / 'E3_B03_r2_original.json',
     V71 / 'scripts' / 'validate_e3_scores.py', V71 / 'scripts' / 'trace_sources.py',
-    Path(r'<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\main.tex'),
-    Path(r'<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source\supplementary_material.tex'),
-    Path(r'<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\evaluation_materials\E3_main_32.json'),
-    Path(r'<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\evaluation_materials\E3_online_4.json'),
+    Path(r'<WORKSPACE>\01_稿件\main.tex'),
+    Path(r'<WORKSPACE>\01_稿件\supplementary_material.tex'),
+    Path(r'<WORKSPACE>\10_脱敏复现包\稿件\evaluation_materials\E3_main_32.json'),
+    Path(r'<WORKSPACE>\10_脱敏复现包\稿件\evaluation_materials\E3_online_4.json'),
 ]
 shas = [{'path': str(p), 'bytes': p.stat().st_size, 'sha256': sha(p)}
         for p in ev_files if p.exists()]
 missing_ev = [str(p) for p in ev_files if not p.exists()]
 
 out = {
-    'generated_by': 'E1E2E3证据官 独立重算（只读归档）',
     'slr_ids': sorted(SLR_IDS),
     'main_ids_n': len(MAIN_IDS),
     'ledger_n': len(ledger),

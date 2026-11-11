@@ -10,7 +10,7 @@ ARC = Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\05_原�
 CUR = Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\01_当前结果')
 FB = Path(r'<WORKSPACE>\04_实验数据\E3_科学忠实性\实验产物\02_教师反馈')
 V71 = Path(r'<WORKSPACE>\05_评审与验收\BEST_v71_三项实验源头追查_20261023')
-V72 = Path(r'<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023')
+MANUSCRIPT = Path(r'<WORKSPACE>\10_脱敏复现包\稿件')
 OUT = WORK / '溯源表_E3.csv'
 
 
@@ -31,8 +31,8 @@ R = Path(r'<WORKSPACE>\11_投稿包\_work\E1E2E3\_scripts\recompute_e3_independe
 MINE = 'python "<WORKSPACE>\\11_投稿包\\_work\\E1E2E3\\_scripts\\recompute_e3_independent.py"'
 
 F = {
-    'main.tex': V72 / 'source' / 'main.tex',
-    'supp': V72 / 'source' / 'supplementary_material.tex',
+    'main.tex': MANUSCRIPT / 'source' / 'main.tex',
+    'supp': MANUSCRIPT / 'source' / 'supplementary_material.tex',
     'metrics_csv': CUR / 'E3-指标汇总.csv',
     'denom_csv': CUR / 'E3-主测分母.csv',
     'counts_csv': CUR / 'E3-逐回答计数.csv',
@@ -202,7 +202,7 @@ add('E3-09', 'E3', MAIN, '38(BEST.docx.txt 3.3 节对应段);SUP:541',
     '「主測为32个独立题号，三次重复不视为96个独立样本；不宣称达到预设检验效力」。'
     '自变量是 32 个题号，不是 192 份回答。')
 
-add('E3-10', 'E3', MAIN, 'P99(抽取文本 draft_paragraphs.txt 旧稿);现行 v72 正文见 main.tex:327-329',
+add('E3-10', 'E3', MAIN, 'P99(抽取文本 draft_paragraphs.txt 旧稿);现行 正文见 main.tex:327-329',
     '主评分共标记 18 条科学红线，全部落在基础包装器组的 16 份回答中，完整配置组未被标记。',
     '18 条红线 / 16 份回答（S-B）；S-A 0',
     '05_原始实验归档/original-evidence.tar.gz（各份 counts.redlines）',
@@ -210,8 +210,8 @@ add('E3-10', 'E3', MAIN, 'P99(抽取文本 draft_paragraphs.txt 旧稿);现行 v
     MINE + '（按 group 汇总 counts.redlines 非空的回答数与红线总条数）',
     '一致', '[官方产物文件]',
     '复算：S-B 16 份回答含红线、红线总条数 18；S-A 0 份、0 条。与论文表述一致。'
-    '★注：该数字取自 v16 抽取文本（旧稿段落 P99）；v72 main.tex 未再单列此句，'
-    '若以 v72 为准请人工确认该句是否仍在稿中。')
+    '★注：该数字取自 v16 抽取文本（旧稿段落 P99）；当前稿 main.tex 未再单列此句，'
+    '若以 当前稿 为准请人工确认该句是否仍在稿中。')
 
 add('E3-11', 'E3', '05_评审与验收/BEST_v71_三项实验源头追查_20261023/源头核验报告.md', '55',
     'S-A 的96份回答中83份至少有一项被标为无支撑；80份达到逐回答pass条件，其中67份仍含无支撑主张。',

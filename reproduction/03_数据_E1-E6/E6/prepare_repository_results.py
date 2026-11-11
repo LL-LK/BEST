@@ -81,7 +81,7 @@ def prepare():
     copied = []
     for lane, sources in [('E3', [p for p in e3.iterdir() if p.is_file() and p.suffix in ('.md', '.json')]),
                           ('E6', list(report.iterdir())+[HERE/'FINAL-REPORT.md', e6/'FINAL-DELIVERY.json',
-                                    e6/'run_manifest.json', e6/'R2-CONDITIONS.json', HERE/'ASSISTANT-REVIEW.md'])]:
+                                    e6/'run_manifest.json', e6/'R2-CONDITIONS.json'])]:
         for source in sources:
             if source.name == 'REPORT.md' and lane == 'E3':
                 continue
@@ -114,7 +114,7 @@ def prepare():
     e6_files.extend(safe_files(HERE/'batches'/pilot_id))
     e6_files.extend(HERE.glob('*.py'))
     e6_files.extend(safe_files(HERE/'scoring-protocols'))
-    e6_files.extend([HERE/'PROTOCOL.md', HERE/'ASSISTANT-REVIEW.md', HERE/'FINAL-REPORT.md',
+    e6_files.extend([HERE/'PROTOCOL.md', HERE/'FINAL-REPORT.md',
                      HERE/'formal-tests-64-model-balance-failures.log'])
     e3_files = list(safe_files(e3))+list((ROOT/'temp/e3-formal').glob('*.py'))
     e3_files.extend([ROOT/'temp/e3-formal/tests.log', ROOT/'temp/e3-formal/final-report-validation.log',

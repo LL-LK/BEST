@@ -3,40 +3,24 @@
 **面向智能体的天文数据库访问技能**（AI-accessible scientific database skill）
 —— 以 [BEST](https://nadc.china-vo.org/data/best/)（BEst STar）测光标准星数据库为实现与验证对象。
 
-本仓库是论文的**代码与复现材料官方发布仓库**，对应稿件：
-> *BEST-Skill：面向智能体的天文数据库访问技能*
+本仓库提供《BEST-Skill：面向智能体的天文数据库访问技能》的源码和复现材料。
 
----
+## 下载复现包
 
-## v72 复现包下载
+复现包包含稿件、图表、E1–E6 实验数据、复算脚本及溯源表。
 
-完整脱敏复现包包含稿件、图表、E1–E6 实验证据、最小复现包和溯源清单，共 4,206 个文件。
-
-- [下载 ZIP](https://github.com/LL-LK/BEST/releases/download/v72/BEST-Skill-reproduction-v72.zip)
-- [下载 SHA-256 校验文件](https://github.com/LL-LK/BEST/releases/download/v72/SHA256SUMS.txt)
+- [下载 ZIP](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/BEST-Skill-reproduction.zip)
+- [下载 SHA-256 校验文件](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt)
 
 解压后从 `07_脱敏与README/` 的说明开始，逐文件清单位于 `08_清单与SHA256/`。
 
 ---
 
-## 1. 这个仓库解决什么问题
+## 1. 研究范围
 
-BEST 是一个测光标准星数据库，**不提供逐历元时序**，也**不是为自然语言交互设计的**。
-本项目把 BEST 的访问面封装成一个可被大模型 / Agent 调用的技能，并回答一个具体问题：
-
-> 能否把自然语言天文需求，**稳定地**转成正确的数据库查询，并返回
-> **科学语义正确、来源可追溯、异常情况下不胡编**的结果？
-
-### 主张与不主张
-
-**主张**：分层设计（面向模型的指导信息 + 面向查询过程的执行机制）使请求映射正确、
-科学陈述可溯源、越界请求被安全拒绝。
-
-**不主张**：
-
-- ❌ 不主张 BEST 数据库本身已经 AI-ready；
-- ❌ 不主张 BEST 覆盖逐历元时序、周期恢复或变星识别——**Skill 对这类请求的正确行为是明确拒绝并说明边界**；
-- ❌ 不主张任何单项指导模块的独立因果贡献（E5 的六项消融经 Holm 校正后 p 值全为 1.0）。
+BEST-Skill 将自然语言请求映射为 BEST 星表查询，并为结果记录查询参数和数据来源。
+实验评估请求映射、科学语义和越界请求处置。逐历元时序、周期恢复与变星识别超出 BEST 星表的数据范围。
+E5 的六项单模块消融经 Holm 校正后，p 值均为 1.0。
 
 ## 2. 技能的能力边界
 
@@ -76,8 +60,7 @@ BEST 是一个测光标准星数据库，**不提供逐历元时序**，也**不
     ├── 05_溯源台账/          ← 数字溯源台账（逐条：论文值→证据→重算命令→判定）
     ├── 06_专家盲评包/        ← E3 专家盲评工作簿（空白待真人填写）
     ├── 07_脱敏与README/      ← 替换规则表、脱敏日志、隐私扫描报告
-    ├── 08_清单与SHA256/      ← 逐文件 MANIFEST、验收结果报告、扫描与清单脚本
-    └── BEST-Skill投稿包_v72_20261025.zip   ← 上述内容的完整打包（LFS）
+    └── 08_清单与SHA256/      ← 逐文件 MANIFEST、验收结果报告、扫描与清单脚本
 ```
 
 ## 4. 怎么复现
@@ -99,11 +82,11 @@ python skill/reproduce_e2.py --verify-only    # → 冻结输入 / 代码 / Gold
 
 ```bash
 # E5 全量统计复算：2016 格 → 各臂通过率、精确配对符号翻转、Holm、bootstrap CI
-python reproduction/05_溯源台账/主会话独立复算件/verify_e5_independent.py
-python reproduction/05_溯源台账/主会话独立复算件/verify_e5_contrasts.py
+python reproduction/05_溯源台账/复算脚本/verify_e5_independent.py
+python reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py
 
 # E1 三箱加权分复算（旧链 vs 论文口径，两套不可混用）
-python reproduction/05_溯源台账/主会话独立复算件/verify_e1_batches.py
+python reproduction/05_溯源台账/复算脚本/verify_e1_batches.py
 ```
 
 ### 4.3 投稿包自身的机器验收

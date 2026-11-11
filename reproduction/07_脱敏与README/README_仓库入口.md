@@ -65,8 +65,7 @@ BEST 是一个测光标准星数据库，**不提供逐历元时序**，也**不
     ├── 05_溯源台账/          ← 数字溯源台账（逐条：论文值→证据→重算命令→判定）
     ├── 06_专家盲评包/        ← E3 专家盲评工作簿（空白待真人填写）
     ├── 07_脱敏与README/      ← 替换规则表、脱敏日志、隐私扫描报告
-    ├── 08_清单与SHA256/      ← 逐文件 MANIFEST、验收结果报告、扫描与清单脚本
-    └── BEST-Skill投稿包_v72_20261024.zip   ← 上述内容的完整打包（LFS）
+    └── 08_清单与SHA256/      ← 逐文件 MANIFEST、验收结果报告、扫描与清单脚本
 ```
 
 ## 4. 怎么复现
@@ -88,11 +87,11 @@ python skill/reproduce_e2.py --verify-only    # → 冻结输入 / 代码 / Gold
 
 ```bash
 # E5 全量统计复算：2016 格 → 各臂通过率、精确配对符号翻转、Holm、bootstrap CI
-python reproduction/05_溯源台账/主会话独立复算件/verify_e5_independent.py
-python reproduction/05_溯源台账/主会话独立复算件/verify_e5_contrasts.py
+python reproduction/05_溯源台账/复算脚本/verify_e5_independent.py
+python reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py
 
 # E1 三箱加权分复算（旧链 vs 论文口径，两套不可混用）
-python reproduction/05_溯源台账/主会话独立复算件/verify_e1_batches.py
+python reproduction/05_溯源台账/复算脚本/verify_e1_batches.py
 ```
 
 ### 4.3 投稿包自身的机器验收

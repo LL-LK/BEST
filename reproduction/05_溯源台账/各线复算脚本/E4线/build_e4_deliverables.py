@@ -20,10 +20,10 @@ RECALC = OUT_DIR / "_work_out" / "复算结果_E4.json"
 CSV_TRACE = OUT_DIR / "溯源表_E4.csv"
 CSV_GAP = OUT_DIR / "E4_复合故障场景缺口表.csv"
 
-V72 = Path(r"<WORKSPACE>\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023")
+MANUSCRIPT = Path(r"<WORKSPACE>\10_脱敏复现包\稿件")
 V70 = Path(r"<WORKSPACE>\10_脱敏复现包\BEST_v70_E4数据更新与批注核验_20261023")
-MAIN_TEX = V72 / "source" / "main.tex"
-SUPP_TEX = V72 / "source" / "supplementary_material.tex"
+MAIN_TEX = MANUSCRIPT / "source" / "main.tex"
+SUPP_TEX = MANUSCRIPT / "source" / "supplementary_material.tex"
 
 R = json.loads(RECALC.read_text(encoding="utf-8"))
 SHA = {k: v["sha256"] for k, v in R["sha256"].items()}
@@ -58,7 +58,7 @@ def rows_trace() -> list[dict]:
         base.update(kw)
         rows.append(base)
 
-    # ---------------- A. 论文当前呈现值（v72） ----------------
+    # ---------------- A. 论文当前呈现值（当前稿） ----------------
     add(claim_id="E4-W-01", 实验="E4 协议层（Tier W）",
         论文文件=MT, 论文行号="66; 373",
         论文原文片段="15 个协议故障场景均按约定处置 / 协议故障场景 & 15/15 & 预设协议规则的处置",
@@ -107,8 +107,8 @@ def rows_trace() -> list[dict]:
         论文文件=MT, 论文行号="356",
         论文原文片段="按类别统计，A 类为（3/3、3/3、3/3），B 类为（17/17、17/17、17/17），C 类为（9/9、9/9、9/9），D 类为（4/5、5/5、4/5），合法直接回答为（1/1、1/1、1/1）",
         论文呈现值="A 3/3×3、B 17/17×3、C 9/9×3、D 4/5、5/5、4/5、E 1/1×3；图 5 汇总 103/105（A 9/9、B 51/51、C 27/27、D 13/15、合法回答 3/3）",
-        证据文件路径=f"{P['E4_scored_records_json']} ; {P['v72_fig5_source_data']}",
-        证据SHA256=sha_of("E4_scored_records_json", "v72_fig5_source_data"),
+        证据文件路径=f"{P['E4_scored_records_json']} ; {P['manuscript_fig5_source_data']}",
+        证据SHA256=sha_of("E4_scored_records_json", "manuscript_fig5_source_data"),
         可复现命令=f"{CMD_PAPER} ; {CMD_VERIFY}",
         一致性判定="一致",
         来源标签="[官方产物文件]",
@@ -128,7 +128,7 @@ def rows_trace() -> list[dict]:
     # ---------------- B. 论文未呈现 / 口径已变更 ----------------
     add(claim_id="E4-P-05", 实验="E4 话术层（Tier P）",
         论文文件=MT, 论文行号="（全文无：74.29 / 0.7429 / 26/35）",
-        论文原文片段="（v72 正文与附录全文检索无 74.29%、0.7429、26/35）",
+        论文原文片段="（当前稿 正文与附录全文检索无 74.29%、0.7429、26/35）",
         论文呈现值="未呈现",
         证据文件路径=f"{P['r1_report_json']} ; {P['r1_run_card']}",
         证据SHA256=sha_of("r1_report_json", "r1_run_card"),
@@ -139,7 +139,7 @@ def rows_trace() -> list[dict]:
 
     add(claim_id="E4-P-06", 实验="E4 话术层（Tier P）",
         论文文件=MT, 论文行号="（全文无：43.75 / 7/16）",
-        论文原文片段="（v72 正文与附录全文检索无 43.75%、7/16）",
+        论文原文片段="（当前稿 正文与附录全文检索无 43.75%、7/16）",
         论文呈现值="未呈现",
         证据文件路径=P["r1_report_json"],
         证据SHA256=sha_of("r1_report_json"),
@@ -150,7 +150,7 @@ def rows_trace() -> list[dict]:
 
     add(claim_id="E4-RL-01", 实验="E4 安全红线（must_not_call）",
         论文文件=MT, 论文行号="（全文无：must_not_call）",
-        论文原文片段="（v72 正文与附录全文检索无 must_not_call 字样）",
+        论文原文片段="（当前稿 正文与附录全文检索无 must_not_call 字样）",
         论文呈现值="未呈现（论文改为按附录 B.8 八条安全约束表述）",
         证据文件路径=P["r1_report_json"],
         证据SHA256=sha_of("r1_report_json"),
@@ -229,7 +229,7 @@ def rows_trace() -> list[dict]:
     # ---------------- D. 披露与来源 ----------------
     add(claim_id="E4-SAN-01", 实验="E4 执行环境（沙箱）",
         论文文件=MT, 论文行号="（全文无：隔离 / 物理隔离）",
-        论文原文片段="（v72 正文与附录全文检索无相关披露）",
+        论文原文片段="（当前稿 正文与附录全文检索无相关披露）",
         论文呈现值="未呈现",
         证据文件路径=f"{P['r1_run_card']} ; {P['r1_report_md']}",
         证据SHA256=sha_of("r1_run_card", "r1_report_md"),
@@ -240,7 +240,7 @@ def rows_trace() -> list[dict]:
 
     add(claim_id="E4-SRC-01", 实验="E4 数据来源（答卷性质）",
         论文文件=MT, 论文行号="（全文无：转写 / 轨迹）",
-        论文原文片段="（v72 正文与附录全文检索无相关披露）",
+        论文原文片段="（当前稿 正文与附录全文检索无相关披露）",
         论文呈现值="未呈现",
         证据文件路径=P["v70_review_md"],
         证据SHA256=sha_of("v70_review_md"),
@@ -251,7 +251,7 @@ def rows_trace() -> list[dict]:
 
     add(claim_id="E4-SRC-02", 实验="E4 新旧口径隔离",
         论文文件=MT, 论文行号="（全文无：新旧批次不可比说明）",
-        论文原文片段="（v72 正文与附录全文检索无相关说明）",
+        论文原文片段="（当前稿 正文与附录全文检索无相关说明）",
         论文呈现值="未呈现",
         证据文件路径=P["v70_review_md"],
         证据SHA256=sha_of("v70_review_md"),

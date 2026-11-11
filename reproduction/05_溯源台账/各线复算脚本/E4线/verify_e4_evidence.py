@@ -27,7 +27,7 @@ ITEMS_YAML = E4_ARCHIVE / "01-用例集与判据表" / "items.yaml"
 RUBRIC_YAML = E4_ARCHIVE / "01-用例集与判据表" / "rubric.yaml"
 
 V70 = ROOT / r"10_脱敏复现包\BEST_v70_E4数据更新与批注核验_20261023"
-V72 = ROOT / r"10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023"
+MANUSCRIPT = ROOT / r"10_脱敏复现包\稿件"
 V70_EVAL = V70 / "evaluation_materials"
 V70_REPRO = V70 / "work" / "E4_input" / "_复现"
 GRADE_R2 = V70_REPRO / "out" / "grade_r2.json"
@@ -35,10 +35,10 @@ TIERW = V70_REPRO / "out" / "official-tierW.json"
 SB_ANS = {sb: V70_REPRO / "out" / f"{sb}_answers.json" for sb in ("sb1", "sb2", "sb3")}
 EXPECTED_OFFICIAL = V70_REPRO / "expected" / "official.json"
 EXPECTED_METRICS = V70_REPRO / "expected" / "metrics.json"
-V72_FIGDATA = V72 / "E4图复现" / "source_data.json"
+manuscript_FIGDATA = MANUSCRIPT / "E4图复现" / "source_data.json"
 
-MAIN_TEX = V72 / "source" / "main.tex"
-SUPP_TEX = V72 / "source" / "supplementary_material.tex"
+MAIN_TEX = MANUSCRIPT / "source" / "main.tex"
+SUPP_TEX = MANUSCRIPT / "source" / "supplementary_material.tex"
 V70_REVIEW = V70 / "老师修改意见与E4核验.md"
 
 OUT_DIR = Path(__file__).resolve().parent
@@ -124,9 +124,9 @@ def main() -> None:
         "E4_main_35_json": V70_EVAL / "E4_main_35.json",
         "E4_results_json": V70_EVAL / "E4_results.json",
         "E4_scored_records_json": V70_EVAL / "E4_scored_records.json",
-        "v72_main_tex": MAIN_TEX,
-        "v72_supplementary_tex": SUPP_TEX,
-        "v72_fig5_source_data": V72_FIGDATA,
+        "manuscript_main_tex": MAIN_TEX,
+        "manuscript_supplementary_tex": SUPP_TEX,
+        "manuscript_fig5_source_data": manuscript_FIGDATA,
         "v70_review_md": V70_REVIEW,
         "e4_min_repro_zip": ROOT / r"10_脱敏复现包\E4_最小复现包.zip",
     }
@@ -193,7 +193,7 @@ def main() -> None:
     results = read_json(V70_EVAL / "E4_results.json")
     exp_off = read_json(EXPECTED_OFFICIAL)
     exp_met = read_json(EXPECTED_METRICS)
-    fig = read_json(V72_FIGDATA)["E4"]
+    fig = read_json(manuscript_FIGDATA)["E4"]
 
     out["v70"] = {"repeats": {}, "compound": [], "consistency": {}}
     cat_counts, cat_correct = Counter(), Counter()

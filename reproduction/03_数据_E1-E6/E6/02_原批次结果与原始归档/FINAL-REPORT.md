@@ -91,5 +91,4 @@ R2：**2026-10-14（Asia/Shanghai）**人工复跑32×5。复查模型权限/实
 - [冻结运行清单](run_manifest.json)
 - [快照库及来源](original-evidence.tar.gz)
 - [R2准确日期和命令](R2-CONDITIONS.json)
-- [逐项实际答案审阅](ASSISTANT-REVIEW.md)
 - [64项设施反例检查](original-evidence.tar.gz)

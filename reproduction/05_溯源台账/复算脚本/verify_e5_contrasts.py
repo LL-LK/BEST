@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 独立复算 E5 的全部预设对比与统计量（不依赖官方脚本结果，直接从 scores.json 重算）。
-方法对齐 05_评审与验收\\BEST_v71_三项实验源头追查_20261023\\evidence\\confirmatory_stats.py：
   - 统计单位：题目；每题每臂先对三次重复取均值
   - 精确配对符号翻转：逐题整数成功数之差，按 |Σ| 统计量做精确置换
   - 题目聚类 bootstrap：10000 次，2.5%/97.5% 分位
   - 六项消融家族用 Holm 单调调整
-输出：E5_对比与统计量独立复算.json
 """
+from pathlib import Path
 import json, hashlib, random
 from collections import defaultdict
 
-SRC = r"<WORKSPACE>\04_实验数据\E5_消融\正式结果_2026-10-12\scores.json"
-OUT = r"<WORKSPACE>\11_投稿包\_work\_复核\E5_对比与统计量独立复算.json"
+SRC = Path(__file__).resolve().parents[2] / "03_数据_E1-E6/E5/scores.json"
 
 ARMS = ('B0', 'B1', 'B2a', 'B2b', 'B3', 'A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'sham')
 
@@ -130,8 +128,6 @@ def main():
         },
         'by_decision_class': strata,
     }
-    with open(OUT, 'w', encoding='utf-8') as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
 
     print(json.dumps({
         'primary_B3_minus_B2b': primary,

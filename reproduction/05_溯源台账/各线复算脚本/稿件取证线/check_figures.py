@@ -8,7 +8,7 @@
 import re, os, sys, csv, hashlib
 
 ROOT = r"<WORKSPACE>"
-SRC = ROOT + r"\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\source"
+SRC = ROOT + r"\01_稿件"
 OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PAT = re.compile(r"\\(includegraphics|input|include)\s*(\[[^\]]*\])?\s*\{([^}]*)\}")

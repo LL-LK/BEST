@@ -122,18 +122,18 @@
       "sha256": "3371adb86dde52e69309146966a364aac56399a275a9d3da03697500808756ec",
       "bytes": 15841
     },
-    "v72_main_tex": {
-      "path": "<WORKSPACE>\\10_脱敏复现包\\BEST_v72_图2嵌入正文确认_20261023\\source\\main.tex",
+    "manuscript_main_tex": {
+      "path": "<WORKSPACE>\\01_稿件\\main.tex",
       "sha256": "9ba0ef5183db8249b7ed3f432c8b4e98ca4cd9bc7d4926701d9b99a01cc054bc",
       "bytes": 58994
     },
-    "v72_supplementary_tex": {
-      "path": "<WORKSPACE>\\10_脱敏复现包\\BEST_v72_图2嵌入正文确认_20261023\\source\\supplementary_material.tex",
+    "manuscript_supplementary_tex": {
+      "path": "<WORKSPACE>\\01_稿件\\supplementary_material.tex",
       "sha256": "8fd3b82f6cfcdef21c96f58c351416ef19e808c42ef1832e091828340fb6556c",
       "bytes": 93824
     },
-    "v72_fig5_source_data": {
-      "path": "<WORKSPACE>\\10_脱敏复现包\\BEST_v72_图2嵌入正文确认_20261023\\E4图复现\\source_data.json",
+    "manuscript_fig5_source_data": {
+      "path": "<WORKSPACE>\\10_脱敏复现包\\稿件\\E4图复现\\source_data.json",
       "sha256": "e02404ef97f20a9f2b5105224c7a1a9fc4e5f49e254e4eeeb6e890df991ad3b4",
       "bytes": 643
     },

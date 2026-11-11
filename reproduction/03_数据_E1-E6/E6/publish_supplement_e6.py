@@ -129,7 +129,7 @@ def publish(batch):
         '\n0–1 越高表示越一致；少于两次有效重复时，该题记为缺失。'
         '“有效”表示轨迹和输出格式符合采集条件，澄清、拒绝也可有效。\n')
     for name in ('SUPPLEMENT-PROTOCOL.json','REMAINING-WORK.md','TESTS.log','RUN-STATUS.json','run_manifest.json',
-                 'PORTABLE-SNAPSHOT-VERIFICATION.json','FINAL-TESTS.log','ASSISTANT-REVIEW-NOTES.json',
+                 'PORTABLE-SNAPSHOT-VERIFICATION.json','FINAL-TESTS.log',
                  'R2-DATE-GUARD-PREFLIGHT.json','PROTOCOL-AMENDMENT-U7-REMOVAL.json','DELIVERY-TESTS.log',
                  'FINAL-TESTS-311.log','FINAL-TESTS-313.log','FINAL-TESTS-314.log','OPERATIONAL-TIMING-NOTE.json',
                  'OFFLINE-FINALIZATION.json','OFFLINE-FINALIZATION.log'):

@@ -92,7 +92,7 @@ def deliver(batch):
                        (delivery_path,'全部轨迹及快照来源审计'),(coverage_path,'实际场景覆盖'),(wire_path,'原始软错及SQLID路径审计'),
                        (report/'canary-exact-rows-audit.json','精确canary指纹'),(batch/'run_manifest.json','冻结运行清单'),
                        (batch/'snapshot_manifest.json','快照库及来源'),(batch/'R2-CONDITIONS.json','R2准确日期和命令'),
-                       (HERE/'ASSISTANT-REVIEW.md','逐项实际答案审阅'),(HERE/'formal-tests-64-model-balance-failures.log','64项设施反例检查')]:
+                       (HERE/'formal-tests-64-model-balance-failures.log','64项设施反例检查')]:
         lines.append('- '+link(path,label))
     target=HERE/'FINAL-REPORT.md'
     with target.open('x') as f:f.write('\n'.join(lines)+'\n')

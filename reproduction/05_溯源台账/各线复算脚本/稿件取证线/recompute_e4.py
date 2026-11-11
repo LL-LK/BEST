@@ -8,7 +8,7 @@ import json, sys, hashlib, collections
 ROOT = r"<WORKSPACE>"
 RAW = ROOT + (r"\10_脱敏复现包\BEST_v70_E4数据更新与批注核验_20261023"
                r"\work\E4_input\_复现\out\grade_r2.json")
-FIGSRC = ROOT + r"\10_脱敏复现包\BEST_v72_图2嵌入正文确认_20261023\E4图复现\source_data.json"
+FIGSRC = ROOT + r"\10_脱敏复现包\稿件\E4图复现\source_data.json"
 EXPECT_SHA = "13f74f9b47d33d08358640af215bd7b2ffbfdb1d9b3b6701af7f05b271db8250"
 
 PAPER = {
