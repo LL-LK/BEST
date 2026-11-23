@@ -5,10 +5,12 @@
 | 查找目标 | 材料 |
 | --- | --- |
 | 原投稿包和当时的公开范围 | [原投稿交接](../reproduction/07_脱敏与README/README.md) · [旧仓库入口](../reproduction/07_脱敏与README/README_仓库入口.md) · [脱敏总览](../reproduction/07_脱敏与README/README-脱敏总览.md) |
-| 投稿时的源码和最小运行材料 | [原始源码快照](../reproduction/04_复现源码/astro-best_skill源码仓/) · [最小复现包目录](../reproduction/04_复现源码/最小复现包/) |
+| 投稿时的源码和最小运行材料 | [原始源码快照](../reproduction/04_复现源码/astro-best_skill源码仓/) · [首发的六个最小复现包](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/reproduction/04_%E5%A4%8D%E7%8E%B0%E6%BA%90%E7%A0%81/%E6%9C%80%E5%B0%8F%E5%A4%8D%E7%8E%B0%E5%8C%85) |
 | 评分变更和复跑 | [E1 旧评分链](../reproduction/03_数据_E1-E6/E1/07-答案键三批/README_旧链说明.md) · [E4 r1 结果](../reproduction/03_数据_E1-E6/E4/07-结果%28r1权威%29/REPORT-r1.md) · [E6 原批归档](../reproduction/03_数据_E1-E6/E6/02_原批次结果与原始归档/) |
 | 实现变更、评测决策和退役记录 | [变更日志](../skill/CHANGELOG.md) · [原始治理记录](../skill/README.md#原始整仓的治理记录) · [历史问题登记](../skill/docs/ISSUES.md) · [归档目录说明](../skill/docs/archive/README.md) · [退役资产记录](../skill/docs/archive/RETIRED.md) |
 
 旧材料保留生成时的目录、评分和审计记录。目录中的旧命令、链接和版本信息按原始上下文阅读。从当前仓库运行实验时，使用 [E1–E6 实验入口](experiments.md) 标明的批次及复现命令。
 
 历史 E5 会话和开发架构图导出件可从首发提交 `ecdb169` 访问。主分支提供复算脚本、评分表与可编辑图源。 [E5 历史轨迹](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/skill/evals/ablation/transcripts/live_runs) · [历史架构图](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/skill/docs/diagrams)
+
+原论文 ZIP 内的 `04_复现源码/最小复现包/` 保留 E1 至 E6 六个早期包。首发清单和验收脚本对应当时的完整目录，便携发布包附有各自的清单。 [原论文 Release](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) · [便携复现](../reproduction/portable/README.md)

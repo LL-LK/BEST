@@ -8,7 +8,7 @@
 | 论文插图和生成脚本 | [稿件插图](../reproduction/01_稿件/figures/) · [出图说明](../reproduction/02_图表/README.md) · [出图数据](../reproduction/02_图表/source_data.json) |
 | 论文数字与来源 | [溯源说明](../reproduction/05_溯源台账/README.md) · [合并台账](../reproduction/05_溯源台账/数字溯源台账_合并.csv) · [复算脚本](../reproduction/05_溯源台账/复算脚本/) |
 | 评分材料 | [专家盲评操作说明](../reproduction/06_专家盲评包/README_盲评操作说明.md) · [实验结果与批次](experiments.md) |
-| 封存校验 | [公开材料验收报告](../reproduction/08_清单与SHA256/验收结果报告.md) · [本仓库封存清单](../reproduction/08_清单与SHA256/MANIFEST.sha256) |
+| 封存校验 | [首发材料验收报告](../reproduction/08_清单与SHA256/验收结果报告.md) · [首发封存清单](../reproduction/08_清单与SHA256/MANIFEST.sha256) · [便携包校验](../reproduction/portable/README.md) |
 
 ## Release
 
