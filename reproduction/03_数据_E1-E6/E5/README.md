@@ -6,6 +6,10 @@
 
 ## 核验与分析复现
 
+从当前仓库拿到实际的 `E5_public_reproduction.zip` 后，可执行 `python verify_e5.py E5_public_reproduction.zip`。该入口核验公开 ZIP 的哈希、历史评分账本字节和 2,016 个逻辑键。统计复算及独立 v15 交叉匹配见 [便携复现](../../portable/README.md)。
+
+下面是原始封存布局的历史命令。
+
 解压后可执行：
 
 ```powershell

@@ -67,42 +67,40 @@
       "total": 15
     },
     "language": {
-      "correct": 26,
-      "total": 35
+      "correct": 103,
+      "total": 105
     },
     "categories": [
       {
         "label": "A 确定性纠正",
-        "correct": 2,
-        "total": 4
+        "correct": 9,
+        "total": 9
       },
       {
         "label": "B 确定性拒绝",
-        "correct": 13,
-        "total": 17
+        "correct": 51,
+        "total": 51
       },
       {
         "label": "C 请求澄清",
-        "correct": 8,
-        "total": 10
+        "correct": 27,
+        "total": 27
       },
       {
         "label": "D 安全停止",
-        "correct": 2,
-        "total": 2
+        "correct": 13,
+        "total": 15
       },
       {
         "label": "合法直接回答",
-        "correct": 1,
-        "total": 2
+        "correct": 3,
+        "total": 3
       }
     ],
     "weighted_criteria": {
-      "correct": 7,
-      "total": 16
-    },
-    "must_not_call_red_lines": 4,
-    "deferred_composite_cases": 18
+      "correct": 31,
+      "total": 55
+    }
   },
   "E6": {
     "TSC": {

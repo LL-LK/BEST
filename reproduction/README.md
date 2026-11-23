@@ -4,6 +4,8 @@
 
 [仓库文档导航](../docs/README.md) · [E1–E6 资料索引](../docs/experiments.md)
 
+[便携复现与五组附录](portable/README.md) 提供 E1–E6、v15 交叉匹配、表 B3–B8 和图 B1 的下载与复算入口。
+
 ## 核验与统计复算
 
 | 项目 | 命令或入口 | 输出 |

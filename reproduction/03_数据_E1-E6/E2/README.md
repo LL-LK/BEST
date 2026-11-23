@@ -13,6 +13,6 @@ python reproduce_e2.py --verify-only
 python reproduce_e2.py --output ./e2-reproduction-new
 ```
 
-需要Python及原始环境中用到的依赖，环境快照见 `accepted_run/preregistration.json`，依赖声明见 `code/requirements.txt`。源码树通过脚本加入sys.path，不需要安装为wheel。输出目录必须不存在；重现检查的63次不计入原始确认性样本，不覆盖 accepted_run。脚本核验全部冻结输入、代码、独立Gold，再要求重现的63份行输出哈希与原接受批次一致。
+需要 Python 和 [离线复现依赖](../../portable/requirements-paper.txt)，环境快照见 `accepted_run/preregistration.json`。源码树由脚本加入导入路径。输出目录必须不存在；重现检查的 63 次为验证运行，保存在独立目录。脚本核验全部冻结输入、代码和独立 Gold，并逐条比对回放的输出和错误回执。
 
 `operations/`保留原始预注册/执行脚本，含原机器绝对路径；跨机器使用上述可移植入口。`frozen-code-map.json`把原绝对路径映射到包内文件，原代码不改写。`audit/run-*`仅保留失败诊断轮的报告、trace和预注册，不混入run-07；其旧输入/旧版本代码未全部复制，因此不是失败轮的独立可运行包。历史总结末尾“E5未启动”反映当时日期，本次E5最新状态请看独立E5包。

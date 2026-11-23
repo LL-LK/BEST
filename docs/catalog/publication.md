@@ -173,3 +173,7 @@
 
 - [MANIFEST.sha256](../../reproduction/08_%E6%B8%85%E5%8D%95%E4%B8%8ESHA256/MANIFEST.sha256)
 - [验收结果报告.md](../../reproduction/08_%E6%B8%85%E5%8D%95%E4%B8%8ESHA256/%E9%AA%8C%E6%94%B6%E7%BB%93%E6%9E%9C%E6%8A%A5%E5%91%8A.md)
+
+## reproduction/portable
+
+- [README.md](../../reproduction/portable/README.md)

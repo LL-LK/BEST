@@ -9,6 +9,7 @@ BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://n
 - [论文 PDF](reproduction/01_稿件/main.pdf) · [补充材料 LaTeX](reproduction/01_稿件/supplementary_material.tex)
 - [原论文复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) · [原包 SHA-256](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt)
 - [复现说明与各批次口径](reproduction/README.md)
+- [原论文便携复现与五组对照](reproduction/portable/README.md)
 
 以下补充包给出四个框架与模型组合在 E1、E3、E4 和 E5 上的评分记录。每包附有可离线执行的复算脚本。
 

@@ -10,7 +10,7 @@
 | [仓库入口与导航](repository.md) | 7 |
 | [查询实现与开发材料](skill.md) | 112 |
 | [Skill 归档](skill-archive.md) | 14 |
-| [稿件、图表与复现配套材料](publication.md) | 76 |
+| [稿件、图表与复现配套材料](publication.md) | 77 |
 | [E1](e1.md) | 118 |
 | [E1 答题沙箱](e1-sandbox.md) | 407 |
 | [E2](e2.md) | 25 |
@@ -18,4 +18,4 @@
 | [E4](e4.md) | 136 |
 | [E5](e5.md) | 27 |
 | [E6](e6.md) | 6 |
-| 合计 | 940 |
+| 合计 | 941 |
