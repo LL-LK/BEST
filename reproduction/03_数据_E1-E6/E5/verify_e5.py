@@ -2,10 +2,30 @@
 from pathlib import Path
 import argparse, hashlib, json, zipfile
 
+PUBLIC_ZIP_SHA = '729ee85f7d97eb8dd3a575c7e253a405a426a9bd6c322f19d9285ce3ca88164c'
+SCORES_SHA = '2a030fb9e6f5a362a2f5dc485e01c5b1e5ece8ef6ab1735596dff9ca6da75a5c'
+
+
+def verify_public_archive(path, archive):
+    """Verify the published, projected archive against its sealed reference bytes."""
+    with path.open('rb') as handle:
+        if hashlib.file_digest(handle, 'sha256').hexdigest() != PUBLIC_ZIP_SHA:
+            raise ValueError('Published E5 ZIP checksum differs from its reference')
+    published_scores = archive.read('results/scores.json')
+    if hashlib.sha256(published_scores).hexdigest() != SCORES_SHA:
+        raise ValueError('Published E5 score bytes differ from the original score ledger')
+    rows = json.loads(published_scores)
+    if len(rows) != 2016 or len({(r['arm'], r['task'], r['replicate']) for r in rows}) != 2016:
+        raise ValueError('Expected 2,016 unique E5 scores')
+    print(json.dumps({'archive_hash_verified': True, 'score_ledger_verified': True, 'unique_scores': 2016}))
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('archive',type=Path);args=p.parse_args()
     with zipfile.ZipFile(args.archive) as z:
         names=z.namelist();assert len(names)==len(set(names))
+        if 'E5/MANIFEST.sha256.json' not in names:
+            return verify_public_archive(args.archive, z)
         manifest=json.loads(z.read('E5/MANIFEST.sha256.json'))
         assert set(names)==set(manifest)|{'E5/MANIFEST.sha256.json'}
         actual={name:hashlib.sha256(z.read(name)).hexdigest() for name in manifest}

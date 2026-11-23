@@ -15,6 +15,8 @@
 | 批次 | 下载 |
 | --- | --- |
 | 原论文 | [论文复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) · [SHA-256](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt) |
+| 原论文便携复现 | [E1–E6 与 v15 交叉匹配](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1) |
+| 返修稿五组对照 | [附录 B.2 数据、代码与图表](https://github.com/LL-LK/BEST/releases/tag/paper-comparison-five-groups-v1) |
 | Pi / DeepSeek V4.1 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-pi-deepseek-v4.1-flash) |
 | Hermes / DeepSeek V4.1 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-hermes-deepseek-v4.1-flash) |
 | DSH / GLM 5.3 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-glm-5.3-flash) |

@@ -205,8 +205,12 @@ def chart_e4():
         txt(cv, x, AY1 + 30, str(v), size=18, fill=INK_TICK, anchor="middle",
             weight="500")
     frame(cv, AX0, AY0, AX1, AY1)
-    ga = [('协议故障场景',100.,'15/15  •  100.00%','teal'),
-          ('自然语言请求',DATA['E4']['language']['correct']/DATA['E4']['language']['total']*100,'25/35  •  71.43%','peri')]
+    ga = []
+    for key, label, ramp in (('protocol', '协议故障场景', 'teal'),
+                             ('language', '自然语言请求', 'peri')):
+        correct, total = (DATA['E4'][key][name] for name in ('correct', 'total'))
+        percent = 100 * correct / total
+        ga.append((label, percent, f'{correct}/{total}  •  {percent:.2f}%', ramp))
     gh = (AY1 - AY0) / 2
     for i, (lab, v, tag, ramp) in enumerate(ga):
         yc = AY0 + gh * (i + 0.5)
