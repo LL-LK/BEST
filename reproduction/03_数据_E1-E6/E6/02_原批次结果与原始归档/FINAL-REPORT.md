@@ -89,6 +89,6 @@ R2：**2026-10-14（Asia/Shanghai）**人工复跑32×5。复查模型权限/实
 - [原始软错及SQLID路径审计](wire-semantics-audits.json)
 - [精确canary指纹](canary-exact-rows-audit.json)
 - [冻结运行清单](run_manifest.json)
-- [快照库及来源](original-evidence.tar.gz)
+- 快照库及来源见 [原论文 Release](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) 内本实验目录下的 `original-evidence.tar.gz`
 - [R2准确日期和命令](R2-CONDITIONS.json)
-- [64项设施反例检查](original-evidence.tar.gz)
+- 64 项设施反例检查见同一证据包。

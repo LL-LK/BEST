@@ -6,14 +6,14 @@
 
 ## 本地入口
 
-从 `skill/` 目录运行以下命令。依赖声明见 [pyproject.toml](pyproject.toml)。
+从 `skill/` 目录运行以下命令。测试与代码检查配置见 [pyproject.toml](pyproject.toml)。
 
 ```bash
 python ops/astro_best_cli.py --help
 python -m src --help
 ```
 
-原始整仓的 [manifest.yaml](../reproduction/04_复现源码/astro-best_skill源码仓/manifest.yaml)、[architecture.md](../reproduction/04_复现源码/astro-best_skill源码仓/architecture.md) 和 [Makefile](../reproduction/04_复现源码/astro-best_skill源码仓/Makefile) 位于复现源码快照。下文的治理规则和旧文件树可用于理解快照的维护方式。
+原始整仓的 [manifest.yaml](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/reproduction/04_%E5%A4%8D%E7%8E%B0%E6%BA%90%E7%A0%81/astro-best_skill%E6%BA%90%E7%A0%81%E4%BB%93/manifest.yaml)、[architecture.md](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/reproduction/04_%E5%A4%8D%E7%8E%B0%E6%BA%90%E7%A0%81/astro-best_skill%E6%BA%90%E7%A0%81%E4%BB%93/architecture.md) 和 [Makefile](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/reproduction/04_%E5%A4%8D%E7%8E%B0%E6%BA%90%E7%A0%81/astro-best_skill%E6%BA%90%E7%A0%81%E4%BB%93/Makefile) 位于复现源码快照。下文的治理规则和旧文件树可用于理解快照的维护方式。
 
 ## 原始整仓的治理记录
 
