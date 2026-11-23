@@ -6,7 +6,7 @@
 
 ## 1. 核心产物清单
 
-分发口径：**`.drawio` 源文件与生成/审计脚本受 git 跟踪**（合计约 270 KB），**PNG / SVG / PDF 渲染产物不随 git 分发**（`docs/` 整体在 `.gitignore` 内，本地保留供查看与再渲染）。
+主分支提供 `.drawio` 源文件和生成、审计脚本。已有的 PNG、SVG、PDF 导出件可从[原发布提交](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/skill/docs/diagrams)查看，也可以按下文命令重新生成。
 
 | 文件名称 | 格式与规格 | 文件大小 | 架构层级 / 适用场景 | git |
 |---|---|---|---|---|

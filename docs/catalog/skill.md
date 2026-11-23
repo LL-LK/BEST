@@ -81,8 +81,6 @@
 ## skill/docs/diagrams
 
 - [README.md](../../skill/docs/diagrams/README.md)
-- [astro-best-legacy-architecture.pdf](../../skill/docs/diagrams/astro-best-legacy-architecture.pdf)
-- [astro-best-macro-flowchart.pdf](../../skill/docs/diagrams/astro-best-macro-flowchart.pdf)
 
 ## skill/evals/ablation
 
