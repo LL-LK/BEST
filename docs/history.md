@@ -10,3 +10,5 @@
 | 实现变更、评测决策和退役记录 | [变更日志](../skill/CHANGELOG.md) · [原始治理记录](../skill/README.md#原始整仓的治理记录) · [历史问题登记](../skill/docs/ISSUES.md) · [归档目录说明](../skill/docs/archive/README.md) · [退役资产记录](../skill/docs/archive/RETIRED.md) |
 
 旧材料保留生成时的目录、评分和审计记录。目录中的旧命令、链接和版本信息按原始上下文阅读。从当前仓库运行实验时，使用 [E1–E6 实验入口](experiments.md) 标明的批次及复现命令。
+
+历史 E5 会话和开发架构图导出件可从首发提交 `ecdb169` 访问。主分支提供复算脚本、评分表与可编辑图源。 [E5 历史轨迹](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/skill/evals/ablation/transcripts/live_runs) · [历史架构图](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/skill/docs/diagrams)

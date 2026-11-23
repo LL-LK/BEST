@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+/reproduction/01_稿件/main.aux
+/reproduction/01_稿件/main.log
+/reproduction/01_稿件/main.out

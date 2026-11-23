@@ -34,4 +34,4 @@ E2 的 [环境与离线回放说明](03_数据_E1-E6/E2/README.md) 区分了输�
 
 ## 历史材料
 
-[旧投稿交接](07_脱敏与README/README.md)、[此前的仓库入口](07_脱敏与README/README_仓库入口.md)及技能目录中的按日期记录归档当时的判断。[原论文 Release](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) 与四个后续 Release 均有各自的校验文件。E5 目录中的几份 DSH README 保存的是上游文档摘录，其相对链接采用上游仓库布局。E3 和 E6 的当前索引分别见[论文原批的口径](#论文原批的口径)。
+[旧投稿交接](07_脱敏与README/README.md)、[此前的仓库入口](07_脱敏与README/README_仓库入口.md)及技能目录中的按日期记录归档当时的判断。[原论文 Release](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) 与四个后续 Release 均有各自的校验文件。E5 的上游 DSH 文档摘录和机器诊断随原论文版本归档。E3 和 E6 的当前索引分别见[论文原批的口径](#论文原批的口径)。
