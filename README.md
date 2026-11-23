@@ -1,155 +1,41 @@
 # BEST-Skill
 
-**面向智能体的天文数据库访问技能**（AI-accessible scientific database skill）
-—— 以 [BEST](https://nadc.china-vo.org/data/best/)（BEst STar）测光标准星数据库为实现与验证对象。
+BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://nadc.china-vo.org/data/best/) 的查询，记录查询条件、执行状态和结果来源。本仓库提供访问实现、论文和复现材料。
 
-本仓库提供《BEST-Skill：面向智能体的天文数据库访问技能》的源码和复现材料。
+## 论文与下载
 
-## 下载复现包
+- [论文 PDF](reproduction/01_稿件/main.pdf) · [补充材料 LaTeX](reproduction/01_稿件/supplementary_material.tex)
+- [原论文复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) · [原包 SHA-256](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt)
+- [复现说明与各批次口径](reproduction/README.md)
 
-复现包包含稿件、图表、E1–E6 实验数据、复算脚本及溯源表。
+以下补充包给出四个框架与模型组合在 E1、E3、E4 和 E5 上的评分记录。每包附有可离线执行的复算脚本。
 
-- [下载 ZIP](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/BEST-Skill-reproduction.zip)
-- [下载 SHA-256 校验文件](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt)
+| 框架 | 模型 | 复现包 |
+| --- | --- | --- |
+| Pi | DeepSeek V4.1 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-pi-deepseek-v4.1-flash) |
+| Hermes | DeepSeek V4.1 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-hermes-deepseek-v4.1-flash) |
+| DSH | GLM 5.3 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-glm-5.3-flash) |
+| DSH | MiMo 2.6 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-mimo-2.6-flash) |
 
-解压后从 `07_脱敏与README/` 的说明开始，逐文件清单位于 `08_清单与SHA256/`。
+## 复算入口
 
----
+以下命令在仓库根目录执行。E2 从当前仓库读取保留原始行尾的冻结文件。原论文 Release 中的 E2 副本有换行字节差异，运行冻结核验时请使用此处的入口。
 
-## 1. 研究范围
-
-BEST-Skill 将自然语言请求映射为 BEST 星表查询，并为结果记录查询参数和数据来源。
-实验评估请求映射、科学语义和越界请求处置。逐历元时序、周期恢复与变星识别超出 BEST 星表的数据范围。
-E5 的六项单模块消融经 Holm 校正后，p 值均为 1.0。
-
-## 2. 技能的能力边界
-
-只覆盖 BEST 确实支持的能力：
-
-| 能力 | 说明 |
-|---|---|
-| 按 Gaia `source_id` 查询 | 单对象精确查询 |
-| 按坐标 + 搜索半径锥形搜索 | 支持角秒单位与 RA 边界处理 |
-| 按波段 / 星等 / 误差 / 质量标志筛选 | 多条件组合 |
-| 返回库内已有字段 | Gaia 与 ZTF 合成测光字段 |
-| 字段、单位、星等系统与质量标志解释 | 七类处置策略与四层处置级别 |
-| 导出标准化 JSON / CSV / VOTable | 站点 `output.fmt` 原生支持 |
-| 返回数据版本、查询参数与来源链接 | 结果血缘 |
-| **对不支持的请求明确拒绝** | 例如时序需求、整表导出、上传建 job、影像请求、凭据入参 |
-
-## 3. 仓库结构
-
-```
-.
-├── README.md                 ← 本文件（审稿人入口）
-├── LICENSE                   ← MIT
-├── .gitattributes            ← Git LFS 追踪规则（大文件走 LFS）
-├── skill/                    ← 完整源码仓（被测对象本体，已全量脱敏）
-│   ├── src/                  ← 技能实现（TAP/ADQL 网关、结果信封、契约）
-│   ├── contracts/            ← 输入 / 输出 / 字段 / 分页 / 来源 契约
-│   ├── evals/                ← 六组实验的评测代码与用例集
-│   ├── test/                 ← 单元测试
-│   ├── docs/                 ← 架构与评测设计文档
-│   ├── ops/ rag/ references/ ← 运维、知识库、外部参考快照
-│   └── statcatalog/          ← TAP/ADQL 变量目录（大文件，LFS）
-└── reproduction/             ← 投稿包（审稿人复现材料全集）
-    ├── 01_稿件/              ← 稿件终版（main.tex / supplementary_material.tex / PDF / 图）
-    ├── 02_图表/              ← 六幅图的生成器与源数据
-    ├── 03_数据_E1-E6/        ← 六组实验的证据与结果
-    ├── 04_复现源码/          ← 最小可运行版源码 + 六个脱敏最小复现包
-    ├── 05_溯源台账/          ← 数字溯源台账（逐条：论文值→证据→重算命令→判定）
-    ├── 06_专家盲评包/        ← E3 专家盲评工作簿（空白待真人填写）
-    ├── 07_脱敏与README/      ← 替换规则表、脱敏日志、隐私扫描报告
-    └── 08_清单与SHA256/      ← 逐文件 MANIFEST、验收结果报告、扫描与清单脚本
+```text
+python "reproduction/03_数据_E1-E6/E2/reproduce_e2.py" --verify-only
+python "reproduction/05_溯源台账/复算脚本/verify_e1_paper.py"
+python "reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py"
 ```
 
-## 4. 怎么复现
+第一条核对 E2 的冻结输入、代码和 21 个 Gold 用例。第二条复算论文 E1 重判的均值 0.9530，旧评分链见 `verify_e1_batches.py`。第三条复算原论文 E5 的 B3 与 B2b 比较。四个补充包在解压目录运行 `python recompute.py`，即可核验文件并从包内评分记录重算主指标。 [完整复算说明](reproduction/README.md)
 
-### 4.1 开箱可跑（不需要模型凭据）
+## 仓库内容
 
-```bash
-# E1 判定器接线检查
-pytest skill/evals/nl2tool -q --co            # → 159 tests collected
+| 目录 | 内容 |
+| --- | --- |
+| [skill](skill/) | BEST 查询、结果解析及 TAP/ADQL 网关源码与测试 |
+| [稿件与图表](reproduction/01_稿件/) | 论文、补充材料及插图 |
+| [实验数据](reproduction/03_数据_E1-E6/) | E1–E6 原批和补测的材料、判分与执行记录 |
+| [数字溯源](reproduction/05_溯源台账/) | 论文数值对应的结果和复算脚本 |
 
-# E4 接线检查
-pytest skill/evals/robustness -q --co         # → 53 tests collected
-
-# E2 冻结快照回放核验
-python skill/reproduce_e2.py --verify-only    # → 冻结输入 / 代码 / Gold 全部一致
-```
-
-### 4.2 统计量独立复算（随包提供脚本）
-
-```bash
-# E5 全量统计复算：2016 格 → 各臂通过率、精确配对符号翻转、Holm、bootstrap CI
-python reproduction/05_溯源台账/复算脚本/verify_e5_independent.py
-python reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py
-
-# E1 三箱加权分复算（旧链 vs 论文口径，两套不可混用）
-python reproduction/05_溯源台账/复算脚本/verify_e1_batches.py
-```
-
-### 4.3 投稿包自身的机器验收
-
-```bash
-# 隐私扫描（识别性命中应为 0）
-python reproduction/08_清单与SHA256/scripts/scan_privacy.py \
-    reproduction/01_稿件 reproduction/02_图表 reproduction/03_数据_E1-E6 \
-    reproduction/04_复现源码 reproduction/05_溯源台账 reproduction/06_专家盲评包 \
-    reproduction/07_脱敏与README reproduction/08_清单与SHA256
-
-# 六项结构与可复现性验收
-python reproduction/08_清单与SHA256/scripts/acceptance_check.py
-
-# 逐文件 SHA256 清单
-python reproduction/08_清单与SHA256/scripts/build_manifest.py
-```
-
-### 4.4 需要模型凭据的部分
-
-完整重跑 E1 / E3 / E5 / E6 的模型调用需要：Harness 安装包、真实模型服务凭据、
-隔离的 Windows 身份、WSL / bubblewrap 沙箱、原始 API 凭据。
-**这些均不随包分发**，也不在本仓库内。
-
-E3 / E6 的辅助程序按原交付说明属于「需要项目代码及原目录布局」的形态，
-**不是一键可执行的独立软件**（`run_e3.py` 在 Windows 上缺 `src` 且受阻于 POSIX 专有 `fcntl`；
-`run_e6_formal.py` 缺 `evals.repro`）。
-
-## 5. 数据可用性与口径说明
-
-- `reproduction/03_数据_E1-E6/` 与 `04_复现源码/` 采用**官方脱敏最小复现包**（`PACKAGE-MANIFEST.sha256.json` 自洽）。
-  **包内哈希已按脱敏后内容重算，与原始批次哈希不可直接比对**，请以包内 `DESENSITIZATION-NOTICE.md` 为准。
-- `skill/` 为**完整原始源码仓**经全量脱敏后的版本（补齐了最小包中省略的 `test/` 与 `statcatalog/`）。
-- E4 有两批数据：论文正文报告的是 **r2 批次**（自然语言请求处置正确率 34/35、35/35、34/35），
-  而 `reproduction/04_复现源码/最小复现包/E4_最小复现包.zip` 内含的是 **r1 批次**（26/35）。
-  两者不可混用，详见 `reproduction/03_数据_E1-E6/E4/v70_E4重跑_20261023/`。
-- E1 同样存在两套口径：论文口径来自 2026-10-20 的重新判分（均值 0.9530），
-  最小复现包内为旧链（0.9089–0.9446）。发布树中 `nl2tool-candidate-answers/`
-  （旧链答案键）已移除，以免与论文数字直接对照时产生混淆；其原始副本仍完整保留在
-  `reproduction/04_复现源码/最小复现包/E1_最小复现包.zip` 内（该包为官方脱敏产物，未改写）。
-- **E1 的原始证据链已随包发布**：`reproduction/03_数据_E1-E6/E1/答题沙箱_20261017/`
-  含三箱题卷、答卷、实跑轨迹、执行脚本、验收与泄题审计材料；
-  判分结果见 `reproduction/03_数据_E1-E6/E1/v55_重新判分_20261020/`。
-  两处可相互核对。
-- **E4 的执行侧快照**：`reproduction/03_数据_E1-E6/E4/答题沙箱_20261021/`
-  含三箱题面、被拷给答题代理的代码与规则、答卷。注意其中代码与题面为
-  **r2 题面净化之前的中间版本**（对照 `src/protocol.py`：发布树内 v70 版本已把注释
-  由「该场景」改写为「E4 RB-29」）；论文报告的是 r2 批次（34/35、35/35、34/35），
-  见 `reproduction/03_数据_E1-E6/E4/v70_E4重跑_20261023/`。
-
-## 6. 脱敏与隐私
-
-本仓库按既有 23 条替换规则（见 `reproduction/07_脱敏与README/REPLACEMENT-RULES.md`）脱敏，
-并对全部产物做了增量隐私扫描：
-
-- **识别性命中：0 条**
-- 23 条规则逐条核对：**零原始形态残留**
-- 替换为可逆占位符（`<WORKSPACE>`、`<USER_HOME>`、`<HOST>`、`user`、`session-<SESSION_ID>` 等），
-  原始值不随包外发
-
-扫描报告：`reproduction/07_脱敏与README/隐私扫描报告.md`
-规则核对：`reproduction/05_溯源台账/既有23条规则核对表.csv`
-
-## 7. 引用
-
-请引用本仓库对应的论文。若使用了 `skill/` 中的代码，请保留 MIT 许可声明。
+BEST 提供静态测光目录。逐历元时序、周期恢复和变星识别属于本论文所用访问接口的数据边界之外。复用代码时请保留 [MIT 许可](LICENSE)。引用数据或结果请同时注明所用 Release 与批次。

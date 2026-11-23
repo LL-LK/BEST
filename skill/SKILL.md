@@ -84,7 +84,7 @@ maturity: alpha
 
 ## 组件地图 (十二位一体)
 
-- **加载地图** `manifest.yaml` (data-source 主理声明) · **架构规范** `architecture.md` (五状态机 + 12 横切治理面 + 4 附加结构治理面) · **入口文档** `README.md` (逐文件能力边界 + 文件树 SSOT + 治理规则)
+- **加载与架构** [原始 manifest](../reproduction/04_复现源码/astro-best_skill源码仓/manifest.yaml) · [架构说明](../reproduction/04_复现源码/astro-best_skill源码仓/architecture.md) · [公开源码 README](README.md)
 - **领域 RAG** `rag/astro_rag.py` + `rag/knowledge/` 五件套 (best_practices/citations/domain_rules/known_issues/lessons_learned) · **白盒** `references/ALGORITHM-SPEC.md` (G7 五要素, DOI 逐条核验) · **静态规则** `static/core/` 三件 + `static/fragments/`
 - **角色** `agents/openai.yaml` (Persona) · **权重** `weights/README.md` (无二进制权重声明) · **工具** `ops/astro_best_cli.py` (env 驱动/零凭据) · **树门禁** `ops/verify_tree_integrity.py` (README 树清单 SSOT 校验) · **实现与测试** `src/` + `test/`
 

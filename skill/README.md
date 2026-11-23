@@ -1,24 +1,20 @@
-# astro-best — NADC BEST 数据源主理 Skill
+# astro-best 源码说明
 
-> **必读链**: `SKILL.md`（入口与治理铁律）→ **`README.md`（本文件：逐文件能力边界 + 文件树 SSOT + 治理规则）** → `manifest.yaml`（加载地图）→ `architecture.md`（架构规范）。
-> 任何 AI Agent 处理本 skill 任务前，必须完整阅读本文件以建立文件树地图；禁止在未读本文件的情况下猜测目录用途或改动结构。
->
-> **定位**: 全 ecosystem 只有本 skill 能访问 `nadc.china-vo.org/data/best`（该站点无 TAP/ADQL/REST-JSON 端点，只有 Django form 两阶段协议）。astro-catalog 主理 SIMBAD/VizieR/Gaia 等通用检索，**不具备 BEST 访问能力**——BEST 数据任务必须路由到本 skill。
+这个目录提供 BEST 星表查询、结果解析与本地 TAP/ADQL 网关源码。BEST 原站的查询适配在本目录实现。面向智能体的功能边界见 [SKILL.md](SKILL.md)，论文和评分复算从[仓库首页](../README.md)进入。
 
-## 快速上手
+## 本地入口
+
+从 `skill/` 目录运行以下命令。依赖声明见 [pyproject.toml](pyproject.toml)。
 
 ```bash
-python ops/astro_best_cli.py doctor                    # 离线自检（导入/版本门禁/配置诊断）
-python ops/astro_best_cli.py rag "气团 计算" --top-k 3  # 本地知识混合检索
-python -m src --help                              # 包级 CLI（python -m src 入口）
-python -m src.tap.service --db temp/tap.db --out temp  # IVOA TAP 网关（可选，async 需 db+out）
-make check                                        # test + lint + verify + audit
-make audit                                        # 治理护栏 12 项硬门禁（见 ops/audit/README.md）
-make eval                                         # evals 质量评审
-make verify                                       # 文件树完整性硬门禁
+python ops/astro_best_cli.py --help
+python -m src --help
 ```
 
-## 治理规则（对人与 AI 同等约束）
+原始整仓的 [manifest.yaml](../reproduction/04_复现源码/astro-best_skill源码仓/manifest.yaml)、[architecture.md](../reproduction/04_复现源码/astro-best_skill源码仓/architecture.md) 和 [Makefile](../reproduction/04_复现源码/astro-best_skill源码仓/Makefile) 位于复现源码快照。下文的治理规则和旧文件树可用于理解快照的维护方式。
+
+## 原始整仓的治理记录
+
 
 1. **权限矩阵**：既有文件的**内容编辑**（修 bug/补断言/补注释/改文档）自由；**结构变更**（被跟踪文件/目录的新增、删除、移动、重命名；`.gitignore` 规则增删；本文件树清单变更）必须经用户明确批准（会话内结构化提问），批准后以 `python ops/verify_tree_integrity.py --write` 重新生成树清单。
 2. **临时文件**：只允许进入 `temp/`（gitignored）。其他任何位置出现临时文件即违规，`make verify` 与 evals 审计可检出。
