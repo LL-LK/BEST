@@ -2,6 +2,8 @@
 
 这个目录提供 BEST 星表查询、结果解析与本地 TAP/ADQL 网关源码。BEST 原站的查询适配在本目录实现。面向智能体的功能边界见 [SKILL.md](SKILL.md)，论文和评分复算从[仓库首页](../README.md)进入。
 
+[仓库文档导航](../docs/README.md) · [使用与开发索引](../docs/development.md)
+
 ## 本地入口
 
 从 `skill/` 目录运行以下命令。依赖声明见 [pyproject.toml](pyproject.toml)。
