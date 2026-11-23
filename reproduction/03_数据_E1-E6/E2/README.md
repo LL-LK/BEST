@@ -1,5 +1,7 @@
 # E2 最新复现：v2 / run-07
 
+> 从当前仓库使用本目录。已按预注册清单恢复冻结文件的原始字节，并通过本目录的 Git 属性保留 LF 或 CRLF。原论文 Release 中的早期 ZIP 含 E2 行尾差异，其余材料的入口见[复现说明](../../README.md)。
+
 唯一接受批次是 `e2-v2-20d9fd4d7fdb4ee48cb7f81bd5e13105`：21场景×3次，共63个唯一逻辑重复，21/21通过，独立Gold核验21/21、34项N/A。协议、206个冻结输入文件与21个代码指纹都经过重新核验。
 
 这是离线 query-aware 冻结快照/夹具回放；真实BestClient走正式协议与解析链。部分响应按冻结行集和查询参数重建，不冒称每个派生响应都是实站原始字节。经验PS1场来自2026-10-04实抓1000行、1800″半径；60,000行压力、NULL/ZERO等合成轴不能写成真实观测。适用项通过不等于所有指标都有观测证据，也不等于Gold经过天文学家人工验证。
@@ -8,7 +10,7 @@
 
 ```powershell
 python reproduce_e2.py --verify-only
-python reproduce_e2.py --output C:\temp\e2-reproduction-new
+python reproduce_e2.py --output ./e2-reproduction-new
 ```
 
 需要Python及原始环境中用到的依赖，环境快照见 `accepted_run/preregistration.json`，依赖声明见 `code/requirements.txt`。源码树通过脚本加入sys.path，不需要安装为wheel。输出目录必须不存在；重现检查的63次不计入原始确认性样本，不覆盖 accepted_run。脚本核验全部冻结输入、代码、独立Gold，再要求重现的63份行输出哈希与原接受批次一致。
