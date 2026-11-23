@@ -2,6 +2,8 @@
 
 BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://nadc.china-vo.org/data/best/) 的查询，记录查询条件、执行状态和结果来源。本仓库提供访问实现、论文和复现材料。
 
+[文档导航](docs/README.md) 汇集论文、实验、开发和归档入口。
+
 ## 论文与下载
 
 - [论文 PDF](reproduction/01_稿件/main.pdf) · [补充材料 LaTeX](reproduction/01_稿件/supplementary_material.tex)
