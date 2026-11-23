@@ -14,12 +14,11 @@
 
 | 批次 | 下载 |
 | --- | --- |
-| 原论文 | [论文复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) · [SHA-256](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt) |
-| 原论文便携复现 | [E1–E6 与 v15 交叉匹配](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1) |
+| 原论文 E1–E6 | [便携复现与 v15 交叉匹配](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1) |
 | 返修稿五组对照 | [附录 B.2 数据、代码与图表](https://github.com/LL-LK/BEST/releases/tag/paper-comparison-five-groups-v1) |
 | Pi / DeepSeek V4.1 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-pi-deepseek-v4.1-flash) |
 | Hermes / DeepSeek V4.1 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-hermes-deepseek-v4.1-flash) |
 | DSH / GLM 5.3 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-glm-5.3-flash) |
 | DSH / MiMo 2.6 Flash | [补充复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-mimo-2.6-flash) |
 
-引用时请注明 Release 和实验批次。四个补充包各有评分记录和离线复算脚本。E2 的冻结核验从 [当前仓库中的 E2 目录](../reproduction/03_数据_E1-E6/E2/README.md) 执行。复算命令和适用数据见 [复现说明](../reproduction/README.md)。
+首发完整版见 [历史材料](history.md)。引用时请注明 Release 和实验批次。四个补充包各有评分记录和离线复算脚本。E2 的冻结核验从 [当前仓库中的 E2 目录](../reproduction/03_数据_E1-E6/E2/README.md) 执行。复算命令和适用数据见 [复现说明](../reproduction/README.md)。

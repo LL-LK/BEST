@@ -25,7 +25,6 @@ SECTIONS = {
     "skill-archive": ("Skill 归档", "../history.md"),
     "publication": ("稿件、图表与复现配套材料", "../paper.md"),
     "e1": ("E1", "../experiments.md"),
-    "e1-sandbox": ("E1 答题沙箱", "../experiments.md"),
     "e2": ("E2", "../experiments.md"),
     "e3": ("E3", "../experiments.md"),
     "e4": ("E4", "../experiments.md"),
@@ -50,8 +49,6 @@ def section_for(document):
     parts = document.parts
     if document.is_relative_to(EXPERIMENTS):
         experiment = parts[2].lower()
-        if experiment == "e1" and parts[3:4] == ("答题沙箱_20261017",):
-            return "e1-sandbox"
         if experiment in SECTIONS:
             return experiment
     if parts[:3] == ("skill", "docs", "archive"):

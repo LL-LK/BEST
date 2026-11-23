@@ -7,18 +7,10 @@ BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://n
 ## 论文与下载
 
 - [论文 PDF](reproduction/01_稿件/main.pdf) · [补充材料 LaTeX](reproduction/01_稿件/supplementary_material.tex)
-- [原论文复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) · [原包 SHA-256](https://github.com/LL-LK/BEST/releases/download/paper-reproduction/SHA256SUMS.txt)
-- [复现说明与各批次口径](reproduction/README.md)
-- [原论文便携复现与五组对照](reproduction/portable/README.md)
-
-以下补充包给出四个框架与模型组合在 E1、E3、E4 和 E5 上的评分记录。每包附有可离线执行的复算脚本。
-
-| 框架 | 模型 | 复现包 |
-| --- | --- | --- |
-| Pi | DeepSeek V4.1 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-pi-deepseek-v4.1-flash) |
-| Hermes | DeepSeek V4.1 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-hermes-deepseek-v4.1-flash) |
-| DSH | GLM 5.3 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-glm-5.3-flash) |
-| DSH | MiMo 2.6 Flash | [下载](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-dsh-mimo-2.6-flash) |
+- [原论文 E1–E6 便携复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)
+- [返修稿五组对照复现包](https://github.com/LL-LK/BEST/releases/tag/paper-comparison-five-groups-v1)
+- [复算命令与各批次口径](reproduction/portable/README.md)
+- [四组补充实验单独下载](docs/paper.md#release)
 
 ## 复算入口
 

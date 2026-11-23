@@ -30,7 +30,7 @@ E2 的 [环境与离线回放说明](03_数据_E1-E6/E2/README.md) 区分了输�
 
 四包分别收录 Pi、Hermes、DSH GLM 5.3 Flash 和 DSH MiMo 2.6 Flash 的记录，每组共 2,475 个评分单元。E3 使用 GPT-6 Luna 按同一规则自动盲评，每组有 192 份离线答卷和 24 份在线题答卷。在线题使用同题同轮的真实查询快照。
 
-解压所用 Release 的 ZIP 后，在包根目录运行 `python recompute.py`（Python 3.11 或更新版本）。脚本校验包内清单，并从评分记录计算 E1、E3、E4 主指标、E5 各臂结果及 B3−B2b 检验。E5 独立重做判分需要相应授权环境和 Gold。包内 `paper/` 是该 Release 所标明的原论文版本，补充实验结果在包内的评分表。 [四组补充包入口](../README.md#论文与下载)
+解压所用 Release 的 ZIP 后，在包根目录运行 `python recompute.py`（Python 3.11 或更新版本）。脚本校验包内清单，并从评分记录计算 E1、E3、E4 主指标、E5 各臂结果及 B3−B2b 检验。E5 独立重做判分需要相应授权环境和 Gold。包内 `paper/` 是该 Release 所标明的原论文版本，补充实验结果在包内的评分表。 [四组补充包入口](../docs/paper.md#release)
 
 ## 历史材料
 
