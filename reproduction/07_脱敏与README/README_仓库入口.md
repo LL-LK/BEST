@@ -1,5 +1,7 @@
 # BEST-Skill
 
+> 历史仓库入口。现行下载链接、补充 Release 及复算命令见[仓库首页](../../README.md)和[复现说明](../README.md)。
+
 **面向智能体的天文数据库访问技能**（AI-accessible scientific database skill）
 —— 以 [BEST](https://nadc.china-vo.org/data/best/)（BEst STar）测光标准星数据库为实现与验证对象。
 
@@ -80,7 +82,7 @@ pytest skill/evals/nl2tool -q --co            # → 159 tests collected
 pytest skill/evals/robustness -q --co         # → 53 tests collected
 
 # E2 冻结快照回放核验
-python skill/reproduce_e2.py --verify-only    # → 冻结输入 / 代码 / Gold 全部一致
+python "reproduction/03_数据_E1-E6/E2/reproduce_e2.py" --verify-only
 ```
 
 ### 4.2 统计量独立复算（随包提供脚本）
