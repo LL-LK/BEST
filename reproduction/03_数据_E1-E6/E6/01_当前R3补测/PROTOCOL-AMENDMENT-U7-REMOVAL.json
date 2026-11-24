@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-11T11:56:35.774170+08:00",
+  "revision": "E6-objective-usability-U1-U6",
+  "researcher_instruction": "这项直接删除，因为不好进行评分",
+  "excluded_metrics": [
+    "U7"
+  ],
+  "retained_usability_metrics": [
+    "U1",
+    "U2",
+    "U3",
+    "U4",
+    "U5",
+    "U6"
+  ],
+  "reason": "主观认知负荷评分难以开展；采用客观可用性指标",
+  "timing": "R3补测进行中，U7此前未收集或定分",
+  "effect_on_collection": "none: tasks, prompts, parameters, tools, frozen responses, attempts unchanged",
+  "U7_pending": false,
+  "historical_evidence": "retain original protocol and unmodified raw records",
+  "remaining_E6_collection": "2026-10-14 R2 D+7"
+}

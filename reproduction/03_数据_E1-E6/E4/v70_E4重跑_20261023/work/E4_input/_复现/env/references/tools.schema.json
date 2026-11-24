@@ -1,0 +1,186 @@
+{
+  "$comment": "astro-best 原子工具契约 (src/ai_tools.py 的实现契约; MCP tools/list 与 function-calling 均可直接消费)。信封是本 schema 自定义的四分区工具信封 (data/status/cost/provenance)，与 contracts/envelope.contract.yaml 的流水线双态信封、contracts/provenance.contract.yaml 的存量血缘头是三套不同事物，勿混；错误码 E_INVALID_INPUT/E_SOFT_404/E_NAME_UNRESOLVED/E_NO_SQLID 对齐 contracts/error-codes.contract.yaml，E_BACKEND 为工具层兜底码 (定义于 src/ai_tools.py，该契约未登记)。",
+  "envelope": {
+    "description": "所有工具统一返回信封 (data/status/cost/provenance)",
+    "type": "object",
+    "properties": {
+      "data": { "description": "工具专属结果" },
+      "status": {
+        "type": "object",
+        "properties": {
+          "ok": { "type": "boolean" },
+          "truncated": { "type": "boolean", "description": "结果是否被 max_rows 截断（getcount 服务端真实总数判定, P0-2 已修）" },
+          "error_code": { "type": ["string", "null"], "enum": ["E_INVALID_INPUT", "E_SOFT_404", "E_NAME_UNRESOLVED", "E_NO_SQLID", "E_BACKEND", null], "description": "前四项对齐 contracts/error-codes.contract.yaml; E_BACKEND 为工具层兜底码 (src/ai_tools.py 定义, 契约未登记)" },
+          "content_trust": { "type": "string", "enum": ["untrusted"], "description": "站点返回数据一律标注不可信 (S-2 提示注入面); describe/list 类离线工具无此字段" }
+        }
+      },
+      "cost": {
+        "type": "object",
+        "properties": {
+          "http_requests": { "type": "integer", "description": "客户端层请求计数 (非线网往返数): 在 Session.request 出口处每请求记一次 (src/ai_tools.ToolBox._install_request_counter)。**不含适配器层重试** —— urllib3 Retry 在 HTTPAdapter.send 内部循环, 不再回到该出口, 故 429/5xx 抖动下的重试请求不计入 (实测: 服务端收 3 次, 本字段报 1)。做预算/限流判断时按「实际线网开销 >= 本值」估, 别当可复核的线网流量账本。" },
+          "elapsed_s": { "type": "number" },
+          "rows_returned": { "type": "integer" }
+        }
+      },
+      "provenance": {
+        "type": "object",
+        "properties": {
+          "session_id": { "type": ["string", "null"], "description": "服务端 sqlid（易失，仅用于续页）" },
+          "stable_uri": { "type": "string", "description": "可复现查询的稳定引用，如 best://ps1/cone?ra=10.68&dec=41.27&sr=60 (A-5)" },
+          "data_hash": { "type": "string", "description": "SHA-256, 对本工具 data 载荷内容寻址 (src/ai_tools._data_hash); 与流水线信封的内容寻址口径不同, 勿套用 contracts 公式" },
+          "lineage": { "type": "object" }
+        }
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "resolve_name",
+      "title": "天体名解算",
+      "description": "把天体名（M31、NGC 532…）解析为 ICRS 坐标。后端代理 CDS Sesame。失败时站点返回哨兵 ra=-1000, dec=-1000（HTTP 200），此时本工具返回 E_NAME_UNRESOLVED 而不是静默给错坐标。这是智能体「按名字查星」的唯一入口，无需本地装 Sesame。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "description": "天体名，如 M31 / NGC 532 / Betelgeuse" }
+        },
+        "required": ["name"],
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true, "consequentialHint": false },
+      "_impl": "BestClient.resolve_name → GET /data/best/nss/solve?obj=<name> → {ra, dec, obj, remark}",
+      "_status": "已实现 (P1-8, live: M31 → 10.68470833, 41.26875)。remark 为外部 Sesame 内容, 单独字段返回且标注 remark_external (S-3)。"
+    },
+    {
+      "name": "list_catalogs",
+      "title": "列出可查询星表",
+      "description": "列出 12 张可查询星表 id 与显示名。注意 std / calib / other 是导航组不是表，直接查询会得到软错误（组名自身返回 Internal Server Error，带组前缀的路径返回 Not Found）；std 展开为 scr_galah / scr_lamost / xpsp 三张成员表。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true },
+      "_impl": "src.protocol.CATALOG_PATHS / CATALOG_DISPLAY / CATALOG_GROUPS (零请求)",
+      "_status": "已实现。"
+    },
+    {
+      "name": "describe_catalog",
+      "title": "星表列元数据",
+      "description": "返回某星表的列清单、量纲与波段映射。智能体在构造约束前应先调此工具，不要猜列名（列名带表前缀，如 ps1_ra / gaia_dr3_18_phot_g_mean_mag）。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "catalog": { "type": "string", "enum": ["ps1", "stripe82", "gaia_dr3_18", "jplus_dr3", "smss_dr4", "landolt", "uss_dr1", "splus_dr4", "scr_galah", "scr_lamost", "xpsp", "dr3xpcorr"] }
+        },
+        "required": ["catalog"],
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true },
+      "_impl": "src.protocol.CATALOG_COLUMNS / CATALOG_MAG_COLUMNS (零请求; 列清单与 /t/{id} 元数据页实测一致)",
+      "_status": "已实现。"
+    },
+    {
+      "name": "cone_search",
+      "title": "天区锥形检索",
+      "description": "以 RA/Dec 为中心、给定半径（角秒）检索 BEST 星表。走服务端原生 pos.type=cone，不是客户端 box-between 近似。返回统一信封，含 getcount 真实总数与 truncated 标记。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ra": { "type": "number", "minimum": 0.0, "maximum": 360.0, "description": "RA，度（ICRS）" },
+          "dec": { "type": "number", "minimum": -90.0, "maximum": 90.0, "description": "Dec，度（ICRS）" },
+          "radius_arcsec": { "type": "number", "default": 180.0, "exclusiveMinimum": 0.0, "maximum": 18000.0, "description": "搜索半径，**单位是角秒**（传度会得到 0 行或 360 倍半径；上限 18000 角秒=5 度，BestClient 入口强制执行 validate_search_radius）。缺省 180 角秒=3 角分，与 src/ai_tools.py cone_search 的 radius_arcsec 缺省值一致" },
+          "catalog": { "type": "string", "default": "ps1" },
+          "columns": { "type": "array", "items": { "type": "string" }, "description": "列投影（showcol）。留空=全列，大星表建议裁剪以省带宽" },
+          "sort": { "type": "string", "description": "服务端排序列，如 ps1.rpsf 或裸名 rpsf" },
+          "order": { "type": "string", "enum": ["asc", "desc"], "default": "asc" },
+          "nearest_only": { "type": "boolean", "default": false, "description": "cone_nearestonly：每个锥心只保留最近邻" },
+          "max_rows": { "type": "integer", "default": 1000, "description": "上限。超出时 truncated=true，用 fetch_page 续取" }
+        },
+        "required": ["ra", "dec"],
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true },
+      "_impl": "BestClient.cone_search → protocol.build_query_form(cone) → POST /q → getcount → 分页 GET /sqlid",
+      "_status": "已实现 (P1-8 补 columns/sort/order/nearest_only; P0-2 真实 count+truncated; P1-10 起 BestQuery.to_form 与本体同一协议层)。"
+    },
+    {
+      "name": "crossmatch_batch",
+      "title": "批量坐标交叉匹配",
+      "description": "把一批坐标一次性提交给服务端做交叉匹配。走 pos.type=proximity（pos.radecTextarea），服务端直接算角距，响应自带 inputobjs_dist_arcsec / input_line / input_ra / input_dec 列。等价于过去 N 次独立锥形检索——1000 个坐标从约 2000 次 HTTP 降为 1 次 POST + 分页 GET。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "coords": {
+            "type": "array",
+            "description": "待匹配坐标列表",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ra": { "type": "number" },
+                "dec": { "type": "number" },
+                "id": { "type": "string", "description": "调用方自己的标识，用于回连结果" }
+              },
+              "required": ["ra", "dec"]
+            }
+          },
+          "catalog": { "type": "string", "default": "ps1" },
+          "radius_arcsec": { "type": "number", "default": 3.0, "description": "匹配半径（角秒）, 即 pos.defaultRadius" },
+          "nearest_only": { "type": "boolean", "default": true, "description": "proximity_nearestonly：每个输入只返回最近邻" },
+          "columns": { "type": "array", "items": { "type": "string" }, "description": "列投影（showcol）" },
+          "max_rows": { "type": "integer", "default": 50000 }
+        },
+        "required": ["coords"],
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true },
+      "_impl": "BestCrossMatch.crossmatch_batch → protocol.build_query_form(radec_text='ra,dec,radius\\n'×N) → 1 次 POST → 分页 GET",
+      "_status": "已实现 (P0-1, live: N=1000 → 745 命中/约 3s; 失败自动回退逐点路径并标注 mode=per_coordinate_fallback)。"
+    },
+    {
+      "name": "count",
+      "title": "查询命中总数",
+      "description": "返回某查询会话的真实命中总数（服务端 getcount）。用于判断结果是否被截断、以及预算拉取成本。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sqlid": { "type": "string", "pattern": "^s?\\d+$", "description": "服务端会话 id，如 s3898 或 3898" }
+        },
+        "required": ["sqlid"],
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true },
+      "_impl": "BestClient.count → client_paging.count_sqlid_rows → GET /data/best/sqlid/{numeric}/getcount → {'total': N}; numeric 由 protocol.count_sqlid 去掉 s 前缀",
+      "_status": "已实现 (P0-2; live: 约束会话 getcount 稳定, 156676 行查询正确 truncated)。"
+    },
+    {
+      "name": "fetch_page",
+      "title": "分页续取",
+      "description": "按页继续取回某会话的结果。当 cone_search / crossmatch_batch 返回 truncated=true 时使用。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sqlid": { "type": "string", "pattern": "^s?\\d+$" },
+          "page": { "type": "integer", "minimum": 1, "default": 1, "description": "页码 (1 起); 工具边界校验 page>=1, 越界 E_INVALID_INPUT" },
+          "page_size": { "type": "integer", "minimum": 1, "maximum": 10000, "default": 1000, "description": "rows 参数; 工具边界校验 1<=page_size<=10000 (MAX_FETCH_PAGE_SIZE), 越界 E_INVALID_INPUT" },
+          "catalog": { "type": "string", "description": "用于列名前缀映射（响应列名带星表前缀）" },
+          "max_rows": { "type": "integer", "description": "本工具调用的行数上限，默认=page_size" }
+        },
+        "required": ["sqlid"],
+        "additionalProperties": false
+      },
+      "annotations": { "readOnlyHint": true },
+      "_impl": "BestClient.fetch_page → client_paging.fetch_page → BestClient._fetch_sqlid_data(start_page=page) → protocol.build_page_url → GET /sqlid/{sqlid}?output.fmt=csv&rows=N&page=P (另按星表**尽量**注入 sort/order, P0-1 尽力而为非保证) → protocol.parse_csv_rows",
+      "_status": "已实现 (P1-4 起 URL 不再携带冗余 filterRules; P0-3 软 404 显式失败)。"
+    }
+  ],
+  "_server": {
+    "name": "astro-best",
+    "entry": "ops/best_mcp_server.py",
+    "transport": ["stdio"],
+    "dependencies": "传输层零第三方依赖 (stdlib json + sys.stdin 逐行读); 但工具实现经 src.ai_tools -> src.client 依赖 requests/urllib3, MCP host 环境需预装 (无 requests 时 import 即失败); astropy 仅 VOTable/FITS 序列化按需",
+    "discovery": {
+      "llms_txt": "references/llms.txt",
+      "agent_skills": "SKILL.md"
+    }
+  }
+}

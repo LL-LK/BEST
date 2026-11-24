@@ -1,0 +1,30 @@
+# E2 场景 7/8: 缺失字段 — 部分行空串 (S 类) — docs/eval-E2-groundtruth.md §5 #7
+case_id: missing_cell
+category: missing_field
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as
+main_metrics: [M2, M5]
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf, ps1_gpsf, ps1_class_star]
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+  # 行数/截断标志/逐格 null 清单**不在此声明**: gen_gold 只读 result_state 与
+  # error_code, 这里写下的数字与 BEST_SYN_* 行键无人断言 —— 换素材后不会变红,
+  # 只会静静变旧 (A7-02: 换素材前按 syn_missing 合成快照登记的行数与行键, 换成
+  # live 快照后既对不上行数, 那些行键也不存在了)。权威值见
+  # gold/missing_cell.json 的 row_keys / null_semantics / field_values 段, 以及
+  # 签字单联 items 里的 sentinel_cells (逐格按它们核, 不在本文件复述)。
+notes: >
+  金标准: 空串 (站点未测到) → null_semantics=null, field_values.v=null (raw 保留
+  空串证据); 有值格 → value 原样。M2 判据: 类别不符 (GT null / SUT 0) 直接记
+  不一致, 不做数值比较; 空串不得被填 0、不得被跳过整行。**逐格清单不写在本文件**:
+  null/value 的具体格随素材变, 权威位置是 gold/missing_cell.json 的 null_semantics
+  与 field_values, 抽样清单在 gold/missing_cell.review.yaml 的 items 段。
+  零值语义 (NULL vs ZERO 双向不冒充) 由 sentinel_value 的孪生陷阱与
+  evals/_data 字典阈值共同覆盖; 真零样例仍待快照增补 (已登记)。
+gold_focus: 空串=null / 真值=value 语义区分 (M5 四态)

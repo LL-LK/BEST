@@ -1,0 +1,15 @@
+{
+  "r1_completed_at": "2026-10-07T21:15:00.906816+08:00",
+  "due_date_Asia_Shanghai": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "repeat": 5,
+  "tasks": 32,
+  "automation": false,
+  "requirements": [
+    "复查实际模型/权限/冻结参数；weights opaque",
+    "代码/材料/原32题/schema指纹一致",
+    "前后五星表canary+count；漂移移交E7",
+    "本R1含外部中断及一次恢复，比较须披露全部尝试"
+  ],
+  "command": "temp/e3-e6/venv/bin/python temp/e6-formal/run_e6_formal.py --batch E6-20261007-1791350994158084000 --lane R2"
+}

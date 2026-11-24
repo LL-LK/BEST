@@ -1,0 +1,570 @@
+{
+  "at": "2026-10-07T23:45:36.629892+08:00",
+  "batch": "E6-20261007-1791350994158084000",
+  "soft_error_evidence": [
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-1/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-1/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-3/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-3/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-4/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-4/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-5/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0/REPRO-30/repeat-5/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-1/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-1/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-3/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-3/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-4/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-4/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-5/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791347088846465000/lanes/R0-corrected/REPRO-30/repeat-5/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-1/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-1/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-3/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-3/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-4/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-4/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-5/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 3,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R0/REPRO-30/repeat-5/attempt-1.jsonl",
+      "tool_call_seq": 1,
+      "network_seq": 4,
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "stripe82"
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": null,
+      "envelope_ok": false,
+      "envelope_error_code": "E_SOFT_404",
+      "wrapped_as_success": false
+    },
+    {
+      "trace": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/lanes/R1/REPRO-27/repeat-2/attempt-1.jsonl",
+      "tool_call_seq": 33,
+      "network_seq": 35,
+      "tool": "fetch_page",
+      "args": {
+        "catalog": "ps1",
+        "page": 1,
+        "page_size": 10000,
+        "sqlid": "5849",
+        "max_rows": 174
+      },
+      "raw_http_status": 200,
+      "soft_error": "Not Found",
+      "original_url": "https://nadc.china-vo.org/data/best/sqlid/5849?output.fmt=csv&rows=10000&page=1&sort=ps1_source_id&order=asc",
+      "envelope_ok": true,
+      "envelope_error_code": null,
+      "wrapped_as_success": true
+    }
+  ],
+  "soft_error_success_wraps": 1,
+  "frozen_request_key_erases_bound_sqlid_s_prefix": true,
+  "observed_keys_with_both_prefix_styles": 0,
+  "prefix_style_shared_keys": {},
+  "limitation": "绑定会话的request_key会丢弃s前缀。结构上未保留该路径区别；不同页大小/投影等同时改变时不能将响应差异单因归于前缀。未新增因果对照或修冻结collector。"
+}

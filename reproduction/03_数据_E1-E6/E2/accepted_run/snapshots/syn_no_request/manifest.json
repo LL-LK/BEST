@@ -1,0 +1,9 @@
+{
+  "files": {
+    "count.json": "abd83b879ed8df96ae4dbb20a6b280fdb2910b1cb2dd3420ea1444fc0970dfc0",
+    "pages/page_0001.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "phase1.html": "54c2244bf8ff2e3ba02f5bf204b66aad777fee750f3f863f1a1766c8e9755388",
+    "snapshot.yaml": "c772f1a382e23c394d02ce54ebc24220aeac20079c95fdce2840e586e512e1b2"
+  },
+  "algorithm": "sha256"
+}

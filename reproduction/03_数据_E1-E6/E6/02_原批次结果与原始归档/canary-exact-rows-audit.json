@@ -1,0 +1,27 @@
+[
+  {
+    "before": {
+      "path": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/canary/R1/1791351040033893000-before/canary.json",
+      "fingerprint": "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+      "all_valid": true,
+      "exact_raw_rows_fingerprint": "bestfp:sha256:4763931ab47897156c889ce07d0aa598113793130163c0344e5d69d057d0c25f"
+    },
+    "after": {
+      "path": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/canary/R1/resume-1791365702972872000-after/canary.json",
+      "fingerprint": "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+      "all_valid": true,
+      "exact_raw_rows_fingerprint": "bestfp:sha256:4763931ab47897156c889ce07d0aa598113793130163c0344e5d69d057d0c25f"
+    },
+    "resumed_before": {
+      "path": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/canary/R1/resume-1791365702972872000-before/canary.json",
+      "fingerprint": "bestfp:sha256:0d4aeb4b0112e50fca993beac757e80a19eb2132fc98b92def742f2b86641b4a",
+      "all_valid": true,
+      "exact_raw_rows_fingerprint": "bestfp:sha256:4763931ab47897156c889ce07d0aa598113793130163c0344e5d69d057d0c25f"
+    },
+    "rerun": null,
+    "drift_state": "STABLE",
+    "all_probes_valid": true,
+    "normalized_drift_state": "STABLE",
+    "resume_exact_stable": true
+  }
+]

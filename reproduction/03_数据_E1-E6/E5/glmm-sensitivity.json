@@ -1,0 +1,113 @@
+{
+  "schema": "e5-preregistered-glmm-sensitivity-v5",
+  "method": "BinomialBayesMixedGLM variational Bayes",
+  "statsmodels_version": "0.14.6",
+  "n_records": 2016,
+  "task_random_intercept": true,
+  "reference_arm": "B2b",
+  "prior_fe_sd": 2,
+  "prior_log_random_sd": 0.5,
+  "optimizer_success": true,
+  "optimizer_message": "Optimization terminated successfully.",
+  "fixed_effect_log_odds": {
+    "Intercept": {
+      "posterior_mean": -0.22475686348103527,
+      "posterior_sd": 0.06538000276643421,
+      "approx_95_posterior_interval": [
+        -0.3529016689032463,
+        -0.09661205805882422
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.A1]": {
+      "posterior_mean": 0.3061501273193048,
+      "posterior_sd": 0.22199408441074964,
+      "approx_95_posterior_interval": [
+        -0.1289582781257645,
+        0.7412585327643741
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.A2]": {
+      "posterior_mean": 0.40615064135408596,
+      "posterior_sd": 0.2230103459691356,
+      "approx_95_posterior_interval": [
+        -0.03094963674541984,
+        0.8432509194535918
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.A3]": {
+      "posterior_mean": 0.35603637882841394,
+      "posterior_sd": 0.22249121289175683,
+      "approx_95_posterior_interval": [
+        -0.08004639843942946,
+        0.7921191560962573
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.A4]": {
+      "posterior_mean": 0.5071050658611207,
+      "posterior_sd": 0.22411514413967243,
+      "approx_95_posterior_interval": [
+        0.06783938334736273,
+        0.9463707483748787
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.A5]": {
+      "posterior_mean": 0.7642274262405356,
+      "posterior_sd": 0.2272674140753936,
+      "approx_95_posterior_interval": [
+        0.31878329465276417,
+        1.209671557828307
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.A6]": {
+      "posterior_mean": 0.3061501449497382,
+      "posterior_sd": 0.22199411214019535,
+      "approx_95_posterior_interval": [
+        -0.12895831484504466,
+        0.7412586047445211
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.B0]": {
+      "posterior_mean": -2.742479570325032,
+      "posterior_sd": 0.2522827291190789,
+      "approx_95_posterior_interval": [
+        -3.236953719398427,
+        -2.248005421251637
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.B1]": {
+      "posterior_mean": -1.8821080564782768,
+      "posterior_sd": 0.22717509781251632,
+      "approx_95_posterior_interval": [
+        -2.3273712481908087,
+        -1.4368448647657448
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.B2a]": {
+      "posterior_mean": -0.03753727701605799,
+      "posterior_sd": 0.21913145812980372,
+      "approx_95_posterior_interval": [
+        -0.46703493495047327,
+        0.39196038091835733
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.B3]": {
+      "posterior_mean": 0.6090986526423584,
+      "posterior_sd": 0.22530881991579588,
+      "approx_95_posterior_interval": [
+        0.16749336560739847,
+        1.0507039396773183
+      ]
+    },
+    "C(arm, Treatment(reference='B2b'))[T.sham]": {
+      "posterior_mean": 0.40615057071430055,
+      "posterior_sd": 0.223010387242548,
+      "approx_95_posterior_interval": [
+        -0.03094978828109357,
+        0.8432509297096946
+      ]
+    }
+  },
+  "random_intercept_log_sd_posterior_mean": 0.9513860664148477,
+  "scope": "model-dependent sensitivity only; mean-field posterior intervals, not primary task-rate differences or Holm inference",
+  "source": "https://www.statsmodels.org/v0.14.6/generated/statsmodels.genmod.bayes_mixed_glm.BinomialBayesMixedGLM.html"
+}

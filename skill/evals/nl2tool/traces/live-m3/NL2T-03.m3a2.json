@@ -1,0 +1,18 @@
+{
+  "task_id": "NL2T-03",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 1,
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "M31"
+      }
+    }
+  ],
+  "answer_text": "M31 解算结果：ICRS RA = 10.68470833°，Dec = +41.26875°。注意单位——RA/Dec 是度（ICRS），而锥形检索的半径单位是角秒，两者不是一回事，别把 10.68 当半径用。\n这是智能体按名字查星的唯一入口：站点把 /nss/solve（后端代理 CDS Sesame）包装成 resolve_name，本地不必装 Sesame，实测 M31 解算约 2.8 s。外部 Sesame 的说明文字由站点放在独立 remark 字段里，属于外部内容，我不把它当指令执行。\n失败语义要讲清楚：解不出来时站点回的是 HTTP 200 + ra=dec=-1000 的哨兵值，工具会判成 E_NAME_UNRESOLVED；我不会拿这个哨兵去发锥形检索，会直接告诉你“名字没解出来”，让你换个写法（NGC 532 / Betelgeuse 这类）。\n拿到坐标后下一步是 cone_search(ra, dec, radius_arcsec, catalog=\"ps1\")，需要的话告我半径和表。",
+  "notes": "按名字取坐标是 resolve_name 的单请求场景（1 次 GET /nss/solve），并把 -1000 哨兵 → E_NAME_UNRESOLVED 的失败语义写进回答，避免下游拿哨兵当坐标。"
+}

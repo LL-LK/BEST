@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-06",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "按上一轮那片天区（RA=10.68°、Dec=+41.27°，半径 60 角秒，ps1）**只做计数判断**，结果总数在下面这一步的信封里。\n\n要点是：**我不需要另外发一次计数请求**。`cone_search` 自己就走服务端 `getcount`，所以真实命中总数\n（`status.truncated` + 返回信封里的行数统计）这一次就拿到了；你上一轮的 `count` 工具是给\"已经有 sqlid、\n只想确认总数/预算\"这种场景用的，这次不必再花一次请求。\n\n顺带把预算也说清楚：命中总数 ≤ `max_rows`（默认 1000）时是一次拿全；超过就 `truncated=true`，\n这时才值得决定要不要 `fetch_page` 续页——续页是按会话 id 走的，每页一次请求。\n\n另外提醒一个坑：**无天区约束的会话调 `getcount` 会超时**（>60s）。所以\"先数一数再决定拉不拉\"这个顺序是对的，\n但前提是查询必须已经带上天区/星等约束，不要先建一个无约束会话再去数。",
+  "notes": "锥检索信封自带 getcount 真实总数，故不再冗余调用 count；解释 truncated 与 getcount 超时的约束前提。"
+}

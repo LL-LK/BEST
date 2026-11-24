@@ -1,0 +1,6 @@
+# Preserve the bytes listed in the E2 preregistration manifests.
+accepted_run/scenarios/** -text
+accepted_run/gold/** -text
+accepted_run/snapshots/** -text
+code/** -text
+operations/** -text

@@ -1,0 +1,41 @@
+# evals/_data/tolerances.yaml — 字段容差表 (E2/E5/E6 共用的唯一共享件)
+#
+# 定位: 纯数据字典 (L1 配置层) — 改数值不改代码 (E2 §7 判定分层纪律)。
+# 权威来源: docs/eval-E2-groundtruth.md §6 M2 容差基准表。
+#
+# 用法: 数值字段比对 |a - b| <= atol + rtol * |b|; 字符串/ID 走 exact 档
+# (strip + 去零填充 + 大小写归一后精确相等, 归一本文件外由各实验的
+# normalizers 承担 — 容差与归一化是两件事, 不混在一份配置里)。
+
+fields:
+  ra_deg:      {atol: 1.0e-9, rtol: 0.0, kind: numeric}
+  dec_deg:     {atol: 1.0e-9, rtol: 0.0, kind: numeric}
+  radius_arcsec: {atol: 1.0e-6, rtol: 0.0, kind: numeric}
+  magnitude:   {atol: 1.0e-6, rtol: 0.0, kind: numeric}
+  snr:         {atol: 1.0e-9, rtol: 0.0, kind: numeric, exact_integer: true}
+  flags:       {atol: 1.0e-9, rtol: 0.0, kind: numeric, exact_integer: true}
+  count:       {atol: 1.0e-9, rtol: 0.0, kind: numeric, exact_integer: true}
+  source_id:   {kind: string}
+  catalog:     {kind: string}
+
+# 精度下限 (E2 M3c): 用 decimal.Decimal 统计有效位数; 降精度判错, 假精度记 warn
+precision_min_digits:
+  ra_deg: 9
+  dec_deg: 9
+  magnitude: 6
+  snr: 4
+
+# 单位表 (E2 M3a): 输出/契约声明的 unit 必须逐字段一致
+units:
+  ra_deg: deg
+  dec_deg: deg
+  radius_arcsec: arcsec
+  magnitude: mag
+  snr: count
+
+# 量纲探针区间 (E2 M3b): 防"声明对了但数值错了" (坐标当 arcsec 输出会越界)
+dimension_probes:
+  ra_deg: {min: 0.0, max: 360.0, max_exclusive: true}
+  dec_deg: {min: -90.0, max: 90.0}
+  radius_arcsec: {min: 0.0, max: 18000.0, non_negative: true}
+  magnitude: {min: -10.0, max: 40.0, note: "物理合理区间, 越界即单位/量纲错"}

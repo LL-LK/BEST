@@ -1,0 +1,10 @@
+{
+  "snapshot_id": "syn_missing",
+  "files": {
+    "count.json": "sha256:023bc0e6b0fea5cff5ae038902f5186f1fa8db41d6d686bf9c657910bb8090f8",
+    "pages/page_0001.csv": "sha256:c86abbbe51a805e1ef525e5efc9c8692ba5fc631136fcba09b3ac115c5335e56",
+    "phase1.html": "sha256:c7e9a6e9692b36e72a8051195ad21c9474c4ee64780598b2c67d6b50f4c7c201",
+    "rows_full.csv": "sha256:c86abbbe51a805e1ef525e5efc9c8692ba5fc631136fcba09b3ac115c5335e56",
+    "snapshot.yaml": "sha256:38e329a02e1808c824ae8287388f5d64b787955e5fdae3b11f36e565f74eec6b"
+  }
+}

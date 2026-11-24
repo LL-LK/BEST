@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-11",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "坐标和半径都齐了，缺的是表口径。\n（1）半径：5″ 就是 5 角秒，原样传 radius_arcsec=5，不用换算（单位是角秒，坐标是度：RA=120.3°、Dec=−20.4°）。5 角秒是很紧的近邻半径，适合“这个点上有什么”。\n（2）“标准星”不是表名。std 是 Standard Stars 导航分组，直接查 std 会拿到 {\"error\":\"Internal Server Error\"}；成员是三张，列规模差别很大：\n- scr_galah：标准星 × GALAH 交叉表，137 列（位置 + JPAS/J-PLUS 窄带 + APASS/BASS/CSST/LSST/Mephisto/PS1/SDSS/SMSS/S-PLUS/ZTF 交叉测光）；\n- scr_lamost：标准星 × LAMOST 交叉表，137 列，与上表同构；\n- xpsp：Gaia DR3 XP&SP 光谱-测光，287 个可选列、跨 139 张表单表。\n你点一张我立刻查。默认我会建议先 ps1（5″ 内先看天区有什么），再按你要不要标准星记录切到上面某张。\n还有一点：5 角秒内很可能一颗标准星都没有（标准星是稀疏定点样本，不是均匀天区表）——真到 0 行我会直接说 0 行，不会拿相邻天区的源凑数。",
+  "notes": "坐标/半径完备但“标准星”是导航组名 → 缺表口径必须反问（std 展开为 scr_galah/scr_lamost/xpsp），零请求。"
+}

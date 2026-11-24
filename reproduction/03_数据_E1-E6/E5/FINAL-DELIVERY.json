@@ -1,0 +1,39 @@
+{
+  "logical_e5_units": 2016,
+  "report_directory": "<USER_HOME>\\Desktop\\\u8bba\u6587\\e2\u548ce5\u91cd\u6784\u8ba1\u5212\\E5_\u6b63\u5f0f\u7ed3\u679c_2026-10-12",
+  "human_review": "pending",
+  "verification": {
+    "schema": "e5-final-delivery-verification-v1",
+    "verified_at_utc": "2026-10-12T16:40:13.357329+00:00",
+    "units": 2016,
+    "unique_sessions": 2016,
+    "source_exports": 2016,
+    "source_artifacts_matched": 82290,
+    "zip_crc_read_verified": true,
+    "private_gold_and_profile_absent": true,
+    "actual_credential_values_absent": true,
+    "hidden_assistant_reasoning_absent": true,
+    "score_and_analysis_receipt_hashes_match": true,
+    "human_review_rows_blank": 2016,
+    "glmm_optimizer_success": true,
+    "package_sha256": "534c4fa2cabd16a79cb755742f1955411eeb36eb79fd9efe4211a6498edd03fe",
+    "human_review": "pending",
+    "final_package_crc_all_members": true,
+    "report_and_diagnostics_exact_match": true,
+    "delivery_manifest_hashes_match": true
+  },
+  "hashes": {
+    "analysis.json": "906c0d7e6a7e2333d58b2eb2165df2e4ea77616b5bea34f91f4ae37a85a3d8c7",
+    "delivery-verification.json": "95c7cce05be31a856a5186b1495502443553579cfe0b413b6b2a8ed783fb415e",
+    "E5_public_reproduction.zip": "534c4fa2cabd16a79cb755742f1955411eeb36eb79fd9efe4211a6498edd03fe",
+    "E5_results.pdf": "be20694f4923905cd6ded5b0d170395cca097d4ba3c9dfb8e1a021afa2c3d434",
+    "E5_results.png": "a24103ace1f6d5a46203d2eaef9168b68b7c3b41750741499acb51cf223ba027",
+    "E5_\u7ed3\u679c\u62a5\u544a.md": "8d2f91e8aba9c9e7909944455a31c123db27639618d0d4d2a498a82068c67867",
+    "execution-diagnostics.json": "e0b2a170bd4cc06fa388afd8bfe310e09fa820f2292dce5c819ae51fc05fe564",
+    "glmm-sensitivity.json": "75d26e9553c0c89cce73f7a743ac7a5e4718b371cc0bbe925577a49b8ced4ca1",
+    "human-review-pending.csv": "6a95a626b4d7014dd9c16aad1ae913843a8dfc0d17f4135539529bc003820854",
+    "scorer-receipt.json": "5bb940c79de3d851c6d571a3d801a5ced7c7234799b4d6b3bbe0244663eb1723",
+    "scores.csv": "c743ebd84c6c4f2bc78ac9f9ed665867327782b2fffef1177fe69bd9a9410e0d",
+    "scores.json": "2a030fb9e6f5a362a2f5dc485e01c5b1e5ece8ef6ab1735596dff9ca6da75a5c"
+  }
+}

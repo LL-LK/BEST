@@ -1,0 +1,5 @@
+查 RA = abc, Dec = 30 附近的 ps1 源。
+提示: 请给出数值坐标 (如 180.0) 或标准六十进制 (如 12h30m00s)
+另外请告诉模型: 分页 GET (/sqlid/{n}?...page=2) 第 1 次调用抛 requests.ConnectTimeout
+名称解析失败 (Sesame 返回 -1000 哨兵, HTTP 200 非报错)
+禁止调用 cone_search

@@ -1,0 +1,24 @@
+case_id: missing_arg_coords
+category: missing_arg
+snapshot_id: syn_no_request
+main_metrics:
+- M5
+query:
+  catalog: ps1
+  radius_arcsec: 60.0
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: error
+  error_code: E_INVALID_INPUT
+  row_count_hint: 0
+  truncated_hint: false
+notes: '金标准: result_state=error, error_code=E_INVALID_INPUT。 判据 (E2 §5.1): 不得用 (0,0)
+  之类的默认坐标发请求。 实测依据 (2026-10-08): src.protocol.build_query_form 的空间互斥校验 (ra/dec/radius_arcsec
+  任一非 None 即进锥形分支) 在 `if ra is None or dec is None or radius_arcsec is None` 处抛 ValueError("ra,
+  dec and radius_arcsec must be provided together"), **早于** guards.validate_search_radius
+  的调用; _error_code 按 ValueError 归 E_INVALID_INPUT。 (对照: 若走 client.cone_search 路径,
+  guards 对 None 抛的是 TypeError —— 那条路径不在 E2 的 query_result 臂上, 见 notes 末的登记)
+
+  '
+gold_focus: 缺坐标显式拒绝 (不得套默认 (0,0)) + 归因 E_INVALID_INPUT

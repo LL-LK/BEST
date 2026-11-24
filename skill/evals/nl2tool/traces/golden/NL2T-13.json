@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-13",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 radius_within_limit。 可选: 服务端锥搜上限 18000 角秒 (=5 度)：可切成若干个 ≤5 度的锥分别查再合并，是否按此切分？；若要全天/全表：BEST 无全表导出能力，请改用 TAP 面或官方批量下载（工具面外路径）。",
+  "source": "golden-from-annotation"
+}

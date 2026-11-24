@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-20
+utterance: 这个字段代表逐历元星等吗？
+category: clarify
+expect_first_tool: describe_catalog
+reruns: 5
+stability_class: metadata_zero_request
+conclusion_card_spec:
+  kind: rowset
+  key_entities:
+  - catalog_list
+relative_time_expression: false
+notes: 映射 E1 NL2T-20; 判稳维度 metadata_zero_request; 禁相对时间表述 (硬约束)

@@ -1,0 +1,45 @@
+skill: astro-best
+kind: input
+envelope: astro-envelope-v1
+schema: BestQuery
+fields:
+  sql:
+    type: string
+    unit: "dimensionless"
+    required: true
+    source: master-plan
+  token:
+    type: string
+    unit: "credential"
+    required: true
+    source: master-plan
+    # 2026-10-05 修复轮 (H5-02 顺带扫描) 的**如实标注**, 不是新增声明:
+    # 本字段在 BEST 查询链上**没有消费方**。src/core/__init__.py:147-152 与
+    # src/core/pipeline.py:60-61 都写明 —— "BestClient 没有 token 通道 (认证走
+    # BestAuth Django session), env BEST_API_TOKEN -> AstroBestConfig.api_token ->
+    # 本处的全链是死路, 已删"; src/scripts/config.py:34 亦记"客户端无此通道,
+    # 保留给 doctor 报告用"。
+    # 真实凭据面: CLI --auth-user + env ASTRO_BEST_PASSWORD, NADC 身份走 OAuth
+    # (见 contracts/oauth.contract.yaml 的 scope_boundary)。
+    # 字段仍**保留** (不删): test/unit/contracts/test_gen_fields.py:61 的
+    # FIELDS_FILES 把 (token -> token.contract.yaml) 钉为物化产物, 删字段等于
+    # 删下游装配的料。按"缺口从隐式变显式"的纪律, 在此声明它未接线。
+validation:
+  on_violation: block  # Fail-Closed
+  # 2026-10-05 修复轮 (H5-02, G2-07): 本行原为 E101_INVALID_INPUT —— 该码是
+  # 2026-09-28 重命名前的旧名, 早已退役: 全仓唯一残留就是本行与
+  # error-codes.contract.yaml:4 的改名说明注释, 代码侧零引用。权威错误码真源是
+  # contracts/error-codes.contract.yaml 的 BEST_1001.code = E_INVALID_INPUT,
+  # 实发点在 src/protocol.py::E_INVALID_INPUT (定义) 与
+  # src/ai_tools.py::E_INVALID_INPUT (工具层同名常量) / src/ai_tools.py::_error_envelope。
+  # (坐标订正 R2 2026-10-05: 原文写 "src/protocol.py:909" —— 逐行打开确认该行是
+  #  parse_count 的 docstring 参数说明, 不是错误码定义; 真实定义在 E_INVALID_INPUT
+  #  常量行。ai_tools.py:58 一处经复核准确, 保留。)
+  # 照旧名实现校验会去找
+  # 一个永不出现的码, 故改为现行码名, 不与 error-codes 契约各留一份。
+  error_code: E_INVALID_INPUT
+
+# ---
+# generated_by: scripts/refactor/materialize_contracts.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

@@ -1,0 +1,31 @@
+{
+  "task_id": "NL2T-04",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_gpsf",
+          "ps1_ipsf",
+          "ps1_rpsf",
+          "ps1_ypsf",
+          "ps1_zpsf"
+        ],
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "已按 ps1 提交锥形检索：RA=10.68°、Dec=41.27°（两者按度直传）、radius_arcsec=60。半径 60 你写的就是角秒，我原样传；这里最容易踩的坑是单位——站点的 pos.radius 字段原文就是 arcsec，如果把 60 当度传，结果会是 0 行或 360 倍半径。走的是服务端原生 pos.type=cone，不是客户端盒式近似。\n列投影只取了 RA/Dec 加 g/i/r/y/z 五个 PSF 星等，省带宽（留空=全列 30 列）。\n结果口径：这次返回里已经带服务端 getcount 的真实命中总数和 truncated 标记，会话 id 是 s3898；如果 truncated=true，我用 fetch_page(sqlid=\"s3898\", page=2) 续页，不重新建查询。想要别的列（比如 ps1_rpsf_err、ps1_ruwe、ps1_parallax）或换成按亮度排序，说一声我重发。\n读数提醒：ps1 某波段没有测光时该列回 ≈-1000 哨兵（实测出现过 gpsf=-1004.07、gpsf_err=-999.0，同帧 ipsf=19.49 才是真值），所以表里 ≤-999 的数不是星等。",
+  "notes": "标准锥搜：ra/dec=度、radius_arcsec=角秒原样传；cone_search 一次调用 = POST /q + getcount + 1 次分页 GET，共 3 个 wire 请求。"
+}

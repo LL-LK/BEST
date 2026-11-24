@@ -1,0 +1,34 @@
+case_id: missing_column
+category: missing_field
+snapshot_id: syn_missing
+main_metrics:
+- M2
+- M5
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_gpsf
+  - ps1_ypsf
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+  row_count_hint: 3
+  truncated_hint: false
+  missing_columns:
+  - ps1_ypsf
+  missing_column_semantics: null
+notes: 'A 的 syn_missing 快照 3 行 (ps1_source_id/ps1_ra/ps1_dec/ps1_rpsf/ps1_gpsf/ ps1_class_star/ps1_snr,
+  无 ps1_ypsf 列)。金标准: 3 行全部返回 (缺列不是 查询失败, ok=true); ps1_ypsf 在快照中整列不存在 → gold.missing_columns
+  登记 + null_semantics 每行该列 = null + field_values 该列 v=null (E2 §5 #7: 缺列 ≠ 该格没测; 不得填
+  0、不得从别的波段推算、不得把整次查询判失败)。 M2 逐格对账时该列期望 null; M5 判 NULL_FIELD ≠ ERROR。
+
+  '
+gold_focus: 缺列显式 null (不填 0/不编造) + ok=true 不判失败

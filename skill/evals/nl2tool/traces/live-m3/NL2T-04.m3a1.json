@@ -1,0 +1,39 @@
+{
+  "task_id": "NL2T-04",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_class_star",
+          "ps1_gpsf",
+          "ps1_gpsf_err",
+          "ps1_rpsf",
+          "ps1_rpsf_err",
+          "ps1_ipsf",
+          "ps1_ipsf_err",
+          "ps1_zpsf",
+          "ps1_zpsf_err",
+          "ps1_ypsf",
+          "ps1_ypsf_err"
+        ],
+        "sort": "ps1.ra",
+        "order": "asc",
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "查了：以 RA = 10.68°、Dec = +41.27°（ICRS 度）为中心、半径 60 角秒的 ps1 锥形检索。\n\n单位口径（这条最重要）：ra/dec 用度，半径用角秒。60 角秒 = 1 角分；如果这里把 60 当成度传下去，服务端会当成 60° 半径（是原意的 360 倍）或直接给 0 行 —— 这是 BEST 最常见的静默错误之一。\n\n我做了什么：\n1. 服务端原生锥检索（pos.type=cone），不是客户端盒式近似，所以半径是真角距。\n2. 显式裁了列投影（位置 + g/r/i/z/y 的 PSF 星等与误差 + class_star），30 列的表没必要全拉。\n3. 建会话时就把排序定死（sort=ps1.ra，order=asc）。原因：站点在没有 ORDER BY 时不保证行序稳定，不定序的话翻页会重复/漏行。ps1_source_id 线上是空的，不能拿它排序。\n\n结果怎么读（返回是统一信封）：\n- data：命中行，响应列名带 ps1_ 前缀，另有 inputobjs_dist_arcsec 标出每行到锥心的角距\n- status.truncated：是否被 max_rows（我设 1000）截断；true 就说明还有后续页\n- cost.http_requests：这次真实打到站点的请求数（建会话 + 取总数 + 取首页共 3 次）\n- provenance.session_id：服务端会话 id，仅用于续页、易失；provenance.stable_uri（如 best://ps1/cone?ra=10.68&dec=41.27&sr=60）可复现这次查询\n\n两个读数提醒：ps1 缺某波段测光时回 ≈-1000 哨兵（比如误差 -999.0），别当星等；ps1 是单历元定标星等，没有逐历元值。\n\n被截断了就说一声，我用同一个会话 id 继续 fetch_page 取下一页（page 从第 2 页起）。",
+  "notes": "信息完整的锥检索：ra/dec 用度、radius_arcsec=60 角秒，配裁剪列投影与建会话即定序，等于 1 次 POST /q + getcount + 分页 GET 共 3 次请求。"
+}

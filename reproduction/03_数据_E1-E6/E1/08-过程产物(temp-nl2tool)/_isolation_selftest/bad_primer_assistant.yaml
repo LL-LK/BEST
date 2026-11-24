@@ -1,0 +1,5 @@
+primers:
+  NL2T-06:
+    turns:
+      - {role: user, text: '这个天区有多少源?'}
+      - {role: assistant, text: '先调 cone_search 再调 count'}

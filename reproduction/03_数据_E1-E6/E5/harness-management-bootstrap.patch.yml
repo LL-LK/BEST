@@ -1,0 +1,93 @@
+# Invocation-only management overlay. Never an E5 experimental composition.
+- id: agent-default-model
+  config:
+    provider: opencode-go
+    model: deepseek-v4.1-flash
+- id: llm-pi-ai
+  config:
+    providers:
+      opencode-go:
+        apiKeyEnv: OPENCODE_GO_API_KEY
+        baseURL: https://opencode.ai/zen/go/v1/
+        models:
+          - id: deepseek-v4.1-flash
+            name: DeepSeek V4.1 Flash
+            contextWindow: 1000000
+            maxTokens: 4096
+- id: tools
+  config:
+    mode: native
+- id: sandbox-policy
+  config:
+    mode: danger-full-access
+    workspaceRoot: !!js process.cwd()
+- id: permission
+  config:
+    defaultPreset: e5-management
+    presets:
+      e5-management:
+        sandbox: danger-full-access
+        approval: never
+- id: session-title-llm
+  disabled: true
+- id: session-telemetry-otel
+  disabled: true
+- id: spill-policy
+  disabled: true
+- id: tool-result-pruner
+  disabled: true
+- id: tool-plugin-manager
+  disabled: false
+- id: web-startup
+  disabled: true
+- id: webserver
+  disabled: true
+- id: web-runtime
+  disabled: true
+- id: connection
+  disabled: true
+- id: tool-pwsh
+  disabled: true
+- id: tool-bash
+  disabled: true
+- id: tool-fs
+  disabled: true
+- id: tool-fs-search
+  disabled: true
+- id: agent-instructions
+  disabled: true
+- id: tool-skill
+  disabled: true
+- id: tool-web
+  disabled: true
+- id: tool-jobs
+  disabled: true
+- id: tool-workflow
+  disabled: true
+- id: tool-subagent
+  disabled: true
+- id: tool-subagent-fork
+  disabled: true
+- id: tool-subagent-control
+  disabled: true
+- id: tool-subagent-list-agents
+  disabled: true
+- id: tool-todo
+  disabled: true
+- id: tool-goal
+  disabled: true
+- id: tool-ralph
+  disabled: true
+- id: ptc-runtime
+  disabled: true
+- insert:
+    - id: e5-management-inspection
+      name: '@deepseek-ai/dsh-tool-cordis'
+    - id: e5-headless-startup
+      name: '@deepseek-ai/dsh-headless/startup'
+    - id: e5-headless-runner
+      name: '@deepseek-ai/dsh-headless'
+      inject: [headlessStartup]
+      config:
+        task: !!js ctx.headlessStartup.task
+        json: !!js ctx.headlessStartup.json

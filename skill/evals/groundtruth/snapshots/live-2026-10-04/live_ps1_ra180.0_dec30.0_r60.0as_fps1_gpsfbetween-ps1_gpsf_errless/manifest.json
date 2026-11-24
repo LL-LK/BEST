@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_ps1_ra180.0_dec30.0_r60.0as_fps1_gpsfbetween-ps1_gpsf_errless",
+  "files": {
+    "count.json": "sha256:bdd9ce8ffec16749dfe545b1ee2f4944b3ef8f8a16cf9d0190aaab4e36cd4284",
+    "pages/page_0001.csv": "sha256:324b62aae5a596594ce56527694e28e66b57aeaffc8aa59e35edaf492226edc2",
+    "phase1.html": "sha256:3c4c3ac78ba37633b76f2102d18fbd5c1654106384962b822797d2762e1d31eb",
+    "rows_full.csv": "sha256:324b62aae5a596594ce56527694e28e66b57aeaffc8aa59e35edaf492226edc2"
+  }
+}

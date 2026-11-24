@@ -1,0 +1,99 @@
+ M CHANGELOG.md
+M  README.md
+A  docs/ASSET-MANIFEST-2026-10-10.md
+M  docs/EVAL-UNLOCK-CHECKLIST.md
+A  docs/archive/e5-REPORT-live-2026-10-10.md
+A  docs/archive/e5-REPORT-live-rebuild-2026-10-10.md
+A  docs/archive/e5-capture-generations-2026-10-10/README.md
+A  docs/archive/e5-capture-generations-2026-10-10/capture-6systems-0924.json
+A  docs/archive/e5-capture-generations-2026-10-10/capture-b3-prose-rebuild-0352.json
+A  docs/archive/e5-report-live-rebuild-2026-10-10.json
+A  docs/e2-e5-forward-plan-2026-10-10.md
+A  docs/e2-e5-status-summary-2026-10-10.md
+A  docs/e5-baseline-tier-rerun-2026-10-10.md
+A  docs/e5-composite-floor-rootcause-2026-10-10.md
+A  docs/e5-criterion-fix-and-maintext-inventory-2026-10-10.md
+A  docs/e5-criterion-precheck-vs-toollayer-2026-10-11.md
+A  docs/e5-d08-retraction-2026-10-11.md
+A  docs/e5-defect-closure-and-rerun-decision-2026-10-10.md
+A  docs/e5-defect-ledger-and-optimization-2026-10-10.md
+A  docs/e5-expression-channel-facts-repair.md
+A  docs/e5-expression-channel-rebuild-verdict.md
+A  docs/e5-f-channel-usable-2026-10-11.md
+A  docs/e5-first-attributable-ablation-d08-2026-10-11.md
+A  docs/e5-full-11-system-rerun-2026-10-10.md
+A  docs/e5-isolated-batch-and-conclusion-revision-2026-10-10.md
+A  docs/e5-isolation-defects-d17-d18-2026-10-11.md
+A  docs/e5-leakage-audit-and-isolation-2026-10-10.md
+A  docs/e5-prereg-criterion-design-2026-10-10.md
+A  docs/e5-prereg-rootcause-2026-10-10.md
+A  docs/e5-r-battery-floor-effect-2026-10-10.md
+A  docs/e5-r-expansion-decisive-result-2026-10-10.md
+A  docs/e5-real-reasoning-feasibility-2026-10-10.md
+A  docs/e5-route-channel-conclusion-2026-10-11.md
+ M docs/eval-E2-groundtruth.md
+MM docs/eval-E5-baseline-ablation.md
+A  docs/eval-E5-plan-revised-2026-10-10.md
+A  docs/incident-e5-capture-loss-2026-10-10.md
+MM docs/paper-outline.md
+AM docs/six_experiments_bundle.zip
+MM evals/ablation/REPORT.md
+A  evals/ablation/captures/all-systems-rebuild.json
+A  evals/ablation/captures/b3-prose-rebuild.json
+ M evals/ablation/harness/captured_llm.py
+MM evals/ablation/harness/run_batch.py
+ M evals/ablation/harness/subagent_capture.py
+M  evals/ablation/hypotheses.yaml
+M  evals/ablation/items.yaml
+MM evals/ablation/metrics/composite.py
+A  evals/ablation/metrics/facts.py
+A  evals/ablation/metrics/pairing.py
+M  evals/ablation/metrics/prereg.py
+M  evals/ablation/metrics/stats.py
+MM evals/ablation/report.py
+MM evals/ablation/runner.py
+A  evals/ablation/systems/a6_no_envelope.yaml
+MM evals/ablation/tests/test_e5.py
+A  evals/ablation/tests/test_e5_facts.py
+ M evals/ablation/tests/test_e5_live.py
+A  evals/ablation/tests/test_e5_prereg_labels.py
+MM evals/groundtruth/REPORT.md
+ M evals/groundtruth/gold/gen_gold.py
+ M evals/groundtruth/metrics/m4_structure.py
+ M evals/groundtruth/metrics/m7_determinism.py
+ M evals/groundtruth/run_e2.py
+ M evals/groundtruth/scenarios/boundary_page_exact.yaml
+ M evals/groundtruth/tests/test_e2_two_layer.py
+ M ops/audit/env_scope.py
+ M ops/audit/run_all_gates.py
+M  rag/knowledge/lessons_learned.yaml
+?? docs/ASSET-MANIFEST-2026-10-11.md
+?? docs/E2-RERUN-PROTOCOL-v2-2026-10-11.md
+?? docs/E5-NEW-WINDOW-EXECUTION-PLAN-2026-10-12.md
+?? docs/archive/e5-evidence/
+?? docs/archive/review_pack/
+?? docs/e2-e5-process-artifacts-2026-10-11/
+?? docs/e2-e5-repair-plan-2026-10-11.md
+?? docs/e2-e5-reproduction-bundle-2026-10-11.md
+?? docs/e2-e5-reproduction-bundle-2026-10-11.zip
+?? docs/e2-e5-reproduction-bundle-2026-10-11.zip.sha256.txt
+?? docs/e5-isolation-gate-verification-2026-10-11.md
+?? docs/e5-live-redesign-2026-10-11.md
+?? docs/e5-maintext-admission-2026-10-11.md
+?? docs/e5-optimal-rerun-protocol-v2-2026-10-11.md
+?? docs/e5-optimal-rerun-protocol-v3-2026-10-11.md
+?? docs/e5-overall-reconstruction-roadmap.md
+?? evals/ablation/harness/deepseek_importer.py
+?? evals/ablation/iso/
+?? evals/ablation/tests/conftest.py
+?? evals/ablation/tests/test_e5_isolation_gates.py
+?? evals/ablation/tests/test_e5_path_reparse_gates.py
+?? evals/ablation/tests/test_e5_sealed_run.py
+?? evals/ablation/transcripts/
+?? evals/groundtruth/frozen_runner.py
+?? evals/groundtruth/frozen_transport.py
+?? ops/audit/audit_e5_contamination.py
+?? ops/audit/verify_e5_materials.py
+?? ops/audit/verify_e5_os_sandbox.py
+?? ops/audit/verify_e5_sandbox.py
+?? scripts/

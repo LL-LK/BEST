@@ -1,0 +1,869 @@
+{
+  "schema": "e5-fixed-budget-power-simulation-v5",
+  "logical_e5_units": 0,
+  "seed": 20261012,
+  "n_tasks": 56,
+  "replicates": 3,
+  "nsim": 1000,
+  "max_monte_carlo_standard_error": 0.015811388300841896,
+  "assumption": "beta task propensities; common-versus-independent mixture controls between-arm correlation; calibrated logit treatment shift; conditional independent Bernoulli repeats",
+  "scope": "hypothetical design sensitivity, not actual power or task difficulty; no expansion permitted",
+  "results": [
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0,
+      "primary_power_alpha_0_05": 0.031,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.004
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.04999999687234169,
+      "primary_power_alpha_0_05": 0.117,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.031
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.10000000005623298,
+      "primary_power_alpha_0_05": 0.391,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.16
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1500000013217634,
+      "primary_power_alpha_0_05": 0.741,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.506
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.19999999900578963,
+      "primary_power_alpha_0_05": 0.952,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.801
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.2500000004010547,
+      "primary_power_alpha_0_05": 0.996,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.969
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.29999999837431524,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 1.0
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0,
+      "realized_probability_delta": 1.1240329307511081e-06,
+      "primary_power_alpha_0_05": 0.049,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.008
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.048402872438368265,
+      "primary_power_alpha_0_05": 0.106,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.027
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.09840287430937922,
+      "primary_power_alpha_0_05": 0.298,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.117
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.14840287355647752,
+      "primary_power_alpha_0_05": 0.568,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.314
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.19840287236734355,
+      "primary_power_alpha_0_05": 0.836,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.598
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.24840287112118284,
+      "primary_power_alpha_0_05": 0.965,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.854
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.29840287104672863,
+      "primary_power_alpha_0_05": 0.997,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.979
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0,
+      "realized_probability_delta": -0.00013114355237781072,
+      "primary_power_alpha_0_05": 0.042,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.005
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.04939894540830306,
+      "primary_power_alpha_0_05": 0.111,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.03
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.099398941418392,
+      "primary_power_alpha_0_05": 0.373,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.156
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.14939894172838208,
+      "primary_power_alpha_0_05": 0.711,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.409
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.19939894129543909,
+      "primary_power_alpha_0_05": 0.913,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.749
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.24939894208864383,
+      "primary_power_alpha_0_05": 0.99,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.949
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.29939894185567495,
+      "primary_power_alpha_0_05": 0.998,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.995
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0,
+      "primary_power_alpha_0_05": 0.037,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.005
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.048986278594246736,
+      "primary_power_alpha_0_05": 0.135,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.037
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.09898627431233342,
+      "primary_power_alpha_0_05": 0.503,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.237
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.14898627873518439,
+      "primary_power_alpha_0_05": 0.848,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.61
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.19898627636668081,
+      "primary_power_alpha_0_05": 0.982,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.917
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.24898627787079383,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.996
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.2989862780190911,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 1.0
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0,
+      "realized_probability_delta": -0.0014809863330195545,
+      "primary_power_alpha_0_05": 0.039,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.006
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.05121791773214449,
+      "primary_power_alpha_0_05": 0.079,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.013
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.10121791650966534,
+      "primary_power_alpha_0_05": 0.229,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.062
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1512179173181341,
+      "primary_power_alpha_0_05": 0.479,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.219
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.20121791866034838,
+      "primary_power_alpha_0_05": 0.743,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.468
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.2512179167971555,
+      "primary_power_alpha_0_05": 0.91,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.726
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.3012179170322184,
+      "primary_power_alpha_0_05": 0.98,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.924
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0,
+      "realized_probability_delta": -0.001030182895495178,
+      "primary_power_alpha_0_05": 0.045,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.006
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.049727655733805665,
+      "primary_power_alpha_0_05": 0.12,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.028
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.0997276555079029,
+      "primary_power_alpha_0_05": 0.35,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.136
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.14972765604396696,
+      "primary_power_alpha_0_05": 0.651,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.377
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.1997276553834604,
+      "primary_power_alpha_0_05": 0.87,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.68
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.24972765591710366,
+      "primary_power_alpha_0_05": 0.979,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.902
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.29972765501782894,
+      "primary_power_alpha_0_05": 0.998,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.984
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0,
+      "primary_power_alpha_0_05": 0.036,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.005
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.04995953945682929,
+      "primary_power_alpha_0_05": 0.201,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.061
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.09995953999791271,
+      "primary_power_alpha_0_05": 0.652,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.36
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1499595401891416,
+      "primary_power_alpha_0_05": 0.953,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.815
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.1999595402542446,
+      "primary_power_alpha_0_05": 0.999,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.982
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.25,
+      "realized_probability_delta": 0.24995953858086992,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 1.0
+    },
+    {
+      "baseline_probability": 0.5,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.3,
+      "realized_probability_delta": 0.2999595398063037,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 1.0
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0,
+      "primary_power_alpha_0_05": 0.039,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.008
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.05000000026725604,
+      "primary_power_alpha_0_05": 0.153,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.039
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.09999999959372585,
+      "primary_power_alpha_0_05": 0.568,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.303
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1500000001925063,
+      "primary_power_alpha_0_05": 0.94,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.778
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0,
+      "between_arm_task_propensity_correlation": null,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.19999999989190217,
+      "primary_power_alpha_0_05": 0.999,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.992
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0021148301148418537,
+      "primary_power_alpha_0_05": 0.034,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.006
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.051750346293169595,
+      "primary_power_alpha_0_05": 0.129,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.029
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.10175034466478279,
+      "primary_power_alpha_0_05": 0.438,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.191
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.15175034490817507,
+      "primary_power_alpha_0_05": 0.86,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.621
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.20175034592908708,
+      "primary_power_alpha_0_05": 0.997,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.97
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0,
+      "realized_probability_delta": -0.001483409990096227,
+      "primary_power_alpha_0_05": 0.048,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.005
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.05042869108089236,
+      "primary_power_alpha_0_05": 0.155,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.043
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.1004286909227131,
+      "primary_power_alpha_0_05": 0.51,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.254
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1504286898345971,
+      "primary_power_alpha_0_05": 0.923,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.739
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.20042869023121596,
+      "primary_power_alpha_0_05": 0.999,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.978
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0,
+      "primary_power_alpha_0_05": 0.042,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.009
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.05112783467973063,
+      "primary_power_alpha_0_05": 0.218,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.072
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.10112783721216183,
+      "primary_power_alpha_0_05": 0.672,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.368
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.15112783589094794,
+      "primary_power_alpha_0_05": 0.976,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.873
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.25,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.20112783619874602,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.998
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0,
+      "realized_probability_delta": 0.001964909681593202,
+      "primary_power_alpha_0_05": 0.042,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.005
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.05316809837631559,
+      "primary_power_alpha_0_05": 0.103,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.025
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.10316809866696769,
+      "primary_power_alpha_0_05": 0.356,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.124
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1531680995931018,
+      "primary_power_alpha_0_05": 0.704,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.457
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.20316809902830885,
+      "primary_power_alpha_0_05": 0.963,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.883
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0017477514149217277,
+      "primary_power_alpha_0_05": 0.034,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.008
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.05001122052367586,
+      "primary_power_alpha_0_05": 0.132,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.032
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.10001121991694542,
+      "primary_power_alpha_0_05": 0.494,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.227
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.15001122001212394,
+      "primary_power_alpha_0_05": 0.859,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.642
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 0.5,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.2000112200740778,
+      "primary_power_alpha_0_05": 0.998,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.954
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0,
+      "realized_probability_delta": 0.0,
+      "primary_power_alpha_0_05": 0.033,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.005
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.05,
+      "realized_probability_delta": 0.049456561943156854,
+      "primary_power_alpha_0_05": 0.254,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.071
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.1,
+      "realized_probability_delta": 0.09945656310337461,
+      "primary_power_alpha_0_05": 0.817,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.559
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.15,
+      "realized_probability_delta": 0.1494565619969492,
+      "primary_power_alpha_0_05": 0.997,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 0.952
+    },
+    {
+      "baseline_probability": 0.75,
+      "within_arm_task_icc": 0.5,
+      "between_arm_task_propensity_correlation": 1,
+      "target_delta": 0.2,
+      "realized_probability_delta": 0.1994565625583562,
+      "primary_power_alpha_0_05": 1.0,
+      "ablation_worst_holm_power_alpha_0_05_over_6": 1.0
+    }
+  ],
+  "mde_grid": [
+    {
+      "baseline": 0.5,
+      "icc": 0,
+      "between_arm_correlation": null,
+      "first_grid_delta_at_80pct_power": 0.2,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.5,
+      "icc": 0.25,
+      "between_arm_correlation": 0,
+      "first_grid_delta_at_80pct_power": 0.2,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.5,
+      "icc": 0.25,
+      "between_arm_correlation": 0.5,
+      "first_grid_delta_at_80pct_power": 0.2,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.5,
+      "icc": 0.25,
+      "between_arm_correlation": 1,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.5,
+      "icc": 0.5,
+      "between_arm_correlation": 0,
+      "first_grid_delta_at_80pct_power": 0.25,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.5,
+      "icc": 0.5,
+      "between_arm_correlation": 0.5,
+      "first_grid_delta_at_80pct_power": 0.2,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.5,
+      "icc": 0.5,
+      "between_arm_correlation": 1,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.3
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0,
+      "between_arm_correlation": null,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.2
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0.25,
+      "between_arm_correlation": 0,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.2
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0.25,
+      "between_arm_correlation": 0.5,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.2
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0.25,
+      "between_arm_correlation": 1,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.2
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0.5,
+      "between_arm_correlation": 0,
+      "first_grid_delta_at_80pct_power": 0.2,
+      "max_evaluated_delta": 0.2
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0.5,
+      "between_arm_correlation": 0.5,
+      "first_grid_delta_at_80pct_power": 0.15,
+      "max_evaluated_delta": 0.2
+    },
+    {
+      "baseline": 0.75,
+      "icc": 0.5,
+      "between_arm_correlation": 1,
+      "first_grid_delta_at_80pct_power": 0.1,
+      "max_evaluated_delta": 0.2
+    }
+  ]
+}

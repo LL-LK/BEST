@@ -1,0 +1,1 @@
+{"schema": "e5-zero-unit-glmm-qualification-v5", "logical_e5_units": 0, "synthetic_in_memory_only": true, "n_fixed_effects": 12, "optimizer_success": true, "statsmodels_version": "0.14.6"}

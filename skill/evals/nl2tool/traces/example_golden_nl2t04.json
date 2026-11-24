@@ -1,0 +1,24 @@
+{
+  "task_id": "NL2T-04",
+  "model_id": "offline-fixture",
+  "system_prompt_version": "fixture",
+  "tools_schema_hash": "fixture",
+  "network": false,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60.0,
+        "catalog": "ps1",
+        "max_rows": 1000,
+        "nearest_only": false
+      }
+    }
+  ],
+  "answer_text": "已查询 RA=10.68 Dec=41.27 半径 60 角秒内的 ps1 源。",
+  "http_requests": 1,
+  "s1_events": [],
+  "timestamp": "2026-09-28T00:00:00Z"
+}

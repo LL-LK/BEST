@@ -1,0 +1,20 @@
+{
+  "schema": "e5-final-delivery-verification-v1",
+  "verified_at_utc": "2026-10-12T16:40:13.357329+00:00",
+  "units": 2016,
+  "unique_sessions": 2016,
+  "source_exports": 2016,
+  "source_artifacts_matched": 82290,
+  "zip_crc_read_verified": true,
+  "private_gold_and_profile_absent": true,
+  "actual_credential_values_absent": true,
+  "hidden_assistant_reasoning_absent": true,
+  "score_and_analysis_receipt_hashes_match": true,
+  "human_review_rows_blank": 2016,
+  "glmm_optimizer_success": true,
+  "package_sha256": "534c4fa2cabd16a79cb755742f1955411eeb36eb79fd9efe4211a6498edd03fe",
+  "human_review": "pending",
+  "final_package_crc_all_members": true,
+  "report_and_diagnostics_exact_match": true,
+  "delivery_manifest_hashes_match": true
+}

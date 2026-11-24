@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "“最好”无可量化判据",
+    "BEST 无质量排名字段"
+  ],
+  "item_id": "RB-43",
+  "tier": "P",
+  "request": "BEST 里最好的标准星有哪些?",
+  "route": "clarify",
+  "answer_text": "BEST 里没有“最好”这个口径，所以这句话我没法直接查。BEST（BEst STar database）是 NADC 的均一定标标准星库，星表只按“能不能查到”划分，不给恒星排“最好/最差”，也没有任何按质量排序的字段——任何“最好的 N 颗”都只能是我编的，不能给你。\n\n可查的标准星面是这几张：\n- `scr_lamost`：标准星 × LAMOST 交叉表（137 列，默认表）\n- `scr_galah`：标准星 × GALAH 交叉表（137 列）\n- `xpsp`：Gaia DR3 XP&SP 光谱-测光（287 列，139 张分表单表）\n- `landolt`：Landolt 标准星（定标用，全表约 4.6 万行，全天很稀）\n\n要真去查，请你先给我两样东西：\n1. “最好”按什么衡量？——是单星定标精度最高（例如 SCR 方法 grizy 类约 0.001–0.005 mag、u/v 类约 0.01–0.02 mag）、还是指定某套测光系统 / 某个天区、或最亮/最暗？\n2. 位置或约束？——标准星只能按坐标（锥搜，半径单位是角秒）或列约束（星等、SNR 等）查；按名字和“排名”都查不到。\n\n给我一个判据 + 坐标（或约束），我就照着去查。",
+  "run_id": "r1"
+}

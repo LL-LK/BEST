@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-19",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "\"标准星清单\"有两种读法，口径差了几个数量级，我不猜你说的是哪个：\n\n**(a) 标准星组有哪几张可查询表** —— 这个零请求就能答，我直接给你：\n标准星组（`std`，注意它是**导航分组、不是表**，直接拿 `std` 当表名查会得到站点的 `Internal Server Error`）展开为\n\n- `scr_galah` —— 标准星 × GALAH，137 列\n- `scr_lamost` —— 标准星 × LAMOST，137 列\n- `xpsp` —— 标准星 × Gaia DR3 XP&SP，287 个可选列、横跨 139 张表单表（含 138 张分波段表），\n  覆盖 Gaia G/BP/RP 加各巡天交叉测光（含 `ztf_g_g_xpsp`/`ztf_r_r_xpsp`/`ztf_i_i_xpsp`、`splus_r_r_xpsp` 等）\n\n**(b) 把标准星记录整份导出来** —— 这个我做不到，也不建议做：\n标准星是几亿行量级的表，无约束拉取等价于全量导出（内联 CSV 是数百 MB 量级，\n而且**无约束会话的 `getcount` 会超时 >60s**）。站点自己也要求查询必须带天区/星等约束。\n\n如果你是 (b)，我建议的可行口径是：**按天区分块**。给我中心 RA/Dec（度）+ 每块半径\n（**角秒**，单块上限 18000 角秒 = 5 度），我用 `cone_search` 建会话、`fetch_page` 分页取回，\n再用 `stable_uri`（形如 `best://xpsp/cone?ra=…&dec=…&sr=…`）逐块记录血缘，最后本地合并导出。\n\n请回我：**(a) 还是 (b)**；若是 (b)，补上天区范围和列清单。",
+  "notes": "「清单」口径二义：(a) 表清单可零请求直答、(b) 全量导出不可行；先澄清再动手。"
+}

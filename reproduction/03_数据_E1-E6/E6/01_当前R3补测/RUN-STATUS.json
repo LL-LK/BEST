@@ -1,0 +1,8 @@
+{
+  "at": "2026-10-11T17:29:23.161239+08:00",
+  "status": "collection_complete",
+  "terminated_slots": 160,
+  "planned_slots": 160,
+  "stopped_http_status": null,
+  "report_recovered_offline": true
+}

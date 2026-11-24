@@ -1,0 +1,56 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/sham_placeholder.yaml — sham 安慰剂对照 (占位装配)
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §4 "两个必须做的可靠性检验" 第 1 条
+# 与 §9 混淆控制清单的 prompt 长度行。
+# **做法**: 把 A2 删掉的字段语义段, 换成**同等 token 量**的无关天文说明
+# (通用测光系统科普), 组件开关与 A2 逐项相同 — 唯一差是注入文本的**信息量**。
+#   若 sham 也掉同样多的分 → 掉分来自"prompt 变短/注意力变化", 而非语义信息,
+#   A2 结论降级为"待复核" (不进主表)。
+system:
+  id: sham_placeholder
+  kind: sham
+  label: "A2 的等长无关文字对照 (sham)"
+  role: "可靠性检验 — 区分『信息起作用』与『prompt 变短』"
+  # 组件开关与 A2 逐项相同 (含 field_semantics=false)
+  base: A2
+  tool_face: toolbox
+  components:   # 与 A2 完全一致: 唯一差别在 injected_text 的语义
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    param_validation: true
+    # 与 A2 同: 不注入 BEST 专属字段语义
+    field_semantics: false
+    refusal_rules: true
+    provenance: true
+    post_verify: true
+    unified_envelope: true
+  envelope_keys: [data, status, cost, provenance]
+  sham_detail:
+    host_ablation: A2
+    replaced_block: "字段语义说明 (CATALOG_MAG_COLUMNS 波段→列映射 + describe_catalog 语义段)"
+    replacement_block: >
+      同等 token 量的**无关天文通识** (星等定义 / AB 星等系统 / Vega 星等系统 /
+      消光与色 Excess 的通识讲解), **不含**任何 BEST 列名、波段→列映射或表结构信息。
+    token_budget: "与 A2 删掉的段落等长 (±10%) — 等长是本对照的硬约束, 不等长则对照作废"
+    code_seam: "adapter 层的文档注入清单替换 (生产码零改动)。"
+  expected_effect:
+    esr_full: "≥ B3 − 0.05 (等长无关文字不应造成实质掉分)"
+    sham_drop_vs_real: "sham 掉分 < A2 真消融掉分的 50%"
+    row_f1: flat
+    reject_acc: flat
+  # reliability/sham
+  linked_hypothesis: hypotheses.yaml
+  budget: "1 组 × 30 题 × 3 次 ≈ 90 run (§14 P5)"
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型; 11 装配同一 model_id/解码参数)
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+
+  notes: >
+    sham 是**对照**不是消融: 它不进主表的 10 个系统列 (主表共 11 装配, sham 只在 T3 表里单列), 只在 T3 可靠性表里与 A2 并列。
+    若 sham 与 A2 掉分相当 → A2 的归因不可信, 该结论降级并在报告里显式披露。

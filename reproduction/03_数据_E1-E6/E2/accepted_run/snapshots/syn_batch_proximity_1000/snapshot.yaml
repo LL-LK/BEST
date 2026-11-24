@@ -1,0 +1,20 @@
+snapshot_id: syn_batch_proximity_1000
+kind: S
+material_class: synthetic-protocol-fixture
+catalog: ps1
+columns:
+- inputobjs_input_line
+- inputobjs_input_ra
+- inputobjs_input_dec
+- inputobjs_dist_arcsec
+- ps1_source_id
+- ps1_ra
+- ps1_dec
+- ps1_rpsf
+row_count: 1000
+data_version: synthetic@2026-10-11
+page_size: 1000
+sort_key: inputobjs_input_line
+fetched_at: '2026-10-11'
+note: 1000 synthetic one-to-one proximity matches; replaces a mismatched cone-search
+  capture.

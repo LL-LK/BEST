@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-19",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "reject",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "整份标准星清单我给不了，两个硬约束：\n（1）“标准星”不是一张表。std 是导航分组，直接查 std 会拿到 {\"error\":\"Internal Server Error\"}；成员是 scr_galah（标准星×GALAH，137 列）、scr_lamost（标准星×LAMOST，137 列）、xpsp（Gaia DR3 XP&SP，287 列）。“清单”指哪张、要不要三张合并（合并意味着同波段多调查会撞键，交叉测光列只进 raw_data），也需要你定口径。\n（2）无边界整表导出不可行。标准星整体是 2 亿+ 量级（官网首页给全集“up to 2 billion stars”，/std 文档页给标准星子集“over 200 million stars”，两个数别混），而站点对没有天区/星等约束的“Save all”按全表拉取处理，内联 CSV 可到数百 MB 量级；更麻烦的是 getcount 在无约束会话上会 >60 s 超时——也就是说我连“先告诉你有多少”都做不稳。\n可行的替代：\n（a）给我天区（半径 ≤5°，单位角秒）和星等范围，我先 count 报真实总数，你确认规模后用 fetch_page 分批给清单；\n（b）按名单/名字来：resolve_name 解算坐标 + cone_search(nearest_only=true) 逐个取，你把名单贴给我；\n（c）源量大到要整表下载，走站点的 Catalog 区——那条路需要登录，不在我这边的匿名工具面里。\n你选 (a) 还是 (b)，给个天区或名单我就开工。",
+  "notes": "整表导出 + 组名当表名两条都不可行 → reject；替代路径给“天区+星等范围先 count 再分页”“按名单逐点匹配”“整表下载需登录”。"
+}

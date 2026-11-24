@@ -1,0 +1,51 @@
+{
+  "verified_at": "2026-10-11T00:35:09+08:00",
+  "records_verified": 4,
+  "real_answers": 3,
+  "hidden_controls": 1,
+  "exclusions": [],
+  "all_three_repeats_and_both_groups_preserved": true,
+  "teacher_original_sha256": "d207237585694711aa1cd82eef17d3f743746cfb1b3261b1bf05fd1848dd48ec",
+  "teacher_records_sha256": "62d9574e2ce12778e59de6a188c2adac97025ce299b559cca900fa295dff0681",
+  "original_archive_unchanged": true,
+  "primary_quantitative_results_unchanged": true,
+  "median_counterexample_verified": true,
+  "model_api_calls": 0,
+  "verification_actor": "current_assistant",
+  "teacher_feedback_count_unchanged": 213,
+  "full_independent_expert_review_complete": false,
+  "source_requests": {
+    "gaia-variable-products-request": {
+      "url": "https://gea.esac.esa.int/archive/documentation/GDR3/Data_analysis/chap_cu7var/sec_cu7var_intro/ssec_cu7var_dataproducts.html",
+      "retrieved_at": "2026-10-10T16:31:52.561983+00:00",
+      "http_status": 200,
+      "bytes": 53382,
+      "body_sha256": "37de55dfc3a269e64c7758d6dea1ced1cdb6d0b607cfcf4da3870afc42687100",
+      "final_url": "https://gea.esac.esa.int/archive/documentation/GDR3/Data_analysis/chap_cu7var/sec_cu7var_intro/ssec_cu7var_dataproducts.html"
+    },
+    "stripe82-author-definitions-request": {
+      "url": "https://faculty.washington.edu/ivezic/sdss/catalogs/stripe82.html",
+      "retrieved_at": "2026-10-10T16:31:52.561781+00:00",
+      "http_status": 200,
+      "bytes": 7539,
+      "body_sha256": "20db5ae757610eae692d50d8a60abb3b2cada9c78d94629b07820ba01f0bf691",
+      "final_url": "https://faculty.washington.edu/ivezic/sdss/catalogs/stripe82.html"
+    },
+    "huang-yuan-2022-request": {
+      "url": "https://arxiv.org/html/2112.14956",
+      "retrieved_at": "2026-10-10T16:31:52.562053+00:00",
+      "http_status": 200,
+      "bytes": 1566676,
+      "body_sha256": "f4a3d68314e4a585ae6bc21174d3926167dd28cbe4cfe7c77c5a40a3703e9e55",
+      "final_url": "https://arxiv.org/html/2112.14956"
+    },
+    "best-stripe82-metadata-request": {
+      "url": "https://nadc.china-vo.org/data/best/t/329",
+      "retrieved_at": "2026-10-10T15:32:56.453941+00:00",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 104855,
+      "body_sha256": "3fcfec8a33593bb25e8b6eae493140af3791a34085d84fa5554354259d0f6c01"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-20",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "你没说\"这个字段\"是哪一个，所以我没法逐列给你核。但**前提可以先纠正，这一条比字段名更重要**：\n\n**BEST 里没有逐历元（epoch / time-series）星等。** 12 张可查询星表全是单历元的定标测光，\n星等列都是\"平均星等\"一类的单值。唯一的例外口径是 `gaia_dr3_18` 表里的\n`gaia_dr3_18_has_epoch_photometry`、`has_epoch_rv` 这两个**布尔标志**——\n它们表示\"这个 Gaia 源在 Gaia DR3 里有没有逐历元测光\"，**不是**星等值序列，\nBEST 也不随表提供那些逐历元明细（要取请去 Gaia Archive）。\n\n按表区分一下，免得你拿错列：\n\n- `ps1`：`ps1_gpsf` / `ps1_rpsf` / `ps1_ipsf` / `ps1_zpsf` / `ps1_ypsf`（PSF 星等，各有 `_corr` 与 `_err`）——单值\n- `gaia_dr3_18`：`phot_g_mean_mag` / `phot_bp_mean_mag` / `phot_rp_mean_mag` —— 名字里的 `mean` 就是\"平均\"，\n  是 Gaia 自己多历元拟合出的单值，与 BEST 的单历元定标是两回事，别混为一谈\n- `xpsp` / `dr3xpcorr`：共享表里的 `g_mag` / `bp_mag` / `rp_mag` 也是单值\n\n把**字段名**（连表名一起，比如 `ps1.rpsf`、`gaia_dr3_18.phot_g_mean_mag`）给我，我用\n`describe_catalog` 把它的量纲、单位和波段归属逐列核给你——这一步零请求。\n如果你真正要的是光变曲线，那要换数据源，告诉我坐标我去指路。",
+  "notes": "字段未指名 → 澄清；同时纠正前提：BEST 只有单历元平均星等，has_epoch_photometry 只是布尔标志。"
+}

@@ -1,0 +1,25 @@
+{
+  "weighted_mean": 0.9529761904761905,
+  "weighted_sample_sd": 0.009163573999012322,
+  "per_box": [
+    0.9428571428571428,
+    0.9607142857142857,
+    0.9553571428571429
+  ],
+  "mean_dims": {
+    "toolset": 0.9404761904761905,
+    "param": 0.9658730158730159,
+    "convert": 1.0,
+    "redundant": 0.9880952380952381,
+    "clarify": 0.8333333333333333,
+    "reject": 0.9722222222222222
+  },
+  "combined_median_then_macro": 0.975,
+  "aggregation": "repeat mean reported separately from per-task per-dimension median followed by dimension macro-average",
+  "limitations": [
+    "sb2 rerun",
+    "cross-box answers readable; low textual similarity does not prove no access",
+    "planned tool traces parsed from model answers; not proof of executed calls",
+    "clarification gate not met"
+  ]
+}

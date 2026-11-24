@@ -1,0 +1,18 @@
+name: astro-best.case_025_algo_agent_tools
+skill: astro-best
+derived_from: "algorithm:{'name': 'ToolBox', 'module': 'src.ai_tools'}"
+given:
+  ToolCall:
+    tool: "cone_search"
+    args: {ra: 180.0, dec: 30.0, radius_arcsec: 60.0, catalog: "ps1"}
+expect:
+  status: pass
+  envelope.keys: [data, status, cost, provenance]
+  cost.fields: [http_requests, elapsed_s, rows_returned]
+  error_codes: [E_INVALID_INPUT, E_SOFT_404, E_NAME_UNRESOLVED, E_NO_SQLID, E_BACKEND]
+  content_trust: "untrusted (site rows; S-2 prompt-injection surface)"
+  stable_uri: "best://ps1/cone?ra=..&dec=..&sr=.."
+
+# ---
+# 工具面用例: 7 原子工具统一信封; schema 权威 references/tools.schema.json;
+# 调用方按 references/llms.txt 的清单取用 (本仓不提供独立传输层入口)。

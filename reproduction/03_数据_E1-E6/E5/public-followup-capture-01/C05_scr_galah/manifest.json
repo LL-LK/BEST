@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "C05_scr_galah",
+  "files": {
+    "count.json": "sha256:2af3e2cbc7a782037439ecebbe422a8fa52fb3adede1b26146310d83878ee82d",
+    "pages/page_0001.csv": "sha256:95e0996d1b02debed258756b55d46ffe1aeb7ade86eca3ef5c261bc1c040fb10",
+    "phase1.html": "sha256:483d96c76939852baabcb56612ebf532020cd4144ae4261d303df2b86d846f38",
+    "rows_full.csv": "sha256:95e0996d1b02debed258756b55d46ffe1aeb7ade86eca3ef5c261bc1c040fb10"
+  }
+}

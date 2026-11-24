@@ -1,0 +1,15 @@
+snapshot_id: syn_exact_page_1000
+kind: S
+material_class: synthetic-protocol-fixture
+catalog: ps1
+columns:
+- ps1_source_id
+- ps1_ra
+- ps1_dec
+- ps1_rpsf
+row_count: 1000
+data_version: synthetic@2026-10-11
+page_size: 1000
+sort_key: ps1_source_id
+fetched_at: '2026-10-11'
+note: ' exactly 1000 rows, synthetic page-boundary fixture; not a live service capture.'

@@ -1,0 +1,29 @@
+# E2 场景 7b-1/8: 参数漏填 — 不传 catalog (docs/eval-E2-groundtruth.md §5.1)
+case_id: missing_arg_catalog
+category: missing_arg
+# 本用例不发任何请求 (非法查询在协议层就被拒), 故无素材依赖。
+# _no_request 是显式哨兵: 目录不存在 → gold 的 snapshot_id 记 "sha256:absent",
+# 报告读者据此知道"这份金标准不消费任何快照", 而不是以为素材丢了。
+snapshot_id: _no_request
+main_metrics: [M5]
+query:
+  catalog: null                   # 关键: 显式 null 才绕开编排层 query.get("catalog","ps1") 的缺省兜底
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: error             # 不得默认某张表就发请求; 必须显式失败
+  error_code: E_INVALID_INPUT
+  row_count_hint: 0
+  truncated_hint: false
+notes: >
+  金标准: result_state=error, error_code=E_INVALID_INPUT。
+  判据 (E2 §5.1): 不得默认某张表就发请求, error_code 必为 E_INVALID_INPUT
+  或走澄清, **不得静默挑表**。
+  实测依据 (2026-10-08): src.protocol.resolve_catalog(None) 抛
+  ValueError("Unknown BEST catalog: None") —— 在碰网络之前就早炸,
+  run_e2._error_code 按 ValueError 归 E_INVALID_INPUT。
+  与 #7 (数据侧缺失字段) 是不同测试对象: #7 脏在数据里, 本用例脏在查询本身。
+gold_focus: 缺 catalog 显式拒绝 (不得静默兜成 ps1) + 归因 E_INVALID_INPUT

@@ -1,0 +1,40 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "ps1",
+    "ra": 10.0,
+    "dec": -45.0,
+    "radius": 60.0
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "bytes": 15457,
+      "at": "2026-10-04T07:02:00.293548+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/4906/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-04T07:02:00.810844+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4906?output.fmt=csv&rows=1000&page=1&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 426,
+      "at": "2026-10-04T07:02:02.005694+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": null
+  }
+}

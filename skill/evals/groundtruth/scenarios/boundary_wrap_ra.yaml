@@ -1,0 +1,30 @@
+# E2 场景 6/8: 边界值 — RA 跨 0–360 wrap (S 类) — docs/eval-E2-groundtruth.md §5 #6
+case_id: boundary_wrap_ra
+category: boundary
+snapshot_id: live-2026-10-04/live_ps1_ra359.5_dec0.0_r1800.0as
+main_metrics: [M1, M3]
+query:
+  catalog: ps1
+  ra: 359.5                    # 锥区跨 0/360 分界; 服务端 total=305172
+  dec: 0.0
+  radius_arcsec: 1800.0
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf]
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+  # 行数/截断标志**不在此声明**: gen_gold 只读 result_state 与 error_code, 这里
+  # 写下的数字与行键无人断言 —— 换素材后不会变红, 只会静静变旧 (A7-02: 换素材前
+  # 写的「1 行」与 BEST_SYN_* 行键对应的是 syn 合成快照, 换成 live 快照后既对不上
+  # 行数, 那些行键也早已不存在)。权威值见 gold/boundary_wrap_ra.json 的
+  # row_keys / row_count 段与汇总表 focus/must_confirm 列 (数字由金标准渲染)。
+notes: >
+  锥心 RA 贴近 359.5°, 半径 1800" (0.5°) 的锥壁恰好落在 RA=0.0 处 —— 本快照的
+  行全部在 RA 359.0–360.0 区间内, **没有一行真正跨过 0/360**。所以本 case 钉的是
+  「RA 不越界 + 回绕算术路径正确」, 而不是「跨界行必须被收进来」: 期望行集与逐行
+  键以 gold/boundary_wrap_ra.json 的 row_keys 为准 (换素材前按 syn_boundary 的
+  BEST_SYN_* 行键写了个案, 那些行已退役)。**覆盖度缺口 (已登记, 不算本行的问题)**:
+  跨界回绕行未被本快照覆盖, 平面近似/不取模的实现要靠 crossmatch/极区相关单测与
+  后续增补的中赤纬 wrap 行对来钉。GT 一律用 wrap-safe 的独立 haversine
+  (sin²(Δra/2) 周期 360°), 复算过程写入审核清单 (angular_distance_arcsec)。
+gold_focus: RA wrap 算术路径 + 快照布局限制登记 (待 A 增补中赤纬 wrap 行)

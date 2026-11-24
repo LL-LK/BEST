@@ -1,0 +1,32 @@
+{
+  "schema": "e5-public-followup-acquisition-v1",
+  "logical_e5_units": 0,
+  "case_id": "name_GaiaID",
+  "task": {
+    "kind": "name",
+    "name": "Gaia DR3 1234567890123456789"
+  },
+  "wire_responses": [
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/nss/solve?obj=Gaia%20DR3%201234567890123456789",
+      "status": 200,
+      "request_form": null,
+      "started_at_utc": "2026-10-12T09:12:38.330053+00:00",
+      "response_file": "wire/response-001.bin",
+      "content_type": "application/json",
+      "content_encoding": null,
+      "response_encoding": "utf-8",
+      "bytes": 223,
+      "sha256": "946eab300a9ba152e446e915e5542070698079fd426c6c3e36a44a000395e605"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000
+  },
+  "error": {
+    "type": "NameResolveError",
+    "message": "E_NAME_UNRESOLVED: could not resolve 'Gaia DR3 1234567890123456789'"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": false,
+  "correct_value": null,
+  "declared_issues": [],
+  "item_id": "RB-15",
+  "tier": "P",
+  "request": "查 source_id 为 12345 的源 (传成整数)。",
+  "route": "reject",
+  "answer_text": "这个请求没法按字面执行：BEST 没有「按 source_id 查询」的接口。站点的 `/q` 只走两种入口——按位置锥形检索（中心坐标 + 半径），或按坐标列表做 proximity 批量交叉匹配；任何星表都不提供 source_id 单点查询端点。所以 12345 无论传整数还是字符串，都没有地方可传，我不能拿它直接查出这颗源（硬查只会是伪造结果）。\n\n另外提醒：BEST 里的 `source_id` 是各星表原生的**字符串** ID（ps1 实测为 19 位整数串，如 `2449913804508125824`），跨表并不通用，所以「传成整数」本身也不构成一个合法检索键。\n\n请给我该源的位置与目标星表，我就能帮你查到：\n- 赤经、赤纬（度，ICRS）+ 目标星表（如 `ps1` / `gaia_dr3_18` / `xpsp` 等）→ 走锥形检索；\n- 一批已知坐标 → 走批量交叉匹配。\n如果你只有这个 ID，请告诉我它来自哪张表，我可以说明该表该如何用坐标反查。",
+  "run_id": "r1"
+}

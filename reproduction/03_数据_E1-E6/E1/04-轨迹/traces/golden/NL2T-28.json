@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-28",
+  "route": "reject",
+  "tool_calls": [],
+  "answer_text": "不支持该请求 (CATALOG_NOT_HOSTED), 无法执行。 建议: 本库可查白名单是 12 张表（ps1 / stripe82 / gaia_dr3_18 / jplus_dr3 / smss_dr4 / landolt / uss_dr1 / splus_dr4 / scr_galah / scr_lamost / xpsp / dr3xpcorr）；2MASS 不在其中，近红外请去 2MASS 官方站或 IRSA；只要该天区的宽波段测光，可用在册的 ps1（grizy）或 gaia_dr3_18（G/BP/RP）替代，但归算与零点不同，须显式声明。",
+  "source": "golden-from-annotation"
+}

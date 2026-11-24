@@ -1,0 +1,38 @@
+{
+  "gold_id": "gold_missing_arg_coords",
+  "case_id": "missing_arg_coords",
+  "snapshot_id": "sha256:absent",
+  "data_version": "_no_request",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:691458a7a103c9cc31049152171a0af38296e9ceb7cc8b348cb55fec455827c0"
+  },
+  "rows_source": "snapshot:_no_request (error-state, 无行集)",
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [],
+  "row_count": 0,
+  "field_values": {},
+  "null_semantics": {},
+  "unit_map": {},
+  "precision_map": {},
+  "ordering": {
+    "key": null,
+    "order": null,
+    "sequence": [],
+    "declared": false
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))"
+  },
+  "truncation": {
+    "expected_total": 0,
+    "expected_truncated": false,
+    "expected_returned": 0
+  },
+  "result_state": "error",
+  "expected_error_code": "E_INVALID_INPUT",
+  "notes": "金标准: result_state=error, error_code=E_INVALID_INPUT。 判据 (E2 §5.1): 不得用 (0,0) 之类的默认坐标发请求。 实测依据 (2026-10-08): src.protocol.build_query_form 的空间互斥校验 (ra/dec/radius_arcsec 任一非 None 即进锥形分支) 在 `if ra is None or dec is None or radius_arcsec is None` 处抛 ValueError(\"ra, dec and radius_arcsec must be provided together\"), **早于** guards.validate_search_radius 的调用; _error_code 按 ValueError 归 E_INVALID_INPUT。 (对照: 若走 client.cone_search 路径, guards 对 None 抛的是 TypeError —— 那条路径不在 E2 的 query_result 臂上, 见 notes 末的登记)\n"
+}

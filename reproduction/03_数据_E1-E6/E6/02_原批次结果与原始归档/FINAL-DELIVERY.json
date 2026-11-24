@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-07T23:46:25.309686+08:00",
+  "collection_complete": true,
+  "protocol_gate": "FAIL",
+  "composite": null,
+  "report": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/FINAL-REPORT.md",
+  "scoring_report": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/reports/1791387960468521000",
+  "audits": [
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/delivery-audits/1791387935590873000/audit.json",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/coverage-audits/1791387935605654000/coverage.json",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/wire-semantics-audits/1791387936630075000/audit.json"
+  ],
+  "artifacts_sha256": {
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/FINAL-REPORT.md": "7599c68934661def1e1947f514f1c1d89896febd48e9ffb8959ea2266fce7b0e",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/reports/1791387960468521000/summary.json": "9794274047f361042f112839763f70931af926869f3f4c03ad60f21485745814",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/reports/1791387960468521000/scoring-manifest.json": "fcbf59e94e462b8c86a47a85631de5f082ec8b4912773ec6f0b56a9427de9319",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/delivery-audits/1791387935590873000/audit.json": "e28916c601f656ede03d52b84aa80d2f4501fb55e4ca7f48ab7401bca3fb4253",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/coverage-audits/1791387935605654000/coverage.json": "983b7f33b0d11f680a4df52d705a1f16403aeb092773afad536593c865112bf9",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/wire-semantics-audits/1791387936630075000/audit.json": "4e28114ba69f1ce419b541d803667d807068d2180e1870430c1afdbbd0891917",
+    "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-20261007-1791350994158084000/snapshot_manifest.json": "395dd2d26156fc8706bd1c5e6f80528d6614f7532e477138316caf82843bf227"
+  },
+  "R2_due": "2026-10-14",
+  "no_judge_api": true,
+  "U7_raters": 0,
+  "builder_fp": "sha256:32260e85615457745de541f9a44bef4929fcbe586924c3c22b0355d420095315"
+}

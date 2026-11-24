@@ -1,0 +1,747 @@
+{
+  "source": "E4-答题沙箱-2026-10-21.zip: _复现/out/grade_r2.json",
+  "source_sha256": "13f74f9b47d33d08358640af215bd7b2ffbfdb1d9b3b6701af7f05b271db8250",
+  "repeats": {
+    "sb1": [
+      {
+        "id": "RB-01",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-02",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-03",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-04",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-05",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-06",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-07",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-08",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-09",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 0.48,
+        "pass": false
+      },
+      {
+        "id": "RB-10",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-11",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 0.48,
+        "pass": false
+      },
+      {
+        "id": "RB-12",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-13",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": false
+      },
+      {
+        "id": "RB-14",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.48,
+        "pass": false
+      },
+      {
+        "id": "RB-15",
+        "category": "D",
+        "disposal_ok": false,
+        "weighted": 0.48,
+        "pass": false
+      },
+      {
+        "id": "RB-16",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-17",
+        "category": "E",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-18",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-19",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 0.5455,
+        "pass": false
+      },
+      {
+        "id": "RB-20",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-21",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-35",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-36",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-37",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-39",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-40",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-41",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-42",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-43",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-44",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-45",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-46",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 0.7727,
+        "pass": false
+      },
+      {
+        "id": "RB-48",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-49",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-50",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      }
+    ],
+    "sb2": [
+      {
+        "id": "RB-01",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-02",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-03",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-04",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-05",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-06",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-07",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-08",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-09",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-10",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-11",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-12",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-13",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": false
+      },
+      {
+        "id": "RB-14",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-15",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 0.7727,
+        "pass": false
+      },
+      {
+        "id": "RB-16",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": false
+      },
+      {
+        "id": "RB-17",
+        "category": "E",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-18",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-19",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-20",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-21",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-35",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-36",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-37",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-39",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-40",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-41",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-42",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-43",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-44",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-45",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-46",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-48",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-49",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-50",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      }
+    ],
+    "sb3": [
+      {
+        "id": "RB-01",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-02",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-03",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-04",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-05",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-06",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-07",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-08",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-09",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-10",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-11",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-12",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-13",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-14",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-15",
+        "category": "D",
+        "disposal_ok": false,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-16",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-17",
+        "category": "E",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-18",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-19",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 0.5455,
+        "pass": false
+      },
+      {
+        "id": "RB-20",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 0.74,
+        "pass": false
+      },
+      {
+        "id": "RB-21",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-35",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-36",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-37",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-39",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-40",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-41",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-42",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-43",
+        "category": "C",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-44",
+        "category": "A",
+        "disposal_ok": true,
+        "weighted": 1.0,
+        "pass": true
+      },
+      {
+        "id": "RB-45",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-46",
+        "category": "D",
+        "disposal_ok": true,
+        "weighted": 0.7727,
+        "pass": false
+      },
+      {
+        "id": "RB-48",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-49",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      },
+      {
+        "id": "RB-50",
+        "category": "B",
+        "disposal_ok": true,
+        "weighted": null,
+        "pass": false
+      }
+    ]
+  }
+}

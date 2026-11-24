@@ -1,0 +1,27 @@
+skill: astro-best
+kind: provenance
+envelope: astro-envelope-v1  # v1 存量血缘头
+provenance:
+  skill: astro-best
+  timestamp: "<UTC ISO8601>"
+  session_id: ""
+  # 2026-10-05 修复轮 (H5-03 反向扫描) 补登: 本段此前**漏登记** identity, 而
+  # src/provenance.py:187-192 在已授权时确实会挂它 —— 契约漏字段比多声明更隐蔽,
+  # 消费方按本文件建模就会在授权查询上取不到身份。
+  # identity 三键**仅在已授权时整块出现**; 未授权时整块省略 (src/provenance.py:185-187):
+  # 落一个全空的 identity 块会被下游读成"授权过但字段为空", 与"未授权"混淆。
+  identity:
+    umtId: ""
+    ldap_id: ""
+    name: ""
+lineage:
+  inputs_ref: []   # 上游 DataEnvelope data_hash 列表
+  outputs_ref: []
+  completeness_gate:  # 对齐计划书 §6 G7 溯源门禁
+    required: true
+    value: 1.0
+
+# ---
+# generated_by: scripts/refactor/materialize_contracts.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

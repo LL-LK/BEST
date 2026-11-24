@@ -1,0 +1,42 @@
+{
+  "platform": "host",
+  "provider": "Event",
+  "method": "listEvents",
+  "data": {
+    "mode": "event",
+    "event": {
+      "name": "agent/created",
+      "description": "An entered agent is ready for per-agent initialization after factory setup. Listeners run in order and are awaited before creation resolves. AgentLoop holds queued input until all listeners finish. A throw or rejection fails creation and skips later listeners. Disposal retains the scope and session until dispatch settles; listeners must not await agent.whenIdle() or their own owner's disposal.",
+      "mode": "serial",
+      "signature": "'agent/created'(this: Scoped<Agent>, payload: { agent: Agent; source: SessionStartSource; signal?: AbortSignal }): undefined | Promise<undefined>",
+      "parameters": [
+        {
+          "name": "payload",
+          "description": ".signal - factory initialization cancellation signal, when provided. Scope-filtered dispatch (`@deepseek-ai/dsh-scope`): agent-scoped listeners receive only that agent."
+        }
+      ]
+    },
+    "referencedTypes": [
+      {
+        "name": "Agent",
+        "declaration": "export interface Agent {\n    readonly id: SessionId;\n}"
+      },
+      {
+        "name": "Branded",
+        "declaration": "export type Branded<B extends string> = string & {\n    readonly [BRAND]: B;\n};"
+      },
+      {
+        "name": "Scoped",
+        "declaration": "export type Scoped<T extends object> = object & {\n    readonly [ScopedBrand]: T;\n};"
+      },
+      {
+        "name": "SessionId",
+        "declaration": "export type SessionId = Branded<'SessionId'>;"
+      },
+      {
+        "name": "SessionStartSource",
+        "declaration": "export type SessionStartSource = 'startup' | 'resume' | 'clear' | 'compact';"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-17",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 coordinates、catalog、filter_capability。 可选: 缺中心坐标与半径：BEST 只能按天区检索，没有全库条件筛选入口，请给 RA/Dec/半径；7 个原子工具**没有服务端过滤参数**；站点协议虽支持 {table}.{col}.operation=less， 但工具面不暴露。只能整段拉回后在本地过滤，且数据量可能很大，是否接受？。",
+  "source": "golden-from-annotation"
+}

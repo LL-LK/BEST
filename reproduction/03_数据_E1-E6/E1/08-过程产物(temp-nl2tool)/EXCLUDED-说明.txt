@@ -1,0 +1,18 @@
+本目录 = temp/nl2tool，已排除 **2026-10-06 批次**的全部派生（2026-10-11 核查）：
+
+  1) traces-live-2026-10-06/      26 条原始轨迹
+  2) scenario-*/                  12 个目录共 364 条轨迹
+  3) scenario-*.json              12 份判分结果 (weighted 0.8517 ~ 1.0)
+  4) report-live-FIXED.json       该批 grader 修正后的判分 (0.8517)
+
+排除依据：上述文件 source 均为 live-run、model_id 均为 **batch-2026-10-06**，
+即被隔离的 2026-10-06 批次同源产物；该批的判分报告已于 2026-10-11 移到桌面
+_M3批次-不可用-2026-10-11/。
+
+⚠️ 这些文件**目前仍在仓库 temp/nl2tool/ 原位**，本包只是不收；
+   是否一并移出隔离区由用户定夺。
+
+保留的是与该批无关的：g1/g2/g3.json、report.json、report-golden-recheck.json
+（均为 golden-from-annotation 自证批）、_isolation_selftest/、batch_input/、
+leak_probe/，以及生成脚本 make_scenarios.py / normalize_answers.py /
+audit_answers.py / probe_defect4.py / primers-fixed.yaml。

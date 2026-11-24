@@ -1,0 +1,16 @@
+name: astro-best.case_018_algo_download_hooks
+skill: astro-best
+derived_from: "algorithm:{'name': 'DownloadHooks', 'module': 'src.download_hooks'}"
+given:
+  DownloadProblem:
+    kind: "<enum:checksum_mismatch|disk_write_failed|session_expired|pagination_inconsistent>"
+    evidence: "<map>"
+expect:
+  status: pass
+  handoff.status: needs_review
+  hook.ask_required: true
+  hook.payload_keys: [id, question, options, raw]
+
+# ---
+# 下载能力轮次新增: hook 分级拦截 + ask 纪律用例
+# (severe 立即拦截; 载荷必须含原因/证据/>=2 方案; 严禁静默跳过)

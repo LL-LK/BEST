@@ -1,0 +1,34 @@
+{
+  "task_id": "NL2T-16",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "splus_dr4"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "splus_dr4",
+        "columns": [
+          "splus_dr4_ra",
+          "splus_dr4_dec",
+          "splus_dr4_r_pstotal",
+          "splus_dr4_e_r_pstotal"
+        ],
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "S-PLUS DR4 的 r 波段星等列是 splus_dr4_r_pstotal（PSF 测光星等），配套误差列是 splus_dr4_e_r_pstotal；表里还有同名的 r_corr（r_corr 改正列）和 splus_dr4_s2n_det_auto（整体信噪）。整表是 12 波段（u/g/r/i/z + 7 个 J-PLUS 窄带 j0378/j0395/j0410/j0430/j0515/j0660/j0861），每个波段都有 {band}_pstotal 与 e_{band}_pstotal 一对。\n所以流程是先 describe_catalog(splus_dr4) 确认列名，再 cone_search(ra=180.0°, dec=30.0°, radius_arcsec=60, catalog=\"splus_dr4\")。半径 60 角秒原样传（单位是角秒，坐标是度）。\n一个口径提醒：splus_dr4 的 r_pstotal 和 ps1 的 rpsf、stripe82 的 r_h22 都是“r”，但来自不同定标系统（不同滤带定义、不同零点），跨表比亮度之前先确认你要的是哪套；表内还给了 s2n_det_auto 和 *_corr 列，可以先按它们做质量筛选。\n真实命中总数以上一步 getcount 为准；要按 r 排亮度我加 sort=\"splus_dr4.r_pstotal\" + order=\"asc\"，要继续说。",
+  "notes": "r 波段列名在 S-PLUS 是 r_pstotal（不是 ps1 的 rpsf），先用零请求 describe_catalog 落实再投影 r 星等与误差列。"
+}

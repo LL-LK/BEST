@@ -1,0 +1,521 @@
+{
+  "$comment": "【迁移注记 2026-09-28】自 temp/E6-design/trace.schema.json 迁入 evals/repro/ (经审查与 docs/eval-E6-reproducibility.md §4 事件 schema 一致, 原样保留); 程序化读写与校验见 trace.py (TraceWriter/read_trace/validate_trace), 本文件是 schema 权威, 代码与其对齐。E6 端到端 trace 事件 schema (docs/eval-E6-reproducibility.md §4)。一条 trace = 一个 JSONL 文件, 每行一个事件。凡标 required 的字段缺失即 trace 不完整 -> 阻断项。落盘前必须经脱敏 (禁止凭据原文)。",
+  "event_header": {
+    "type": "object",
+    "required": [
+      "seq",
+      "ts_utc",
+      "ts_mono",
+      "run_id",
+      "task_id",
+      "attempt",
+      "parent_seq",
+      "layer",
+      "type",
+      "payload",
+      "payload_fp"
+    ],
+    "properties": {
+      "seq": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "从 0 单调递增; 断号 = trace 不完整 = 阻断"
+      },
+      "ts_utc": {
+        "type": "string",
+        "description": "ISO8601 UTC 时间戳"
+      },
+      "ts_mono": {
+        "type": "number",
+        "description": "monotonic 秒数, 算间隔用, 不受系统改时间影响"
+      },
+      "run_id": {
+        "type": "string"
+      },
+      "task_id": {
+        "type": "string",
+        "pattern": "^REPRO-[0-9]{2}$"
+      },
+      "attempt": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "第几次尝试, 重试递增"
+      },
+      "parent_seq": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "description": "触发本事件的事件序号; 根事件为 null"
+      },
+      "layer": {
+        "type": "string",
+        "enum": [
+          "model",
+          "tool",
+          "network",
+          "harness"
+        ]
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "run_start",
+          "model_request",
+          "model_response",
+          "tool_call",
+          "tool_result",
+          "error",
+          "retry",
+          "clarification",
+          "final_answer",
+          "run_end"
+        ]
+      },
+      "payload": {
+        "type": "object"
+      },
+      "payload_fp": {
+        "type": "string",
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "description": "规范化 payload 的内容指纹, 跨 run 比对用"
+      }
+    }
+  },
+  "payload_by_type": {
+    "run_start": {
+      "required": [
+        "manifest"
+      ],
+      "properties": {
+        "manifest": {
+          "type": "object",
+          "description": "§3 八项固定清单的指纹集合, 缺项即阻断"
+        }
+      }
+    },
+    "model_request": {
+      "required": [
+        "model_id",
+        "temperature",
+        "seed",
+        "prompt_fp",
+        "messages_fp",
+        "schema_fp"
+      ],
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "description": "必须钉具体版本串, 禁用 latest 别名"
+        },
+        "temperature": {
+          "type": "number"
+        },
+        "top_p": {
+          "type": "number"
+        },
+        "seed": {
+          "type": "object",
+          "required": [
+            "requested",
+            "honored"
+          ],
+          "properties": {
+            "requested": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "honored": {
+              "type": "boolean",
+              "description": "厂商不保证 seed 可复现时记 false, 必须在报告披露"
+            }
+          }
+        },
+        "max_tokens": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "reasoning_effort": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prompt_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "messages_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "schema_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "description": "暴露给模型的工具 schema 指纹 (可能与代码侧不同)"
+        }
+      }
+    },
+    "model_response": {
+      "required": [
+        "raw_fp",
+        "latency_s",
+        "finish_reason"
+      ],
+      "properties": {
+        "raw_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "latency_s": {
+          "type": "number"
+        },
+        "tokens_in": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "tokens_out": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "finish_reason": {
+          "type": "string"
+        },
+        "tool_calls": {
+          "type": "array",
+          "description": "从回复中抽出的调用意图 (工具名 + 原始参数), 供 TSC/PAC 比对",
+          "items": {
+            "type": "object",
+            "required": [
+              "tool",
+              "args"
+            ],
+            "properties": {
+              "tool": {
+                "type": "string"
+              },
+              "args": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tool_call": {
+      "required": [
+        "tool",
+        "args",
+        "args_norm",
+        "args_fp"
+      ],
+      "properties": {
+        "tool": {
+          "type": "string",
+          "enum": [
+            "resolve_name",
+            "list_catalogs",
+            "describe_catalog",
+            "cone_search",
+            "crossmatch_batch",
+            "count",
+            "fetch_page"
+          ],
+          "description": "不在 7 个原子工具内 -> ERR_ROUTE"
+        },
+        "args": {
+          "type": "object",
+          "description": "原始参数"
+        },
+        "args_norm": {
+          "type": "object",
+          "description": "归一化后参数 (角度->度, 半径->角秒, 列名全限定), 比对用"
+        },
+        "args_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        }
+      }
+    },
+    "tool_result": {
+      "required": [
+        "envelope_fp",
+        "status",
+        "cost",
+        "provenance"
+      ],
+      "properties": {
+        "envelope_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "status": {
+          "type": "object",
+          "required": [
+            "ok"
+          ],
+          "properties": {
+            "ok": {
+              "type": "boolean"
+            },
+            "truncated": {
+              "type": "boolean"
+            },
+            "error_code": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "E_INVALID_INPUT",
+                "E_SOFT_404",
+                "E_NAME_UNRESOLVED",
+                "E_NO_SQLID",
+                "E_BACKEND",
+                null
+              ]
+            },
+            "content_trust": {
+              "type": "string",
+              "enum": [
+                "untrusted"
+              ]
+            }
+          }
+        },
+        "cost": {
+          "type": "object",
+          "properties": {
+            "http_requests": {
+              "type": "integer"
+            },
+            "elapsed_s": {
+              "type": "number"
+            },
+            "rows_returned": {
+              "type": "integer"
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "properties": {
+            "session_id": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "易失 sqlid, 仅用于续页, 禁止进一致性比对"
+            },
+            "data_hash": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            },
+            "stable_uri": {
+              "type": "string",
+              "description": "规范化后 (剥离 session_id) 方可比对"
+            },
+            "lineage": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "required": [
+        "layer",
+        "error_code",
+        "is_retryable"
+      ],
+      "properties": {
+        "layer": {
+          "type": "string",
+          "enum": [
+            "model",
+            "tool",
+            "network",
+            "harness"
+          ]
+        },
+        "error_code": {
+          "type": "string"
+        },
+        "message_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "description": "错误原文只存指纹, 防凭据/长文本污染"
+        },
+        "is_retryable": {
+          "type": "boolean"
+        }
+      }
+    },
+    "retry": {
+      "required": [
+        "retry_of_seq",
+        "reason",
+        "strategy_changed"
+      ],
+      "properties": {
+        "retry_of_seq": {
+          "type": "integer"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "backoff_s": {
+          "type": "number"
+        },
+        "strategy_changed": {
+          "type": "boolean",
+          "description": "false 且原样重发 = 无效重试 (ERR_RETRY_INEFFECTIVE)"
+        }
+      }
+    },
+    "clarification": {
+      "required": [
+        "missing_dims",
+        "options",
+        "turn_index"
+      ],
+      "properties": {
+        "missing_dims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "coordinates",
+              "catalog",
+              "radius",
+              "band",
+              "time_baseline",
+              "semantics"
+            ]
+          }
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "turn_index": {
+          "type": "integer"
+        }
+      }
+    },
+    "final_answer": {
+      "required": [
+        "answer_fp",
+        "conclusion_card"
+      ],
+      "properties": {
+        "answer_fp": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "conclusion_card": {
+          "type": "object",
+          "required": [
+            "kind"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "value",
+                "rowset",
+                "refusal",
+                "clarification",
+                "none"
+              ],
+              "description": "类别必须精确一致, 详见 §5.4"
+            },
+            "key_numbers": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              },
+              "description": "字段名+数值, 相对容差 1e-6 比对"
+            },
+            "key_entities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "表名/列名/stable_uri/错误码, 精确比对"
+            },
+            "caveats": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "限定语集合, 按集合比对"
+            }
+          }
+        },
+        "cited_uris": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "run_end": {
+      "required": [
+        "total_requests",
+        "total_elapsed_s",
+        "outcome"
+      ],
+      "properties": {
+        "total_requests": {
+          "type": "integer"
+        },
+        "total_elapsed_s": {
+          "type": "number"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "success",
+            "clarify",
+            "reject",
+            "fail"
+          ]
+        }
+      }
+    }
+  },
+  "attribution_codes": {
+    "$comment": "§4.3 分层归因决策表 (顺序不可调整, 自上而下第一条命中即用)",
+    "ERR_ROUTE": "工具名不在 7 个原子工具内 / 用了 CLI 或 Python 类 / 伪造工具名 -> 移交 E1",
+    "ERR_PARAM_SCHEMA": "参数名不存在/类型错/值越界 (半径>18000 角秒, 坐标越界) -> 移交 E1, 与稳定性无关",
+    "ERR_PARAM_UNSTABLE": "参数合法但与同任务其他 run 的众数不一致 -> E6 主抓的模型侧不稳定",
+    "ERR_BACKEND": "工具与参数均一致, 但 status.ok=false 且 error_code 属服务端 -> 非我方问题; 仅 R2 出现则转 E4",
+    "ERR_BACKEND_DRIFT": "工具与参数均一致, status.ok=true 但 data_hash 与基线不符 -> 移交 E4 定量, 在线路不判 E6 失分",
+    "ERR_RETRY_INEFFECTIVE": "原样重试 (strategy_changed=false) -> 效率问题",
+    "ERR_CONCLUSION_UNSTABLE": "工具层一致但结论卡漂移 -> 模型解释层不稳"
+  },
+  "redaction": {
+    "$comment": "脱敏红线: 落盘前强制执行, 命中即阻断",
+    "forbidden": [
+      "BEST_API_TOKEN",
+      "Authorization",
+      "Cookie",
+      "access_token",
+      "refresh_token"
+    ],
+    "url_token_query": "URL 中 token 类查询参数替换为 ***",
+    "credential_scan": "写盘前全文正则扫描 forbidden 列表, 命中即报阻断"
+  }
+}

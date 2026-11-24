@@ -1,0 +1,35 @@
+case_id: huge_over_cap
+category: huge
+snapshot_id: live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as
+main_metrics:
+- M4
+- M1
+- M7
+query:
+  catalog: gaia_dr3_18
+  ra: 286.1
+  dec: 15.7
+  radius_arcsec: 300.0
+  columns:
+  - gaia_dr3_18_source_id
+  - gaia_dr3_18_ra
+  - gaia_dr3_18_dec
+  - gaia_dr3_18_ra_error
+  - gaia_dr3_18_dec_error
+  - gaia_dr3_18_ruwe
+  - gaia_dr3_18_phot_g_mean_mag
+  - gaia_dr3_18_phot_bp_mean_mag
+  sort: gaia_dr3_18_source_id
+  order: asc
+  max_rows: 500
+  page_size: 1000
+expect:
+  result_state: rows
+notes: 'E2 §5 #8 的语义核心: truncated 与 total_count 取**未截断的完整行集大小**, 而 returned == max_rows。"截断当全部"
+  (M5 包装形态 #5) 与 returned 当 total 报 (形态 #6) 都会被 M4 三元组对账抓住。回放口径说明: 快照 live-2026-10-04/live_gaia_dr3_18_ra286.1_dec15.7_r300.0as
+  的 count.json 记服务端 total=7193, 但快照只落了 1000 行, 而 E2 一律回放 rows_full.csv, 故金标准现算的 total
+  是**快照落盘行数**而非服务端计数 —— 签字面与判定都按这个口径。 row_keys 为截断后应返回的那批行 (gaia_dr3_18_source_id
+  升序), field_values 抽样 (field_values_sampled=true)。
+
+  '
+gold_focus: truncated 三元组 + 服务端 total_count + 满页分页并集

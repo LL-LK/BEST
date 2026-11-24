@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-07",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这件事我拆不开，得先问你两件事，因为有两个真实的能力/口径问题：\n\n问题一：只有 source_id，我没法直接定位到行。\n我现在能用的 7 个工具里，检索入口只有两个 —— 天区锥形检索（要 ra/dec/radius）和批量坐标交叉匹配（要一串坐标）。没有「按 Gaia source_id 查行」的入口，也没有「按列值过滤」的参数。（站点表单本身是支持列值约束的，形如 {table}.{col}.operation 加 min/max，但它没接进工具契约，所以我不能只凭一个 ID 就发请求。）\n解决办法很简单：给我这个源的 RA / Dec（度，ICRS），或者它的天体名。我做一次小半径锥检索，并把 gaiaxp_photinfo_replenish_source_id 一起取回来核对，确认命中的是同一颗源。\n\n问题二：ZTF g/r/i 不在 Gaia DR3 那张表里，而且在 xpsp 里的 ZTF 列不是星等。\n- gaia_dr3_18 表里没有 ZTF 列，它的测光只有 G / BP / RP（phot_g_mean_mag、phot_bp_mean_mag、phot_rp_mean_mag）。\n- ZTF 的 g/r/i 在 xpsp（标准星 × Gaia DR3 XP&SP）里，列名是 ztf_g_g_xpsp、ztf_r_r_xpsp、ztf_i_i_xpsp，配套误差 ztf_g_g_err 等。\n- 注意这几个是 XP 光谱拟合测光的 flux 列，不是星等。要 mag 得在本地做 -2.5·log10(flux) 再加零点，不能直接当星等用。\n- xpsp 里真正的 Gaia 星等只有共享表的 g_mag / bp_mag / rp_mag 三列。\n\n所以：把 RA/Dec（或天体名）给我，我按 xpsp 表取回 ZTF 的三个 flux 列 + 误差 + Gaia 星等，flux→mag 我在本地换算并把零点口径写清楚。如果你要的是「已定标的 g/r/i 星等」而不是 flux，也可以改查别的表 —— 告诉我用途和精度要求，我帮你挑。",
+  "notes": "无 ID 直查入口且缺坐标 → 需先反问；顺带纠正 ZTF 列在 xpsp 且是 flux 非星等。"
+}

@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-26",
+  "route": "reject",
+  "tool_calls": [],
+  "answer_text": "不支持该请求 (CREDENTIAL_IN_PARAM), 无法执行。 建议: 凭据只走环境变量（数据面口令 ASTRO_BEST_PASSWORD 配 --auth-user 用户名参数；身份层 NADC_OAUTH_CLIENT_ID / NADC_OAUTH_CLIENT_SECRET），代码与查询参数零字面量（.env.example 为 SSOT）；BEST_API_TOKEN 无此通道，不是可用的 Bearer 来源；公开数据查询无需登录；需要鉴权的面（/jobs）走 OAuth 授权流程，而非手拼 token。",
+  "source": "golden-from-annotation"
+}

@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-05
+utterance: 我这有 1000 个坐标要匹配，帮我一次性做完。
+category: direct
+expect_first_tool: crossmatch_batch
+reruns: 5
+stability_class: batch_proximity
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - n_matched
+relative_time_expression: false
+notes: 映射 E1 NL2T-05; 判稳维度 batch_proximity; 禁相对时间表述 (硬约束)

@@ -1,0 +1,13 @@
+{
+  "run_id": "e2-v2-cbd5deec71bd4741805e8c805fc9c070",
+  "status": "aborted_incomplete",
+  "confirmatory_result": false,
+  "attempts_started": 3,
+  "case_id": "batch_proximity",
+  "failure_stage": "first_case_scoring",
+  "exception_type": "NotImplementedError",
+  "exception_message": "M4 replay branch was retired and raised NotImplementedError",
+  "cause": "Protocol-v2 reused the live-era M4 entry point, whose frozen-lane implementation was a deliberate hard failure.",
+  "disposition": "retain as failed infrastructure attempt; do not merge, retry-in-place, or count toward the next run_id",
+  "recovery": "Restore explicit frozen-lane M4 scoring, preserve per-page parsed payloads in the local transport evidence, correct exact-full-page stopping semantics, regenerate gold, rerun all pre-registration gates, then start a new run_id."
+}

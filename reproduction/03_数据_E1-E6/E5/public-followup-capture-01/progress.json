@@ -1,0 +1,80 @@
+[
+  {
+    "case_id": "C02",
+    "observed": {
+      "returned_count": 0,
+      "page_size": 1000,
+      "success": true,
+      "total_count": 0,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "C05_scr_galah",
+    "observed": {
+      "returned_count": 0,
+      "page_size": 1000,
+      "success": true,
+      "total_count": 0,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "C05_scr_lamost",
+    "observed": {
+      "returned_count": 0,
+      "page_size": 1000,
+      "success": true,
+      "total_count": 0,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "C05_xpsp",
+    "observed": {
+      "returned_count": 0,
+      "page_size": 1000,
+      "success": true,
+      "total_count": 0,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "name_M31",
+    "observed": {
+      "name_resolution": {
+        "name": "M31",
+        "ra": 10.68470833,
+        "dec": 41.26875,
+        "remark": "",
+        "remark_external": true
+      }
+    },
+    "error": null,
+    "responses": 1
+  },
+  {
+    "case_id": "name_GaiaID",
+    "observed": {
+      "returned_count": 0,
+      "page_size": 1000
+    },
+    "error": {
+      "type": "NameResolveError",
+      "message": "E_NAME_UNRESOLVED: could not resolve 'Gaia DR3 1234567890123456789'"
+    },
+    "responses": 1
+  }
+]

@@ -1,0 +1,7 @@
+﻿group,repeat,critical_hit,critical_total,qualifier_hit,qualifier_total,numbers_total,unsourced_num,claims_total,unsupported_claim,fatal_num,n_items,slr_denominator
+S-A,1,65,71,68,73,298,21,230,63,0,32,14
+S-A,2,64,71,71,73,240,29,233,75,0,32,14
+S-A,3,64,71,70,73,322,23,228,69,0,32,14
+S-B,1,53,71,64,73,294,30,220,94,3,32,14
+S-B,2,47,71,64,73,338,53,225,105,6,32,14
+S-B,3,47,71,60,73,285,50,212,90,4,32,14

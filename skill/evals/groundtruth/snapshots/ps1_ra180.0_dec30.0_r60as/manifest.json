@@ -1,0 +1,10 @@
+{
+  "snapshot_id": "ps1_ra180.0_dec30.0_r60as",
+  "files": {
+    "count.json": "sha256:f56b602536ca197d0d3cf5146133622c9f91d591942e462326c23c7747456f5b",
+    "pages/page_0001.csv": "sha256:13a4ad627a70603157e80215682b2aa2b17bc1cde6103dbcf82ebafff280db5e",
+    "phase1.html": "sha256:c7e9a6e9692b36e72a8051195ad21c9474c4ee64780598b2c67d6b50f4c7c201",
+    "rows_full.csv": "sha256:13a4ad627a70603157e80215682b2aa2b17bc1cde6103dbcf82ebafff280db5e",
+    "snapshot.yaml": "sha256:44add4a663847be75d50f000f2e3082edd447fc1994291e6d725e208ea37a5e1"
+  }
+}

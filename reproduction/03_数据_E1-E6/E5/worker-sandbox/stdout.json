@@ -1,0 +1,19 @@
+{
+  "public_input_readable": true,
+  "outside_sibling_visible": false,
+  "repo_answer_key_visible": false,
+  "traversal_answer_key_visible": false,
+  "input_write_denied": true,
+  "output_write_allowed": true,
+  "network_egress_denied": true,
+  "uid": 1000,
+  "network_namespace": "net:[4026532233]",
+  "parent_network_namespace": "net:[4026531840]",
+  "network_interfaces": [
+    "lo"
+  ],
+  "has_default_route": false,
+  "network_error": "OSError: [Errno 101] Network is unreachable",
+  "controlled_host_sentinel_reached": false,
+  "controlled_host_sentinel_error": "ConnectionRefusedError: [Errno 111] Connection refused"
+}

@@ -1,0 +1,32 @@
+{
+  "task_id": "NL2T-16",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "splus_dr4",
+        "columns": [
+          "splus_dr4_ra",
+          "splus_dr4_dec",
+          "splus_dr4_r_pstotal",
+          "splus_dr4_e_r_pstotal",
+          "splus_dr4_s2n_det_auto",
+          "splus_dr4_sex_flags_det"
+        ],
+        "sort": "splus_dr4.ra",
+        "order": "asc",
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "查了：RA = 180.0°、Dec = +30.0°（度，ICRS）、半径 60 角秒、S-PLUS DR4。\n\nr 波段的列名（这张表的列名有自己的一套命名，我按实测口径取）：\n- splus_dr4_r_pstotal —— r 波段的点源累加星等，你要的就是这列\n- splus_dr4_e_r_pstotal —— 配套误差，同族命名是 e_{band}_pstotal\n- splus_dr4_s2n_det_auto —— 检出信噪\n- splus_dr4_sex_flags_det —— 测光质量标志位\n\n一点背景，免得你以后按错名字：S-PLUS DR4 在 BEST 里一共 12 个波段，宽带是 u/g/r/i/z，另有 7 个 J-PLUS 窄带（j0378、j0395、j0410、j0430、j0515、j0660、j0861），全部按 {band}_pstotal / e_{band}_pstotal 这套命名。所以要 u 或窄带的话告我波段名，我改列投影重跑。\n\n执行细节：\n- 半径按角秒下发（60 角秒 = 1 角分），ra/dec 是度，两者不要混。\n- 建会话时定死排序（sort + order），保证翻页行序稳定。\n- 显式裁了列投影：这张表 12 波段全列不取，只取位置 + r 星等/误差 + 两个质量列。\n\n返回是统一信封：data 里带 splus_dr4_ 前缀的列名，另有 inputobjs_dist_arcsec 标每行到圆心的角距；status.truncated 表示有没有被 1000 行截断；cost 记真实请求数（建会话 + 取总数 + 取首页 = 3 次）；provenance.stable_uri 可复现这次查询。\n\n需要我改成按 r 星等排序取最亮的前 N 颗，或者把 12 个波段全取出来吗？",
+  "notes": "S-PLUS DR4 的 r 波段列是 splus_dr4_r_pstotal（误差 e_r_pstotal），同 cone 口径共 3 次请求。"
+}

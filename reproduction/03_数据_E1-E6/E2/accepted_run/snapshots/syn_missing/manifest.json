@@ -1,0 +1,10 @@
+{
+  "files": {
+    "count.json": "023bc0e6b0fea5cff5ae038902f5186f1fa8db41d6d686bf9c657910bb8090f8",
+    "pages/page_0001.csv": "c86abbbe51a805e1ef525e5efc9c8692ba5fc631136fcba09b3ac115c5335e56",
+    "phase1.html": "d3c17b76f8120c002ff689bc6c88375303385f8964fbe1bbece9194ee98745f7",
+    "rows_full.csv": "c86abbbe51a805e1ef525e5efc9c8692ba5fc631136fcba09b3ac115c5335e56",
+    "snapshot.yaml": "589eb5de859ab090da4725111b932b25ffe4af7268479d3e16a7310042a8cc22"
+  },
+  "algorithm": "sha256"
+}

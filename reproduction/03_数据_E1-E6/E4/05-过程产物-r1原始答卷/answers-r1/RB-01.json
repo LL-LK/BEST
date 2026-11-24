@@ -1,0 +1,27 @@
+{
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": -5,
+        "dec": 0,
+        "radius_arcsec": 60,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "RA=-5 越界 (合法域 [0,360))",
+    "不做自动归一化"
+  ],
+  "item_id": "RB-01",
+  "tier": "P",
+  "request": "查 RA = -5, Dec = 0 附近 60 角秒内的 ps1 源。",
+  "route": "reject",
+  "answer_text": "这次没有取到数据：你给的 RA = -5° 不合法。赤经（RA）的取值范围是 **[0, 360) 度**（左闭右开），-5° 越出下界，因此本地入口校验直接拒绝，未向 BEST 站点发起任何检索（错误码 E_INVALID_INPUT，零线网请求、零配额消耗）。Dec = 0、半径 60 角秒、星表 ps1 这三项本身没问题。\n\n请把 RA 改成 [0, 360) 内的值再发我一次。补充一句：RA 是周期量，本入口按设计**不做自动归一化**，所以我不会替你把它悄悄当成 355°；如果你本意确实是 -5° 的等价正角，请显式写成 **355**，我随后就对 (RA=355, Dec=0, 60″, ps1) 执行锥形检索。",
+  "run_id": "r1"
+}

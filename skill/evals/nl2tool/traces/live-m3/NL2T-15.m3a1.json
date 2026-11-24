@@ -1,0 +1,36 @@
+{
+  "task_id": "NL2T-15",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "gaia_dr3_18",
+        "columns": [
+          "gaia_dr3_18_ra",
+          "gaia_dr3_18_dec",
+          "gaia_dr3_18_phot_g_mean_mag",
+          "gaia_dr3_18_phot_g_mean_flux_error",
+          "gaia_dr3_18_phot_g_n_obs",
+          "gaia_dr3_18_phot_bp_mean_mag",
+          "gaia_dr3_18_phot_rp_mean_mag",
+          "gaia_dr3_18_parallax",
+          "gaia_dr3_18_phot_variable_flag",
+          "gaia_dr3_18_ruwe"
+        ],
+        "sort": "gaia_dr3_18.ra",
+        "order": "asc",
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "查了：RA = 180.0°、Dec = +30.0°（ICRS 度）、半径 60 角秒、Gaia DR3 定标表。\n\n表名口径（这里有个必须说的坑）：线上**没有 gaia_dr3 这张表**，可查询的 id 是 gaia_dr3_18，列前缀同样是 gaia_dr3_18_。用旧拼写 gaia_dr3 去查会落到软 404（HTTP 200 但响应体是 Not Found），从状态码上看不出来，所以我直接用了正确 id。\n\nG 星等的列名：\n- gaia_dr3_18_phot_g_mean_mag —— 就是你要的 G 星等\n- 配套信息：phot_g_n_obs（参与平均的 transit 数）、phot_g_mean_flux 与 phot_g_mean_flux_error（流量与流量误差）\n- 同族还有 BP / RP：gaia_dr3_18_phot_bp_mean_mag、gaia_dr3_18_phot_rp_mean_mag\n- 注意列名里的 mean：是跨 transit 的**平均**值，不是逐历元星等；这行表另有 phot_variable_flag 标记变源、ruwe 标记位置解质量\n\n单位提醒：ra/dec 是度；半径是角秒（60 角秒 = 1 角分），这里没有度/角秒混用的余地。\n\n这张表有 155 列，所以我裁了列投影只取你要的 G 星等和几个判断质量用得上的列，没做全表拉取。返回是统一信封：data 是命中行（带 inputobjs_dist_arcsec 角距列），status.truncated 告诉你有没有被 1000 行上限截断，provenance.stable_uri 可复现这次查询。\n\n要不要我改成「按 G 星等排序取最亮的前 N 颗」，或者加上 BP/RP 颜色？",
+  "notes": "catalog 必须是 gaia_dr3_18（无 gaia_dr3 表），G 星等列 phot_g_mean_mag，1 次 POST + getcount + 分页 GET 共 3 次。"
+}

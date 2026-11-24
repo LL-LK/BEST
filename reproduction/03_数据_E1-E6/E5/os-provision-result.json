@@ -1,0 +1,14 @@
+﻿{
+    "schema":  "e5-os-provision-v1",
+    "status":  "FAILED_INCOMPLETE_ACCOUNTS_DISABLED",
+    "experiment_units":  0,
+    "root":  "<WORK_ROOT>",
+    "created":  [
+
+                ],
+    "acl_changes":  [
+
+                    ],
+    "error":  "Refuse reusing root: <WORK_ROOT>",
+    "finished_at_utc":  "2026-10-12T08:01:10.1684147Z"
+}

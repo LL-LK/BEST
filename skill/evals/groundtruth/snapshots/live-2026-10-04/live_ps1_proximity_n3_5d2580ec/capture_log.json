@@ -1,0 +1,59 @@
+{
+  "task": {
+    "kind": "proximity",
+    "catalog": "ps1",
+    "points": [
+      [
+        180.0,
+        30.0
+      ],
+      [
+        180.0011,
+        29.9995
+      ],
+      [
+        180.0004,
+        29.999
+      ]
+    ],
+    "radius": 10.0,
+    "columns": [
+      "ps1_ra",
+      "ps1_dec",
+      "ps1_rpsf",
+      "ps1_ipsf"
+    ]
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "bytes": 12787,
+      "at": "2026-10-04T08:49:26.297252+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/4939/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-04T08:49:27.344945+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4939?output.fmt=csv&rows=1000&page=1&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 416,
+      "at": "2026-10-04T08:49:28.840939+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 3,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 3,
+    "truncated": false,
+    "error_code": null,
+    "n_points": 3
+  }
+}

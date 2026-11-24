@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-18",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 coordinates、catalog、object_identity。 可选: 请给中心坐标与半径（RA/Dec/角秒）：BEST 只能按天区检索；若只有天体名（如 M31 / NGC 532）：可先经 resolve_name 解算成坐标再检索，是否接受？；注意：BEST 没有按 source_id 直接取源的公开端点，只有 POS_<ra>_<dec> 形态的合成 id 可解析。",
+  "source": "golden-from-annotation"
+}

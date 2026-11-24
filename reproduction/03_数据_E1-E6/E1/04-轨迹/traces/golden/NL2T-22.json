@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-22",
+  "route": "reject",
+  "tool_calls": [],
+  "answer_text": "不支持该请求 (NO_TIME_SERIES), 无法执行。 建议: BEST 是静态定标星表，无时间序列；时序需求请改用 ZTF / ATLAS / ASAS-SN 等测光巡天数据源；注意：本仓 src/multiband_photometry.py 的 BestMultiBandPhotometry 是『多波段静态测光容器』 （按坐标检索到的源包装成容器结构，points 是同一次检索返回的源/多波段测光）， 不是时间序列，不能拿来当光变曲线用。",
+  "source": "golden-from-annotation"
+}

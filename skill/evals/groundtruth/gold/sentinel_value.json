@@ -1,0 +1,2728 @@
+{
+  "gold_id": "gold_sentinel_value",
+  "case_id": "sentinel_value",
+  "snapshot_id": "sha256:14f299b40147af742b54fec82bf92f76aa4de659e0f21408b90ff32cdca2bbf5",
+  "data_version": "ps1@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:691458a7a103c9cc31049152171a0af38296e9ceb7cc8b348cb55fec455827c0"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as/rows_full.csv",
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [
+    "179.981354900,30.001546810",
+    "179.981367900,30.000458520",
+    "179.981537300,30.004640600",
+    "179.981735000,29.999376060",
+    "179.982952550,29.998564160",
+    "179.983566180,30.006576920",
+    "179.983568960,29.997872100",
+    "179.983623530,30.001021060",
+    "179.983660060,29.998108760",
+    "179.983807210,30.005473960",
+    "179.983861320,29.992206880",
+    "179.984045000,29.998665200",
+    "179.984395550,30.009417290",
+    "179.984940270,30.005582880",
+    "179.985018150,30.001379690",
+    "179.985185060,29.989565210",
+    "179.985422220,29.993163050",
+    "179.987039230,30.007249530",
+    "179.987273150,29.993828050",
+    "179.987275750,30.008409880",
+    "179.987443030,29.995083920",
+    "179.987571420,30.005668200",
+    "179.987813590,30.011104230",
+    "179.987962790,30.008536770",
+    "179.988666370,29.989350210",
+    "179.988762441,29.989083098",
+    "179.988801880,30.008774570",
+    "179.989277980,30.003778740",
+    "179.989332690,29.988273900",
+    "179.989501910,30.012443170",
+    "179.989837080,30.013955390",
+    "179.989886000,30.002628380",
+    "179.990309961,30.008447458",
+    "179.990534840,30.013552330",
+    "179.990801050,30.013613840",
+    "179.990903575,29.996334007",
+    "179.991038960,30.000244090",
+    "179.991066016,30.010484669",
+    "179.991591630,29.990704400",
+    "179.991747730,29.991064170",
+    "179.991859230,29.999657710",
+    "179.992090120,29.984934310",
+    "179.992217080,29.991538740",
+    "179.992240100,30.010108000",
+    "179.992284160,29.985247650",
+    "179.992289880,29.991105870",
+    "179.992398320,30.005148000",
+    "179.992467310,30.014859340",
+    "179.992469550,30.006008070",
+    "179.992552510,30.006520360",
+    "179.992556010,30.011123960",
+    "179.992583220,29.992005590",
+    "179.992629887,29.990963452",
+    "179.993185770,30.010259640",
+    "179.993186580,29.985753950",
+    "179.993247210,29.990435200",
+    "179.993334340,30.014530290",
+    "179.993663410,30.001508120",
+    "179.993961310,29.989209830",
+    "179.993977450,29.994083410",
+    "179.994272930,29.996591160",
+    "179.994312750,30.015488770",
+    "179.994413020,29.985330390",
+    "179.994415793,29.996776314",
+    "179.994579090,30.009814860",
+    "179.994686980,29.992104500",
+    "179.994749829,29.990654962",
+    "179.994991360,30.010827200",
+    "179.995137520,30.005132150",
+    "179.995285260,30.009592430",
+    "179.995315836,29.999440772",
+    "179.995440424,29.999498016",
+    "179.995702640,29.992471980",
+    "179.995791096,30.013473082",
+    "179.995902560,29.999270810",
+    "179.995933560,30.003211300",
+    "179.996026228,30.015719103",
+    "179.996129510,30.003522300",
+    "179.996268680,30.014255550",
+    "179.996275079,30.001553495",
+    "179.996375200,30.013842940",
+    "179.996434600,30.003612810",
+    "179.996436330,29.993862070",
+    "179.996478340,29.985829000",
+    "179.996590150,29.991478800",
+    "179.996649410,30.007009060",
+    "179.996847740,29.999619880",
+    "179.997174550,30.002185680",
+    "179.997622910,30.013193680",
+    "179.998069110,29.986936230",
+    "179.998271630,29.996970440",
+    "179.998275820,30.008223730",
+    "179.998790770,30.001878360",
+    "179.998851280,29.998072370",
+    "179.998904010,30.013910420",
+    "179.999041540,29.999727280",
+    "179.999236030,29.995430620",
+    "179.999332520,30.015996050",
+    "179.999414964,30.012644331",
+    "179.999537120,29.988665890",
+    "179.999955450,29.985621720",
+    "179.999971810,30.015174570",
+    "180.000006300,29.989367400",
+    "180.000311020,29.983547810",
+    "180.000408140,29.998951750",
+    "180.000511280,29.987259190",
+    "180.000835020,29.986893710",
+    "180.001102570,29.999453560",
+    "180.001226370,29.997948370",
+    "180.001380350,29.986958650",
+    "180.001824230,30.000732150",
+    "180.002057480,30.013981190",
+    "180.002395490,30.009823520",
+    "180.003189250,30.002263590",
+    "180.003350130,29.988103280",
+    "180.003836500,29.991666190",
+    "180.003990870,29.987673860",
+    "180.004037892,29.987373955",
+    "180.004117980,30.007868710",
+    "180.005126560,29.992739120",
+    "180.005190020,29.997032180",
+    "180.005280920,30.014651660",
+    "180.005880720,29.996473150",
+    "180.006771220,29.999228490",
+    "180.007046630,29.994299770",
+    "180.007085220,29.988389790",
+    "180.007426430,29.992358190",
+    "180.007430080,29.988435890",
+    "180.007451690,30.003667170",
+    "180.007561850,29.995301720",
+    "180.007853360,30.003521413",
+    "180.007877000,30.003347000",
+    "180.008005570,30.004016780",
+    "180.008118700,30.015044910",
+    "180.008197683,30.014754809",
+    "180.008299060,30.003852060",
+    "180.008424260,29.994260000",
+    "180.008562350,29.997668120",
+    "180.008586670,29.989432060",
+    "180.008856860,30.009238930",
+    "180.009005260,29.996255440",
+    "180.009262990,29.989322210",
+    "180.009672720,30.007556590",
+    "180.009814860,29.995111120",
+    "180.010149130,29.994016630",
+    "180.010151300,29.995784410",
+    "180.010211870,29.989122070",
+    "180.010280185,30.005157719",
+    "180.010642140,29.996764140",
+    "180.010824400,29.997153880",
+    "180.010916040,29.991843320",
+    "180.011641220,30.002596720",
+    "180.011778910,29.994899660",
+    "180.011975070,29.990153840",
+    "180.012230380,29.993039070",
+    "180.012529500,30.003664930",
+    "180.012535510,29.989604320",
+    "180.013030400,29.996938520",
+    "180.013078420,30.001514400",
+    "180.013092280,29.999555820",
+    "180.013354301,29.990378305",
+    "180.013380810,30.007536590",
+    "180.013718310,29.992711460",
+    "180.013762620,30.008591950",
+    "180.013834470,29.994008000",
+    "180.014972960,29.992089280",
+    "180.015535191,29.994311371",
+    "180.015606790,29.991036470",
+    "180.016114990,30.002404780",
+    "180.016121730,29.998772900",
+    "180.016137344,30.005983522",
+    "180.016606490,30.004312050",
+    "180.017207710,29.998340100",
+    "180.017284790,30.002355720"
+  ],
+  "row_count": 174,
+  "field_values": {
+    "179.981354900,30.001546810": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.9813549,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00154681,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8793320993285"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726816712078"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.981367900,30.000458520": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.9813679,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00045852,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8792714099868"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726760970687"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.981537300,30.004640600": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.9815373,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.0046406,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 22.122466388824833,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726989185969"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.983566180,30.006576920": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.98356618,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00657692,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.879740185162"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.072722040435"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.983861320,29.992206880": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.98386132,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99220688,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8789485802987"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726492071992"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.985185060,29.989565210": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.98518506,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.98956521,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 22.559792581669708,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726439746845"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.987443030,29.995083920": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.98744303,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99508392,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8793078529759"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726870972413"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.988762441,29.989083098": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.9887624405978,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.989083097506438,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 21.742317682981387,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 22.148815236806744,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.989837080,30.013955390": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.98983708,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.01395539,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.88050842883"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0728007139619"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.990903575,29.996334007": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99090357486062,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.996334007240865,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 22.28780522626044,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 21.752794734021904,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.991859230,29.999657710": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99185923,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99965771,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8798078977984"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727391823282"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.992289880,29.991105870": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99228988,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99110587,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8793547618458"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726972397626"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.992556010,30.011123960": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99255601,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.01112396,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8804963674162"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0728035450294"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.993247210,29.990435200": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99324721,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.9904352,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 21.625338085707224,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0726998112209"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.994272930,29.996591160": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99427293,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99659116,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8797685285067"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727384870931"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.994686980,29.992104500": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99468698,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.9921045,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 22.20634282317863,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727176322777"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.995315836,29.999440772": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99531583630215,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99944077235484,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8799852996644"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727600500453"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.995933560,30.003211300": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99593356,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.0032113,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8802315990586"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727837715544"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.996375200,30.013842940": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.9963752,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.01384294,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8808613404232"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0728422552876"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.996649410,30.007009060": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99664941,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00700906,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.880486052211"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0728082682199"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.998271630,29.996970440": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99827163,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99697044,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8800079711692"
+      },
+      "ps1_gpsf": {
+        "v": 21.859877467798178,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.999041540,29.999727280": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99904154,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99972728,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8802043547206"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.072785155375"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "179.999955450,29.985621720": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 179.99995545,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.98562172,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8709897905135"
+      },
+      "ps1_gpsf": {
+        "v": 17.526366086190563,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.000511280,29.987259190": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00051128,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.98725919,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8709961326217"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727288932893"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.001824230,30.000732150": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00182423,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00073215,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.880411441216"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0728080002397"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.003836500,29.991666190": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.0038365,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99166619,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8800136621416"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0727726997586"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.005190020,29.997032180": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00519002,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99703218,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8803845006476"
+      },
+      "ps1_gpsf": {
+        "v": 18.39218046192316,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.007085220,29.988389790": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00708522,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.98838979,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8828374613811"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0787588832343"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.007853360,30.003521413": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00785335980058,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.003521413309038,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 19.090110214761232,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 20.09479680350874,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.008299060,30.003852060": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00829906,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00385206,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.883724436235"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0780749244134"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.009005260,29.996255440": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.00900526,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99625544,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8832783071847"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0784115655938"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.010151300,29.995784410": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.0101513,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99578441,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8832435474663"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.078433133744"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.010916040,29.991843320": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01091604,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99184332,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8830082455934"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0786110753986"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.012529500,30.003664930": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.0125295,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00366493,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8836931294148"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0780780788742"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.013354301,29.990378305": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01335430074417,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.990378305042068,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 21.58251608926538,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": 21.683111642802842,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.014972960,29.992089280": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01497296,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.99208928,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8829926287925"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0786060046827"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.016137344,30.005983522": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01613734408468,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.005983522178237,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 21.247109298773857,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0779681797125"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.016606490,30.004312050": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01660649,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00431205,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1003.8837112784645"
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.07804426369"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.017207710,29.998340100": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01720771,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 29.9983401,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 22.683431673166304,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0783197080854"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    },
+    "180.017284790,30.002355720": {
+      "ps1_source_id": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      },
+      "ps1_ra": {
+        "v": 180.01728479,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_dec": {
+        "v": 30.00235572,
+        "t": "float",
+        "unit": "deg",
+        "atol": 1e-09,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_rpsf": {
+        "v": 19.218740384849962,
+        "t": "float",
+        "unit": "mag",
+        "atol": 1e-06,
+        "rtol": 0.0,
+        "exact_integer": false
+      },
+      "ps1_gpsf": {
+        "v": null,
+        "t": "null",
+        "unit": "mag",
+        "atol": null,
+        "rtol": null,
+        "raw": "-1004.0781338880922"
+      },
+      "ps1_class_star": {
+        "v": null,
+        "t": "null",
+        "unit": null,
+        "atol": null,
+        "rtol": null,
+        "raw": ""
+      }
+    }
+  },
+  "field_values_sampled": true,
+  "field_values_sampling_rule": "sampled(ratio=0.2, step=5)",
+  "null_semantics": {
+    "179.981354900,30.001546810": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.981367900,30.000458520": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.981537300,30.004640600": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.983566180,30.006576920": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.983861320,29.992206880": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.985185060,29.989565210": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.987443030,29.995083920": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.988762441,29.989083098": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "179.989837080,30.013955390": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.990903575,29.996334007": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "179.991859230,29.999657710": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.992289880,29.991105870": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.992556010,30.011123960": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.993247210,29.990435200": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.994272930,29.996591160": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.994686980,29.992104500": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.995315836,29.999440772": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.995933560,30.003211300": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.996375200,30.013842940": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.996649410,30.007009060": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.998271630,29.996970440": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "179.999041540,29.999727280": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "179.999955450,29.985621720": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "180.000511280,29.987259190": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.001824230,30.000732150": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.003836500,29.991666190": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.005190020,29.997032180": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "180.007085220,29.988389790": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.007853360,30.003521413": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "180.008299060,30.003852060": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.009005260,29.996255440": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.010151300,29.995784410": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.010916040,29.991843320": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.012529500,30.003664930": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.013354301,29.990378305": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "value",
+      "ps1_class_star": "null"
+    },
+    "180.014972960,29.992089280": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.016137344,30.005983522": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.016606490,30.004312050": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "null",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.017207710,29.998340100": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    },
+    "180.017284790,30.002355720": {
+      "ps1_source_id": "null",
+      "ps1_ra": "value",
+      "ps1_dec": "value",
+      "ps1_rpsf": "value",
+      "ps1_gpsf": "null",
+      "ps1_class_star": "null"
+    }
+  },
+  "unit_map": {
+    "radius_arcsec": "arcsec",
+    "ps1_ra": "deg",
+    "ps1_dec": "deg",
+    "ps1_rpsf": "mag",
+    "ps1_gpsf": "mag"
+  },
+  "precision_map": {
+    "ps1_ra": 3,
+    "ps1_dec": 3,
+    "ps1_rpsf": 3,
+    "ps1_gpsf": 3
+  },
+  "ordering": {
+    "key": null,
+    "order": "asc",
+    "declared": false,
+    "sequence": [
+      "179.981354900,30.001546810",
+      "179.981367900,30.000458520",
+      "179.981537300,30.004640600",
+      "179.981735000,29.999376060",
+      "179.982952550,29.998564160",
+      "179.983566180,30.006576920",
+      "179.983568960,29.997872100",
+      "179.983623530,30.001021060",
+      "179.983660060,29.998108760",
+      "179.983807210,30.005473960",
+      "179.983861320,29.992206880",
+      "179.984045000,29.998665200",
+      "179.984395550,30.009417290",
+      "179.984940270,30.005582880",
+      "179.985018150,30.001379690",
+      "179.985185060,29.989565210",
+      "179.985422220,29.993163050",
+      "179.987039230,30.007249530",
+      "179.987273150,29.993828050",
+      "179.987275750,30.008409880",
+      "179.987443030,29.995083920",
+      "179.987571420,30.005668200",
+      "179.987813590,30.011104230",
+      "179.987962790,30.008536770",
+      "179.988666370,29.989350210",
+      "179.988762441,29.989083098",
+      "179.988801880,30.008774570",
+      "179.989277980,30.003778740",
+      "179.989332690,29.988273900",
+      "179.989501910,30.012443170",
+      "179.989837080,30.013955390",
+      "179.989886000,30.002628380",
+      "179.990309961,30.008447458",
+      "179.990534840,30.013552330",
+      "179.990801050,30.013613840",
+      "179.990903575,29.996334007",
+      "179.991038960,30.000244090",
+      "179.991066016,30.010484669",
+      "179.991591630,29.990704400",
+      "179.991747730,29.991064170",
+      "179.991859230,29.999657710",
+      "179.992090120,29.984934310",
+      "179.992217080,29.991538740",
+      "179.992240100,30.010108000",
+      "179.992284160,29.985247650",
+      "179.992289880,29.991105870",
+      "179.992398320,30.005148000",
+      "179.992467310,30.014859340",
+      "179.992469550,30.006008070",
+      "179.992552510,30.006520360",
+      "179.992556010,30.011123960",
+      "179.992583220,29.992005590",
+      "179.992629887,29.990963452",
+      "179.993185770,30.010259640",
+      "179.993186580,29.985753950",
+      "179.993247210,29.990435200",
+      "179.993334340,30.014530290",
+      "179.993663410,30.001508120",
+      "179.993961310,29.989209830",
+      "179.993977450,29.994083410",
+      "179.994272930,29.996591160",
+      "179.994312750,30.015488770",
+      "179.994413020,29.985330390",
+      "179.994415793,29.996776314",
+      "179.994579090,30.009814860",
+      "179.994686980,29.992104500",
+      "179.994749829,29.990654962",
+      "179.994991360,30.010827200",
+      "179.995137520,30.005132150",
+      "179.995285260,30.009592430",
+      "179.995315836,29.999440772",
+      "179.995440424,29.999498016",
+      "179.995702640,29.992471980",
+      "179.995791096,30.013473082",
+      "179.995902560,29.999270810",
+      "179.995933560,30.003211300",
+      "179.996026228,30.015719103",
+      "179.996129510,30.003522300",
+      "179.996268680,30.014255550",
+      "179.996275079,30.001553495",
+      "179.996375200,30.013842940",
+      "179.996434600,30.003612810",
+      "179.996436330,29.993862070",
+      "179.996478340,29.985829000",
+      "179.996590150,29.991478800",
+      "179.996649410,30.007009060",
+      "179.996847740,29.999619880",
+      "179.997174550,30.002185680",
+      "179.997622910,30.013193680",
+      "179.998069110,29.986936230",
+      "179.998271630,29.996970440",
+      "179.998275820,30.008223730",
+      "179.998790770,30.001878360",
+      "179.998851280,29.998072370",
+      "179.998904010,30.013910420",
+      "179.999041540,29.999727280",
+      "179.999236030,29.995430620",
+      "179.999332520,30.015996050",
+      "179.999414964,30.012644331",
+      "179.999537120,29.988665890",
+      "179.999955450,29.985621720",
+      "179.999971810,30.015174570",
+      "180.000006300,29.989367400",
+      "180.000311020,29.983547810",
+      "180.000408140,29.998951750",
+      "180.000511280,29.987259190",
+      "180.000835020,29.986893710",
+      "180.001102570,29.999453560",
+      "180.001226370,29.997948370",
+      "180.001380350,29.986958650",
+      "180.001824230,30.000732150",
+      "180.002057480,30.013981190",
+      "180.002395490,30.009823520",
+      "180.003189250,30.002263590",
+      "180.003350130,29.988103280",
+      "180.003836500,29.991666190",
+      "180.003990870,29.987673860",
+      "180.004037892,29.987373955",
+      "180.004117980,30.007868710",
+      "180.005126560,29.992739120",
+      "180.005190020,29.997032180",
+      "180.005280920,30.014651660",
+      "180.005880720,29.996473150",
+      "180.006771220,29.999228490",
+      "180.007046630,29.994299770",
+      "180.007085220,29.988389790",
+      "180.007426430,29.992358190",
+      "180.007430080,29.988435890",
+      "180.007451690,30.003667170",
+      "180.007561850,29.995301720",
+      "180.007853360,30.003521413",
+      "180.007877000,30.003347000",
+      "180.008005570,30.004016780",
+      "180.008118700,30.015044910",
+      "180.008197683,30.014754809",
+      "180.008299060,30.003852060",
+      "180.008424260,29.994260000",
+      "180.008562350,29.997668120",
+      "180.008586670,29.989432060",
+      "180.008856860,30.009238930",
+      "180.009005260,29.996255440",
+      "180.009262990,29.989322210",
+      "180.009672720,30.007556590",
+      "180.009814860,29.995111120",
+      "180.010149130,29.994016630",
+      "180.010151300,29.995784410",
+      "180.010211870,29.989122070",
+      "180.010280185,30.005157719",
+      "180.010642140,29.996764140",
+      "180.010824400,29.997153880",
+      "180.010916040,29.991843320",
+      "180.011641220,30.002596720",
+      "180.011778910,29.994899660",
+      "180.011975070,29.990153840",
+      "180.012230380,29.993039070",
+      "180.012529500,30.003664930",
+      "180.012535510,29.989604320",
+      "180.013030400,29.996938520",
+      "180.013078420,30.001514400",
+      "180.013092280,29.999555820",
+      "180.013354301,29.990378305",
+      "180.013380810,30.007536590",
+      "180.013718310,29.992711460",
+      "180.013762620,30.008591950",
+      "180.013834470,29.994008000",
+      "180.014972960,29.992089280",
+      "180.015535191,29.994311371",
+      "180.015606790,29.991036470",
+      "180.016114990,30.002404780",
+      "180.016121730,29.998772900",
+      "180.016137344,30.005983522",
+      "180.016606490,30.004312050",
+      "180.017207710,29.998340100",
+      "180.017284790,30.002355720"
+    ],
+    "monotonic": true
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 1,
+    "page_hashes": [
+      "0a628602aa4ff48a8ed935809b77df9f3f6e23e45a7fc5b73a9ea70db6b5ff3c"
+    ],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))",
+    "last_page_full": false,
+    "extra_page_expected_empty": false
+  },
+  "truncation": {
+    "expected_total": 174,
+    "expected_truncated": false,
+    "expected_returned": 174
+  },
+  "result_state": "rows",
+  "missing_columns": [],
+  "notes": "金标准: 哨兵判定读 evals/_data/null_sentinel.yaml (threshold=-999.0, 判定 value <= threshold, 不依赖具体形态; pmra/pmdec/radial_velocity 豁免)。 低于阈值的哨兵一律 null (E2 §5 #7: 哨兵不得当数值参与比较或输出成 0); GT 的 field_values.raw 保留哨兵原值证据。M2 把哨兵当真值的实现必被抓 (反证夹具同款: 哨兵 → 0 的突变)。**哨兵格清单不写在本文件**: 具体格随素材变, 权威位置是 gold/sentinel_value.json 的 null_semantics / field_values, 抽样清单 在 gold/sentinel_value.review.yaml 的 items 段 (逐格给 sentinel_cells)。 零值样例缺失已登记, 待后续快照增补真零格。\n"
+}

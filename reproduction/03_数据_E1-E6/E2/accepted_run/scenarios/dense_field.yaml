@@ -1,0 +1,27 @@
+case_id: dense_field
+category: dense_field
+snapshot_id: dense_field_empirical_ps1_20261004
+main_metrics:
+- M1
+- M2
+- M4
+- M7
+query:
+  catalog: ps1
+  ra: 359.5
+  dec: 0.0
+  radius_arcsec: 1800.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  sort: ps1_ra
+  order: asc
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+notes: 置换 cone_5as 槽。实抓 L 类 PS1 快照，来源为 2026-10-04 实站捕获；1000 行 / 0.7854 deg^2。不是球状星团核心样本，不声称天体物理密集星团验证。
+replacement_slot: cone_5as
+gold_focus: 高返回量 PS1 场的主键、排序与分页不变量

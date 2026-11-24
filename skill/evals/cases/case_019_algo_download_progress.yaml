@@ -1,0 +1,15 @@
+name: astro-best.case_019_algo_download_progress
+skill: astro-best
+derived_from: "algorithm:{'name': 'ProgressStore', 'module': 'src.download_progress'}"
+given:
+  ProgressQuery:
+    job_id: "<string:id>"
+expect:
+  status: pass
+  progress.source_of_truth: ".progress/<job_id>.json"
+  progress.fields: [job_id, status, total_bytes, done_bytes, total_pages, done_pages, speed_bps, eta_sec]
+  progress.cli_render: "text_bar"
+  progress.gui_render: "same_json"
+
+# ---
+# 下载能力轮次新增: 进度文件为 CLI/GUI 同源事实源用例

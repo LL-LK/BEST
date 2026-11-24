@@ -1,0 +1,181 @@
+# Evaluation scenarios for astro-best skill (canonical SSOT)
+# 合并自 5 个历史变体 (test-scenarios{,_swsk,_twh,_twh_2,_v1}.yaml), __twh_2 为基线吸收全量差异;
+# 无版本号字段 (禁版本号铁律); 入口命令对齐当前 `python -m src`。
+# 每个场景的给定输入与期望输出由 evals/cases/ 与 eval_runner.py 消费 (Phase 5 重建后逐场景可判定)。
+
+evaluations:
+  - id: cone_search
+    description: "Basic cone search with various radii"
+    scenario: "User wants to find BEST sources around a given coordinate"
+    steps:
+      - action: "python -m src cone --ra 180.0 --dec 30.0 --radius 60 --max 5"
+        expected: "Returns up to 5 sources within 60 arcsec"
+      - action: "python -m src cone --ra 180.0 --dec 30.0 --radius 60 --catalog ps1 --max 10"
+        expected: "Returns up to 10 sources within 60 arcsec"
+      - action: "python -m src cone --ra 180.0 --dec 30.0 --radius 600 --band r --max 100"
+        expected: "Returns up to 100 r-band sources within 10 arcmin"
+
+  - id: crossmatch
+    description: "Coordinate upload cross-match with BEST catalog"
+    scenario: "User wants to find BEST counterparts for a list of coordinates"
+    steps:
+      - action: "Python: BestCrossMatch.crossmatch_coords([180.0, 181.0], [30.0, 31.0], 'ps1', 3.0)"
+        expected: "Returns matched sources with photometry"
+
+  - id: crossmatch_best_gaia
+    description: "Cross-match BEST source with Gaia DR3"
+    scenario: "User wants to find Gaia DR3 counterpart for a BEST source"
+    steps:
+      - action: "Python: BestCrossMatch.crossmatch_with_coords(180.0, 30.0, 'gaia_dr3', 5.0)"
+        expected: "Returns match result with separation and confidence"
+
+  - id: quality_filtering
+    description: "Quality-gated data retrieval"
+    scenario: "User wants only high-quality detections"
+    steps:
+      - action: "Python: BestSkillClient(quality_config={'min_snr': 10, 'max_fwhm': 4}).cone_search(180.0, 30.0, 60.0)"
+        expected: "Returns only sources passing quality criteria"
+
+  - id: column_constraint
+    description: "Column constraint query builder"
+    scenario: "User wants to build complex column constraints"
+    steps:
+      - action: "Python: BestQuery().catalog('ps1').mag_range(14, 18, 'r').class_star_min(0.95).limit(100)"
+        expected: "Builds correct constraint list"
+
+  - id: list_catalogs
+    description: "List available BEST catalogs"
+    scenario: "User wants to see available catalogs"
+    steps:
+      - action: "python -m src catalogs"
+        expected: "Lists all 12 queryable catalogs with descriptions"
+
+  - id: multiband_photometry
+    description: "Multi-band static photometry retrieval and export (CSV/JSON)"
+    scenario: "User wants multi-band photometry for a specific BEST source (static catalog snapshot, not a time series)"
+    steps:
+      - action: "Python: BestMultiBandPhotometry.from_client(client, 'POS_180.0_30.0', band='r')"
+        expected: "Builds multi-band container from cone search; unrecognized id raises ValueError (no silent empty success)"
+      - action: "Python: BestMultiBandPhotometry.from_client(client, 'POS_180.0_30.0').to_json('mbp.json')"
+        expected: "Saves all-band photometry to JSON file"
+
+  - id: source_lookup
+    description: "Lookup source by ID"
+    scenario: "User wants details of a specific BEST source id"
+    steps:
+      - action: "python -m src source --id BEST001234"
+        expected: "Returns source details in JSON"
+
+  - id: coordinate_lookup
+    description: "Find source by coordinates"
+    scenario: "User wants the nearest source to a coordinate"
+    steps:
+      - action: "python -m src coords --ra 180.0 --dec 30.0 --tolerance 3.0"
+        expected: "Returns nearest source within 3 arcsec"
+
+  - id: custom_adql
+    description: "Custom ADQL query (syntax validation only; BEST has no TAP/ADQL endpoint)"
+    scenario: "User wants to execute a custom ADQL query"
+    steps:
+      - action: "python -m src query --adql \"SELECT source_id, ra, dec, best_mag FROM best.source WHERE band='r' LIMIT 5\""
+        expected: "Returns 5 r-band sources with specified columns"
+      - action: "python -m src query --adql \"SELECT COUNT(*) FROM best.source\""
+        expected: "Returns count result"
+
+  - id: batch_region_download
+    description: "Batch region download"
+    scenario: "User wants to download all sources in a region to disk"
+    steps:
+      - action: "python -m src download --ra 180.0 --dec 30.0 --radius 60 --output-dir test_output"
+        expected: "Downloads sources and saves to test_output"
+
+  - id: connection_info
+    description: "Check connection and service info"
+    scenario: "User wants to verify endpoint reachability and service state"
+    steps:
+      - action: "python -m src info"
+        expected: "Shows connection status and service info"
+
+  - id: background_download
+    description: "Background download via DownloadManager (submit returns immediately)"
+    scenario: "User wants a download to run in the background while conversation continues"
+    steps:
+      - action: "Python: DownloadManager(client).submit(RegionJob(ra=180, dec=30, radius_arcsec=180))"
+        expected: "job_id returned immediately; status()/progress file shows running->done"
+
+  - id: parallel_download
+    description: "Parallel multi-region/multi-catalog downloads (default 2 workers)"
+    scenario: "User wants several regions or catalogs downloaded concurrently"
+    steps:
+      - action: "Python: mgr.submit_all([RegionJob(...), RegionJob(...)])"
+        expected: "All jobs complete with unique output files (no cross-overwrite)"
+
+  - id: download_resume
+    description: "Resumable download after crash (page-level checkpoint + byte-level Range)"
+    scenario: "User's download was interrupted and should continue from the checkpoint"
+    steps:
+      - action: "Python: mgr.resume(job_id) / BestDownloader.resume_job(job_id)"
+        expected: "Download continues from saved page/byte offset, no duplicate rows"
+
+  - id: hook_intercept_ask
+    description: "Hook intercept forces one user ask with reason and options"
+    scenario: "A download problem (checksum/disk/session) is intercepted by the hook layer"
+    steps:
+      - action: "Python: catch HookBlockedError -> interrupt.to_ask_payload()"
+        expected: "ask payload with reason+evidence+>=2 options; background jobs become blocked"
+
+  - id: download_progress_visible
+    description: "Download progress visible in CLI and GUI from one JSON source"
+    scenario: "User wants to watch download progress"
+    steps:
+      - action: "python ops/astro_best_cli.py download progress <job_id> / download list"
+        expected: "Text progress bar rendered; GUI reads the same .progress/<job_id>.json"
+
+  - id: precise_download
+    description: "Precise download by source_id list (in constraint)"
+    scenario: "User has specific source ids (e.g. from crossmatch) and wants exactly those rows"
+    steps:
+      - action: "Python: mgr.submit(PreciseDownloadJob(source_ids=[...], catalog='stripe82'))"
+        expected: "Exactly the requested rows downloaded; 0 rows triggers hook ask (empty_precise_result)"
+
+  - id: task_log
+    description: "Task log manager for quick problem localization"
+    scenario: "Something went wrong and the user/agent needs the task trail"
+    steps:
+      - action: "python ops/astro_best_cli.py log problems / log summary <job_id>"
+        expected: "warn/error events listed; per-task event chain (submit→start→page→done) queryable"
+
+  - id: name_resolve
+    description: "Object-name resolution via /nss/solve with the -1000 sentinel"
+    scenario: "User says 'standard stars near M31' and the agent has no coordinates"
+    steps:
+      - action: "Python: BestClient.resolve_name('M31') / Best.resolve_name('M31')"
+        expected: "ra=10.68470833, dec=41.26875 (live-verified); unresolvable names raise E_NAME_UNRESOLVED instead of returning the -1000 sentinel as coordinates"
+
+  - id: proximity_batch
+    description: "Server-side proximity batch cross-match replaces N cone searches"
+    scenario: "User uploads 1000 coordinates and wants BEST counterparts"
+    steps:
+      - action: "Python: BestCrossMatch.crossmatch_batch(ra_list, dec_list, catalog='ps1')"
+        expected: "One pos.type=proximity POST + paginated GET (live: N=1000 in ~3s); inputobjs_* columns reconnect rows to inputs; failure falls back to per-coordinate with mode=per_coordinate_fallback"
+
+  - id: tap_adql
+    description: "Bounded ADQL subset parses to a safe query plan"
+    scenario: "A VO client (pyvo/astroquery/TOPCAT) sends ADQL to the TAP gateway"
+    steps:
+      - action: "Python: src.tap.adql.parse_adql('SELECT ... CONTAINS(POINT(...), CIRCLE(...)) = 1')"
+        expected: "Typed plan (catalog/columns/branches/cone); JOIN/GROUP/subquery/aggregate rejected with ADQLError; unknown columns rejected against the allowlist"
+
+  - id: tap_service
+    description: "TAP HTTP gateway routes sync/async with quotas and bearer auth"
+    scenario: "Agent calls the local TAP gateway endpoints"
+    steps:
+      - action: "Python: TapGateway.handle('GET', '/tap/sync', params={'QUERY': ...}) / invalid bearer"
+        expected: "200 CSV/VOTable result; MAXREC clamped to the anonymous quota; invalid bearer is 401 (never an anonymous downgrade); async jobs run PENDING→COMPLETED with checksum"
+
+  - id: agent_tools
+    description: "Seven atomic agent tools return the unified envelope"
+    scenario: "An agent needs BEST data through the tool surface"
+    steps:
+      - action: "Python: ToolBox().cone_search(...) / list_catalogs() / describe_catalog('ps1')"
+        expected: "data/status/cost/provenance envelope; cost.http_requests is real wire traffic; site rows marked untrusted; stable best:// URI in provenance"

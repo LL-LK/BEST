@@ -1,0 +1,28 @@
+case_id: soft404_page
+category: soft_error
+snapshot_id: syn_soft404
+main_metrics:
+- M5
+- M4
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: error
+  error_code: E_SOFT_404
+  row_count_hint: 0
+  truncated_hint: false
+  must_not:
+  - empty_result
+  - ok_true
+notes: 'synthetic phase-1 HTTP 200 + {error: Not Found} response; catalog remains
+  valid so client reaches the parser.'
+gold_focus: 软 404 不当空结果 (ERROR vs EMPTY 阻断项)

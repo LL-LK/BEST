@@ -1,0 +1,21 @@
+name: astro-best.case_013_gate_checksum_match_boundary
+skill: astro-best
+derived_from: gate:checksum_match
+given:
+  BestQuery:
+    sql: "<string:dimensionless>"
+    token: "<string:credential>"
+expect:
+  status: pass
+  gates.checksum_match: true
+  gate_eval.boundary: at-threshold
+threshold:
+  gate: checksum_match
+  cmp: "=="
+  value: true
+  unit: "bool"
+
+# ---
+# generated_by: scripts/refactor/materialize_evals.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

@@ -1,0 +1,54 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/a3_no_refusal.yaml — A3 消融: 拆掉能力边界与拒绝规则
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 A3 列 (拒绝规则 ✗, 其余同 B3)
+# 与 §4 A3 行。反向指标 OverRejectRate 必须同时报 (§6.5): 若 A3 只让 RejectAcc 降
+# 而 OverReject 不变 → 拒绝规则是"纯增益"; 若两者同时恶化 → 规则写过宽。
+system:
+  id: A3
+  kind: ablation
+  label: "B3 − 能力边界与拒绝规则"
+  role: "消融: 量拒绝规则与澄清策略的贡献"
+  base: B3
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    param_validation: true
+    field_semantics: true
+    # ← 唯一被拆掉的零件
+    refusal_rules: false
+    provenance: true
+    post_verify: true
+    unified_envelope: true
+  envelope_keys: [data, status, cost, provenance]
+  ablation_detail:
+    removed_component: "能力边界与拒绝规则 (SKILL.md out_scope/委派段 + 拒绝理由码表 + 替代路径建议)"
+    mechanism: >
+      系统不再知道 BEST 的能力边界: 该拒绝的硬查、该澄清的直接猜 —
+      路由从 reject/clarify 退化成 answer。
+    code_seam: "adapter 层的答案渲染分支开关 (生产码零改动)。"
+    probe_items: [E5-R01, E5-R02, E5-R03, E5-R04, E5-R05, E5-R06,
+                  E5-C01, E5-C02, E5-C03, E5-C04, E5-C05, E5-C06]
+  expected_effect:
+    reject_acc: down down (R 类 6 条大面积失守 — 预登记掉得最狠的一项)
+    missed_clarify: up (C 类 6 条该问不问)
+    hr_any: up (硬查时序/全表导出 → 无支撑主张)
+    avg_calls: up (明知不支持还去试)
+    over_reject_rate: flat (预期 — 见文件头说明)
+    param_f1: flat (与参数格式无关)
+    row_f1: flat (来源溯源类不受影响)
+  # ablations/A3
+  linked_hypothesis: hypotheses.yaml
+  llm:
+    # 本轮离线: ScriptedLLM 确定性替身 (不调真实模型; 11 装配同一 model_id/解码参数)
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+
+  notes: >
+    R 类零请求设计 (should_call_best=false) 正是为这一档准备的鉴别器:
+    A3 一旦发出调用即被 RejectAcc 抓住, 且调用会留下 trace 证据 (AvgCalls 上升)。

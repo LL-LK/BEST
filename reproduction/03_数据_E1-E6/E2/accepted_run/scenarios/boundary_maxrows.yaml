@@ -1,0 +1,31 @@
+case_id: boundary_maxrows
+category: boundary
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as
+main_metrics:
+- M4
+- M1
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_ipsf
+  - ps1_class_star
+  sort: ps1_ra
+  order: asc
+  max_rows: 174
+  page_size: 174
+expect:
+  result_state: rows
+notes: '金标准: 截断三元组 (truncated, total_count, returned) 以 gold/boundary_maxrows.json
+  为准 —— "恰好够"不是截断 (若被测用 >= 判断就会误报 truncated=true)。total_count 必须取服务端 getcount 语义 (src/client.py
+  历史 bug 已修, E2 钉死)。本快照的行数恰等于 max_rows, 且恰为 page_size 的整数倍 —— 一套快照同时钉「恰好不截断」与「满页续翻」;
+  复核要点里的行数/上限/截断标志 一律由金标准渲染, 本文件不复述。
+
+  '
+gold_focus: truncated 三元组恰等判定 + total_count 服务端口径

@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-04",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 10.68,
+        "dec": 41.27,
+        "radius_arcsec": 60,
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "已按你的参数在 **ps1** 上发起锥形检索：中心 RA=10.68°、Dec=+41.27°（ICRS，度），\n**半径 60 角秒 = 1 角分**（`radius_arcsec=60`）。\n\n走的是服务端原生 `pos.type=cone`，不是客户端的 box-between 近似，所以边界是真圆锥。返回里有三样东西值得看：\n\n- **真实命中总数**：服务端 `getcount` 随会话一起返回，配合 `status.truncated` 判断结果有没有被截断；\n- **会话 id**（形如 `sNNNN`）：要续页就靠它（见下一轮），注意它是**服务端易失**的；\n- **可复现引用**（`provenance.stable_uri`，形如 `best://ps1/cone?ra=10.68&dec=41.27&sr=60`）：下次复查用得上。\n\n两点口径提醒：\n\n1. **半径单位是角秒**。站点表单页原文就是 `pos.radius ... arcsec`；传度会被当成角秒（差 360 倍），\n   要按度就用\"度 × 3600\"自己换算，例如 5 角分 = 300 角秒。\n2. **半径上限 18000 角秒 = 5 度**，入口就校验（`validate_search_radius`），超限不会发请求。",
+  "notes": "参数齐全的锥检索；显式声明半径单位为角秒（60″=1′）与 18000″=5° 上限。"
+}

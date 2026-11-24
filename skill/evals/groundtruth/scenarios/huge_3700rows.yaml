@@ -1,0 +1,37 @@
+# E2 场景 8/8: 超大查询 — 跨 4 页的大结果集 (L 类) — docs/eval-E2-groundtruth.md §5 #8
+# case_id 里的 "3700" 是换素材前的旧行数, 现指 4000 行的 live 快照; 改 case_id 要
+# 同步改 17 处文件名与台账, 收益不抵风险, 故保留旧名并在此登记 (A7-02)。
+case_id: huge_3700rows
+category: huge
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r300.0as_max4000
+main_metrics: [M4, M1, M7]
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 300.0            # 真实抓取: count.json 记服务端 total=5109, 本快照落 4000 行
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf, ps1_class_star]
+  # 注: 原约束 ps1_snr=25 不在 ps1 showcol 集合已移除 — 全部行都在锥内,
+  # 行集与分页结构不受影响 (equal 谓词鉴别力由 batch 场景覆盖)。
+  sort: ps1_ra                       # 位置列: ps1_source_id 在本快照里只有 3 个非空, 按它排等于没排
+  order: asc
+  max_rows: 4000                  # 行数恰等于 max_rows → **不**截断 (截断判据是 total > max_rows)
+  page_size: 1000                 # 4 个满页 → 末页仍满, 该多翻一页取空页
+expect:
+  result_state: rows
+  # 行数/截断/页数**不在此声明**: gen_gold 只读 result_state 与 error_code, 这里
+  # 写下的数字无人断言 —— 换素材后不会变红, 只会静静变旧 (A7-02: 换素材前记的
+  # 行数与「页宽分配」描述, 在换成另一个行数的 live 快照后对不上, 复核要点里的
+  # 行数与页数也随之变旧)。权威值见 gold/huge_3700rows.json 的 row_count /
+  # truncation / pagination 段与汇总表 focus/must_confirm 列。
+notes: >
+  L 类真实抓取快照 (live_ps1_ra180.0_dec30.0_r300.0as_max4000, ra=180.0+i*0.0001,
+  dec=30.0 常量, page_size=1000; 换素材前用的是 A 的 syn_huge 合成快照, 已退役,
+  此处不复述其行数)。金标准: 行集与分页结构以 gold/huge_3700rows.json 为准 ——
+  4 个满页, 行数恰等于 max_rows 故 truncated=false (触顶不等于截断, 判据是
+  total > max_rows), 末页满 → 该多翻一页取空页; 分页并集无重无漏 (M4), 行集
+  P/R=1.0 (M1), 重复运行 data_hash 一致 (M7)。field_values 按 E2 §4.3 抽样
+  (>50 行 20% 必含边界/极值/哨兵/分页边界行), gold.field_values_sampled=true 明示。
+  全部行都在 5° 锥内 (最远 Δra=0.3699° → 1152.6" ≤ 18000")。若快照缺失, GT
+  fail-closed (不发明数据)。
+gold_focus: 4 页分页无损 + equal 谓词选行 + 大结果集抽样对账

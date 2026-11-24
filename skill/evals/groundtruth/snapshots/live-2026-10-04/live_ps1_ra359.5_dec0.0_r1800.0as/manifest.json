@@ -1,0 +1,9 @@
+{
+  "snapshot_id": "live_ps1_ra359.5_dec0.0_r1800.0as",
+  "files": {
+    "count.json": "sha256:e7ecb0684b94138e36589d697c7301424c9e55da25ed5ad78ad14569b75d338b",
+    "pages/page_0001.csv": "sha256:4dcdc1444995b3c5184b4f100377b2beda34f0066825caf95c6bd7e267c12cc7",
+    "phase1.html": "sha256:11badb1fab14abb6f9fe84a533044ee0cd79e68ca2554d9338d00717dceab46d",
+    "rows_full.csv": "sha256:4dcdc1444995b3c5184b4f100377b2beda34f0066825caf95c6bd7e267c12cc7"
+  }
+}

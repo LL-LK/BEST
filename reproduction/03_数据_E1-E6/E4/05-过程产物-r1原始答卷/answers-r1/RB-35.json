@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "半径 20000 角秒 > 18000 角秒上限",
+    "缺中心坐标"
+  ],
+  "item_id": "RB-35",
+  "tier": "P",
+  "request": "查半径 20000 角秒内的 ps1 源。",
+  "route": "reject",
+  "answer_text": "这个请求暂时没法直接执行，需要你先补两点信息：\n\n1）缺少锥形检索的中心坐标。BEST 的锥搜必须给定天区中心（ra、dec，单位**度**、ICRS 坐标）。请给出目标中心的赤经赤纬，例如 `ra=180.0, dec=30.0`。\n2）半径超出上限。20000 角秒约 5.56°，超过了 BEST 锥搜半径的硬上限 **18000 角秒（=5°）**，入口会被 `validate_search_radius` 拒绝。请把半径改到 ≤18000 角秒；若确需更大范围，可考虑坐标交叉匹配或区域下载方案。\n\n`ps1` 确实是可查星表之一，没问题。请补齐中心坐标并把半径调到合规范围，我再为你检索。",
+  "run_id": "r1"
+}

@@ -1,0 +1,37 @@
+case_id: batch_proximity
+category: batch_proximity
+snapshot_id: live-2026-10-04/live_ps1_proximity_n3_5d2580ec
+main_metrics:
+- M1
+- M2
+query:
+  catalog: ps1
+  radius_arcsec: 10.0
+  inputs:
+  - ra: 180.0
+    dec: 30.0
+  - ra: 180.0011
+    dec: 29.9995
+  - ra: 180.0004
+    dec: 29.999
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  max_rows: 50000
+  page_size: 1000
+expect:
+  result_state: rows
+  matched_keys: []
+  unmatched_inputs: []
+  semantics: nearest_only
+notes: 'L 类真实抓取快照 (live-2026-10-04/live_ps1_proximity_n3_5d2580ec, 3 个输入 坐标, 响应含 inputobjs_input_line/inputobjs_dist_arcsec
+  列; 换素材前用的是 A 的 syn_batch 合成快照 —— 那是 4 输入 / 5 行 / line 0 有 2 候选 / line 3 无匹配 的布局,
+  已退役, 此处不复述其行数)。金标准按 E2 §5 #5 + nearest_only 默认语义: 每输入取半径内最近邻 (GT 用独立 haversine 选,
+  并列取主键小者), 行键 in<idx>:<source_id>; 无匹配输入不产行但 batch_inputs 记 matched_key=null (inputobjs_*
+  回连由 input_index 承担)。本快照每个输入有 3 个候选但只留最近邻, 三个输入全部命中; dist 口径: 冻结的 inputobjs_dist_arcsec
+  与独立 haversine 角距 一致 (gold.dist_cross_check 为空 = 无差异登记), 换素材前的 Δdec 口径差异已不复存在。
+
+  '
+gold_focus: 最近邻语义 + input_index 复合键 + 无匹配不产行 + inputobjs 回连 + dist 口径核对

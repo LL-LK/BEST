@@ -1,0 +1,12 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-19
+utterance: 给我一份标准星清单。
+category: clarify
+expect_first_tool: none
+reruns: 5
+stability_class: clarify_first_zero_request
+conclusion_card_spec:
+  kind: clarification
+  key_entities: []
+relative_time_expression: false
+notes: 映射 E1 NL2T-19; 判稳维度 clarify_first_zero_request; 禁相对时间表述 (硬约束)

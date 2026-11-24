@@ -1,0 +1,54 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "ps1",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 60.0,
+    "constraints": [
+      {
+        "name": "ps1_gpsf",
+        "constraint": "between",
+        "value": null,
+        "min": 18.0,
+        "max": 20.0
+      },
+      {
+        "name": "ps1_gpsf_err",
+        "constraint": "less",
+        "value": "5.0"
+      }
+    ]
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "bytes": 15457,
+      "at": "2026-10-04T08:04:38.990685+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/4930/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-04T08:04:39.864866+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4930?output.fmt=csv&rows=1000&page=1&sort=ps1_source_id&order=asc",
+      "status": 200,
+      "bytes": 1688,
+      "at": "2026-10-04T08:04:41.366513+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 5,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 5,
+    "truncated": false,
+    "error_code": null
+  }
+}

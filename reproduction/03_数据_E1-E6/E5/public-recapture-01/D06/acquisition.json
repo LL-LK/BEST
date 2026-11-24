@@ -1,0 +1,78 @@
+{
+  "schema": "e5-public-acquisition-v1",
+  "case_id": "D06",
+  "task": {
+    "kind": "cone",
+    "catalog": "ps1",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 18000.0,
+    "max_records": 3000
+  },
+  "logical_e5_units": 0,
+  "wire_responses": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/ps1/q",
+      "status": 200,
+      "request_form": {
+        "output.fmt": "html",
+        "pos_group": "ra,dec",
+        "pos.type": "cone",
+        "pos.racenter": "180.0",
+        "pos.deccenter": "30.0",
+        "pos.radius": "18000.0",
+        "showcol": [
+          "ps1.ra",
+          "ps1.dec",
+          "ps1.class_star",
+          "ps1.dust",
+          "ps1.ebv",
+          "ps1.gflags",
+          "ps1.gpsf",
+          "ps1.gpsf_corr",
+          "ps1.gpsf_err",
+          "ps1.iflags",
+          "ps1.ipsf",
+          "ps1.ipsf_corr",
+          "ps1.ipsf_err",
+          "ps1.max_d",
+          "ps1.parallax",
+          "ps1.parallax_err",
+          "ps1.rflags",
+          "ps1.rpsf",
+          "ps1.rpsf_corr",
+          "ps1.rpsf_err",
+          "ps1.ruwe",
+          "ps1.sigma",
+          "ps1.source_id",
+          "ps1.yflags",
+          "ps1.ypsf",
+          "ps1.ypsf_err",
+          "ps1.zflags",
+          "ps1.zpsf",
+          "ps1.zpsf_corr",
+          "ps1.zpsf_err"
+        ]
+      },
+      "started_at_utc": "2026-10-12T08:58:02.235510+00:00",
+      "response_file": "wire/response-001.bin",
+      "content_type": "text/html; charset=utf-8",
+      "content_encoding": "gzip",
+      "response_encoding": "utf-8",
+      "bytes": 15457,
+      "sha256": "53fe8fa8092d765206a389fc71c613b8232e68d378d89921792c23970c8c67a0"
+    }
+  ],
+  "observed": {
+    "page_size": 1000,
+    "returned_count": 0,
+    "success": false,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": "E_BACKEND"
+  },
+  "error": null,
+  "byte_fidelity": "wire/*.bin stores requests Response.content; legacy CSV/HTML files are decoded UTF-8 derivatives",
+  "items_sha256": "657946a35b5e18bd9241eae9a31bbd0e32adfe6df81899ffb018328af9b7a426"
+}

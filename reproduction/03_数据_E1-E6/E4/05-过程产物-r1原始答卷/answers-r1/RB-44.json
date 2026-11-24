@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "缺目标坐标",
+    "gaia_dr3 → gaia_dr3_18 别名映射"
+  ],
+  "item_id": "RB-44",
+  "tier": "P",
+  "request": "查 gaia_dr3 表里的 G 星等。",
+  "route": "clarify",
+  "answer_text": "这条查询还差一个关键信息，我没法直接取数——BEST 是按位置（锥搜 / 批量坐标）取数的库，没有目标坐标或天体名就取不到数据；不带约束直接拉全表会有数百 MB 量级，这个我不能做。请给我目标的赤经/赤纬（单位：度）+ 搜索半径（单位：角秒），或者一个天体名称（我先做名称解算）。\n\n另外先把名字对齐两点：\n1) BEST 线上并没有名为 `gaia_dr3` 的表，真实表名是 `gaia_dr3_18`（旧的 `gaia_dr3` 我会自动按别名映射到 `gaia_dr3_18`，查询不受影响）。\n2) 该表的「G 星等」是 `phot_g_mean_mag`（Gaia G 波段平均星等）。同表的 `phot_g_mean_flux` 是流量不是星等；`phot_g_mean_mag_y21` 的后缀含义本仓未登记，我不会拿它当 G 星等用。\n\n拿到坐标后，我就用 `gaia_dr3_18` 做锥搜，返回 `gaia_dr3_18.phot_g_mean_mag`（口径限定：天体测量与恒星参数来自 Gaia DR3，仅测光经 BEST 重定标）。",
+  "run_id": "r1"
+}

@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-11T17:58:32.576718+08:00",
+  "revision": "E6-batch-repetition-consistency-U1-U6-no-R2",
+  "researcher_instruction": "为什么要复测，可以删除吗，我们今天就要初稿",
+  "R2_status": "cancelled_before_execution",
+  "R2_pending": false,
+  "U7_status": "cancelled",
+  "retained_lanes": [
+    "R0",
+    "R1",
+    "R3-original",
+    "R3-supplement"
+  ],
+  "retained_usability_metrics": [
+    "U1",
+    "U2",
+    "U3",
+    "U4",
+    "U5",
+    "U6"
+  ],
+  "current_scope": "各批次内重复运行一致性、冻结快照回放、效率及客观可用性；原批次与事后补测分列",
+  "unmeasured_constructs": [
+    "D+7跨日稳定性",
+    "服务商权重及在线后端跨日漂移"
+  ],
+  "remaining_E6_collection": null,
+  "future_API_required_for_current_scope": false,
+  "timing": "原R1/R3与R3补测结果已知后的事后范围修订；未执行R2",
+  "effect_on_raw_records": "none; 原协议、原始回答、失败和快照归档保留",
+  "original_protocol_pass": false,
+  "historical_publication_snapshot": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/publication-drafts/before-R2-cancellation-175832"
+}

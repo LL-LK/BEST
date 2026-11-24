@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-10",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "先确认两件事，第一件我能替你换算，第二件必须你给。\n（1）单位：5 角分 = 300 角秒。BEST 的 radius_arcsec 单位是角秒（站点表单里 pos.radius 字段原文就写着 arcsec），所以我按 300 角秒理解你的“半径 5 角分”。如果把 5 当度传，结果会是 0 行或 360 倍半径——这个坑值得单说。\n（2）“刚才那片天区”：我这边没有拿到中心坐标，锥形检索必须要有 RA 和 Dec（ICRS，度）。请把中心坐标给我（或者告我天体名，我用 resolve_name 解算）。\n拿到中心后就是一次 cone_search(ra, dec, radius_arcsec=300, catalog=?)：默认 ps1（先看这片天区有什么最快最全），要标准星或别的定标表就点名。列投影我先取 RA/Dec + 该表的主测光列，真实命中总数以返回里的 getcount 为准；truncated=true 我用同一个 sqlid 续页。\n顺带一句：如果你要的其实是“这个天区里最亮/最新的几颗”，说一声我加 sort+order 直接给你排序后的头部。",
+  "notes": "“刚才那片天区”无坐标 → clarify；单位换算 5 角分=300 角秒在回答里显式说出，符合 radius_arcsec=角秒的契约。"
+}

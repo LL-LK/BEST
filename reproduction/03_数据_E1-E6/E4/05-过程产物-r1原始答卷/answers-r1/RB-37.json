@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "page_size 上限 10000, 50000 越界",
+    "全表拉取数百 MB, 须带约束"
+  ],
+  "item_id": "RB-37",
+  "tier": "P",
+  "request": "把 page_size 设成 50000 拉全量。",
+  "route": "reject",
+  "answer_text": "这个参数我没法照设。page_size 在本 skill 的 `fetch_page` 工具面有硬上限 **10000**（`src/ai_tools.py` 的 `MAX_FETCH_PAGE_SIZE`，与 `references/tools.schema.json` 里 `page_size.maximum=10000` 逐字对齐），越界会在工具边界 fail-closed、直接返回 `E_INVALID_INPUT`，50000 根本发不出去——所以不是“慢”，是“拒”。\n\n另外“拉全量”这步也得先确认：BEST 站点无约束的 Save all（全表导出）等价于内联全表，历史上是**数百 MB 量级**，`references/best-database-guide.md` 明确要求查询务必带天区/星等约束，不建议直接整表拉。\n\n要往下走，请告诉我两件事：① 查哪张表（如 `ps1`）；② 天区（RA/Dec/半径，半径单位角秒）或星等约束。之后我按 **page_size ≤ 10000（缺省 1000）+ max_rows** 分页取数（末页判据是返回行数不足一页）；若确实要整表落盘，改走导出/下载路径并开断点续传，而不是把 page_size 撑大。",
+  "run_id": "r1"
+}

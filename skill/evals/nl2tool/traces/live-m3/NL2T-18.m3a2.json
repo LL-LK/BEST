@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-18",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "“那个源”我没法定位——这是本次对话里的第一条请求，我这边没有任何可指代的对象，所以不发任何查询。\n给我下面任意一种就够：\n（1）天体名（M31、NGC 532、Betelgeuse 这类）→ 我用 resolve_name 解算成 ICRS 坐标（度数）。解不出来时站点回 ra=dec=-1000 哨兵、工具判 E_NAME_UNRESOLVED，我会直接告诉你没解出来，不会拿哨兵硬查。\n（2）RA/Dec + 半径（RA/Dec 用度，半径用角秒；如 5 角分 = 300 角秒，上限 18000 角秒 = 5 度）。\n另外顺手说一下表和列，不然你还得再问一轮：默认 ps1 最快最全；要看标准星得点名 scr_galah / scr_lamost / xpsp（std 是导航组不是表）；要有 Gaia G 星等是 gaia_dr3_18（没有 gaia_dr3 这张表）；要 ZTF g/r/i 在 xpsp 或 scr_galah/scr_lamost 里。列名我不会猜，拿到表名后我先 describe_catalog 确认再投影。\n你把名字或坐标 + 表/波段告我，我一次查完。",
+  "notes": "指代对象缺失且无任何会话上下文 → 纯 clarify，零工具零请求，并把后续需要的表/列口径一次讲清。"
+}

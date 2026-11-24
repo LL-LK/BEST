@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "source_id 命名不匹配任何星表前缀",
+    "无按 id 直查端点"
+  ],
+  "item_id": "RB-13",
+  "tier": "P",
+  "request": "查 source_id 为 BEST_NO_SUCH_ID 的源。",
+  "route": "reject",
+  "answer_text": "我查不到 `source_id = BEST_NO_SUCH_ID` 这条源——它不匹配 BEST 任何可查星表的 source_id 命名（真实形如 `CALIBSTARS_0844369`、`ps1`/`gaia_dr3_18` 等的 `{catalog}_source_id`，且 `BEST_` 不是任何星表前缀）。BEST 也没有“按 id 直查”的端点，只能以 `source_ids` 列表做精准取行；这样一条明显不存在的 ID 我不会给你编一个结果出来。\n\n请确认一下：是 ID 抄错了，还是想查某个星表（ps1 / gaia / smss / uss / stripe82 标准星…）里的某个对象？给我正确的 source_id（或所属星表 + 坐标）我就去取。",
+  "run_id": "r1"
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-05",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "1000 个坐标**一次性做完是可以的**，但我得先拿到坐标——你这条消息里没有数据，我不能凭空造 1000 个坐标发出去。\n\n工具选型已经确定：`crossmatch_batch` 走服务端 `pos.type=proximity`，把坐标列表**一次 POST** 提交给服务端算角距，\n等价于过去 1000 次独立锥检索、约 2000 次 HTTP 的降为 1 次 POST + 分页 GET（实测参考：N=1000 的批量提交约 3s 量级，\n命中数取决于你的坐标；单文件百万源级的整表量级另说）。响应自带 `inputobjs_dist_arcsec` / `input_line` /\n`input_ra` / `input_dec`，能按你的输入行号回连。\n\n把坐标贴过来即可，格式 `ra,dec[,id]`（**经纬度都是度，ICRS**；`id` 可选，用来回连结果）：\n\n- `radius_arcsec`（匹配半径）默认 **3 角秒**，要更宽/更紧直接说；\n- `nearest_only` 默认 **true**（每个输入只回最近邻），要一对多就把 `catalog` 之外这个开关关掉；\n- 超过 1000 个我分批跑，每批一个会话；几十万行以上建议走整表下载那条路（那边要登录）。\n\n另一条\"上传\"的路我开不了：BEST 自己的自建星表作业区（`/data/best/jobs`）必须登录，而登录第一关是站点账号、\nNADC 通行证 OAuth 还没获批；这 7 个原子工具里也没有文件上传入口。所以贴坐标是当前唯一免登录的路。",
+  "notes": "缺坐标列表不能凭空造数据：0 请求先确认能力边界与参数默认值（3″、nearest_only），并说明登录上传路不可用。"
+}

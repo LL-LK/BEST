@@ -1,0 +1,22 @@
+{
+  "revision": "targeted-assistant-verification-20261011",
+  "files_sha256": {
+    "E3-四条核验报告.md": "4b84c51f6549c23806ebebb08784b19adbcdef69ad6e2e54ed70fcbfd6838093",
+    "给老师-后续可选确认.md": "20bb74afd683eaf8c254327ed04191ae8943a5cab7a2573dc43a11b711df02c6",
+    "four-entry-verification.json": "00718fe749ae609fb4cadbbdd4dc261c4895ab09a0c3381daf67994468319fb8",
+    "FINAL-REPORT.md": "4b84c51f6549c23806ebebb08784b19adbcdef69ad6e2e54ed70fcbfd6838093",
+    "FINAL-RESULTS.json": "e1a7790bb8ff1c94d7dd327e0ac2606afbb39227abf027295b122f1557b4ef8f",
+    "verification-audit.json": "38c5c3bab04adacb8eead2f54ce828cf37f57c75b33aa193a8a5ee2220025ac3",
+    "evidence/gaia-variable-products-request.json": "a2beff50ca88603ea0344d617f5b710d51defaca365c10b4e605c840fedf54e3",
+    "evidence/stripe82-author-definitions-request.json": "15692483d6abdbf0ad534f3cb74813f46175af4cc0f7cd241521fa1bfb0d6d8b",
+    "evidence/best-stripe82-metadata.html": "3fcfec8a33593bb25e8b6eae493140af3791a34085d84fa5554354259d0f6c01",
+    "evidence/huang-yuan-2022.html": "f4a3d68314e4a585ae6bc21174d3926167dd28cbe4cfe7c77c5a40a3703e9e55",
+    "evidence/huang-yuan-2022-request.json": "cd66f1a9d1d5b4cdc194fa9186c952896510a6538720917209b56ae31c264983",
+    "evidence/FINAL-RESULTS.before-four-entry-verification.json": "58d71856d1548eeecf4aa95d88b2ca25de2a194c46d193a25c7f2e30fa4e9ca1",
+    "evidence/stripe82-author-definitions.html": "20db5ae757610eae692d50d8a60abb3b2cada9c78d94629b07820ba01f0bf691",
+    "evidence/gaia-variable-products.html": "37de55dfc3a269e64c7758d6dea1ced1cdb6d0b607cfcf4da3870afc42687100",
+    "evidence/best-stripe82-selected-metadata.json": "79459cd801b8cf22667481229f788a0070952c08bc92b0b66ef89c120076ac30",
+    "evidence/FINAL-REPORT.before-four-entry-verification.md": "3bb0b293589e928a75bf54b1daadb73b8f8be5ada4798363755218b3a8e34c11",
+    "evidence/best-stripe82-metadata-request.json": "defe4a7d4297dedb953bdc792670a2cf4a3d7a7a309731ba7bb4ee0f1f752ffd"
+  }
+}

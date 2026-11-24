@@ -1,0 +1,17 @@
+name: astro-best.case_022_algo_precise_download
+skill: astro-best
+derived_from: "algorithm:{'name': 'PreciseDownloadJob', 'module': 'src.download_precise'}"
+given:
+  PreciseDownload:
+    source_ids: "<list:string>"
+    catalog: "<string>"
+expect:
+  status: pass
+  handoff.status: ready
+  precise.constraint: "in"
+  precise.id_column_per_catalog: "stripe82=calibstars_id; ps1=source_id(live-empty)"
+  precise.empty_result: "hook_ask"
+
+# ---
+# 精准下载轮次新增: source_id 列表精准下载用例
+# (live 实证: stripe82 CALIBSTARS_* 2ID->2行; ps1_source_id 线上为空 -> hook ask)

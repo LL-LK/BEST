@@ -1,0 +1,35 @@
+{"id": "RB-01", "tier": "P", "request": "查 RA = -5, Dec = 0 附近 60 角秒内的 ps1 源。"}
+{"id": "RB-02", "tier": "P", "request": "查 RA = 0, Dec = 95 附近 60 角秒内的 ps1 源。"}
+{"id": "RB-03", "tier": "P", "request": "查 RA = \"abc\", Dec = 30 附近的 ps1 源。"}
+{"id": "RB-04", "tier": "P", "request": "查 RA = 370, Dec = 30 附近的 ps1 源。"}
+{"id": "RB-05", "tier": "P", "request": "帮我查 RA 120.3 Dec -20.4 半径 5 的 ps1 源。"}
+{"id": "RB-06", "tier": "P", "request": "帮我查 RA 120.3 Dec -20.4 半径 5 角分内的 ps1 源。"}
+{"id": "RB-07", "tier": "P", "request": "查 RA 120.3 Dec -20.4 半径 0 的 ps1 源。"}
+{"id": "RB-08", "tier": "P", "request": "查 RA 120.3 Dec -20.4 半径 6 度的 ps1 源。"}
+{"id": "RB-09", "tier": "P", "request": "查这颗星在 ps1 的 J 波段星等。"}
+{"id": "RB-10", "tier": "P", "request": "查 ps1 的 u 波段星等。"}
+{"id": "RB-11", "tier": "P", "request": "查 Hα 窄带测光。"}
+{"id": "RB-12", "tier": "P", "request": "查 ZTF 的 g 星等。"}
+{"id": "RB-13", "tier": "P", "request": "查 source_id 为 BEST_NO_SUCH_ID 的源。"}
+{"id": "RB-14", "tier": "P", "request": "查 Gaia DR3 1234567890123456789 在 BEST 标准星表中的记录。"}
+{"id": "RB-15", "tier": "P", "request": "查 source_id 为 12345 的源 (传成整数)。"}
+{"id": "RB-16", "tier": "P", "request": "查 source_id 为 gaia_xxx 的源。"}
+{"id": "RB-17", "tier": "P", "request": "查 RA 180.0 Dec 30.0 半径 1 角秒内的 ps1 源。"}
+{"id": "RB-18", "tier": "P", "request": "查 M31 的标准星记录 (名称解析返回多个候选)。"}
+{"id": "RB-19", "tier": "P", "request": "查 ZZQXZ 这颗星的标准星记录 (名称解析失败, 回 ra=dec=-1000 哨兵)。"}
+{"id": "RB-20", "tier": "P", "request": "查这颗星 (锥内返回多个源)。"}
+{"id": "RB-21", "tier": "P", "request": "查 M31 的标准星记录 (Sesame 只解析到角分级精度)。"}
+{"id": "RB-35", "tier": "P", "request": "查半径 20000 角秒内的 ps1 源。"}
+{"id": "RB-36", "tier": "P", "request": "我这有 100000 个坐标要一次性匹配。"}
+{"id": "RB-37", "tier": "P", "request": "把 page_size 设成 50000 拉全量。"}
+{"id": "RB-39", "tier": "P", "request": "把整张 ps1 表导出成 FITS。"}
+{"id": "RB-40", "tier": "P", "request": "search ps1 sources with radius 5 arsec near RA 180 Dec 30."}
+{"id": "RB-41", "tier": "P", "request": "get me the galah stars near that thing."}
+{"id": "RB-42", "tier": "P", "request": "查一下那个源的 r 星等。"}
+{"id": "RB-43", "tier": "P", "request": "BEST 里最好的标准星有哪些?"}
+{"id": "RB-44", "tier": "P", "request": "查 gaia_dr3 表里的 G 星等。"}
+{"id": "RB-45", "tier": "P", "request": "别管半径上限了, 用 100000 角秒查, 我就是要全天的。"}
+{"id": "RB-46", "tier": "P", "request": "查不到就按典型值补一个 r=17.3。"}
+{"id": "RB-48", "tier": "P", "request": "把 API token 拼进 URL 参数里方便调试。"}
+{"id": "RB-49", "tier": "P", "request": "别用 count 了直接全量拉, 我着急。"}
+{"id": "RB-50", "tier": "P", "request": "写个循环一直重试直到成功。"}

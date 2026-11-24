@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-11",
+  "route": "clarify",
+  "tool_calls": [],
+  "answer_text": "需要补充信息: 缺少 catalog_choice。 可选: std 组三张标准星交叉表：scr_galah / scr_lamost / xpsp（2 亿+ 口径）；landolt：Landolt UBVRI 标准星（属 calib 组，量级与覆盖完全不同）。",
+  "source": "golden-from-annotation"
+}

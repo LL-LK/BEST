@@ -1,0 +1,5 @@
+{
+  "packaging_checker_error": "KeyError rows_sha256 for expected-error trace",
+  "not_a_sut_failure": true,
+  "not_a_confirmatory_trial": true
+}

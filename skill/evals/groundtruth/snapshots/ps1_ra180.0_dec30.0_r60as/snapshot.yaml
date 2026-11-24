@@ -1,0 +1,19 @@
+snapshot_id: ps1_ra180.0_dec30.0_r60as
+kind: L
+catalog: ps1
+columns: [ps1_class_star, ps1_dec, ps1_ra, ps1_rpsf, ps1_snr, ps1_source_id]
+row_count: 2
+data_version: ps1@2026-09-28
+page_size: 1000
+sort_key: ps1_source_id
+fetched_at: 2026-09-28
+endpoint:
+  submit: /data/best/ps1/q
+  page: /data/best/sqlid/{sqlid}?output.fmt=csv&rows=1000&page=1
+  count: /data/best/sqlid/{count}/getcount
+note: |
+  L 类 (素材反推构造, 零联网): pages/page_0001.csv 与 rows_full.csv 逐字节拷贝自
+  best_data/best_ps1_ra180.0_dec30.0_r60arcsec.csv (真实 live 导出: UTF-8 BOM,
+  ps1_ 前缀表头, BEST_SIM_0001/0002 两行)。
+  phase1.html 的 sqlid 为占位 (s0002) — 素材是导出文件, 无真实查询会话。
+  count.json 的 total=2 = 素材数据行数。

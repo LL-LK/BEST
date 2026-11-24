@@ -1,0 +1,40 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "scr_lamost",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 60.0
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/scr_lamost/q",
+      "status": 200,
+      "bytes": 27606,
+      "at": "2026-10-12T09:12:00.837015+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/7993/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-12T09:12:01.741085+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s7993?output.fmt=csv&rows=1000&page=1&sort=scr_lamost_source_id&order=asc",
+      "status": 200,
+      "bytes": 2739,
+      "at": "2026-10-12T09:12:02.979344+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": null
+  }
+}

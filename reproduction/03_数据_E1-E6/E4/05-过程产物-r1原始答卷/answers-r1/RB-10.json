@@ -1,0 +1,24 @@
+{
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "ps1 无 u 波段",
+    "缺目标天体"
+  ],
+  "item_id": "RB-10",
+  "tier": "P",
+  "request": "查 ps1 的 u 波段星等。",
+  "route": "clarify",
+  "answer_text": "ps1 查不到 u 波段星等——**Pan-STARRS All-Sky（ps1）不发布 u 波段**，它只有 g、r、i、z、y 五个波段的 PSF 星等，对应列 `ps1_gpsf` / `ps1_rpsf` / `ps1_ipsf` / `ps1_zpsf` / `ps1_ypsf`。用 u 波段去约束会被协议层直接拒绝（报 `BEST catalogue 'ps1' publishes no 'u'-band magnitude (available bands: g, i, r, y, z)`），不是“没查到 0 行”，所以我不会去发这个查询，也不会给你编一个 u 波段数值。\n\n另外，这条请求还缺一个关键信息：**没有指定目标天体**（既没给天体名，也没给坐标和半径），所以即便换成 ps1 支持的波段也无法定位到具体源。\n\n请补齐两点，我立刻查：\n1. 波段——如果确实要 u 波段，得换成发布 u 波段的表，例如 `uss_dr1`（`u_pstotal`）、`smss_dr4`（`upsf`）、`splus_dr4`（`u_pstotal`）、`stripe82`（`u_h22`）、`landolt`（`umag`）；若目标就是 ps1，请从 g/r/i/z/y 里选一个。\n2. 目标——天体名（可走 `/nss/solve` 解算坐标）或 ra/dec（度）+ 检索半径（角秒）。",
+  "run_id": "r1"
+}

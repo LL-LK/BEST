@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-20",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "“这个字段”你没点名，我不敢替你认定是哪个列；不过结论可以先给你：BEST 里没有逐历元星等。\n它是均一定标（single-epoch mean magnitude）数据库——气消光校正、零点标定、仪器效应修正之后的单次定标星等，比如 ps1_rpsf（PSF 星等）、ps1_rpsf_corr（改正后）、ps1_rpsf_err（误差）、gaia_dr3_18_phot_g_mean_mag、splus_dr4_r_pstotal，都是“一个数”，不是随时间变化的序列。命名里的 mean 是“对多帧取加权平均后的定标星等”，不是“按历元分别给”。\n唯一看起来像时序的列是 gaia_dr3_18 里的布尔标记 gaia_dr3_18_has_epoch_photometry、has_epoch_rv——它们只表示“Gaia 那边有没有逐历元测光/多历元视向速度”，标记为真的那个量本身不在 BEST 站内，量值要去 Gaia DR3 官方档案取。\n所以：如果你要的是“这个源过去五年的光变/差分星等”，站内没有（要另去时序源，如 ZTF/TESS/ASAS-SN）；如果你要的只是“这个源在 BEST 的定标星等是多少”，我随时能查。\n告我具体列名（哪张表、哪一列，例如 ps1_rpsf 或 gaia_dr3_18_phot_g_mean_mag），我逐列给你单位、量纲、是不是改正值、误差列配对。",
+  "notes": "指代不明的元数据问题 → clarify（零请求），同时把“BEST 是均一定标、无逐历元测光，has_epoch_photometry 仅为 Gaia 侧布尔标记”的领域结论讲清。"
+}

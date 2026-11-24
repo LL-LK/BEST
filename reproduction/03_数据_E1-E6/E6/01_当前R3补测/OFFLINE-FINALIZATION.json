@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-11T17:29:23.160558+08:00",
+  "collector_exit_code": 1,
+  "reason": "汇总阶段重新读取配置时缺 API 密钥",
+  "collection_complete": true,
+  "sampling_parameters_changed": false,
+  "recollected_slots": 0,
+  "network_calls": 0,
+  "credentials": {
+    "exact_known_api_key_scan_available": false,
+    "reason": "收尾时本机配置已无 API 密钥；仅离线统计，不恢复或使用认证。"
+  },
+  "report": "<USER_HOME>/Documents/论文相关/AI Ready/Program/AI/temp/e6-formal/batches/E6-R3-supplement-20261011-1791689271010679000/reports/1791710957919261000",
+  "analysis_only_config_override": true
+}

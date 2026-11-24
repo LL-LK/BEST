@@ -1,0 +1,11 @@
+{
+  "purpose": "package portability reproduction check, not a new confirmatory experiment",
+  "original_accepted_run": "e2-v2-20d9fd4d7fdb4ee48cb7f81bd5e13105",
+  "replayed_units": 63,
+  "cases_passed": 21,
+  "independent_gold_verified": true,
+  "full_request_output_and_error_traces_equal_to_accepted": true,
+  "first_packaging_checker_failure": "expected-error traces lack rows_sha256; first checker accessed it unconditionally; original E2 run unaffected",
+  "checker_fixed_to_compare_all_fields_except_original_run_id": true,
+  "source_results_unchanged": true
+}

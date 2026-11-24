@@ -1,0 +1,21 @@
+{
+  "task_id": "NL2T-15",
+  "route": "answer",
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60.0,
+        "catalog": "gaia_dr3_18",
+        "columns": [
+          "gaia_dr3_18_phot_g_mean_mag"
+        ],
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "已按工具面完成查询并汇报结果 (含 total/returned/truncated 三元组)。",
+  "source": "golden-from-annotation"
+}

@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-13
+utterance: 半径 6 度范围内都给我列出来。
+category: convert
+expect_first_tool: none
+reruns: 5
+stability_class: reject_over_limit
+conclusion_card_spec:
+  kind: refusal
+  key_entities:
+  - E_INVALID_INPUT
+relative_time_expression: false
+notes: 映射 E1 NL2T-13; 判稳维度 reject_over_limit; 禁相对时间表述 (硬约束)

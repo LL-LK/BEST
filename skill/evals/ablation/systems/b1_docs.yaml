@@ -1,0 +1,55 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/b1_docs.yaml — B1 文档增强 (有 BEST 文档, 不能查)
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 B1 列 / §3.2。
+# **B1 装配红线 (§3.2)**: 文档必须"去技能化" — 只给**事实性**文档 (有哪些表、
+# 列名、协议、单位), **不给**领域语义规则与拒绝规则 (那属于 Skill, 是 B3 独占的)。
+# 否则 B1 会变成"半个 B3", Δ2 被人为压小, 实验失去鉴别力。
+system:
+  id: B1
+  kind: baseline
+  label: "B0 + BEST 公共文档 (明确告知无法查询)"
+  role: "Δ1 — 量『告诉它 BEST 是什么』值多少"
+  # 不给工具面; 数据通路明确关闭
+  # 数据通路明确关闭
+  tool_face: none
+  components:
+    general_llm: true
+    best_site_docs: true
+    # 红线: 有文档但不能查
+    data_path: false
+    tool_signatures: false
+    param_validation: false
+    # 去技能化: 只给裸列名清单, 不给波段→列语义规则
+    field_semantics: false
+    # 去技能化: 不给拒绝规则与理由码表
+    refusal_rules: false
+    provenance: false
+    post_verify: false
+    unified_envelope: false
+  envelope_keys: []
+  docs_injected:
+    - "references/best-database-guide.md (公共说明: 12 张可查表 / 端点 / 协议)"
+    - "references/site-endpoints-and-interactions.md (表单键集 / 分页 / 哨兵形态)"
+    - "references/photometric-systems.md 的**单位与波段通识段** (不含 BEST 专属映射规则)"
+  docs_withheld:
+    - "SKILL.md (Skill 约束与领域知识 — B3 独占)"
+    - "references/tools.schema.json (7 工具签名)"
+    - "CATALOG_MAG_COLUMNS 波段→列映射表 / describe_catalog 语义段"
+    - "拒绝理由码表 / out_scope 段 / 结果后验证清单"
+  applicable_metrics: [ESR_know, ESR_full, HR_any, HR_param, HR_num, HR_claim,
+                       RejectAcc, OverRejectRate, MissedClarify, AvgTurns]
+  na_metrics: [ToolSetF1, ParamF1, ParamHallucination, RowF1, FieldConsistency,
+               TruncTriple, ESR_data, AvgCalls, http_requests]
+  na_reason: >
+    B1 无数据通路 — 取数类指标结构性不可完成, 标 N/A 不进分母; ESR_data 记 0 并
+    注明"结构性不可完成" (不是缺陷)。C/R/S 类不查库也能答, 是 B1 的真正试金石。
+  llm:
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+  notes: >
+    B1 是量"文档知识贡献"的关键系统: 它与 B0 的差 = Δ1 (纯文档上下文);
+    B1 与 B3 在 C/R/S 类上的差 = Skill 独占的约束与领域知识 (这正是 §5.1 强调的
+    "只有 C/R 类才能公平量出文档知识值多少")。

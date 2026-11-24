@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-16
+utterance: 在 RA=180.0、Dec=30.0、半径 60″ 内，要 S-PLUS 的 r 波段星等。
+category: convert
+expect_first_tool: cone_search
+reruns: 5
+stability_class: band_column_mapping
+conclusion_card_spec:
+  kind: value
+  key_numbers:
+  - magnitude
+relative_time_expression: false
+notes: 映射 E1 NL2T-16; 判稳维度 band_column_mapping; 禁相对时间表述 (硬约束)

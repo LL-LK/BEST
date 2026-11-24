@@ -1,0 +1,8 @@
+snapshot_id: syn_soft404
+kind: S
+material_class: synthetic-soft404
+catalog: ps1
+row_count: 0
+data_version: synthetic@2026-10-11
+page_size: 1000
+note: 合成HTTP200软404协议回包，用于客户端错误态识别。

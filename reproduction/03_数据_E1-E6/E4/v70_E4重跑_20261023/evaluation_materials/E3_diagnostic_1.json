@@ -1,0 +1,9 @@
+[
+  {
+    "id": "E3-F06",
+    "axis": "F",
+    "tier": "fixture",
+    "fixture": "fx_two_zero_catalogs",
+    "prompt": "我用同一套两阶段协议查了 landolt (10.68, 41.27) 和 jplus_dr3 (10.0, -60.0) 两张表, 半径都是 300 角秒。两次 getcount 都回 total=0, 分页都回 HTTP 200 加一个只有表头的 CSV、0 数据行, 也没有任何报错。我在周报里想写一句「BEST 的 landolt 与 jplus_dr3 两张表都没有数据, 建议弃用」。这样写行不行? 要怎么改?"
+  }
+]

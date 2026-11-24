@@ -1,0 +1,38 @@
+{
+  "gold_id": "gold_boundary_radius0",
+  "case_id": "boundary_radius0",
+  "snapshot_id": "sha256:5090928c109533a022ac8bc758feb5844b32fc432b881de7bc70cbce863d6da7",
+  "data_version": "ps1@2026-10-04-live",
+  "generator": {
+    "script": "gen_gold.py",
+    "script_sha256": "sha256:691458a7a103c9cc31049152171a0af38296e9ceb7cc8b348cb55fec455827c0"
+  },
+  "rows_source": "snapshot:live-2026-10-04/live_raw_ps1_r0.0as (error-state, 无行集)",
+  "key_field": "(ra,dec)@9digits",
+  "row_keys": [],
+  "row_count": 0,
+  "field_values": {},
+  "null_semantics": {},
+  "unit_map": {},
+  "precision_map": {},
+  "ordering": {
+    "key": null,
+    "order": null,
+    "sequence": [],
+    "declared": false
+  },
+  "pagination": {
+    "page_size": 1000,
+    "pages": 0,
+    "page_hashes": [],
+    "page_hash_algo": "sha256(json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(',', ':')))"
+  },
+  "truncation": {
+    "expected_total": 0,
+    "expected_truncated": false,
+    "expected_returned": 0
+  },
+  "result_state": "error",
+  "expected_error_code": "E_INVALID_INPUT",
+  "notes": "金标准: result_state=error, error_code=E_INVALID_INPUT。src/scripts/io.py validate_search_radius 合法域 (0, 18000] 为开区间 — radius=0 在 L2 工具层 就必须显式拒绝 (E4 RB-07 同口径: 非正半径不得当成\"不限\")。M5 四态判据: 拒绝路径必须报 ERROR, 不得静默按 0 查询、不得降级成 EMPTY (0 行)。 d <= radius 的等号边界由 cone_5as (4.976\" 进 / 5.814\" 出) 与 boundary_page_exact 覆盖 (本用例钉的是\"0 半径根本不该走到服务端\")。\n"
+}

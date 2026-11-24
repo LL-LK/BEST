@@ -1,0 +1,361 @@
+[
+  {
+    "task_id": "REPRO-10",
+    "repeat": 1,
+    "reason": "最终输出不符合冻结 JSON 格式",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-10/repeat-1/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-26",
+    "repeat": 3,
+    "reason": "最终输出不符合冻结 JSON 格式",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-26/repeat-3/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-26",
+    "repeat": 2,
+    "reason": "最终输出不符合冻结 JSON 格式",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-26/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-21",
+    "repeat": 1,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:11"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-21/repeat-1/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-21",
+    "repeat": 4,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:11",
+      "snapshot_miss:17"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-21/repeat-4/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-21",
+    "repeat": 2,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:22",
+      "snapshot_miss:26",
+      "snapshot_miss:30",
+      "snapshot_miss:36",
+      "snapshot_miss:46"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-21/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-21",
+    "repeat": 5,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "snapshot_miss:9",
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-21/repeat-5/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-27",
+    "repeat": 2,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:18"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-27/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-11",
+    "repeat": 1,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:17",
+      "snapshot_miss:21",
+      "snapshot_miss:25",
+      "snapshot_miss:31"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-11/repeat-1/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-11",
+    "repeat": 4,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:43",
+      "snapshot_miss:47",
+      "snapshot_miss:51",
+      "snapshot_miss:57"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-11/repeat-4/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-11",
+    "repeat": 3,
+    "reason": "NaN 工具回包序列化中止，工具结果与成本对账存在缺段",
+    "recorded_error": "Out of range float values are not JSON compliant: nan",
+    "validation_errors": [
+      "tool_pairing_incomplete",
+      "final_answer_missing_or_duplicate",
+      "run_total_cost_mismatch"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-11/repeat-3/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-11",
+    "repeat": 2,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:32",
+      "snapshot_miss:36",
+      "snapshot_miss:40"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-11/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-11",
+    "repeat": 5,
+    "reason": "最终输出不符合冻结 JSON 格式",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-11/repeat-5/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-16",
+    "repeat": 4,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:16"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-16/repeat-4/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-16",
+    "repeat": 3,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "snapshot_miss:11",
+      "snapshot_miss:17",
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-16/repeat-3/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-16",
+    "repeat": 2,
+    "reason": "最终输出不符合冻结 JSON 格式",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-16/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-16",
+    "repeat": 5,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:32"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-16/repeat-5/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-08",
+    "repeat": 3,
+    "reason": "推理或生成耗尽输出预算，未完成答案",
+    "recorded_error": "模型响应未完成、有错误或缺实际模型标识",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-08/repeat-3/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-07",
+    "repeat": 1,
+    "reason": "最终输出不符合冻结 JSON 格式",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-07/repeat-1/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-07",
+    "repeat": 2,
+    "reason": "推理或生成耗尽输出预算，未完成答案",
+    "recorded_error": "模型响应未完成、有错误或缺实际模型标识",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-07/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-14",
+    "repeat": 1,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:11",
+      "snapshot_miss:18",
+      "snapshot_miss:23",
+      "snapshot_miss:29",
+      "snapshot_miss:36",
+      "snapshot_miss:42",
+      "snapshot_miss:52",
+      "snapshot_miss:56",
+      "snapshot_miss:64"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-14/repeat-1/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-14",
+    "repeat": 4,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:11",
+      "snapshot_miss:17"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-14/repeat-4/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-14",
+    "repeat": 3,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:15",
+      "snapshot_miss:21",
+      "snapshot_miss:35",
+      "snapshot_miss:41",
+      "snapshot_miss:45",
+      "snapshot_miss:49",
+      "snapshot_miss:53",
+      "snapshot_miss:57"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-14/repeat-3/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-14",
+    "repeat": 2,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:33",
+      "snapshot_miss:37",
+      "snapshot_miss:43",
+      "snapshot_miss:47",
+      "snapshot_miss:51",
+      "snapshot_miss:55",
+      "snapshot_miss:59",
+      "snapshot_miss:63",
+      "snapshot_miss:69",
+      "snapshot_miss:73",
+      "snapshot_miss:79",
+      "snapshot_miss:83",
+      "snapshot_miss:87"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-14/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-14",
+    "repeat": 5,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "R3 含未冻结的网络请求，不能算有效回放",
+    "validation_errors": [
+      "snapshot_miss:13",
+      "snapshot_miss:17",
+      "snapshot_miss:33",
+      "snapshot_miss:44",
+      "snapshot_miss:60",
+      "snapshot_miss:64",
+      "snapshot_miss:70",
+      "snapshot_miss:74",
+      "snapshot_miss:78",
+      "snapshot_miss:82",
+      "snapshot_miss:86"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-14/repeat-5/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-22",
+    "repeat": 2,
+    "reason": "网络分块响应中断（Response ended prematurely）",
+    "recorded_error": "Response ended prematurely",
+    "validation_errors": [
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-22/repeat-2/attempt-1.jsonl"
+  },
+  {
+    "task_id": "REPRO-15",
+    "repeat": 3,
+    "reason": "未收录的冻结回包分支",
+    "recorded_error": "最终输出不是已冻结要求的 JSON；原文保留，不当成功答案",
+    "validation_errors": [
+      "snapshot_miss:11",
+      "snapshot_miss:17",
+      "snapshot_miss:23",
+      "snapshot_miss:27",
+      "snapshot_miss:36",
+      "snapshot_miss:41",
+      "final_answer_missing_or_duplicate"
+    ],
+    "observed_http_errors_including_retries": [],
+    "trace": "lanes/R3/REPRO-15/repeat-3/attempt-1.jsonl"
+  }
+]

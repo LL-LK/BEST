@@ -1,0 +1,25 @@
+{
+  "schema": "e5-minimal-worker-image-v1",
+  "python": "3.12.3",
+  "copied_binaries": {
+    "/lib/x86_64-linux-gnu/libc.so.6": "8db37cf3f2169f59a0f07ef1fea308c35656668c64c8ff294e1860f4121eb161",
+    "/lib/x86_64-linux-gnu/libcap.so.2": "6ac6abc86ac891c6e13486470e26f1d939f47fda9e6b5d5508a7f5ec881adc84",
+    "/lib/x86_64-linux-gnu/libexpat.so.1": "c42ff317838b4b4639e2ea801905f0317177c6df7e31b2f0d0240e3c3ac0cfde",
+    "/lib/x86_64-linux-gnu/libm.so.6": "e9c4b28d340e415b8137480ec442662f981e1399386c5931dae0e886e3639e91",
+    "/lib/x86_64-linux-gnu/libpcre2-8.so.0": "e00576d71d81d3ba0cfa4903c835a44a8723aac96f72f79ff75200b4cff9071b",
+    "/lib/x86_64-linux-gnu/libselinux.so.1": "0ec0843463f90e227b0e138e1f379774f50b5514bd7f5dbd4c8a87aca0aa6670",
+    "/lib/x86_64-linux-gnu/libz.so.1": "9b64150b28505a33d6bc3ecf709c279f6de97a1c184dbda65d06ee4537f6d286",
+    "/lib64/ld-linux-x86-64.so.2": "cd4df4f3c7b83673d61189bf2eaebd33ca4f2853ab9772b8a25e025ef99b1e81",
+    "/usr/bin/bwrap": "52231e1caf55bcbc667b269f49c63599a6f7db4767ae6a039580d0ff853db712",
+    "/usr/bin/dash": "86d31f6fb799e91fa21bad341484564510ca287703a16e9e46c53338776f4f42",
+    "/usr/bin/env": "0aefff8f912fb75716c5d4de3b6acde93edbe8fa280fc8ee895c1226d3e373ef",
+    "/usr/bin/id": "9f2e8d80e1c357b889e1b827566e882411ddc6ff45a70196e808f00e62a6c7c5",
+    "/usr/bin/python3.12": "1643dacd9feaedc58f3cc581e4d22577dfe25c09b10282936186ccf0f2e61118",
+    "/usr/bin/readlink": "645a5f1f1f2aa9639a1fa1ac0a0b7e9377a2b963baf62d3952a3ce02715e1bf7"
+  },
+  "home_copied": false,
+  "credentials_copied": false,
+  "repo_copied": false,
+  "tar_sha256": "1ac48095a723cd75d35bf71d263a8a84268a5daa935996f914d82a48eaf4d759",
+  "tar_bytes": 77608960
+}

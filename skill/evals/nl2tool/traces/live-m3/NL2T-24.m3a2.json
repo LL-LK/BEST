@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-24",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "reject",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "上传这条路我走不了，也不建议你绕：站点的自建星表区（/data/best/jobs，User-Defined Catalog，上传 FITS 滤光片响应曲线生成标准星）必须登录——未登录访问是 308 → /jobs/ 再 302 到站点表单登录页，第一关是 BEST 站点账号的 Django 会话，NADC 通行证 OAuth 只是登录页里的第二跳；本 skill 的 OAuth 身份轨还没拿到 NADC 应用审批，状态是 blocked-on-approval，所以这条路现在是关着的。而且这条区上传的是“测光系统/滤光片响应”，不是你手头的源表。\n不用登录的替代（推荐）：把坐标贴给我，ra,dec 每行一个（ICRS，度），可以带第三列你自己的 id 用于回连。我用 crossmatch_batch 一次提交给服务端做 proximity 匹配——实测 1000 个坐标可用（约 3 s），响应自带 inputobjs_input_line / inputobjs_input_ra / inputobjs_input_dec / inputobjs_dist_arcsec，服务端直接算角距；默认 nearest_only=true、radius_arcsec=3（角秒），要改一起说。规模再大就分批提交。\n两点提醒：官网口径是批量上传 CSV 只含 ra/dec 两个列头、单文件 <1000 万源；源更多就得走 Catalog 区的整表下载，那条同样需要登录。",
+  "notes": "上传属需登录的 /jobs 作业流（第一跳站点账号、OAuth 未获批）→ reject；替代 = 客户端传坐标的 crossmatch_batch（匿名可用，实测 N=1000）。"
+}

@@ -1,0 +1,14 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": false,
+  "correct_value": null,
+  "declared_issues": [],
+  "item_id": "RB-11",
+  "tier": "P",
+  "request": "查 Hα 窄带测光。",
+  "route": "clarify",
+  "answer_text": "这条请求目前缺可执行的检索要素，我先澄清两点再动手：① **BEST 里没有名为「Hα」的滤光片或星表**。数据库是均一定标的标准星/多波段测光库，最接近 Hα（6563 Å）的是 **J0660 窄带**（中心约 6600 Å，覆盖 Hα + [NII]），它以列的形式出现在 `jplus_dr3`、`splus_dr4`、`uss_dr1` 以及 J-PAS 系（`xpsp`）等表中；② **你还没给检索目标**。请补充目标天体的坐标（RA/Dec，ICRS，单位度）或名称，并说明要查哪张表/哪些波段，我再发起锥形检索（半径按角秒）取回该窄带测光列。另需提醒：BEST 提供的是静态多波段测光，不是 Hα 发射线成像——若你要的是星云/发射线的 Hα 图像，BEST 不是合适来源。",
+  "run_id": "r1"
+}

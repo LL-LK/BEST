@@ -1,0 +1,37 @@
+{
+  "task_id": "NL2T-14",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 187.5,
+        "dec": 20.0,
+        "radius_arcsec": 60,
+        "catalog": "ps1",
+        "columns": [
+          "ps1_ra",
+          "ps1_dec",
+          "ps1_class_star",
+          "ps1_gpsf",
+          "ps1_gpsf_err",
+          "ps1_rpsf",
+          "ps1_rpsf_err",
+          "ps1_ipsf",
+          "ps1_ipsf_err",
+          "ps1_zpsf",
+          "ps1_ypsf"
+        ],
+        "sort": "ps1.ra",
+        "order": "asc",
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "坐标换算（时分秒 → 十进制度，这是必须做的一步）：\n- RA：12h30m00s = 12 × 15 + 30 × (15/60) = 180 + 7.5 = 187.5°\n- Dec：+20°00′00″ = +20.0°\n- 两者都是 ICRS 十进制度，直接作为 ra / dec 下发（ra 范围 [0,360)，dec 范围 [-90,90]）。\n\n半径你没说「附近」是多近，我先按 60 角秒（= 1 角分）取了个小圈，查的是 ps1 全天表。如果你想要 5 角分，那是 300 角秒；想换 gaia_dr3_18 / splus_dr4 / stripe82 等其他表也告我一声，我重跑一次就行。\n\n我做了什么：\n1. 服务端原生锥检索（不是客户端盒式近似），半径按角秒下发；\n2. 裁了列投影（位置 + g/r/i/z/y 的 PSF 星等与误差 + class_star），全天表 30 列不必全拉；\n3. 建会话时就定死排序（sort + order），否则翻页行序不稳定。\n\n返回是统一信封，四块都值得看：\n- data：命中行（带 ps1_ 前缀的列名，外加 inputobjs_dist_arcsec = 每行到圆心的角距）\n- status.truncated：是否被 max_rows（1000）截断\n- cost：真实 wire 请求数（建会话 + 取总数 + 取首页 = 3 次）\n- provenance：stable_uri 形如 best://ps1/cone?ra=187.5&dec=20&sr=60，可复现这次查询；data_hash 是这批数据的内容指纹\n\n读数提醒：ps1 缺某波段测光会回 ≈-1000 哨兵，别当星等；ps1 是单历元定标星等，没有逐历元值。\n\n要换半径、换表，或把整页取全（fetch_page 续页），告我一声。",
+  "notes": "12h30m00s → RA 187.5°、+20°00′00″ → +20.0°；半径未指定故显式取 60 角秒并在回答中声明，换算与单位口径都写明。"
+}

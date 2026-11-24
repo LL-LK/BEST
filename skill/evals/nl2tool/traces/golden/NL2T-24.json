@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-24",
+  "route": "reject",
+  "tool_calls": [],
+  "answer_text": "不支持该请求 (NO_UPLOAD_JOB), 无法执行。 建议: 坐标上传生成标准星的 /jobs 端点必须登录（OAuth），工具面不暴露该能力；若你已有坐标列表：用 crossmatch_batch 做服务端 proximity 匹配（coords 内联一次提交，无需上传建 job）。",
+  "source": "golden-from-annotation"
+}

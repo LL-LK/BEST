@@ -1,0 +1,4315 @@
+{
+  "system": "S-A",
+  "generated_at": "2026-10-04T06:26:03.162000+00:00",
+  "n_items": 36,
+  "n_fixture": 32,
+  "n_live": 4,
+  "n_answered": 36,
+  "prescreen": {
+    "S-A": {
+      "n_items": 36,
+      "static_as_lc_triggered": 0,
+      "sentinel_misuse_count": 1,
+      "unsourced_number_count": 248,
+      "fatal_candidate_count": 5,
+      "unsupported_claim_count": 3,
+      "qualifier_missing_count": 11,
+      "ungr": 0.43130434782608695,
+      "sfa": "待 L2 判定",
+      "mcnemar": "待 L2 判定",
+      "ucr": "待 L2 判定",
+      "slr": "待 L2 判定",
+      "rqc": "待 L2 判定",
+      "agreement": "待 L2 判定",
+      "arbitration": "待 L2 判定"
+    }
+  },
+  "results": [
+    {
+      "item_id": "E3-A01",
+      "axis": "A",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "光变曲线",
+            "pos": 4,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          },
+          {
+            "term": "光变曲线",
+            "pos": 555,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 32,
+          "traceable": [
+            {
+              "value": 16.812,
+              "pos": 427
+            },
+            {
+              "value": 16.204,
+              "pos": 436
+            },
+            {
+              "value": 16.043,
+              "pos": 445
+            },
+            {
+              "value": 16.001,
+              "pos": 454
+            },
+            {
+              "value": 15.988,
+              "pos": 463
+            },
+            {
+              "value": 180.0199,
+              "pos": 595
+            },
+            {
+              "value": 30.0501,
+              "pos": 612
+            },
+            {
+              "value": 1.0,
+              "pos": 625
+            },
+            {
+              "value": 180.0123,
+              "pos": 630
+            },
+            {
+              "value": 30.0456,
+              "pos": 639
+            },
+            {
+              "value": 1.0,
+              "pos": 729
+            },
+            {
+              "value": 16.812,
+              "pos": 816
+            },
+            {
+              "value": 16.204,
+              "pos": 823
+            },
+            {
+              "value": 0.012,
+              "pos": 855
+            },
+            {
+              "value": 0.008,
+              "pos": 874
+            },
+            {
+              "value": 0.092,
+              "pos": 948
+            },
+            {
+              "value": 128.0,
+              "pos": 1008
+            },
+            {
+              "value": 0.0,
+              "pos": 1031
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 30.0,
+              "pos": 55,
+              "fragment": " 表里根本没有时间轴。ps1 位置表共 30 列（ps1_ra、ps1_dec、ps"
+            },
+            {
+              "value": 28.0,
+              "pos": 654,
+              "fragment": "0123/30.0456 相距我粗算约 28 角秒（ΔRA=0.0076°=27.4"
+            },
+            {
+              "value": 0.0076,
+              "pos": 664,
+              "fragment": "56 相距我粗算约 28 角秒（ΔRA=0.0076°=27.4″、ΔDec=0.0045°"
+            },
+            {
+              "value": 27.4,
+              "pos": 672,
+              "fragment": "约 28 角秒（ΔRA=0.0076°=27.4″、ΔDec=0.0045°=16.2″"
+            },
+            {
+              "value": 0.0045,
+              "pos": 683,
+              "fragment": "=0.0076°=27.4″、ΔDec=0.0045°=16.2″，按 cos(30.05°"
+            },
+            {
+              "value": 16.2,
+              "pos": 691,
+              "fragment": "=27.4″、ΔDec=0.0045°=16.2″，按 cos(30.05°) 合成约 "
+            },
+            {
+              "value": 30.05,
+              "pos": 703,
+              "fragment": "0.0045°=16.2″，按 cos(30.05°) 合成约 27–28″）。它不是 S"
+            },
+            {
+              "value": 27.0,
+              "pos": 715,
+              "fragment": "″，按 cos(30.05°) 合成约 27–28″）。它不是 S-01 的第二个历"
+            },
+            {
+              "value": 28.0,
+              "pos": 718,
+              "fragment": " cos(30.05°) 合成约 27–28″）。它不是 S-01 的第二个历元，接"
+            },
+            {
+              "value": 0.608,
+              "pos": 832,
+              "fragment": "r = 16.812−16.204 = 0.608，误差按 ps1_gpsf_err=0."
+            },
+            {
+              "value": 0.014,
+              "pos": 885,
+              "fragment": "rpsf_err=0.008 传播为约 0.014；r−i=0.161、i−z=0.042"
+            },
+            {
+              "value": 0.161,
+              "pos": 895,
+              "fragment": ".008 传播为约 0.014；r−i=0.161、i−z=0.042、z−y=0.013"
+            },
+            {
+              "value": 0.042,
+              "pos": 905,
+              "fragment": "0.014；r−i=0.161、i−z=0.042、z−y=0.013。颜色单调变红，形状"
+            },
+            {
+              "value": 0.013,
+              "pos": 915,
+              "fragment": "0.161、i−z=0.042、z−y=0.013。颜色单调变红，形状像一颗被红化的恒星（"
+            }
+          ],
+          "fatal_candidates": [
+            {
+              "kind": "fabricated_extinction",
+              "fragment": "红化的恒星（ps1"
+            }
+          ],
+          "ungr": 0.4375
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 14,
+        "fatal_candidate_count": 1,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-A02",
+      "axis": "A",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "光变曲线",
+            "pos": 443,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 4,
+          "traceable": [
+            {
+              "value": 1.0,
+              "pos": 16
+            },
+            {
+              "value": 1.0,
+              "pos": 545
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 30.0,
+              "pos": 57,
+              "fragment": "结构的结果，不是观测史。\n\nps1 的 30 列里没有任何历元、观测日期、单次曝光列"
+            },
+            {
+              "value": 12.0,
+              "pos": 88,
+              "fragment": "、观测日期、单次曝光列；BEST 全部 12 张可查询表（ps1、stripe82、"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.5
+        },
+        "qualifier_coverage": {
+          "required": [
+            "single_or_coadded"
+          ],
+          "covered": [
+            "single_or_coadded"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 2,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-A03",
+      "axis": "A",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 17,
+          "traceable": [
+            {
+              "value": 12.0,
+              "pos": 93
+            },
+            {
+              "value": 17.432,
+              "pos": 138
+            },
+            {
+              "value": 12.0,
+              "pos": 145
+            },
+            {
+              "value": 17.438,
+              "pos": 176
+            },
+            {
+              "value": 0.011,
+              "pos": 206
+            },
+            {
+              "value": 0.021,
+              "pos": 244
+            },
+            {
+              "value": 1.83,
+              "pos": 286
+            },
+            {
+              "value": 12.0,
+              "pos": 304
+            },
+            {
+              "value": 12.0,
+              "pos": 326
+            },
+            {
+              "value": 0.031,
+              "pos": 583
+            },
+            {
+              "value": 0.028,
+              "pos": 605
+            },
+            {
+              "value": 5.0,
+              "pos": 631
+            },
+            {
+              "value": 1.02,
+              "pos": 645
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 42.0,
+              "pos": 17,
+              "fragment": "本表给不出。stripe82 共 42 列，r 波段只发布 6 个**统计量*"
+            },
+            {
+              "value": 6.0,
+              "pos": 30,
+              "fragment": "pe82 共 42 列，r 波段只发布 6 个**统计量**，没有任何历元时间列（"
+            },
+            {
+              "value": 82.0,
+              "pos": 373,
+              "fragment": "里。要逐历元数据得回原始 Stripe 82 重复观测星表（Ivezić 等），BE"
+            },
+            {
+              "value": 0.0,
+              "pos": 514,
+              "fragment": "il-closed 拒绝而不是静默匹配 0 行）。所以连「放心用」的配套误差/质量"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.23529411764705882
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "single_or_coadded",
+            "missing_or_sentinel"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "single_or_coadded"
+          ],
+          "missing": [
+            {
+              "qualifier": "missing_or_sentinel",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.6666666666666666
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 4,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "missing_or_sentinel"
+        ],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-A04",
+      "axis": "A",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "光变曲线",
+            "pos": 13,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          },
+          {
+            "term": "光变曲线",
+            "pos": 952,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 14,
+          "traceable": [],
+          "derivable": [
+            {
+              "value": 1.0,
+              "pos": 222,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.0,
+              "pos": 273,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 12.0,
+              "pos": 29,
+              "fragment": " 给不出光变曲线，也不给周期。可查询的 12 张表全是定标星表或交叉表，没有一张是时"
+            },
+            {
+              "value": 30.0,
+              "pos": 61,
+              "fragment": "交叉表，没有一张是时序表——ps1 的 30 列、stripe82 的 42 列都没"
+            },
+            {
+              "value": 42.0,
+              "pos": 77,
+              "fragment": "1 的 30 列、stripe82 的 42 列都没有时间/历元列，连 Gaia 侧"
+            },
+            {
+              "value": 180.0123,
+              "pos": 345,
+              "fragment": "e=cone、pos.racenter=180.0123、pos.deccenter=30.04"
+            },
+            {
+              "value": 30.0456,
+              "pos": 368,
+              "fragment": ".0123、pos.deccenter=30.0456、pos.radius=…。**pos."
+            },
+            {
+              "value": 0.0,
+              "pos": 426,
+              "fragment": "角秒**（表单页原文如此），传度会得到 0 行或 360 倍半径；\n3. outp"
+            },
+            {
+              "value": 360.0,
+              "pos": 431,
+              "fragment": "表单页原文如此），传度会得到 0 行或 360 倍半径；\n3. output.fmt "
+            },
+            {
+              "value": 3.0,
+              "pos": 440,
+              "fragment": "传度会得到 0 行或 360 倍半径；\n3. output.fmt 必须提交 ht"
+            },
+            {
+              "value": 4.0,
+              "pos": 528,
+              "fragment": "、丢 sqlid、无法翻页和取总数）；\n4. GET /data/best/sql"
+            },
+            {
+              "value": 180.0123,
+              "pos": 712,
+              "fragment": "具层对应 cone_search(ra=180.0123, dec=30.0456, radiu"
+            },
+            {
+              "value": 30.0456,
+              "pos": 726,
+              "fragment": "ch(ra=180.0123, dec=30.0456, radius_arcsec=…)，返"
+            },
+            {
+              "value": 5.0,
+              "pos": 908,
+              "fragment": "unt 会超时。\n\n拿到结果后能画的是 5 点 SED（ps1_gpsf/rpsf"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.8571428571428571
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "catalog_and_column"
+          ],
+          "missing": [
+            {
+              "qualifier": "single_or_coadded",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            },
+            {
+              "qualifier": "error_or_uncertainty",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.3333333333333333
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 12,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "single_or_coadded",
+          "error_or_uncertainty"
+        ],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-A05",
+      "axis": "A",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 31,
+          "traceable": [
+            {
+              "value": 17.432,
+              "pos": 117
+            },
+            {
+              "value": 12.0,
+              "pos": 154
+            },
+            {
+              "value": 12.0,
+              "pos": 228
+            },
+            {
+              "value": 180.0125,
+              "pos": 324
+            },
+            {
+              "value": 30.0458,
+              "pos": 333
+            },
+            {
+              "value": 0.021,
+              "pos": 573
+            },
+            {
+              "value": 12.0,
+              "pos": 579
+            },
+            {
+              "value": 1.83,
+              "pos": 610
+            },
+            {
+              "value": 11.0,
+              "pos": 644
+            },
+            {
+              "value": 1.24,
+              "pos": 663
+            },
+            {
+              "value": 17.451,
+              "pos": 722
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 1.2,
+              "pos": 3,
+              "fragment": "不能。1.2 mag 的差是**跨巡天、跨仪器的定标"
+            },
+            {
+              "value": 1.0,
+              "pos": 46,
+              "fragment": "差**，不是光变幅度。\n\n三条理由：\n\n1. 量不同源。16.204 来自 ps1"
+            },
+            {
+              "value": 16.204,
+              "pos": 54,
+              "fragment": "幅度。\n\n三条理由：\n\n1. 量不同源。16.204 来自 ps1 表的 ps1_rpsf（"
+            },
+            {
+              "value": 1.0,
+              "pos": 91,
+              "fragment": "ps1_rpsf（Pan-STARRS 1 的 r 带 PSF 星等，是巡天叠加后"
+            },
+            {
+              "value": 2.0,
+              "pos": 213,
+              "fragment": " 口径、不同零点，本来就不该逐点相等。\n2. 统计量不同。单值 vs 12 次中值"
+            },
+            {
+              "value": 3.0,
+              "pos": 255,
+              "fragment": "不构成时间基线，谈不上「变亮/变暗」。\n3. 更该先怀疑的不是光变，而是**交叉匹"
+            },
+            {
+              "value": 180.0123,
+              "pos": 295,
+              "fragment": "匹配错源或消光差**。两表位置 ps1(180.0123/30.0456) 与 stripe82"
+            },
+            {
+              "value": 30.0456,
+              "pos": 304,
+              "fragment": "*。两表位置 ps1(180.0123/30.0456) 与 stripe82(180.012"
+            },
+            {
+              "value": 0.9,
+              "pos": 349,
+              "fragment": "125/30.0458) 我粗算相距约 0.9 角秒（ΔRA=0.0002°=0.72"
+            },
+            {
+              "value": 0.0002,
+              "pos": 360,
+              "fragment": ") 我粗算相距约 0.9 角秒（ΔRA=0.0002°=0.72″、ΔDec=0.0002°"
+            },
+            {
+              "value": 0.72,
+              "pos": 368,
+              "fragment": " 0.9 角秒（ΔRA=0.0002°=0.72″、ΔDec=0.0002°=0.72″"
+            },
+            {
+              "value": 0.0002,
+              "pos": 379,
+              "fragment": "=0.0002°=0.72″、ΔDec=0.0002°=0.72″，合成约 0.9″），大致"
+            },
+            {
+              "value": 0.72,
+              "pos": 387,
+              "fragment": "=0.72″、ΔDec=0.0002°=0.72″，合成约 0.9″），大致是同一片天但"
+            },
+            {
+              "value": 0.9,
+              "pos": 397,
+              "fragment": "c=0.0002°=0.72″，合成约 0.9″），大致是同一片天但需用服务端 inp"
+            },
+            {
+              "value": 1.2,
+              "pos": 442,
+              "fragment": "objs_dist_arcsec 核实；1.2 mag 远超正常定标差，而 ps1 有"
+            },
+            {
+              "value": 0.092,
+              "pos": 477,
+              "fragment": "，而 ps1 有消光列 ps1_ebv=0.092、stripe82 没有消光列，这本身就"
+            },
+            {
+              "value": 1.0,
+              "pos": 680,
+              "fragment": "i2=1.24）也该明显偏高，而它接近 1。另外 stripe82 登记的 r 波"
+            },
+            {
+              "value": 16.204,
+              "pos": 740,
+              "fragment": "2=17.451（视宁度改正），拿它和 16.204 比差 1.25 mag，结论不变。\n\n"
+            },
+            {
+              "value": 1.25,
+              "pos": 750,
+              "fragment": "宁度改正），拿它和 16.204 比差 1.25 mag，结论不变。\n\n要定论必须回原始"
+            },
+            {
+              "value": 82.0,
+              "pos": 782,
+              "fragment": "变。\n\n要定论必须回原始 Stripe 82 的逐历元星等加时间——本表没有。\n\n另"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.6451612903225806
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "system_and_zeropoint",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "system_and_zeropoint"
+          ],
+          "missing": [
+            {
+              "qualifier": "error_or_uncertainty",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.6666666666666666
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 20,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "error_or_uncertainty"
+        ],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-A06",
+      "axis": "A",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 9,
+          "traceable": [
+            {
+              "value": 0.02,
+              "pos": 499
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 12.0,
+              "pos": 45,
+              "fragment": "是定标测光数据库，不是时域巡天。\n\n- 12 张可查询表（ps1、stripe82、"
+            },
+            {
+              "value": 30.0,
+              "pos": 176,
+              "fragment": "orr）里没有一张是时序表；ps1 的 30 列、stripe82 的 42 列都没"
+            },
+            {
+              "value": 42.0,
+              "pos": 192,
+              "fragment": "1 的 30 列、stripe82 的 42 列都没有历元/时间列。有时间维度的只有"
+            },
+            {
+              "value": 2.0,
+              "pos": 410,
+              "fragment": "- 口径要分清：官网首页的 up to 2 billion stars 是全集口径"
+            },
+            {
+              "value": 200.0,
+              "pos": 445,
+              "fragment": " 是全集口径，/std 页的 over 200 million stars 是标准星子"
+            },
+            {
+              "value": 0.01,
+              "pos": 494,
+              "fragment": "数字范围不同，别混用。官方给的 u/v 0.01–0.02 mag、grizy 0.00"
+            },
+            {
+              "value": 0.001,
+              "pos": 514,
+              "fragment": "0.01–0.02 mag、grizy 0.001–0.005 mag 是**单星定标精度"
+            },
+            {
+              "value": 0.005,
+              "pos": 520,
+              "fragment": ".02 mag、grizy 0.001–0.005 mag 是**单星定标精度**，是精度"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.8888888888888888
+        },
+        "qualifier_coverage": {
+          "required": [
+            "subset_scope"
+          ],
+          "covered": [
+            "subset_scope"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 8,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-B01",
+      "axis": "B",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "多历元",
+            "pos": 5,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 11,
+          "traceable": [
+            {
+              "value": 17.432,
+              "pos": 73
+            },
+            {
+              "value": 17.432,
+              "pos": 110
+            },
+            {
+              "value": 12.0,
+              "pos": 117
+            },
+            {
+              "value": 17.438,
+              "pos": 161
+            },
+            {
+              "value": 0.011,
+              "pos": 197
+            },
+            {
+              "value": 0.021,
+              "pos": 235
+            },
+            {
+              "value": 1.83,
+              "pos": 279
+            },
+            {
+              "value": 12.0,
+              "pos": 315
+            },
+            {
+              "value": 12.0,
+              "pos": 364
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 42.0,
+              "pos": 439,
+              "fragment": "时刻都不在表里——stripe82 的 42 列中没有任何历元时间列，也没有逐次星等"
+            },
+            {
+              "value": 82.0,
+              "pos": 481,
+              "fragment": "列。要逐次数据必须回原始 Stripe 82 重复观测星表。\n\n一个附带的口径提醒："
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.18181818181818182
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 2,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-B02",
+      "axis": "B",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 17,
+          "traceable": [
+            {
+              "value": 0.021,
+              "pos": 74
+            },
+            {
+              "value": 12.0,
+              "pos": 80
+            },
+            {
+              "value": 0.011,
+              "pos": 142
+            },
+            {
+              "value": 0.021,
+              "pos": 174
+            },
+            {
+              "value": 12.0,
+              "pos": 181
+            },
+            {
+              "value": 0.011,
+              "pos": 194
+            },
+            {
+              "value": 1.83,
+              "pos": 260
+            },
+            {
+              "value": 1.83,
+              "pos": 293
+            },
+            {
+              "value": 17.451,
+              "pos": 388
+            },
+            {
+              "value": 17.432,
+              "pos": 399
+            },
+            {
+              "value": 0.019,
+              "pos": 409
+            },
+            {
+              "value": 0.021,
+              "pos": 423
+            },
+            {
+              "value": 12.0,
+              "pos": 466
+            },
+            {
+              "value": 0.021,
+              "pos": 578
+            }
+          ],
+          "derivable": [
+            {
+              "value": 0.006,
+              "pos": 186,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0,
+              "pos": 286,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 42.0,
+              "pos": 492,
+              "fragment": "元星等加时间，而 stripe82 的 42 列里没有这两样；这张表也没有正式的星等"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.058823529411764705
+        },
+        "qualifier_coverage": {
+          "required": [
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 1,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-B03",
+      "axis": "B",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 20,
+          "traceable": [
+            {
+              "value": 17.451,
+              "pos": 19
+            },
+            {
+              "value": 12.0,
+              "pos": 195
+            },
+            {
+              "value": 0.019,
+              "pos": 217
+            },
+            {
+              "value": 17.451,
+              "pos": 223
+            },
+            {
+              "value": 17.432,
+              "pos": 230
+            },
+            {
+              "value": 0.021,
+              "pos": 246
+            },
+            {
+              "value": 4.0,
+              "pos": 274
+            },
+            {
+              "value": 19.01,
+              "pos": 304
+            },
+            {
+              "value": 17.898,
+              "pos": 316
+            },
+            {
+              "value": 17.451,
+              "pos": 329
+            },
+            {
+              "value": 17.28,
+              "pos": 342
+            },
+            {
+              "value": 17.233,
+              "pos": 354
+            },
+            {
+              "value": 4.0,
+              "pos": 666
+            },
+            {
+              "value": 0.052,
+              "pos": 674
+            },
+            {
+              "value": 0.045,
+              "pos": 686
+            },
+            {
+              "value": 5.0,
+              "pos": 711
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 1.0,
+              "pos": 42,
+              "fragment": "451，不是 rmmed。\n\n理由：\n\n1. 本仓的星等列映射表里，stripe8"
+            },
+            {
+              "value": 2.0,
+              "pos": 144,
+              "fragment": "mmu 是统计摘要，不在星等列映射里。\n2. SED 拟合要的是与单次视宁度/孔径"
+            },
+            {
+              "value": 3.0,
+              "pos": 210,
+              "fragment": "d 继承 12 次曝光的视宁度系统差。\n3. 两者差 0.019（17.451−1"
+            },
+            {
+              "value": 0.092,
+              "pos": 594,
+              "fragment": "同一源在 ps1 里的 ps1_ebv=0.092，前提是已用 inputobjs_dis"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.2
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "system_and_zeropoint"
+          ],
+          "covered": [
+            "catalog_and_column"
+          ],
+          "missing": [
+            {
+              "qualifier": "system_and_zeropoint",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.5
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 4,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "system_and_zeropoint"
+        ],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-B04",
+      "axis": "B",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 21,
+          "traceable": [
+            {
+              "value": 4.0,
+              "pos": 57
+            },
+            {
+              "value": 12.0,
+              "pos": 76
+            },
+            {
+              "value": 11.0,
+              "pos": 117
+            },
+            {
+              "value": 2.61,
+              "pos": 121
+            },
+            {
+              "value": 0.052,
+              "pos": 156
+            },
+            {
+              "value": 0.045,
+              "pos": 203
+            },
+            {
+              "value": 0.011,
+              "pos": 226
+            },
+            {
+              "value": 4.0,
+              "pos": 232
+            },
+            {
+              "value": 0.052,
+              "pos": 252
+            },
+            {
+              "value": 0.021,
+              "pos": 275
+            },
+            {
+              "value": 19.01,
+              "pos": 519
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 1.0,
+              "pos": 26,
+              "fragment": "段要按低一档的可靠性对待。三条理由：\n\n1. **样本量差 3 倍**：strip"
+            },
+            {
+              "value": 3.0,
+              "pos": 36,
+              "fragment": "对待。三条理由：\n\n1. **样本量差 3 倍**：stripe82_unobs="
+            },
+            {
+              "value": 3.0,
+              "pos": 106,
+              "fragment": "常数」的常规口径，u 的 χ² 只剩约 3 个自由度（r 约 11），2.61 这"
+            },
+            {
+              "value": 2.0,
+              "pos": 172,
+              "fragment": "rms=0.052 的不确定度也很大。\n2. **误差量级差一个档**：strip"
+            },
+            {
+              "value": 2.5,
+              "pos": 281,
+              "fragment": "tripe82_rmrms=0.021（2.5 倍）。u 是最暗、噪声最大的带，所以这"
+            },
+            {
+              "value": 0.01,
+              "pos": 353,
+              "fragment": "的单星定标精度口径也印证这个序：u/v 0.01–0.02 mag 对 grizy 0."
+            },
+            {
+              "value": 0.02,
+              "pos": 358,
+              "fragment": "精度口径也印证这个序：u/v 0.01–0.02 mag 对 grizy 0.001–0"
+            },
+            {
+              "value": 0.001,
+              "pos": 375,
+              "fragment": "01–0.02 mag 对 grizy 0.001–0.005 mag。\n3. **没有配"
+            },
+            {
+              "value": 0.005,
+              "pos": 381,
+              "fragment": "2 mag 对 grizy 0.001–0.005 mag。\n3. **没有配套的硬指标*"
+            },
+            {
+              "value": 3.0,
+              "pos": 392,
+              "fragment": "zy 0.001–0.005 mag。\n3. **没有配套的硬指标**：strip"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.47619047619047616
+        },
+        "qualifier_coverage": {
+          "required": [
+            "single_or_coadded",
+            "error_or_uncertainty",
+            "quality_flag"
+          ],
+          "covered": [
+            "single_or_coadded",
+            "error_or_uncertainty",
+            "quality_flag"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 10,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-B05",
+      "axis": "B",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 28,
+          "traceable": [
+            {
+              "value": 1.83,
+              "pos": 6
+            },
+            {
+              "value": 1.83,
+              "pos": 70
+            },
+            {
+              "value": 12.0,
+              "pos": 98
+            },
+            {
+              "value": 17.451,
+              "pos": 225
+            },
+            {
+              "value": 17.432,
+              "pos": 251
+            },
+            {
+              "value": 0.019,
+              "pos": 260
+            },
+            {
+              "value": 0.021,
+              "pos": 283
+            },
+            {
+              "value": 12.0,
+              "pos": 340
+            },
+            {
+              "value": 2.61,
+              "pos": 419
+            },
+            {
+              "value": 4.0,
+              "pos": 424
+            },
+            {
+              "value": 1.91,
+              "pos": 445
+            },
+            {
+              "value": 12.0,
+              "pos": 450
+            },
+            {
+              "value": 2.04,
+              "pos": 472
+            },
+            {
+              "value": 9.0,
+              "pos": 477
+            },
+            {
+              "value": 1.83,
+              "pos": 498
+            },
+            {
+              "value": 12.0,
+              "pos": 503
+            },
+            {
+              "value": 1.24,
+              "pos": 525
+            },
+            {
+              "value": 11.0,
+              "pos": 530
+            },
+            {
+              "value": 11.0,
+              "pos": 594
+            },
+            {
+              "value": 1.24,
+              "pos": 618
+            }
+          ],
+          "derivable": [
+            {
+              "value": 2.0,
+              "pos": 148,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 1.0,
+              "pos": 37,
+              "fragment": "去查原始数据」，不算探测。三条理由：\n\n1. **表里没有 χ² 的误差列**。你"
+            },
+            {
+              "value": 1.0,
+              "pos": 78,
+              "fragment": "无法从 BEST 判断 1.83 相对 1 到底显著到什么程度——r 波段只有 1"
+            },
+            {
+              "value": 3.0,
+              "pos": 316,
+              "fragment": "是仪器系统差在同一量级活动的直接证据。\n3. **决定性证据不在本表**。要判光变"
+            },
+            {
+              "value": 42.0,
+              "pos": 366,
+              "fragment": "元星等加时间，而 stripe82 的 42 列里既无历元时间列也无逐次星等列。\n\n"
+            },
+            {
+              "value": 1.0,
+              "pos": 574,
+              "fragment": "过来，如果真是 A05 里设想的那种约 1 mag 量级的大振幅变源，g 波段（1"
+            },
+            {
+              "value": 1.0,
+              "pos": 626,
+              "fragment": "起来，而 gmchi2=1.24 接近 1，这削弱了大振幅变源的可能（真实变星的振"
+            },
+            {
+              "value": 82.0,
+              "pos": 687,
+              "fragment": "除）。\n\n要定论：回原始 Stripe 82 逐历元数据算周期和相位，或换一个独立的"
+            }
+          ],
+          "fatal_candidates": [
+            {
+              "kind": "fabricated_amplitude",
+              "fragment": "振幅变源，g 波段（1"
+            }
+          ],
+          "ungr": 0.25
+        },
+        "qualifier_coverage": {
+          "required": [
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "single_or_coadded",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 7,
+        "fatal_candidate_count": 1,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-C01",
+      "axis": "C",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 26,
+          "traceable": [
+            {
+              "value": 2841.55,
+              "pos": 23
+            },
+            {
+              "value": 143.0,
+              "pos": 108
+            },
+            {
+              "value": 3.0,
+              "pos": 394
+            },
+            {
+              "value": 16.2041,
+              "pos": 469
+            },
+            {
+              "value": 0.0,
+              "pos": 508
+            },
+            {
+              "value": 0.0,
+              "pos": 546
+            },
+            {
+              "value": 16.8803,
+              "pos": 697
+            },
+            {
+              "value": 15.6102,
+              "pos": 707
+            },
+            {
+              "value": 1.214,
+              "pos": 799
+            },
+            {
+              "value": 0.0,
+              "pos": 873
+            },
+            {
+              "value": 0.998,
+              "pos": 914
+            }
+          ],
+          "derivable": [
+            {
+              "value": 2.5,
+              "pos": 181,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 1.0,
+              "pos": 11,
+              "fragment": "不能，三重不合法。\n\n1. **量纲不同**。2841.55 是"
+            },
+            {
+              "value": 16.812,
+              "pos": 120,
+              "fragment": "g_n_obs=143 次过镜的均值）；16.812 是 ps1_gpsf，是**星等**。"
+            },
+            {
+              "value": 2.0,
+              "pos": 219,
+              "fragment": "ZP 这根本不是「相减」能解决的问题。\n2. **滤光带不同**。Gaia G 与"
+            },
+            {
+              "value": 1.0,
+              "pos": 252,
+              "fragment": "Gaia G 与 Pan-STARRS 1 的 g 是两套通带（有效波长、带宽、响"
+            },
+            {
+              "value": 16.204,
+              "pos": 495,
+              "fragment": "1；而 ps1 的 rpsf 恰好也是 16.204，两者相减约 0.0，看起来像个完美合理"
+            },
+            {
+              "value": 16.812,
+              "pos": 595,
+              "fragment": "同一系统内 PS1 的颜色：g−r = 16.812 − 16.204 = 0.608，误差"
+            },
+            {
+              "value": 16.204,
+              "pos": 604,
+              "fragment": " 的颜色：g−r = 16.812 − 16.204 = 0.608，误差按 ps1_gps"
+            },
+            {
+              "value": 0.608,
+              "pos": 613,
+              "fragment": "= 16.812 − 16.204 = 0.608，误差按 ps1_gpsf_err=0."
+            },
+            {
+              "value": 0.012,
+              "pos": 636,
+              "fragment": "08，误差按 ps1_gpsf_err=0.012、ps1_rpsf_err=0.008 "
+            },
+            {
+              "value": 0.008,
+              "pos": 655,
+              "fragment": "=0.012、ps1_rpsf_err=0.008 传播约 0.014。\n- 同一系统内 "
+            },
+            {
+              "value": 0.014,
+              "pos": 665,
+              "fragment": "_rpsf_err=0.008 传播约 0.014。\n- 同一系统内 Gaia 的颜色：B"
+            },
+            {
+              "value": 1.2701,
+              "pos": 717,
+              "fragment": "16.8803 − 15.6102 = 1.2701。\n\n这是两个不同系统里的不同颜色，不能"
+            },
+            {
+              "value": 1.0,
+              "pos": 808,
+              "fragment": "ess_factor=1.214（大于 1，提示 BP/RP 流量超额——红化或背"
+            },
+            {
+              "value": 1.0,
+              "pos": 975,
+              "fragment": "18 表转录）和 Pan-STARRS 1（ps1 表），都不是 BEST 自己的"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.5384615384615384
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "system_and_zeropoint"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "system_and_zeropoint"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 14,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-C02",
+      "axis": "C",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 15,
+          "traceable": [
+            {
+              "value": 16.2041,
+              "pos": 486
+            },
+            {
+              "value": 16.2041,
+              "pos": 596
+            },
+            {
+              "value": 2841.55,
+              "pos": 616
+            },
+            {
+              "value": 2841.55,
+              "pos": 706
+            },
+            {
+              "value": 3.71,
+              "pos": 714
+            },
+            {
+              "value": 766.2,
+              "pos": 772
+            },
+            {
+              "value": 16.1872,
+              "pos": 850
+            }
+          ],
+          "derivable": [
+            {
+              "value": 2.5,
+              "pos": 55,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 10.0,
+              "pos": 80,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 0.4,
+              "pos": 85,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.5,
+              "pos": 581,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.5,
+              "pos": 606,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 24.84,
+              "pos": 627,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 765.9,
+              "pos": 721,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 155.0,
+              "pos": 301,
+              "fragment": "。** gaia_dr3_18 表发布 155 列，其中没有任何 Gaia 零点列。全"
+            }
+          ],
+          "fatal_candidates": [
+            {
+              "kind": "fabricated_zeropoint",
+              "fragment": "零点，ZP = m + 2"
+            }
+          ],
+          "ungr": 0.06666666666666667
+        },
+        "qualifier_coverage": {
+          "required": [
+            "system_and_zeropoint",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "system_and_zeropoint",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 1,
+        "fatal_candidate_count": 1,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-C03",
+      "axis": "C",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 10,
+          "traceable": [
+            {
+              "value": 3.912e-15,
+              "pos": 86
+            },
+            {
+              "value": 4.41e-17,
+              "pos": 118
+            },
+            {
+              "value": 4.41e-17,
+              "pos": 564
+            },
+            {
+              "value": 3.912e-15,
+              "pos": 575
+            },
+            {
+              "value": 3.912e-15,
+              "pos": 887
+            }
+          ],
+          "derivable": [
+            {
+              "value": 1.1,
+              "pos": 587,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 6.0,
+              "pos": 464,
+              "fragment": "（mag_aper_6_0_final，6 角秒孔径星等）和 splus_dr4（"
+            },
+            {
+              "value": 17.0,
+              "pos": 801,
+              "fragment": "谱（correctedxpspecv1，17 列）。你也可以走 /jobs 的 Us"
+            },
+            {
+              "value": -999.0,
+              "pos": 909,
+              "fragment": "912e-15 是正值且带正误差，不是 -999/-1004 那类缺失哨兵，所以数据本身"
+            },
+            {
+              "value": -1004.0,
+              "pos": 914,
+              "fragment": "15 是正值且带正误差，不是 -999/-1004 那类缺失哨兵，所以数据本身是有效的，只"
+            }
+          ],
+          "fatal_candidates": [
+            {
+              "kind": "fabricated_zeropoint",
+              "fragment": "零点，以及 J-PAS j0"
+            }
+          ],
+          "ungr": 0.4
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "system_and_zeropoint",
+            "missing_or_sentinel"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "system_and_zeropoint",
+            "missing_or_sentinel"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 4,
+        "fatal_candidate_count": 1,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-C04",
+      "axis": "C",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 25,
+          "traceable": [
+            {
+              "value": 2841.55,
+              "pos": 118
+            },
+            {
+              "value": 3.71,
+              "pos": 128
+            },
+            {
+              "value": 766.2,
+              "pos": 143
+            },
+            {
+              "value": 766.2,
+              "pos": 301
+            },
+            {
+              "value": 143.0,
+              "pos": 399
+            },
+            {
+              "value": 766.2,
+              "pos": 446
+            },
+            {
+              "value": 143.0,
+              "pos": 453
+            },
+            {
+              "value": 0.0,
+              "pos": 648
+            },
+            {
+              "value": 1.214,
+              "pos": 687
+            },
+            {
+              "value": 3.0,
+              "pos": 753
+            },
+            {
+              "value": 1.42,
+              "pos": 772
+            },
+            {
+              "value": 0.998,
+              "pos": 816
+            },
+            {
+              "value": 766.2,
+              "pos": 827
+            }
+          ],
+          "derivable": [
+            {
+              "value": 765.9,
+              "pos": 135,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.5,
+              "pos": 232,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.5,
+              "pos": 259,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0857,
+              "pos": 279,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0857,
+              "pos": 294,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.4,
+              "pos": 309,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 10.0,
+              "pos": 313,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 64.0,
+              "pos": 459,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.0,
+              "pos": 482,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 1.4,
+              "pos": 341,
+              "fragment": "。也就是你这颗星 G 带的定标量精度约 1.4 mmag。\n\n**两个必须写明的限定*"
+            },
+            {
+              "value": 1.0,
+              "pos": 368,
+              "fragment": "g。\n\n**两个必须写明的限定**：\n\n1. 它是 gaia_dr3_18_pho"
+            },
+            {
+              "value": 1.0,
+              "pos": 696,
+              "fragment": "ess_factor=1.214（大于 1，提示 BP/RP 流量超额，红化或背景"
+            }
+          ],
+          "fatal_candidates": [
+            {
+              "kind": "fabricated_precision",
+              "fragment": "精度约 1"
+            }
+          ],
+          "ungr": 0.12
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": [
+          {
+            "kind": "precision_claim",
+            "fragment": "精度约 1.4 mmag"
+          }
+        ]
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 3,
+        "fatal_candidate_count": 1,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 1
+      }
+    },
+    {
+      "item_id": "E3-D01",
+      "axis": "D",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 26,
+          "traceable": [
+            {
+              "value": -999.0,
+              "pos": 14
+            },
+            {
+              "value": 19.771,
+              "pos": 317
+            },
+            {
+              "value": 18.902,
+              "pos": 326
+            },
+            {
+              "value": 18.404,
+              "pos": 335
+            },
+            {
+              "value": 18.255,
+              "pos": 344
+            },
+            {
+              "value": 1.0,
+              "pos": 475
+            },
+            {
+              "value": 0.02,
+              "pos": 679
+            },
+            {
+              "value": 64.0,
+              "pos": 724
+            },
+            {
+              "value": 192.0,
+              "pos": 741
+            }
+          ],
+          "derivable": [
+            {
+              "value": 2.0,
+              "pos": 511,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": -1004.07,
+              "pos": 23,
+              "fragment": "，是**缺失哨兵**。-999.0 和 -1004.07 是 ps1 测光列的空值代码，不是测量"
+            },
+            {
+              "value": 1000.0,
+              "pos": 85,
+              "fragment": "仓的记录是 ps1 无测光的行返回约 −1000 一族的哨兵（实测样本 gpsf=−10"
+            },
+            {
+              "value": 1004.07,
+              "pos": 107,
+              "fragment": "00 一族的哨兵（实测样本 gpsf=−1004.07、gpsf_err=−999.0，而同一"
+            },
+            {
+              "value": 999.0,
+              "pos": 125,
+              "fragment": "=−1004.07、gpsf_err=−999.0，而同一帧的 ipsf=19.49 是真"
+            },
+            {
+              "value": 19.49,
+              "pos": 142,
+              "fragment": "r=−999.0，而同一帧的 ipsf=19.49 是真值）；BestSource.fro"
+            },
+            {
+              "value": 999.0,
+              "pos": 186,
+              "fragment": "om_row 与 TAP 序列化共用 −999 阈值，哨兵不当星等用。\n\n**同一行内"
+            },
+            {
+              "value": 999.0,
+              "pos": 239,
+              "fragment": "四个字段全是哨兵——ps1_zpsf=−999.0、ps1_zpsf_corr=−999."
+            },
+            {
+              "value": 999.0,
+              "pos": 260,
+              "fragment": "99.0、ps1_zpsf_corr=−999.0、ps1_zpsf_err=−999.0"
+            },
+            {
+              "value": 999.0,
+              "pos": 280,
+              "fragment": "999.0、ps1_zpsf_err=−999.0、ps1_zflags=−999；而 g"
+            },
+            {
+              "value": 999.0,
+              "pos": 298,
+              "fragment": "=−999.0、ps1_zflags=−999；而 g/r/i/y 是正常值（19.7"
+            },
+            {
+              "value": 999.0,
+              "pos": 411,
+              "fragment": "**反证**：星等是越暗越大的无界量，−999 mag 在物理上不是暗，而是荒谬的亮。"
+            },
+            {
+              "value": 999.0,
+              "pos": 442,
+              "fragment": "上不是暗，而是荒谬的亮。如果照字面用 −999 去算颜色，会得到完全无意义的数。\n\n*"
+            },
+            {
+              "value": 3.0,
+              "pos": 527,
+              "fragment": "缺失；\n2. 不要静默插值补一个 z；\n3. 若确实需要 z，去别的表取同源值（例"
+            },
+            {
+              "value": 17.233,
+              "pos": 577,
+              "fragment": "2 侧有 stripe82_z_h22=17.233、stripe82_zmmed=17.2"
+            },
+            {
+              "value": 17.241,
+              "pos": 599,
+              "fragment": ".233、stripe82_zmmed=17.241），但前提是已用服务端回的 inputo"
+            },
+            {
+              "value": 4.0,
+              "pos": 650,
+              "fragment": "ist_arcsec 核过是同一个源；\n4. 该源还叠加了质量问题：ps1_cla"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.6153846153846154
+        },
+        "qualifier_coverage": {
+          "required": [
+            "missing_or_sentinel",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "missing_or_sentinel",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 16,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-D02",
+      "axis": "D",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 14,
+          "traceable": [
+            {
+              "value": 180.0205,
+              "pos": 186
+            },
+            {
+              "value": 30.0512,
+              "pos": 203
+            },
+            {
+              "value": 0.098,
+              "pos": 278
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 1004.07,
+              "pos": 39,
+              "fragment": "逐列核对这一行**：ps1_gpsf=−1004.07、ps1_rpsf=−1004.07、p"
+            },
+            {
+              "value": 1004.07,
+              "pos": 57,
+              "fragment": "=−1004.07、ps1_rpsf=−1004.07、ps1_ipsf=−999.0、ps1"
+            },
+            {
+              "value": 999.0,
+              "pos": 75,
+              "fragment": "=−1004.07、ps1_ipsf=−999.0、ps1_zpsf=−999.0、ps1"
+            },
+            {
+              "value": 999.0,
+              "pos": 91,
+              "fragment": "sf=−999.0、ps1_zpsf=−999.0、ps1_ypsf=−999.0，五个波"
+            },
+            {
+              "value": 999.0,
+              "pos": 107,
+              "fragment": "sf=−999.0、ps1_ypsf=−999.0，五个波段全是哨兵；连 ps1_clas"
+            },
+            {
+              "value": 999.0,
+              "pos": 140,
+              "fragment": "兵；连 ps1_class_star=−999.0 也是哨兵，也就是形态判据同样无效。\n\n"
+            },
+            {
+              "value": 1.0,
+              "pos": 267,
+              "fragment": "测光。\n\n**两个容易误用的点**：\n\n1. ps1_ebv=0.098 有值，但"
+            },
+            {
+              "value": 2.0,
+              "pos": 325,
+              "fragment": "不能用 ebv 有值去反推该源有测光。\n2. 给到的这一行里连误差列和 flags"
+            },
+            {
+              "value": 999.0,
+              "pos": 459,
+              "fragment": "论都不能下——哨兵不携带亮度信息，把 −999 当星等用就是编造。\n\n**能做的只有两"
+            },
+            {
+              "value": 1.0,
+              "pos": 488,
+              "fragment": "是编造。\n\n**能做的只有两件**：\n\n1. 把位置当交叉匹配的输入去别的表查（s"
+            },
+            {
+              "value": 2.0,
+              "pos": 602,
+              "fragment": "的巡天的测光，不能当 ps1 的结果；\n2. 核对你是否真的取到了想取的那一行——"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.7857142857142857
+        },
+        "qualifier_coverage": {
+          "required": [
+            "missing_or_sentinel",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "missing_or_sentinel",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 11,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-D03",
+      "axis": "D",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 19,
+          "traceable": [
+            {
+              "value": 0.02,
+              "pos": 39
+            },
+            {
+              "value": 1.0,
+              "pos": 82
+            },
+            {
+              "value": 0.02,
+              "pos": 121
+            },
+            {
+              "value": 19.771,
+              "pos": 412
+            },
+            {
+              "value": 18.902,
+              "pos": 421
+            },
+            {
+              "value": 18.404,
+              "pos": 430
+            },
+            {
+              "value": 18.255,
+              "pos": 439
+            },
+            {
+              "value": 64.0,
+              "pos": 503
+            },
+            {
+              "value": 192.0,
+              "pos": 520
+            },
+            {
+              "value": 0.02,
+              "pos": 577
+            },
+            {
+              "value": 1.0,
+              "pos": 613
+            },
+            {
+              "value": 1.0,
+              "pos": 633
+            },
+            {
+              "value": 0.0,
+              "pos": 656
+            },
+            {
+              "value": 1.0,
+              "pos": 719
+            },
+            {
+              "value": 0.0,
+              "pos": 895
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 2.0,
+              "pos": 136,
+              "fragment": "star=0.02 直接否定这个前提。\n2. **量测口径不符**：ps1_gps"
+            },
+            {
+              "value": 3.0,
+              "pos": 262,
+              "fragment": "T_eff、E(B−V) 会没有意义。\n3. **混源风险更高**：延展源被邻近天"
+            },
+            {
+              "value": 5.0,
+              "pos": 396,
+              "fragment": "err、ps1_zflags）全是哨兵，5 个带只剩 4 个有效点：g=19.77"
+            },
+            {
+              "value": 4.0,
+              "pos": 403,
+              "fragment": "_zflags）全是哨兵，5 个带只剩 4 个有效点：g=19.771、r=18."
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.21052631578947367
+        },
+        "qualifier_coverage": {
+          "required": [
+            "quality_flag",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "quality_flag",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 4,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-D04",
+      "axis": "D",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 16,
+          "traceable": [
+            {
+              "value": 16.204,
+              "pos": 40
+            },
+            {
+              "value": 16.041,
+              "pos": 163
+            },
+            {
+              "value": 16.204,
+              "pos": 191
+            },
+            {
+              "value": 16.041,
+              "pos": 198
+            },
+            {
+              "value": 0.008,
+              "pos": 319
+            },
+            {
+              "value": 16.041,
+              "pos": 346
+            },
+            {
+              "value": 1.0,
+              "pos": 395
+            },
+            {
+              "value": 0.0,
+              "pos": 418
+            },
+            {
+              "value": 0.092,
+              "pos": 428
+            },
+            {
+              "value": 1.0,
+              "pos": 483
+            },
+            {
+              "value": 18.902,
+              "pos": 504
+            },
+            {
+              "value": 0.02,
+              "pos": 522
+            },
+            {
+              "value": 64.0,
+              "pos": 534
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 0.163,
+              "pos": 205,
+              "fragment": "orr 差 16.204−16.041=0.163 mag，且这个差随波段变（g 差 0."
+            },
+            {
+              "value": 0.289,
+              "pos": 228,
+              "fragment": "63 mag，且这个差随波段变（g 差 0.289、z 差 0.068），说明是与波段相关"
+            },
+            {
+              "value": 0.068,
+              "pos": 238,
+              "fragment": "差随波段变（g 差 0.289、z 差 0.068），说明是与波段相关的改正；但改正的具体"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.1875
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "system_and_zeropoint",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "system_and_zeropoint",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 3,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-D05",
+      "axis": "D",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 23,
+          "traceable": [
+            {
+              "value": 2.31,
+              "pos": 17
+            },
+            {
+              "value": 0.06,
+              "pos": 22
+            },
+            {
+              "value": 2016.0,
+              "pos": 90
+            },
+            {
+              "value": 1.42,
+              "pos": 140
+            },
+            {
+              "value": 3.0,
+              "pos": 179
+            },
+            {
+              "value": 0.0,
+              "pos": 184
+            },
+            {
+              "value": 0.0,
+              "pos": 235
+            },
+            {
+              "value": 0.06,
+              "pos": 320
+            },
+            {
+              "value": 2.31,
+              "pos": 325
+            },
+            {
+              "value": 3.0,
+              "pos": 442
+            },
+            {
+              "value": 0.06,
+              "pos": 486
+            },
+            {
+              "value": 2.31,
+              "pos": 491
+            },
+            {
+              "value": 0.06,
+              "pos": 557
+            }
+          ],
+          "derivable": [
+            {
+              "value": 38.5,
+              "pos": 330,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.0,
+              "pos": 422,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0,
+              "pos": 455,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0,
+              "pos": 464,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 0.00231,
+              "pos": 466,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 433.0,
+              "pos": 474,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.6,
+              "pos": 496,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 4.0,
+              "pos": 523,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 1.4,
+              "pos": 152,
+              "fragment": "偏脏：ruwe=1.42 已越过常用的 1.4 阈值；ipd_frac_multi_p"
+            },
+            {
+              "value": 1.0,
+              "pos": 398,
+              "fragment": "轮按缺证据处理。用的话要同时写清四点：（1）引用 Gaia DR3 而不是 BES"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.08695652173913043
+        },
+        "qualifier_coverage": {
+          "required": [
+            "quality_flag",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "quality_flag",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 2,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-D06",
+      "axis": "D",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [
+          {
+            "value": "-999.0",
+            "pos": 97,
+            "note": "哨兵数值出现但未声明缺失 — 疑似当真实值使用"
+          }
+        ],
+        "unsourced_numbers": {
+          "total_numbers": 20,
+          "traceable": [
+            {
+              "value": 128.0,
+              "pos": 5
+            },
+            {
+              "value": -999.0,
+              "pos": 97
+            },
+            {
+              "value": -999.0,
+              "pos": 117
+            },
+            {
+              "value": -999.0,
+              "pos": 138
+            },
+            {
+              "value": -999.0,
+              "pos": 158
+            },
+            {
+              "value": 1.0,
+              "pos": 206
+            },
+            {
+              "value": 15.988,
+              "pos": 220
+            },
+            {
+              "value": 0.021,
+              "pos": 240
+            },
+            {
+              "value": 128.0,
+              "pos": 266
+            },
+            {
+              "value": 128.0,
+              "pos": 293
+            },
+            {
+              "value": 128.0,
+              "pos": 308
+            },
+            {
+              "value": 0.0,
+              "pos": 332
+            },
+            {
+              "value": 0.021,
+              "pos": 458
+            },
+            {
+              "value": 0.012,
+              "pos": 471
+            },
+            {
+              "value": 0.008,
+              "pos": 480
+            },
+            {
+              "value": 0.007,
+              "pos": 489
+            },
+            {
+              "value": 0.011,
+              "pos": 498
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": -1004.07,
+              "pos": 174,
+              "fragment": "兵就是 -999 阈值（线上还实测到过 -1004.07），名称解算失败另有 -1000 哨兵。"
+            },
+            {
+              "value": -1000.0,
+              "pos": 193,
+              "fragment": " -1004.07），名称解算失败另有 -1000 哨兵。而 S-01 的 ps1_yps"
+            },
+            {
+              "value": 1000.0,
+              "pos": 327,
+              "fragment": "：128 就是 bit7 置位（二进制 1000 0000），只说明该波段有质量标记、非"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.15
+        },
+        "qualifier_coverage": {
+          "required": [
+            "quality_flag",
+            "missing_or_sentinel"
+          ],
+          "covered": [
+            "quality_flag",
+            "missing_or_sentinel"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 1,
+        "unsourced_number_count": 3,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-E01",
+      "axis": "E",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 13,
+          "traceable": [
+            {
+              "value": 2.31,
+              "pos": 24
+            },
+            {
+              "value": 0.06,
+              "pos": 60
+            },
+            {
+              "value": 2016.0,
+              "pos": 190
+            },
+            {
+              "value": 0.06,
+              "pos": 387
+            },
+            {
+              "value": 2.31,
+              "pos": 392
+            },
+            {
+              "value": 1.42,
+              "pos": 436
+            },
+            {
+              "value": 3.0,
+              "pos": 461
+            }
+          ],
+          "derivable": [
+            {
+              "value": 1.0,
+              "pos": 356,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0,
+              "pos": 365,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 0.00231,
+              "pos": 367,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 433.0,
+              "pos": 375,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.6,
+              "pos": 397,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 18.0,
+              "pos": 157,
+              "fragment": "身就标明了来源与 Gaia DR3 第 18 批次语义；同行 gaia_dr3_18"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.07692307692307693
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "identity_source",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 1,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-E02",
+      "axis": "E",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 15,
+          "traceable": [
+            {
+              "value": 5120.0,
+              "pos": 14
+            },
+            {
+              "value": 4.31,
+              "pos": 103
+            },
+            {
+              "value": 0.21,
+              "pos": 122
+            },
+            {
+              "value": 4870.0,
+              "pos": 264
+            },
+            {
+              "value": 5390.0,
+              "pos": 269
+            },
+            {
+              "value": 5120.0,
+              "pos": 345
+            },
+            {
+              "value": 0.998,
+              "pos": 518
+            },
+            {
+              "value": 4.31,
+              "pos": 540
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 16.0,
+              "pos": 317,
+              "fragment": "/upper 两列，Gaia 的惯例是 16/84 分位区间，不是 1σ 高斯误差，"
+            },
+            {
+              "value": 84.0,
+              "pos": 320,
+              "fragment": "per 两列，Gaia 的惯例是 16/84 分位区间，不是 1σ 高斯误差，所以应"
+            },
+            {
+              "value": 1.0,
+              "pos": 331,
+              "fragment": " 的惯例是 16/84 分位区间，不是 1σ 高斯误差，所以应写成 5120 K "
+            },
+            {
+              "value": 260.0,
+              "pos": 355,
+              "fragment": "斯误差，所以应写成 5120 K 并配 +260/−250 K 的分位区间，而不是 ±2"
+            },
+            {
+              "value": 250.0,
+              "pos": 361,
+              "fragment": "应写成 5120 K 并配 +260/−250 K 的分位区间，而不是 ±255 K "
+            },
+            {
+              "value": 255.0,
+              "pos": 378,
+              "fragment": "0/−250 K 的分位区间，而不是 ±255 K 的 1σ；二，这张表没有 Teff"
+            },
+            {
+              "value": 1.0,
+              "pos": 386,
+              "fragment": " 的分位区间，而不是 ±255 K 的 1σ；二，这张表没有 Teff 的独立 σ"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.4666666666666667
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "identity_source",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 7,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-E03",
+      "axis": "E",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "多历元",
+            "pos": 205,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 10,
+          "traceable": [
+            {
+              "value": 16.2041,
+              "pos": 153
+            },
+            {
+              "value": 143.0,
+              "pos": 197
+            },
+            {
+              "value": 2841.55,
+              "pos": 252
+            },
+            {
+              "value": 3.71,
+              "pos": 283
+            },
+            {
+              "value": 766.2,
+              "pos": 316
+            },
+            {
+              "value": 16.2041,
+              "pos": 381
+            },
+            {
+              "value": 16.1872,
+              "pos": 436
+            },
+            {
+              "value": 16.2041,
+              "pos": 518
+            },
+            {
+              "value": 16.1872,
+              "pos": 526
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 0.0169,
+              "pos": 534,
+              "fragment": "一列差 16.2041−16.1872=0.0169 mag，量级虽小，但在定义未知前不要把"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.1
+        },
+        "qualifier_coverage": {
+          "required": [
+            "catalog_and_column",
+            "identity_source"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "identity_source"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 1,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-E04",
+      "axis": "E",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 6,
+          "traceable": [
+            {
+              "value": 3.0,
+              "pos": 531
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 137.0,
+              "pos": 89,
+              "fragment": " × LAMOST 交叉表」，可请求的 137 列是 ra、dec、134 个跨约 1"
+            },
+            {
+              "value": 134.0,
+              "pos": 103,
+              "fragment": "，可请求的 137 列是 ra、dec、134 个跨约 19 个测光系统的星等（J-P"
+            },
+            {
+              "value": 19.0,
+              "pos": 111,
+              "fragment": "7 列是 ra、dec、134 个跨约 19 个测光系统的星等（J-PAS 窄带、A"
+            },
+            {
+              "value": 1.0,
+              "pos": 389,
+              "fragment": "/logg/[Fe/H]，可行路径是：（1）拿 scr_lamost 的 sour"
+            },
+            {
+              "value": 2.0,
+              "pos": 438,
+              "fragment": "LAMOST 官方 DR 拉光谱参数；（2）或用 gaia_dr3_18 的 te"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.8333333333333334
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "subset_scope",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "identity_source",
+            "subset_scope",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 5,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-E05",
+      "axis": "E",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 35,
+          "traceable": [
+            {
+              "value": 2.14,
+              "pos": 10
+            },
+            {
+              "value": 2.14,
+              "pos": 64
+            },
+            {
+              "value": 180.0123,
+              "pos": 126
+            },
+            {
+              "value": 30.0456,
+              "pos": 145
+            },
+            {
+              "value": 2.14,
+              "pos": 297
+            },
+            {
+              "value": 2.14,
+              "pos": 565
+            },
+            {
+              "value": 1.42,
+              "pos": 701
+            },
+            {
+              "value": 2.14,
+              "pos": 756
+            },
+            {
+              "value": 2.14,
+              "pos": 846
+            },
+            {
+              "value": 2.14,
+              "pos": 918
+            }
+          ],
+          "derivable": [
+            {
+              "value": 0.0005,
+              "pos": 258,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.8,
+              "pos": 266,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.25,
+              "pos": 276,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.8,
+              "pos": 282,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.19,
+              "pos": 289,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 14.4,
+              "pos": 852,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.0,
+              "pos": 867,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 1.296,
+              "pos": 874,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 10.0,
+              "pos": 880,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 180.0127,
+              "pos": 170,
+              "fragment": "56 与 gaia_dr3_18_ra=180.0127/gaia_dr3_18_dec=30."
+            },
+            {
+              "value": 30.0461,
+              "pos": 195,
+              "fragment": "127/gaia_dr3_18_dec=30.0461 相差 ΔRA=0.0004°=1.44"
+            },
+            {
+              "value": 0.0004,
+              "pos": 210,
+              "fragment": "_dec=30.0461 相差 ΔRA=0.0004°=1.44″（乘 cos30.0456"
+            },
+            {
+              "value": 1.44,
+              "pos": 218,
+              "fragment": "0461 相差 ΔRA=0.0004°=1.44″（乘 cos30.0456°=0.86"
+            },
+            {
+              "value": 0.866,
+              "pos": 238,
+              "fragment": "1.44″（乘 cos30.0456°=0.866 得 1.25″）、ΔDec=0.000"
+            },
+            {
+              "value": 1.25,
+              "pos": 246,
+              "fragment": "cos30.0456°=0.866 得 1.25″）、ΔDec=0.0005°=1.80"
+            },
+            {
+              "value": 2016.0,
+              "pos": 412,
+              "fragment": "ia_dr3_18_ref_epoch=2016.0 与 ps1 的单历元不是同一历元，混历"
+            },
+            {
+              "value": 6.0,
+              "pos": 548,
+              "fragment": "ia 那类每年十几毫角秒量级的自行，跨 6 年约在 0.1 角秒量级，比 2.14"
+            },
+            {
+              "value": 0.1,
+              "pos": 554,
+              "fragment": "年十几毫角秒量级的自行，跨 6 年约在 0.1 角秒量级，比 2.14″ 小一个量级，"
+            },
+            {
+              "value": 10.0,
+              "pos": 789,
+              "fragment": "合概率不可忽略：按 Gaia 源面密度 10^5–10^6 /deg² 量级估（此处"
+            },
+            {
+              "value": 5.0,
+              "pos": 792,
+              "fragment": "不可忽略：按 Gaia 源面密度 10^5–10^6 /deg² 量级估（此处的密"
+            },
+            {
+              "value": 10.0,
+              "pos": 794,
+              "fragment": "忽略：按 Gaia 源面密度 10^5–10^6 /deg² 量级估（此处的密度是我"
+            },
+            {
+              "value": 6.0,
+              "pos": 797,
+              "fragment": "按 Gaia 源面密度 10^5–10^6 /deg² 量级估（此处的密度是我显式"
+            },
+            {
+              "value": 7.0,
+              "pos": 883,
+              "fragment": "²，对 1 deg²=1.296×10^7 arcsec²，期望随机源数约 0.1"
+            },
+            {
+              "value": 0.1,
+              "pos": 901,
+              "fragment": "0^7 arcsec²，期望随机源数约 0.1–1.1 个，所以「最近邻 2.14″」"
+            },
+            {
+              "value": 1.1,
+              "pos": 905,
+              "fragment": "arcsec²，期望随机源数约 0.1–1.1 个，所以「最近邻 2.14″」既可能是"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.45714285714285713
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "quality_flag",
+            "error_or_uncertainty"
+          ],
+          "covered": [
+            "identity_source",
+            "quality_flag",
+            "error_or_uncertainty"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 16,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-F01",
+      "axis": "F",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 12,
+          "traceable": [
+            {
+              "value": 0.0,
+              "pos": 0
+            },
+            {
+              "value": 0.0,
+              "pos": 96
+            },
+            {
+              "value": 3.0,
+              "pos": 116
+            },
+            {
+              "value": 3.0,
+              "pos": 122
+            },
+            {
+              "value": 3.0,
+              "pos": 136
+            },
+            {
+              "value": 3.0,
+              "pos": 160
+            },
+            {
+              "value": 0.0,
+              "pos": 271
+            },
+            {
+              "value": 0.0,
+              "pos": 373
+            },
+            {
+              "value": 0.0,
+              "pos": 572
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 360.0,
+              "pos": 101,
+              "fragment": " arcsec），传度会得到 0 行或 360 倍半径，先确认你传的 3 确实是 3 "
+            },
+            {
+              "value": 60.0,
+              "pos": 173,
+              "fragment": "里有源但落在 3 角秒外完全正常；建议 60″→300″ 逐级放大，看命中数随半径的"
+            },
+            {
+              "value": 300.0,
+              "pos": 177,
+              "fragment": "落在 3 角秒外完全正常；建议 60″→300″ 逐级放大，看命中数随半径的爬升曲线。"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.25
+        },
+        "qualifier_coverage": {
+          "required": [
+            "subset_scope",
+            "catalog_and_column",
+            "missing_or_sentinel"
+          ],
+          "covered": [
+            "catalog_and_column",
+            "missing_or_sentinel"
+          ],
+          "missing": [
+            {
+              "qualifier": "subset_scope",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.6666666666666666
+        },
+        "unsupported_claims": [
+          {
+            "kind": "nonexistence_claim",
+            "fragment": "位置没有天体"
+          }
+        ]
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 3,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "subset_scope"
+        ],
+        "unsupported_claim_count": 1
+      }
+    },
+    {
+      "item_id": "E3-F02",
+      "axis": "F",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 17,
+          "traceable": [],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 15.3,
+              "pos": 106,
+              "fragment": "rch(catalog=ps1, ra=15.3, dec=−72.6, radius_"
+            },
+            {
+              "value": 72.6,
+              "pos": 117,
+              "fragment": "=ps1, ra=15.3, dec=−72.6, radius_arcsec=3.0)"
+            },
+            {
+              "value": 3.0,
+              "pos": 137,
+              "fragment": "72.6, radius_arcsec=3.0)。四个必须核对的点：（1）radius"
+            },
+            {
+              "value": 1.0,
+              "pos": 152,
+              "fragment": "csec=3.0)。四个必须核对的点：（1）radius_arcsec 的单位是角"
+            },
+            {
+              "value": 18000.0,
+              "pos": 185,
+              "fragment": "ec 的单位是角秒不是度，工具入口上限 18000″=5°，传度会得到 0 行或 360 "
+            },
+            {
+              "value": 5.0,
+              "pos": 192,
+              "fragment": "角秒不是度，工具入口上限 18000″=5°，传度会得到 0 行或 360 倍半径"
+            },
+            {
+              "value": 0.0,
+              "pos": 201,
+              "fragment": "口上限 18000″=5°，传度会得到 0 行或 360 倍半径；（2）判据是信封"
+            },
+            {
+              "value": 360.0,
+              "pos": 206,
+              "fragment": "8000″=5°，传度会得到 0 行或 360 倍半径；（2）判据是信封里的 stat"
+            },
+            {
+              "value": 2.0,
+              "pos": 215,
+              "fragment": "传度会得到 0 行或 360 倍半径；（2）判据是信封里的 status.ok、s"
+            },
+            {
+              "value": 3.0,
+              "pos": 353,
+              "fragment": "=true 只代表链路成功不代表有源；（3）即使 total=0，也只能得出「ps"
+            },
+            {
+              "value": 0.0,
+              "pos": 364,
+              "fragment": "成功不代表有源；（3）即使 total=0，也只能得出「ps1 在该 3 角秒锥内"
+            },
+            {
+              "value": 3.0,
+              "pos": 379,
+              "fragment": "otal=0，也只能得出「ps1 在该 3 角秒锥内无收录源」，不能得出「该位置没"
+            },
+            {
+              "value": 3.0,
+              "pos": 419,
+              "fragment": "没有天体」——ps1 不发布完备深度列，3 角秒过紧，坐标与半径单位也各有出错空间"
+            },
+            {
+              "value": 4.0,
+              "pos": 442,
+              "fragment": "秒过紧，坐标与半径单位也各有出错空间；（4）建议同时在 stripe82、jplu"
+            },
+            {
+              "value": 3.0,
+              "pos": 488,
+              "fragment": " 各查一次做交叉验证，并看命中数随半径 3″→60″→300″ 的变化。要真实结果"
+            },
+            {
+              "value": 60.0,
+              "pos": 491,
+              "fragment": "一次做交叉验证，并看命中数随半径 3″→60″→300″ 的变化。要真实结果，请在允"
+            },
+            {
+              "value": 300.0,
+              "pos": 495,
+              "fragment": "叉验证，并看命中数随半径 3″→60″→300″ 的变化。要真实结果，请在允许联网的环"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 1.0
+        },
+        "qualifier_coverage": {
+          "required": [
+            "subset_scope",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "catalog_and_column"
+          ],
+          "missing": [
+            {
+              "qualifier": "subset_scope",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.5
+        },
+        "unsupported_claims": [
+          {
+            "kind": "nonexistence_claim",
+            "fragment": "位置没有天体"
+          }
+        ]
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 17,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "subset_scope"
+        ],
+        "unsupported_claim_count": 1
+      }
+    },
+    {
+      "item_id": "E3-F03",
+      "axis": "F",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 7,
+          "traceable": [
+            {
+              "value": 0.0,
+              "pos": 615
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 200.0,
+              "pos": 154,
+              "fragment": "j=…），失败时站点返回的是 HTTP 200 加 ra=−1000、dec=−100"
+            },
+            {
+              "value": 1000.0,
+              "pos": 164,
+              "fragment": "返回的是 HTTP 200 加 ra=−1000、dec=−1000 的哨兵坐标，工具据"
+            },
+            {
+              "value": 1000.0,
+              "pos": 174,
+              "fragment": "200 加 ra=−1000、dec=−1000 的哨兵坐标，工具据此把结果翻成 E_N"
+            },
+            {
+              "value": 1000.0,
+              "pos": 219,
+              "fragment": "ME_UNRESOLVED，而不是把 −1000 当成真实坐标静默传下去——所以这个码来"
+            },
+            {
+              "value": 123.0,
+              "pos": 271,
+              "fragment": "是「查无此星」。而 'Foo Star 123' 本身是构造的假名，套不上 M/NGC"
+            },
+            {
+              "value": 12.0,
+              "pos": 445,
+              "fragment": "形式重试；或者绕开名字——BEST 的 12 张可查询表没有一张发布 name 列（"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.8571428571428571
+        },
+        "qualifier_coverage": {
+          "required": [
+            "missing_or_sentinel",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "missing_or_sentinel",
+            "catalog_and_column"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 6,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-F04",
+      "axis": "F",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 10,
+          "traceable": [],
+          "derivable": [
+            {
+              "value": 7.0,
+              "pos": 153,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 34.0,
+              "pos": 46,
+              "fragment": "文档页列过 SkyMapper DR4（34G），但线上 /skymapper_dr"
+            },
+            {
+              "value": 404.0,
+              "pos": 75,
+              "fragment": "/skymapper_dr4/f 是软 404：HTTP 200 加请求体 {\"err"
+            },
+            {
+              "value": 200.0,
+              "pos": 84,
+              "fragment": "r_dr4/f 是软 404：HTTP 200 加请求体 {\"error\":\"Not "
+            },
+            {
+              "value": 22.0,
+              "pos": 115,
+              "fragment": "error\":\"Not Found\"}（22 字节），属于状态码门控看不出来的失败；"
+            },
+            {
+              "value": 12.0,
+              "pos": 249,
+              "fragment": "没有 skymapper。可查询表一共 12 张：上述 7 张加 std 组的 sc"
+            },
+            {
+              "value": 7.0,
+              "pos": 257,
+              "fragment": "pper。可查询表一共 12 张：上述 7 张加 std 组的 scr_galah"
+            },
+            {
+              "value": 12.0,
+              "pos": 357,
+              "fragment": "log 的 catalog 枚举就是这 12 个，传入 skymapper_dr4 "
+            },
+            {
+              "value": 287.0,
+              "pos": 590,
+              "fragment": "），要取它必须走 xpsp（std 组，287 个可选列、横跨 139 张表单表，响应"
+            },
+            {
+              "value": 139.0,
+              "pos": 602,
+              "fragment": "p（std 组，287 个可选列、横跨 139 张表单表，响应列名是 {表单表}_{列"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.9
+        },
+        "qualifier_coverage": {
+          "required": [
+            "subset_scope",
+            "catalog_and_column"
+          ],
+          "covered": [
+            "catalog_and_column"
+          ],
+          "missing": [
+            {
+              "qualifier": "subset_scope",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.5
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 9,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "subset_scope"
+        ],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-F05",
+      "axis": "F",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 11,
+          "traceable": [
+            {
+              "value": 3.0,
+              "pos": 351
+            },
+            {
+              "value": 0.0,
+              "pos": 752
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 2.0,
+              "pos": 309,
+              "fragment": "输入位置与 Gaia 位置的差本身就是 2 角秒量级（该样本 inputobjs_"
+            },
+            {
+              "value": 2.14,
+              "pos": 342,
+              "fragment": "putobjs_dist_arcsec=2.14），说明 3 角秒半径只是勉强够用，收到"
+            },
+            {
+              "value": 1.0,
+              "pos": 367,
+              "fragment": "，说明 3 角秒半径只是勉强够用，收到 1–2 角秒就必然漏掉真实配对。三、历元与"
+            },
+            {
+              "value": 2.0,
+              "pos": 369,
+              "fragment": "明 3 角秒半径只是勉强够用，收到 1–2 角秒就必然漏掉真实配对。三、历元与自行"
+            },
+            {
+              "value": 2016.0,
+              "pos": 432,
+              "fragment": "ia_dr3_18_ref_epoch=2016.0，跨历元不传播自行直接相减，天然会带 0"
+            },
+            {
+              "value": 0.1,
+              "pos": 457,
+              "fragment": "0，跨历元不传播自行直接相减，天然会带 0.1 角秒量级的位置误差（自行列 gaia_"
+            },
+            {
+              "value": 16.0,
+              "pos": 530,
+              "fragment": "要重查）。四、深度与检测限。r 波段约 16 附近在 Gaia 单次探测能力之内，但"
+            },
+            {
+              "value": 5.0,
+              "pos": 679,
+              "fragment": "t_line）对两表分别跑，半径放大到 5–10 角秒后看角距分布是否单峰；确认失"
+            },
+            {
+              "value": 10.0,
+              "pos": 681,
+              "fragment": "line）对两表分别跑，半径放大到 5–10 角秒后看角距分布是否单峰；确认失配后再"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.8181818181818182
+        },
+        "qualifier_coverage": {
+          "required": [
+            "subset_scope",
+            "identity_source"
+          ],
+          "covered": [
+            "subset_scope",
+            "identity_source"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 9,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-G01",
+      "axis": "G",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 0,
+          "traceable": [],
+          "derivable": [],
+          "unsourced": [],
+          "fatal_candidates": [],
+          "ungr": 0.0
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "missing_or_sentinel"
+          ],
+          "covered": [
+            "identity_source",
+            "missing_or_sentinel"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 0,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-G02",
+      "axis": "G",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "光变曲线",
+            "pos": 99,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          },
+          {
+            "term": "多历元",
+            "pos": 206,
+            "negated": true,
+            "note": "安全语境 (已说明是统计摘要, 履行 single_or_coadded 限定) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 4,
+          "traceable": [
+            {
+              "value": 143.0,
+              "pos": 169
+            },
+            {
+              "value": 16.2041,
+              "pos": 191
+            },
+            {
+              "value": 143.0,
+              "pos": 251
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 12.0,
+              "pos": 120,
+              "fragment": "变曲线，也没有逐历元测光序列，可查询的 12 张表里没有一张是时序或变源表。第二，g"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.25
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "single_or_coadded"
+          ],
+          "covered": [
+            "identity_source",
+            "single_or_coadded"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 1,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-G03",
+      "axis": "G",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "多历元",
+            "pos": 176,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 5,
+          "traceable": [
+            {
+              "value": 143.0,
+              "pos": 75
+            },
+            {
+              "value": 143.0,
+              "pos": 95
+            },
+            {
+              "value": 16.2041,
+              "pos": 139
+            },
+            {
+              "value": 2841.55,
+              "pos": 166
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 12.0,
+              "pos": 310,
+              "fragment": "ability 表）或外部时序，而本仓 12 张可查询表都不发布时序，只能外查。所以"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.2
+        },
+        "qualifier_coverage": {
+          "required": [
+            "identity_source",
+            "single_or_coadded",
+            "missing_or_sentinel"
+          ],
+          "covered": [
+            "identity_source",
+            "single_or_coadded",
+            "missing_or_sentinel"
+          ],
+          "missing": [],
+          "rqc": 1.0
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 1,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-G04",
+      "axis": "G",
+      "hits": {
+        "static_as_lc": [
+          {
+            "term": "光变曲线",
+            "pos": 545,
+            "negated": true,
+            "note": "否定用法 (引用'不是时序库'否定前提) — 不算触发"
+          }
+        ],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 26,
+          "traceable": [],
+          "derivable": [
+            {
+              "value": 300456.0,
+              "pos": 52,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            },
+            {
+              "value": 2.0,
+              "pos": 61,
+              "note": "附近有方法标记 — 疑似可推导 (评阅人终裁)"
+            }
+          ],
+          "unsourced": [
+            {
+              "value": 18.0,
+              "pos": 78,
+              "fragment": " 是 2MASS 式的时分秒命名（赤经 18h00m12.3s、赤纬 +30°04′"
+            },
+            {
+              "value": 30.0,
+              "pos": 93,
+              "fragment": "名（赤经 18h00m12.3s、赤纬 +30°04′56″）：RA = 18×15 "
+            },
+            {
+              "value": 4.0,
+              "pos": 97,
+              "fragment": " 18h00m12.3s、赤纬 +30°04′56″）：RA = 18×15 + 0"
+            },
+            {
+              "value": 56.0,
+              "pos": 100,
+              "fragment": "h00m12.3s、赤纬 +30°04′56″）：RA = 18×15 + 0/4 "
+            },
+            {
+              "value": 18.0,
+              "pos": 110,
+              "fragment": "赤纬 +30°04′56″）：RA = 18×15 + 0/4 + 12.3×15/"
+            },
+            {
+              "value": 15.0,
+              "pos": 113,
+              "fragment": "+30°04′56″）：RA = 18×15 + 0/4 + 12.3×15/360"
+            },
+            {
+              "value": 0.0,
+              "pos": 118,
+              "fragment": "4′56″）：RA = 18×15 + 0/4 + 12.3×15/3600 = "
+            },
+            {
+              "value": 4.0,
+              "pos": 120,
+              "fragment": "56″）：RA = 18×15 + 0/4 + 12.3×15/3600 = 27"
+            },
+            {
+              "value": 12.3,
+              "pos": 124,
+              "fragment": "：RA = 18×15 + 0/4 + 12.3×15/3600 = 270 + 0.0"
+            },
+            {
+              "value": 15.0,
+              "pos": 129,
+              "fragment": " 18×15 + 0/4 + 12.3×15/3600 = 270 + 0.0512"
+            },
+            {
+              "value": 3600.0,
+              "pos": 132,
+              "fragment": "×15 + 0/4 + 12.3×15/3600 = 270 + 0.05125 = 2"
+            },
+            {
+              "value": 270.0,
+              "pos": 139,
+              "fragment": "/4 + 12.3×15/3600 = 270 + 0.05125 = 270.051"
+            },
+            {
+              "value": 0.05125,
+              "pos": 145,
+              "fragment": "2.3×15/3600 = 270 + 0.05125 = 270.05125 度；Dec ="
+            },
+            {
+              "value": 270.05125,
+              "pos": 155,
+              "fragment": "0 = 270 + 0.05125 = 270.05125 度；Dec = 30 + 4/60 +"
+            },
+            {
+              "value": 30.0,
+              "pos": 173,
+              "fragment": "= 270.05125 度；Dec = 30 + 4/60 + 56/3600 = "
+            },
+            {
+              "value": 4.0,
+              "pos": 178,
+              "fragment": ".05125 度；Dec = 30 + 4/60 + 56/3600 = 30.0"
+            },
+            {
+              "value": 60.0,
+              "pos": 180,
+              "fragment": "5125 度；Dec = 30 + 4/60 + 56/3600 = 30.0822"
+            },
+            {
+              "value": 56.0,
+              "pos": 185,
+              "fragment": "度；Dec = 30 + 4/60 + 56/3600 = 30.08222 度。注"
+            },
+            {
+              "value": 3600.0,
+              "pos": 188,
+              "fragment": "ec = 30 + 4/60 + 56/3600 = 30.08222 度。注意这是 J"
+            },
+            {
+              "value": 30.08222,
+              "pos": 195,
+              "fragment": " + 4/60 + 56/3600 = 30.08222 度。注意这是 J2000 纪元的命名，"
+            },
+            {
+              "value": 2016.0,
+              "pos": 252,
+              "fragment": "元、Gaia 行的 ref_epoch=2016.0，坐标不能直接混用。本轮不联网，我不能替"
+            },
+            {
+              "value": 300456.0,
+              "pos": 367,
+              "fragment": "ame(name=\"J180012.3+300456\")，失败时拿到的是 ra=dec=−1"
+            },
+            {
+              "value": 1000.0,
+              "pos": 392,
+              "fragment": "6\")，失败时拿到的是 ra=dec=−1000 的哨兵而不是报错。顺带说明为什么必须先"
+            },
+            {
+              "value": 12.0,
+              "pos": 426,
+              "fragment": "顺带说明为什么必须先解算：BEST 的 12 张可查询表没有一张发布 name 列（"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.9230769230769231
+        },
+        "qualifier_coverage": {
+          "required": [
+            "single_or_coadded",
+            "identity_source",
+            "subset_scope"
+          ],
+          "covered": [
+            "single_or_coadded",
+            "identity_source"
+          ],
+          "missing": [
+            {
+              "qualifier": "subset_scope",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.6666666666666666
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 24,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "subset_scope"
+        ],
+        "unsupported_claim_count": 0
+      }
+    },
+    {
+      "item_id": "E3-G05",
+      "axis": "G",
+      "hits": {
+        "static_as_lc": [],
+        "sentinel_misuse": [],
+        "unsourced_numbers": {
+          "total_numbers": 6,
+          "traceable": [
+            {
+              "value": 3.0,
+              "pos": 259
+            },
+            {
+              "value": 3.71,
+              "pos": 518
+            },
+            {
+              "value": 766.2,
+              "pos": 553
+            }
+          ],
+          "derivable": [],
+          "unsourced": [
+            {
+              "value": 1.0,
+              "pos": 129,
+              "fragment": "星，方向系统性偏乐观。建议这样定口径：（1）入选条件用肯定结论，即 phot_va"
+            },
+            {
+              "value": 2.0,
+              "pos": 197,
+              "fragment": "VAILABLE 单列为「未判定」层；（2）分子分母分开报，写成「在 N_know"
+            },
+            {
+              "value": 4.0,
+              "pos": 368,
+              "fragment": "Blend 的光变会被错当恒定而漏掉；（4）Gaia 的 phot_variabl"
+            }
+          ],
+          "fatal_candidates": [],
+          "ungr": 0.5
+        },
+        "qualifier_coverage": {
+          "required": [
+            "missing_or_sentinel",
+            "single_or_coadded",
+            "subset_scope"
+          ],
+          "covered": [
+            "missing_or_sentinel"
+          ],
+          "missing": [
+            {
+              "qualifier": "single_or_coadded",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            },
+            {
+              "qualifier": "subset_scope",
+              "note": "关键词未命中 — 疑似缺失 (评阅人终裁)"
+            }
+          ],
+          "rqc": 0.3333333333333333
+        },
+        "unsupported_claims": []
+      },
+      "summary": {
+        "static_as_lc_triggered": false,
+        "sentinel_misuse_count": 0,
+        "unsourced_number_count": 3,
+        "fatal_candidate_count": 0,
+        "qualifier_missing": [
+          "single_or_coadded",
+          "subset_scope"
+        ],
+        "unsupported_claim_count": 0
+      }
+    }
+  ],
+  "metascore": 1.0,
+  "selftest": {
+    "metascore": 1.0,
+    "results": {
+      "static_as_lightcurve": {
+        "caught": true,
+        "caught_flags": [
+          "static_as_lc",
+          "fatal_candidates",
+          "unsourced_numbers"
+        ],
+        "expected_flags": [
+          "static_as_lc",
+          "fatal_candidates",
+          "unsourced_numbers"
+        ],
+        "summary": {
+          "static_as_lc_triggered": true,
+          "sentinel_misuse_count": 0,
+          "unsourced_number_count": 4,
+          "fatal_candidate_count": 2,
+          "qualifier_missing": [
+            "catalog_and_column",
+            "single_or_coadded"
+          ],
+          "unsupported_claim_count": 0
+        }
+      },
+      "sentinel_as_real_value": {
+        "caught": true,
+        "caught_flags": [
+          "sentinel_misuse"
+        ],
+        "expected_flags": [
+          "sentinel_misuse"
+        ],
+        "summary": {
+          "static_as_lc_triggered": false,
+          "sentinel_misuse_count": 2,
+          "unsourced_number_count": 3,
+          "fatal_candidate_count": 0,
+          "qualifier_missing": [
+            "catalog_and_column"
+          ],
+          "unsupported_claim_count": 0
+        }
+      },
+      "unmarked_means_constant": {
+        "caught": true,
+        "caught_flags": [
+          "unsupported_claims"
+        ],
+        "expected_flags": [
+          "unsupported_claims"
+        ],
+        "summary": {
+          "static_as_lc_triggered": false,
+          "sentinel_misuse_count": 0,
+          "unsourced_number_count": 1,
+          "fatal_candidate_count": 1,
+          "qualifier_missing": [
+            "identity_source",
+            "missing_or_sentinel"
+          ],
+          "unsupported_claim_count": 3
+        }
+      }
+    }
+  },
+  "answers_missing": [],
+  "coverage_ok": true,
+  "coverage_required": true
+}

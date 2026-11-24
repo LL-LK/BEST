@@ -1,0 +1,40 @@
+case_id: multi_filter_mag_snr
+category: multi_filter
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as_fps1_gpsfbetween-ps1_gpsf_errless
+main_metrics:
+- M1
+- M2
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_gpsf
+  - ps1_gpsf_err
+  constraints:
+  - column: ps1_gpsf
+    op: between
+    value:
+      min: 18.0
+      max: 20.0
+  - column: ps1_gpsf_err
+    op: less
+    value: '5.0'
+  sort: ps1_rpsf
+  order: asc
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+notes: '三条 AND 约束全部设计成「闭区间端点恰有行落在其上」 — 钉死 E2 §5 #3 的 "闭区间端点取等": 任一端点被实现成开区间就会掉行 (recall<1.0);
+  筛完应剩的行数 以 gold/multi_filter_mag_snr.json 的 row_count 为准 (复核要点里已由金标准渲染)。 谓词语义 (between
+  的 min/max 解析、数值比较) 由 GT 独立实现; 被测的 服务端过滤语义不在工具面 (E1 NL2T-17), 本场景的约束在 GT 侧对 rows_full
+  过滤, 对应被测"拉回本地过滤"路径的对账。
+
+  '
+gold_focus: AND 谓词独立实现 + 闭区间端点取等

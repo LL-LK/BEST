@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-17",
+  "run_id": "m3-attempt1",
+  "attempt": 1,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这条我不能直接开查，有两处必须先问清，还有一处能力边界要提前讲明。\n\n一、缺天区：中心 RA / Dec（度，ICRS）+ 半径（角秒，上限 18000 = 5 度）。没有圆心就没有检索目标。\n\n二、缺表口径：「r 波段误差」在不同表里列名完全不同，我不猜：\n- ps1：星等 ps1_rpsf、误差 ps1_rpsf_err\n- splus_dr4：星等 splus_dr4_r_pstotal、误差 splus_dr4_e_r_pstotal\n- smss_dr4：r 波段是 rpsf（这张表没发布单独误差列）\n- stripe82：r 是 stripe82_r_h22，另有质量块 rrms / rchi2，不是逐源误差列\n- uss_dr1：站点已按波段重构，r 波段误差是 {band}_err_pstotal 这一族\n所以先告诉我查哪张表，或者你手上有具体列名就直接给我。\n\n三、能力边界（这条最关键，别让我事后才说）：当前可用的工具契约里，cone_search 只暴露 ra / dec / radius_arcsec / catalog / columns / sort / order / nearest_only / max_rows，**没有任何「列值约束」参数**。也就是说「误差 < 0.01 mag」没法作为服务端过滤条件下发。\n\n站点表单本身是支持列值约束的（每列有 operation 取值域 equal / notequal / less / lessequal / grater（站点把 greater 拼成了 grater）/ greaterequal / between / contains / in，between 走 min+max，in/contains 走文本区），但这些字段没有接进我现在能调的工具契约，所以我不能声称已经按它筛过了 —— 那属于拿幻影列做过滤，会静默返回 0 行或全量。\n\n可行做法（两条，你选）：\n1. 圈定天区取回该误差列（连同星等列），在本地按 < 0.01 筛。数据量取决于你给的半径：60 角秒是小圈，1° 量级就会明显变大，我会先报命中总数再拉。\n2. 如果这个阈值必须进服务端，那就得先扩工具契约把列约束暴露出来 —— 这是改动，不是我现在能顺手做的。\n\n给我表 + 圆心 + 半径，我按第 1 条走，并在结果里标出每行是否过 0.01 阈值。",
+  "notes": "缺天区 + 缺表口径，且列值约束（err<0.01）在工具契约里无参数可表达，不能假装已筛，0 请求反问并给本地筛替代。"
+}

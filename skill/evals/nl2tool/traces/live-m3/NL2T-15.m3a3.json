@@ -1,0 +1,32 @@
+{
+  "task_id": "NL2T-15",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "gaia_dr3_18"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "gaia_dr3_18",
+        "columns": [
+          "gaia_dr3_18_ra",
+          "gaia_dr3_18_dec",
+          "gaia_dr3_18_phot_g_mean_mag"
+        ]
+      }
+    }
+  ],
+  "answer_text": "已查：RA=180.0°、Dec=+30.0°、半径 **60 角秒（1 角分）**，G 星等取 `gaia_dr3_18_phot_g_mean_mag`。\n\n**表名这里有个坑，值得单独说**：BEST 里**没有 `gaia_dr3` 这张表**。线上 id 是 `gaia_dr3_18`\n（\"Gaia DR3 精测定标\"，共 155 列），`gaia_dr3` 会被软 404 吃掉——而且这个站点的软 404 是\n**HTTP 200 + 请求体 `{\"error\":\"Not Found\"}`**，只看状态码根本发现不了。所以我用的 catalog 是 `gaia_dr3_18`。\n列前缀同理是 `gaia_dr3_18.`。\n\n我先零请求 `describe_catalog(\"gaia_dr3_18\")` 核了列，再做投影，取的是这三列：\n\n- `gaia_dr3_18_ra`、`gaia_dr3_18_dec`（度，ICRS）\n- `gaia_dr3_18_phot_g_mean_mag` —— Gaia G 点源平均星等\n\n同表里还有 `phot_bp_mean_mag` / `phot_rp_mean_mag`（BP/RP）、`grvs_mag`（G_RVS 分光星等），\n以及 `phot_g_n_obs`、`phot_g_mean_flux`、`phot_g_mean_flux_error` 等；要哪几列一次说全，我重发省得来回。\n\n口径提醒：**`phot_*_mean_mag` 是单历元平均星等，不是逐历元序列**（BEST 不发布 Gaia 的 epoch photometry 明细，\n只发布 `has_epoch_photometry` 这个布尔标志）。另外 Gaia 的 G/BP/RP 是从 BP/RP 谱拟合来的，\n与直接测量的 g/r 不能直接混比。",
+  "notes": "catalog 用 gaia_dr3_18（gaia_dr3 是软 404），先 describe_catalog 核列再投影 phot_g_mean_mag。"
+}

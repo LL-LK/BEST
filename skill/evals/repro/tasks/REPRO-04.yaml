@@ -1,0 +1,15 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-04
+utterance: 查 RA=10.68、Dec=41.27、半径 60″ 内的 ps1 星。
+category: direct
+expect_first_tool: cone_search
+reruns: 5
+stability_class: two_phase_protocol
+conclusion_card_spec:
+  kind: rowset
+  key_numbers:
+  - row_count
+  key_entities:
+  - stable_uri
+relative_time_expression: false
+notes: 映射 E1 NL2T-04; 判稳维度 two_phase_protocol; 禁相对时间表述 (硬约束)

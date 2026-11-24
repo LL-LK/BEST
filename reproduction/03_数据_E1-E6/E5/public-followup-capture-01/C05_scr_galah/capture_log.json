@@ -1,0 +1,40 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "scr_galah",
+    "ra": 180.0,
+    "dec": 30.0,
+    "radius": 60.0
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/scr_galah/q",
+      "status": 200,
+      "bytes": 27462,
+      "at": "2026-10-12T09:11:54.902535+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/7992/getcount",
+      "status": 200,
+      "bytes": 12,
+      "at": "2026-10-12T09:11:55.545923+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s7992?output.fmt=csv&rows=1000&page=1&sort=scr_galah_source_id&order=asc",
+      "status": 200,
+      "bytes": 2602,
+      "at": "2026-10-12T09:11:56.969146+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 0,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 0,
+    "truncated": false,
+    "error_code": null
+  }
+}

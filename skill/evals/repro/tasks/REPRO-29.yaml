@@ -1,0 +1,14 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-29
+utterance: M31 的坐标是多少？（用 CDS Sesame 解析）
+category: direct
+expect_first_tool: resolve_name
+reruns: 5
+stability_class: external_sesame_dependency
+conclusion_card_spec:
+  kind: value
+  key_numbers:
+  - ra
+  - dec
+relative_time_expression: false
+notes: E6 新增 (文档 §3.1); 判稳维度 external_sesame_dependency; 禁相对时间表述 (硬约束)

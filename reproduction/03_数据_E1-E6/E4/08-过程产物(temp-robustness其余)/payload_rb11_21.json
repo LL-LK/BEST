@@ -1,0 +1,102 @@
+[
+  {
+    "item_id": "RB-11",
+    "tier": "P",
+    "request": "查 Hα 窄带测光。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这条请求目前缺可执行的检索要素，我先澄清两点再动手：① **BEST 里没有名为「Hα」的滤光片或星表**。数据库是均一定标的标准星/多波段测光库，最接近 Hα（6563 Å）的是 **J0660 窄带**（中心约 6600 Å，覆盖 Hα + [NII]），它以列的形式出现在 `jplus_dr3`、`splus_dr4`、`uss_dr1` 以及 J-PAS 系（`xpsp`）等表中；② **你还没给检索目标**。请补充目标天体的坐标（RA/Dec，ICRS，单位度）或名称，并说明要查哪张表/哪些波段，我再发起锥形检索（半径按角秒）取回该窄带测光列。另需提醒：BEST 提供的是静态多波段测光，不是 Hα 发射线成像——若你要的是星云/发射线的 Hα 图像，BEST 不是合适来源。"
+  },
+  {
+    "item_id": "RB-12",
+    "tier": "P",
+    "request": "查 ZTF 的 g 星等。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这条请求缺了目标，我没法直接查 —— BEST 的每一次查询都必须锚定一个天区或一个源，而「ZTF 的 g 星等」没有说清是哪颗星、哪片天。请补充以下任一项，我立刻接着跑：\n- 目标坐标（RA/Dec，建议同时给搜索半径，单位角秒）；或\n- 目标名称（可解析的名称，如某星名或星表编号）；或\n- BEST source_id。\n\n另外两点先讲清楚，免得白等：\n- BEST 里没有独立的「ZTF 星表」；ZTF 的 g 是作为交叉匹配测光列出现在部分标准星表中（如 xpsp / Gaia DR3 XP&SP，按波段分表），定了目标我按该位置去取对应列。\n- BEST 是单历元静态星表，只给该位置的静态多波段测光，不给时间序列；若你要的是 ZTF 的光变序列，那属于 ZTF 官方时序数据源，本库给不了。"
+  },
+  {
+    "item_id": "RB-13",
+    "tier": "P",
+    "request": "查 source_id 为 BEST_NO_SUCH_ID 的源。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "我查不到 `source_id = BEST_NO_SUCH_ID` 这条源——它不匹配 BEST 任何可查星表的 source_id 命名（真实形如 `CALIBSTARS_0844369`、`ps1`/`gaia_dr3_18` 等的 `{catalog}_source_id`，且 `BEST_` 不是任何星表前缀）。BEST 也没有“按 id 直查”的端点，只能以 `source_ids` 列表做精准取行；这样一条明显不存在的 ID 我不会给你编一个结果出来。\n\n请确认一下：是 ID 抄错了，还是想查某个星表（ps1 / gaia / smss / uss / stripe82 标准星…）里的某个对象？给我正确的 source_id（或所属星表 + 坐标）我就去取。",
+    "declared": true,
+    "declared_issues": ["source_id 命名不匹配任何星表前缀", "无按 id 直查端点"]
+  },
+  {
+    "item_id": "RB-14",
+    "tier": "P",
+    "request": "查 Gaia DR3 1234567890123456789 在 BEST 标准星表中的记录。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这条我查不了，先说清原因，再说怎么才能查：\n\n**1）没有「BEST 标准星表」这一张表。** `std` 是站点上的导航分组（Standard Stars），不是可查询表 —— `/std/q`、`/std/f` 直接返回 `{\"error\":\"Internal Server Error\"}`。它的三个可查询成员是 `scr_galah`、`scr_lamost`、`xpsp`。要查得先指定其中一张。\n\n**2）BEST 没有按 Gaia source_id 检索的公开端点。** 站点查询只支持按位置定位：位置锥搜（`pos.type=cone`，`ra/dec` + 半径）或 proximity 批量坐标匹配（上传 `ra,dec[,radius]` 列表）。我手上的工具面（resolve_name / list_catalogs / describe_catalog / cone_search / crossmatch_batch / count / fetch_page）也没有任何一个接受 source_id 作为输入。所以只给我 `1234567890123456789` 这个号，我发不出任何有效请求。\n\n**3）我也不会替你补一条记录。** 这个 19 位数值我无法在 BEST 里核实，凭空给一套 ra/dec 和星等是最糟的结果 —— 本 skill 的处置约定就是「按 ID 查不到就显式失败，不伪造数据」。\n\n**能查的路径（给我其一即可）：**\n- 这颗星的赤经赤纬（ICRS，度）→ 我用 `cone_search` 在指定成员表上按位置找（半径默认 300″；`scr_galah`/`scr_lamost` 极稀疏，建议直接 1800″）。\n- 或一份坐标清单 → 我用 `crossmatch_batch` 走服务端 proximity 一次批量匹配。\n- 若你要的是 Gaia DR3 本身的天体测量/测光记录，`gaia_dr3_18` 表（155 列，含 `gaia_dr3_18_source_id`）同样按坐标可查 —— 但它属 calib 组，不是标准星组。\n\n另外提醒：若你的本意是问「这颗星是不是变星」，BEST 是单历元静态星表，既无时序也不给变星判定，这个我同样给不出。"
+  },
+  {
+    "item_id": "RB-15",
+    "tier": "P",
+    "request": "查 source_id 为 12345 的源 (传成整数)。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这个请求没法按字面执行：BEST 没有「按 source_id 查询」的接口。站点的 `/q` 只走两种入口——按位置锥形检索（中心坐标 + 半径），或按坐标列表做 proximity 批量交叉匹配；任何星表都不提供 source_id 单点查询端点。所以 12345 无论传整数还是字符串，都没有地方可传，我不能拿它直接查出这颗源（硬查只会是伪造结果）。\n\n另外提醒：BEST 里的 `source_id` 是各星表原生的**字符串** ID（ps1 实测为 19 位整数串，如 `2449913804508125824`），跨表并不通用，所以「传成整数」本身也不构成一个合法检索键。\n\n请给我该源的位置与目标星表，我就能帮你查到：\n- 赤经、赤纬（度，ICRS）+ 目标星表（如 `ps1` / `gaia_dr3_18` / `xpsp` 等）→ 走锥形检索；\n- 一批已知坐标 → 走批量交叉匹配。\n如果你只有这个 ID，请告诉我它来自哪张表，我可以说明该表该如何用坐标反查。"
+  },
+  {
+    "item_id": "RB-16",
+    "tier": "P",
+    "request": "查 source_id 为 gaia_xxx 的源。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "「gaia_xxx」是个占位符，不是有效的 source_id，我不能拿它去发查询——那样只会白跑一次、或编出一个并不存在的源。麻烦补两点信息：\n\n1. 真实的 ID 取值。BEST 的主键列是 `*_source_id`；若你指的是 Gaia DR3 精测定标表 `gaia_dr3_18`，它的 `gaia_dr3_18_source_id` 是 19 位整数（形如 1234567890123456789），不带「gaia_」前缀。\n2. 要查哪张星表（12 张可查表之一，如 ps1 / gaia_dr3_18 / stripe82 / jplus_dr3 …）。只给「source_id」而不给星表，目标列名无法确定。\n\n另外两点提醒：BEST 里没有叫「gaia」的表（线上 id 是 `gaia_dr3_18`）；如果你要的是通用 Gaia 星表检索（非 BEST 数据），那超出本数据源范围，需转 astro-catalog。把 ID 和星表补齐后，我按 `{catalog}_source_id` 的 `in` 约束做精准取行。"
+  },
+  {
+    "item_id": "RB-17",
+    "tier": "P",
+    "request": "查 RA 180.0 Dec 30.0 半径 1 角秒内的 ps1 源。",
+    "route": "answer",
+    "tool_calls": [{"tool": "cone_search", "args": {"ra": 180.0, "dec": 30.0, "radius_arcsec": 1.0, "catalog": "ps1"}}],
+    "answer_text": "已按中心 RA=180.0°、Dec=30.0°、检索半径 1 角秒 对 BEST 数据库的 ps1 星表（Pan-STARRS All-Sky）发起锥形检索，走服务端原生 cone 协议（POST 建会话 → getcount → 分页取数），返回该 1 角秒锥内命中的源行（含 ps1_ra/ps1_dec、g/r/i/z/y 的 PSF 星等与误差、class_star 等列）。结果行来自 BEST 站点实时回包，请按“数据”对待。提醒：1 角秒是非常紧的半径，命中 0 行或仅个别源都属正常；若需要，我可以放宽半径（例如 3 角分=180 角秒）、裁剪列投影（省带宽）或加 nearest_only 只取最近邻。",
+    "declared": true,
+    "declared_issues": ["1 角秒半径很紧, 命中 0 行属正常"]
+  },
+  {
+    "item_id": "RB-18",
+    "tier": "P",
+    "request": "查 M31 的标准星记录 (名称解析返回多个候选)。",
+    "route": "clarify",
+    "tool_calls": [{"tool": "resolve_name", "args": {"name": "M31"}}],
+    "answer_text": "「M31」这个名字在名称解析（`/nss/solve`，代理 CDS Sesame）里同时命中了多个候选天体，解析结果不是唯一坐标——我没有一个可靠的目标位置可依。\n\n标准星记录是按坐标/天区检索的，如果我不问就替你挑其中一个候选，整批结果会静默挂到错误的目标上，所以我先停在这里跟你确认，不擅自选。\n\n请二选一（任选其一即可，我拿到后就继续）：\n1. 指定具体是哪一个候选：把解析给出的候选名/编号告诉我，或换用更精确的名称（例如 NGC 224 这类别名）；\n2. 直接给坐标：ICRS 的 RA、Dec（度），以及检索半径（角秒），我按坐标直接查标准星表。\n\n补充一句供你判断：若你要的是亮星标准星，亮端（约 <13 mag）有饱和问题，届时请一并说明星等范围。",
+    "declared": true,
+    "declared_issues": ["名称解析返回多个候选, 坐标不唯一"]
+  },
+  {
+    "item_id": "RB-19",
+    "tier": "P",
+    "request": "查 ZZQXZ 这颗星的标准星记录 (名称解析失败, 回 ra=dec=-1000 哨兵)。",
+    "route": "stop_report",
+    "tool_calls": [{"tool": "resolve_name", "args": {"name": "ZZQXZ"}}],
+    "answer_text": "抱歉，这颗星查不了 —— 名称解析这一步就失败了，没能拿到可用于检索的标准星记录。\n\n具体经过：我先把 \"ZZQXZ\" 交给天体名解析入口（CDS Sesame 代理）去换坐标，站点在 HTTP 200 的响应体里回的是 `ra=dec=-1000` 哨兵值，说明 Sesame 根本没解析出这个目标（名称拼写有误，或它不在 Sesame 的覆盖范围内）。按契约，这种哨兵回包会被判为解析失败并抛 `NameResolveError`（错误码 `E_NAME_UNRESOLVED`），而不是当成一个“位于 ra=-1000°、dec=-1000° 的天体”。\n\n我**没有**把这个哨兵坐标拿去继续查标准星表：BEST 的标准星（`landolt` / `scr_galah` / `scr_lamost` / `xpsp` 等）只能按位置做锥形检索，按名字是查不到的；而 `-1000` 既超出合法坐标范围（RA 0–360°、Dec −90–90°），也会把一次解析失败伪装成“该天区 0 行”的假结果，这两种语义不能混。所以我没有编造任何记录。\n\n请二选一后我再继续：\n1. 换一个正确的天体名（例如 M31、NGC 532、Betelgeuse 这类 Sesame 能识别的写法）——请核对拼写；\n2. 直接给我坐标（RA/Dec，度）+ 搜索半径（角秒），我按坐标去对应的标准星表做锥形检索。",
+    "declared": true,
+    "declared_issues": ["名称解析失败 (Sesame 回 ra=dec=-1000 哨兵, HTTP 200 非报错)", "哨兵不得当坐标参与检索"]
+  },
+  {
+    "item_id": "RB-20",
+    "tier": "P",
+    "request": "查这颗星 (锥内返回多个源)。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这条请求我暂时没法执行，需要你先补两处信息：\n\n1）**目标是谁**——“这颗星”没有指明具体天体，我这边拿不到任何可查询的标识：既没有名称/编号，也没有坐标（RA/Dec），也没说查哪张表。BEST 的锥形检索按位置查，没有坐标或可解析的名称，我无法拼出一次有效查询。\n\n2）**多源怎么取舍**——你提到“锥内返回多个源”。按 BEST 的行为，锥形检索本身就会命中多条记录，而且位置接近**不等同于同一天体**，我不会替你认定“哪条就是这颗星”。所以即使你给出坐标，也请一并说明：是把锥内所有源都列出来，还是只要最近邻一个？判定同一颗星的口径（匹配半径、自行、`ruwe`/`duplicated_source` 等）由谁定？\n\n请补充：**① 目标标识（名称或 RA、Dec）+ 要查的星表；② 多源时的取用规则。** 收到后我就发起锥形检索，并把命中条数、所用半径与表如实回报。",
+    "declared": true,
+    "declared_issues": ["缺目标标识", "锥内多源 ≠ 同一天体, 取用规则未定"]
+  },
+  {
+    "item_id": "RB-21",
+    "tier": "P",
+    "request": "查 M31 的标准星记录 (Sesame 只解析到角分级精度)。",
+    "route": "answer",
+    "tool_calls": [{"tool": "resolve_name", "args": {"name": "M31"}}, {"tool": "cone_search", "args": {"ra": 10.68, "dec": 41.27, "radius_arcsec": 5400.0, "catalog": "std"}}],
+    "answer_text": "我用 BEST 的名称解算把 M31 解到中心坐标 ra≈10.68°、dec≈41.27°（ICRS）——请注意这个解算只到角分精度（约 ±1′），不是精确中心。BEST 的标准星（std 组 = scr_lamost / scr_galah / xpsp）只能按位置锥搜、没有“按名字”检索，所以我在该中心、半径 5400″（1.5°，足以覆盖 M31 约 3° 的主体）上对 std 组做了锥形检索，取回三张成员表的交叉记录（含坐标与各波段测光；条数以返回信封的 total_count / returned_count 为准）。\n\n两点提醒：\n1. 因中心只有角分精度，这批结果是“M31 所在天区内的标准星”，不能据此把某一颗星精确认作 M31 的对应体。若你要更小或更大的天区，或只查单一成员表（例如只查 scr_lamost），告诉我范围我立刻收敛重查。\n2. 若某成员表命中 0 行，属正常——scr_lamost / scr_galah 有各自的天区覆盖，锥区落在覆盖外就是 0 行，不代表表有问题。",
+    "declared": true,
+    "declared_issues": ["中心坐标仅角分精度", "半径 5400 角秒由模型自行设定"]
+  }
+]

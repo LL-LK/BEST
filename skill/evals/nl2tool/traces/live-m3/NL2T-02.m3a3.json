@@ -1,0 +1,18 @@
+{
+  "task_id": "NL2T-02",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 0,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "ps1"
+      }
+    }
+  ],
+  "answer_text": "`ps1`（Pan-STARRS All-Sky）共 **30 列**，结构和别的大星表不太一样——注意它发布的是**每个波段各自的 PSF 星等**，\n不是一张统一星等表：\n\n- **位置**：`ps1_ra`、`ps1_dec`（度，ICRS）\n- **星等（5 个 PSF 星等 + 同名误差）**：\n  - g → `ps1_gpsf` / `ps1_gpsf_corr` / `ps1_gpsf_err`\n  - r → `ps1_rpsf` / `ps1_rpsf_corr` / `ps1_rpsf_err`\n  - i → `ps1_ipsf` / `ps1_ipsf_corr` / `ps1_ipsf_err`\n  - z → `ps1_zpsf` / `ps1_zpsf_corr` / `ps1_zpsf_err`\n  - y → `ps1_ypsf` / `ps1_ypsf_err`（y 没有 corr 列）\n- **逐波段 flag**：`ps1_gflags` / `ps1_iflags` / `ps1_rflags` / `ps1_yflags` / `ps1_zflags`\n- **质量/物理量**：`ps1_class_star`、`ps1_ebv`、`ps1_dust`、`ps1_parallax`（+`_err`）、`ps1_ruwe`、\n  `ps1_max_d`、`ps1_sigma`\n- **主键**：`ps1_source_id`（线上响应里这一列目前是空的，别指望用它回连）\n\n两个读数时必须知道的事：\n\n1. **列名带表前缀**（`ps1_rpsf`），因为分页响应走的是带前缀的列名；`/q` 内联响应会给裸名（`rpsf`）。\n2. **ps1 缺测光的波段回 ≈−1000 哨兵值**（例如 `gpsf=-1004.07`、`gpsf_err=-999.0`，同帧 `ipsf=19.49` 是真值）。\n   判阈值取 −999：**−1000 是\"这个波段没值\"，不是星等**。排序找最亮源、或统计有效样本时必须先剔掉这些行。\n\n本次零请求：列清单是静态登记的（与 `/t/346` 的线上元数据页一致），不实时抓站点。",
+  "notes": "零请求 describe_catalog；点出 ps1 逐波段 PSF 星等结构与 ≈−1000 无测光哨兵值。"
+}

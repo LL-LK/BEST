@@ -1,0 +1,5957 @@
+{
+  "per_task": {
+    "REPRO-01": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4
+      }
+    },
+    "REPRO-02": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6,
+        "n": 5,
+        "mode_count": 3,
+        "pairwise": 0.4,
+        "pair_count": 10,
+        "wilson_95": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "ref_index": 1,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.4,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.8,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6,
+            "n": 5,
+            "mode_count": 3,
+            "pairwise": 0.3,
+            "pair_count": 10,
+            "wilson_95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.6,
+        "n": 5,
+        "mode_count": 3,
+        "pairwise": 0.3,
+        "pair_count": 10,
+        "wilson_95": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "ref_index": 1,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.8,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.3,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.4,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.3,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.8,
+        "L2_jaccard_pairwise": 0.7,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "ERR_PARAM_UNSTABLE": 2,
+        "OK": 3
+      }
+    },
+    "REPRO-03": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.9,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.8,
+        "n": 5,
+        "mode_count": 4,
+        "pairwise": 0.6,
+        "pair_count": 10,
+        "wilson_95": [
+          0.37553462976252533,
+          0.9637758913675698
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4,
+        "ERR_PARAM_UNSTABLE": 1
+      }
+    },
+    "REPRO-04": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.8,
+        "n": 5,
+        "mode_count": 4,
+        "pairwise": 0.6,
+        "pair_count": 10,
+        "wilson_95": [
+          0.37553462976252533,
+          0.9637758913675698
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.7,
+        "slots": [
+          {
+            "point": 0.6,
+            "n": 5,
+            "mode_count": 3,
+            "pairwise": 0.4,
+            "pair_count": 10,
+            "wilson_95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.4,
+        "n": 5,
+        "mode_count": 2,
+        "pairwise": 0.2,
+        "pair_count": 10,
+        "wilson_95": [
+          0.11762077423264783,
+          0.769275718723987
+        ],
+        "ref_index": 0,
+        "ties": [
+          3,
+          4
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.9994117647058823,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.9994117647058823,
+        "L2_jaccard_pairwise": 0.9988235294117647,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.6,
+        "n": 5,
+        "mode_count": 3,
+        "pairwise": 0.4,
+        "pair_count": 10,
+        "wilson_95": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 2,
+        "ERR_PARAM_UNSTABLE": 3
+      }
+    },
+    "REPRO-05": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.8,
+        "n": 5,
+        "mode_count": 4,
+        "pairwise": 0.6,
+        "pair_count": 10,
+        "wilson_95": [
+          0.37553462976252533,
+          0.9637758913675698
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.9,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.8,
+        "n": 5,
+        "mode_count": 4,
+        "pairwise": 0.6,
+        "pair_count": 10,
+        "wilson_95": [
+          0.37553462976252533,
+          0.9637758913675698
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.9,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.9,
+        "L2_jaccard_pairwise": 0.8,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4,
+        "ERR_PARAM_UNSTABLE": 1
+      }
+    },
+    "REPRO-06": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.875,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.75,
+        "n": 4,
+        "mode_count": 3,
+        "pairwise": 0.5,
+        "pair_count": 6,
+        "wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.75,
+          "n": 4,
+          "mode_count": 3,
+          "pairwise": 0.5,
+          "pair_count": 6,
+          "wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.75,
+          "n": 4,
+          "mode_count": 3,
+          "pairwise": 0.5,
+          "pair_count": 6,
+          "wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 3,
+        "ERR_PARAM_UNSTABLE": 1
+      }
+    },
+    "REPRO-08": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": false
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4
+      }
+    },
+    "REPRO-09": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6,
+        "n": 5,
+        "mode_count": 3,
+        "pairwise": 0.4,
+        "pair_count": 10,
+        "wilson_95": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.4,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.7,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6,
+            "n": 5,
+            "mode_count": 3,
+            "pairwise": 0.4,
+            "pair_count": 10,
+            "wilson_95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6,
+            "n": 5,
+            "mode_count": 3,
+            "pairwise": 0.4,
+            "pair_count": 10,
+            "wilson_95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6,
+            "n": 5,
+            "mode_count": 3,
+            "pairwise": 0.4,
+            "pair_count": 10,
+            "wilson_95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.6,
+        "n": 5,
+        "mode_count": 3,
+        "pairwise": 0.4,
+        "pair_count": 10,
+        "wilson_95": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.7,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.4,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.4,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.4,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.7,
+        "L2_jaccard_pairwise": 0.55,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 3,
+        "ERR_PARAM_UNSTABLE": 2
+      }
+    },
+    "REPRO-10": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4
+      }
+    },
+    "REPRO-11": {
+      "runs": 2,
+      "TSC": {
+        "point": 0.5,
+        "n": 2,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 1,
+        "wilson_95": [
+          0.09453120573423074,
+          0.9054687942657693
+        ],
+        "ref_index": 0,
+        "ties": [
+          1
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.5,
+          "n": 2,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "ref_index": 0,
+          "ties": [
+            1
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.7368421052631579,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 2,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.09453120573423074,
+              0.9054687942657693
+            ],
+            "ref_index": 0,
+            "ties": [
+              1
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.5,
+        "n": 2,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 1,
+        "wilson_95": [
+          0.09453120573423074,
+          0.9054687942657693
+        ],
+        "ref_index": 0,
+        "ties": [
+          1
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.5588235294117647,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.5,
+          "n": 2,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "ref_index": 0,
+          "ties": [
+            1
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.5,
+          "n": 2,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "ref_index": 0,
+          "ties": [
+            1
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.5,
+          "n": 2,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.09453120573423074,
+            0.9054687942657693
+          ],
+          "ref_index": 0,
+          "ties": [
+            1
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.5588235294117647,
+        "L2_jaccard_pairwise": 0.11764705882352941,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 2,
+        "mode_count": 2,
+        "pairwise": 1.0,
+        "pair_count": 1,
+        "wilson_95": [
+          0.34238022750665303,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 1
+      }
+    },
+    "REPRO-12": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 5
+      }
+    },
+    "REPRO-13": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 5
+      }
+    },
+    "REPRO-14": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.2,
+        "n": 5,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.03622410863243014,
+          0.6244653702374747
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.6,
+          "n": 5,
+          "mode_count": 3,
+          "pairwise": 0.3,
+          "pair_count": 10,
+          "wilson_95": [
+            0.2307242812760128,
+            0.882379225767352
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.625,
+        "slots": [
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.4,
+            "n": 5,
+            "mode_count": 2,
+            "pairwise": 0.1,
+            "pair_count": 10,
+            "wilson_95": [
+              0.11762077423264783,
+              0.769275718723987
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.2,
+            "n": 5,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.03622410863243014,
+              0.6244653702374747
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.4,
+            "n": 5,
+            "mode_count": 2,
+            "pairwise": 0.1,
+            "pair_count": 10,
+            "wilson_95": [
+              0.11762077423264783,
+              0.769275718723987
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.2,
+        "n": 5,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.03622410863243014,
+          0.6244653702374747
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.5912770725115759,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.2,
+          "n": 5,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.03622410863243014,
+            0.6244653702374747
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.2,
+          "n": 5,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.03622410863243014,
+            0.6244653702374747
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.2,
+          "n": 5,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.03622410863243014,
+            0.6244653702374747
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.5912770725115759,
+        "L2_jaccard_pairwise": 0.2961428060893808,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.4,
+        "n": 5,
+        "mode_count": 2,
+        "pairwise": 0.1,
+        "pair_count": 10,
+        "wilson_95": [
+          0.11762077423264783,
+          0.769275718723987
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 4
+      }
+    },
+    "REPRO-15": {
+      "runs": 3,
+      "TSC": {
+        "point": 0.3333333333333333,
+        "n": 3,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.4444444444444444,
+        "slots": [
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.3333333333333333,
+        "n": 3,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.46428571428571425,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.46428571428571425,
+        "L2_jaccard_pairwise": 0.18223443223443225,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 3,
+        "mode_count": 3,
+        "pairwise": 1.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.4385029682449546,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 2
+      }
+    },
+    "REPRO-16": {
+      "runs": 3,
+      "TSC": {
+        "point": 1.0,
+        "n": 3,
+        "mode_count": 3,
+        "pairwise": 1.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.4385029682449546,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 3,
+          "mode_count": 3,
+          "pairwise": 1.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.4385029682449546,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.6666666666666666,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 3,
+            "mode_count": 3,
+            "pairwise": 1.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.4385029682449546,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 3,
+            "mode_count": 3,
+            "pairwise": 1.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.4385029682449546,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.3333333333333333,
+        "n": 3,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.6744186046511628,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.6666666666666666,
+          "n": 3,
+          "mode_count": 2,
+          "pairwise": 0.3333333333333333,
+          "pair_count": 3,
+          "wilson_95": [
+            0.2076596008020477,
+            0.9385080552796037
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.6744186046511628,
+        "L2_jaccard_pairwise": 0.3488372093023256,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.3333333333333333,
+        "n": 3,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 2
+      }
+    },
+    "REPRO-17": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.8269230769230769,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 2,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              3
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.25,
+        "n": 4,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2,
+          3
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.25,
+          "n": 4,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 3
+      }
+    },
+    "REPRO-18": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4
+      }
+    },
+    "REPRO-19": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.96,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.8,
+        "n": 5,
+        "mode_count": 4,
+        "pairwise": 0.6,
+        "pair_count": 10,
+        "wilson_95": [
+          0.37553462976252533,
+          0.9637758913675698
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.96,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.96,
+        "L2_jaccard_pairwise": 0.9199999999999999,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 4,
+        "ERR_PARAM_UNSTABLE": 1
+      }
+    },
+    "REPRO-20": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6,
+        "n": 5,
+        "mode_count": 3,
+        "pairwise": 0.3,
+        "pair_count": 10,
+        "wilson_95": [
+          0.2307242812760128,
+          0.882379225767352
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.8,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.8,
+            "n": 5,
+            "mode_count": 4,
+            "pairwise": 0.6,
+            "pair_count": 10,
+            "wilson_95": [
+              0.37553462976252533,
+              0.9637758913675698
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.6,
+            "n": 5,
+            "mode_count": 3,
+            "pairwise": 0.3,
+            "pair_count": 10,
+            "wilson_95": [
+              0.2307242812760128,
+              0.882379225767352
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.4,
+        "n": 5,
+        "mode_count": 2,
+        "pairwise": 0.1,
+        "pair_count": 10,
+        "wilson_95": [
+          0.11762077423264783,
+          0.769275718723987
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.8153846153846154,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.4,
+          "n": 5,
+          "mode_count": 2,
+          "pairwise": 0.1,
+          "pair_count": 10,
+          "wilson_95": [
+            0.11762077423264783,
+            0.769275718723987
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.8,
+          "n": 5,
+          "mode_count": 4,
+          "pairwise": 0.6,
+          "pair_count": 10,
+          "wilson_95": [
+            0.37553462976252533,
+            0.9637758913675698
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.4,
+          "n": 5,
+          "mode_count": 2,
+          "pairwise": 0.1,
+          "pair_count": 10,
+          "wilson_95": [
+            0.11762077423264783,
+            0.769275718723987
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.8153846153846154,
+        "L2_jaccard_pairwise": 0.6307692307692307,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 2,
+        "ERR_PARAM_UNSTABLE": 3
+      }
+    },
+    "REPRO-21": {
+      "runs": 3,
+      "TSC": {
+        "point": 0.3333333333333333,
+        "n": 3,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.4,
+        "slots": [
+          {
+            "point": 0.6666666666666666,
+            "n": 3,
+            "mode_count": 2,
+            "pairwise": 0.3333333333333333,
+            "pair_count": 3,
+            "wilson_95": [
+              0.2076596008020477,
+              0.9385080552796037
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.3333333333333333,
+            "n": 3,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 3,
+            "wilson_95": [
+              0.06149194472039621,
+              0.7923403991979522
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.3333333333333333,
+        "n": 3,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.06149194472039621,
+          0.7923403991979522
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.3364971002803703,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.3333333333333333,
+          "n": 3,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 3,
+          "wilson_95": [
+            0.06149194472039621,
+            0.7923403991979522
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.3364971002803703,
+        "L2_jaccard_pairwise": 0.3336642390905686,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 3,
+        "mode_count": 3,
+        "pairwise": 1.0,
+        "pair_count": 3,
+        "wilson_95": [
+          0.4385029682449546,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 2
+      }
+    },
+    "REPRO-22": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.6923076923076923,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 1,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 1,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.8076923076923077,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.75,
+          "n": 4,
+          "mode_count": 3,
+          "pairwise": 0.5,
+          "pair_count": 6,
+          "wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.75,
+          "n": 4,
+          "mode_count": 3,
+          "pairwise": 0.5,
+          "pair_count": 6,
+          "wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "ref_index": 1,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.8076923076923077,
+        "L2_jaccard_pairwise": 0.6153846153846154,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "ERR_PARAM_UNSTABLE": 2,
+        "ERR_CONCLUSION_UNSTABLE": 1,
+        "OK": 1
+      }
+    },
+    "REPRO-23": {
+      "runs": 4,
+      "TSC": {
+        "point": 0.75,
+        "n": 4,
+        "mode_count": 3,
+        "pairwise": 0.5,
+        "pair_count": 6,
+        "wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.875,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 4,
+            "mode_count": 4,
+            "pairwise": 1.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.5101091635454027,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.75,
+        "n": 4,
+        "mode_count": 3,
+        "pairwise": 0.5,
+        "pair_count": 6,
+        "wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.75,
+          "n": 4,
+          "mode_count": 3,
+          "pairwise": 0.5,
+          "pair_count": 6,
+          "wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.75,
+          "n": 4,
+          "mode_count": 3,
+          "pairwise": 0.5,
+          "pair_count": 6,
+          "wilson_95": [
+            0.30064184258240184,
+            0.9544127391902995
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.25,
+        "n": 4,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2,
+          3
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 1,
+        "ERR_CONCLUSION_UNSTABLE": 2
+      }
+    },
+    "REPRO-24": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 5
+      }
+    },
+    "REPRO-25": {
+      "runs": 4,
+      "TSC": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.3333333333333333,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.5,
+        "slots": [
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.9971590909090908,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.3333333333333333,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.9971590909090908,
+        "L2_jaccard_pairwise": 0.9962121212121211,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 2,
+        "ERR_PARAM_UNSTABLE": 2
+      }
+    },
+    "REPRO-26": {
+      "runs": 4,
+      "TSC": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.75,
+        "slots": [
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.5357142857142857,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.16666666666666666,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.5357142857142857,
+        "L2_jaccard_pairwise": 0.21428571428571427,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.5,
+        "n": 4,
+        "mode_count": 2,
+        "pairwise": 0.16666666666666666,
+        "pair_count": 6,
+        "wilson_95": [
+          0.15003898915214947,
+          0.8499610108478506
+        ],
+        "ref_index": 1,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "ERR_CONCLUSION_UNSTABLE": 1,
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 2
+      }
+    },
+    "REPRO-27": {
+      "runs": 2,
+      "TSC": {
+        "point": 1.0,
+        "n": 2,
+        "mode_count": 2,
+        "pairwise": 1.0,
+        "pair_count": 1,
+        "wilson_95": [
+          0.34238022750665303,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 2,
+          "mode_count": 2,
+          "pairwise": 1.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.34238022750665303,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 2,
+            "mode_count": 2,
+            "pairwise": 1.0,
+            "pair_count": 1,
+            "wilson_95": [
+              0.34238022750665303,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 2,
+        "mode_count": 2,
+        "pairwise": 1.0,
+        "pair_count": 1,
+        "wilson_95": [
+          0.34238022750665303,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 2,
+          "mode_count": 2,
+          "pairwise": 1.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.34238022750665303,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 2,
+          "mode_count": 2,
+          "pairwise": 1.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.34238022750665303,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 2,
+          "mode_count": 2,
+          "pairwise": 1.0,
+          "pair_count": 1,
+          "wilson_95": [
+            0.34238022750665303,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 2,
+        "mode_count": 2,
+        "pairwise": 1.0,
+        "pair_count": 1,
+        "wilson_95": [
+          0.34238022750665303,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 2
+      }
+    },
+    "REPRO-28": {
+      "runs": 4,
+      "TSC": {
+        "point": 0.25,
+        "n": 4,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2,
+          3
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 0.25,
+          "n": 4,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.5625,
+        "slots": [
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.25,
+            "n": 4,
+            "mode_count": 1,
+            "pairwise": 0.0,
+            "pair_count": 6,
+            "wilson_95": [
+              0.04558726080970055,
+              0.6993581574175981
+            ],
+            "ref_index": 0,
+            "ties": [
+              1,
+              2,
+              3
+            ],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.5,
+            "n": 4,
+            "mode_count": 2,
+            "pairwise": 0.16666666666666666,
+            "pair_count": 6,
+            "wilson_95": [
+              0.15003898915214947,
+              0.8499610108478506
+            ],
+            "ref_index": 2,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.25,
+        "n": 4,
+        "mode_count": 1,
+        "pairwise": 0.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.04558726080970055,
+          0.6993581574175981
+        ],
+        "ref_index": 0,
+        "ties": [
+          1,
+          2,
+          3
+        ],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.9901762083448147,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.25,
+          "n": 4,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.25,
+          "n": 4,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 0.25,
+          "n": 4,
+          "mode_count": 1,
+          "pairwise": 0.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.04558726080970055,
+            0.6993581574175981
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2,
+            3
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.9901762083448147,
+        "L2_jaccard_pairwise": 0.987822248039775,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.75,
+        "n": 4,
+        "mode_count": 3,
+        "pairwise": 0.5,
+        "pair_count": 6,
+        "wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 1,
+        "ERR_PARAM_UNSTABLE": 3
+      }
+    },
+    "REPRO-29": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.8,
+        "n": 5,
+        "mode_count": 4,
+        "pairwise": 0.6,
+        "pair_count": 10,
+        "wilson_95": [
+          0.37553462976252533,
+          0.9637758913675698
+        ],
+        "ref_index": 1,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "ERR_CONCLUSION_UNSTABLE": 1,
+        "OK": 4
+      }
+    },
+    "REPRO-30": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 5
+      }
+    },
+    "REPRO-31": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0,
+        "n": 4,
+        "mode_count": 4,
+        "pairwise": 1.0,
+        "pair_count": 6,
+        "wilson_95": [
+          0.5101091635454027,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 0.75,
+        "slots": [
+          {
+            "point": 0.75,
+            "n": 4,
+            "mode_count": 3,
+            "pairwise": 0.5,
+            "pair_count": 6,
+            "wilson_95": [
+              0.30064184258240184,
+              0.9544127391902995
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 0.75,
+        "n": 4,
+        "mode_count": 3,
+        "pairwise": 0.5,
+        "pair_count": 6,
+        "wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 0.5,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.3333333333333333,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 0.5,
+          "n": 4,
+          "mode_count": 2,
+          "pairwise": 0.3333333333333333,
+          "pair_count": 6,
+          "wilson_95": [
+            0.15003898915214947,
+            0.8499610108478506
+          ],
+          "ref_index": 0,
+          "ties": [
+            1,
+            2
+          ],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 4,
+          "mode_count": 4,
+          "pairwise": 1.0,
+          "pair_count": 6,
+          "wilson_95": [
+            0.5101091635454027,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 0.5,
+        "L2_jaccard_pairwise": 0.3333333333333333,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 0.75,
+        "n": 4,
+        "mode_count": 3,
+        "pairwise": 0.5,
+        "pair_count": 6,
+        "wilson_95": [
+          0.30064184258240184,
+          0.9544127391902995
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "ERR_PARAM_SCHEMA": 4
+      }
+    },
+    "REPRO-32": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证",
+        "set": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        }
+      },
+      "PAC_call": {
+        "point": 1.0,
+        "slots": [
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          },
+          {
+            "point": 1.0,
+            "n": 5,
+            "mode_count": 5,
+            "pairwise": 1.0,
+            "pair_count": 10,
+            "wilson_95": [
+              0.5655175352168251,
+              1
+            ],
+            "ref_index": 0,
+            "ties": [],
+            "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+          }
+        ],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "RDC": {
+        "point": 1.0,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_equality": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L3": {
+          "point": 1.0,
+          "n": 5,
+          "mode_count": 5,
+          "pairwise": 1.0,
+          "pair_count": 10,
+          "wilson_95": [
+            0.5655175352168251,
+            1
+          ],
+          "ref_index": 0,
+          "ties": [],
+          "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+        },
+        "L2_jaccard_mode": 1.0,
+        "L2_jaccard_pairwise": 1.0,
+        "data_outputs_observed": true
+      },
+      "FCC": {
+        "point": 1.0,
+        "n": 5,
+        "mode_count": 5,
+        "pairwise": 1.0,
+        "pair_count": 10,
+        "wilson_95": [
+          0.5655175352168251,
+          1
+        ],
+        "ref_index": 0,
+        "ties": [],
+        "interval_limit": "数据选众数后的描述性Wilson，不是独立预指定二项试验或未来稳定率保证"
+      },
+      "attribution": {
+        "OK": 5
+      }
+    },
+    "REPRO-07": {
+      "runs": 0,
+      "TSC": {
+        "point": null,
+        "n": 0,
+        "mode_count": 0,
+        "pairwise": null,
+        "wilson_95": null,
+        "ref_index": null,
+        "ties": [],
+        "set": {
+          "point": null,
+          "n": 0,
+          "mode_count": 0,
+          "pairwise": null,
+          "wilson_95": null,
+          "ref_index": null,
+          "ties": []
+        }
+      },
+      "PAC_call": {
+        "point": null,
+        "slots": [],
+        "denominator": "actual repeats per aligned call slot; macro over slots"
+      },
+      "PAC_sequence": {
+        "point": null,
+        "n": 0,
+        "mode_count": 0,
+        "pairwise": null,
+        "wilson_95": null,
+        "ref_index": null,
+        "ties": []
+      },
+      "RDC": {
+        "point": null,
+        "level": "L2 Jaccard",
+        "L1": {
+          "point": null,
+          "n": 0,
+          "mode_count": 0,
+          "pairwise": null,
+          "wilson_95": null,
+          "ref_index": null,
+          "ties": []
+        },
+        "L2_equality": {
+          "point": null,
+          "n": 0,
+          "mode_count": 0,
+          "pairwise": null,
+          "wilson_95": null,
+          "ref_index": null,
+          "ties": []
+        },
+        "L3": {
+          "point": null,
+          "n": 0,
+          "mode_count": 0,
+          "pairwise": null,
+          "wilson_95": null,
+          "ref_index": null,
+          "ties": []
+        },
+        "L2_jaccard_mode": null,
+        "L2_jaccard_pairwise": null,
+        "data_outputs_observed": false
+      },
+      "FCC": {
+        "point": null,
+        "n": 0,
+        "mode_count": 0,
+        "pairwise": null,
+        "wilson_95": null,
+        "ref_index": null,
+        "ties": []
+      },
+      "attribution": {}
+    }
+  },
+  "aggregate": {
+    "TSC": {
+      "point": 0.7989247311827957,
+      "task_units": 31,
+      "bootstrap_95": [
+        0.703763440860215,
+        0.8887096774193549
+      ],
+      "bootstrap_replicates": 10000,
+      "seed": 20261007,
+      "limit": "重抽题号反映任务集组成差异；全1时区间退化，不代表未来运行必然稳定"
+    },
+    "PAC_call": {
+      "point": 0.8214414188904852,
+      "task_units": 31,
+      "bootstrap_95": [
+        0.757160535747972,
+        0.8818088649819337
+      ],
+      "bootstrap_replicates": 10000,
+      "seed": 20261007,
+      "limit": "重抽题号反映任务集组成差异；全1时区间退化，不代表未来运行必然稳定"
+    },
+    "RDC": {
+      "point": 0.8590593643190833,
+      "task_units": 31,
+      "bootstrap_95": [
+        0.7866177105646637,
+        0.9249411689374187
+      ],
+      "bootstrap_replicates": 10000,
+      "seed": 20261007,
+      "limit": "重抽题号反映任务集组成差异；全1时区间退化，不代表未来运行必然稳定"
+    },
+    "FCC": {
+      "point": 0.8672043010752689,
+      "task_units": 31,
+      "bootstrap_95": [
+        0.7817204301075269,
+        0.9419354838709678
+      ],
+      "bootstrap_replicates": 10000,
+      "seed": 20261007,
+      "limit": "重抽题号反映任务集组成差异；全1时区间退化，不代表未来运行必然稳定"
+    },
+    "RDC_data_conditioned": {
+      "point": 0.8543613431297195,
+      "task_units": 30,
+      "bootstrap_95": [
+        0.7781010571164375,
+        0.9230331383608434
+      ],
+      "bootstrap_replicates": 10000,
+      "seed": 20261007,
+      "limit": "重抽题号反映任务集组成差异；全1时区间退化，不代表未来运行必然稳定"
+    }
+  },
+  "attribution": {
+    "OK": 84,
+    "ERR_PARAM_UNSTABLE": 38,
+    "ERR_CONCLUSION_UNSTABLE": 5,
+    "ERR_PARAM_SCHEMA": 4
+  },
+  "alpha_TSC": {
+    "alpha": 0.6385299824885229,
+    "units": 31,
+    "observations": 131,
+    "reason": null
+  },
+  "task_units": 31,
+  "records": 131,
+  "coverage": {
+    "tasks_with_5_valid": 14,
+    "task_target": 32,
+    "record_target": 160,
+    "independent_task_units": 31
+  },
+  "note": "L2为完整规范行集+非行语义的Jaccard；原实现仅主键集全等会漏掉单值/元数据变化。",
+  "missing_valid_tasks": [
+    "REPRO-07"
+  ]
+}

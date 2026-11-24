@@ -1,0 +1,18 @@
+{
+  "task_id": "NL2T-03",
+  "run_id": "m3-attempt3",
+  "attempt": 3,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 1,
+  "tool_calls": [
+    {
+      "tool": "resolve_name",
+      "args": {
+        "name": "M31"
+      }
+    }
+  ],
+  "answer_text": "M31（仙女座星系）解算结果：\n\n- **RA = 10.68470833 度**\n- **Dec = +41.26875 度**\n- 坐标系 ICRS，**单位是度**（不是小时、也不是角分）\n\n怎么来的：按天体名查星的唯一入口是 `resolve_name`，站点后端代理 CDS Sesame（`GET /nss/solve?obj=M31`），\n本地不需要装 Sesame。\n\n一个必须知道的失败形态：名字解不出来时，站点**不报错**，而是 HTTP 200 + 哨兵坐标 `ra=-1000, dec=-1000`\n（`remark` 里带 Sesame 的 URL）。这种情况工具会返回 `E_NAME_UNRESOLVED`，我不会拿 −1000 当坐标继续查——\n你如果看到我报这个错，就把名字换一种写法（NGC 编号、ICRS 命名、别名）再来一次。",
+  "notes": "按名字查星走 resolve_name（唯一入口），1 个 wire 请求；坐标以度为单位，并说明 ±1000 哨兵失败的处置。"
+}

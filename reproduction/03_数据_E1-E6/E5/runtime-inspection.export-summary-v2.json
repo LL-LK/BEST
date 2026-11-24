@@ -1,0 +1,28 @@
+{
+  "schema": "e5-zero-unit-inspection-export-v1",
+  "source_sha256": "45cb9996c1b2f275aa9aa8c38f143dcdd15fa8305ab8a5e77394063f4a2ec776",
+  "session_id": "session-dcbae0e6-b9a5-457a-8439-d88af96623ca",
+  "event_count": 46,
+  "call_count": 9,
+  "catalogs": [
+    "Event-agent-created",
+    "Event-directory",
+    "Service-agentPresets",
+    "Service-agents",
+    "Service-pluginManager",
+    "Service-tools",
+    "Tool-directory"
+  ],
+  "catalog_errors": [
+    {
+      "key": "Service-directory",
+      "call_id": "call_00_62sq1f1jgftqlxofniptfqa2",
+      "error": "Expecting ',' delimiter: line 646 column 1 (char 24858)",
+      "reason": "actual tool surface truncated by result/spill policy"
+    }
+  ],
+  "logical_e5_units": 0,
+  "preset": null,
+  "science_mode_verified": false,
+  "redaction": "remove thinking/reasoning blocks; sequence retained"
+}

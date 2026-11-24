@@ -1,0 +1,274 @@
+[
+  {
+    "sample_id": "014097200bbb01ff",
+    "key": "S-A_E3-E01_r3",
+    "prior": "score-revisions/S-A_E3-E01_r3-final-audit-299472d7.json",
+    "reasons": [
+      "回读冻结原件后确认，仅G_y21不是所列Gaia原生字段，pm及ref_epoch确在数据中。",
+      "移除主评错误的数据概括。"
+    ]
+  },
+  {
+    "sample_id": "4e23ebf299a931f7",
+    "key": "S-A_E3-A06_r1",
+    "prior": "score-revisions/S-A_E3-A06_r1-final-audit-e84185ed.json",
+    "reasons": [
+      "冻结PS1列清单含source_id列名，但两行记录实际均无该字段值，主评此前误读。"
+    ]
+  },
+  {
+    "sample_id": "cbb446058a9b5993",
+    "key": "S-A_E3-D04_r1",
+    "prior": "score-revisions/S-A_E3-D04_r1-final-audit-58309560.json",
+    "reasons": [
+      "两行实际均无source_id取值；列名存在不等于记录内存在值，修正主评误读。"
+    ]
+  },
+  {
+    "sample_id": "f50de8aac7ed0720",
+    "key": "S-A_E3-A06_r2",
+    "prior": "score-revisions/S-A_E3-A06_r2-final-audit-4388e988.json",
+    "reasons": [
+      "回读冻结原件确认g/r/i均64，y为192；此前主评错用了摘要中的数值。"
+    ]
+  },
+  {
+    "sample_id": "f5e816ab9c40e03b",
+    "key": "S-A_E3-D06_r3",
+    "prior": "score-revisions/S-A_E3-D06_r3-final-audit-a874a358.json",
+    "reasons": [
+      "回读冻结原件确认g/r/i的flags均为64；此前主评错误地认为g/r为零。"
+    ]
+  },
+  {
+    "sample_id": "fb9c0ea85c764d04",
+    "key": "S-A_E3-D03_r2",
+    "prior": "score-revisions/S-A_E3-D03_r2-final-audit-6c9f9e21.json",
+    "reasons": [
+      "冻结原件g/r/i均为64，未知位语义不影响非零质量提示的事实。"
+    ]
+  },
+  {
+    "sample_id": "e66b73f3772d24e1",
+    "key": "S-B_E3-C04_r2",
+    "prior": "score-revisions/S-B_E3-C04_r2-final-audit-f125dfa0.json",
+    "reasons": [
+      "冻结原件仅给BP/RP星等，确未给BP/RP流量和流量误差，主评此前误读。"
+    ]
+  },
+  {
+    "sample_id": "e5b91cbb5f724664",
+    "key": "S-B_E3-A05_r3",
+    "prior": "score-revisions/S-B_E3-A05_r3-final-audit-8ddada44.json",
+    "reasons": [
+      "冻结Stripe82构造值17.905减17.432等于0.473，答案0.45无法从该数据重算。",
+      "冻结Stripe82构造值19.021减17.905等于1.116，按百分位舍入应1.12；原注释错误使用不存在的输入。"
+    ]
+  },
+  {
+    "sample_id": "1131eb3804f61e11",
+    "key": "S-B_E3-G02_r2",
+    "prior": "score-revisions/S-B_E3-G02_r2-final-audit-0828c737.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "2aa8ad1334d7eec0",
+    "key": "S-A_E3-G01_r3",
+    "prior": "score-revisions/S-A_E3-G01_r3-final-audit-0618340c.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "2e0fb995e0e70279",
+    "key": "S-A_E3-E02_r1",
+    "prior": "score-revisions/S-A_E3-E02_r1-final-audit-28b3406e.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "3036c07cc7b7689c",
+    "key": "S-A_E3-C04_r1",
+    "prior": "score-revisions/S-A_E3-C04_r1-final-audit-b821d3bc.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "3f0f5a51df5ca324",
+    "key": "S-B_E3-G01_r1",
+    "prior": "score-revisions/S-B_E3-G01_r1-final-audit-6d20383f.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "49c8fe96db074e63",
+    "key": "S-B_E3-D05_r1",
+    "prior": "score-revisions/S-B_E3-D05_r1-final-audit-c39f0565.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "56b41ca90577701c",
+    "key": "S-A_E3-E05_r1",
+    "prior": "score-revisions/S-A_E3-E05_r1-final-audit-b484a850.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "68a9b72fd2e9b72d",
+    "key": "S-B_E3-G03_r1",
+    "prior": "score-revisions/S-B_E3-G03_r1-final-audit-a1e4c894.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "6b2a41eb1fba4cf4",
+    "key": "S-B_E3-E05_r1",
+    "prior": "score-revisions/S-B_E3-E05_r1-final-audit-977401bc.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "769d85aa4092f9fe",
+    "key": "S-A_E3-D05_r1",
+    "prior": "score-revisions/S-A_E3-D05_r1-final-audit-7bb75f10.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "b7d297cdbc1e8da2",
+    "key": "S-B_E3-G02_r1",
+    "prior": "score-revisions/S-B_E3-G02_r1-final-audit-8d31acf0.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "b8870a5bd597894e",
+    "key": "S-B_E3-G01_r2",
+    "prior": "score-revisions/S-B_E3-G01_r2-final-audit-86016873.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "dfe8193d059e4143",
+    "key": "S-B_E3-G01_r3",
+    "prior": "score-revisions/S-B_E3-G01_r3-final-audit-8e912dc1.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "f3fd24aa59c0a884",
+    "key": "S-B_E3-E02_r1",
+    "prior": "score-revisions/S-B_E3-E02_r1-final-audit-a810bc74.json",
+    "reasons": [
+      "常见经验筛选值未在回答中给出验证文献和适用范围，按冻结无来源数值规则计数；不判其数值本身为假。"
+    ]
+  },
+  {
+    "sample_id": "778e5c062ad05008",
+    "key": "S-B_E3-C01_r1",
+    "prior": "score-revisions/S-B_E3-C01_r1-final-audit-e732e453.json",
+    "reasons": [
+      "独立官方核验可支持近似数值，但回答未引用具体已核验来源；统一按冻结来源规则计数，不以评者补充引用替模型提供出处。",
+      "独立官方核验可支持近似数值，但回答未引用具体已核验来源；统一按冻结来源规则计数，不以评者补充引用替模型提供出处。",
+      "厘清公式演示不等于实际星等和零点来源已齐备。"
+    ]
+  },
+  {
+    "sample_id": "b39ee48904a85df8",
+    "key": "S-A_E3-C01_r1",
+    "prior": "score-revisions/S-A_E3-C01_r1-final-audit-a431a4ac.json",
+    "reasons": [
+      "独立官方核验可支持近似数值，但回答未引用具体已核验来源；统一按冻结来源规则计数，不以评者补充引用替模型提供出处。",
+      "独立官方核验可支持近似数值，但回答未引用具体已核验来源；统一按冻结来源规则计数，不以评者补充引用替模型提供出处。",
+      "厘清公式演示不等于实际星等和零点来源已齐备。"
+    ]
+  },
+  {
+    "sample_id": "3a459eed27e45592",
+    "key": "S-B_E3-C02_r1",
+    "prior": "score-revisions/S-B_E3-C02_r1-final-audit-0902861b.json",
+    "reasons": [
+      "独立官方核验可支持近似数值，但回答未引用具体已核验来源；统一按冻结来源规则计数，不以评者补充引用替模型提供出处。",
+      "厘清公式演示不等于实际星等和零点来源已齐备。"
+    ]
+  },
+  {
+    "sample_id": "20b530af352d24e1",
+    "key": "S-A_E3-A03_r3",
+    "prior": "score-revisions/S-A_E3-A03_r3-final-audit-c5f6c576.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  },
+  {
+    "sample_id": "7fdf1dbe04be2280",
+    "key": "S-A_E3-A05_r1",
+    "prior": "score-revisions/S-A_E3-A05_r1-final-audit-9e7b1160.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  },
+  {
+    "sample_id": "5cb585ebe841a2ee",
+    "key": "S-A_E3-B04_r1",
+    "prior": "score-revisions/S-A_E3-B04_r1-final-audit-a8c70bb8.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  },
+  {
+    "sample_id": "9442638aafcd1ede",
+    "key": "S-A_E3-A01_r1",
+    "prior": "score-revisions/S-A_E3-A01_r1-final-audit-155927ba.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  },
+  {
+    "sample_id": "a03815847dbe2041",
+    "key": "S-B_E3-A02_r3",
+    "prior": "score-revisions/S-B_E3-A02_r3-final-audit-56700a2a.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  },
+  {
+    "sample_id": "dfda884c41a4c83a",
+    "key": "control-1",
+    "prior": "score-revisions/control-1-final-audit-4f7ce9ba.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  },
+  {
+    "sample_id": "ea457411057a545b",
+    "key": "S-B_E3-A01_r2",
+    "prior": "score-revisions/S-B_E3-A01_r2-final-audit-c3dd792c.json",
+    "reasons": [
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。",
+      "将已核对的合并数值证据按不同物理量拆分，保持原判定及证据存档。"
+    ]
+  }
+]

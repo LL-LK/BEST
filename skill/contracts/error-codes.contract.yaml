@@ -1,0 +1,89 @@
+skill: astro-best
+kind: error-codes
+# 2026-09-28 修复轮 (SA-P1-2): 契约与代码双向对齐 —
+#   1) BEST_1001.code 由 E101_INVALID_INPUT 改为代码实际发出的 E_INVALID_INPUT
+#      (src/client.py、src/ai_tools.py 的常量值);
+#   2) 补 BEST_1007 (E_NO_SQLID) 与 BEST_1008 (E_NAME_UNRESOLVED) — 两者是
+#      代码在用但契约缺失的条目 (README 治理列"常量须被代码引用"的反面: 代码
+#      在用的码必须有契约条目);
+#   3) BEST_1004/1005 编号规则统一 (E101004_*/E101005_* -> E1004_*/E1005_*,
+#      与 BEST_1xxx 一位段号规则一致, SA-P3-9);
+#   4) BEST_1002/1003/1004/1005/1099 保持 declared 状态并在注释里如实说明
+#      未接线原因 (生态级委派/门禁码在本单机 skill 的代码里暂无消费点) —
+#      缺口从"隐式"变"显式", 不再让读契约的人误以为它们已在跑。
+# 2026-10-05 修复轮 (H4-2, G1-09): 补 BEST_1009 (E_BACKEND) — 它是
+#   src/ai_tools.py::E_BACKEND 定义、src/ai_tools.py::_error_envelope 与
+#   src/client_paging.py::fetch_sqlid_data 实发的兜底码,
+#   (坐标订正 R2 2026-10-05: 原文写 "src/ai_tools.py:58 定义、:225 与
+#    src/client_paging.py:187 实发" —— 逐行打开确认三处坐标均已失效:
+#    ai_tools.py:58 是 E_INVALID_INPUT 的定义 (E_BACKEND 定义在 62),
+#    :225 落在 E_SOFT_404 支路 (E_BACKEND 实发在同一 _error_envelope 的
+#    兜底分支), client_paging.py:187 是 E_BACKEND 分支的注释而非实发语句
+#    (实发 error_code="E_BACKEND" 在该分支内)。语义结论不变, 仅坐标作废。)
+#   此前**代码在用而契约无条目**, 违反本文件自己写的"代码在用的码必须有契约
+#   条目"。同时做了反向核对: 契约里 5 个未接线码 (1002/1003/1004/1005/1099)
+#   全库零引用, 但都已在下面的 declared 段逐条写明原因, 不属"契约有而代码
+#   无且未声明", 故按纪律保留声明而不删除。
+#   注: ops/audit/verify_crossrefs.py 第 8 项 ("契约错误码被代码引用") 从这份
+#   文件收集到 **0 个** 码 (BEST_NNNN 是字典键, 而该检查只认 code/name/id
+#   三个值键位), 故本条对齐由 test/unit/contracts/test_error_code_contract_
+#   alignment.py 独立守护, 不指望那道门。
+codes:
+  BEST_1001:
+    code: E_INVALID_INPUT
+    trigger: 输入未能通过 input.contract.yaml 校验 (坐标越界/约束缺 min-max/列名不在白名单)
+    behavior: block (Fail-Closed), 不进入 EXECUTE
+  BEST_1006:
+    code: E_SOFT_404
+    trigger: HTTP 200 但响应体是 BEST 软错误页 ({"error":"Not Found"}/{"error":"Internal Server Error"}) — 未知路由/导航组查询路径/失效 sqlid 会话
+    behavior: "立即失败 (fail-loud): BestClient 返回 success=False; Best 抛 Soft404Error; 严禁当作空结果静默返回 (P0-3)"
+  BEST_1007:
+    code: E_NO_SQLID
+    trigger: 两阶段协议第一阶段 (POST 表单) 未取得 sqlid — 查询未建成
+    behavior: success=False + error_code=E_NO_SQLID; 调用方按"查询未建成"分支, 不与"0 结果"混淆
+  BEST_1008:
+    code: E_NAME_UNRESOLVED
+    # 值内含 ": " (NameResolveError: ...) — 未加引号的 YAML 标量会解析失败
+    # (2026-09-28 修复轮实测: evals 契约审计器 CRITICAL), 故整值加引号
+    trigger: "CDS Sesame 名称解析失败 (NameResolveError: 哨兵对或不可解析回包)"
+    behavior: 抛 NameResolveError (code=E_NAME_UNRESOLVED); agent 换名称或改走坐标入口
+  BEST_1009:
+    code: E_BACKEND
+    # 兜底码: 刻意不嗅探错误消息文本 (消息措辞会随站点漂移), 未归入
+    # 1001/1006/1007/1008 的异常一律归它, 不再新增细分码。
+    trigger: 网络异常/站点不可达, 或未归入 E_INVALID_INPUT/E_SOFT_404/E_NO_SQLID/E_NAME_UNRESOLVED 的未分类异常
+    behavior: success=False + error_code=E_BACKEND; 与前四支的差别在**可安全重试** (重试不改输入也不换协议), 见 src/client_paging.py 分页失败与 src/ai_tools.py _error_envelope 兜底档
+  # --- declared (未接线): 以下码是本 skill 边界上声明但代码暂无消费点的条目 ---
+  # BEST_1002 (E_GATE_FAILED): QualityGate 门禁失败 — src/core 的 QualityGate
+  #   返回判定明细而非该错误码; 接线随信封 behavior 维度落地 (P2 期)。
+  # BEST_1003 (E_DELEGATE_STREAM) / BEST_1004 (E1004_DELEGATE_CROSSMATCH) /
+  #   BEST_1005 (E1005_DELEGATE_DATA_CLEAN): 生态级委派失败码 — 委派动作发生在
+  #   ecosystem 路由层 (astro-catalog/astro-clean 主理), 本单机 skill 的代码面
+  #   不直接发起委派, 故无引用点; 边界声明以 SKILL.md 主理/委派边界契约为准。
+  # BEST_1099 (E199_INTERNAL): 未分类内部异常收敛码 — provenance 层的 traceback
+  #   保留已实现, 该码的显式映射待信封 behavior 维度落地 (P2 期)。
+  BEST_1002:
+    code: E_GATE_FAILED
+    trigger: 阻断性质量门禁未达阈值
+    behavior: handoff.status=blocked, 记录 quality.gates 失败项
+  BEST_1003:
+    code: E_DELEGATE_STREAM
+    trigger: 委派下游 Skill 返回信封缺失或 status=blocked
+    behavior: raise + 上报闭环 (astro-feedback-loop)
+  BEST_1004:
+    code: E1004_DELEGATE_CROSSMATCH
+    trigger: 下游 astro-catalog 在委托 crossmatch 时失败
+    behavior: 优雅降级 (Graceful Degradation) 并在信封标注
+  BEST_1005:
+    code: E1005_DELEGATE_DATA_CLEAN
+    trigger: 下游 astro-clean 在委托 data_clean 时失败
+    behavior: 优雅降级 (Graceful Degradation) 并在信封标注
+  BEST_1099:
+    code: E199_INTERNAL
+    trigger: 未分类内部异常
+    behavior: 收敛为 E199, 保留完整 traceback 于 provenance
+
+# ---
+# generated_by: scripts/refactor/materialize_contracts.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

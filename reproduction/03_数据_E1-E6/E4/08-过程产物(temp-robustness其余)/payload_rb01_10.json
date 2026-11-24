@@ -1,0 +1,105 @@
+[
+  {
+    "item_id": "RB-01",
+    "tier": "P",
+    "request": "查 RA = -5, Dec = 0 附近 60 角秒内的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [{"tool": "cone_search", "args": {"ra": -5, "dec": 0, "radius_arcsec": 60, "catalog": "ps1"}}],
+    "answer_text": "这次没有取到数据：你给的 RA = -5° 不合法。赤经（RA）的取值范围是 **[0, 360) 度**（左闭右开），-5° 越出下界，因此本地入口校验直接拒绝，未向 BEST 站点发起任何检索（错误码 E_INVALID_INPUT，零线网请求、零配额消耗）。Dec = 0、半径 60 角秒、星表 ps1 这三项本身没问题。\n\n请把 RA 改成 [0, 360) 内的值再发我一次。补充一句：RA 是周期量，本入口按设计**不做自动归一化**，所以我不会替你把它悄悄当成 355°；如果你本意确实是 -5° 的等价正角，请显式写成 **355**，我随后就对 (RA=355, Dec=0, 60″, ps1) 执行锥形检索。",
+    "declared": true,
+    "declared_issues": ["RA=-5 越界 (合法域 [0,360))", "不做自动归一化"]
+  },
+  {
+    "item_id": "RB-02",
+    "tier": "P",
+    "request": "查 RA = 0, Dec = 95 附近 60 角秒内的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这个请求我没法执行，因为赤纬 Dec = 95° 超出了天球坐标的合法范围。\n\n赤纬的取值必须在 −90° 到 +90° 之间（±90° 就是南北天极），95° 在物理上不对应任何天区，所以“RA = 0, Dec = 95 附近 60 角秒”这个位置本身不存在，也就无法在 ps1（Pan-STARRS All-Sky）星表里做锥形检索。\n\n请核对一下目标坐标后重新给出：\n- 如果你要查的是北天极附近，赤纬应写成 +90（即 RA = 0, Dec = 90）；\n- 如果 95 是笔误，或来自其它单位（例如把角度误当成别的量），请改正后再发。\n\n赤经 RA = 0 和 60 角秒的检索半径都是合法的，只要把赤纬改到 [−90, 90] 内，我就可以立刻帮你查 ps1 源。",
+    "declared": true,
+    "declared_issues": ["Dec=95 越界 (合法域 [-90,90])"]
+  },
+  {
+    "item_id": "RB-03",
+    "tier": "P",
+    "request": "查 RA = \"abc\", Dec = 30 附近的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "抱歉，这条查询我不能执行：RA = \"abc\" 不是合法的赤经值。\n\nBEST 锥形检索对 RA 的类型/范围有硬校验——必须是 0–360 的十进制度数（ICRS），例如 `180.0`（也可写成可解析的度分秒形式）。\"abc\" 无法解析为数值，会在入参校验处被 Fail-Closed 拦下（E_INVALID_INPUT），不会进入查询，我也不会替你猜一个 RA 去凑结果。\n\n其余参数没问题：Dec = 30（度，在 -90~90 内）、星表默认 `ps1`、半径默认 180 角秒（3 角分）。\n\n请把 RA 换成合法数值后告诉我，我就按 `cone_search(ra=<数值>, dec=30.0, radius_arcsec=180, catalog=\"ps1\")` 帮你查该天区附近的 PS1 源；如需指定搜索半径或列投影，也请一并说明。",
+    "declared": true,
+    "declared_issues": ["RA=\"abc\" 非数值, 不可解析为度或六十进制"]
+  },
+  {
+    "item_id": "RB-04",
+    "tier": "P",
+    "request": "查 RA = 370, Dec = 30 附近的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [{"tool": "cone_search", "args": {"ra": 370, "dec": 30, "catalog": "ps1"}}],
+    "answer_text": "这条没法直接查：赤经 RA 的合法范围是 [0, 360) 度，您给的 370° 已经越界，BEST 入口校验会直接拒绝（错误码 E_INVALID_INPUT），不会向服务端发出任何请求。\n\n补充一句原因，免得您觉得是“工具不好用”：BEST 站点对越界 RA 是**静默取模**的——370° 会被它当成 10° 照常返回。本 skill 特意在入口把这种值拦下，就是为了避免在您不知情的情况下，把另一片天区（RA=10°）的结果当成 RA=370° 的结果给您。\n\n所以想请您确认一下目标天区：\n- 如果 370 是笔误、本意是 370° − 360° = 10°，回我一句确认，我立刻按 RA = 10°、Dec = 30° 检索 ps1 源；\n- 如果是别的数值（比如想写 37.0°、270° 之类），请把正确的 RA 给我。\n\n坐标确认后我马上执行（检索半径用默认值即可）。",
+    "declared": true,
+    "declared_issues": ["RA=370 越界 (合法域 [0,360))", "站点会静默取模, 入口已拦"]
+  },
+  {
+    "item_id": "RB-05",
+    "tier": "P",
+    "request": "帮我查 RA 120.3 Dec -20.4 半径 5 的 ps1 源。",
+    "route": "answer",
+    "tool_calls": [{"tool": "cone_search", "args": {"ra": 120.3, "dec": -20.4, "radius_arcsec": 5, "catalog": "ps1"}}],
+    "answer_text": "已对 ps1 星表在中心 RA=120.3°、Dec=−20.4° 做半径 5 角秒的锥形检索。提醒一句：BEST 的检索半径单位固定是角秒，所以你说的“半径 5”我按 5″ 理解；如果你要的是 5 角分（=300″）或 5 度（=18000″），说一声，我立刻用该半径重查。",
+    "corrected": false,
+    "declared": true,
+    "declared_issues": ["半径未给单位, 按角秒默认理解"]
+  },
+  {
+    "item_id": "RB-06",
+    "tier": "P",
+    "request": "帮我查 RA 120.3 Dec -20.4 半径 5 角分内的 ps1 源。",
+    "route": "autocorrect",
+    "tool_calls": [{"tool": "cone_search", "args": {"ra": 120.3, "dec": -20.4, "radius_arcsec": 300, "catalog": "ps1"}}],
+    "answer_text": "好的，已按 RA=120.3°、Dec=-20.4° 为中心检索 BEST 的 ps1 星表。你写的是“半径 5 角分”，该锥形检索接口的半径单位是角秒，所以我换算成 300 角秒（5 角分 × 60）后提交——若照字面传 5，会被当成 5 角秒，搜索范围只有你要的 1/60。命中的 ps1 源已取回（列名带 ps1_ 前缀，如 ps1_ra、ps1_dec 等），结果如下。",
+    "corrected": true,
+    "declared": true,
+    "correct_value": 300,
+    "declared_issues": ["5 角分 → 300 角秒 单位换算已声明"]
+  },
+  {
+    "item_id": "RB-07",
+    "tier": "P",
+    "request": "查 RA 120.3 Dec -20.4 半径 0 的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这条查询我没法直接发出去：检索半径必须是**正数**（单位是角秒），你给的“0”会被入口校验直接拒绝——0 或负半径属于无意义查询，系统不会向 BEST 服务端发请求。\n\n请给一个 >0 且 ≤18000（即 5 度）的半径。比如 ps1 常用的 180 角秒（3 角分），我就可以按 RA=120.3、Dec=-20.4 帮你查 ps1 源；如果你想要更小范围，也可以直接告诉我几角秒。",
+    "declared": true,
+    "declared_issues": ["半径 0 非正 (合法域 (0,18000] 角秒)"]
+  },
+  {
+    "item_id": "RB-08",
+    "tier": "P",
+    "request": "查 RA 120.3 Dec -20.4 半径 6 度的 ps1 源。",
+    "route": "reject",
+    "tool_calls": [],
+    "answer_text": "这个查询我没法按你给的条件发出：BEST 的锥形检索半径上限是 **5 度（18000 角秒）**，你要的 6 度 = 21600 角秒，超出上限约 1 度。入口校验会直接拒（返回 E_INVALID_INPUT），不会发任何请求——我也不会替你把 6 度悄悄改成 5 度去查，那样你拿到的结果口径就和你说的不是一回事了。\n\nps1 本身没问题，它是 BEST 可查的 12 张表之一（Pan-STARRS 全天），坐标 RA 120.3° / Dec −20.4° 也在合法范围（RA∈[0,360)、Dec∈[−90,90]）。唯一卡住的就是半径。\n\n想继续的话，给我一个 ≤5 度的半径即可，我马上跑：\n- 直接用上限 **5 度（18000 角秒）**；或\n- 你指定的更小半径（角秒/角分/度都行，注明单位就好，比如“300 角秒”）。\n\n另外先提个醒：半径 5 度在 ps1 上是一大片天区，命中量会很大（参考同表 (180°,30°) 半径 1800″ 就有 21 万+ 行）。真拉数时我会用行数预算截断并显式标注 truncated，需要全量再分页续取。",
+    "declared": true,
+    "declared_issues": ["半径 6 度 = 21600 角秒 > 18000 角秒上限"]
+  },
+  {
+    "item_id": "RB-09",
+    "tier": "P",
+    "request": "查这颗星在 ps1 的 J 波段星等。",
+    "route": "clarify",
+    "tool_calls": [],
+    "answer_text": "这条请求有两个问题，先跟你确认后我再查：\n\n1）没指明是哪颗星。“这颗星”我这边没有上下文，请给出星名（如 Gaia DR3 source_id / 2MASS 名）或坐标（RA/Dec，并说明是 J2000 的度还是时分秒）。\n\n2）Pan-STARRS（PS1）没有 J 波段。PS1 的滤光片是 g、r、i、z、y（外加 w），BEST 的 PS1 全天表（`ps1`）里可用的星等也只有这五条 PSF 星等：`ps1_gpsf`、`ps1_rpsf`、`ps1_ipsf`、`ps1_zpsf`、`ps1_ypsf`，没有 `J` 列。近红外 J 波段属于 2MASS / VISTA / UKIDSS 这类系统，BEST 的测光系统清单里也不含标准 J 波段（J-PLUS/J-PAS 的 \"J0378…J1007\" 是窄带，不是近红外 J）。\n\n所以请二选一：\n- 如果你要的是 PS1 的测光，告诉我改成哪个波段（g/r/i/z/y），我按你给的星做锥形检索；\n- 如果你确实要 J 波段星等，那得换数据源（2MASS/VISTA/UKIDSS），不在 BEST 的 PS1 表里，我可以帮你确认哪条路走。",
+    "declared": true,
+    "declared_issues": ["ps1 无 J 波段 (仅 g/r/i/z/y)", "缺目标天体"]
+  },
+  {
+    "item_id": "RB-10",
+    "tier": "P",
+    "request": "查 ps1 的 u 波段星等。",
+    "route": "clarify",
+    "tool_calls": [{"tool": "describe_catalog", "args": {"catalog": "ps1"}}],
+    "answer_text": "ps1 查不到 u 波段星等——**Pan-STARRS All-Sky（ps1）不发布 u 波段**，它只有 g、r、i、z、y 五个波段的 PSF 星等，对应列 `ps1_gpsf` / `ps1_rpsf` / `ps1_ipsf` / `ps1_zpsf` / `ps1_ypsf`。用 u 波段去约束会被协议层直接拒绝（报 `BEST catalogue 'ps1' publishes no 'u'-band magnitude (available bands: g, i, r, y, z)`），不是“没查到 0 行”，所以我不会去发这个查询，也不会给你编一个 u 波段数值。\n\n另外，这条请求还缺一个关键信息：**没有指定目标天体**（既没给天体名，也没给坐标和半径），所以即便换成 ps1 支持的波段也无法定位到具体源。\n\n请补齐两点，我立刻查：\n1. 波段——如果确实要 u 波段，得换成发布 u 波段的表，例如 `uss_dr1`（`u_pstotal`）、`smss_dr4`（`upsf`）、`splus_dr4`（`u_pstotal`）、`stripe82`（`u_h22`）、`landolt`（`umag`）；若目标就是 ps1，请从 g/r/i/z/y 里选一个。\n2. 目标——天体名（可走 `/nss/solve` 解算坐标）或 ra/dec（度）+ 检索半径（角秒）。",
+    "declared": true,
+    "declared_issues": ["ps1 无 u 波段", "缺目标天体"]
+  }
+]

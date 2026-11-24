@@ -1,0 +1,91 @@
+{
+  "title": "#329 bestphot_calib.stripe82",
+  "rows": [
+    {
+      "column": "rnobs",
+      "display_cells": [
+        "",
+        "",
+        "rnobs",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "7",
+        ""
+      ]
+    },
+    {
+      "column": "rmmed",
+      "display_cells": [
+        "",
+        "",
+        "rmmed",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "20.832",
+        ""
+      ]
+    },
+    {
+      "column": "rmmu",
+      "display_cells": [
+        "",
+        "",
+        "rmmu",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "20.834",
+        ""
+      ]
+    },
+    {
+      "column": "rmsig",
+      "display_cells": [
+        "",
+        "",
+        "rmsig",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "0.017",
+        ""
+      ]
+    },
+    {
+      "column": "rmrms",
+      "display_cells": [
+        "",
+        "",
+        "rmrms",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "0.056",
+        ""
+      ]
+    },
+    {
+      "column": "rmchi2",
+      "display_cells": [
+        "",
+        "",
+        "rmchi2",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "1.05",
+        ""
+      ]
+    },
+    {
+      "column": "r_h22",
+      "display_cells": [
+        "",
+        "",
+        "r_h22",
+        "== != < <= > >= between contains in",
+        "or upload file Min: Max:",
+        "20.835",
+        ""
+      ]
+    }
+  ],
+  "semantic_definitions_found": false,
+  "note": "页面列出了列名、样例值与筛选控件，没有这些列的科学释义。不能把样例值当本批次实测数据。"
+}

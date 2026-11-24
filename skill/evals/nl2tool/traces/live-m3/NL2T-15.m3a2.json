@@ -1,0 +1,35 @@
+{
+  "task_id": "NL2T-15",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "answer",
+  "http_requests": 3,
+  "tool_calls": [
+    {
+      "tool": "describe_catalog",
+      "args": {
+        "catalog": "gaia_dr3_18"
+      }
+    },
+    {
+      "tool": "cone_search",
+      "args": {
+        "ra": 180.0,
+        "dec": 30.0,
+        "radius_arcsec": 60,
+        "catalog": "gaia_dr3_18",
+        "columns": [
+          "gaia_dr3_18_ra",
+          "gaia_dr3_18_dec",
+          "gaia_dr3_18_phot_g_mean_mag",
+          "gaia_dr3_18_phot_bp_mean_mag",
+          "gaia_dr3_18_phot_rp_mean_mag"
+        ],
+        "max_rows": 1000
+      }
+    }
+  ],
+  "answer_text": "先纠一个表 id：线上没有 gaia_dr3 这张表，/gaia_dr3/q 是软 404（HTTP 200 + {\"error\":\"Not Found\"}，只看状态码发现不了），正确 id 是 gaia_dr3_18，列前缀也是 gaia_dr3_18_ 而不是 gaia_dr3_。\n所以这次是 describe_catalog(gaia_dr3_18) 确认列名之后，再 cone_search(ra=180.0°, dec=30.0°, radius_arcsec=60, catalog=\"gaia_dr3_18\")。半径 60 是角秒，原样传；坐标是度。\nG 星等列：gaia_dr3_18_phot_g_mean_mag（我顺手把 BP/RP 的 phot_bp_mean_mag、phot_rp_mean_mag 也投影了，方便你比色）。这张表另有 G_RVS 分光星等 gaia_dr3_18_grvs_mag；而 phot_*_mean_flux 系列是流量不是星等，我不并进星等列表。\n口径提醒：这张表是“定标后的 Gaia DR3”交叉表，不是 Gaia DR3 全量；星等是单次均一定标值，不含逐历元测光。真实命中总数以上一步 getcount 为准，truncated=true 我用同一 sqlid 续页。",
+  "notes": "先用零请求 describe_catalog 落实 gaia_dr3_18 的列名（工具契约要求构造约束前先查列），再锥搜；纠正线上无 gaia_dr3 的软 404 坑。"
+}

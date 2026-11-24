@@ -1,0 +1,7 @@
+{
+  "task_id": "NL2T-27",
+  "route": "reject",
+  "tool_calls": [],
+  "answer_text": "不支持该请求 (NO_IMAGE_CUTOUT), 无法执行。 建议: BEST 发布的是星表（表格）数据，不发巡天影像；要图请去各巡天自己的切图服务（PS1 / SDSS / DSS 的 cutout 端点）；本 skill 本地导出白名单只有 csv / txt / json / votable / fits；其中 fits 是 FITS 二进制表，不是 FITS 图像。",
+  "source": "golden-from-annotation"
+}

@@ -1,0 +1,52 @@
+# -*- coding: utf-8 -*-
+# evals/ablation/systems/b3_full.yaml — B3 完整 BEST-Skill (对照组, 不动)
+#
+# 装配依据: docs/eval-E5-baseline-ablation.md §3.1 装配表 B3 列 (六组件齐全) / §3.2。
+# **主对照**: A1–A5 与 sham/add-back 都以 B3 为基准; B3 自身也是被判对象 —
+# E5 §11 阻断项 4: B3 出现 S1 静默错值 / ParamHallucination>0 / 致命编造数值
+# → 本 Skill 未达红线 (与对照比较无关, 整体 FAIL)。
+system:
+  id: B3
+  kind: baseline
+  label: "完整 BEST-Skill (六组件齐全)"
+  role: "对照组 — 全部消融与统计检验的基准"
+  # SkillToolBoxAdapter: src/ai_tools.py ToolBox 7 工具"
+  tool_face: toolbox
+  components:
+    general_llm: true
+    best_site_docs: true
+    data_path: true
+    tool_signatures: true
+    # schema 约束段 + guards.py 边界校验 + MAX_FETCH_PAGE_SIZE
+    param_validation: true
+    # CATALOG_MAG_COLUMNS + describe_catalog 语义 + photometric-systems
+    field_semantics: true
+    # out_scope / 理由码 / 替代路径
+    refusal_rules: true
+    # provenance 四键 + stable_uri + content_trust + 引用
+    provenance: true
+    # 完成自检清单 + QualityGate + 哨兵剔除 + 三元组对账
+    post_verify: true
+    # data/status/cost/provenance 四分区
+    unified_envelope: true
+  envelope_keys: [data, status, cost, provenance]
+  docs_injected:
+    - "SKILL.md (完整约束与领域知识)"
+    - "references/ 全量白盒文档"
+    - "references/tools.schema.json (7 工具参数面)"
+    - "rag/knowledge/citations.yaml (来源与版本信息)"
+  expected_failures: "无 (§3.2: B3 无定义性失败项)"
+  applicable_metrics: [ESR_data, ESR_know, ESR_full, ToolSetF1, ParamF1,
+                       ParamHallucination, RowF1, FieldConsistency, TruncTriple,
+                       HR_any, RejectAcc, OverRejectRate, MissedClarify,
+                       AvgCalls, AvgTurns, http_requests]
+  na_metrics: []
+  na_reason: "B3 全组件装配, 全部指标适用。"
+  llm:
+    mode: scripted
+    temperature: 0.2
+    top_p: 1.0
+    max_tokens: 4096
+  notes: >
+    B3 的装配 = 生产仓真身 (src/ + references/ + rag/), 不许手改;
+    消融只在 adapter 层旁路对应组件 (code_seam), 生产码零改动。

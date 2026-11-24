@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://nadc.china-vo.org/sr/images/favicon.ico">
+    
+    <title>Gaia DR3 | BEst STar database</title>
+    
+    
+
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/open-iconic/font/css/open-iconic-bootstrap.css">
+	<link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2.min.css">
+    <link rel="stylesheet" href="https://nadc.china-vo.org/sr/css/select2-bootstrap.css">
+    <link rel="stylesheet" href="/data/best/static/css/style.css">
+    
+<link rel="stylesheet" type="text/css" href="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/themes/icon.css">
+
+    
+
+    
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://nadc.china-vo.org/sr/js/jquery.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/popper.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/select2.min.js"></script>
+    <script src="https://nadc.china-vo.org/sr/js/bootstrap-treeview.min.js"></script>
+    <script src="/data/best/static/js/script.js?v=2"></script>
+    <script type="text/javascript">
+        var prx = '/data/best';
+        var csrf_token = "ImEzMjczMWQzMjg4NWI1MDU2NjFlM2U2NzIyYTJmY2ZiMDMwYTA2NTki.asH5tQ.hDMIwseWMMQxu1GcmFuCRH6uS1U";
+        
+        var is_authenticated = false;
+        
+    </script>
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="//analytics.escience.org.cn/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', '23']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+    
+<script src="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/jquery.easyui.min.js"></script>
+<script src="https://nadc.china-vo.org/sr/jquery-easyui-1.10.1/datagrid-filter.js"></script>
+<script src="https://nadc.china-vo.org/sr/js/samp.js"></script>
+<script src="/data/best/static/js/search-result.js"></script>
+<script>
+var id_column_name = 'gaia_dr3_18_l';
+$(function(){
+    $('#tbl').datagrid({
+        url:'/data/best/sqlid/s4897?output.fmt=dbgrid',
+        title:'gaia_dr3_18',
+        fit:true,
+        toolbar:'#tb',
+        pagination:true,
+        rownumbers:true,
+        singleSelect:false,
+        pageNumber:1,
+        pageSize:100,
+        pageList:[20,50,100,300],
+        sortName:"gaia_dr3_18_source_id",
+        sortOrder:"asc",
+        clientPaging:false,
+        columns:[[
+            {field:'checkboxxx',checkbox:true},
+            
+            
+            {field:'inputobjs_dist_arcsec',title:'dist_arcsec',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_line',title:'input_line',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_ra',title:'input_ra',width:150,align:'center',sortable:true},
+            
+            {field:'inputobjs_input_dec',title:'input_dec',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_solution_id',title:'solution_id',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_designation',title:'designation',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_source_id',title:'source_id',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_random_index',title:'random_index',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ref_epoch',title:'ref_epoch',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra',title:'ra',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra_error',title:'ra_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_dec',title:'dec',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_dec_error',title:'dec_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_parallax',title:'parallax',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_parallax_error',title:'parallax_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_parallax_over_error',title:'parallax_over_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pm',title:'pm',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmra',title:'pmra',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmra_error',title:'pmra_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmdec',title:'pmdec',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmdec_error',title:'pmdec_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra_dec_corr',title:'ra_dec_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra_parallax_corr',title:'ra_parallax_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra_pmra_corr',title:'ra_pmra_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra_pmdec_corr',title:'ra_pmdec_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_dec_parallax_corr',title:'dec_parallax_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_dec_pmra_corr',title:'dec_pmra_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_dec_pmdec_corr',title:'dec_pmdec_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_parallax_pmra_corr',title:'parallax_pmra_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_parallax_pmdec_corr',title:'parallax_pmdec_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmra_pmdec_corr',title:'pmra_pmdec_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_n_obs_al',title:'astrometric_n_obs_al',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_n_obs_ac',title:'astrometric_n_obs_ac',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_n_good_obs_al',title:'astrometric_n_good_obs_al',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_n_bad_obs_al',title:'astrometric_n_bad_obs_al',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_gof_al',title:'astrometric_gof_al',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_chi2_al',title:'astrometric_chi2_al',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_excess_noise',title:'astrometric_excess_noise',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_excess_noise_sig',title:'astrometric_excess_noise_sig',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_params_solved',title:'astrometric_params_solved',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_primary_flag',title:'astrometric_primary_flag',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_nu_eff_used_in_astrometry',title:'nu_eff_used_in_astrometry',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pseudocolour',title:'pseudocolour',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pseudocolour_error',title:'pseudocolour_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ra_pseudocolour_corr',title:'ra_pseudocolour_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_dec_pseudocolour_corr',title:'dec_pseudocolour_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_parallax_pseudocolour_corr',title:'parallax_pseudocolour_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmra_pseudocolour_corr',title:'pmra_pseudocolour_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_pmdec_pseudocolour_corr',title:'pmdec_pseudocolour_corr',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_matched_transits',title:'astrometric_matched_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_visibility_periods_used',title:'visibility_periods_used',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_astrometric_sigma5d_max',title:'astrometric_sigma5d_max',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_matched_transits',title:'matched_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_new_matched_transits',title:'new_matched_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_matched_transits_removed',title:'matched_transits_removed',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ipd_gof_harmonic_amplitude',title:'ipd_gof_harmonic_amplitude',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ipd_gof_harmonic_phase',title:'ipd_gof_harmonic_phase',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ipd_frac_multi_peak',title:'ipd_frac_multi_peak',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ipd_frac_odd_win',title:'ipd_frac_odd_win',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ruwe',title:'ruwe',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_strength_k1',title:'scan_direction_strength_k1',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_strength_k2',title:'scan_direction_strength_k2',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_strength_k3',title:'scan_direction_strength_k3',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_strength_k4',title:'scan_direction_strength_k4',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_mean_k1',title:'scan_direction_mean_k1',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_mean_k2',title:'scan_direction_mean_k2',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_mean_k3',title:'scan_direction_mean_k3',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_scan_direction_mean_k4',title:'scan_direction_mean_k4',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_duplicated_source',title:'duplicated_source',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_g_n_obs',title:'phot_g_n_obs',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_g_mean_flux',title:'phot_g_mean_flux',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_g_mean_flux_error',title:'phot_g_mean_flux_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_g_mean_flux_over_error',title:'phot_g_mean_flux_over_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_g_mean_mag',title:'phot_g_mean_mag',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_n_obs',title:'phot_bp_n_obs',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_mean_flux',title:'phot_bp_mean_flux',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_mean_flux_error',title:'phot_bp_mean_flux_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_mean_flux_over_error',title:'phot_bp_mean_flux_over_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_mean_mag',title:'phot_bp_mean_mag',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_n_obs',title:'phot_rp_n_obs',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_mean_flux',title:'phot_rp_mean_flux',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_mean_flux_error',title:'phot_rp_mean_flux_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_mean_flux_over_error',title:'phot_rp_mean_flux_over_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_mean_mag',title:'phot_rp_mean_mag',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_rp_excess_factor',title:'phot_bp_rp_excess_factor',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_n_contaminated_transits',title:'phot_bp_n_contaminated_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_n_blended_transits',title:'phot_bp_n_blended_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_n_contaminated_transits',title:'phot_rp_n_contaminated_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_n_blended_transits',title:'phot_rp_n_blended_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_proc_mode',title:'phot_proc_mode',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_bp_rp',title:'bp_rp',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_bp_g',title:'bp_g',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_g_rp',title:'g_rp',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_radial_velocity',title:'radial_velocity',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_radial_velocity_error',title:'radial_velocity_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_method_used',title:'rv_method_used',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_nb_transits',title:'rv_nb_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_nb_deblended_transits',title:'rv_nb_deblended_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_visibility_periods_used',title:'rv_visibility_periods_used',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_expected_sig_to_noise',title:'rv_expected_sig_to_noise',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_renormalised_gof',title:'rv_renormalised_gof',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_chisq_pvalue',title:'rv_chisq_pvalue',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_time_duration',title:'rv_time_duration',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_amplitude_robust',title:'rv_amplitude_robust',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_template_teff',title:'rv_template_teff',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_template_logg',title:'rv_template_logg',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_template_fe_h',title:'rv_template_fe_h',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rv_atm_param_origin',title:'rv_atm_param_origin',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_vbroad',title:'vbroad',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_vbroad_error',title:'vbroad_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_vbroad_nb_transits',title:'vbroad_nb_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_grvs_mag',title:'grvs_mag',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_grvs_mag_error',title:'grvs_mag_error',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_grvs_mag_nb_transits',title:'grvs_mag_nb_transits',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_rvs_spec_sig_to_noise',title:'rvs_spec_sig_to_noise',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_variable_flag',title:'phot_variable_flag',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_l',title:'l',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_b',title:'b',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ecl_lon',title:'ecl_lon',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ecl_lat',title:'ecl_lat',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_in_qso_candidates',title:'in_qso_candidates',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_in_galaxy_candidates',title:'in_galaxy_candidates',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_non_single_star',title:'non_single_star',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_xp_continuous',title:'has_xp_continuous',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_xp_sampled',title:'has_xp_sampled',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_rvs',title:'has_rvs',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_epoch_photometry',title:'has_epoch_photometry',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_epoch_rv',title:'has_epoch_rv',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_mcmc_gspphot',title:'has_mcmc_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_has_mcmc_msc',title:'has_mcmc_msc',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_in_andromeda_survey',title:'in_andromeda_survey',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_classprob_dsc_combmod_quasar',title:'classprob_dsc_combmod_quasar',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_classprob_dsc_combmod_galaxy',title:'classprob_dsc_combmod_galaxy',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_classprob_dsc_combmod_star',title:'classprob_dsc_combmod_star',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_teff_gspphot',title:'teff_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_teff_gspphot_lower',title:'teff_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_teff_gspphot_upper',title:'teff_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_logg_gspphot',title:'logg_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_logg_gspphot_lower',title:'logg_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_logg_gspphot_upper',title:'logg_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_mh_gspphot',title:'mh_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_mh_gspphot_lower',title:'mh_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_mh_gspphot_upper',title:'mh_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_distance_gspphot',title:'distance_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_distance_gspphot_lower',title:'distance_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_distance_gspphot_upper',title:'distance_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_azero_gspphot',title:'azero_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_azero_gspphot_lower',title:'azero_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_azero_gspphot_upper',title:'azero_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ag_gspphot',title:'ag_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ag_gspphot_lower',title:'ag_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ag_gspphot_upper',title:'ag_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ebpminrp_gspphot',title:'ebpminrp_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ebpminrp_gspphot_lower',title:'ebpminrp_gspphot_lower',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_ebpminrp_gspphot_upper',title:'ebpminrp_gspphot_upper',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_libname_gspphot',title:'libname_gspphot',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_g_mean_mag_y21',title:'phot_g_mean_mag_y21',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_bp_mean_mag_y21',title:'phot_bp_mean_mag_y21',width:150,align:'center',sortable:true},
+            
+            {field:'gaia_dr3_18_phot_rp_mean_mag_y21',title:'phot_rp_mean_mag_y21',width:150,align:'center',sortable:true},
+            
+            
+        ]],
+		onBeforeLoad:function(param){
+            window.history.pushState(null, null, '/data/best/sqlid/s4897?'+getPageParam());
+		},
+		onLoadSuccess: function(data) {
+            if (data.total === 999999999999) {
+                var pager = $('#tbl').datagrid('getPager');
+                pager.pagination('loading');
+                pager.pagination({
+                    showPageInfo: false,
+                    afterPageText: '',
+                });
+                $.ajax({
+                    url: "/data/best/sqlid/4897/getcount",
+                    type: "GET",
+                    success: function(response) {
+                        var pager = $('#tbl').datagrid('getPager');
+                        pager.pagination({
+                            total: response.total,
+                            showPageInfo: true,
+                            afterPageText: 'of {pages}',
+                        });
+                        pager.pagination('loaded');
+                    }
+                });
+            }
+        },
+        onLoadError: function(e){
+            console.log(e);
+        }
+    });
+});
+function getPageParam(){
+	var opt = $('#tbl').datagrid('options');
+	return "rows="+opt.pageSize+"&page="+opt.pageNumber+"&sort="+(null==opt.sortName || 'null'==opt.sortName?"":opt.sortName)+"&order="+(null==opt.sortOrder || 'null'==opt.sortOrder?"":opt.sortOrder);
+}
+</script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-dark topNav-bg index-topNav">
+    <div class="container-fluid index-navbar-container">
+        <div class="row" style="margin: 0px;width: 100%;">
+            <div class="collapse navbar-collapse" id="chinavo-navbar">
+                <ul class="navbar-nav mr-auto chinavoNavbar-ul">
+                    
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best">BEST</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown0" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Query
+                        </a>
+                        <div class="dropdown-menu chinavoDropdownMenu" aria-labelledby="navbarDropdown0">
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/std">Standard Stars</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib/ps1/f">Pan-STARRS All-Sky Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="https://nadc.china-vo.org/data/best/calib">Well-Calibrated Catalog</a>
+                            
+                            
+                            
+                            <div class="dropdown-divider"></div>
+                            
+                            
+                            
+                            <a class="dropdown-item" href="/data/best/other">Corrected Gaia DR3 XP Spectra</a>
+                            
+                            
+                        </div>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/jobs">User-Defined</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/catalog">Catalog</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/news">News</a>
+                        </li>
+                        
+                        
+                    
+                        
+                        
+                        <li class="nav-item">
+                        <a class="nav-link" href="/data/best/doc/system-en/help">Help</a>
+                        </li>
+                        
+                        
+                    
+                    
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto chinavoNavbar-ul">
+                    
+                    <li class="nav-item"><a class="nav-link" href="/data/best/user/login?next=https://nadc.china-vo.org/data/best/gaia_dr3_18/q">Login</a></li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<div class="container-fluid">
+    
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/">Home</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/calib">Calibrated Catalog</a>
+        
+    </li>
+
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/gaia_dr3_18/f">Query Gaia DR3</a>
+        
+    </li>
+
+        
+        
+    
+    <li class="breadcrumb-item">
+        
+        <a href="/data/best/sqlid/s4897">Result</a>
+        
+    </li>
+
+    </ol>
+</nav>
+
+<div id="mpanel" class="easyui-panel">
+    <div id="tbl" />
+    <div id="tb">
+        
+        <a href="#" class="easyui-menubutton" data-options="menu:'#smsave',iconCls:'icon-save'">Save Table</a>
+        <div id="smsave" style="width:200px;">
+            <div id="vot" data-options="iconCls:'icon-xml'" onclick="open_link(get_saveas_url('votable', true))">Save page as VOTable</div>
+            <div id="csv" data-options="iconCls:'icon-csv'" onclick="open_link(get_saveas_url('csv', true))">Save page as CSV</div>
+            <div id="json" data-options="iconCls:'icon-json'" onclick="open_link(get_saveas_url('json', true))">Save page as JSON</div>  
+            <div class="menu-sep"></div>
+            <div id="votall" data-options="iconCls:'icon-xml'" onclick="open_link(get_saveas_url('votable', false))">Save all as VOTable</div>
+            <div id="csvall" data-options="iconCls:'icon-csv'" onclick="open_link(get_saveas_url('csv', false))">Save all as CSV</div>
+            <div id="jsonall" data-options="iconCls:'icon-json'" onclick="open_link(get_saveas_url('json', false))">Save all as JSON</div>  
+        </div>
+        <a href="#" class="easyui-menubutton" data-options="menu:'#smnotifyall',iconCls:'icon-samp'">Boradcast Table</a>
+        <div id="smnotifyall" style="width:200px;">
+            <div id="samp" data-options="iconCls:'icon-samp'" onclick="samp_notify(true)">Boradcast page</div>
+            <div class="menu-sep"></div>
+            <div id="sampall" data-options="iconCls:'icon-samp'" onclick="samp_notify(false)">Boradcast all</div>
+        </div>
+        
+    </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

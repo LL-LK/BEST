@@ -1,0 +1,16 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "RA=\"abc\" 非数值, 不可解析为度或六十进制"
+  ],
+  "item_id": "RB-03",
+  "tier": "P",
+  "request": "查 RA = \"abc\", Dec = 30 附近的 ps1 源。",
+  "route": "reject",
+  "answer_text": "抱歉，这条查询我不能执行：RA = \"abc\" 不是合法的赤经值。\n\nBEST 锥形检索对 RA 的类型/范围有硬校验——必须是 0–360 的十进制度数（ICRS），例如 `180.0`（也可写成可解析的度分秒形式）。\"abc\" 无法解析为数值，会在入参校验处被 Fail-Closed 拦下（E_INVALID_INPUT），不会进入查询，我也不会替你猜一个 RA 去凑结果。\n\n其余参数没问题：Dec = 30（度，在 -90~90 内）、星表默认 `ps1`、半径默认 180 角秒（3 角分）。\n\n请把 RA 换成合法数值后告诉我，我就按 `cone_search(ra=<数值>, dec=30.0, radius_arcsec=180, catalog=\"ps1\")` 帮你查该天区附近的 PS1 源；如需指定搜索半径或列投影，也请一并说明。",
+  "run_id": "r1"
+}

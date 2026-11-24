@@ -1,0 +1,40 @@
+{
+  "task": {
+    "kind": "cone",
+    "catalog": "gaia_dr3_18",
+    "ra": 286.1,
+    "dec": 15.7,
+    "radius": 300.0
+  },
+  "request_log": [
+    {
+      "method": "POST",
+      "url": "https://nadc.china-vo.org/data/best/gaia_dr3_18/q",
+      "status": 200,
+      "bytes": 32783,
+      "at": "2026-10-04T07:01:10.022819+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/4897/getcount",
+      "status": 200,
+      "bytes": 15,
+      "at": "2026-10-04T07:01:10.194895+00:00"
+    },
+    {
+      "method": "GET",
+      "url": "https://nadc.china-vo.org/data/best/sqlid/s4897?output.fmt=csv&rows=1000&page=1&sort=gaia_dr3_18_source_id&order=asc",
+      "status": 200,
+      "bytes": 1094634,
+      "at": "2026-10-04T07:01:11.743889+00:00"
+    }
+  ],
+  "observed": {
+    "returned_count": 1000,
+    "page_size": 1000,
+    "success": true,
+    "total_count": 7193,
+    "truncated": true,
+    "error_code": null
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-09",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "缺两样东西，我先不动数据。\n（1）天体名。你写的是“这颗星”，我这边没有指代。给我名字（M31 / NGC 532 / Betelgeuse 这类），我先用 resolve_name 解算成 ICRS 坐标；解不出来时站点会回 ra=dec=-1000 哨兵，工具判 E_NAME_UNRESOLVED，我会直接告诉你没解出来，不会拿哨兵去硬查。\n（2）标准星在 BEST 里不是一张表。“std”是导航分组，直接当表名查会拿到 {\"error\":\"Internal Server Error\"}；它的成员是三张：scr_galah（标准星×GALAH 交叉表，137 列）、scr_lamost（标准星×LAMOST 交叉表，137 列）、xpsp（Gaia DR3 XP&SP 光谱-测光，287 个可选列、139 张表单表）。三张表覆盖的源和列都不一样，必须你定。\n你选一张（或说“先都看看”）+ 给名字，我就走：resolve_name → cone_search(ra, dec, radius_arcsec, catalog=你选的那张, nearest_only=true)；半径没给的话我默认 1 角秒做单源近邻匹配，这个默认值我会先说明。要提醒的是 scr_galah / scr_lamost / xpsp 都是标准星全集的交叉表，不是某一片天区的稀疏表，小半径锥搜完全合理。",
+  "notes": "既缺天体名又缺表口径（std 是组名不是表）→ 两个缺口一起反问，不猜表、不发请求。"
+}

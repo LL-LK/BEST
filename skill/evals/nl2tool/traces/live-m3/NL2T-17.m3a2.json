@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-17",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "clarify",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这个筛选我暂时发不出去，有三个缺口，其中第三个是硬约束。\n（1）没有天区中心和半径。筛选要有作用域：请给 RA/Dec（ICRS，度）+ 半径（角秒；如 5 角分 = 300 角秒）。\n（2）“r 波段”跨表列名不同，得指明表：ps1 是 ps1_rpsf_err，splus_dr4 是 splus_dr4_e_r_pstotal，stripe82 是 stripe82_rmsig（r 波段 RMS 误差），smss_dr4 只有 PSF 星等、没有误差列。你要哪张表？（landolt / uss_dr1 的口径又不一样。）\n（3）关键：原子工具面没有条件过滤参数。cone_search 的参数只有坐标、半径、表名、列投影、排序、nearest_only、行数上限，没有数值约束这一项。“r 误差 < 0.01 mag” 在站点表单层的写法是 {table}.{col}.operation=less（站点把 greater 拼成 grater 这类拼写也一并提醒），但这个参数没有出现在工具契约里，参数名必须是契约 properties 里的那七个，硬塞会被工具边界直接拒。所以我不能替你在服务端加这个阈值。\n可行的做法：把该表的 r 星等列和误差列一起投影出来取回（列投影是工具支持的），在返回之后由我在本地按 <0.01 mag 过滤，再把满足条件的对象清单给你 —— 口径与结果一致，代价是传输量比服务端过滤大。你确认表名和天区，我就这么办；如果你确实需要服务端过滤，那得走站点 UI 的表单层，不在我这边的工具面里。",
+  "notes": "缺坐标 + 缺表口径 + 工具契约无约束参数（operation/less 不在 cone_search properties 里）→ clarify，并给出“取回后本地筛”的可行替代。"
+}

@@ -1,0 +1,11 @@
+snapshot_id: syn_no_request
+kind: S
+material_class: synthetic-protocol-fixture
+catalog: ps1
+columns: []
+row_count: 0
+data_version: synthetic@2026-10-11
+page_size: 1000
+sort_key: null
+fetched_at: '2026-10-11'
+note: 参数校验场景不应发HTTP请求；本快照仅供M6来源字段占位。

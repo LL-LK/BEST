@@ -1,0 +1,26 @@
+{
+  "logical_e5_units": 0,
+  "all_pass": true,
+  "checks": [
+    {
+      "cell_id": "gate-domain-empty-02",
+      "critical_events_match": true,
+      "header_projection_documented": true
+    },
+    {
+      "cell_id": "gate-domain-fixture-02",
+      "critical_events_match": true,
+      "header_projection_documented": true
+    },
+    {
+      "cell_id": "gate-domain-raw-02",
+      "critical_events_match": true,
+      "header_projection_documented": true
+    },
+    {
+      "cell_id": "gate-domain-atomic-02",
+      "critical_events_match": true,
+      "header_projection_documented": true
+    }
+  ]
+}

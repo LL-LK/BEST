@@ -1,0 +1,33 @@
+case_id: cone_60as
+category: cone_search
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as
+main_metrics:
+- M1
+- M2
+- M3
+query:
+  catalog: ps1
+  ra: 180.0
+  dec: 30.0
+  radius_arcsec: 60.0
+  columns:
+  - ps1_source_id
+  - ps1_ra
+  - ps1_dec
+  - ps1_rpsf
+  - ps1_class_star
+  - ps1_class_star
+  sort: ps1_rpsf
+  order: asc
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+notes: 'L 类真实抓取快照 (live-2026-10-04/live_ps1_ra180.0_dec30.0_r60.0as; 裸列名形态)。 金标准:
+  全部行都在 60" 内 (行数与角距分布以 gold/cone_60as.json 为准, 不在本文件 复述); 排序键 ps1_rpsf 升序, 期望序列单调;
+  同 key 用主键次级比较 (M4)。 本快照没有行落在 60" 半径边界上, 故 d<=r 与 d<r 不可分辨 (覆盖度缺口, 已登记)。 cos(dec)
+  因子: dec=30° 面上 1° RA 只跨 3600·cos30°≈3117.7" — 若被测用平面近似 (按 3600" 算) 在 60" 半径下差异极小,
+  本用例主要钉排序与行集, 大半径三角由 wrap/pole 用例钉。
+
+  '
+gold_focus: 行集 + 排序单调 + 期望序列一致

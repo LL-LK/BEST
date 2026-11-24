@@ -1,0 +1,64 @@
+# evals/_data/scoring-weights-ledger.yaml — 评分权重与合格线的**变更登记簿**
+#
+# 定位: 不是判据真值 —— 真值仍是 evals/scoring-rubric.yaml (runner 只读那一份)。
+# 本文件回答另一个问题: "谁批准了当前这套权重/合格线, 改动要登记在哪"。
+#
+# 为什么是登记簿而不是硬锁 (N1-01 权衡):
+#   权重与 pass_score 是**可调参数** —— 标定漂移时必须能改, 硬锁成"改了就红"
+#   等于把调参通道焊死, 逼人绕过门禁 (改门禁比改参数更容易下决心, 那更糟)。
+#   实测确认: 改权重能把 FAIL 翻成 PASS (correctness 0.30→0.05, 和仍精确 1.0),
+#   改 pass_score 一行 (0.90→0.88) 同样能翻 —— 所以要守护的不是"值不许变",
+#   而是"**变必须留痕**": 单改量规 → 门禁红; 同时在 approved 改基线或在
+#   deviations 登记理由 → 门禁绿。改动从"一行静默改掉结论"变成"两处留痕的显式决定"。
+#   残留风险 (如实登记): 有心人可以把 approved 与量规一起改成任意值。这道门
+#   拦的是"顺手改一下"与"复核者漏看", 不是恶意绕过 —— 后者任何仓内门禁都拦不住。
+#
+# 双向守护 (test/unit/meta/test_scoring_criteria_ledger.py):
+#   1. 量规里的值 == approved 且 deviations 为空 → 绿;
+#   2. 只改量规不动本文件 → 红 (无登记的偏离);
+#   3. 偏离已登记但理由为空 → 红 (登记不等于放行, 必须写清为什么);
+#   4. deviations 里有陈旧条目 (值已回到基线) → 红 (登记簿不许养僵尸条目);
+#   5. 量规新增/删除维度 → 红 (维度集合由 runner 判配置错误, 本簿只记权重变化)。
+
+# ── 已批准的判据参数基线 ────────────────────────────────────────────────
+# 数值真值同源于 evals/scoring-rubric.yaml; 改这里等于改判据, 必须走
+# CHANGELOG + docs/eval-*.md 的判分段, 并同步量规。
+approved:
+  weights:
+    correctness: 0.30          # 唯一能通过加权线左右结论的维度: findings 每条 -0.1
+    gate_compliance: 0.25      # 阻断性门禁逐项真实执行满足
+    determinism: 0.15          # 相同输入重复运行一致
+    provenance: 0.10           # 契约存在且内容非空
+    docstring_coverage: 0.20   # src/ 公开函数 docstring 覆盖率
+  pass_score: 0.90             # 合格线; 实测语义 = "非豁免审计 findings 不得超过 3 条"
+  warn_line: 0.85              # WARN 线; runner 从量规读 (N1-02), 不再硬编码
+
+# ── 偏离登记 ──────────────────────────────────────────────────────────
+# 每条偏离必须四字段齐全: field (改了什么) / from (原值) / to (新值) /
+# reason (为什么 —— 非空, 且不是 "tune" 这类无信息量词)。
+# 缺 reason 的条目 = 未登记, 门禁红。
+deviations: []
+
+# ── 量规顶层字段的"被读 / 声明性"登记 (N1-02) ──────────────────────────
+# 铁律: 量规里的字段要么被 runner 真读, 要么在此显式声明为**声明性**
+# (人读文档, 无机器消费方)。未登记 = "写着但没人读"的死配置, 门禁红。
+#
+# 当前量规顶层字段的归属:
+#   dimensions / pass_score / warn_line  → runner 真读 (evaluate_rubric)
+#   skill / output_schema / in_scope_coverage → 声明性 (无机器消费方, 人读)
+#   gates_thresholds → **已删除** (N1-02): 它与 evals/cases/*.yaml 的
+#     threshold: 块重复同一组门禁阈值, 而后者才是被 case_executor 真执行的
+#     那一份。两处同值即两个 SSOT, 漂移时无人知道哪份算数 —— 消除重复而非
+#     把副本接上 (接上只会造出第三个"两份都得改"的地方)。
+consumed_by_runner:
+  - dimensions
+  - pass_score
+  - warn_line
+
+declared_only:
+  - field: skill
+    reason: "报告抬头标识; runner 的 report['skill'] 由 main() 固定写死为 astro-best, 本字段供人核对量规归属"
+  - field: output_schema
+    reason: "指向 contracts/output.contract.yaml 的 schema: BestResultSet; 权威在那份契约, 本处不重复消费"
+  - field: in_scope_coverage
+    reason: "声明本量规覆盖的三个 API 面 (认证/两阶段异步/流式); 对应用例是 evals/cases/case_005~007, 覆盖面由用例分母守护, 本字段不参与判定"

@@ -1,0 +1,8 @@
+{
+  "snapshot_entries": 274,
+  "source_traces": 94,
+  "source_pointers_checked": 619,
+  "passed": true,
+  "zip_crc_passed": true,
+  "zero_network_calls": true
+}

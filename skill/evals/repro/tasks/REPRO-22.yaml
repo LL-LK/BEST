@@ -1,0 +1,13 @@
+# E6 任务 (docs/eval-E6-reproducibility.md §3.1); 复用优先不重造标注
+id: REPRO-22
+utterance: 获取这颗星过去五年的光变曲线。
+category: reject
+expect_first_tool: none
+reruns: 5
+stability_class: reject_no_time_series
+conclusion_card_spec:
+  kind: refusal
+  key_entities:
+  - NO_TIME_SERIES
+relative_time_expression: false
+notes: 映射 E1 NL2T-22; 判稳维度 reject_no_time_series; 禁相对时间表述 (硬约束)

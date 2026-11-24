@@ -1,0 +1,52 @@
+{
+ "P": {
+  "sb1": {
+   "disposal": "34/35",
+   "disposal_rate": 0.9714,
+   "n_weighted_pass": 8,
+   "n_weighted_graded": 18,
+   "n_na": 15,
+   "redline": [],
+   "metascore": 1.0,
+   "guard": 1.0,
+   "positive": 1.0,
+   "P_pass": false,
+   "n_cases": 35,
+   "n_answered": 35
+  },
+  "sb2": {
+   "disposal": "35/35",
+   "disposal_rate": 1.0,
+   "n_weighted_pass": 13,
+   "n_weighted_graded": 21,
+   "n_na": 14,
+   "redline": [],
+   "metascore": 1.0,
+   "guard": 1.0,
+   "positive": 1.0,
+   "P_pass": false,
+   "n_cases": 35,
+   "n_answered": 35
+  },
+  "sb3": {
+   "disposal": "34/35",
+   "disposal_rate": 0.9714,
+   "n_weighted_pass": 10,
+   "n_weighted_graded": 16,
+   "n_na": 16,
+   "redline": [],
+   "metascore": 1.0,
+   "guard": 1.0,
+   "positive": 1.0,
+   "P_pass": false,
+   "n_cases": 35,
+   "n_answered": 35
+  }
+ },
+ "W": {
+  "n_pass": 15,
+  "n_cases": 15,
+  "pass": true,
+  "surface": "tool"
+ }
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "case_id": "D01_D10_D11_D12",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 3,
+      "success": true,
+      "total_count": 3,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "D02",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 174,
+      "success": true,
+      "total_count": 174,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "D03",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 1000,
+      "success": true,
+      "total_count": 5109,
+      "truncated": true,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "D04_unfiltered",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 174,
+      "success": true,
+      "total_count": 174,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "D05_count_first",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 1,
+      "success": true,
+      "total_count": 215774,
+      "truncated": true,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 3
+  },
+  {
+    "case_id": "D06",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 0,
+      "success": false,
+      "total_count": 0,
+      "truncated": false,
+      "error_code": "E_BACKEND"
+    },
+    "error": null,
+    "responses": 1
+  },
+  {
+    "case_id": "D07",
+    "observed": {
+      "page_size": 2,
+      "returned_count": 222,
+      "success": true,
+      "total_count": 222,
+      "truncated": false,
+      "error_code": null
+    },
+    "error": null,
+    "responses": 114
+  },
+  {
+    "case_id": "D09",
+    "observed": {
+      "page_size": 1000,
+      "returned_count": 1,
+      "success": true,
+      "total_count": 1,
+      "truncated": false,
+      "error_code": null,
+      "n_points": 5
+    },
+    "error": null,
+    "responses": 3
+  }
+]

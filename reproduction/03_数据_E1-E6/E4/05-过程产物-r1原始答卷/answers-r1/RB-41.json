@@ -1,0 +1,17 @@
+{
+  "tool_calls": [],
+  "http_requests": 0,
+  "corrected": false,
+  "declared": true,
+  "correct_value": null,
+  "declared_issues": [
+    "that thing 无指代",
+    "缺检索半径"
+  ],
+  "item_id": "RB-41",
+  "tier": "P",
+  "request": "get me the galah stars near that thing.",
+  "route": "clarify",
+  "answer_text": "抱歉，这条请求我没法直接执行——里面缺了两个关键信息，我不猜：\n\n1. **“that thing” 指什么？** 我们没有共享的上下文，我不知道它对应哪个天体或目标。请给我它的坐标（RA/Dec，度），或一个我能解析的名称。\n2. **“near” 的半径是多少？** 锥形检索必须带搜索半径（角秒）。\n\n另外确认一下：你说的 GALAH 星，在 BEST 里对应 `scr_galah` 表（Standard Stars 组下的巡天星表，共 137 列），我可以对它做锥形检索。\n\n请补充成类似这样的形式，我就直接开查：\n\n> 查 scr_galah 中 RA=120.0, Dec=-20.4 半径 300 角秒内的源。\n\n（如果你要的其实是 SIMBAD/VizieR/Gaia 这类通用星表检索，那不属于本数据源的能力范围，需要走 astro-catalog。）",
+  "run_id": "r1"
+}

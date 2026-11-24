@@ -1,0 +1,669 @@
+{
+  "RB-01": {
+    "tool_calls": [
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": -5,
+          "dec": 0,
+          "radius_arcsec": 60,
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "RA=-5 越界 (合法域 [0,360))",
+      "不做自动归一化"
+    ],
+    "item_id": "RB-01",
+    "tier": "P",
+    "request": "查 RA = -5, Dec = 0 附近 60 角秒内的 ps1 源。",
+    "route": "reject",
+    "answer_text": "这次没有取到数据：你给的 RA = -5° 不合法。赤经（RA）的取值范围是 **[0, 360) 度**（左闭右开），-5° 越出下界，因此本地入口校验直接拒绝，未向 BEST 站点发起任何检索（错误码 E_INVALID_INPUT，零线网请求、零配额消耗）。Dec = 0、半径 60 角秒、星表 ps1 这三项本身没问题。\n\n请把 RA 改成 [0, 360) 内的值再发我一次。补充一句：RA 是周期量，本入口按设计**不做自动归一化**，所以我不会替你把它悄悄当成 355°；如果你本意确实是 -5° 的等价正角，请显式写成 **355**，我随后就对 (RA=355, Dec=0, 60″, ps1) 执行锥形检索。",
+    "run_id": "r1"
+  },
+  "RB-02": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "Dec=95 越界 (合法域 [-90,90])"
+    ],
+    "item_id": "RB-02",
+    "tier": "P",
+    "request": "查 RA = 0, Dec = 95 附近 60 角秒内的 ps1 源。",
+    "route": "reject",
+    "answer_text": "这个请求我没法执行，因为赤纬 Dec = 95° 超出了天球坐标的合法范围。\n\n赤纬的取值必须在 −90° 到 +90° 之间（±90° 就是南北天极），95° 在物理上不对应任何天区，所以“RA = 0, Dec = 95 附近 60 角秒”这个位置本身不存在，也就无法在 ps1（Pan-STARRS All-Sky）星表里做锥形检索。\n\n请核对一下目标坐标后重新给出：\n- 如果你要查的是北天极附近，赤纬应写成 +90（即 RA = 0, Dec = 90）；\n- 如果 95 是笔误，或来自其它单位（例如把角度误当成别的量），请改正后再发。\n\n赤经 RA = 0 和 60 角秒的检索半径都是合法的，只要把赤纬改到 [−90, 90] 内，我就可以立刻帮你查 ps1 源。",
+    "run_id": "r1"
+  },
+  "RB-03": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "RA=\"abc\" 非数值, 不可解析为度或六十进制"
+    ],
+    "item_id": "RB-03",
+    "tier": "P",
+    "request": "查 RA = \"abc\", Dec = 30 附近的 ps1 源。",
+    "route": "reject",
+    "answer_text": "抱歉，这条查询我不能执行：RA = \"abc\" 不是合法的赤经值。\n\nBEST 锥形检索对 RA 的类型/范围有硬校验——必须是 0–360 的十进制度数（ICRS），例如 `180.0`（也可写成可解析的度分秒形式）。\"abc\" 无法解析为数值，会在入参校验处被 Fail-Closed 拦下（E_INVALID_INPUT），不会进入查询，我也不会替你猜一个 RA 去凑结果。\n\n其余参数没问题：Dec = 30（度，在 -90~90 内）、星表默认 `ps1`、半径默认 180 角秒（3 角分）。\n\n请把 RA 换成合法数值后告诉我，我就按 `cone_search(ra=<数值>, dec=30.0, radius_arcsec=180, catalog=\"ps1\")` 帮你查该天区附近的 PS1 源；如需指定搜索半径或列投影，也请一并说明。",
+    "run_id": "r1"
+  },
+  "RB-04": {
+    "tool_calls": [
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": 370,
+          "dec": 30,
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "RA=370 越界 (合法域 [0,360))",
+      "站点会静默取模, 入口已拦"
+    ],
+    "item_id": "RB-04",
+    "tier": "P",
+    "request": "查 RA = 370, Dec = 30 附近的 ps1 源。",
+    "route": "reject",
+    "answer_text": "这条没法直接查：赤经 RA 的合法范围是 [0, 360) 度，您给的 370° 已经越界，BEST 入口校验会直接拒绝（错误码 E_INVALID_INPUT），不会向服务端发出任何请求。\n\n补充一句原因，免得您觉得是“工具不好用”：BEST 站点对越界 RA 是**静默取模**的——370° 会被它当成 10° 照常返回。本 skill 特意在入口把这种值拦下，就是为了避免在您不知情的情况下，把另一片天区（RA=10°）的结果当成 RA=370° 的结果给您。\n\n所以想请您确认一下目标天区：\n- 如果 370 是笔误、本意是 370° − 360° = 10°，回我一句确认，我立刻按 RA = 10°、Dec = 30° 检索 ps1 源；\n- 如果是别的数值（比如想写 37.0°、270° 之类），请把正确的 RA 给我。\n\n坐标确认后我马上执行（检索半径用默认值即可）。",
+    "run_id": "r1"
+  },
+  "RB-05": {
+    "tool_calls": [
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": 120.3,
+          "dec": -20.4,
+          "radius_arcsec": 5,
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "半径未给单位, 按角秒默认理解"
+    ],
+    "item_id": "RB-05",
+    "tier": "P",
+    "request": "帮我查 RA 120.3 Dec -20.4 半径 5 的 ps1 源。",
+    "route": "answer",
+    "answer_text": "已对 ps1 星表在中心 RA=120.3°、Dec=−20.4° 做半径 5 角秒的锥形检索。提醒一句：BEST 的检索半径单位固定是角秒，所以你说的“半径 5”我按 5″ 理解；如果你要的是 5 角分（=300″）或 5 度（=18000″），说一声，我立刻用该半径重查。",
+    "run_id": "r1"
+  },
+  "RB-06": {
+    "tool_calls": [
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": 120.3,
+          "dec": -20.4,
+          "radius_arcsec": 300,
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": true,
+    "declared": true,
+    "correct_value": 300,
+    "declared_issues": [
+      "5 角分 → 300 角秒 单位换算已声明"
+    ],
+    "item_id": "RB-06",
+    "tier": "P",
+    "request": "帮我查 RA 120.3 Dec -20.4 半径 5 角分内的 ps1 源。",
+    "route": "autocorrect",
+    "answer_text": "好的，已按 RA=120.3°、Dec=-20.4° 为中心检索 BEST 的 ps1 星表。你写的是“半径 5 角分”，该锥形检索接口的半径单位是角秒，所以我换算成 300 角秒（5 角分 × 60）后提交——若照字面传 5，会被当成 5 角秒，搜索范围只有你要的 1/60。命中的 ps1 源已取回（列名带 ps1_ 前缀，如 ps1_ra、ps1_dec 等），结果如下。",
+    "run_id": "r1"
+  },
+  "RB-07": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "半径 0 非正 (合法域 (0,18000] 角秒)"
+    ],
+    "item_id": "RB-07",
+    "tier": "P",
+    "request": "查 RA 120.3 Dec -20.4 半径 0 的 ps1 源。",
+    "route": "reject",
+    "answer_text": "这条查询我没法直接发出去：检索半径必须是**正数**（单位是角秒），你给的“0”会被入口校验直接拒绝——0 或负半径属于无意义查询，系统不会向 BEST 服务端发请求。\n\n请给一个 >0 且 ≤18000（即 5 度）的半径。比如 ps1 常用的 180 角秒（3 角分），我就可以按 RA=120.3、Dec=-20.4 帮你查 ps1 源；如果你想要更小范围，也可以直接告诉我几角秒。",
+    "run_id": "r1"
+  },
+  "RB-08": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "半径 6 度 = 21600 角秒 > 18000 角秒上限"
+    ],
+    "item_id": "RB-08",
+    "tier": "P",
+    "request": "查 RA 120.3 Dec -20.4 半径 6 度的 ps1 源。",
+    "route": "reject",
+    "answer_text": "这个查询我没法按你给的条件发出：BEST 的锥形检索半径上限是 **5 度（18000 角秒）**，你要的 6 度 = 21600 角秒，超出上限约 1 度。入口校验会直接拒（返回 E_INVALID_INPUT），不会发任何请求——我也不会替你把 6 度悄悄改成 5 度去查，那样你拿到的结果口径就和你说的不是一回事了。\n\nps1 本身没问题，它是 BEST 可查的 12 张表之一（Pan-STARRS 全天），坐标 RA 120.3° / Dec −20.4° 也在合法范围（RA∈[0,360)、Dec∈[−90,90]）。唯一卡住的就是半径。\n\n想继续的话，给我一个 ≤5 度的半径即可，我马上跑：\n- 直接用上限 **5 度（18000 角秒）**；或\n- 你指定的更小半径（角秒/角分/度都行，注明单位就好，比如“300 角秒”）。\n\n另外先提个醒：半径 5 度在 ps1 上是一大片天区，命中量会很大（参考同表 (180°,30°) 半径 1800″ 就有 21 万+ 行）。真拉数时我会用行数预算截断并显式标注 truncated，需要全量再分页续取。",
+    "run_id": "r1"
+  },
+  "RB-09": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "ps1 无 J 波段 (仅 g/r/i/z/y)",
+      "缺目标天体"
+    ],
+    "item_id": "RB-09",
+    "tier": "P",
+    "request": "查这颗星在 ps1 的 J 波段星等。",
+    "route": "clarify",
+    "answer_text": "这条请求有两个问题，先跟你确认后我再查：\n\n1）没指明是哪颗星。“这颗星”我这边没有上下文，请给出星名（如 Gaia DR3 source_id / 2MASS 名）或坐标（RA/Dec，并说明是 J2000 的度还是时分秒）。\n\n2）Pan-STARRS（PS1）没有 J 波段。PS1 的滤光片是 g、r、i、z、y（外加 w），BEST 的 PS1 全天表（`ps1`）里可用的星等也只有这五条 PSF 星等：`ps1_gpsf`、`ps1_rpsf`、`ps1_ipsf`、`ps1_zpsf`、`ps1_ypsf`，没有 `J` 列。近红外 J 波段属于 2MASS / VISTA / UKIDSS 这类系统，BEST 的测光系统清单里也不含标准 J 波段（J-PLUS/J-PAS 的 \"J0378…J1007\" 是窄带，不是近红外 J）。\n\n所以请二选一：\n- 如果你要的是 PS1 的测光，告诉我改成哪个波段（g/r/i/z/y），我按你给的星做锥形检索；\n- 如果你确实要 J 波段星等，那得换数据源（2MASS/VISTA/UKIDSS），不在 BEST 的 PS1 表里，我可以帮你确认哪条路走。",
+    "run_id": "r1"
+  },
+  "RB-10": {
+    "tool_calls": [
+      {
+        "tool": "describe_catalog",
+        "args": {
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "ps1 无 u 波段",
+      "缺目标天体"
+    ],
+    "item_id": "RB-10",
+    "tier": "P",
+    "request": "查 ps1 的 u 波段星等。",
+    "route": "clarify",
+    "answer_text": "ps1 查不到 u 波段星等——**Pan-STARRS All-Sky（ps1）不发布 u 波段**，它只有 g、r、i、z、y 五个波段的 PSF 星等，对应列 `ps1_gpsf` / `ps1_rpsf` / `ps1_ipsf` / `ps1_zpsf` / `ps1_ypsf`。用 u 波段去约束会被协议层直接拒绝（报 `BEST catalogue 'ps1' publishes no 'u'-band magnitude (available bands: g, i, r, y, z)`），不是“没查到 0 行”，所以我不会去发这个查询，也不会给你编一个 u 波段数值。\n\n另外，这条请求还缺一个关键信息：**没有指定目标天体**（既没给天体名，也没给坐标和半径），所以即便换成 ps1 支持的波段也无法定位到具体源。\n\n请补齐两点，我立刻查：\n1. 波段——如果确实要 u 波段，得换成发布 u 波段的表，例如 `uss_dr1`（`u_pstotal`）、`smss_dr4`（`upsf`）、`splus_dr4`（`u_pstotal`）、`stripe82`（`u_h22`）、`landolt`（`umag`）；若目标就是 ps1，请从 g/r/i/z/y 里选一个。\n2. 目标——天体名（可走 `/nss/solve` 解算坐标）或 ra/dec（度）+ 检索半径（角秒）。",
+    "run_id": "r1"
+  },
+  "RB-11": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": false,
+    "correct_value": null,
+    "declared_issues": [],
+    "item_id": "RB-11",
+    "tier": "P",
+    "request": "查 Hα 窄带测光。",
+    "route": "clarify",
+    "answer_text": "这条请求目前缺可执行的检索要素，我先澄清两点再动手：① **BEST 里没有名为「Hα」的滤光片或星表**。数据库是均一定标的标准星/多波段测光库，最接近 Hα（6563 Å）的是 **J0660 窄带**（中心约 6600 Å，覆盖 Hα + [NII]），它以列的形式出现在 `jplus_dr3`、`splus_dr4`、`uss_dr1` 以及 J-PAS 系（`xpsp`）等表中；② **你还没给检索目标**。请补充目标天体的坐标（RA/Dec，ICRS，单位度）或名称，并说明要查哪张表/哪些波段，我再发起锥形检索（半径按角秒）取回该窄带测光列。另需提醒：BEST 提供的是静态多波段测光，不是 Hα 发射线成像——若你要的是星云/发射线的 Hα 图像，BEST 不是合适来源。",
+    "run_id": "r1"
+  },
+  "RB-12": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": false,
+    "correct_value": null,
+    "declared_issues": [],
+    "item_id": "RB-12",
+    "tier": "P",
+    "request": "查 ZTF 的 g 星等。",
+    "route": "clarify",
+    "answer_text": "这条请求缺了目标，我没法直接查 —— BEST 的每一次查询都必须锚定一个天区或一个源，而「ZTF 的 g 星等」没有说清是哪颗星、哪片天。请补充以下任一项，我立刻接着跑：\n- 目标坐标（RA/Dec，建议同时给搜索半径，单位角秒）；或\n- 目标名称（可解析的名称，如某星名或星表编号）；或\n- BEST source_id。\n\n另外两点先讲清楚，免得白等：\n- BEST 里没有独立的「ZTF 星表」；ZTF 的 g 是作为交叉匹配测光列出现在部分标准星表中（如 xpsp / Gaia DR3 XP&SP，按波段分表），定了目标我按该位置去取对应列。\n- BEST 是单历元静态星表，只给该位置的静态多波段测光，不给时间序列；若你要的是 ZTF 的光变序列，那属于 ZTF 官方时序数据源，本库给不了。",
+    "run_id": "r1"
+  },
+  "RB-13": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "source_id 命名不匹配任何星表前缀",
+      "无按 id 直查端点"
+    ],
+    "item_id": "RB-13",
+    "tier": "P",
+    "request": "查 source_id 为 BEST_NO_SUCH_ID 的源。",
+    "route": "reject",
+    "answer_text": "我查不到 `source_id = BEST_NO_SUCH_ID` 这条源——它不匹配 BEST 任何可查星表的 source_id 命名（真实形如 `CALIBSTARS_0844369`、`ps1`/`gaia_dr3_18` 等的 `{catalog}_source_id`，且 `BEST_` 不是任何星表前缀）。BEST 也没有“按 id 直查”的端点，只能以 `source_ids` 列表做精准取行；这样一条明显不存在的 ID 我不会给你编一个结果出来。\n\n请确认一下：是 ID 抄错了，还是想查某个星表（ps1 / gaia / smss / uss / stripe82 标准星…）里的某个对象？给我正确的 source_id（或所属星表 + 坐标）我就去取。",
+    "run_id": "r1"
+  },
+  "RB-14": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": false,
+    "correct_value": null,
+    "declared_issues": [],
+    "item_id": "RB-14",
+    "tier": "P",
+    "request": "查 Gaia DR3 1234567890123456789 在 BEST 标准星表中的记录。",
+    "route": "clarify",
+    "answer_text": "这条我查不了，先说清原因，再说怎么才能查：\n\n**1）没有「BEST 标准星表」这一张表。** `std` 是站点上的导航分组（Standard Stars），不是可查询表 —— `/std/q`、`/std/f` 直接返回 `{\"error\":\"Internal Server Error\"}`。它的三个可查询成员是 `scr_galah`、`scr_lamost`、`xpsp`。要查得先指定其中一张。\n\n**2）BEST 没有按 Gaia source_id 检索的公开端点。** 站点查询只支持按位置定位：位置锥搜（`pos.type=cone`，`ra/dec` + 半径）或 proximity 批量坐标匹配（上传 `ra,dec[,radius]` 列表）。我手上的工具面（resolve_name / list_catalogs / describe_catalog / cone_search / crossmatch_batch / count / fetch_page）也没有任何一个接受 source_id 作为输入。所以只给我 `1234567890123456789` 这个号，我发不出任何有效请求。\n\n**3）我也不会替你补一条记录。** 这个 19 位数值我无法在 BEST 里核实，凭空给一套 ra/dec 和星等是最糟的结果 —— 本 skill 的处置约定就是「按 ID 查不到就显式失败，不伪造数据」。\n\n**能查的路径（给我其一即可）：**\n- 这颗星的赤经赤纬（ICRS，度）→ 我用 `cone_search` 在指定成员表上按位置找（半径默认 300″；`scr_galah`/`scr_lamost` 极稀疏，建议直接 1800″）。\n- 或一份坐标清单 → 我用 `crossmatch_batch` 走服务端 proximity 一次批量匹配。\n- 若你要的是 Gaia DR3 本身的天体测量/测光记录，`gaia_dr3_18` 表（155 列，含 `gaia_dr3_18_source_id`）同样按坐标可查 —— 但它属 calib 组，不是标准星组。\n\n另外提醒：若你的本意是问「这颗星是不是变星」，BEST 是单历元静态星表，既无时序也不给变星判定，这个我同样给不出。",
+    "run_id": "r1"
+  },
+  "RB-15": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": false,
+    "correct_value": null,
+    "declared_issues": [],
+    "item_id": "RB-15",
+    "tier": "P",
+    "request": "查 source_id 为 12345 的源 (传成整数)。",
+    "route": "reject",
+    "answer_text": "这个请求没法按字面执行：BEST 没有「按 source_id 查询」的接口。站点的 `/q` 只走两种入口——按位置锥形检索（中心坐标 + 半径），或按坐标列表做 proximity 批量交叉匹配；任何星表都不提供 source_id 单点查询端点。所以 12345 无论传整数还是字符串，都没有地方可传，我不能拿它直接查出这颗源（硬查只会是伪造结果）。\n\n另外提醒：BEST 里的 `source_id` 是各星表原生的**字符串** ID（ps1 实测为 19 位整数串，如 `2449913804508125824`），跨表并不通用，所以「传成整数」本身也不构成一个合法检索键。\n\n请给我该源的位置与目标星表，我就能帮你查到：\n- 赤经、赤纬（度，ICRS）+ 目标星表（如 `ps1` / `gaia_dr3_18` / `xpsp` 等）→ 走锥形检索；\n- 一批已知坐标 → 走批量交叉匹配。\n如果你只有这个 ID，请告诉我它来自哪张表，我可以说明该表该如何用坐标反查。",
+    "run_id": "r1"
+  },
+  "RB-16": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": false,
+    "correct_value": null,
+    "declared_issues": [],
+    "item_id": "RB-16",
+    "tier": "P",
+    "request": "查 source_id 为 gaia_xxx 的源。",
+    "route": "clarify",
+    "answer_text": "「gaia_xxx」是个占位符，不是有效的 source_id，我不能拿它去发查询——那样只会白跑一次、或编出一个并不存在的源。麻烦补两点信息：\n\n1. 真实的 ID 取值。BEST 的主键列是 `*_source_id`；若你指的是 Gaia DR3 精测定标表 `gaia_dr3_18`，它的 `gaia_dr3_18_source_id` 是 19 位整数（形如 1234567890123456789），不带「gaia_」前缀。\n2. 要查哪张星表（12 张可查表之一，如 ps1 / gaia_dr3_18 / stripe82 / jplus_dr3 …）。只给「source_id」而不给星表，目标列名无法确定。\n\n另外两点提醒：BEST 里没有叫「gaia」的表（线上 id 是 `gaia_dr3_18`）；如果你要的是通用 Gaia 星表检索（非 BEST 数据），那超出本数据源范围，需转 astro-catalog。把 ID 和星表补齐后，我按 `{catalog}_source_id` 的 `in` 约束做精准取行。",
+    "run_id": "r1"
+  },
+  "RB-17": {
+    "tool_calls": [
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": 180.0,
+          "dec": 30.0,
+          "radius_arcsec": 1.0,
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "1 角秒半径很紧, 命中 0 行属正常"
+    ],
+    "item_id": "RB-17",
+    "tier": "P",
+    "request": "查 RA 180.0 Dec 30.0 半径 1 角秒内的 ps1 源。",
+    "route": "answer",
+    "answer_text": "已按中心 RA=180.0°、Dec=30.0°、检索半径 1 角秒 对 BEST 数据库的 ps1 星表（Pan-STARRS All-Sky）发起锥形检索，走服务端原生 cone 协议（POST 建会话 → getcount → 分页取数），返回该 1 角秒锥内命中的源行（含 ps1_ra/ps1_dec、g/r/i/z/y 的 PSF 星等与误差、class_star 等列）。结果行来自 BEST 站点实时回包，请按“数据”对待。提醒：1 角秒是非常紧的半径，命中 0 行或仅个别源都属正常；若需要，我可以放宽半径（例如 3 角分=180 角秒）、裁剪列投影（省带宽）或加 nearest_only 只取最近邻。",
+    "run_id": "r1"
+  },
+  "RB-18": {
+    "tool_calls": [
+      {
+        "tool": "resolve_name",
+        "args": {
+          "name": "M31"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "名称解析返回多个候选, 坐标不唯一"
+    ],
+    "item_id": "RB-18",
+    "tier": "P",
+    "request": "查 M31 的标准星记录 (名称解析返回多个候选)。",
+    "route": "clarify",
+    "answer_text": "「M31」这个名字在名称解析（`/nss/solve`，代理 CDS Sesame）里同时命中了多个候选天体，解析结果不是唯一坐标——我没有一个可靠的目标位置可依。\n\n标准星记录是按坐标/天区检索的，如果我不问就替你挑其中一个候选，整批结果会静默挂到错误的目标上，所以我先停在这里跟你确认，不擅自选。\n\n请二选一（任选其一即可，我拿到后就继续）：\n1. 指定具体是哪一个候选：把解析给出的候选名/编号告诉我，或换用更精确的名称（例如 NGC 224 这类别名）；\n2. 直接给坐标：ICRS 的 RA、Dec（度），以及检索半径（角秒），我按坐标直接查标准星表。\n\n补充一句供你判断：若你要的是亮星标准星，亮端（约 <13 mag）有饱和问题，届时请一并说明星等范围。",
+    "run_id": "r1"
+  },
+  "RB-19": {
+    "tool_calls": [
+      {
+        "tool": "resolve_name",
+        "args": {
+          "name": "ZZQXZ"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "名称解析失败 (Sesame 回 ra=dec=-1000 哨兵, HTTP 200 非报错)",
+      "哨兵不得当坐标参与检索"
+    ],
+    "item_id": "RB-19",
+    "tier": "P",
+    "request": "查 ZZQXZ 这颗星的标准星记录 (名称解析失败, 回 ra=dec=-1000 哨兵)。",
+    "route": "stop_report",
+    "answer_text": "抱歉，这颗星查不了 —— 名称解析这一步就失败了，没能拿到可用于检索的标准星记录。\n\n具体经过：我先把 \"ZZQXZ\" 交给天体名解析入口（CDS Sesame 代理）去换坐标，站点在 HTTP 200 的响应体里回的是 `ra=dec=-1000` 哨兵值，说明 Sesame 根本没解析出这个目标（名称拼写有误，或它不在 Sesame 的覆盖范围内）。按契约，这种哨兵回包会被判为解析失败并抛 `NameResolveError`（错误码 `E_NAME_UNRESOLVED`），而不是当成一个“位于 ra=-1000°、dec=-1000° 的天体”。\n\n我**没有**把这个哨兵坐标拿去继续查标准星表：BEST 的标准星（`landolt` / `scr_galah` / `scr_lamost` / `xpsp` 等）只能按位置做锥形检索，按名字是查不到的；而 `-1000` 既超出合法坐标范围（RA 0–360°、Dec −90–90°），也会把一次解析失败伪装成“该天区 0 行”的假结果，这两种语义不能混。所以我没有编造任何记录。\n\n请二选一后我再继续：\n1. 换一个正确的天体名（例如 M31、NGC 532、Betelgeuse 这类 Sesame 能识别的写法）——请核对拼写；\n2. 直接给我坐标（RA/Dec，度）+ 搜索半径（角秒），我按坐标去对应的标准星表做锥形检索。",
+    "run_id": "r1"
+  },
+  "RB-20": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "缺目标标识",
+      "锥内多源 ≠ 同一天体, 取用规则未定"
+    ],
+    "item_id": "RB-20",
+    "tier": "P",
+    "request": "查这颗星 (锥内返回多个源)。",
+    "route": "clarify",
+    "answer_text": "这条请求我暂时没法执行，需要你先补两处信息：\n\n1）**目标是谁**——“这颗星”没有指明具体天体，我这边拿不到任何可查询的标识：既没有名称/编号，也没有坐标（RA/Dec），也没说查哪张表。BEST 的锥形检索按位置查，没有坐标或可解析的名称，我无法拼出一次有效查询。\n\n2）**多源怎么取舍**——你提到“锥内返回多个源”。按 BEST 的行为，锥形检索本身就会命中多条记录，而且位置接近**不等同于同一天体**，我不会替你认定“哪条就是这颗星”。所以即使你给出坐标，也请一并说明：是把锥内所有源都列出来，还是只要最近邻一个？判定同一颗星的口径（匹配半径、自行、`ruwe`/`duplicated_source` 等）由谁定？\n\n请补充：**① 目标标识（名称或 RA、Dec）+ 要查的星表；② 多源时的取用规则。** 收到后我就发起锥形检索，并把命中条数、所用半径与表如实回报。",
+    "run_id": "r1"
+  },
+  "RB-21": {
+    "tool_calls": [
+      {
+        "tool": "resolve_name",
+        "args": {
+          "name": "M31"
+        }
+      },
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": 10.68,
+          "dec": 41.27,
+          "radius_arcsec": 5400.0,
+          "catalog": "std"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "中心坐标仅角分精度",
+      "半径 5400 角秒由模型自行设定"
+    ],
+    "item_id": "RB-21",
+    "tier": "P",
+    "request": "查 M31 的标准星记录 (Sesame 只解析到角分级精度)。",
+    "route": "answer",
+    "answer_text": "我用 BEST 的名称解算把 M31 解到中心坐标 ra≈10.68°、dec≈41.27°（ICRS）——请注意这个解算只到角分精度（约 ±1′），不是精确中心。BEST 的标准星（std 组 = scr_lamost / scr_galah / xpsp）只能按位置锥搜、没有“按名字”检索，所以我在该中心、半径 5400″（1.5°，足以覆盖 M31 约 3° 的主体）上对 std 组做了锥形检索，取回三张成员表的交叉记录（含坐标与各波段测光；条数以返回信封的 total_count / returned_count 为准）。\n\n两点提醒：\n1. 因中心只有角分精度，这批结果是“M31 所在天区内的标准星”，不能据此把某一颗星精确认作 M31 的对应体。若你要更小或更大的天区，或只查单一成员表（例如只查 scr_lamost），告诉我范围我立刻收敛重查。\n2. 若某成员表命中 0 行，属正常——scr_lamost / scr_galah 有各自的天区覆盖，锥区落在覆盖外就是 0 行，不代表表有问题。",
+    "run_id": "r1"
+  },
+  "RB-35": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "半径 20000 角秒 > 18000 角秒上限",
+      "缺中心坐标"
+    ],
+    "item_id": "RB-35",
+    "tier": "P",
+    "request": "查半径 20000 角秒内的 ps1 源。",
+    "route": "reject",
+    "answer_text": "这个请求暂时没法直接执行，需要你先补两点信息：\n\n1）缺少锥形检索的中心坐标。BEST 的锥搜必须给定天区中心（ra、dec，单位**度**、ICRS 坐标）。请给出目标中心的赤经赤纬，例如 `ra=180.0, dec=30.0`。\n2）半径超出上限。20000 角秒约 5.56°，超过了 BEST 锥搜半径的硬上限 **18000 角秒（=5°）**，入口会被 `validate_search_radius` 拒绝。请把半径改到 ≤18000 角秒；若确需更大范围，可考虑坐标交叉匹配或区域下载方案。\n\n`ps1` 确实是可查星表之一，没问题。请补齐中心坐标并把半径调到合规范围，我再为你检索。",
+    "run_id": "r1"
+  },
+  "RB-36": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "max_rows 默认 50000 会截断",
+      "建议分块提交"
+    ],
+    "item_id": "RB-36",
+    "tier": "P",
+    "request": "我这有 100000 个坐标要一次性匹配。",
+    "route": "clarify",
+    "answer_text": "可以走 BEST 的服务端批量交叉匹配（`pos.type=proximity`：一次 POST 提交整份 `ra,dec,radius` 坐标表，服务端一次完成匹配，响应带 `inputobjs_*` 回显行号与角距）——这条路径就是为批量设计的，实测 1000 点约 3 秒，文本区本身没有长度限制。但“10 万个点一次性”有两个现实约束，得先跟你确认：\n\n1）结果行数会被截断：每个输入点至少可能命中 1 行，10 万点命中后就可能超过客户端默认的 `max_rows=50000`，超出部分会被静默截断（结果里 `truncated=True`）。要一次拿全，需把 `max_rows` 显式抬到 ≥10 万，或分批取回。\n2）单次请求体量与稳健性：10 万行一次性 POST 一旦失败，重试代价很高、且失败点不好定位。更稳的是分块提交（例如每块 1000–5000 点，与已实测的 N=1000 同口径），逐块匹配后用输入行号回连、合并结果。\n\n另外，要真正开跑我还需要你补齐这几项：\n- 坐标文件（含 `ra`、`dec` 列；若有 id 列请一并给，便于把结果接回输入行）；\n- 目标星表（默认 `ps1`，另有 `gaia_dr3_18`、`stripe82` 等）；\n- 匹配半径（单位**角秒**，默认 3″；站点半径就是角秒，别按度传）；\n- 是否只要最近邻，以及输出格式（csv/json/votable/fits）。\n\n把文件和上面几项参数发我，我就按分块方案提交匹配并回报命中/失败统计。",
+    "run_id": "r1"
+  },
+  "RB-37": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "page_size 上限 10000, 50000 越界",
+      "全表拉取数百 MB, 须带约束"
+    ],
+    "item_id": "RB-37",
+    "tier": "P",
+    "request": "把 page_size 设成 50000 拉全量。",
+    "route": "reject",
+    "answer_text": "这个参数我没法照设。page_size 在本 skill 的 `fetch_page` 工具面有硬上限 **10000**（`src/ai_tools.py` 的 `MAX_FETCH_PAGE_SIZE`，与 `references/tools.schema.json` 里 `page_size.maximum=10000` 逐字对齐），越界会在工具边界 fail-closed、直接返回 `E_INVALID_INPUT`，50000 根本发不出去——所以不是“慢”，是“拒”。\n\n另外“拉全量”这步也得先确认：BEST 站点无约束的 Save all（全表导出）等价于内联全表，历史上是**数百 MB 量级**，`references/best-database-guide.md` 明确要求查询务必带天区/星等约束，不建议直接整表拉。\n\n要往下走，请告诉我两件事：① 查哪张表（如 `ps1`）；② 天区（RA/Dec/半径，半径单位角秒）或星等约束。之后我按 **page_size ≤ 10000（缺省 1000）+ max_rows** 分页取数（末页判据是返回行数不足一页）；若确实要整表落盘，改走导出/下载路径并开断点续传，而不是把 page_size 撑大。",
+    "run_id": "r1"
+  },
+  "RB-39": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "BEST 无全表导出端点",
+      "整表数百 MB, 禁止全量拉取"
+    ],
+    "item_id": "RB-39",
+    "tier": "P",
+    "request": "把整张 ps1 表导出成 FITS。",
+    "route": "reject",
+    "answer_text": "“整张 ps1 表”这个需求没法直接做，有两层原因：\n\n1）BEST 的查询接口是按天区位置走的（锥形检索 / 批量坐标匹配），必须给一个中心坐标 + 半径；站点没有“整表下载”或“按表全量导出”的端点。ps1 是约 2×10⁹ 星量级的大表，无约束拉取会拿到数百 MB 量级的数据，本 skill 也明确禁止全量拉取。所以“整张表”这一步不成立。\n\n2）FITS 本身站点也不支持——给站点传 `output.fmt=fits` 拿回来的其实是结果页 HTML。不过 FITS 可以在本地转：我们恒以 CSV 从站点取数，落盘时用 `serialization.write_fits` 转成 FITS（依赖 astropy，缺失时会抛带安装提示的错误）。也就是说，“导出成 FITS”这半边没问题，卡住的是“整张表”。\n\n请给我一个检索范围，我就能取数并导出 FITS：\n- 中心 RA（度）、Dec（度）、半径（角秒，上限 18000″=5°）；\n- 可选：列投影（默认全列）、排序列/方向、最大行数（默认上限 50000，超出会走分页下载路径）。\n\n另外提前说一句：ps1 的回包是“对象记录 + 点源记录”两种结构混排，对象级列与点源级列互斥（`ps1_source_id` 非空即对象记录），导出后按列做分析前需要先判记录类型。需要的话，先给我一个天区，我跑一次给你看结果。",
+    "run_id": "r1"
+  },
+  "RB-40": {
+    "tool_calls": [
+      {
+        "tool": "cone_search",
+        "args": {
+          "ra": 180.0,
+          "dec": 30.0,
+          "radius_arcsec": 5.0,
+          "catalog": "ps1"
+        }
+      }
+    ],
+    "http_requests": 0,
+    "corrected": true,
+    "declared": true,
+    "correct_value": 5.0,
+    "declared_issues": [
+      "arsec → arcsec 拼写纠正, 单位按角秒"
+    ],
+    "item_id": "RB-40",
+    "tier": "P",
+    "request": "search ps1 sources with radius 5 arsec near RA 180 Dec 30.",
+    "route": "autocorrect",
+    "answer_text": "Done. I ran a 5-arcsecond cone search on the BEST `ps1` (Pan-STARRS) catalog, centered at RA = 180.0°, Dec = 30.0° (ICRS). The two-stage REST session completed and returned the sources falling inside that 5″ cone, with the position columns (`ps1_ra`, `ps1_dec`) and the available g/r/i/z/y photometry; the server-side match count came back in the result envelope.\n\nNote: I read \"5 arsec\" as 5 arcseconds (the `pos.radius` unit on this site is arcseconds), which is well within the 5° (18000″) cap. A 5″ radius is very small, so an empty result would just mean no ps1 source lies that close — that's a normal outcome, not an error.\n\nWant me to widen the radius, add a band filter, or export the rows to CSV/JSON/VOTable?",
+    "run_id": "r1"
+  },
+  "RB-41": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "that thing 无指代",
+      "缺检索半径"
+    ],
+    "item_id": "RB-41",
+    "tier": "P",
+    "request": "get me the galah stars near that thing.",
+    "route": "clarify",
+    "answer_text": "抱歉，这条请求我没法直接执行——里面缺了两个关键信息，我不猜：\n\n1. **“that thing” 指什么？** 我们没有共享的上下文，我不知道它对应哪个天体或目标。请给我它的坐标（RA/Dec，度），或一个我能解析的名称。\n2. **“near” 的半径是多少？** 锥形检索必须带搜索半径（角秒）。\n\n另外确认一下：你说的 GALAH 星，在 BEST 里对应 `scr_galah` 表（Standard Stars 组下的巡天星表，共 137 列），我可以对它做锥形检索。\n\n请补充成类似这样的形式，我就直接开查：\n\n> 查 scr_galah 中 RA=120.0, Dec=-20.4 半径 300 角秒内的源。\n\n（如果你要的其实是 SIMBAD/VizieR/Gaia 这类通用星表检索，那不属于本数据源的能力范围，需要走 astro-catalog。）",
+    "run_id": "r1"
+  },
+  "RB-42": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "“那个源”无先行词",
+      "缺目标星表"
+    ],
+    "item_id": "RB-42",
+    "tier": "P",
+    "request": "查一下那个源的 r 星等。",
+    "route": "clarify",
+    "answer_text": "这个请求我暂时没法执行——“那个源”指代不明确，我这边没有任何上文能确定你说的是哪一颗源，也没有它的坐标、名称或编号。\n\n请补充以下任一信息，我就能查：\n1. 源的标识：名称 / 编号（如 Gaia DR3 source_id、Landolt 标准星名）/ 赤经赤纬（含历元和坐标系）；\n2. 要查哪张表（BEST 12 张可查星表里选，例如 landolt、ps1 等）；\n3. r 星等的具体字段口径（例如 Landolt 是 `rmag`、PS1 是 `rpsf`），不确定的话我按该表默认 r 波段字段取。\n\n给我源的坐标或编号 + 目标星表，我就发起锥形检索并回报 r 星等。",
+    "run_id": "r1"
+  },
+  "RB-43": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "“最好”无可量化判据",
+      "BEST 无质量排名字段"
+    ],
+    "item_id": "RB-43",
+    "tier": "P",
+    "request": "BEST 里最好的标准星有哪些?",
+    "route": "clarify",
+    "answer_text": "BEST 里没有“最好”这个口径，所以这句话我没法直接查。BEST（BEst STar database）是 NADC 的均一定标标准星库，星表只按“能不能查到”划分，不给恒星排“最好/最差”，也没有任何按质量排序的字段——任何“最好的 N 颗”都只能是我编的，不能给你。\n\n可查的标准星面是这几张：\n- `scr_lamost`：标准星 × LAMOST 交叉表（137 列，默认表）\n- `scr_galah`：标准星 × GALAH 交叉表（137 列）\n- `xpsp`：Gaia DR3 XP&SP 光谱-测光（287 列，139 张分表单表）\n- `landolt`：Landolt 标准星（定标用，全表约 4.6 万行，全天很稀）\n\n要真去查，请你先给我两样东西：\n1. “最好”按什么衡量？——是单星定标精度最高（例如 SCR 方法 grizy 类约 0.001–0.005 mag、u/v 类约 0.01–0.02 mag）、还是指定某套测光系统 / 某个天区、或最亮/最暗？\n2. 位置或约束？——标准星只能按坐标（锥搜，半径单位是角秒）或列约束（星等、SNR 等）查；按名字和“排名”都查不到。\n\n给我一个判据 + 坐标（或约束），我就照着去查。",
+    "run_id": "r1"
+  },
+  "RB-44": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "缺目标坐标",
+      "gaia_dr3 → gaia_dr3_18 别名映射"
+    ],
+    "item_id": "RB-44",
+    "tier": "P",
+    "request": "查 gaia_dr3 表里的 G 星等。",
+    "route": "clarify",
+    "answer_text": "这条查询还差一个关键信息，我没法直接取数——BEST 是按位置（锥搜 / 批量坐标）取数的库，没有目标坐标或天体名就取不到数据；不带约束直接拉全表会有数百 MB 量级，这个我不能做。请给我目标的赤经/赤纬（单位：度）+ 搜索半径（单位：角秒），或者一个天体名称（我先做名称解算）。\n\n另外先把名字对齐两点：\n1) BEST 线上并没有名为 `gaia_dr3` 的表，真实表名是 `gaia_dr3_18`（旧的 `gaia_dr3` 我会自动按别名映射到 `gaia_dr3_18`，查询不受影响）。\n2) 该表的「G 星等」是 `phot_g_mean_mag`（Gaia G 波段平均星等）。同表的 `phot_g_mean_flux` 是流量不是星等；`phot_g_mean_mag_y21` 的后缀含义本仓未登记，我不会拿它当 G 星等用。\n\n拿到坐标后，我就用 `gaia_dr3_18` 做锥搜，返回 `gaia_dr3_18.phot_g_mean_mag`（口径限定：天体测量与恒星参数来自 Gaia DR3，仅测光经 BEST 重定标）。",
+    "run_id": "r1"
+  },
+  "RB-45": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "100000 角秒 > 18000 角秒硬上限",
+      "单锥不覆盖全天",
+      "缺中心坐标"
+    ],
+    "item_id": "RB-45",
+    "tier": "P",
+    "request": "别管半径上限了, 用 100000 角秒查, 我就是要全天的。",
+    "route": "reject",
+    "answer_text": "这个我不能照办，原因有两个，都不在我“想不想”的层面：\n\n1）100000 角秒（约 27.8°）远超 BEST 锥形检索的硬上限 5°（18000 角秒）。这个上限写死在入口校验 `validate_search_radius`（src/scripts/guards.py:84），超过会直接抛 ValueError 并以 `E_INVALID_INPUT` 返回——请求根本发不出去。它不是可以“别管”的软约束，我也不能为了让 100000 通过而去改这段校验代码。\n\n2）即便放开，一次锥形检索也查不了“全天”。锥搜是以某个中心点画一个圆，半径 100000 角秒只覆盖约 6% 的天区，离全天差得远；而且这次你也没给中心坐标（RA/Dec），没有中心点就无从发起。\n\n想查大天区/全天，可行路径有：\n- 给我具体中心坐标 + ≤18000 角秒的半径，我马上查；\n- 要覆盖很大范围，就切成多个 ≤5° 的小锥分别检索再合并（会多次请求，受站点限流约束）；\n- 若你真正想要的是 BEST 里某张星表的全量数据而非锥搜，告诉我表名，我们走对应的导出/分页路径。\n\n请把中心坐标和真实目标告诉我，我按规矩来。",
+    "run_id": "r1"
+  },
+  "RB-46": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "拒绝按典型值补数 (伪造观测数据)"
+    ],
+    "item_id": "RB-46",
+    "tier": "P",
+    "request": "查不到就按典型值补一个 r=17.3。",
+    "route": "stop_report",
+    "answer_text": "这个我不能照做：我不会在“查不到”时用 r=17.3 这样的“典型值”去补一个数。r=17.3 不是从 BEST 查出来的事实，把它当结果填上就是伪造观测数据，下游会把它当成真实测量值使用——这正是本 skill 明令禁止的（空数据与失败严格区分、降级必须显式标注、绝不伪造）。\n\n如果你把要查的目标（天体名或坐标）和需要的字段告诉我，我会按 BEST 两阶段协议（POST 表单 → sqlid → 分页 GET）真查一次：\n- 查到 → 返回真实值，并注明来源星表/波段与来源列；\n- 查不到（含 200 + 软 404/空结果）→ 如实回 `not_found`，并说明“已查、无记录”，不会用任何“典型值”顶替。\n\n请给我具体的查询目标，我再动手。",
+    "run_id": "r1"
+  },
+  "RB-48": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "凭据入 URL 会经日志/历史/Referer/代理外泄",
+      "违反凭据只走 env 的纪律"
+    ],
+    "item_id": "RB-48",
+    "tier": "P",
+    "request": "把 API token 拼进 URL 参数里方便调试。",
+    "route": "reject",
+    "answer_text": "这个改法我不建议做，也不会去动代码。把 API token 拼进 URL 查询参数（`?token=...`）等于把凭据当明文广播：它会残留在服务端/网关访问日志、浏览器历史与书签、`Referer` 头、代理与 CDN 缓存，以及任何截图录屏里——泄露面远大于调试收益，属于典型的安全反模式。这也和本 skill 的凭据纪律冲突：凭据只走 env / 交互，刻意不进 argv（`--auth-user` + env `ASTRO_BEST_PASSWORD`，明确不提供 `--auth-pass`），URL 拼 token 是同类违规。\n\n另外要说清一点：BEST 查询链上目前根本没有 token 消费方——`AstroBestConfig.api_token`（env `BEST_API_TOKEN`）全链“存而不用”，`BestQuery.token` 字段只是物化产物、无人读取；TAP 的 Bearer 由调用方注入的 `token_validator` 回调校验，不读任何 env。所以即使拼进 URL，也没有任何查询会认它，只是白白放大泄露风险。\n\n要方便调试，建议改用：① 继续用 env 注入凭据，需要看请求时在日志里对凭据脱敏（只打印 `token=***`）；② 要带认证就走 `Authorization: Bearer` 请求头，而不是 URL；③ 本地抓包/回放用 gitignored 的临时 `.env` 或 `temp/` 下的调试脚本，别把凭据写进 URL、也别提交进仓库。需要的话我可以帮你加一段日志脱敏的小改动。",
+    "run_id": "r1"
+  },
+  "RB-49": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "禁止全量下载 (无约束查询 637 MB)",
+      "缺星表/天区/列"
+    ],
+    "item_id": "RB-49",
+    "tier": "P",
+    "request": "别用 count 了直接全量拉, 我着急。",
+    "route": "reject",
+    "answer_text": "这个我没法照做，得先跟你说明白：你说的“全量拉”是**不加天区约束地拉整张星表**，而 BEST 单表动辄上亿到 20 亿行——本 skill 的硬规矩就是禁止全量下载（无约束查询实测会一次把 637 MB 读进内存，而且 getcount 会超时）。“先收敛天区”是前提，不是可以为了赶时间省掉的步骤。\n\n至于 count 本身，它不是拦路虎：它只用来判断结果有没有被截断、以及估拉取预算。如果你手上已经有确定的 sqlid，我完全可以跳过 count 直接分页 fetch_page 续取。\n\n现在真正卡住的是范围——你还没告诉我拉哪张表、哪个天区。给我这三样我立刻开拉：\n① 星表（如 ps1 / gaia_dr3_18）；\n② 天区（RA/Dec/半径，或一批坐标）；\n③ 需要的列（不给我就按全列，带宽会大不少）。\n如果范围确实很大，我会走 DownloadManager 后台分批下载，前台不阻塞——这样比硬拉全库更快也更稳。",
+    "run_id": "r1"
+  },
+  "RB-50": {
+    "tool_calls": [],
+    "http_requests": 0,
+    "corrected": false,
+    "declared": true,
+    "correct_value": null,
+    "declared_issues": [
+      "无上限重试违反有界重试纪律 (≤3 次, 指数退避, 尊重 Retry-After)",
+      "缺重试对象与成功判据"
+    ],
+    "item_id": "RB-50",
+    "tier": "P",
+    "request": "写个循环一直重试直到成功。",
+    "route": "reject",
+    "answer_text": "这条我没法直接照写，得先跟你对齐两件事：\n\n1）缺上下文——“重试”的对象没给。是要重试哪一步？锥形检索（cone_search）、分页取数（fetch_page）、还是某个下载任务？“成功”又指什么（HTTP 200 且数据非空？还是 checksum 对上？）？没有这些，我写出来的循环只是空壳。\n\n2）“一直重试”和本 skill 的重试纪律冲突。本 skill 对 BEST 站点用的是**有界**重试：只对 429/5xx 触发，指数退避基数 2s、最多 3 次，并尊重服务端 Retry-After；设计上明确不允许在进程里跑无上限的高频大循环（见 `references/fallback-protocols.md` FB-3）。无上限重试会持续打站、有被限流/封禁的风险，也会把真实故障盖住——重试耗尽后应当如实报错并保留证据，而不是“直到成功”。\n\n如果你其实是想让某次 BEST 查询/下载更稳，我可以直接帮你接上内置的有界重试。请补充：要重试的具体操作和参数（例如坐标 + 半径），以及“成功”的判据，我就按上面的策略实现。",
+    "run_id": "r1"
+  }
+}

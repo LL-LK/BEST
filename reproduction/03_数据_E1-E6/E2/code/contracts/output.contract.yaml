@@ -1,0 +1,37 @@
+skill: astro-best
+kind: output
+envelope: astro-envelope-v1
+schema: BestResultSet
+fields:
+  data:
+    type: object
+    unit: "mixed"
+    required: true
+    source: master-plan
+  status:
+    type: string
+    unit: "dimensionless"
+    required: true
+    source: master-plan
+gates:  # 阻断性质量门禁 (任一失败 -> handoff.status=blocked)
+  - name: http_status
+    cmp: "=="
+    value: 200
+    unit: "count"
+  - name: checksum_match
+    cmp: "=="
+    value: true
+    unit: "bool"
+handoff:
+  status: ready | needs_review | blocked
+  # next_skills 的**权威来源是 manifest.yaml 的 redirects 表**, 不是本文件 ——
+  # src/models/output.py:204-210 已不再写死这份列表, 改从 manifest 派生, 读不到
+  # 时降级为空清单 (G3)。此处只登记当前实况值供对照, 改路由请改 manifest。
+  next_skills:
+    - "astro-catalog"
+    - "astro-clean"
+
+# ---
+# generated_by: scripts/refactor/materialize_contracts.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

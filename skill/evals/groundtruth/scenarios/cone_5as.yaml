@@ -1,0 +1,31 @@
+# E2 场景 2/8: 锥形搜索 (L 类, 5 角秒) — docs/eval-E2-groundtruth.md §5 #2
+case_id: cone_5as
+category: cone_search
+snapshot_id: live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as
+main_metrics: [M1, M2, M3]
+query:
+  catalog: ps1
+  ra: 180.0                      # 真实抓取的名义中心; 实测 3 行距此 3.145/3.961/3.982 角秒, 全在 5" 内
+  dec: 30.0
+  radius_arcsec: 5.0
+  columns: [ps1_source_id, ps1_ra, ps1_dec, ps1_rpsf, ps1_gpsf, ps1_class_star]   # showcol 投影用带表前缀列名 (协议层 qualify_column 要求; 响应 CSV 仍是站点裸列名形态)
+  max_rows: 1000
+  page_size: 1000
+expect:
+  result_state: rows
+  # 期望行数/截断标志/边界描述**不在此声明**: gen_gold 只读 result_state 与
+  # error_code, 写在这里的数字与描述无人断言 —— 换素材后不会变红, 只会静静变旧
+  # (A7-02: 换素材前记的行数与「第 N 行恰在半径内外」的边界描述, 在换成 live
+  # 快照后全部对不上 —— 该快照的行全在 3.982" 以内, 根本没有边界行可验)。
+  # 权威值见 gold/cone_5as.json 与汇总表 focus/must_confirm 列 (数字由金标准渲染)。
+notes: >
+  L 类真实抓取快照 (裸列名 + 真实哨兵 -999/-1004.09 形态;
+  live-2026-10-04/live_ps1_ra180.0_dec30.0_r5.0as, data_version 字段现为
+  ps1@2026-10-04-live; 换素材前记的行数与旧 data_version 标识已退役, 不再复述)。
+  金标准: GT 用独立 haversine 算角距, d <= radius 含等号; 单位 arcsec→deg 换算由 GT
+  与被测各自执行 (M3 量纲探针)。行数与角距分布以 gold/cone_5as.json 为准 (复核要点
+  里的行数由金标准渲染, 不在本文件复述)。查询中心锚定首行坐标而非快照名义中心
+  (名义中心与全部实际行相距 ~100", 若按名义中心查 GT 判空 — degenerate, 由
+  run_e2 汇总时按快照 snapshot.yaml 的冻结 query 校准)。本快照 rows_full 的
+  source_id 整列为空 → 主键走 (ra,dec) 量化键 (E2 §2 兜底)。
+gold_focus: 独立 haversine 角距 + d<=radius 含等号 + arcsec/deg 单位换算 + (ra,dec) 量化主键

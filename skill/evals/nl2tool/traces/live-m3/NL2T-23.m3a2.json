@@ -1,0 +1,11 @@
+{
+  "task_id": "NL2T-23",
+  "run_id": "m3-attempt2",
+  "attempt": 2,
+  "source": "live-run",
+  "route": "reject",
+  "http_requests": 0,
+  "tool_calls": [],
+  "answer_text": "这个请求有两处做不到，分开说：\n（1）整张 ps1 无约束导出会退化成全表拉取。站点要求查询必须带天区或星等约束；没有约束的“Save all”按全表处理，内联 CSV 可到数百 MB 量级，而且 getcount 在无约束会话上会 >60 s 超时。也就是说“整张表”这条路既不可控也可能直接把会话拖死，我不会这么发。\n（2）服务端不支持 FITS。output.fmt 可选的是 csv / txt / json / votable（以及站点自用的 dbgrid）；请求 fits 返回的是结果页 HTML 而不是 FITS 文件——所以“导出成 FITS”这步在服务端根本拿不到文件，拿到的是一页 HTML。\n可行的替代：给我天区（半径 ≤18000 角秒 = 5°，单位角秒）和/或星等范围，我建好带 showcol 投影的查询会话（ps1 最多 30 列：位置 + g/i/r/y/z 的 PSF 星等与改正/误差 + flags/视差/ruwe 等），导出成 csv 或 votable（实测支持的四种格式里 csv/votable 最适合后续处理，CSV 响应带 UTF-8 BOM，按 utf-8-sig 读）；FITS 我在本地转换——本仓库的 src/serialization.py::write_fits 就是这条路的先例，它还会按列名带 ps1_ 前缀来判类型（靠猜列名会漏判 ps1_ra 这类前缀列）。\n你给天区和要哪几个波段，我按这个走：先 count 报规模 → 你确认 → 导出 csv/votable → 转 FITS。",
+  "notes": "整表导出与 FITS 格式两条都超边界 → reject；替代 = 加天区/星等约束后导出 csv/votable 并本地转 FITS（write_fits 先例）。"
+}
