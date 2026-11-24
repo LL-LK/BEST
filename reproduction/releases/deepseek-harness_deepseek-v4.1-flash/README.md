@@ -15,6 +15,5 @@ python recompute.py
 
 ## 说明
 
-- `E1/grades.json` 的 `predicted_tools` 在历史 v55 重判归档中未单独留存，保留为 `null`；`red_lines` 全部为空列表（0/84 告警）。
 - `E2/accepted_run/snapshots/` 中的实采快照来自公开 Gaia DR3 与 Pan-STARRS1 查询响应片段，6 万行压力夹具为合成数据；`preregistration.json` 仅清理了本机 `pip_freeze` 中的路径与无关包，受哈希锁定的冻结文件均未改动。
 - 评分表中的 `D0` 为归档内部代号。
