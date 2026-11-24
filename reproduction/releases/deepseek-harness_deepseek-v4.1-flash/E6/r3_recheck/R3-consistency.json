@@ -1,0 +1,521 @@
+{
+  "per_task": {
+    "REPRO-01": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-02": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.8
+      },
+      "PAC_call": {
+        "point": 0.9
+      },
+      "RDC": {
+        "point": 0.8
+      },
+      "FCC": {
+        "point": 0.6
+      }
+    },
+    "REPRO-03": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.9
+      },
+      "RDC": {
+        "point": 0.8
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-04": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6
+      },
+      "PAC_call": {
+        "point": 0.7
+      },
+      "RDC": {
+        "point": 0.6
+      },
+      "FCC": {
+        "point": 0.8
+      }
+    },
+    "REPRO-05": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6
+      },
+      "PAC_call": {
+        "point": 0.8
+      },
+      "RDC": {
+        "point": 0.6
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-06": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-07": {
+      "runs": 3,
+      "TSC": {
+        "point": 0.6666666666666666
+      },
+      "PAC_call": {
+        "point": 0.6666666666666666
+      },
+      "RDC": {
+        "point": 0.3333333333333333
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-08": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-09": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.96
+      },
+      "RDC": {
+        "point": 0.8
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-10": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.875
+      },
+      "RDC": {
+        "point": 0.75
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-12": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-13": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-15": {
+      "runs": 4,
+      "TSC": {
+        "point": 0.25
+      },
+      "PAC_call": {
+        "point": 0.5
+      },
+      "RDC": {
+        "point": 0.25
+      },
+      "FCC": {
+        "point": 0.75
+      }
+    },
+    "REPRO-16": {
+      "runs": 1,
+      "TSC": {
+        "point": null
+      },
+      "PAC_call": {
+        "point": null
+      },
+      "RDC": {
+        "point": null
+      },
+      "FCC": {
+        "point": null
+      }
+    },
+    "REPRO-17": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.7538461538461539
+      },
+      "RDC": {
+        "point": 0.2
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-18": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-19": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.9199999999999999
+      },
+      "RDC": {
+        "point": 0.6
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-20": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6
+      },
+      "PAC_call": {
+        "point": 0.6307692307692307
+      },
+      "RDC": {
+        "point": 0.4
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-21": {
+      "runs": 1,
+      "TSC": {
+        "point": null
+      },
+      "PAC_call": {
+        "point": null
+      },
+      "RDC": {
+        "point": null
+      },
+      "FCC": {
+        "point": null
+      }
+    },
+    "REPRO-22": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.6153846153846154
+      },
+      "RDC": {
+        "point": 0.25
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-23": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 0.2
+      }
+    },
+    "REPRO-24": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.8
+      },
+      "PAC_call": {
+        "point": 0.9
+      },
+      "RDC": {
+        "point": 0.8
+      },
+      "FCC": {
+        "point": 0.8
+      }
+    },
+    "REPRO-25": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.8
+      },
+      "PAC_call": {
+        "point": 0.7333333333333334
+      },
+      "RDC": {
+        "point": 0.8
+      },
+      "FCC": {
+        "point": 0.8
+      }
+    },
+    "REPRO-26": {
+      "runs": 3,
+      "TSC": {
+        "point": 0.6666666666666666
+      },
+      "PAC_call": {
+        "point": 0.6666666666666666
+      },
+      "RDC": {
+        "point": 0.6666666666666666
+      },
+      "FCC": {
+        "point": 0.3333333333333333
+      }
+    },
+    "REPRO-27": {
+      "runs": 4,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 0.8333333333333334
+      },
+      "RDC": {
+        "point": 0.75
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-28": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.6
+      },
+      "PAC_call": {
+        "point": 0.7
+      },
+      "RDC": {
+        "point": 0.6
+      },
+      "FCC": {
+        "point": 0.6
+      }
+    },
+    "REPRO-29": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 0.8
+      }
+    },
+    "REPRO-30": {
+      "runs": 5,
+      "TSC": {
+        "point": 0.8
+      },
+      "PAC_call": {
+        "point": 0.85
+      },
+      "RDC": {
+        "point": 0.6
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-31": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 0.8
+      },
+      "FCC": {
+        "point": 0.6
+      }
+    },
+    "REPRO-32": {
+      "runs": 5,
+      "TSC": {
+        "point": 1.0
+      },
+      "PAC_call": {
+        "point": 1.0
+      },
+      "RDC": {
+        "point": 1.0
+      },
+      "FCC": {
+        "point": 1.0
+      }
+    },
+    "REPRO-11": {
+      "runs": 0,
+      "TSC": {
+        "point": null
+      },
+      "PAC_call": {
+        "point": null
+      },
+      "RDC": {
+        "point": null
+      },
+      "FCC": {
+        "point": null
+      }
+    },
+    "REPRO-14": {
+      "runs": 0,
+      "TSC": {
+        "point": null
+      },
+      "PAC_call": {
+        "point": null
+      },
+      "RDC": {
+        "point": null
+      },
+      "FCC": {
+        "point": null
+      }
+    }
+  },
+  "aggregate": {
+    "TSC": {
+      "point": 0.8636904761904762,
+      "task_units": 28,
+      "bootstrap_95": [
+        0.7869047619047621,
+        0.930952380952381
+      ]
+    },
+    "PAC_call": {
+      "point": 0.85375,
+      "task_units": 28,
+      "bootstrap_95": [
+        0.7980149954212454,
+        0.9066034798534799
+      ]
+    },
+    "RDC": {
+      "point": 0.7285714285714286,
+      "task_units": 28,
+      "bootstrap_95": [
+        0.6315476190476191,
+        0.8166815476190475
+      ]
+    },
+    "FCC": {
+      "point": 0.8672619047619048,
+      "task_units": 28,
+      "bootstrap_95": [
+        0.780952380952381,
+        0.9404761904761906
+      ]
+    }
+  },
+  "coverage": {
+    "record_target": 160
+  }
+}

@@ -1,33 +1,45 @@
 # BEST-Skill
 
-BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://nadc.china-vo.org/data/best/) 的查询，记录查询条件、执行状态和结果来源。本仓库提供查询实现、实验数据和复现材料。
+BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://nadc.china-vo.org/data/best/) 查询，并记录查询条件、执行状态与结果来源。仓库导航见 [docs/README.md](docs/README.md)。
 
-[文档导航](docs/README.md) 汇集实验、图表、开发和归档入口。
+## 下载
 
-## 下载入口
+- [BEST-Skill 技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
+- [deepseek harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-deepseek-v4.1-flash) — 主实验，E1–E6
+- [deepseek harness（mimo-v2.6-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-mimo-v2.6-flash) — E1 / E3 / E4 / E5
+- [deepseek harness（glm-5.3-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-glm-5.3-flash) — E1 / E3 / E4 / E5
+- [pi harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-pi-harness-deepseek-v4.1-flash) — E1 / E3 / E4 / E5
+- [hermes harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-harness-deepseek-v4.1-flash) — E1 / E3 / E4 / E5
 
-- [最新 BEST-Skill 独立技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
-- [复算命令与各批次口径](reproduction/portable/README.md)
+## 复算
 
-## 复算入口
+仓库根目录运行（Python 3.11+，离线）：
 
-以下命令在仓库根目录执行。E2 从当前仓库读取保留原始行尾的冻结文件。
+```bash
+# 主实验 E1–E6（首次需 pip install -r reproduction/releases/deepseek-harness_deepseek-v4.1-flash/requirements.txt）
+python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/recompute.py
 
-```text
-python "reproduction/03_数据_E1-E6/E2/reproduce_e2.py" --verify-only
-python "reproduction/05_溯源台账/复算脚本/verify_e1_paper.py"
-python "reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py"
+# 其余四组 E1 / E3 / E4 / E5
+python reproduction/releases/deepseek-harness_mimo-v2.6-flash/recompute.py
+python reproduction/releases/deepseek-harness_glm-5.3-flash/recompute.py
+python reproduction/releases/pi-harness_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/hermes-harness_deepseek-v4.1-flash/recompute.py
+
+# 五组跨组汇总（需 numpy）
+python reproduction/portable/recompute_five_groups.py
 ```
 
-第一条核对 E2 的冻结输入、代码和 21 个 Gold 用例。第二条复算论文 E1 重判的均值 0.9530。第三条复算原论文 E5 的 B3 与 B2b 比较。[完整复算说明](reproduction/README.md)
+各批次口径见 [reproduction/README.md](reproduction/README.md)。
 
-## 仓库内容
+## 目录
 
 | 目录 | 内容 |
 | --- | --- |
-| [skill](skill/) | BEST 查询、结果解析及 TAP/ADQL 网关源码与测试 |
-| [实验图表](reproduction/02_图表/) | 最新 SVG 与出图数据 |
-| [实验数据](reproduction/03_数据_E1-E6/) | E1–E6 原批和补测的材料、判分与执行记录 |
-| [数字溯源](reproduction/05_溯源台账/) | 论文数值对应的结果和复算脚本 |
+| [skill](skill/) | BEST 客户端、解析器、TAP/ADQL 网关与单测 |
+| [reproduction/figures](reproduction/figures/) | 论文 SVG 矢量图（`figure-1.svg`–`figure-6.svg`、`figure-B1.svg`） |
+| [reproduction/releases](reproduction/releases/) | 与 5 个实验 Release 一一对应的复算目录（Apache-2.0） |
+| [reproduction/portable](reproduction/portable/) | 五组跨组对比汇总脚本与输入数据 |
+| [reproduction/expert-review](reproduction/expert-review/) | E3 专家盲评工作簿与说明 |
+| [docs](docs/) | 项目文档与目录索引 |
 
-BEST 提供静态测光目录。逐历元时序、周期恢复和变星识别属于本论文所用访问接口的数据边界之外。复用代码时请保留 [MIT 许可](LICENSE)。引用数据或结果请同时注明所用 Release 与批次。
+BEST 为静态测光目录，不含逐历元时序与变星周期分析。主体代码采用 [MIT 许可](LICENSE)，`reproduction/releases/` 下实验复算包采用 Apache-2.0 许可。

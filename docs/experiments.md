@@ -1,14 +1,23 @@
-# E1–E6 实验资料
+# E1–E6 与五组实验资料
 
-[文档导航](README.md) · [复现命令与统计口径](../reproduction/README.md) · [最新版复现包](paper.md#release)
+[文档导航](README.md) · [复现说明](../reproduction/README.md) · [Releases](paper.md#releases)
 
-| 实验 | 结果与复核入口 | 资料目录 |
+## 主实验（E1–E6）
+
+位于 [reproduction/releases/deepseek-harness_deepseek-v4.1-flash/](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/)：
+
+| 实验 | 数据与脚本目录 | 索引 |
 | --- | --- | --- |
-| E1 | [论文重判报告](../reproduction/03_数据_E1-E6/E1/v55_重新判分_20261020/判分报告-三箱-2026-10-20.md) | [E1 文档](catalog/e1.md) · [完整数据目录](../reproduction/03_数据_E1-E6/E1/) |
-| E2 | [冻结输入、Gold 和离线回放](../reproduction/03_数据_E1-E6/E2/README.md) | [E2 文档](catalog/e2.md) · [完整数据目录](../reproduction/03_数据_E1-E6/E2/) |
-| E3 | [整理后的结果表与数据](../reproduction/03_数据_E1-E6/E3/01_当前结果/) · [原批报告](../reproduction/03_数据_E1-E6/E3/05_原始实验归档/FINAL-REPORT.md) · [匿名审核材料](../reproduction/03_数据_E1-E6/E3/04_匿名审核材料/) | [E3 文档](catalog/e3.md) · [完整数据目录](../reproduction/03_数据_E1-E6/E3/) |
-| E4 | [论文采用的 r2 三轮资料](../reproduction/03_数据_E1-E6/E4/v70_E4重跑_20261023/README_本目录说明.md) · [夹具与反证](../reproduction/03_数据_E1-E6/E4/03-注入器夹具与反证/fixtures/README.md) | [E4 文档](catalog/e4.md) · [完整数据目录](../reproduction/03_数据_E1-E6/E4/) |
-| E5 | [历史结果与论文引用口径](../reproduction/03_数据_E1-E6/E5/论文可用成果.md) · [公开评分表](../reproduction/03_数据_E1-E6/E5/scores.csv) · [复算及公开材料说明](../reproduction/03_数据_E1-E6/E5/README.md) | [E5 文档](catalog/e5.md) · [完整数据目录](../reproduction/03_数据_E1-E6/E5/) |
-| E6 | [R3 补测报告](../reproduction/03_数据_E1-E6/E6/01_当前R3补测/REPORT.md) | [E6 文档](catalog/e6.md) · [完整数据目录](../reproduction/03_数据_E1-E6/E6/) |
+| E1 | [E1/grades.json](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E1/grades.json) | [e1.md](catalog/e1.md) |
+| E2 | [E2/](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E2/)（冻结输入、代码与 63 次回放） | [e2.md](catalog/e2.md) |
+| E3 | [E3/counts.csv](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E3/counts.csv) · [专家盲评](../reproduction/expert-review/README.md) | [e3.md](catalog/e3.md) |
+| E4 | [E4/grades.json](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E4/grades.json) | [e4.md](catalog/e4.md) |
+| E5 | [E5/scores.csv](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E5/scores.csv) | [e5.md](catalog/e5.md) |
+| E6 | [E6/](../reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E6/)（`original_batch` 与 `r3_recheck`） | [e6.md](catalog/e6.md) |
 
-原论文结果与四组补充实验采用各自的评分表。跨批比较时按 [复现说明](../reproduction/README.md) 核对题集、轮次、适用分母和评分规则。补充实验覆盖 E1、E3、E4、E5。完整数据目录提供评分表、配置、夹具和执行记录等配套材料。
+## 其余四组对照（E1 / E3 / E4 / E5）
+
+- [deepseek-harness_mimo-v2.6-flash](../reproduction/releases/deepseek-harness_mimo-v2.6-flash/)
+- [deepseek-harness_glm-5.3-flash](../reproduction/releases/deepseek-harness_glm-5.3-flash/)
+- [pi-harness_deepseek-v4.1-flash](../reproduction/releases/pi-harness_deepseek-v4.1-flash/)
+- [hermes-harness_deepseek-v4.1-flash](../reproduction/releases/hermes-harness_deepseek-v4.1-flash/)

@@ -1,0 +1,218 @@
+{
+  "ordinary": [
+    {
+      "id": "RB-01",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-02",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-03",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-04",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-05",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-06",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-07",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-08",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-09",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-10",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-11",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-12",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-13",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-14",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-15",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-16",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-17",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-18",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-19",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-20",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-21",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-35",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-36",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-37",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-39",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-40",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-41",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-42",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-43",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-44",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-45",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-46",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-48",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-49",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-50",
+      "disposal_ok": true
+    }
+  ],
+  "compound": [
+    {
+      "id": "RB-C01",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C02",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C03",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C04",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C05",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C06",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C07",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-C08",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-C09",
+      "disposal_ok": false
+    },
+    {
+      "id": "RB-C10",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C11",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C12",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C13",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C14",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C15",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C16",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C17",
+      "disposal_ok": true
+    },
+    {
+      "id": "RB-C18",
+      "disposal_ok": true
+    }
+  ]
+}

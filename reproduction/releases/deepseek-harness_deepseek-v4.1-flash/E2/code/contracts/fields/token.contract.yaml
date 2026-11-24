@@ -1,0 +1,17 @@
+skill: astro-best
+kind: field
+direction: input  # input | output
+schema: BestQuery
+field: token
+contract_file: token.contract.yaml
+type: string
+unit: "credential"
+required: true
+source: master-plan
+# 未接线声明见 input.contract.yaml 的 token 字段注释 (单一事实源, 不在此复述):
+# BEST 查询链上无 token 消费方, 字段仅为物化产物保留。
+
+# ---
+# generated_by: scripts/refactor/materialize_contracts.py
+# spec: scripts/refactor/spec/skills-spec.yaml (Master Plan SSOT)
+# note: 确定性生成, 绝不覆盖已有文件; 删除不影响并行抢救资产。

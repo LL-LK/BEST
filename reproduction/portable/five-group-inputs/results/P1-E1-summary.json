@@ -1,0 +1,64 @@
+{
+  "rounds": {
+    "1": {
+      "weighted": 0.7880952380952381,
+      "dims": {
+        "toolset": 0.7619047619047619,
+        "param": 0.7857142857142857,
+        "convert": 0.6666666666666666,
+        "redundant": 0.8452380952380952,
+        "clarify": 0.7857142857142857,
+        "reject": 1.0
+      },
+      "dim_n": {
+        "toolset": 28,
+        "param": 14,
+        "convert": 9,
+        "redundant": 28,
+        "clarify": 7,
+        "reject": 6
+      },
+      "red_line_tasks": []
+    },
+    "2": {
+      "weighted": 0.8442261904761905,
+      "dims": {
+        "toolset": 0.8916666666666666,
+        "param": 0.7892857142857144,
+        "convert": 0.6666666666666666,
+        "redundant": 0.9488095238095238,
+        "clarify": 0.9285714285714286,
+        "reject": 0.9166666666666666
+      },
+      "dim_n": {
+        "toolset": 28,
+        "param": 14,
+        "convert": 9,
+        "redundant": 28,
+        "clarify": 7,
+        "reject": 6
+      },
+      "red_line_tasks": []
+    },
+    "3": {
+      "weighted": 0.840952380952381,
+      "dims": {
+        "toolset": 0.8452380952380952,
+        "param": 0.8533333333333334,
+        "convert": 0.7,
+        "redundant": 0.9047619047619048,
+        "clarify": 0.7857142857142857,
+        "reject": 1.0
+      },
+      "dim_n": {
+        "toolset": 28,
+        "param": 15,
+        "convert": 10,
+        "redundant": 28,
+        "clarify": 7,
+        "reject": 6
+      },
+      "red_line_tasks": []
+    }
+  }
+}

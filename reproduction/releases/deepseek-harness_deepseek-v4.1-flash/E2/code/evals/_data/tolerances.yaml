@@ -1,0 +1,93 @@
+# evals/_data/tolerances.yaml — 字段容差表 (E2/E5/E6 共用的唯一共享件)
+#
+# 定位: 纯数据字典 (L1 配置层) — 改数值不改代码 (E2 §7 判定分层纪律)。
+# 权威来源: docs/eval-E2-groundtruth.md §6 M2 容差基准表。
+#
+# 用法: 数值字段比对 |a - b| <= atol + rtol * |b|; 字符串/ID 走 exact 档
+# (strip + 去零填充 + 大小写归一后精确相等, 归一本文件外由各实验的
+# normalizers 承担 — 容差与归一化是两件事, 不混在一份配置里)。
+
+fields:
+  ra_deg:      {atol: 1.0e-9, rtol: 0.0, kind: numeric}
+  dec_deg:     {atol: 1.0e-9, rtol: 0.0, kind: numeric}
+  radius_arcsec: {atol: 1.0e-6, rtol: 0.0, kind: numeric}
+  magnitude:   {atol: 1.0e-6, rtol: 0.0, kind: numeric}
+  snr:         {atol: 1.0e-9, rtol: 0.0, kind: numeric, exact_integer: true}
+  flags:       {atol: 1.0e-9, rtol: 0.0, kind: numeric, exact_integer: true}
+  count:       {atol: 1.0e-9, rtol: 0.0, kind: numeric, exact_integer: true}
+  source_id:   {kind: string}
+  catalog:     {kind: string}
+
+# 精度下限 (E2 M3c): 用 decimal.Decimal 统计有效位数; 降精度判错, 假精度记 warn
+#
+# 下限的定法 (2026-10-06 依站点实抓数据下修, 用户裁定): 下限必须**可被它自己
+# 生成的语料满足**。原值 ra_deg/dec_deg=9 / magnitude=6 做不到这一点 ——
+# `batch_proximity.json` 里 ps1_dec 记录的取值本身只有 8 位有效数字, 却同时
+# 要求 9 位; 一份对自己记录的数据要求比它实际含有的位数更多的金标准, 永远
+# 不可能通过。这不是被测对象的问题, 是判据自相矛盾。
+#
+# 新值取「实抓语料里该族达到的下限」, 且都仍在科学上有意义:
+#   - 坐标 3 位 = 1e-3 deg = 3.6 角秒。**这已是本仓语料的真实地板**, 再高就
+#     不可能被满足: 实测 `live_ps1_ra359.5_dec0.0_r1800.0as` (赤经 0/360 wrap
+#     边界) 的 1000 行里 ps1_dec 有 1 行只有 3 位小数、ps1_ra 有 1 行 3 位 +
+#     3 行 4 位; 而 SUT 与站点原始文本逐字节一致 (1000/1000), 不存在任何
+#     截位层。下限必须可被它自己生成的语料满足 —— 这是本条的根本约束。
+#     **代价要说清**: 3.6 角秒粗于常规视宁度 (约 1"), 所以这条判据现在只能拦住
+#     「把坐标截成个位数」这类**粗暴**降精度, 拦不住 1 位到 3 位之间的丢位。
+#     更强的口径是「逐格比金标准自己记录的位数」(下界恒可达, 且真能抓住 SUT
+#     截位), 但那要改 m3_units 的入参与判据, 属判据重构, 未在本轮做。
+#   - 星等 3 位 = 0.001 mag 量级, 能抓住 "18.2 冒充 18.200" 这类补零/截位。
+# snr 未动: 实测语料里 snr 无精度失分, 无依据就不改。
+precision_min_digits:
+  ra_deg: 3
+  dec_deg: 3
+  magnitude: 3
+  snr: 4
+
+# 单位表 (E2 M3a): 输出/契约声明的 unit 必须逐字段一致
+units:
+  ra_deg: deg
+  dec_deg: deg
+  radius_arcsec: arcsec
+  magnitude: mag
+  snr: count
+
+# 量纲探针区间 (E2 M3b): 防"声明对了但数值错了" (坐标当 arcsec 输出会越界)
+dimension_probes:
+  ra_deg: {min: 0.0, max: 360.0, max_exclusive: true}
+  dec_deg: {min: -90.0, max: 90.0}
+  radius_arcsec: {min: 0.0, max: 18000.0, non_negative: true}
+  magnitude: {min: -10.0, max: 40.0, note: "物理合理区间, 越界即单位/量纲错"}
+
+# ── 量纲探针的**真实列名**映射 (2026-10-07, U-6/D7 的观测面补齐) ──────────────
+#
+# 上面 `dimension_probes` 的键是**语义名** (ra_deg / magnitude), 而回包行里的列名
+# 是**逐表真实名** (ps1_ra / gaia_dr3_18_ra / splus_dr4_u_pstotal …)。两者交集恒空
+# ⇒ `probe_checked` 恒 0 ⇒ `probe_rate` 恒 1.0 ⇒ M3 一直在对**零个格子**报
+# "量纲 100% 合格"。本表把语义名接到真实列上, M3 据此算真实分母。
+#
+# **表里每一项都来自实测**: 扫仓内 85 份快照 CSV 的表头 (1046 个不同列名) 得出,
+# 不是凭印象写的。改表即改判据, 所以每条都附了为什么这样收/放。
+#
+# 三种匹配形态:
+#   exact    —— 逐字等于的裸列名 (uss_dr1 的响应就是裸名)
+#   suffix   —— 以此结尾 (ps1_ra / gaia_dr3_18_ra 都命中 _ra)
+#   exclude  —— **形状对但语义不对**, 必须逐条排除 (见下 inputobjs 那两条)
+#   predicate—— 交给仓内已有判据, 不另写一份 (见 magnitude)
+dimension_probe_columns:
+  ra_deg:
+    exact: [ra, raj2000, alpha]        # 裸名形态: 与 models._ASTROMETRIC_COLUMNS 同款三拼写
+    suffix: ["_ra"]                     # 带表前缀形态: ps1_ra / gaia_dr3_18_ra / landolt_ra
+    exclude: [inputobjs_input_ra]       # ⚠ 输入坐标**不是源的赤经**: 它是锥心, 恒在区间内,
+                                        #   放进来会让探针只检查一个恒真的量, 形同虚设
+  dec_deg:
+    exact: [dec, dej2000, delta]
+    suffix: ["_dec"]
+    exclude: [inputobjs_input_dec]      # ⚠ 同上: 锥心的赤纬, 不是源的
+  radius_arcsec:
+    exact: [inputobjs_dist_arcsec]      # 全仓唯一的角距列 (实测: 只有这一个形态)
+  magnitude:
+    predicate: magnitude_column         # 复用 src.serialization.is_magnitude_column:
+                                        # 它已排除误差列 (`*_err`), 且由 protocol 的
+                                        # CATALOG_MAG_COLUMNS 现场推导后缀集, 是唯一真源。
+                                        # 这里**不另抄一份** endswith 清单 —— 抄一份必然漂移。

@@ -1,0 +1,101 @@
+{
+  "primary": {
+    "delta": 0.07142857142857142,
+    "task_cluster_bootstrap_95_ci": [
+      0.0,
+      0.1488095238095238
+    ],
+    "p_exact_paired_sign_flip": 0.08848190307617188,
+    "left_rate": 0.5654761904761905,
+    "right_rate": 0.494047619047619
+  },
+  "ablation_holm_family": {
+    "A1": {
+      "delta": 0.03571428571428571,
+      "task_cluster_bootstrap_95_ci": [
+        -0.041666666666666664,
+        0.1130952380952381
+      ],
+      "p_exact_paired_sign_flip": 0.46097564697265625,
+      "holm": {
+        "p_raw": 0.46097564697265625,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A2": {
+      "delta": 0.023809523809523808,
+      "task_cluster_bootstrap_95_ci": [
+        -0.047619047619047616,
+        0.09523809523809523
+      ],
+      "p_exact_paired_sign_flip": 0.6420612335205078,
+      "holm": {
+        "p_raw": 0.6420612335205078,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A3": {
+      "delta": 0.029761904761904764,
+      "task_cluster_bootstrap_95_ci": [
+        -0.047619047619047616,
+        0.10714285714285715
+      ],
+      "p_exact_paired_sign_flip": 0.5601882934570312,
+      "holm": {
+        "p_raw": 0.5601882934570312,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A4": {
+      "delta": 0.011904761904761904,
+      "task_cluster_bootstrap_95_ci": [
+        -0.05952380952380953,
+        0.07738095238095238
+      ],
+      "p_exact_paired_sign_flip": 0.8692383766174316,
+      "holm": {
+        "p_raw": 0.8692383766174316,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A5": {
+      "delta": -0.017857142857142856,
+      "task_cluster_bootstrap_95_ci": [
+        -0.08928571428571429,
+        0.047619047619047616
+      ],
+      "p_exact_paired_sign_flip": 0.7418651580810547,
+      "holm": {
+        "p_raw": 0.7418651580810547,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A6": {
+      "delta": 0.03571428571428571,
+      "task_cluster_bootstrap_95_ci": [
+        -0.03571428571428571,
+        0.10714285714285715
+      ],
+      "p_exact_paired_sign_flip": 0.426422119140625,
+      "holm": {
+        "p_raw": 0.426422119140625,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    }
+  },
+  "length_control_A2_minus_sham": {
+    "delta": 0.0,
+    "task_cluster_bootstrap_95_ci": [
+      -0.047619047619047616,
+      0.047619047619047616
+    ],
+    "p_exact_paired_sign_flip": 1.0
+  },
+  "human_review": "pending post-run"
+}

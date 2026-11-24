@@ -1,0 +1,85 @@
+# oauth.contract.yaml — NADC 通行证 OAuth2.0 身份契约 (Phase 6)
+#
+# 协议权威来源: https://oauth.china-vo.org/static/guide/passport.html
+# (NADC 用户通行证第三方登录接口文档, 2025-01-13; 仅 Authorization Code 模式)
+
+skill: astro-best
+kind: oauth
+protocol: oauth2.0-authorization-code
+base_url: "https://oauth.china-vo.org"
+
+endpoints:
+  authorize:
+    method: GET
+    path: /oauth/authorize
+    params:
+      response_type: {value: code, const: true}
+      client_id: {source: env, env: NADC_OAUTH_CLIENT_ID}
+      redirect_uri: {source: env, env: NADC_OAUTH_REDIRECT_URI}
+      scope: {value: profile, const: true}
+      state: {type: string, required: false, note: "随机串, 防 CSRF; 缺省生成"}
+  token:
+    method: POST
+    path: /oauth/token
+    content_type: application/x-www-form-urlencoded
+    params:
+      grant_type: {value: authorization_code, const: true}
+      code: {type: string, source: callback}
+      redirect_uri: {source: env, env: NADC_OAUTH_REDIRECT_URI}
+      client_id: {source: env, env: NADC_OAUTH_CLIENT_ID}
+      client_secret: {source: env, env: NADC_OAUTH_CLIENT_SECRET}
+      scope: {value: profile, const: true}
+    response:
+      access_token: {type: string}
+      expires_in: {type: int, unit: s, typical: 3600}
+      note: "官方无 refresh_token; 过期重走授权流"
+  profile:
+    method: GET
+    path: /api/profile
+    auth: {header: Authorization, scheme: "Bearer {token}", note: "Bearer 与 token 间必须有空格"}
+    response:
+      code: {type: int, expected: 200}
+      data.user:
+        umtId: {type: string, note: "NADC 平台内用户唯一标识; 可存储用于下次登录辨识"}
+        unionId: {type: string, optional: true}
+        ldap_id: {type: string, optional: true}
+        name: {type: string}
+        email: {type: string}
+        phone: {type: string}
+        confirmed: {type: bool, note: "邮箱是否验证"}
+        locked: {type: bool}
+        avatar_url: {type: string}
+  logout:
+    method: GET
+    path: /oauth/logout
+    params:
+      WebServerURL: {type: string, required: false, note: "登出后重定向地址"}
+
+credentials:
+  client_id: {env: NADC_OAUTH_CLIENT_ID, note: "需 NADC 管理员审批后一次性分配"}
+  client_secret: {env: NADC_OAUTH_CLIENT_SECRET, note: "只读 env; 永不落盘/日志/代码"}
+  token_cache: {path: "~/.astro-best/nadc_token.json", mode: "0600",
+                fields: [access_token, token_type, expires_in, obtained_at, expires_at]}
+
+token_lifecycle:
+  expires_in_typical: 3600
+  refresh: none  # 官方不提供 refresh_token; 过期重走授权流
+  storage: "~/.astro-best/nadc_token.json (0600); is_expired(skew=60s) 提前重取"
+  state_guard: "回调校验 state 防 CSRF; 本地回环 127.0.0.1 临时端口"
+
+interaction_modes:
+  local_loopback:
+    flow: "起 127.0.0.1 临时端口 -> 打开浏览器授权 -> 回调收 code -> 换 token -> 取 profile"
+    fallback: "端口占用/超时/无浏览器 -> run_manual_paste_flow"
+  manual_paste:
+    flow: "调用方提供回调 URL 或裸 code -> 换 token -> 取 profile"
+
+scope_boundary:
+  identity_only: true
+  note: "本层只做 NADC 身份; BEST 数据查询 form 登录保持双轨不变 (真实凭据面: CLI --auth-user + env ASTRO_BEST_PASSWORD; 历史 env BEST_API_USER/PASS 无消费方已退役) (主流定位: 数据源主理, 不委派自身数据面)"
+  best_api_bearer_token: {status: unverified, verify: "V-6 实网验证 BEST REST 是否接受 NADC Bearer token"}
+
+failure_modes:
+  - {code: 409, meaning: "AgentID 或本地分身已有另一条绑定", action: "停止并让用户核对身份, 不创建新 guest 绕过"}
+  - {code: 401, meaning: "JWT 过期或 tloc_* 无效", action: "刷新 JWT; 不静默降级成另一个主体"}
+  - {error: state_mismatch, action: "可能的 CSRF, 中止"}

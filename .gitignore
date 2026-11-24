@@ -1,6 +1,3 @@
 __pycache__/
 *.py[cod]
-/reproduction/01_稿件/
-/reproduction/LaTeX/
-/reproduction/02_图表/figures/
 /skill/docs/diagrams/*.drawio

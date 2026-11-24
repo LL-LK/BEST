@@ -1,0 +1,20 @@
+{
+  "allow": [
+    "resolve_name",
+    "list_catalogs",
+    "describe_catalog",
+    "cone_search",
+    "crossmatch_batch",
+    "count",
+    "fetch_page"
+  ],
+  "characters": 1678,
+  "guidance_blocks": [
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5"
+  ],
+  "token_exact_length_control": false
+}

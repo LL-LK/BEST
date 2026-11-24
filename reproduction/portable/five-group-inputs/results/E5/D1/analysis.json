@@ -1,0 +1,101 @@
+{
+  "primary": {
+    "delta": 0.08333333333333333,
+    "task_cluster_bootstrap_95_ci": [
+      0.011904761904761904,
+      0.16071428571428573
+    ],
+    "p_exact_paired_sign_flip": 0.05336427688598633,
+    "left_rate": 0.5833333333333333,
+    "right_rate": 0.5
+  },
+  "ablation_holm_family": {
+    "A1": {
+      "delta": 0.06547619047619048,
+      "task_cluster_bootstrap_95_ci": [
+        0.017857142857142856,
+        0.1130952380952381
+      ],
+      "p_exact_paired_sign_flip": 0.02569580078125,
+      "holm": {
+        "p_raw": 0.02569580078125,
+        "p_holm": 0.1541748046875,
+        "reject_0_05": false
+      }
+    },
+    "A2": {
+      "delta": 0.017857142857142856,
+      "task_cluster_bootstrap_95_ci": [
+        -0.047619047619047616,
+        0.08928571428571429
+      ],
+      "p_exact_paired_sign_flip": 0.7427978515625,
+      "holm": {
+        "p_raw": 0.7427978515625,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A3": {
+      "delta": 0.03571428571428571,
+      "task_cluster_bootstrap_95_ci": [
+        -0.029761904761904764,
+        0.10119047619047618
+      ],
+      "p_exact_paired_sign_flip": 0.367919921875,
+      "holm": {
+        "p_raw": 0.367919921875,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A4": {
+      "delta": 0.011904761904761904,
+      "task_cluster_bootstrap_95_ci": [
+        -0.041666666666666664,
+        0.07142857142857142
+      ],
+      "p_exact_paired_sign_flip": 0.841552734375,
+      "holm": {
+        "p_raw": 0.841552734375,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A5": {
+      "delta": -0.011904761904761904,
+      "task_cluster_bootstrap_95_ci": [
+        -0.053571428571428575,
+        0.029761904761904764
+      ],
+      "p_exact_paired_sign_flip": 0.794921875,
+      "holm": {
+        "p_raw": 0.794921875,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    },
+    "A6": {
+      "delta": 0.03571428571428571,
+      "task_cluster_bootstrap_95_ci": [
+        -0.017857142857142856,
+        0.09523809523809523
+      ],
+      "p_exact_paired_sign_flip": 0.3319091796875,
+      "holm": {
+        "p_raw": 0.3319091796875,
+        "p_holm": 1.0,
+        "reject_0_05": false
+      }
+    }
+  },
+  "length_control_A2_minus_sham": {
+    "delta": 0.0,
+    "task_cluster_bootstrap_95_ci": [
+      -0.06547619047619048,
+      0.06547619047619048
+    ],
+    "p_exact_paired_sign_flip": 1.0
+  },
+  "human_review": "not part of the current workflow"
+}

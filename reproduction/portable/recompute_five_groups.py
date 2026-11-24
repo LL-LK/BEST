@@ -103,7 +103,7 @@ def e1(root, archive):
     grades = {g: defaultdict(dict) for g in GROUPS}
     histories = {}
     for rep in (1, 2, 3):
-        histories[str(rep)] = read_json(archive / 'E1/v55_重新判分_20261020' / f'E1_sb{rep}.json')
+        histories[str(rep)] = read_json(archive / 'E1/v55_regrade_20261020' / f'E1_sb{rep}.json')
         for grade in histories[str(rep)]['task_grades']:
             grades['D0'][grade['task_id']][rep] = grade['dims']
     summaries = {'D0': histories}
@@ -181,7 +181,7 @@ def e3(root):
 
 
 def e4(root):
-    old = read_json(root/'archive-regression/E4/_复现/out/grade_r2.json')
+    old = read_json(root/'archive-regression/E4/repro/out/grade_r2.json')
     result = {}
     for category,key,roll,n in [('ordinary','P','main',35),('compound','C','compound',18)]:
         grades, summaries = {g: defaultdict(dict) for g in GROUPS}, {g: {} for g in GROUPS}

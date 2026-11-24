@@ -1,32 +1,45 @@
-# BEST-Skill 复现说明
+# 实验复现说明
 
-这里列出 E1–E6 实验的复现包下载与复算入口，以及四组后续实验的评分口径。论文中的数据来源以对应的历史批次为准。下列代码块从仓库根目录运行，另有说明的命令除外。
+[仓库首页](../README.md) · [文档导航](../docs/README.md) · [E1–E6 索引](../docs/experiments.md)
 
-[仓库文档导航](../docs/README.md) · [E1–E6 资料索引](../docs/experiments.md)
+## 目录结构
 
-[便携复现](portable/README.md) 提供 E1–E6 和 v15 交叉匹配的下载与复算入口，以及五组附录的复算说明。
+| 目录 | 内容 |
+| --- | --- |
+| [figures](figures/) | 论文 SVG 矢量图（`figure-1.svg`–`figure-6.svg`、`figure-B1.svg`） |
+| [releases](releases/) | 按 5 个实验 Release 组织的离线复算目录与脚本（Apache-2.0） |
+| [portable](portable/) | 五组跨组对比统计与附录 B 复算脚本（`recompute_five_groups.py`、`build_appendix.py`） |
+| [expert-review](expert-review/) | E3 专家盲评工作簿（DOCX/XLSX）与操作说明 |
 
-## 核验与统计复算
+## 复算命令
 
-| 项目 | 命令或入口 | 输出 |
-| --- | --- | --- |
-| E1 论文重判 | `python "reproduction/05_溯源台账/复算脚本/verify_e1_paper.py"` | 10 月 20 日重判。28 道题各三轮，三轮加权分和适用分母，均值 0.9530 |
-| E2 冻结核验 | `python "reproduction/03_数据_E1-E6/E2/reproduce_e2.py" --verify-only` | 核对冻结输入与代码，复核 21 个 Gold 用例 |
-| E5 历史 B3−B2b | `python "reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py"` | 同题配对主比较和单块移除的 Holm 校正 |
-| E5 各配置与 A5 | `python "reproduction/05_溯源台账/复算脚本/verify_e5_independent.py"` | 各臂通过率及 A5、B3 的结果 |
+仓库根目录运行（无需模型 API 或外网）：
 
-E2 的 [环境与离线回放说明](03_数据_E1-E6/E2/README.md) 区分了输入核验和 63 次离线重放。当前仓库按冻结清单保留逐文件字节。原论文 ZIP 中保留了早期打包版本，其中部分 E2 文件的行尾与封存哈希有差异。该实验请使用当前仓库目录中的材料。
+```bash
+# 仅主实验 E2 回放与 E6 统计需要依赖
+python -m pip install -r reproduction/releases/deepseek-harness_deepseek-v4.1-flash/requirements.txt
 
-## 论文原批的口径
+# 1. 原主实验（E1–E6）
+python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/recompute.py
 
-- **E1。** 论文取 [2026-10-20 重新判分](03_数据_E1-E6/E1/v55_重新判分_20261020/)。
-- **E3。** 原稿 SFA 是关键科学断言命中率，其差值区间采用题级配对自助法。双侧精确 McNemar 检验对应每题三轮多数严格通过。原稿与后续统一盲评有各自的评分记录。 [历史 E3 报告](03_数据_E1-E6/E3/05_原始实验归档/FINAL-REPORT.md)
-- **E4。** 论文普通题为 r2 的三轮，分别是 34/35、35/35、34/35。协议故障回放、普通请求和复合题各有分母。 [r2 资料](03_数据_E1-E6/E4/v70_E4重跑_20261023/)
-- **E5。** 正文的五种基线和六个消融共 11 种配置、1,848 次。公开评分账本含另一个 `sham` 长度对照，共 12 种配置、2,016 格。原论文历史批次的 B3、B2b 分别通过 95/168、83/168，配对差 +7.14 个百分点，精确双侧 p=0.0885。该历史批次的六项单块比较 Holm p 均为 1.0。 [历史 E5 结果](03_数据_E1-E6/E5/论文可用成果.md)
-- **E6。** [R3 补测](03_数据_E1-E6/E6/01_当前R3补测/) 为论文主结果；`02_原批次结果与原始归档/R3-consistency.json` 保留原批汇总数据以支持便携脚本跨批复算。
+# 2. 四个对照实验（每组 2,475 条评分，覆盖 E1 / E3 / E4 / E5）
+python reproduction/releases/deepseek-harness_mimo-v2.6-flash/recompute.py
+python reproduction/releases/deepseek-harness_glm-5.3-flash/recompute.py
+python reproduction/releases/pi-harness_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/hermes-harness_deepseek-v4.1-flash/recompute.py
 
-## 四组补充实验
+# 3. 仅验证 E2 冻结输入、代码哈希与 21 个 Gold 用例
+python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E2/reproduce_e2.py --verify-only
 
-四包分别收录 Pi、Hermes、DSH GLM 5.3 Flash 和 DSH MiMo 2.6 Flash 的记录，每组共 2,475 个评分单元。E3 使用 GPT-6 Luna 按同一规则自动盲评，每组有 192 份离线答卷和 24 份在线题答卷。在线题使用同题同轮的真实查询快照。
+# 4. 五组跨组汇总与附录 B
+python reproduction/portable/recompute_five_groups.py
+```
 
-持有对应实验归档的读者可在解压目录运行 `python recompute.py`（Python 3.11 或更新版本）。脚本从评分记录计算 E1、E3、E4 主指标、E5 各臂结果及 B3−B2b 检验。E5 独立重做判分需要相应授权环境和 Gold。补充实验结果见包内评分表。
+## 实验口径
+
+- **E1**：28 题 × 3 轮重判，主实验加权均分 `0.9530`。
+- **E2**：21 个场景 × 3 轮 = 63 次离线冻结回放；`E2/reproduce_e2.py` 校验全部冻结输入、代码与轨迹哈希。
+- **E3**：原批与五组统一自动盲评各自保留评分计数；专家盲评工作簿见 [expert-review/](expert-review/)。
+- **E4**：普通题 105 项与复合故障题 54 项分列计分（主实验普通题 `103/105`）。
+- **E5**：56 题 × 12 配置 × 3 轮 = 2,016 格，按任务配对做 B3 与 B2b 精确检验（主实验 B3 `95/168` vs B2b `83/168`，Δ = `+7.14 pp`，p = `0.0885`）。
+- **E6**：原批与 R3 补测重复性由 `deepseek-harness_deepseek-v4.1-flash/E6/statistics_e6.py` 复算，仅在主实验组开展。

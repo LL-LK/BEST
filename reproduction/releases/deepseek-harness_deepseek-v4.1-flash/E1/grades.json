@@ -1,0 +1,1094 @@
+[
+  {
+    "pair_id": "E1/NL2T-01/D0/r1",
+    "task": "NL2T-01",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-02/D0/r1",
+    "task": "NL2T-02",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-03/D0/r1",
+    "task": "NL2T-03",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-04/D0/r1",
+    "task": "NL2T-04",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-05/D0/r1",
+    "task": "NL2T-05",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 0.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-06/D0/r1",
+    "task": "NL2T-06",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-07/D0/r1",
+    "task": "NL2T-07",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-08/D0/r1",
+    "task": "NL2T-08",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-09/D0/r1",
+    "task": "NL2T-09",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-10/D0/r1",
+    "task": "NL2T-10",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-11/D0/r1",
+    "task": "NL2T-11",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-12/D0/r1",
+    "task": "NL2T-12",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-13/D0/r1",
+    "task": "NL2T-13",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-14/D0/r1",
+    "task": "NL2T-14",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-15/D0/r1",
+    "task": "NL2T-15",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-16/D0/r1",
+    "task": "NL2T-16",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-17/D0/r1",
+    "task": "NL2T-17",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-18/D0/r1",
+    "task": "NL2T-18",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-19/D0/r1",
+    "task": "NL2T-19",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-20/D0/r1",
+    "task": "NL2T-20",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-21/D0/r1",
+    "task": "NL2T-21",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-22/D0/r1",
+    "task": "NL2T-22",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-23/D0/r1",
+    "task": "NL2T-23",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-24/D0/r1",
+    "task": "NL2T-24",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-25/D0/r1",
+    "task": "NL2T-25",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-26/D0/r1",
+    "task": "NL2T-26",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-27/D0/r1",
+    "task": "NL2T-27",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.5
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-28/D0/r1",
+    "task": "NL2T-28",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-01/D0/r2",
+    "task": "NL2T-01",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-02/D0/r2",
+    "task": "NL2T-02",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-03/D0/r2",
+    "task": "NL2T-03",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-04/D0/r2",
+    "task": "NL2T-04",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-05/D0/r2",
+    "task": "NL2T-05",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-06/D0/r2",
+    "task": "NL2T-06",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-07/D0/r2",
+    "task": "NL2T-07",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-08/D0/r2",
+    "task": "NL2T-08",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-09/D0/r2",
+    "task": "NL2T-09",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-10/D0/r2",
+    "task": "NL2T-10",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-11/D0/r2",
+    "task": "NL2T-11",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-12/D0/r2",
+    "task": "NL2T-12",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-13/D0/r2",
+    "task": "NL2T-13",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-14/D0/r2",
+    "task": "NL2T-14",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-15/D0/r2",
+    "task": "NL2T-15",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-16/D0/r2",
+    "task": "NL2T-16",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-17/D0/r2",
+    "task": "NL2T-17",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-18/D0/r2",
+    "task": "NL2T-18",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-19/D0/r2",
+    "task": "NL2T-19",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-20/D0/r2",
+    "task": "NL2T-20",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-21/D0/r2",
+    "task": "NL2T-21",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-22/D0/r2",
+    "task": "NL2T-22",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 0.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-23/D0/r2",
+    "task": "NL2T-23",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-24/D0/r2",
+    "task": "NL2T-24",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-25/D0/r2",
+    "task": "NL2T-25",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-26/D0/r2",
+    "task": "NL2T-26",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-27/D0/r2",
+    "task": "NL2T-27",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-28/D0/r2",
+    "task": "NL2T-28",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-01/D0/r3",
+    "task": "NL2T-01",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-02/D0/r3",
+    "task": "NL2T-02",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-03/D0/r3",
+    "task": "NL2T-03",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-04/D0/r3",
+    "task": "NL2T-04",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-05/D0/r3",
+    "task": "NL2T-05",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-06/D0/r3",
+    "task": "NL2T-06",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-07/D0/r3",
+    "task": "NL2T-07",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-08/D0/r3",
+    "task": "NL2T-08",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-09/D0/r3",
+    "task": "NL2T-09",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 0.5,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-10/D0/r3",
+    "task": "NL2T-10",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-11/D0/r3",
+    "task": "NL2T-11",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-12/D0/r3",
+    "task": "NL2T-12",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-13/D0/r3",
+    "task": "NL2T-13",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-14/D0/r3",
+    "task": "NL2T-14",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-15/D0/r3",
+    "task": "NL2T-15",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-16/D0/r3",
+    "task": "NL2T-16",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-17/D0/r3",
+    "task": "NL2T-17",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-18/D0/r3",
+    "task": "NL2T-18",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-19/D0/r3",
+    "task": "NL2T-19",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-20/D0/r3",
+    "task": "NL2T-20",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-21/D0/r3",
+    "task": "NL2T-21",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-22/D0/r3",
+    "task": "NL2T-22",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-23/D0/r3",
+    "task": "NL2T-23",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-24/D0/r3",
+    "task": "NL2T-24",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-25/D0/r3",
+    "task": "NL2T-25",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-26/D0/r3",
+    "task": "NL2T-26",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-27/D0/r3",
+    "task": "NL2T-27",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  },
+  {
+    "pair_id": "E1/NL2T-28/D0/r3",
+    "task": "NL2T-28",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    }
+  }
+]

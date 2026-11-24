@@ -1,0 +1,1298 @@
+[
+  {
+    "pair_id": "E1/NL2T-01/decision/r1",
+    "task": "NL2T-01",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-01/decision/r2",
+    "task": "NL2T-01",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-01/decision/r3",
+    "task": "NL2T-01",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.6666666666666666,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 0.5,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "list_catalogs",
+      "read"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-02/decision/r1",
+    "task": "NL2T-02",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-02/decision/r2",
+    "task": "NL2T-02",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-02/decision/r3",
+    "task": "NL2T-02",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-03/decision/r1",
+    "task": "NL2T-03",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-03/decision/r2",
+    "task": "NL2T-03",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-03/decision/r3",
+    "task": "NL2T-03",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-04/decision/r1",
+    "task": "NL2T-04",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-04/decision/r2",
+    "task": "NL2T-04",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-04/decision/r3",
+    "task": "NL2T-04",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-05/decision/r1",
+    "task": "NL2T-05",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-05/decision/r2",
+    "task": "NL2T-05",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-05/decision/r3",
+    "task": "NL2T-05",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-06/decision/r1",
+    "task": "NL2T-06",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search",
+      "count"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-06/decision/r2",
+    "task": "NL2T-06",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search",
+      "count"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-06/decision/r3",
+    "task": "NL2T-06",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-07/decision/r1",
+    "task": "NL2T-07",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-07/decision/r2",
+    "task": "NL2T-07",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-07/decision/r3",
+    "task": "NL2T-07",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-08/decision/r1",
+    "task": "NL2T-08",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-08/decision/r2",
+    "task": "NL2T-08",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-08/decision/r3",
+    "task": "NL2T-08",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "fetch_page"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-09/decision/r1",
+    "task": "NL2T-09",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-09/decision/r2",
+    "task": "NL2T-09",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-09/decision/r3",
+    "task": "NL2T-09",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-10/decision/r1",
+    "task": "NL2T-10",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-10/decision/r2",
+    "task": "NL2T-10",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-10/decision/r3",
+    "task": "NL2T-10",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-11/decision/r1",
+    "task": "NL2T-11",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-11/decision/r2",
+    "task": "NL2T-11",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "list_catalogs",
+      "describe_catalog"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-11/decision/r3",
+    "task": "NL2T-11",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-12/decision/r1",
+    "task": "NL2T-12",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-12/decision/r2",
+    "task": "NL2T-12",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-12/decision/r3",
+    "task": "NL2T-12",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-13/decision/r1",
+    "task": "NL2T-13",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-13/decision/r2",
+    "task": "NL2T-13",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-13/decision/r3",
+    "task": "NL2T-13",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-14/decision/r1",
+    "task": "NL2T-14",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "cone_search"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-14/decision/r2",
+    "task": "NL2T-14",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-14/decision/r3",
+    "task": "NL2T-14",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-15/decision/r1",
+    "task": "NL2T-15",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-15/decision/r2",
+    "task": "NL2T-15",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-15/decision/r3",
+    "task": "NL2T-15",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-16/decision/r1",
+    "task": "NL2T-16",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-16/decision/r2",
+    "task": "NL2T-16",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-16/decision/r3",
+    "task": "NL2T-16",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-17/decision/r1",
+    "task": "NL2T-17",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "list_catalogs"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-17/decision/r2",
+    "task": "NL2T-17",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "list_catalogs"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-17/decision/r3",
+    "task": "NL2T-17",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-18/decision/r1",
+    "task": "NL2T-18",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-18/decision/r2",
+    "task": "NL2T-18",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-18/decision/r3",
+    "task": "NL2T-18",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-19/decision/r1",
+    "task": "NL2T-19",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-19/decision/r2",
+    "task": "NL2T-19",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-19/decision/r3",
+    "task": "NL2T-19",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 0.5,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-20/decision/r1",
+    "task": "NL2T-20",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-20/decision/r2",
+    "task": "NL2T-20",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-20/decision/r3",
+    "task": "NL2T-20",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": 1.0,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-21/decision/r1",
+    "task": "NL2T-21",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-21/decision/r2",
+    "task": "NL2T-21",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-21/decision/r3",
+    "task": "NL2T-21",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": 1.0,
+      "convert": 1.0,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "describe_catalog",
+      "cone_search"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-22/decision/r1",
+    "task": "NL2T-22",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-22/decision/r2",
+    "task": "NL2T-22",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-22/decision/r3",
+    "task": "NL2T-22",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 0.5,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "read",
+      "list_catalogs"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-23/decision/r1",
+    "task": "NL2T-23",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-23/decision/r2",
+    "task": "NL2T-23",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-23/decision/r3",
+    "task": "NL2T-23",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-24/decision/r1",
+    "task": "NL2T-24",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-24/decision/r2",
+    "task": "NL2T-24",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": [
+      "list_catalogs"
+    ]
+  },
+  {
+    "pair_id": "E1/NL2T-24/decision/r3",
+    "task": "NL2T-24",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-25/decision/r1",
+    "task": "NL2T-25",
+    "repeat": 1,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-25/decision/r2",
+    "task": "NL2T-25",
+    "repeat": 2,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-25/decision/r3",
+    "task": "NL2T-25",
+    "repeat": 3,
+    "dims": {
+      "toolset": 0.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": null
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-26/decision/r1",
+    "task": "NL2T-26",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-26/decision/r2",
+    "task": "NL2T-26",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-26/decision/r3",
+    "task": "NL2T-26",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-27/decision/r1",
+    "task": "NL2T-27",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-27/decision/r2",
+    "task": "NL2T-27",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.5
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-27/decision/r3",
+    "task": "NL2T-27",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-28/decision/r1",
+    "task": "NL2T-28",
+    "repeat": 1,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 0.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-28/decision/r2",
+    "task": "NL2T-28",
+    "repeat": 2,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  },
+  {
+    "pair_id": "E1/NL2T-28/decision/r3",
+    "task": "NL2T-28",
+    "repeat": 3,
+    "dims": {
+      "toolset": 1.0,
+      "param": null,
+      "convert": null,
+      "redundant": 1.0,
+      "clarify": null,
+      "reject": 1.0
+    },
+    "red_lines": [],
+    "predicted_tools": []
+  }
+]

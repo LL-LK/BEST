@@ -440,9 +440,9 @@ evals/cases/case_001_gate_http_status_pass.yaml
 evals/cases/case_002_gate_http_status_violated.yaml
 evals/cases/case_003_gate_checksum_match_pass.yaml
 evals/cases/case_004_gate_checksum_match_violated.yaml
-evals/cases/case_005_scope_01_nadc-best-rest-api-认证.yaml
-evals/cases/case_006_scope_02_两阶段异步查询.yaml
-evals/cases/case_007_scope_03_流式下载.yaml
+evals/cases/case_005_scope_01_nadc-best-rest-api-auth.yaml
+evals/cases/case_006_scope_02_two_phase_async_query.yaml
+evals/cases/case_007_scope_03_streaming_download.yaml
 evals/cases/case_008_field_data.yaml
 evals/cases/case_009_field_status.yaml
 evals/cases/case_010_input_sql.yaml

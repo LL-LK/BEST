@@ -1,17 +1,19 @@
-# 实验图表与复现包
+# 图表与 Release
 
-[文档导航](README.md) · [E1–E6 实验资料](experiments.md)
+[文档导航](README.md) · [实验资料](experiments.md)
 
-| 材料 | 入口 |
+| 材料 | 路径 |
 | --- | --- |
-| 实验图表 | [最新 SVG](../reproduction/02_图表/README.md) · [出图数据](../reproduction/02_图表/source_data.json) |
-| 论文数字与来源 | [溯源说明](../reproduction/05_溯源台账/README.md) · [合并台账](../reproduction/05_溯源台账/数字溯源台账_合并.csv) · [复算脚本](../reproduction/05_溯源台账/复算脚本/) |
-| 评分材料 | [专家盲评操作说明](../reproduction/06_专家盲评包/README_盲评操作说明.md) · [实验结果与批次](experiments.md) |
+| 论文 SVG 矢量图 | [reproduction/figures/](../reproduction/figures/)（`figure-1.svg`–`figure-6.svg`、`figure-B1.svg`） |
+| 五组实验复算目录 | [reproduction/releases/](../reproduction/releases/README.md) |
+| 五组跨组对照脚本 | [reproduction/portable/](../reproduction/portable/README.md) |
+| E3 专家盲评材料 | [reproduction/expert-review/](../reproduction/expert-review/README.md) |
 
-## Release
+## Releases
 
-- [下载最新 BEST-Skill 独立技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
-
-引用时请注明 Release 和实验批次。
-
-E2 的冻结核验从 [当前仓库中的 E2 目录](../reproduction/03_数据_E1-E6/E2/README.md) 执行。复算命令和适用数据见 [复现说明](../reproduction/README.md)。
+- [BEST-Skill 技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
+- [deepseek harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-deepseek-v4.1-flash)
+- [deepseek harness（mimo-v2.6-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-mimo-v2.6-flash)
+- [deepseek harness（glm-5.3-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-glm-5.3-flash)
+- [pi harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-pi-harness-deepseek-v4.1-flash)
+- [hermes harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-harness-deepseek-v4.1-flash)

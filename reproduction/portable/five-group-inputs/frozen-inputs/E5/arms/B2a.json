@@ -1,0 +1,12 @@
+{
+  "allow": [
+    "best_submit",
+    "best_get_count",
+    "best_get_page",
+    "best_metadata",
+    "best_resolve"
+  ],
+  "characters": 946,
+  "guidance_blocks": [],
+  "token_exact_length_control": false
+}

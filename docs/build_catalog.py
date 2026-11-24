@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = "docs/catalog"
-EXPERIMENTS = "reproduction/03_数据_E1-E6"
+EXPERIMENTS = "reproduction/releases/deepseek-harness_deepseek-v4.1-flash"
 DOCUMENT_EXTENSIONS = {
     ".adoc", ".docx", ".htm", ".html", ".markdown", ".md", ".mdx",
     ".pdf", ".rst", ".tex",
@@ -47,7 +47,7 @@ def section_for(document):
     """按仓库中的位置归入相应主题。"""
     parts = document.parts
     if document.is_relative_to(EXPERIMENTS):
-        experiment = parts[2].lower()
+        experiment = parts[3].lower()
         if experiment in SECTIONS:
             return experiment
     if parts[0] == "skill":

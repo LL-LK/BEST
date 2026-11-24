@@ -1,11 +1,9 @@
-# Git LFS 追踪规则（>50MB 的文件走 LFS，其余走普通 git 对象）
-
+# Git LFS rules (>50MB archives & large tables)
 *.tar.gz filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
-reproduction/03_数据_E1-E6/E2/code/statcatalog/*.csv filter=lfs diff=lfs merge=lfs -text
 skill/statcatalog/*.csv filter=lfs diff=lfs merge=lfs -text
 
-# 二进制文件不做行尾转换
+# Binary files without EOL conversion
 *.png binary
 *.jpg binary
 *.pdf binary
@@ -14,4 +12,6 @@ skill/statcatalog/*.csv filter=lfs diff=lfs merge=lfs -text
 *.gz binary
 *.zip binary
 
-/reproduction/02_图表/svg/*.svg -text -diff
+# Preserve exact bytes for vector SVGs and frozen release artifacts
+/reproduction/figures/*.svg -text -diff
+/reproduction/releases/** -text

@@ -1,0 +1,797 @@
+[
+  {
+    "pair_id": "E4/ordinary/RB-01/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-02/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-03/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-04/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-05/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-06/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-07/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-08/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-09/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-10/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-11/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-12/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-13/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-14/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-15/r1",
+    "part": "ordinary",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/ordinary/RB-16/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-17/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-18/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-19/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-20/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-21/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-35/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-36/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-37/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-39/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-40/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-41/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-42/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-43/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-44/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-45/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-46/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-48/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-49/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-50/r1",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C01/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C02/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C03/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C04/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C05/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C06/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C07/r1",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C08/r1",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C09/r1",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C10/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C11/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C12/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C13/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C14/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C15/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C16/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C17/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C18/r1",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-01/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-02/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-03/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-04/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-05/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-06/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-07/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-08/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-09/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-10/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-11/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-12/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-13/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-14/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-15/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-16/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-17/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-18/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-19/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-20/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-21/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-35/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-36/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-37/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-39/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-40/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-41/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-42/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-43/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-44/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-45/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-46/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-48/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-49/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-50/r2",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C01/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C02/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C03/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C04/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C05/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C06/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C07/r2",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C08/r2",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C09/r2",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C10/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C11/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C12/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C13/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C14/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C15/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C16/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C17/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C18/r2",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-01/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-02/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-03/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-04/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-05/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-06/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-07/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-08/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-09/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-10/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-11/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-12/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-13/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-14/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-15/r3",
+    "part": "ordinary",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/ordinary/RB-16/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-17/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-18/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-19/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-20/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-21/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-35/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-36/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-37/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-39/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-40/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-41/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-42/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-43/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-44/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-45/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-46/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-48/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-49/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/ordinary/RB-50/r3",
+    "part": "ordinary",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C01/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C02/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C03/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C04/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C05/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C06/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C07/r3",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C08/r3",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C09/r3",
+    "part": "compound",
+    "disposal_ok": false
+  },
+  {
+    "pair_id": "E4/compound/RB-C10/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C11/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C12/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C13/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C14/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C15/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C16/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C17/r3",
+    "part": "compound",
+    "disposal_ok": true
+  },
+  {
+    "pair_id": "E4/compound/RB-C18/r3",
+    "part": "compound",
+    "disposal_ok": true
+  }
+]
