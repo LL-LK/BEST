@@ -4,7 +4,6 @@
 
 ## skill
 
-- [CHANGELOG.md](../../skill/CHANGELOG.md)
 - [README.md](../../skill/README.md)
 - [SKILL.md](../../skill/SKILL.md)
 
@@ -15,71 +14,6 @@
 ## skill/docs
 
 - [BEST-SITE-USAGE.md](../../skill/docs/BEST-SITE-USAGE.md)
-- [CODE-QUALITY-FIX-LIST.md](../../skill/docs/CODE-QUALITY-FIX-LIST.md)
-- [EVAL-HUMAN-RUNBOOK.md](../../skill/docs/EVAL-HUMAN-RUNBOOK.md)
-- [EVAL-LIVE-FETCH-WAIVER.md](../../skill/docs/EVAL-LIVE-FETCH-WAIVER.md)
-- [EVAL-LIVE-RUN-2026-10-04.md](../../skill/docs/EVAL-LIVE-RUN-2026-10-04.md)
-- [EVAL-UNLOCK-CHECKLIST.md](../../skill/docs/EVAL-UNLOCK-CHECKLIST.md)
-- [FIX-PLAN-2026-09-28.md](../../skill/docs/FIX-PLAN-2026-09-28.md)
-- [ISSUES-2026-09-28-source-audit.md](../../skill/docs/ISSUES-2026-09-28-source-audit.md)
-- [ISSUES.md](../../skill/docs/ISSUES.md)
-- [REPLAY-RETIREMENT-CRITERIA.md](../../skill/docs/REPLAY-RETIREMENT-CRITERIA.md)
-- [e2-e5-forward-plan-2026-10-10.md](../../skill/docs/e2-e5-forward-plan-2026-10-10.md)
-- [e2-e5-limitations.md](../../skill/docs/e2-e5-limitations.md)
-- [e2-e5-rerun-2026-10-10.md](../../skill/docs/e2-e5-rerun-2026-10-10.md)
-- [e2-e5-rigor-upgrade.md](../../skill/docs/e2-e5-rigor-upgrade.md)
-- [e2-e5-status-summary-2026-10-10.md](../../skill/docs/e2-e5-status-summary-2026-10-10.md)
-- [e5-baseline-tier-rerun-2026-10-10.md](../../skill/docs/e5-baseline-tier-rerun-2026-10-10.md)
-- [e5-composite-floor-rootcause-2026-10-10.md](../../skill/docs/e5-composite-floor-rootcause-2026-10-10.md)
-- [e5-criterion-fix-and-maintext-inventory-2026-10-10.md](../../skill/docs/e5-criterion-fix-and-maintext-inventory-2026-10-10.md)
-- [e5-criterion-precheck-vs-toollayer-2026-10-11.md](../../skill/docs/e5-criterion-precheck-vs-toollayer-2026-10-11.md)
-- [e5-d08-retraction-2026-10-11.md](../../skill/docs/e5-d08-retraction-2026-10-11.md)
-- [e5-defect-closure-and-rerun-decision-2026-10-10.md](../../skill/docs/e5-defect-closure-and-rerun-decision-2026-10-10.md)
-- [e5-defect-ledger-and-optimization-2026-10-10.md](../../skill/docs/e5-defect-ledger-and-optimization-2026-10-10.md)
-- [e5-expression-channel-facts-repair.md](../../skill/docs/e5-expression-channel-facts-repair.md)
-- [e5-expression-channel-rebuild-verdict.md](../../skill/docs/e5-expression-channel-rebuild-verdict.md)
-- [e5-f-channel-usable-2026-10-11.md](../../skill/docs/e5-f-channel-usable-2026-10-11.md)
-- [e5-first-attributable-ablation-d08-2026-10-11.md](../../skill/docs/e5-first-attributable-ablation-d08-2026-10-11.md)
-- [e5-full-11-system-rerun-2026-10-10.md](../../skill/docs/e5-full-11-system-rerun-2026-10-10.md)
-- [e5-isolated-batch-and-conclusion-revision-2026-10-10.md](../../skill/docs/e5-isolated-batch-and-conclusion-revision-2026-10-10.md)
-- [e5-isolation-defects-d17-d18-2026-10-11.md](../../skill/docs/e5-isolation-defects-d17-d18-2026-10-11.md)
-- [e5-isolation-gate-verification-2026-10-11.md](../../skill/docs/e5-isolation-gate-verification-2026-10-11.md)
-- [e5-leakage-audit-and-isolation-2026-10-10.md](../../skill/docs/e5-leakage-audit-and-isolation-2026-10-10.md)
-- [e5-maintext-admission-2026-10-11.md](../../skill/docs/e5-maintext-admission-2026-10-11.md)
-- [e5-prereg-criterion-design-2026-10-10.md](../../skill/docs/e5-prereg-criterion-design-2026-10-10.md)
-- [e5-prereg-rootcause-2026-10-10.md](../../skill/docs/e5-prereg-rootcause-2026-10-10.md)
-- [e5-r-battery-floor-effect-2026-10-10.md](../../skill/docs/e5-r-battery-floor-effect-2026-10-10.md)
-- [e5-r-expansion-decisive-result-2026-10-10.md](../../skill/docs/e5-r-expansion-decisive-result-2026-10-10.md)
-- [e5-real-reasoning-feasibility-2026-10-10.md](../../skill/docs/e5-real-reasoning-feasibility-2026-10-10.md)
-- [e5-route-channel-conclusion-2026-10-11.md](../../skill/docs/e5-route-channel-conclusion-2026-10-11.md)
-- [eval-E1-nl2tool.md](../../skill/docs/eval-E1-nl2tool.md)
-- [eval-E2-groundtruth.md](../../skill/docs/eval-E2-groundtruth.md)
-- [eval-E3-semantics.md](../../skill/docs/eval-E3-semantics.md)
-- [eval-E4-robustness-safety.md](../../skill/docs/eval-E4-robustness-safety.md)
-- [eval-E5-baseline-ablation.md](../../skill/docs/eval-E5-baseline-ablation.md)
-- [eval-E5-plan-revised-2026-10-10.md](../../skill/docs/eval-E5-plan-revised-2026-10-10.md)
-- [eval-E6-reproducibility.md](../../skill/docs/eval-E6-reproducibility.md)
-- [incident-e5-capture-loss-2026-10-10.md](../../skill/docs/incident-e5-capture-loss-2026-10-10.md)
-- [knowledge-sedimentation-plan.md](../../skill/docs/knowledge-sedimentation-plan.md)
-- [paper-outline.md](../../skill/docs/paper-outline.md)
-
-## skill/docs/architecture
-
-- [comment-spec.md](../../skill/docs/architecture/comment-spec.md)
-- [coverage-matrix.md](../../skill/docs/architecture/coverage-matrix.md)
-- [file-size-budget.md](../../skill/docs/architecture/file-size-budget.md)
-- [governance-debt-plan.md](../../skill/docs/architecture/governance-debt-plan.md)
-- [implementation-plan-phase0-8.md](../../skill/docs/architecture/implementation-plan-phase0-8.md)
-- [implementation-plan.md](../../skill/docs/architecture/implementation-plan.md)
-- [layer-architecture-diagrams-plan.md](../../skill/docs/architecture/layer-architecture-diagrams-plan.md)
-- [naming-alignment-record.md](../../skill/docs/architecture/naming-alignment-record.md)
-- [pitfalls.md](../../skill/docs/architecture/pitfalls.md)
-- [quality-audit-method.md](../../skill/docs/architecture/quality-audit-method.md)
-- [yz-registry.md](../../skill/docs/architecture/yz-registry.md)
-
-## skill/docs/diagrams
-
-- [README.md](../../skill/docs/diagrams/README.md)
 
 ## skill/evals/ablation
 

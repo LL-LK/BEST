@@ -10,6 +10,9 @@
 
 ## Release
 
-[下载最新版复现包](https://github.com/LL-LK/BEST/releases/latest)。引用时请注明 Release 和实验批次。
+- [下载最新 BEST-Skill 独立技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
+- [下载原论文便携复现包（BEST-paper-portable-v1.zip）](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)
+
+引用时请注明 Release 和实验批次。
 
 E2 的冻结核验从 [当前仓库中的 E2 目录](../reproduction/03_数据_E1-E6/E2/README.md) 执行。复算命令和适用数据见 [复现说明](../reproduction/README.md)。

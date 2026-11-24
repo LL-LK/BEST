@@ -4,9 +4,10 @@ BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://n
 
 [文档导航](docs/README.md) 汇集实验、图表、开发和归档入口。
 
-## 复现包下载
+## 下载入口
 
-- [原论文 E1–E6 便携复现包](https://github.com/LL-LK/BEST/releases/latest)
+- [最新 BEST-Skill 独立技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
+- [原论文 E1–E6 便携复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)
 - [复算命令与各批次口径](reproduction/portable/README.md)
 
 ## 复算入口
@@ -19,7 +20,7 @@ python "reproduction/05_溯源台账/复算脚本/verify_e1_paper.py"
 python "reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py"
 ```
 
-第一条核对 E2 的冻结输入、代码和 21 个 Gold 用例。第二条复算论文 E1 重判的均值 0.9530，旧评分链见 `verify_e1_batches.py`。第三条复算原论文 E5 的 B3 与 B2b 比较。[完整复算说明](reproduction/README.md)
+第一条核对 E2 的冻结输入、代码和 21 个 Gold 用例。第二条复算论文 E1 重判的均值 0.9530。第三条复算原论文 E5 的 B3 与 B2b 比较。[完整复算说明](reproduction/README.md)
 
 ## 仓库内容
 

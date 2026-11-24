@@ -22,7 +22,6 @@ DOCUMENT_NAMES = {
 SECTIONS = {
     "repository": ("仓库入口与导航", "../README.md"),
     "skill": ("查询实现与开发材料", "../development.md"),
-    "skill-archive": ("Skill 归档", "../history.md"),
     "publication": ("实验图表与复现配套材料", "../paper.md"),
     "e1": ("E1", "../experiments.md"),
     "e2": ("E2", "../experiments.md"),
@@ -51,8 +50,6 @@ def section_for(document):
         experiment = parts[2].lower()
         if experiment in SECTIONS:
             return experiment
-    if parts[:3] == ("skill", "docs", "archive"):
-        return "skill-archive"
     if parts[0] == "skill":
         return "skill"
     if parts[0] == "reproduction":
