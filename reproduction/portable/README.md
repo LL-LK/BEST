@@ -4,7 +4,7 @@
 
 ## 原论文
 
-[下载原论文便携复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)，解压后在顶层运行。Python 3.13 环境已验证。
+[下载原论文便携复现包](https://github.com/LL-LK/BEST/releases/latest)，解压后在顶层运行。Python 3.13 环境已验证。
 
 ```text
 python -m pip install -r reproduction/portable/requirements-paper.txt
@@ -21,7 +21,7 @@ python reproduction/portable/recompute_paper.py --e2-replay replay-e2
 
 ## 五组对照
 
-[下载五组附录复现包](https://github.com/LL-LK/BEST/releases/tag/paper-comparison-five-groups-v1)，解压后在顶层运行。
+以下命令在五组对照归档的解压目录中运行。
 
 ```text
 python -m pip install -r reproduction/portable/requirements-five-groups.txt
@@ -47,4 +47,4 @@ python reproduction/portable/build_appendix.py
 | E6 | 原批和 R3 的独立逐题分数，论文使用 R3 |
 | 五组 | 历史 D0 和四个补充组公开的分项成绩，E3 来自统一盲评归档。E3 源归档 SHA-256 为 `08501464cf5db35188a978f50e62b8c7ee9f8e89e571159b617ba741a79fab55` |
 
-便携包采用统计复算所需字段，并保留早期 [完整实验归档的版本入口](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction)。设备设置、账号回执、私人映射和受保护答案遵循各自原授权。使用 BEST 数据时可引用 [国家天文科学数据中心的 BEST 条目](https://nadc.china-vo.org/data/best/)；第三方资料按原来源许可使用。
+便携包采用统计复算所需字段。早期实验材料可通过 [历史材料](../../docs/history.md) 查找。设备设置、账号回执、私人映射和受保护答案遵循各自原授权。使用 BEST 数据时可引用 [国家天文科学数据中心的 BEST 条目](https://nadc.china-vo.org/data/best/)；第三方资料按原来源许可使用。

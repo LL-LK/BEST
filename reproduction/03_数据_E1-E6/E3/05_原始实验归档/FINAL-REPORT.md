@@ -70,6 +70,6 @@ temp/e3-e6/venv/bin/python temp/e3-formal/run_e3.py import-expert --expert-score
 
 ## 仓库归档说明（2026-10-07）
 
-以上为E3完成时保留的结论，本次上传未重新评分。原始回答、逐条评分、失败及冻结材料见[原论文 Release](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction) 内本实验目录下的 `original-evidence.tar.gz`，包内以temp/e3-formal/开头的原路径保存。专家盲评压缩包与主持人私有映射保留本地，未上传；专家仍应单独接收本地匿名包，不应先阅读仓库结果。
+以上为E3完成时保留的结论，本次上传未重新评分。原始回答、逐条评分、失败及冻结材料见[首发文件树](https://github.com/LL-LK/BEST/tree/ecdb169b48469206f0efd7d7109a291fab1251ad/reproduction/03_%E6%95%B0%E6%8D%AE_E1-E6/E3/05_%E5%8E%9F%E5%A7%8B%E5%AE%9E%E9%AA%8C%E5%BD%92%E6%A1%A3) 中的 `original-evidence.tar.gz`，包内以temp/e3-formal/开头的原路径保存。专家盲评压缩包与主持人私有映射保留本地，未上传；专家仍应单独接收本地匿名包，不应先阅读仓库结果。
 
 E6事后官网核验进一步确认冻结材料将Download栏误当星数，相关证据见[E6最终报告](../E6-20261007-1791350994158084000/FINAL-REPORT.md)。这一上游材料问题没有事后改写E3回答或分数，仍需独立专家复核。

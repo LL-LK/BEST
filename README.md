@@ -7,10 +7,8 @@ BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://n
 ## 论文与下载
 
 - [论文 PDF](reproduction/01_稿件/main.pdf) · [补充材料 LaTeX](reproduction/01_稿件/supplementary_material.tex)
-- [原论文 E1–E6 便携复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)
-- [返修稿五组对照复现包](https://github.com/LL-LK/BEST/releases/tag/paper-comparison-five-groups-v1)
+- [原论文 E1–E6 便携复现包](https://github.com/LL-LK/BEST/releases/latest)
 - [复算命令与各批次口径](reproduction/portable/README.md)
-- [四组补充实验单独下载](docs/paper.md#release)
 
 ## 复算入口
 
@@ -22,7 +20,7 @@ python "reproduction/05_溯源台账/复算脚本/verify_e1_paper.py"
 python "reproduction/05_溯源台账/复算脚本/verify_e5_contrasts.py"
 ```
 
-第一条核对 E2 的冻结输入、代码和 21 个 Gold 用例。第二条复算论文 E1 重判的均值 0.9530，旧评分链见 `verify_e1_batches.py`。第三条复算原论文 E5 的 B3 与 B2b 比较。四个补充包在解压目录运行 `python recompute.py`，即可核验文件并从包内评分记录重算主指标。 [完整复算说明](reproduction/README.md)
+第一条核对 E2 的冻结输入、代码和 21 个 Gold 用例。第二条复算论文 E1 重判的均值 0.9530，旧评分链见 `verify_e1_batches.py`。第三条复算原论文 E5 的 B3 与 B2b 比较。[完整复算说明](reproduction/README.md)
 
 ## 仓库内容
 
