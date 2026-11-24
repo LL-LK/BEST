@@ -7,12 +7,11 @@ BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://n
 ## 下载入口
 
 - [最新 BEST-Skill 独立技能包（BEST_skill.zip）](https://github.com/LL-LK/BEST/releases/tag/best-skill)
-- [原论文 E1–E6 便携复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)
 - [复算命令与各批次口径](reproduction/portable/README.md)
 
 ## 复算入口
 
-以下命令在仓库根目录执行。E2 从当前仓库读取保留原始行尾的冻结文件。原论文 Release 中的 E2 副本有换行字节差异，运行冻结核验时请使用此处的入口。
+以下命令在仓库根目录执行。E2 从当前仓库读取保留原始行尾的冻结文件。
 
 ```text
 python "reproduction/03_数据_E1-E6/E2/reproduce_e2.py" --verify-only

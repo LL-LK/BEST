@@ -4,7 +4,7 @@
 
 ## 原论文
 
-[下载原论文便携复现包](https://github.com/LL-LK/BEST/releases/tag/paper-reproduction-portable-v1)，解压后在顶层运行。Python 3.13 环境已验证。
+在仓库根目录执行以下命令进行论文数据复算（Python 3.13 环境已验证）：
 
 ```text
 python -m pip install -r reproduction/portable/requirements-paper.txt

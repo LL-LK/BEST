@@ -2,7 +2,7 @@
 
 | 要找什么 | 从这里开始 |
 | --- | --- |
-| 下载最新 Skill 包与原论文复现包、查看实验图表 | [实验图表与发布包](paper.md) |
+| 下载最新 Skill 包、查看实验图表与数字溯源 | [实验图表与发布包](paper.md) |
 | 复算论文数字，核对评分、原始记录和批次 | [复现说明](../reproduction/README.md) · [E1–E6 实验资料](experiments.md) |
 | 使用 BEST 查询、查接口规范、开发和测试 | [使用与开发](development.md) |
 | 按目录查找具体文件 | [仓库文档目录](catalog/README.md) |
