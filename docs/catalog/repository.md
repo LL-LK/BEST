@@ -12,5 +12,4 @@
 - [README.md](../README.md)
 - [development.md](../development.md)
 - [experiments.md](../experiments.md)
-- [history.md](../history.md)
 - [paper.md](../paper.md)
