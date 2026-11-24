@@ -19,5 +19,5 @@
 
 - [deepseek-harness_mimo-v2.6-flash](../reproduction/releases/deepseek-harness_mimo-v2.6-flash/)
 - [deepseek-harness_glm-5.3-flash](../reproduction/releases/deepseek-harness_glm-5.3-flash/)
-- [pi-harness_deepseek-v4.1-flash](../reproduction/releases/pi-harness_deepseek-v4.1-flash/)
-- [hermes-harness_deepseek-v4.1-flash](../reproduction/releases/hermes-harness_deepseek-v4.1-flash/)
+- [pi_deepseek-v4.1-flash](../reproduction/releases/pi_deepseek-v4.1-flash/)
+- [hermes_deepseek-v4.1-flash](../reproduction/releases/hermes_deepseek-v4.1-flash/)

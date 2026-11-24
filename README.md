@@ -8,8 +8,8 @@ BEST-Skill 将自然语言请求转为 [BEST 测光标准星数据库](https://n
 - [deepseek harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-deepseek-v4.1-flash) — 主实验，E1–E6
 - [deepseek harness（mimo-v2.6-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-mimo-v2.6-flash) — E1 / E3 / E4 / E5
 - [deepseek harness（glm-5.3-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-glm-5.3-flash) — E1 / E3 / E4 / E5
-- [pi harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-pi-harness-deepseek-v4.1-flash) — E1 / E3 / E4 / E5
-- [hermes harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-harness-deepseek-v4.1-flash) — E1 / E3 / E4 / E5
+- [pi（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-pi-deepseek-v4.1-flash) — E1 / E3 / E4 / E5
+- [hermes（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-deepseek-v4.1-flash) — E1 / E3 / E4 / E5
 
 ## 复算
 
@@ -22,8 +22,8 @@ python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/recompute.py
 # 其余四组 E1 / E3 / E4 / E5
 python reproduction/releases/deepseek-harness_mimo-v2.6-flash/recompute.py
 python reproduction/releases/deepseek-harness_glm-5.3-flash/recompute.py
-python reproduction/releases/pi-harness_deepseek-v4.1-flash/recompute.py
-python reproduction/releases/hermes-harness_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/pi_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/hermes_deepseek-v4.1-flash/recompute.py
 
 # 五组跨组汇总（需 numpy）
 python reproduction/portable/recompute_five_groups.py

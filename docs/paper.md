@@ -15,5 +15,5 @@
 - [deepseek harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-deepseek-v4.1-flash)
 - [deepseek harness（mimo-v2.6-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-mimo-v2.6-flash)
 - [deepseek harness（glm-5.3-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-glm-5.3-flash)
-- [pi harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-pi-harness-deepseek-v4.1-flash)
-- [hermes harness（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-harness-deepseek-v4.1-flash)
+- [pi（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-pi-deepseek-v4.1-flash)
+- [hermes（deepseek-v4.1-flash）](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-deepseek-v4.1-flash)

@@ -25,8 +25,8 @@ python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/recompute.py
 # 2. 四个对照实验（每组 2,475 条评分，覆盖 E1 / E3 / E4 / E5）
 python reproduction/releases/deepseek-harness_mimo-v2.6-flash/recompute.py
 python reproduction/releases/deepseek-harness_glm-5.3-flash/recompute.py
-python reproduction/releases/pi-harness_deepseek-v4.1-flash/recompute.py
-python reproduction/releases/hermes-harness_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/pi_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/hermes_deepseek-v4.1-flash/recompute.py
 
 # 3. 仅验证 E2 冻结输入、代码哈希与 21 个 Gold 用例
 python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/E2/reproduce_e2.py --verify-only

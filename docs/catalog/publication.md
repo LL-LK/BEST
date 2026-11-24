@@ -36,12 +36,12 @@
 - [LICENSE](../../reproduction/releases/deepseek-harness_mimo-v2.6-flash/LICENSE)
 - [README.md](../../reproduction/releases/deepseek-harness_mimo-v2.6-flash/README.md)
 
-## reproduction/releases/hermes-harness_deepseek-v4.1-flash
+## reproduction/releases/hermes_deepseek-v4.1-flash
 
-- [LICENSE](../../reproduction/releases/hermes-harness_deepseek-v4.1-flash/LICENSE)
-- [README.md](../../reproduction/releases/hermes-harness_deepseek-v4.1-flash/README.md)
+- [LICENSE](../../reproduction/releases/hermes_deepseek-v4.1-flash/LICENSE)
+- [README.md](../../reproduction/releases/hermes_deepseek-v4.1-flash/README.md)
 
-## reproduction/releases/pi-harness_deepseek-v4.1-flash
+## reproduction/releases/pi_deepseek-v4.1-flash
 
-- [LICENSE](../../reproduction/releases/pi-harness_deepseek-v4.1-flash/LICENSE)
-- [README.md](../../reproduction/releases/pi-harness_deepseek-v4.1-flash/README.md)
+- [LICENSE](../../reproduction/releases/pi_deepseek-v4.1-flash/LICENSE)
+- [README.md](../../reproduction/releases/pi_deepseek-v4.1-flash/README.md)

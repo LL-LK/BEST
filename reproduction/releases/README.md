@@ -7,8 +7,8 @@
 | [deepseek-harness_deepseek-v4.1-flash](deepseek-harness_deepseek-v4.1-flash/) | DeepSeek Harness 0.2.0-rc.2 | `deepseek-v4.1-flash` | E1–E6 | [deepseek-harness_deepseek-v4.1-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-deepseek-v4.1-flash)（3.47 MB） | `8b717b2ca8313e7b` |
 | [deepseek-harness_mimo-v2.6-flash](deepseek-harness_mimo-v2.6-flash/) | DeepSeek Harness 0.2.2-rc.3 | `mimo-v2.6-flash` | E1 / E3 / E4 / E5 | [deepseek-harness_mimo-v2.6-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-mimo-v2.6-flash)（171.2 KB） | `a1db6106438ac116` |
 | [deepseek-harness_glm-5.3-flash](deepseek-harness_glm-5.3-flash/) | DeepSeek Harness 0.2.2-rc.3 | `glm-5.3-flash` | E1 / E3 / E4 / E5 | [deepseek-harness_glm-5.3-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-deepseek-harness-glm-5.3-flash)（155.1 KB） | `5bbd26ea124db060` |
-| [pi-harness_deepseek-v4.1-flash](pi-harness_deepseek-v4.1-flash/) | Pi CLI 1.5.2 | `deepseek-v4.1-flash` | E1 / E3 / E4 / E5 | [pi-harness_deepseek-v4.1-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-pi-harness-deepseek-v4.1-flash)（211.6 KB） | `a158bac63a161da8` |
-| [hermes-harness_deepseek-v4.1-flash](hermes-harness_deepseek-v4.1-flash/) | Hermes CLI 0.23.2 | `deepseek-v4.1-flash` | E1 / E3 / E4 / E5 | [hermes-harness_deepseek-v4.1-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-harness-deepseek-v4.1-flash)（156.8 KB） | `bb9a3d3e943cf794` |
+| [pi_deepseek-v4.1-flash](pi_deepseek-v4.1-flash/) | Pi CLI 1.5.2 | `deepseek-v4.1-flash` | E1 / E3 / E4 / E5 | [pi_deepseek-v4.1-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-pi-deepseek-v4.1-flash)（211.6 KB） | `a158bac63a161da8` |
+| [hermes_deepseek-v4.1-flash](hermes_deepseek-v4.1-flash/) | Hermes CLI 0.23.2 | `deepseek-v4.1-flash` | E1 / E3 / E4 / E5 | [hermes_deepseek-v4.1-flash.zip](https://github.com/LL-LK/BEST/releases/tag/exp-hermes-deepseek-v4.1-flash)（156.8 KB） | `bb9a3d3e943cf794` |
 
 ## 运行
 
@@ -19,8 +19,8 @@ python reproduction/releases/deepseek-harness_deepseek-v4.1-flash/recompute.py
 # 其余四组（仅需 Python 3.11+ 标准库）
 python reproduction/releases/deepseek-harness_mimo-v2.6-flash/recompute.py
 python reproduction/releases/deepseek-harness_glm-5.3-flash/recompute.py
-python reproduction/releases/pi-harness_deepseek-v4.1-flash/recompute.py
-python reproduction/releases/hermes-harness_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/pi_deepseek-v4.1-flash/recompute.py
+python reproduction/releases/hermes_deepseek-v4.1-flash/recompute.py
 ```
 
 ## 说明
