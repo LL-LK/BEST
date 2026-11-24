@@ -1,18 +1,18 @@
-# Hermes × DeepSeek V4.1 Flash
+# hermes（deepseek-v4.1-flash）
 
-批次 BEST_run_20261118_121244，组别 H1。用 Python 3.11 或更新版本执行：
+- 框架与模型：`Hermes CLI 0.23.2` × `deepseek-v4.1-flash`
+- 实验范围：E1 / E3 / E4 / E5（2,475 条评分记录；E2 与 E6 仅在主实验组开展）
+- 许可：Apache License 2.0（见 `LICENSE`，Copyright 2026 The Authors）
 
-    python recompute.py
+## 运行
 
-输入来自该组已归档的逐条评分。脚本复算 E1 加权分、E3 科学语义指标、E4 处置结果和 E5 各组成功率及按任务配对的精确检验。每组六类评价记录共 2,475 条。E3 的统一盲评为模型判分，E5 沿用原端到端机械成功判据。
+在解压根目录执行（Python 3.11+ 标准库，纯离线，无需安装第三方依赖）：
 
-本包用于离线复算统计。重跑模型或重做评分使用该平台的原始归档及对应环境。E2 与 E6 是原论文实验，没有列入本批补充组。
+```bash
+python recompute.py
+```
 
----
+## 说明
 
-## 开源发布与论文对照说明
-
-- **论文组别**：跨框架补充组（归档代号 H1） — `Hermes CLI 0.23.2` × `deepseek-v4.1-flash`
-- **覆盖实验**：E1、E3、E4、E5（2,475 条评分记录）
-- **代号说明**：数据记录中的 `D0 / D1 / D2 / P1 / H1` 仅作归档内部标识，分别对应论文中的 DeepSeek Harness 0.2.0 (`deepseek-v4.1-flash`)、DeepSeek Harness 0.2.2 (`mimo-v2.6-flash`)、DeepSeek Harness 0.2.2 (`glm-5.3-flash`)、Pi CLI 1.5.2 (`deepseek-v4.1-flash`)、Hermes CLI 0.23.2 (`deepseek-v4.1-flash`)。
-- **开源许可**：本复现包遵循 **Apache License 2.0**（见根目录 `LICENSE`，Copyright 2026 The Authors）。
+- E3 采用统一模型盲评计数，E5 沿用端到端机械成功判据；数据表中的 `H1` 为归档内部代号。
+- 本包用于离线复算统计指标；重跑模型或重新判分需在对应运行环境中使用完整原始归档。
