@@ -42,4 +42,4 @@ python reproduction/portable/recompute_five_groups.py
 | [reproduction/expert-review](reproduction/expert-review/) | E3 专家盲评工作簿与说明 |
 | [docs](docs/) | 项目文档与目录索引 |
 
-BEST 为静态测光目录，不含逐历元时序与变星周期分析。主体代码采用 [MIT 许可](LICENSE)，`reproduction/releases/` 下实验复算包采用 Apache-2.0 许可。
+BEST 为静态测光目录，不含逐历元时序与变星周期分析。本仓库采用 [Apache-2.0 许可](LICENSE)。

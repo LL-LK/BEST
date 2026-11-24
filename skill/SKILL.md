@@ -16,7 +16,7 @@ out_scope:
   - 通用星表检索/交叉匹配主理 → astro-catalog (球面 KD-Tree 锥搜; BEST 自身数据仍归本 skill)
   - 原始数据清洗 (2D 校准/剔除) → astro-clean
 author: LL-LK
-license: MIT
+license: Apache-2.0
 gates:
   http_status: {cmp: "==", value: 200, unit: "count"}
   checksum_match: {cmp: "==", value: True, unit: "bool"}
